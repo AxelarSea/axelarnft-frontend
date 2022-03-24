@@ -7,17 +7,10 @@ import { Tab, Tabs, TabList, TabPanel  } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import img1 from '../assets/images/box-item/image-box-6.jpg'
 import avt from '../assets/images/avatar/avt-9.jpg'
-import { Dropdown } from 'react-bootstrap';
-
-import imgfilter1 from '../assets/images/icon/menu.png'
-import imgfilter2 from '../assets/images/icon/rainbow.png'
-import imgfilter3 from '../assets/images/icon/photo.png'
-import imgfilter4 from '../assets/images/icon/itunes.png'
-
 
 import HeaderStyle2 from '../components/header/HeaderStyle2';
 
-const CreateItem = () => {
+const CreateItem2 = () => {
     return (
         <div className='create-item'>
             <HeaderStyle2 />
@@ -27,7 +20,7 @@ const CreateItem = () => {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="page-title-heading mg-bt-12">
-                                <h1 className="heading text-center">Create Item</h1>
+                                <h1 className="heading text-center">List item for sale</h1>
                             </div>
                             {/* <div className="breadcrumbs style2">
                                 <ul>
@@ -83,68 +76,33 @@ const CreateItem = () => {
                          </div>
                          <div className="col-xl-9 col-lg-6 col-md-12 col-12">
                              <div className="form-create-item">
-                                 <form action="#">
+                                 {/* <form action="#">
                                     <h4 className="title-create-item">Upload file</h4>
                                     <label className="uploadFile">
                                         <span className="filename">PNG, JPG, GIF, WEBP or MP4. Max 200mb.</span>
                                         <input type="file" className="inputfile form-control" name="file" />
                                     </label>
-                                 </form>
+                                 </form> */}
                                 <div className="flat-tabs tab-create-item">
-                                    {/* <h4 className="title-create-item">Select method</h4> */}
+                                    <h4 className="title-create-item">Type</h4>
                                     <Tabs>
-                                        {/* <TabList>
-                                            <Tab><span className="icon-fl-tag"></span>Fixed Price</Tab>
+                                        <TabList>
+                                            <Tab ><span className="icon-fl-tag"></span>Fixed Price</Tab>
                                             <Tab><span className="icon-fl-clock"></span>Time Auctions</Tab>
-                                            <Tab><span className="icon-fl-icon-22"></span>Open For Bids</Tab>
-                                        </TabList> */}
+                                        </TabList>
 
                                         <TabPanel>
                                             <form action="#">
-                                                <h4 className="title-create-item d-flex">Name<h4 style={{color:'red'}}>*</h4></h4>
-                                                <input type="text" placeholder="" value="price"  />
-                                                
+                                                <h4 className="price-item">Price</h4>
+                                                <input type="text" placeholder="Enter price" />
 
-                                                <h4 className="title-create-item" style={{lineHeight:'19px',marginBottom:"10px"}}>External link</h4>
-                                                <p style={{fontSize:'10px' , color:'#B0B5B7',lineHeight:'10px',marginBottom:"10px"}}>a link to this URL on this item's detail page, so that users can click to learn more about it. You are welcome to link to your own webpage with more details.</p>
-                                                <input type="text" placeholder="" value="ex youwebsite.com" />
+                                                <h4 className="title-create-item">Duration</h4>
+                                                <input type="text" placeholder="" value="7 day" />
 
                                                 <h4 className="title-create-item">Description</h4>
-                                                <textarea value="The description will be included on the item's detail page underneath its image"></textarea>
+                                                <textarea placeholder="e.g. “This is very limited item”"></textarea>
 
-                                                <h4 className="title-create-item d-flex ">Collection</h4>
-                                                <input type="text" placeholder="" value="Select collection"  />
-
-                                                <h4 className="title-create-item d-flex">Supply</h4>
-                                                <input type="text" placeholder="" value="1"  />
-
-                                                <h4 className="title-create-item d-flex">Blockchain</h4>
-                                                <input type="text" placeholder="" value="1"  />
-                                                
-                                                
-
-                                                <button className="">Submit</button>   
-
-                                                {/* <Dropdown>
-                                    <Dropdown.Toggle id="dropdown-basic">
-                                        <span>Blockchain</span>
-                                    </Dropdown.Toggle>
-
-                                    <Dropdown.Menu style={{ margin: 0 }}>
-                                    <Dropdown.Item href="#">Avalanche</Dropdown.Item>
-                                    <Dropdown.Item href="#">Cosmoshub</Dropdown.Item>
-                                    <Dropdown.Item href="#">Ethereum</Dropdown.Item>
-                                    <Dropdown.Item href="#">Fantom</Dropdown.Item>
-                                    <Dropdown.Item href="#">Moonbeam</Dropdown.Item>
-                                    <Dropdown.Item href="#">Osmosis</Dropdown.Item>
-                                    <Dropdown.Item href="#">Polygon</Dropdown.Item>
-                                    <Dropdown.Item href="#">Terra</Dropdown.Item>
-                                    </Dropdown.Menu>
-                                </Dropdown> */}
-
-
-
-                                                {/* <div className="row-form style-3">
+                                                <div className="row-form style-3">
                                                     <div className="inner-row-form">
                                                         <h4 className="title-create-item">Royalties</h4>
                                                         <input type="text" placeholder="5%" />
@@ -169,7 +127,7 @@ const CreateItem = () => {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div> */}
+                                                </div>
                                             </form>
                                         </TabPanel>
                                         <TabPanel>
@@ -232,4 +190,4 @@ const CreateItem = () => {
     );
 }
 
-export default CreateItem;
+export default CreateItem2;

@@ -268,7 +268,7 @@
 }
 
 .is_dark .sc-button.style-1 {
-    border    : 2px solid #5142FC;
+    border    : 2px solid #FF4F0D;
     color     : #fff;
     background: transparent none repeat scroll 0 0;
 }
@@ -486,16 +486,16 @@
     height: 56px;
 }
 .icon-color1 {
-    background: #5142FC;
+    background: #FF4F0D;
 }
 .icon-color2 {
-    background: #47A432;
+    background: #FF4F0D;
 }
 .icon-color3 {
-    background: #9835FB;
+    background: #FF4F0D;
 }
 .icon-color4 {
-    background: #DF4949;
+    background: #FF4F0D;
 }
 .sc-box-icon .heading {
     margin-bottom: 14px;
@@ -1074,7 +1074,7 @@
 }
 
 .sc-card-product .card-title h5:hover {
-    color: #5142FC;
+    color: #FF4F0D;
     -webkit-transition: all 0.3s ease;
     -moz-transition   : all 0.3s ease;
     -ms-transition    : all 0.3s ease;
@@ -1105,7 +1105,7 @@
     text-align: right;
 }
 
-.sc-card-product .meta-info .menu_card .dropdown .dropdown-toggle{
+.sc-card-product .meta-info .menu_card .dropdown .dropdownblockchain .dropdown-toggle{
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -1699,12 +1699,12 @@
 -------------------------------------------------------------- */
 .flat-title-page {
     position       : relative;
-    background     : url(../images/backgroup-secsion/img_bg_page_title.jpg) center center no-repeat;
+    background-image     : url('../images/backgroup-secsion/bgtop.jpg') center center no-repeat;
     background-size: cover;
     padding: 100px 0 20px;
 }
 .home-2 .flat-title-page {
-    padding: 84px 0 156px;
+    padding: 84px 0 156px; 
 }
 .home-3 .flat-title-page {
     padding: 111px 0 228px;
@@ -1715,7 +1715,7 @@
     left            : 0;
     width           : 100%;
     height          : 100%;
-    background-color: rgb(52 52 68/30%);
+    /* background-color: rgb(52 52 68/30%); */
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
@@ -1866,7 +1866,7 @@
 }
 
 .flat-bt-slider .sc-button:hover span::before {
-    color             : #5142FC;
+    color             : #FF4F0D;
 }
 
 .flat-bt-slider .sc-button.style.note span::before{
@@ -1971,11 +1971,11 @@
 .flat-title-page.inner {
     padding        : 139px 0 59px;
     position       : relative;
-    background     : url(../images/backgroup-secsion/img_bg_page_title_inner.jpg) center center no-repeat;
+    /* background     : url(../images/backgroup-secsion/.jpg) center center no-repeat; */
     background-size: cover;
 }
 .is_dark .flat-title-page.inner {
-    background     : url(../images/backgroup-secsion/img_bg_page_title_dark.jpg) center center no-repeat;
+    background     : url(../images/backgroup-secsion/bgtop.jpg) center center no-repeat;
     background-size: cover;
 }
 .page-title-heading .heading {
@@ -2411,7 +2411,7 @@ section.today-picks {
 .collection .swiper-button-next::after,
 .collection .swiper-button-prev::after {
     font-family: "Font Awesome 5 Pro";
-    color      : #5142FC;
+    color      : #FF4F0D;
     font-weight: 500;
     font-size  : 28px;
 }
@@ -2425,8 +2425,8 @@ section.today-picks {
 }
 .collection .swiper-button-prev:hover,
 .collection .swiper-button-next:hover {
-    background-color: #5142FC;
-    border-color: #5142FC;
+    background-color: #FF4F0D;
+    border-color: #FF4F0D;
 }
 .collection .swiper-button-prev:hover::after,
 .collection .swiper-button-next:hover:after{
@@ -2738,7 +2738,7 @@ section.today-picks {
 .is_dark .top-seller .swiper-button-next.active::after,
 .is_dark .top-seller .swiper-button-prev:hover:after,
 .is_dark .top-seller .swiper-button-next:hover:after{
-    color: #5142FC;
+    color: #FF4F0D;
 }
 
 .top-seller .swiper-button-next,
@@ -2755,7 +2755,7 @@ section.today-picks {
 .is_dark .top-seller .swiper-button-next ,
 .is_dark .top-seller .swiper-button-prev {
     background: transparent;
-    border-color: #5142FC;
+    border-color: #FF4F0D;
 }
 
 .top-seller .swiper-button-next::after, 
@@ -3410,7 +3410,7 @@ section.today-picks {
     color: #fff;
 }
 .is_dark .form-inner button:hover {
-    border: 2px solid #5142FC;
+    border: 2px solid #FF4F0D;
 }
 .form-inner button:hover {
     border: none;
@@ -3652,7 +3652,7 @@ section.today-picks {
 }
 
 .tab-authors .author-profile .infor-profile button:hover{
-    color: #5142FC;
+    color: #FF4F0D;
 }
 
 .tab-authors .author-profile .btn-profile a.sc-button {
@@ -3664,8 +3664,8 @@ section.today-picks {
 
 .tab-authors .author-profile .btn-profile a.sc-button:hover {
     color: #fff;
-    background-color: #5142FC;
-    border: 1.5px solid #5142FC;
+    background-color: #FF4F0D;
+    border: 1.5px solid #FF4F0D;
 }
 
 /* title */
@@ -4391,14 +4391,14 @@ section.today-picks {
 }
 
 .uploadFile .inputfile:hover::before{
-    background: #5142FC;
+    background: #FF4F0D;
     color: #fff;
 }
 
 .is_dark .uploadFile .inputfile:hover::before ,
 .is_dark .uploadFile .inputfile:focus::before {
     background: #fff;
-    color: #5142FC;
+    color: #FF4F0D;
 }
 
 .uploadFile .form-control {
@@ -4627,7 +4627,7 @@ section.today-picks {
     border: 1px solid rgba(138, 138, 160, 0.3);
 }
 .row-form.style-3 .dropdown li:hover{
-    background: #5142FC;
+    background: #FF4F0D;
 }
 
 .row-form.style-3 .dropdown li:hover span{
@@ -4713,7 +4713,7 @@ button.accordion-button {
 	right: 0;
 	top: 3px;
     position: absolute;
-    color: #5142FC;
+    color: #FF4F0D;
     font-size: 15px;
 }
 .flat-accordion2 h2 {
@@ -4823,7 +4823,7 @@ button.accordion-button {
     font-size: 14px;
     line-height: 22px;
     font-weight: bold;
-    color: #5142FC;
+    color: #FF4F0D;
     margin-top: 21px;
 }
 
@@ -4979,7 +4979,7 @@ button.accordion-button {
 
 .info-social .connect{
     position: relative;
-    background-color: #5142FC;
+    background-color: #FF4F0D;
     color: #fff;
     padding: 11.5px 30px 11.5px 57px;
     font-size: 14px;
@@ -5017,14 +5017,14 @@ button.accordion-button {
 .form-profile .tf-button-submit{
     background-color: rgba(81, 66, 252, 0.1);
     border: none;
-    color: #5142FC;
+    color: #FF4F0D;
     font-size: 14px;
     line-height: 22px;
     padding: 14px 41px 12px 41px;
 }
 
 .form-profile .tf-button-submit:hover{
-    background-color: #5142FC;
+    background-color: #FF4F0D;
     color: #fff;
 }
 
@@ -5037,7 +5037,7 @@ button.accordion-button {
 .is_dark .form-profile .tf-button-submit:hover{
     border-color: transparent;
     outline: 0 none;
-    color: #5142FC;
+    color: #FF4F0D;
     background-color: #fff;
 }
 
@@ -5217,7 +5217,7 @@ button.accordion-button {
     font-size: 15px;
     line-height: 22px;
     padding: 10px 20px;
-    background-color: #5142FC !important;
+    background-color: #FF4F0D !important;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition   : all 0.3s ease-in-out;
     -ms-transition    : all 0.3s ease-in-out;
@@ -5360,7 +5360,7 @@ button.accordion-button {
 }
 
 .is_dark .header_2 .question-form input[type="text"]:focus{
-    border-color:#5142FC;
+    border-color:#FF4F0D;
 }
 
 
@@ -5780,8 +5780,8 @@ button.accordion-button {
 }
 
 .is_dark .flat-title-page.home5 .sc-button.fl-button:hover {
-    border: 2px solid #5142FC;
-    background-color: #5142FC;
+    border: 2px solid #FF4F0D;
+    background-color: #FF4F0D;
 }
 
 .is_dark .flat-title-page.home5 .sc-button.fl-button:hover span {
@@ -5874,7 +5874,7 @@ button.accordion-button {
 
 .top-seller.home5 .react-tabs__tab-list li:hover,
 .top-seller.home5 .react-tabs__tab-list li.react-tabs__tab--selected{
-    background-color: #5142FC;
+    background-color: #FF4F0D;
 }
 
 .top-seller.home5 .react-tabs__tab-list li:hover,
@@ -5992,8 +5992,8 @@ button.accordion-button {
 }
 .top-seller.home5 .menu-tab li.item-title.active,
 .top-seller.home5 .menu-tab li:hover{
-    background-color: #5142FC;
-    border-color: #5142FC;
+    background-color: #FF4F0D;
+    border-color: #FF4F0D;
 }
 
 .top-seller.home5 .menu-tab li span{
@@ -6040,12 +6040,12 @@ button.accordion-button {
 }
 .tf-soft .dropdown .dropdown-toggle:focus {
     box-shadow: none;
-    background: #5142FC;
-    border-color: #5142FC
+    background: #FF4F0D;
+    border-color: #FF4F0D
 }
 .tf-soft .dropdown.show .dropdown-toggle {
-    border-color: #5142FC;
-    background: #5142FC;
+    border-color: #FF4F0D;
+    background: #FF4F0D;
 }
 .is_dark .tf-soft .dropdown.show .dropdown-toggle {
     background: transparent;
@@ -6153,7 +6153,7 @@ button.accordion-button {
 .tf-soft .dropdown-menu .dropdown-item i {
     opacity: 0;
     visibility: hidden;
-    color: #5142fc;
+    color: #FF4F0D;
 }
 .tf-soft .form-check.form-switch {
     display: flex;
@@ -6183,7 +6183,7 @@ button.accordion-button {
     margin-right: 0;
 }
 .tf-soft .soft-right .dropdown-menu input:checked[type=checkbox] {
-    background: #5142fc;
+    background: #FF4F0D;
     transition: .5s;
 }
 .tf-soft .soft-right .dropdown-menu .check::before {
@@ -6194,7 +6194,7 @@ button.accordion-button {
     position: absolute;
     top: 2px;
     left: 2px;
-    background: #5142fc;
+    background: #FF4F0D;
     transition: .5s;
 }
 .tf-soft .soft-right .dropdown-menu input:checked[type=checkbox]::before {
@@ -6390,7 +6390,7 @@ button.accordion-button {
 .home-6 .flat-cart-item .swiper-button-next:after {
     font-family: 'Font Awesome 5 Pro';
     content: "\f054";
-    color: #5142FC;
+    color: #FF4F0D;
 }
 
 .is_dark .home-6 .flat-cart-item .swiper-button-prev:after,
@@ -6531,7 +6531,7 @@ button.accordion-button {
 
 .seller-slider3.button-arow-style .swiper-button-next::after,
 .seller-slider3.button-arow-style .swiper-button-prev::after{
-    color: #5142FC;
+    color: #FF4F0D;
     font-size: 23px;
 }
 
@@ -6675,7 +6675,7 @@ button.accordion-button {
 
 .flat-title-page .swiper-button-prev:hover, 
 .flat-title-page .swiper-button-next:hover {
-    background-color: #5142FC;
+    background-color: #FF4F0D;
 } 
 
 .flat-title-page .swiper-button-prev:hover::after, 
@@ -6840,7 +6840,7 @@ button.accordion-button {
 .sc-card-product.style-h7 .meta-info .author .info span.pricing{
     font-size: 14px;
     line-height: 24px;
-    color: #5142FC;
+    color: #FF4F0D;
     font-weight: 700;
 }
 
@@ -6885,7 +6885,7 @@ button.accordion-button {
 
 .is_dark .tf-section.category .swiper-button-next, 
 .is_dark .tf-section.category .swiper-button-prev {
-    border: 1px solid #5142FC;
+    border: 1px solid #FF4F0D;
     background-color: transparent;
 }
 
@@ -6896,8 +6896,8 @@ button.accordion-button {
 
 .tf-section.category .swiper-button-next:hover, 
 .tf-section.category .swiper-button-prev:hover{
-    border-color: #5142FC;
-    background-color: #5142FC;
+    border-color: #FF4F0D;
+    background-color: #FF4F0D;
 }
 
 .is_dark .tf-section.category .swiper-button-next:hover, 
@@ -6917,7 +6917,7 @@ button.accordion-button {
 .tf-section.category .swiper-button-next::after, 
 .tf-section.category .swiper-button-prev::after {
     font-family: 'Font Awesome 5 Pro';
-    color: #5142FC;
+    color: #FF4F0D;
     font-weight: 600;
     font-size: 30px;
     -webkit-transition: all 0.3s ease;
@@ -6939,7 +6939,7 @@ button.accordion-button {
 
 .is_dark .tf-section.category .swiper-button-next:hover::after, 
 .is_dark .tf-section.category .swiper-button-prev:hover::after {
-    color: #5142FC;
+    color: #FF4F0D;
 }
 
 .tf-section.category .swiper-button-next::after {
@@ -7038,7 +7038,7 @@ button.accordion-button {
     width: 62px;
     height: 24px;
     border-radius: 10px;
-    border: 1px solid #5142FC;
+    border: 1px solid #FF4F0D;
     display: flex;
     display: -webkit-box;  
     display: -moz-box;      
@@ -7055,8 +7055,8 @@ button.accordion-button {
 }
 
 .sc-author-box.style-3 .action .btn-follow:hover {
-    border: 1px solid #5142FC;
-    background-color: #5142FC;
+    border: 1px solid #FF4F0D;
+    background-color: #FF4F0D;
 }
 
 .sc-author-box.style-3 .action .btn-follow:hover a {
@@ -7152,7 +7152,7 @@ button.accordion-button {
 
 .heading-fill {
     background: linear-gradient(
-178.56deg, #E250E5 5.32%, #4B50E6 94.32%);
+178.56deg, #FF4F0D 5.32%, #7AB694 94.32%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -7519,12 +7519,12 @@ button.accordion-button {
     content: "";
     height: 3px;
     width: 100%;
-    background-color: #5142FC;
+    background-color: #FF4F0D;
 }
 
 .flat-tabs.items .react-tabs__tab-list li:hover,
 .flat-tabs.items .react-tabs__tab-list li.react-tabs__tab--selected{
-    color: #5142FC;
+    color: #FF4F0D;
 } 
 
 .is_dark .flat-tabs.items .react-tabs__tab-list li:hover,
@@ -7703,11 +7703,11 @@ button.accordion-button {
 
 .content-item2 .sc-button.style-place-bid {
     background-color: transparent;
-    border: 1px solid #5142FC;
+    border: 1px solid #FF4F0D;
 }
 
 .content-item2 .sc-button.style-place-bid span{
-    color: #5142FC;
+    color: #FF4F0D;
 }
 
 .is_dark .content-item2 .sc-button.style-place-bid {
@@ -7727,7 +7727,7 @@ button.accordion-button {
     color: #14141F;
 }
 .is_dark .content-item2 .sc-button.style-place-bid.bag.fl-button:hover span::before{
-    color: #5142FC;;
+    color: #FF4F0D;;
 }
 .content-item2 .sc-card-product .wrap-tag {
     width: 8%;
@@ -7813,7 +7813,7 @@ button.accordion-button {
 
 .flat-tabs.items .react-tabs__tab-panel .option .view ul li {
     background-color: transparent;
-    border: 1px solid #5142FC;
+    border: 1px solid #FF4F0D;
     padding: 8px 15px;
     -webkit-transition: all 0.3s ease;
     -moz-transition   : all 0.3s ease;
@@ -7832,7 +7832,7 @@ button.accordion-button {
 }
 
 .flat-tabs.items .react-tabs__tab-panel .option .view ul li svg path {
-    fill: #5142FC;
+    fill: #FF4F0D;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition   : all 0.3s ease-in-out;
     -ms-transition    : all 0.3s ease-in-out;
@@ -7850,8 +7850,8 @@ button.accordion-button {
 
 .flat-tabs.items .react-tabs__tab-panel .option .view ul li:hover,
 .flat-tabs.items .react-tabs__tab-panel .option .view ul li.active {
-    background-color: #5142FC;
-    border: 1px solid #5142FC;
+    background-color: #FF4F0D;
+    border: 1px solid #FF4F0D;
 }
 
 .flat-tabs.items .react-tabs__tab-panel .option .view ul li:hover svg path,
@@ -7902,7 +7902,7 @@ button.accordion-button {
     line-height: 26px;
     font-weight: 700;
     margin-left: 12px;
-    color: #5142FC;
+    color: #FF4F0D;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition   : all 0.3s ease-in-out;
     -ms-transition    : all 0.3s ease-in-out;
@@ -7924,8 +7924,8 @@ button.accordion-button {
     position: relative;
     z-index: 1;
     border-radius: 12px;
-    border: 1px solid #5142FC;
-    background-color: #5142FC;
+    border: 1px solid #FF4F0D;
+    background-color: #FF4F0D;
     right: 0;
     padding: 9px 30px;
     display: flex;
@@ -7945,7 +7945,7 @@ button.accordion-button {
     transform: translate(0px, 48px) !important;
 }
 .flat-tabs.items .option .dropdown-menu a:hover {
-    background: #5142FC;
+    background: #FF4F0D;
     color: #fff;
 }
 .flat-tabs.items .option .dropdown-menu a {
@@ -8151,14 +8151,14 @@ button.accordion-button {
   border-radius: 50%;
   left: 0px;
   top: -7px;
-  background-color: #5142FC;
+  background-color: #FF4F0D;
 }
 .noUi-horizontal .noUi-handle::after {
   content: "";
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #5142FC;
+  background-color: #FF4F0D;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -8172,7 +8172,7 @@ button.accordion-button {
 }
 
 .noUi-connect {
-  background: #5142FC;
+  background: #FF4F0D;
   -webkit-transition: background 450ms;
   transition: background 450ms;
 }
@@ -8243,4 +8243,22 @@ button.accordion-button {
 .slider-labels .title {
     color: #8A8AA0;
     margin-right: 3px;
+}
+.axelar-background {
+    background-image: url('../images/backgroup-secsion/bghome.jpg');
+}
+
+.dropdownblockchain {
+
+}
+
+.dbc-selector{
+
+}
+
+.price-item {
+    line-height: 26px;
+    margin-bottom: 20px;
+    left: 0px;
+    width: 30px;
 }

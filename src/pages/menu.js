@@ -54,13 +54,13 @@ const menus = [
     },{
         id: 3,
         name: 'Create',
-        links: '/create-item',
+        links: '/create-item'
        
     },
     {
         id: 4,
         name: 'Profile',
-        links: '#',
+        links: '/authors-02',
         
     },
     {
@@ -69,6 +69,13 @@ const menus = [
         links: '#',
         
     },
+    // {
+    //     id: 6,
+    //     name: 'Docs',
+    //     links: '',
+        
+    // },
+
     // {
     //     id: 7,
     //     name: 'Contact',

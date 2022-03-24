@@ -98,10 +98,11 @@ const PopularCollection = () => {
 
                 <div className="row">
                     <div className="col-box-12">
-                        <div className="heading-live-auctions">
-                            <h2 className="tf-title pb-40 text-left">
+                        <div className="heading-live-auctions align-items-center justify-content-center">
+                            <h2 className="tf-title pb-40">
+                            <h4 className="heading-fill mg-bt-16">Our Top Collection</h4>
                                 Popular Collection</h2>
-                            <Link to="/explore-04" className="exp style2 mg-t-23">EXPLORE MORE</Link>
+                            {/* <Link to="/explore-04" className="exp style2 mg-t-23">EXPLORE MORE</Link> */}
                         </div>
                     </div>
                     {
@@ -119,10 +120,10 @@ const PopularCollection = () => {
                                     <div className="card-bottom">
                                         <div className="author">
                                             <div className="content">
-                                                <h5><Link to="/authors-01">{item.title}</Link></h5>
+                                                <h5><Link to="/authors-03">{item.title}</Link></h5>
                                                 <div className="infor">
                                                     <span>Created by</span>
-                                                    <span className="name"><Link to="/author-02">{item.name}</Link></span>
+                                                    <span className="name"><Link to="/authors-02">{item.name}</Link></span>
                                                 </div>
                                             </div>
                                         </div>

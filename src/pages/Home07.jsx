@@ -13,13 +13,13 @@ const Home07 = () => {
     return (
         <div className='home-7'>
             <HeaderStyle2 />
-            <SliderStyle4 />
-            <PopularCollection />
-            <TopSeller />
-            {/* <LiveAuction /> */}
-            {/* <Category /> */}
-            <TodayPicks />
-            <Create />
+                <SliderStyle4 />
+                    <PopularCollection />
+                    <TopSeller />
+                    {/* <LiveAuction /> */}
+                    {/* <Category /> */}
+                    <TodayPicks />
+                    <Create />
             <Footer />
         </div>
     );

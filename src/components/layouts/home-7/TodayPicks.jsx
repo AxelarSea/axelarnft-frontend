@@ -328,9 +328,14 @@ const TodayPicks = () => {
                                     </Dropdown.Toggle>
 
                                     <Dropdown.Menu style={{ margin: 0 }}>
-                                    <Dropdown.Item href="#"> Ethereum</Dropdown.Item>
-                                    <Dropdown.Item href="#">Flow</Dropdown.Item>
-                                    <Dropdown.Item href="#">Tezos</Dropdown.Item>
+                                    <Dropdown.Item href="#">Avalanche</Dropdown.Item>
+                                    <Dropdown.Item href="#">Cosmoshub</Dropdown.Item>
+                                    <Dropdown.Item href="#">Ethereum</Dropdown.Item>
+                                    <Dropdown.Item href="#">Fantom</Dropdown.Item>
+                                    <Dropdown.Item href="#">Moonbeam</Dropdown.Item>
+                                    <Dropdown.Item href="#">Osmosis</Dropdown.Item>
+                                    <Dropdown.Item href="#">Polygon</Dropdown.Item>
+                                    <Dropdown.Item href="#">Terra</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </div>
@@ -443,12 +448,12 @@ const TodayPicks = () => {
                                 ))
                             }
                         </div>
-                        {
+                        {/* {
                             visible < data.length && 
                             <div className="col-md-12 wrap-inner load-more text-center"> 
                                 <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3 mt-21" onClick={showMoreItems}><span>Load More</span></Link>
                             </div>
-                        }
+                        } */}
                     </div>
                 </div>
             </section>

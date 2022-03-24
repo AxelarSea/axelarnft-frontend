@@ -11,6 +11,7 @@ import img5 from '../assets/images/icon/connect-5.png'
 import img6 from '../assets/images/icon/connect-6.png'
 import img7 from '../assets/images/icon/connect-7.png'
 import img8 from '../assets/images/icon/connect-8.png'
+import HeaderStyle2 from '../components/header/HeaderStyle2';
 
 const WalletConnect = () => {
     const [data] = useState(
@@ -22,45 +23,45 @@ const WalletConnect = () => {
             },
             {
                 img: img2,
-                title: 'Bitski',
+                title: 'Terra Station',
                 description: ' Dolor lacinia? Donec nulla, deleniti, dis arcu pharetra maecenas dapibus ante nemo! Wisi?'
             },
-            {
-                img: img3,
-                title: 'Fortmatic',
-                description: 'Potenti eleifend faucibus quo vero nibh netus suspendisse unde? Consectetuer aspernatur'
-            },
-            {
-                img: img4,
-                title: 'Wallet Connect',
-                description: 'Metus corrupti itaque reiciendis, provident condimentum, reprehenderit numquam, mi'
-            },
-            {
-                img: img5,
-                title: 'Coinbase Wallet',
-                description: 'Sollicitudin iure conubia vivamus habitasse aptent, eligendi deserunt excepteur tellus non'
-            },
-            {
-                img: img6,
-                title: 'Authereum',
-                description: 'Purus irure lacinia eiusmod inventore bibendum habitant potenti non sint rem! Felis, asper'
-            },
-            {
-                img: img7,
-                title: 'Kaikas',
-                description: 'Varius culpa, aspernatur accusantium? Corporis rhoncus, voluptatibus incididunt, velit '
-            },
-            {
-                img: img8,
-                title: 'Torus',
-                description: ' Soluta fuga nihil, mollitia, ad reprehenderit qui viverra culpa posuere labore inventore'
-            },
+            // {
+            //     img: img3,
+            //     title: 'Fortmatic',
+            //     description: 'Potenti eleifend faucibus quo vero nibh netus suspendisse unde? Consectetuer aspernatur'
+            // },
+            // {
+            //     img: img4,
+            //     title: 'Wallet Connect',
+            //     description: 'Metus corrupti itaque reiciendis, provident condimentum, reprehenderit numquam, mi'
+            // },
+            // {
+            //     img: img5,
+            //     title: 'Coinbase Wallet',
+            //     description: 'Sollicitudin iure conubia vivamus habitasse aptent, eligendi deserunt excepteur tellus non'
+            // },
+            // {
+            //     img: img6,
+            //     title: 'Authereum',
+            //     description: 'Purus irure lacinia eiusmod inventore bibendum habitant potenti non sint rem! Felis, asper'
+            // },
+            // {
+            //     img: img7,
+            //     title: 'Kaikas',
+            //     description: 'Varius culpa, aspernatur accusantium? Corporis rhoncus, voluptatibus incididunt, velit '
+            // },
+            // {
+            //     img: img8,
+            //     title: 'Torus',
+            //     description: ' Soluta fuga nihil, mollitia, ad reprehenderit qui viverra culpa posuere labore inventore'
+            // },
             
         ]
     )
     return (
         <div>
-            <Header />
+            <HeaderStyle2 />
             <section className="flat-title-page inner">
                 <div className="overlay"></div>
                 <div className="themesflat-container">
@@ -72,7 +73,7 @@ const WalletConnect = () => {
                             <div className="breadcrumbs style2">
                                 <ul>
                                     <li><Link to="/">Home</Link></li>
-                                    <li><Link to="#">Pages</Link></li>
+                                    {/* <li><Link to="#">Pages</Link></li> */}
                                     <li>Connect Wallet</li>
                                 </ul>
                             </div>

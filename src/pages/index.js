@@ -20,6 +20,7 @@ import BlogDetails from "./BlogDetails";
 import HelpCenter from "./HelpCenter";
 import Authors01 from "./Authors01";
 import Authors02 from "./Authors02";
+import Authors03 from "./Authors03";
 import WalletConnect from "./WalletConnect";
 import CreateItem from "./CreateItem";
 import EditProfile from "./EditProfile";
@@ -30,6 +31,7 @@ import NoResult from "./NoResult";
 import FAQ from "./FAQ";
 import Contact01 from "./Contact01";
 import Contact02 from "./Contact02";
+import CreateItem2 from "./CreateItem2";
 
 
 const routes = [
@@ -55,8 +57,10 @@ const routes = [
   { path: '/help-center', component: <HelpCenter />},
   { path: '/authors-01', component: <Authors01 />},
   { path: '/authors-02', component: <Authors02 />},
+  { path: '/authors-03', component: <Authors03 />},
   { path: '/wallet-connect', component: <WalletConnect />},
   { path: '/create-item', component: <CreateItem />},
+  { path: '/list-item', component: <CreateItem2 />},
   { path: '/edit-profile', component: <EditProfile />},
   { path: '/ranking', component: <Ranking />},
   { path: '/login', component: <Login />},

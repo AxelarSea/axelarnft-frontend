@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Header from '../components/header/Header';
+import Header from '../components/header/HeaderStyle2';
 import Footer from '../components/footer/Footer';
 import { Link } from 'react-router-dom';
 import Countdown from "react-countdown";
@@ -66,9 +66,13 @@ const ItemDetails01 = () => {
     return (
         <div className='item-details'>
             <Header />
-            <section className="flat-title-page inner">
-                <div className="overlay"></div>
-                <div className="themesflat-container">
+            <section className="flat-title-page">
+                {/* <div className="d-flex align-items-center justify-content-between" style={{width:'75%'}}>
+                    <button>Back</button>
+                    <button>Sell</button>
+                </div> */}
+                {/* <div className="overlay"></div> */}
+                {/* <div className="themesflat-container">
                     <div className="row">
                         <div className="col-md-12">
                             <div className="page-title-heading mg-bt-12">
@@ -83,8 +87,31 @@ const ItemDetails01 = () => {
                             </div>
                         </div>
                     </div>
-                </div>                    
+                </div>                     */}
             </section>
+
+
+            <div className="tf-section tf-item-details">
+                <div className="themesflat-container">
+                    <div className="row">
+                        <div className="col-xl-6 col-md-12">
+                            <div className="content-left">
+                                <button>Back</button>
+                            </div>
+                            
+                        </div>
+                        <div className="col-xl-6 col-md-12">
+                        <div className="content-right">
+                            <Link to="/list-item"><button style={{float:'right'}}>Sell</button></Link>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+           
+
+            
             <div className="tf-section tf-item-details">
                 <div className="themesflat-container">
                     <div className="row">
@@ -154,7 +181,7 @@ const ItemDetails01 = () => {
                                             </Countdown>
                                         </div>
                                     </div>
-                                    <Link to="/wallet-connect" className="sc-button loadmore style bag fl-button pri-3"><span>Place a bid</span></Link>
+                                    <Link to="/wallet-connect" className="sc-button loadmore style bag fl-button pri-3"><span>Buy Now</span></Link>
                                     <div className="flat-tabs themesflat-tabs">
                                     <Tabs>
                                         <TabList>
@@ -179,7 +206,7 @@ const ItemDetails01 = () => {
                                                                     </div>
                                                                     <div className="author-infor">
                                                                         <div className="name">
-                                                                            <h6><Link to="/authors-02">{item.name} </Link></h6> <span> place a bid</span>
+                                                                            <h6><Link to="/authors-02">{item.name} </Link></h6> <span> Buy Now</span>
                                                                         </div>
                                                                         <span className="time">{item.time}</span>
                                                                     </div>
@@ -209,7 +236,7 @@ const ItemDetails01 = () => {
                                                                     </div>
                                                                     <div className="author-infor">
                                                                         <div className="name">
-                                                                            <h6> <Link to="/authors-02">Mason Woodward </Link></h6> <span> place a bid</span>
+                                                                            <h6> <Link to="/authors-02">Mason Woodward </Link></h6> <span> Buy Now</span>
                                                                         </div>
                                                                         <span className="time">8 hours ago</span>
                                                                     </div>

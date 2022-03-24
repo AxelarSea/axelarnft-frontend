@@ -9,21 +9,30 @@
 
 .home-7{
   background-color: #17191e;
+  
 }
 
 .wrap-heading {
 
 
-  background-image: url('../src/assets/images/item-background/Axelar-divider-1.png'); 
+  background-image: url('../public/assets/images/backgroup-secsion/bgmaintop.jpg'); 
 
   background-position: center bottom	;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size:100% ; 
+  margin: -20px;
   /* opacity: 0.2; */
-  
-    
 }
+
+.wrap-heading-content {
+  margin-left: 150px;
+
+}
+
+/* .tf-section{
+  background-image: url('../public/assets/images/backgroup-secsion/bgmaintop.jpg');
+} */
 
 .nft-marketplace-heading{
   color:#FF4F0D;

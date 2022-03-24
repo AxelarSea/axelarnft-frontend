@@ -36,16 +36,16 @@ import HeaderStyle2 from '../components/header/HeaderStyle2';
 import Explore from '../components/layouts/explore-04/Explore';
 import widgetSidebarData from '../assets/fake-data/data-widget-sidebar';
 
-const Authors02 = () => {
+const Authors03 = () => {
     const [menuTab] = useState(
         [
             {
                 class: 'active',
-                name: 'Collected'
+                name: 'Items'
             },
             {
                 class: '',
-                name: 'Listing'
+                name: 'Activity'
             },
             // {
             //     class: '',
@@ -640,4 +640,4 @@ const Authors02 = () => {
     );
 }
 
-export default Authors02;
+export default Authors03;

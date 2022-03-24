@@ -22,21 +22,23 @@ const SliderStyle4 = () => {
     
     return (
         <div>
-            <section className="flat-title-page mainslider">
+            <section className="flat-title-page mainslider" >
+            <img className="bgr-gradient gradient2" src={shape2} alt="Axies" />
                  {/* <img className="bgr-gradient gradient3" src={shape4} alt="Axies" />
                 <img className="bgr-gradient gradient2" src={shape2} alt="Axies" />
                 <img className="bgr-gradient gradient1" src={shape3} alt="Axies" />  */}
                 <div className="overlay"></div>
                 <div className="themesflat-container ">
                         <div className="wrap-heading flat-slider flex">
-                            <div className="content">
+                            <div className="wrap-heading-content">
                                 <h2 className="heading mt-15">First Cross-Chain
                                 </h2>	
                                 <h1 className="heading mb-style"><span className="nft-marketplace-heading">NFT Marketplace</span>                                          
                                 </h1>
                                 {/* <h1 className="heading">Monster NFTs</h1> */}
-                                <p className="sub-heading mt-19 mb-40">you can buy any nft from any chainLorem ipsum dolor sit amet,consectetur 
+                                <p className="sub-heading mt-19 mb-40">you can buy any nft from any chain.                   
                                 </p>
+
                                 <div className="flat-bt-slider flex style2">
                                     <Link to="/explore-01" className="sc-button header-slider style style-1 rocket fl-button pri-1"><span>Explore Now
                                     </span></Link>

@@ -56,7 +56,7 @@ const HeaderStyle2 = () => {
                                 <div className="mobile-button" ref={btnToggle} onClick={menuToggle}><span></span></div>
                                 <div className="question-form">
                                     <form action="#" method="get">
-                                        <input type="text" placeholder="Type to search..." required />
+                                        <input type="text" placeholder="Search items, Collections, and Accounts"  />
                                         <button type="submit">
                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <mask id="mask0_334_638"  maskUnits="userSpaceOnUse" x="1" y="1" width="18" height="17">
@@ -77,8 +77,8 @@ const HeaderStyle2 = () => {
                                         </button>
                                     </form>
                                 </div>
-                                <nav id="main-nav" className="main-nav" ref={menuLeft} >
-                                    <ul id="menu-primary-menu" className="menu">
+                                <nav id="main-nav" className="main-nav"   >
+                                    <ul id="menu-primary-menu" className="menu" style={{marginLeft:'25rem'}}>
                                         {
                                             menus.map((data,index) => (
                                                 <li key={index} onClick={()=> handleOnClick(index)} className={`menu-item ${data.namesub ? 'menu-item-has-children' : '' } ${activeIndex === index ? 'active' : ''} ` }   >
@@ -93,6 +93,7 @@ const HeaderStyle2 = () => {
                                                                       ? "menu-item current-item"
                                                                       : "menu-item"
                                                                   }><Link to={submenu.links}>{submenu.sub}</Link></li>
+
                                                             ))
                                                         }
                                                     </ul>
@@ -100,6 +101,10 @@ const HeaderStyle2 = () => {
                                                 </li>
                                             ))
                                         }
+                                        <li className="menu-item" >
+                                            <a href="https://axelarsea.gitbook.io/axelarsea-docs/">Docs</a>
+                                        </li>
+
                                     </ul>
                                 </nav>
                                 <div className="flat-search-btn flex">
@@ -108,7 +113,7 @@ const HeaderStyle2 = () => {
                                         </span></Link>
                                     </div>
 
-                                    <div className="admin_active" id="header_admin">
+                                    {/* <div className="admin_active" id="header_admin">
                                         <div className="header_avatar">
                                             <div className="price">
                                                 <span>2.45 <strong>ETH</strong> </span>
@@ -150,7 +155,7 @@ const HeaderStyle2 = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div> 
                         </div>
