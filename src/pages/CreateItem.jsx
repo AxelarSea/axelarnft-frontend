@@ -25,7 +25,8 @@ import web3 from "../hooks/web3";
 const CreateItem = () => {
   let [blockChain, setBlockChain] = useState("Ethereum");
 
-  async function mint() {
+  async function mint(e) {
+    e.preventDefault();
     let account = (await web3.eth.getAccounts())[0];
     await new AxelarSeaSampleNft(43113, account).mint();
   }
