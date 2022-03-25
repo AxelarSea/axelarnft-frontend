@@ -582,7 +582,7 @@ const Authors02 = () => {
                                                                 <div className="card-media">
                                                                     <Link to="/item-details-01"><img src={data.img} alt="Axies" /></Link>
                                                                     <div className="button-place-bid ">
-                                                                        <button onClick={() => setModalShow(true)} className="sc-button style-place-bid style bag fl-button pri-3"><span>Place Bid</span></button>
+                                                                        <button onClick={() => setModalShow(true)} className="sc-button style-place-bid style bag fl-button pri-3"><span>Buy Now</span></button>
                                                                     </div>
                                                                     <Link to="/login" className="wishlist-button heart"><span className="number-like"> {data.wishlist}</span></Link>
                                                                 </div>

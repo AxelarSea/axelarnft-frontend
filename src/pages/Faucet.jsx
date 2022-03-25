@@ -14,6 +14,11 @@ import img8 from '../assets/images/icon/connect-8.png'
 import HeaderStyle2 from '../components/header/HeaderStyle2';
 
 const Faucet = () => {
+
+    const goSite = (site) =>{
+        window.open(site,'_blank')
+    }
+
     const [data] = useState(
         [
             {
@@ -101,14 +106,17 @@ const Faucet = () => {
                         <div className="col-md-12">
                             <div className="sc-box-icon-inner style-2">
                                 {
+                                    //onclick="javascript:window.location.href='link1.html'
                                     data.map((item,index) => (
-                                        <div key={index} className="sc-box-icon">
+                                        
+                                        <div key={index} className="sc-box-icon" style={{cursor:'pointer'}} target="_blank" onClick={() => goSite(item.website)}>
                                             <div className="img">
                                                 <img src={item.img} alt="Axies" />
                                             </div>
                                             <h4 className="heading"><a href={item.website} target="_blank">{item.title}</a> </h4>
                                             <p className="content">{item.description}</p>
                                          </div>
+                                    
                                     ))
                                 }
                             </div>  

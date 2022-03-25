@@ -201,7 +201,7 @@ const TodayPicks = props => {
                                             </div>
                                         </div>
                                         <div className="card-bottom">
-                                            <button onClick={() => setModalShow(true)} className="sc-button style bag fl-button pri-3 no-bg"><span>Place Bid</span></button>
+                                            <button onClick={() => setModalShow(true)} className="sc-button style bag fl-button pri-3 no-bg"><span>Buy Now</span></button>
                                             <Link to="/activity-01" className="view-history reload">View History</Link>
                                         </div>
                                     </div>

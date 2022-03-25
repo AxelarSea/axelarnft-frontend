@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useState} from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
@@ -8,9 +8,17 @@ import 'react-tabs/style/react-tabs.css';
 import img1 from '../assets/images/box-item/image-box-6.jpg'
 import avt from '../assets/images/avatar/avt-9.jpg'
 
+import AlunaLogo from '../assets/images/icon/Luna.png'
+import AustLogo from '../assets/images/icon/UST.png'
+
 import HeaderStyle2 from '../components/header/HeaderStyle2';
 
 const CreateItem2 = () => {
+
+    const [priceType , setPriceType] = useState('ALUNA')
+
+    const [pricePic , setPricePic] = useState(AlunaLogo)
+
     return (
         <div className='create-item'>
             <HeaderStyle2 />
@@ -69,7 +77,7 @@ const CreateItem2 = () => {
                                     </div>
                                 </div>
                                 <div className="card-bottom">
-                                    <Link to="/wallet-connect" className="sc-button style bag fl-button pri-3"><span>Place Bid</span></Link>
+                                    <Link to="/wallet-connect" className="sc-button style bag fl-button pri-3"><span>Buy Now</span></Link>
                                     <Link to="/activity-01" className="view-history reload">View History</Link>
                                 </div>
                             </div>
@@ -96,18 +104,34 @@ const CreateItem2 = () => {
                                                 <h4 className="price-item">Price</h4>
                                                 <div className="d-flex">
                                                     <div id="sort-by" className="dropdown">
-                                                    <Link to="#" className="btn-selector nolink">LUNA</Link>
-                                                            {/* <ul >
-                                                                <li><span>On Auction</span></li>
-                                                                <li><span>Has Offers</span></li>
-                                                            </ul> */}
+                                                        
+                                                    <Link to="#" className="btn-selector nolink">
+                                                        
+                                                        <img width="29" height="29" src={pricePic} style={{marginRight:'14px'}}/>{priceType}
+                                                    </Link>
+                                                            <ul >
+                                                                <li onClick={() => {setPriceType('ALUNA') 
+                                                                                    setPricePic(AlunaLogo)
+                                                                                }
+                                                                            }>
+                                                                                <div className="d-flex align-items-center">
+                                                                                    <span><img width="29" height="29" src={AlunaLogo} style={{marginRight:'14px'}} />ALUNA</span>
+                                                                                </div>
+                                                                   
+                                           
+                                                                </li>
+                                                                <li onClick={() => {setPriceType('AUST')
+                                                                                    setPricePic(AustLogo)
+                                                                                }
+                                                                        }><span><img width="29" height="29" src={AustLogo} style={{marginRight:'14px'}}/>AUST</span></li>
+                                                            </ul>
 
                                                     </div>
                                                     <input type="text" placeholder="Enter price" />
                                                 </div>
 
 
-                                                <h4 className="title-create-item">Duration</h4>
+                                                <h4 className="title-create-item" style={{marginTop:'20px'}}>Duration</h4>
                                                 <div className="row-form style-3">
 
                                                 <div className="inner-row-form style-2">
