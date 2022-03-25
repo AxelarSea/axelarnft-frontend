@@ -14,6 +14,7 @@ import img8 from '../assets/images/icon/connect-8.png'
 import HeaderStyle2 from '../components/header/HeaderStyle2';
 
 import {ethers} from 'ethers';
+import web3 from '../hooks/web3';
 
 const WalletConnect = () => {
 
@@ -45,6 +46,7 @@ const WalletConnect = () => {
 
 	// update account, will cause component re-render
 	const accountChangedHandler = (newAccount) => {
+        console.log(newAccount);
 		setDefaultAccount(newAccount);
 		getAccountBalance(newAccount.toString());
 	}
@@ -69,6 +71,8 @@ const WalletConnect = () => {
 	window.ethereum.on('accountsChanged', accountChangedHandler);
 
 	window.ethereum.on('chainChanged', chainChangedHandler);
+
+    console.log(web3.eth.accounts[0]);
 
 
     const [data] = useState(
@@ -153,11 +157,11 @@ const WalletConnect = () => {
                             <div className="sc-box-icon-inner style-2">
                                 {
                                     data.map((item,index) => (
-                                        <div key={index} className="sc-box-icon">
+                                        <div key={index} className="sc-box-icon" onClick={() => connectWalletHandler()}>
                                             <div className="img">
                                                 <img src={item.img} alt="Axies" />
                                             </div>
-                                            <h4 className="heading"><a href="" onClick={() => connectWalletHandler()}>{item.title}</a> </h4>
+                                            <h4 className="heading">{item.title}</h4>
                                             <p className="content">{item.description}</p>
                                          </div>
                                     ))
