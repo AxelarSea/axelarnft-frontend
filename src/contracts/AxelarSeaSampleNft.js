@@ -6,7 +6,7 @@ const address = {
   43113: "0x913fF316D6921438930e131b716344F42Cb79135",
 }
 
-export default class Marketplace {
+export default class AxelarSeaSampleNft {
   constructor(chainId, from) {
     this.contract = ContractCache(chainId, address[chainId], AxelarSeaSampleNftABI);
     this.address = address[chainId];
