@@ -46,28 +46,28 @@ return (
             placeholder="00.00 ETH" /> */}
  
         <div className="d-flex justify-content-between" >
-            <div className="w-50" style={{backgroundColor:'#343444' , borderRight:'2px solid grey'}}>
+            <div className="w-50" style={{backgroundColor:'#343444' , borderRight:'0.5px solid grey'}}>
                 <div className="d-flex justify-content-between align-items-center">
-                    <p style={{fontSize:'14px'}}>Price</p>
-                    <p style={{fontSize:'14px'}}>-$24,055.16</p>
+                    <p style={{fontSize:'14px' , marginLeft:'5px'}}>Price</p>
+                    <p style={{fontSize:'14px' , marginRight:'5px'}}>-$24,055.16</p>
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
-                    <div id="sort-by" className="dropdown" >
+                    <div id="sort-by" className="dropdown" style={{marginLeft:'5px'}} >
                         <Link to="#" className="btn-selector nolink" style={{minWidth:'100px' }} >
                             <img width="15" height="15" src={pricePic} style={{marginRight:'14px'}}/>
                                 {priceType}
                         </Link>
                     </div>
-                    <p style={{fontSize:'14px' , fontWeight:'bold'}}>$5.89</p>
+                    <p style={{fontSize:'14px' , fontWeight:'bold' , marginRight:'5px'}}>$5.89</p>
                 </div>
             </div>
             <div className="w-50" style={{backgroundColor:'#343444'}}> 
                 <div className="d-flex justify-content-between align-items-center" >
-                    <p style={{fontSize:'14px'}}>You pay</p>
-                    <p style={{fontSize:'14px'}}>-$24,055.16</p>
+                    <p style={{fontSize:'14px' , marginLeft:'5px'}}>You pay</p>
+                    <p style={{fontSize:'14px' , marginRight:'5px'}}>-$24,055.16</p>
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
-                    <div id="sort-by" className="dropdown" >
+                    <div id="sort-by" className="dropdown" style={{marginLeft:'5px'}} >
                     <Link to="#" className="btn-selector nolink" style={{minWidth:'100px' }} >
                         <img width="15" height="15" src={youPayPic} style={{marginRight:'14px'}}/>
                             {youPayType}
@@ -87,7 +87,7 @@ return (
                                                                         }><span><img width="15" height="15" src={AustLogo} style={{marginRight:'14px'}}/>AUST</span></li>
                                                             </ul>
                     </div>
-                    <p style={{fontSize:'14px' , fontWeight:'bold'}}>$24,055.16</p>
+                    <p style={{fontSize:'14px' , fontWeight:'bold' , marginRight:'5px'}}>$24,055.16</p>
                 </div>
             </div>
         </div>

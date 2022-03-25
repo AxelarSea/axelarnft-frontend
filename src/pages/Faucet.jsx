@@ -23,7 +23,7 @@ const Faucet = () => {
         [
             {
                 img: img1,
-                title: 'Ropsten testnet faucet',
+                title: 'Ropsten Testnet Faucet',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
                 website:'https://faucet.egorfine.com/'
 
@@ -79,13 +79,13 @@ const Faucet = () => {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="page-title-heading mg-bt-12">
-                                <h1 className="heading text-center">Facuet</h1>
+                                <h1 className="heading text-center">Faucet</h1>
                             </div>
                             <div className="breadcrumbs style2">
                                 <ul>
                                     <li><Link to="/">Home</Link></li>
                                     {/* <li><Link to="#">Pages</Link></li> */}
-                                    <li>Facuet</li>
+                                    <li>Faucet</li>
                                 </ul>
                             </div>
                         </div>
@@ -109,12 +109,12 @@ const Faucet = () => {
                                     //onclick="javascript:window.location.href='link1.html'
                                     data.map((item,index) => (
                                         
-                                        <div key={index} className="sc-box-icon" style={{cursor:'pointer'}} target="_blank" onClick={() => goSite(item.website)}>
+                                        <div key={index} className="sc-box-icon d-flex flex-column align-items-center justify-content-center " style={{cursor:'pointer'}} target="_blank" onClick={() => goSite(item.website)}>
                                             <div className="img">
                                                 <img src={item.img} alt="Axies" />
                                             </div>
                                             <h4 className="heading"><a href={item.website} target="_blank">{item.title}</a> </h4>
-                                            <p className="content">{item.description}</p>
+                                            
                                          </div>
                                     
                                     ))
