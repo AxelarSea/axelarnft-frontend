@@ -41,7 +41,7 @@
 
 @media only screen and (max-width: 1565px) {
   .flat-tabs.items .react-tabs__tab-panel .col-item {
-    width: calc(33.33% - 30px) !important;
+    width: calc(33.335% - 30px) !important;
   }
   #side-bar.style-3,
   #side-bar.style-2 {

@@ -83,7 +83,7 @@ const CreateItem2 = () => {
                                         <input type="file" className="inputfile form-control" name="file" />
                                     </label>
                                  </form> */}
-                                <div className="flat-tabs tab-create-item">
+                                <div className="flat-tabs tab-create-item ">
                                     <h4 className="title-create-item">Type</h4>
                                     <Tabs>
                                         <TabList>
@@ -94,24 +94,60 @@ const CreateItem2 = () => {
                                         <TabPanel>
                                             <form action="#">
                                                 <h4 className="price-item">Price</h4>
-                                                <input type="text" placeholder="Enter price" />
+                                                <div className="d-flex">
+                                                    <div id="sort-by" className="dropdown">
+                                                    <Link to="#" className="btn-selector nolink">LUNA</Link>
+                                                            {/* <ul >
+                                                                <li><span>On Auction</span></li>
+                                                                <li><span>Has Offers</span></li>
+                                                            </ul> */}
+
+                                                    </div>
+                                                    <input type="text" placeholder="Enter price" />
+                                                </div>
+
 
                                                 <h4 className="title-create-item">Duration</h4>
-                                                <input type="text" placeholder="" value="7 day" />
+                                                <div className="row-form style-3">
 
-                                                <h4 className="title-create-item">Description</h4>
-                                                <textarea placeholder="e.g. “This is very limited item”"></textarea>
+                                                <div className="inner-row-form style-2">
+                                                        <div className="seclect-box">
+                                                            <div id="all-items" className="dropdown">
+                                                                <Link to="#" className="btn-selector">7 Day</Link>
+                                                               
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {/* <h4 className="title-create-item">Description</h4>
+                                                <textarea placeholder="e.g. “This is very limited item”"></textarea> */}
+                                                <hr
+                                               
+                                             />
 
                                                 <div className="row-form style-3">
-                                                    <div className="inner-row-form">
+                                                <div className="inner-row-form style-2">
+
+                                                    <div>
+                                                        <p>Fees</p>
+                                                        <div className="d-flex justify-content-between align-items-center">
+                                                            <p style={{color:'#B0B5B7'}}>Service Fee</p>
+                                                            <p style={{color:'#B0B5B7'}}>0%</p>
+                                                        </div>
+                                                        <div className="d-flex justify-content-between align-items-center">
+                                                            <p style={{color:'#B0B5B7'}}>Creator Fee</p>
+                                                            <p style={{color:'#B0B5B7'}}>25%</p>
+                                                        </div>
+                                                    </div>
+                                                    {/* <div className="inner-row-form">
                                                         <h4 className="title-create-item">Royalties</h4>
                                                         <input type="text" placeholder="5%" />
                                                     </div>
                                                     <div className="inner-row-form">
                                                         <h4 className="title-create-item">Size</h4>
                                                         <input type="text" placeholder="e.g. “size”" />
-                                                    </div>
-                                                    <div className="inner-row-form style-2">
+                                                    </div> */}
+                                                    {/* <div className="inner-row-form style-2">
                                                         <div className="seclect-box">
                                                             <div id="item-create" className="dropdown">
                                                                 <Link to="#" className="btn-selector nolink">Abstraction</Link>
@@ -126,8 +162,10 @@ const CreateItem2 = () => {
                                                                 </ul>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div> */}
                                                 </div>
+                                                </div>
+                                                <button className="" style={{marginTop:'20px'}}>Complete listing</button>
                                             </form>
                                         </TabPanel>
                                         <TabPanel>

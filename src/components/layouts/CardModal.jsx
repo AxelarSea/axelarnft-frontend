@@ -13,28 +13,64 @@ return (
     <Modal.Header closeButton></Modal.Header>
 
     <div className="modal-body space-y-20 pd-40">
-        <h3>Checkout</h3>
-        <p className="text-center">You are about to purchase a <span className="price color-popup">4.89 ETH</span>
+        <h2>Checkout</h2>
+        <p className="">You are about to purchase a <span className="price color-popup">Cryptopunk #2</span>
         </p>
-        <input type="text" className="form-control"
-            placeholder="00.00 ETH" />
-        <p>Enter quantity. <span className="color-popup">5 available</span>
-        </p>
-        <input type="number" className="form-control" placeholder="1" />
+        <div className="d-flex align-items-center justify-content-between">
+            <div className="d-flex align-items-center">
+                <p>On</p>
+                <div id="buy" className="dropdown">
+                <Link to="#" className="btn-selector nolink">Terra</Link>
+                        {/* <ul >
+                            <li><span>On Auction</span></li>
+                            <li><span>Has Offers</span></li>
+                        </ul> */}
+                </div>
+            </div>
+            <p>Balance 10.330</p>
+        </div >
+        {/* <input type="text" className="form-control"
+            placeholder="00.00 ETH" /> */}
+
+        <div className="d-flex justify-content-between">
+            <div className="">
+                <div className="d-flex justify-content-between align-items-center">
+                    <p>Price</p>
+                    <p>-$24,055.16</p>
+                </div>
+                <div className="d-flex justify-content-between align-items-center">
+                    <p>Luna</p>
+                    <p>$5.89</p>
+                </div>
+            </div>
+            <div>
+                <div className="d-flex justify-content-between align-items-center">
+                    <p>You pay</p>
+                    <p>-$24,055.16</p>
+                </div>
+                <div className="d-flex justify-content-between align-items-center">
+                    <div id="sort-by" className="dropdown">
+                    <Link to="#" className="btn-selector nolink">Terra</Link>
+                            {/* <ul >
+                                <li><span>On Auction</span></li>
+                                <li><span>Has Offers</span></li>
+                            </ul> */}
+                    </div>
+                    <p>$24,055.16</p>
+                </div>
+            </div>
+        </div>
+        
+        {/* <input type="number" className="form-control" placeholder="1" /> */}
         <div className="hr"></div>
         <div className="d-flex justify-content-between">
-            <p> You must bid at least:</p>
-            <p className="text-right price color-popup"> 4.89 ETH </p>
+            <p> You want to Receive NFT</p>
         </div>
         <div className="d-flex justify-content-between">
-            <p> Service free:</p>
-            <p className="text-right price color-popup"> 0,89 ETH </p>
+            <p> To</p>
         </div>
-        <div className="d-flex justify-content-between">
-            <p> Total bid amount:</p>
-            <p className="text-right price color-popup"> 4 ETH </p>
-        </div>
-        <Link to="/wallet-connect" className="btn btn-primary" data-toggle="modal" data-target="#popup_bid_success" data-dismiss="modal" aria-label="Close"> Place a bid</Link>
+        
+        <Link to="/wallet-connect" className="btn btn-primary" data-toggle="modal" data-target="#popup_bid_success" data-dismiss="modal" aria-label="Close">Confirm</Link>
     </div>
     </Modal>
     

@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
@@ -14,10 +14,19 @@ import imgfilter2 from '../assets/images/icon/rainbow.png'
 import imgfilter3 from '../assets/images/icon/photo.png'
 import imgfilter4 from '../assets/images/icon/itunes.png'
 
+import ETH from '../assets/images/avatar/ETH.jpg'
+import AVAX from '../assets/images/avatar/AVAX.jpg'
+import FTM from '../assets/images/avatar/FTM.jpg'
+
 
 import HeaderStyle2 from '../components/header/HeaderStyle2';
 
 const CreateItem = () => {
+
+    let [blockChain , setBlockChain] = useState('Blockchain');
+
+    
+
     return (
         <div className='create-item'>
             <HeaderStyle2 />
@@ -47,7 +56,7 @@ const CreateItem = () => {
                              <h4 className="title-create-item">Preview item</h4>
                             <div className="sc-card-product">
                                 <div className="card-media">
-                                    <Link to="/item-details-01"><img src={img1} alt="Axies" /></Link>
+                                    <Link to="/item-details-01"><img src={blockChain === 'Ethereum' ? ETH : blockChain === 'Fantom' ? FTM : blockChain === 'Avalanche' ? AVAX : img1} alt="Axies" /></Link>
                                     <Link to="/login" className="wishlist-button heart"><span className="number-like"> 100</span></Link>
                                     <div className="featured-countdown">
                                         <span className="slogan"></span>
@@ -119,11 +128,40 @@ const CreateItem = () => {
                                                 <input type="text" placeholder="" value="1"  />
 
                                                 <h4 className="title-create-item d-flex">Blockchain</h4>
-                                                <input type="text" placeholder="" value="1"  />
+                                                {/* <input type="text" placeholder="" value="1"  /> */}
+                                                <div className="row-form style-3">
+                                                    {/* <div className="inner-row-form">
+                                                        <h4 className="title-create-item">Royalties</h4>
+                                                        <input type="text" placeholder="5%" />
+                                                    </div>
+                                                    <div className="inner-row-form">
+                                                        <h4 className="title-create-item">Size</h4>
+                                                        <input type="text" placeholder="e.g. “size”" />
+                                                    </div> */}
+                                                    <div className="inner-row-form style-2">
+                                                        <div className="seclect-box">
+                                                            <div id="all-items" className="dropdown">
+                                                                <Link to="#" className="btn-selector">{blockChain}</Link>
+                                                                <ul >
+                                                                    <li onClick={() => setBlockChain('Ethereum')}><span>Ethereum</span></li>
+                                                                    <li onClick={() => setBlockChain('Avalanche')}><span>Avalanche</span></li>
+                                                                    <li onClick={() => setBlockChain('Fantom')}><span>Fantom</span></li>
+                                                                    {/* <li><span>Virtual World</span></li>
+                                                                    <li><span>Trading Cards</span></li>
+                                                                    <li><span>Sports</span></li>
+                                                                    <li><span>Utility</span></li> */}
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+
+                                                    
+                                                </div>
                                                 
                                                 
 
-                                                <button className="">Submit</button>   
+                                                <button className="" style={{marginTop:'90px'}}>Submit</button>   
 
                                                 {/* <Dropdown>
                                     <Dropdown.Toggle id="dropdown-basic">
@@ -218,6 +256,7 @@ const CreateItem = () => {
 
                                                 <h4 className="title-create-item">Description</h4>
                                                 <textarea placeholder="e.g. “This is very limited item”"></textarea>
+                                                
                                             </form>
                                         </TabPanel>
                                     </Tabs>

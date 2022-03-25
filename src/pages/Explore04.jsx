@@ -16,9 +16,9 @@ const Explore04 = () => {
                 <div className="themesflat-container">
                     <div className="row">
                         <div className="col-md-12">
-                            {/* <div className="page-title-heading mg-bt-12">
+                            <div className="page-title-heading mg-bt-12">
                                 <h1 className="heading text-center">Explore</h1>
-                            </div> */}
+                            </div>
                             {/* <div className="breadcrumbs style2">
                                 <ul>
                                     <li><Link to="/">Home</Link></li>

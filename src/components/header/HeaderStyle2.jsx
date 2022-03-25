@@ -102,7 +102,7 @@ const HeaderStyle2 = () => {
                                             ))
                                         }
                                         <li className="menu-item" >
-                                            <a href="https://axelarsea.gitbook.io/axelarsea-docs/">Docs</a>
+                                            <a href="https://axelarsea.gitbook.io/axelarsea-docs/" target="_blank">Docs</a>
                                         </li>
 
                                     </ul>

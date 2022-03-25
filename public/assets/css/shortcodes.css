@@ -4562,7 +4562,7 @@ section.today-picks {
 }
 
 .row-form.style-3 .inner-row-form {
-    width: 32%;
+    width: 500%;
 }
 
 .row-form.style-3 .inner-row-form input,
@@ -4571,7 +4571,8 @@ section.today-picks {
 }
 
 .row-form.style-3 .seclect-box {
-    padding-top: 47px;
+    padding-top: 0px;
+    padding-bottom: 50px;
 }
 
 .row-form.style-3 .dropdown {
@@ -8261,4 +8262,8 @@ button.accordion-button {
     margin-bottom: 20px;
     left: 0px;
     width: 30px;
+}
+
+hr.new1 {
+
 }

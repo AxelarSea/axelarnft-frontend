@@ -575,7 +575,7 @@ const Authors02 = () => {
                                     {
                                         panelTab.map((item, index) => (
                                             <TabPanel key={index}>
-                                                {
+                                                {/* {
                                                     item.dataContent.slice(0,visible).map((data,index) => (
                                                         <div key={index} className="col-xl-3 col-lg-4 col-md-6 col-12">
                                                             <div className="sc-card-product explode ">
@@ -614,13 +614,13 @@ const Authors02 = () => {
                                                             </div>
                                                         </div>
                                                     ))
-                                                }
-                                                {
+                                                } */}
+                                                {/* {
                                                     visible < item.dataContent.length && 
                                                     <div className="col-md-12 wrap-inner load-more text-center"> 
                                                         <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>Load More</span></Link>
                                                     </div>
-                                                }
+                                                } */}
                                             </TabPanel>
                                         ))
                                     }

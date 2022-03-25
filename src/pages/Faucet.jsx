@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 
-import img1 from '../assets/images/icon/connect-1.png'
-import img2 from '../assets/images/icon/connect-2.png'
-import img3 from '../assets/images/icon/connect-3.png'
+import img1 from '../assets/images/icon/eth-facuet.png'
+import img2 from '../assets/images/icon/avax-facuet.png'
+import img3 from '../assets/images/icon/fantom-facuet.png'
 import img4 from '../assets/images/icon/connect-4.png'
 import img5 from '../assets/images/icon/connect-5.png'
 import img6 from '../assets/images/icon/connect-6.png'
@@ -13,81 +13,30 @@ import img7 from '../assets/images/icon/connect-7.png'
 import img8 from '../assets/images/icon/connect-8.png'
 import HeaderStyle2 from '../components/header/HeaderStyle2';
 
-import {ethers} from 'ethers';
-
-const WalletConnect = () => {
-
-    const [errorMessage, setErrorMessage] = useState(null);
-	const [defaultAccount, setDefaultAccount] = useState(null);
-	const [userBalance, setUserBalance] = useState(null);
-	const [connButtonText, setConnButtonText] = useState('Connect Wallet');
-
-	const connectWalletHandler = () => {
-		if (window.ethereum && window.ethereum.isMetaMask) {
-			console.log('MetaMask Here!');
-
-			window.ethereum.request({ method: 'eth_requestAccounts'})
-			.then(result => {
-				accountChangedHandler(result[0]);
-				setConnButtonText('Wallet Connected');
-				getAccountBalance(result[0]);
-			})
-			.catch(error => {
-				setErrorMessage(error.message);
-			
-			});
-
-		} else {
-			console.log('Need to install MetaMask');
-			setErrorMessage('Please install MetaMask browser extension to interact');
-		}
-	}
-
-	// update account, will cause component re-render
-	const accountChangedHandler = (newAccount) => {
-		setDefaultAccount(newAccount);
-		getAccountBalance(newAccount.toString());
-	}
-
-	const getAccountBalance = (account) => {
-		window.ethereum.request({method: 'eth_getBalance', params: [account, 'latest']})
-		.then(balance => {
-			setUserBalance(ethers.utils.formatEther(balance));
-		})
-		.catch(error => {
-			setErrorMessage(error.message);
-		});
-	};
-
-	const chainChangedHandler = () => {
-		// reload the page to avoid any errors with chain change mid use of application
-		window.location.reload();
-	}
-
-
-	// listen for account changes
-	window.ethereum.on('accountsChanged', accountChangedHandler);
-
-	window.ethereum.on('chainChanged', chainChangedHandler);
-
-
+const Faucet = () => {
     const [data] = useState(
         [
             {
                 img: img1,
-                title: 'Meta Mask',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt'
+                title: 'Ropsten testnet faucet',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
+                website:'https://faucet.egorfine.com/'
+
             },
             {
                 img: img2,
-                title: 'Terra Station',
-                description: ' Dolor lacinia? Donec nulla, deleniti, dis arcu pharetra maecenas dapibus ante nemo! Wisi?'
+                title: 'AVAX Fuji Testnet Faucet',
+                description: ' Dolor lacinia? Donec nulla, deleniti, dis arcu pharetra maecenas dapibus ante nemo! Wisi?',
+                website:'https://faucet.avax-test.network/'
+
             },
-            // {
-            //     img: img3,
-            //     title: 'Fortmatic',
-            //     description: 'Potenti eleifend faucibus quo vero nibh netus suspendisse unde? Consectetuer aspernatur'
-            // },
+            {
+                img: img3,
+                title: 'Testnet Opera Faucet',
+                description: 'Potenti eleifend faucibus quo vero nibh netus suspendisse unde? Consectetuer aspernatur',
+                website:'https://faucet.fantom.network/'
+                
+            },
             // {
             //     img: img4,
             //     title: 'Wallet Connect',
@@ -125,13 +74,13 @@ const WalletConnect = () => {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="page-title-heading mg-bt-12">
-                                <h1 className="heading text-center">Connect Wallet</h1>
+                                <h1 className="heading text-center">Facuet</h1>
                             </div>
                             <div className="breadcrumbs style2">
                                 <ul>
                                     <li><Link to="/">Home</Link></li>
                                     {/* <li><Link to="#">Pages</Link></li> */}
-                                    <li>Connect Wallet</li>
+                                    <li>Facuet</li>
                                 </ul>
                             </div>
                         </div>
@@ -141,14 +90,14 @@ const WalletConnect = () => {
             <div className="tf-connect-wallet tf-section">
                 <div className="themesflat-container">
                     <div className="row">
-                        <div className="col-12">
+                        {/* <div className="col-12">
                             <h2 className="tf-title-heading ct style-2 mg-bt-12">
                                 Connect Your Wallet
                             </h2>
                             <h5 className="sub-title ct style-1 pad-400">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.
                             </h5>
-                        </div>
+                        </div> */}
                         <div className="col-md-12">
                             <div className="sc-box-icon-inner style-2">
                                 {
@@ -157,7 +106,7 @@ const WalletConnect = () => {
                                             <div className="img">
                                                 <img src={item.img} alt="Axies" />
                                             </div>
-                                            <h4 className="heading"><a href="" onClick={() => connectWalletHandler()}>{item.title}</a> </h4>
+                                            <h4 className="heading"><a href={item.website} target="_blank">{item.title}</a> </h4>
                                             <p className="content">{item.description}</p>
                                          </div>
                                     ))
@@ -172,4 +121,4 @@ const WalletConnect = () => {
     );
 }
 
-export default WalletConnect;
+export default Faucet;

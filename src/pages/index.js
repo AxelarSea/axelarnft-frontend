@@ -32,6 +32,7 @@ import FAQ from "./FAQ";
 import Contact01 from "./Contact01";
 import Contact02 from "./Contact02";
 import CreateItem2 from "./CreateItem2";
+import Faucet from "./Faucet";
 
 
 const routes = [
@@ -59,6 +60,7 @@ const routes = [
   { path: '/authors-02', component: <Authors02 />},
   { path: '/authors-03', component: <Authors03 />},
   { path: '/wallet-connect', component: <WalletConnect />},
+  { path: '/facuet', component: <Faucet />},
   { path: '/create-item', component: <CreateItem />},
   { path: '/list-item', component: <CreateItem2 />},
   { path: '/edit-profile', component: <EditProfile />},
