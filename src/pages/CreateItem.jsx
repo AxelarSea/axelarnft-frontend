@@ -23,7 +23,7 @@ import HeaderStyle2 from '../components/header/HeaderStyle2';
 
 const CreateItem = () => {
 
-    let [blockChain , setBlockChain] = useState('Blockchain');
+    let [blockChain , setBlockChain] = useState('Ethereum');
 
     
 
@@ -85,7 +85,7 @@ const CreateItem = () => {
                                     </div>
                                 </div>
                                 <div className="card-bottom">
-                                    <Link to="/wallet-connect" className="sc-button style bag fl-button pri-3"><span>Place Bid</span></Link>
+                                    <Link to="/wallet-connect" className="sc-button style bag fl-button pri-3"><span>Buy Now</span></Link>
                                     <Link to="/activity-01" className="view-history reload">View History</Link>
                                 </div>
                             </div>

@@ -81,31 +81,31 @@ const Footer = () => {
     const Contract = [
         {
             title: "+012 3456789",
-            link: ""
+            link: "#"
         },
         {
-            title: "adorableprogrammer@getDefaultNormalizer.com",
-            link: ""
+            title: "axelarsea@gmail.com",
+            link: "#"
         },
     ]
     
     const socialList = [
         {
             icon: "fab fa-twitter",
-            link: "#"
+            link: "https://twitter.com/axelarsea"
         },
-        {
-            icon: "fab fa-telegram-plane",
-            link: "#"
-        },
-        {
-            icon: "fab fa-youtube",
-            link: "#"
-        },
-        {
-            icon: "icon-fl-vt",
-            link: "#"
-        },
+        // {
+        //     icon: "fab fa-telegram-plane",
+        //     link: "#"
+        // },
+        // {
+        //     icon: "fab fa-youtube",
+        //     link: "#"
+        // },
+        // {
+        //     icon: "icon-fl-vt",
+        //     link: "#"
+        // },
         
 
     ]
@@ -148,7 +148,7 @@ const Footer = () => {
                                         
                                     </Link>
                                 </div>
-                                <p className="sub-widget-logo">The best NFT marketplace website in the world and feel your experience in selling or buy our work</p>
+                                <p className="sub-widget-logo">AxelarSea is a one-stop interoperable NFT marketplace across chains where buyers can pay for an NFT on any supported chain using a token from a completely different chain, and sellers can list an NFT for sale on any supported chain while receiving payments on another chain.</p>
                             </div>
                         </div>
                         <div className="col-lg-2 col-md-4 col-sm-5 col-5">
@@ -197,13 +197,20 @@ const Footer = () => {
                                         )
                                         )
                                     }
-                                    <div className="widget-social style-1 mg-t40">
+                                    <div className="widget-social style-1 mg-t40" >
                                     <ul>
                                         {
                                             socialList.map((item,index) =>(
-                                                <li key={index}><Link to={item.link}><i className={item.icon}></i></Link></li>
+                                                <li key={index}><a to={item.link}  href={item.link} target="_blank"><i className={item.icon}></i></a></li>
                                             ))
                                         }
+                                        {/* <div key={index} className="sc-box-icon d-flex flex-column align-items-center justify-content-center " style={{cursor:'pointer'}} target="_blank" onClick={() => goSite(item.website)}>
+                                            <div className="img">
+                                                <img src={item.img} alt="Axies" />
+                                            </div>
+                                            <h4 className="heading"><a href={item.website} target="_blank">{item.title}</a> </h4>
+                                            
+                                         </div> */}
                                     </ul>
                                     </div>
                                 </ul>

@@ -234,7 +234,7 @@ const TodayPicks = () => {
                         <div className="col-md-12">
                             <div className="heading-live-auctions mg-bt-21">
                                 <h2 className="tf-title">
-                                    Top Picks
+                                    Recently Listed
                                 </h2>
                                 <Link to="/explore-04" className="exp style2">EXPLORE MORE</Link>
                             </div>
@@ -441,7 +441,7 @@ const TodayPicks = () => {
                                             <div className="tags">{item.tags}</div>
                                         </div>
                                         <div className="card-bottom">
-                                            <button onClick={() => setModalShow(true)} className="sc-button style bag fl-button pri-3 no-bg"><span>Place Bid</span></button>
+                                            <button onClick={() => setModalShow(true)} className="sc-button style bag fl-button pri-3 no-bg"><span>Buy Now</span></button>
                                             <Link to="/activity-01" className="view-history reload">View History</Link>
                                         </div>
                                     </div>

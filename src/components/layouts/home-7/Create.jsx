@@ -8,26 +8,26 @@ import icon4 from '../../../assets/images/icon/Bookmark.png'
 const Create = () => {
     const data = [
         {
-            title: "Add Your NFTs",
-            description: "Sed ut perspiciatis un de omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.",
+            title: "Interoperable NFTs Browsing",
+            description: "Simply enter a keyword or a collection's name. AxelarSea allows you to search for NFTs from multiple chains that match a keyword. Too many? Too few? You can filter the shown NFTs based on their chains.",
             icon : icon3,
             colorbg : "icon-color4"
         },
         {
-            title: "Create Your Collection",
-            description: "Setting up your NFT collection and creating NFTs on NFTs is easy! This guide explains how to set up your first collection",
+            title: "Interoperable NFTs Selling",
+            description: "Choose between auctions and fixed-price listings. You choose the chain where you want to receive your payment!",
             icon : icon2,
             colorbg : "icon-color4"
         },
         {
-            title: "Set Up Your Wallet",
-            description: "Wallet that is functional for NFT purchasing. You may have a Coinbase account at this point, but very few are actually set up to buy an NFT.",
+            title: "Purchase From Any Chain",
+            description: "Buyers can purchase an NFT with any token from any chain. They are no longer required to manually move their asset across chains. Simply click buy, and AxelarSea will take care of the rest!",
             icon : icon1,
             colorbg : "icon-color4"
         },
         {
-            title: "List Them For Sale",
-            description: "Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to sell your NFTs!",
+            title: "Manage Your Sales",
+            description: "Check all your NFT sales from multiple chains. Make price adjustments, reconfigures or cancels the sale from a single place",
             icon : icon4,
             colorbg : "icon-color4"
         },
@@ -38,11 +38,10 @@ const Create = () => {
             <div className="row">
                 <div className="col-xl-4 col-lg-12 col-md-12">
                     <div className="heading-live-auctions style2 mg-t-3 mg-bt-22">
-                        <h3 className="heading-fill mg-bt-16">Creat NFT& Sell Form Any Chain</h3>
-                        <h2 className="tf-title text-left pb-15">Create And Sell Your NFTs</h2>                    
-                        <p className="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sollicitudin morbi donec venenatis sed eget pellentesque viverra ut. 
-                            Elementum nam praesent mauris auctor amet, pulvinar adipiscing ultricies ut. 
-                            Id dignissim tristique ultrices arcu tempor. Aenean quam odio fringilla amet, imperdiet.
+                        <h3 className="heading-fill mg-bt-16">One-stop Interoperable NFT Marketplace</h3>
+                        <h2 className="tf-title text-left pb-15">Discover & Sell NFTs From Any Chain</h2>                    
+                        <p className="content">Interoperability has been a fundamental issue in the blockchain ecosystem since its inception. This includes the NFT market where buyers and sellers are 
+                        limited by the difficulty of moving assets across chains. AxelarSea's goal is to provide solutions that facilitates buyers in making a purchase using tokens from any chain and sellers in receiving the payment on any chain and tracking their sales across multiple chains.
                         </p>     
                     </div>
                 </div>                          
