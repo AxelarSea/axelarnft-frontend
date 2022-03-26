@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../components/header/HeaderStyle2';
 import Footer from '../components/footer/Footer';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import Countdown from "react-countdown";
 import { Tab, Tabs, TabList, TabPanel  } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -17,52 +17,64 @@ import img7 from '../assets/images/avatar/avt-2.jpg'
 import imgdetail1 from '../assets/images/box-item/images-item-details.jpg'
 
 const ItemDetails01 = () => {
+    const [data, setData] = useState({});
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    const collectionAddress = searchParams.get('collection');
+    const tokenId = searchParams.get('tokenId');
+    const chainId = searchParams.get('chainId');
+
     const [dataHistory] = useState(
         [
-            {
-                img: img1,
-                name:"Mason Woodward",
-                time: "8 hours ago",
-                price: "4.89 ETH",
-                priceChange: "$12.246"
-            },
-            {
-                img: img2,
-                name:"Mason Woodward",
-                time: "at 06/10/2021, 3:20 AM",
-                price: "4.89 ETH",
-                priceChange: "$12.246"
-            },
-            {
-                img: img3,
-                name:"Mason Woodward",
-                time: "8 hours ago",
-                price: "4.89 ETH",
-                priceChange: "$12.246"
-            },
-            {
-                img: img4,
-                name:"Mason Woodward",
-                time: "8 hours ago",
-                price: "4.89 ETH",
-                priceChange: "$12.246"
-            },
-            {
-                img: img5,
-                name:"Mason Woodward",
-                time: "8 hours ago",
-                price: "4.89 ETH",
-                priceChange: "$12.246"
-            },
-            {
-                img: img6,
-                name:"Mason Woodward",
-                time: "8 hours ago",
-                price: "4.89 ETH",
-                priceChange: "$12.246"
-            },
+            // {
+            //     img: img1,
+            //     name:"Mason Woodward",
+            //     time: "8 hours ago",
+            //     price: "4.89 ETH",
+            //     priceChange: "$12.246"
+            // },
+            // {
+            //     img: img2,
+            //     name:"Mason Woodward",
+            //     time: "at 06/10/2021, 3:20 AM",
+            //     price: "4.89 ETH",
+            //     priceChange: "$12.246"
+            // },
+            // {
+            //     img: img3,
+            //     name:"Mason Woodward",
+            //     time: "8 hours ago",
+            //     price: "4.89 ETH",
+            //     priceChange: "$12.246"
+            // },
+            // {
+            //     img: img4,
+            //     name:"Mason Woodward",
+            //     time: "8 hours ago",
+            //     price: "4.89 ETH",
+            //     priceChange: "$12.246"
+            // },
+            // {
+            //     img: img5,
+            //     name:"Mason Woodward",
+            //     time: "8 hours ago",
+            //     price: "4.89 ETH",
+            //     priceChange: "$12.246"
+            // },
+            // {
+            //     img: img6,
+            //     name:"Mason Woodward",
+            //     time: "8 hours ago",
+            //     price: "4.89 ETH",
+            //     priceChange: "$12.246"
+            // },
         ]
-    )
+    );
+
+    useEffect(() => {
+        
+    }, []);
+
     return (
         <div className='item-details'>
             <Header />
@@ -102,7 +114,7 @@ const ItemDetails01 = () => {
                         </div>
                         <div className="col-xl-6 col-md-12">
                         <div className="content-right">
-                            <Link to="/list-item"><button style={{float:'right'}}>Sell</button></Link>
+                            <Link to={"/list-item?chainId=" + chainId+ "&collection=" + collectionAddress + "&tokenId=" + tokenId}><button style={{float:'right'}}>Sell</button></Link>
                             </div>
                             </div>
                     </div>

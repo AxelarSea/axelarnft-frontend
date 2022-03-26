@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Countdown from "react-countdown";
@@ -12,11 +12,44 @@ import AlunaLogo from "../assets/images/icon/Luna.png";
 import AustLogo from "../assets/images/icon/UST.png";
 
 import HeaderStyle2 from "../components/header/HeaderStyle2";
+import { listItem } from "../utils/api";
+import web3 from "../hooks/web3";
+
+const TOKEN_ADDRESS = {
+  "ALUNA": {
+    3: "0x7Aa125543B9D4a361f58aC1Ff3Bea86eAF6D948B",
+    43113: "0x50a70aBb7bd6EbBcC46Df7C0d033C568F563cA27",
+    4002: "0x121286BeDd58d58558A30ED2db2f4a7c6Eb646A3",
+  },
+  "AUST": {
+    3: "0x1487F3faefE78792CDC48D87FF32aaC6650fd85f",
+    43113: "0x43F4600b552089655645f8c16D86A5a9Fa296bc3",
+    4002: "0x89A1D86901D25EFFe5D022bDD1132827e4D7f010",
+  }
+}
 
 const CreateItem2 = () => {
+  const [price, setPrice] = useState("");
   const [priceType, setPriceType] = useState("ALUNA");
-
   const [pricePic, setPricePic] = useState(AlunaLogo);
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const collectionAddress = searchParams.get('collection');
+  const tokenId = searchParams.get('tokenId');
+  const chainId = searchParams.get('chainId');
+
+  async function listItemOnClick(e) {
+    e.preventDefault();
+
+    await listItem(
+      chainId,
+      collectionAddress,
+      tokenId,
+      TOKEN_ADDRESS[priceType][chainId],
+      web3.utils.toWei(price),
+    );
+  }
 
   return (
     <div className="create-item">
@@ -169,7 +202,7 @@ const CreateItem2 = () => {
                               </li>
                             </ul>
                           </div>
-                          <input type="text" placeholder="Enter price" />
+                          <input type="text" placeholder="Enter price" onChange={(e) => setPrice(e.target.value)} />
                         </div>
 
                         <h4
@@ -232,7 +265,7 @@ const CreateItem2 = () => {
                                                     </div> */}
                           </div>
                         </div>
-                        <button className="" style={{ marginTop: "20px" }}>
+                        <button className="" style={{ marginTop: "20px" }} onClick={listItemOnClick}>
                           Complete listing
                         </button>
                       </form>
