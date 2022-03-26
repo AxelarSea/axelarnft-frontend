@@ -21,14 +21,38 @@ import FTM from "../assets/images/avatar/FTM.jpg";
 import HeaderStyle2 from "../components/header/HeaderStyle2";
 import AxelarSeaSampleNft from "../contracts/AxelarSeaSampleNft";
 import web3 from "../hooks/web3";
+import switchChain from "../utils/switchChain";
+import wait from "../utils/wait";
+import axios from "axios";
 
 const CreateItem = () => {
   let [blockChain, setBlockChain] = useState("Ethereum");
 
   async function mint(e) {
     e.preventDefault();
+
+    let chainId;
+
+    // Get chainid from name
+    switch (blockChain) {
+      case 'Ethereum': chainId = 3; break;
+      case 'Avalanche': chainId = 43113; break;
+      case 'Fantom': chainId = 4002; break;
+    }
+
+    await switchChain(chainId);
+
+    await wait(500);
+
     let account = (await web3.eth.getAccounts())[0];
-    await new AxelarSeaSampleNft(43113, account).mint();
+    let contract = new AxelarSeaSampleNft(chainId, account);
+    await contract.mint();
+
+    await wait(1000);
+
+    let totalSupply = await contract.totalSupply();
+
+    await axios.post(process.env.REACT_APP_API_HOST + '/api/nft/collections/' + contract.address + '/items/' + totalSupply + '/refreshMetadata');
   }
 
   return (
