@@ -524,7 +524,9 @@ const Authors02 = () => {
             priceChange: "$12.246",
             wishlist: "100",
             imgCollection: x.metadata.image,
-            nameCollection: x.collection.name
+            nameCollection: x.collection.name,
+            tokenId: x.tokenId,
+            collectionAddress: x.collection.address,
         }));
     }
 
@@ -539,7 +541,7 @@ const Authors02 = () => {
             },
             {
                 id: 2,
-                dataContent: formatItems(items),
+                dataContent: formatItems(items.filter(x => x.listAmount)),
             }
         ]);
     }
@@ -614,17 +616,17 @@ const Authors02 = () => {
                                             <TabPanel key={index}>
                                                 {
                                                     item.dataContent.slice(0,visible).map((data,index) => (
-                                                        <div key={index} className="col-xl-3 col-lg-4 col-md-6 col-12">
+                                                        <Link to="/item-details-01" className="col-xl-3 col-lg-4 col-md-6 col-12" key={index}>
                                                             <div className="sc-card-product explode ">
                                                                 <div className="card-media">
-                                                                    <Link to="/item-details-01"><img src={data.img} alt="Axies" /></Link>
+                                                                    <img src={data.img} alt="Axies" />
                                                                     <div className="button-place-bid ">
                                                                         <button onClick={() => setModalShow(true)} className="sc-button style-place-bid style bag fl-button pri-3"><span>Buy Now</span></button>
                                                                     </div>
-                                                                    <Link to="/login" className="wishlist-button heart"><span className="number-like"> {data.wishlist}</span></Link>
+                                                                    {/* <Link to="/login" className="wishlist-button heart"><span className="number-like"> {data.wishlist}</span></Link> */}
                                                                 </div>
                                                                 <div className="card-title mg-bt-16">
-                                                                    <h5><Link to="/item-details-01">"{data.title}"</Link></h5>
+                                                                    <h5>{data.title}</h5>
                                                                 </div>
                                                                 <div className="meta-info">
                                                                     <div className="author">
@@ -633,7 +635,7 @@ const Authors02 = () => {
                                                                         </div>
                                                                         <div className="info">
                                                                             <span>Creator</span>
-                                                                            <h6> <Link to="/author-02">{data.nameAuthor}</Link> </h6>
+                                                                            <h6>{data.nameAuthor}</h6>
                                                                         </div>
                                                                     </div>
                                                                     <div className="tags">{data.tags}</div>
@@ -646,10 +648,10 @@ const Authors02 = () => {
                                                                             <span>= {data.priceChange}</span>
                                                                         </div>
                                                                     </div>
-                                                                    <Link to="/activity-01" className="view-history reload">View History</Link>
+                                                                    {/* <Link to="/activity-01" className="view-history reload">View History</Link> */}
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </Link>
                                                     ))
                                                 }
                                                 {
