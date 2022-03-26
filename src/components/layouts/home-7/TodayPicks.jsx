@@ -1,4 +1,4 @@
-import React , { useState , Fragment } from 'react';
+import React , { useState , Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { Dropdown } from 'react-bootstrap';
 import CardModal from '../CardModal';
@@ -31,9 +31,10 @@ import imga10 from '../../../assets/images/avatar/avt-10.jpg'
 
 import imgTodayPick from '../../../assets/images/box-item/img-today-pick-demo.svg'
 import imgAuthor from '../../../assets/images/avatar/img-today-pick-author.svg'
+import { fetchAllListedItems } from '../../../utils/api';
 
 const TodayPicks = () => {
-    const [data] = useState(
+    const [data, setData] = useState(
         [
             {
                 img: imgTodayPick,
@@ -219,12 +220,30 @@ const TodayPicks = () => {
         ]
     )
 
+    async function refreshData() {
+        let listed = await fetchAllListedItems();
+        listed = listed.slice(0, 20);
+        setData(listed.map(x => ({
+            img: x.metadata.image,
+            title: x.collection.name + " #" + x.tokenId,
+            tags: "bsc",
+            imgAuthor: x.owner,
+            nameAuthor: x.owner,
+            price: x.listPrice + " ???",
+            wishlist: "100",
+        })));
+    }
+
     const [visible , setVisible] = useState(10);
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 5);
     }
 
     const [modalShow, setModalShow] = useState(false);
+
+    useEffect(() => {
+        refreshData();
+    }, [])
 
     return (
         <Fragment>

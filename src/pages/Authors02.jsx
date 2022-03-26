@@ -1,4 +1,4 @@
-import React , { useState} from 'react';
+import React , { useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel  } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -35,6 +35,7 @@ import HeaderStyle2 from '../components/header/HeaderStyle2';
 
 import Explore from '../components/layouts/explore-04/Explore';
 import widgetSidebarData from '../assets/fake-data/data-widget-sidebar';
+import { fetchAllMyItems } from '../utils/api';
 
 const Authors02 = () => {
     const [menuTab] = useState(
@@ -61,203 +62,203 @@ const Authors02 = () => {
             // },
         ]
     )
-    const [panelTab] = useState(
+    const [panelTab, setPanelTab] = useState(
         [
             {
                 id: 1,
                 dataContent: [
-                    {
-                        img: img1,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga1,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection1,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        img: img2,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga2,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection2,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        img: img3,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga3,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection3,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        img: img4,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga4,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection4,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        img: img5,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga5,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection5,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        img: img6,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga6,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection6,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        img: img7,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga7,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection7,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        img: img8,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga8,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection8,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        img: img1,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga1,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection1,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        img: img2,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga2,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection2,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        img: img3,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga3,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection3,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        img: img4,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga4,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection4,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        img: img5,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga5,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection5,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        img: img6,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga6,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection6,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        img: img7,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga7,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection7,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        img: img8,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga8,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection8,
-                        nameCollection: "Creative Art 3D"
-                    },
+                    // {
+                    //     img: img1,
+                    //     title: "The RenaiXance Rising the sun ",
+                    //     tags: "bsc",
+                    //     imgAuthor: imga1,
+                    //     nameAuthor: "SalvadorDali",
+                    //     price: "4.89 ETH",
+                    //     priceChange: "$12.246",
+                    //     wishlist: "100",
+                    //     imgCollection: imgCollection1,
+                    //     nameCollection: "Creative Art 3D"
+                    // },
+                    // {
+                    //     img: img2,
+                    //     title: "The RenaiXance Rising the sun ",
+                    //     tags: "bsc",
+                    //     imgAuthor: imga2,
+                    //     nameAuthor: "SalvadorDali",
+                    //     price: "4.89 ETH",
+                    //     priceChange: "$12.246",
+                    //     wishlist: "100",
+                    //     imgCollection: imgCollection2,
+                    //     nameCollection: "Creative Art 3D"
+                    // },
+                    // {
+                    //     img: img3,
+                    //     title: "The RenaiXance Rising the sun ",
+                    //     tags: "bsc",
+                    //     imgAuthor: imga3,
+                    //     nameAuthor: "SalvadorDali",
+                    //     price: "4.89 ETH",
+                    //     priceChange: "$12.246",
+                    //     wishlist: "100",
+                    //     imgCollection: imgCollection3,
+                    //     nameCollection: "Creative Art 3D"
+                    // },
+                    // {
+                    //     img: img4,
+                    //     title: "The RenaiXance Rising the sun ",
+                    //     tags: "bsc",
+                    //     imgAuthor: imga4,
+                    //     nameAuthor: "SalvadorDali",
+                    //     price: "4.89 ETH",
+                    //     priceChange: "$12.246",
+                    //     wishlist: "100",
+                    //     imgCollection: imgCollection4,
+                    //     nameCollection: "Creative Art 3D"
+                    // },
+                    // {
+                    //     img: img5,
+                    //     title: "The RenaiXance Rising the sun ",
+                    //     tags: "bsc",
+                    //     imgAuthor: imga5,
+                    //     nameAuthor: "SalvadorDali",
+                    //     price: "4.89 ETH",
+                    //     priceChange: "$12.246",
+                    //     wishlist: "100",
+                    //     imgCollection: imgCollection5,
+                    //     nameCollection: "Creative Art 3D"
+                    // },
+                    // {
+                    //     img: img6,
+                    //     title: "The RenaiXance Rising the sun ",
+                    //     tags: "bsc",
+                    //     imgAuthor: imga6,
+                    //     nameAuthor: "SalvadorDali",
+                    //     price: "4.89 ETH",
+                    //     priceChange: "$12.246",
+                    //     wishlist: "100",
+                    //     imgCollection: imgCollection6,
+                    //     nameCollection: "Creative Art 3D"
+                    // },
+                    // {
+                    //     img: img7,
+                    //     title: "The RenaiXance Rising the sun ",
+                    //     tags: "bsc",
+                    //     imgAuthor: imga7,
+                    //     nameAuthor: "SalvadorDali",
+                    //     price: "4.89 ETH",
+                    //     priceChange: "$12.246",
+                    //     wishlist: "100",
+                    //     imgCollection: imgCollection7,
+                    //     nameCollection: "Creative Art 3D"
+                    // },
+                    // {
+                    //     img: img8,
+                    //     title: "The RenaiXance Rising the sun ",
+                    //     tags: "bsc",
+                    //     imgAuthor: imga8,
+                    //     nameAuthor: "SalvadorDali",
+                    //     price: "4.89 ETH",
+                    //     priceChange: "$12.246",
+                    //     wishlist: "100",
+                    //     imgCollection: imgCollection8,
+                    //     nameCollection: "Creative Art 3D"
+                    // },
+                    // {
+                    //     img: img1,
+                    //     title: "The RenaiXance Rising the sun ",
+                    //     tags: "bsc",
+                    //     imgAuthor: imga1,
+                    //     nameAuthor: "SalvadorDali",
+                    //     price: "4.89 ETH",
+                    //     priceChange: "$12.246",
+                    //     wishlist: "100",
+                    //     imgCollection: imgCollection1,
+                    //     nameCollection: "Creative Art 3D"
+                    // },
+                    // {
+                    //     img: img2,
+                    //     title: "The RenaiXance Rising the sun ",
+                    //     tags: "bsc",
+                    //     imgAuthor: imga2,
+                    //     nameAuthor: "SalvadorDali",
+                    //     price: "4.89 ETH",
+                    //     priceChange: "$12.246",
+                    //     wishlist: "100",
+                    //     imgCollection: imgCollection2,
+                    //     nameCollection: "Creative Art 3D"
+                    // },
+                    // {
+                    //     img: img3,
+                    //     title: "The RenaiXance Rising the sun ",
+                    //     tags: "bsc",
+                    //     imgAuthor: imga3,
+                    //     nameAuthor: "SalvadorDali",
+                    //     price: "4.89 ETH",
+                    //     priceChange: "$12.246",
+                    //     wishlist: "100",
+                    //     imgCollection: imgCollection3,
+                    //     nameCollection: "Creative Art 3D"
+                    // },
+                    // {
+                    //     img: img4,
+                    //     title: "The RenaiXance Rising the sun ",
+                    //     tags: "bsc",
+                    //     imgAuthor: imga4,
+                    //     nameAuthor: "SalvadorDali",
+                    //     price: "4.89 ETH",
+                    //     priceChange: "$12.246",
+                    //     wishlist: "100",
+                    //     imgCollection: imgCollection4,
+                    //     nameCollection: "Creative Art 3D"
+                    // },
+                    // {
+                    //     img: img5,
+                    //     title: "The RenaiXance Rising the sun ",
+                    //     tags: "bsc",
+                    //     imgAuthor: imga5,
+                    //     nameAuthor: "SalvadorDali",
+                    //     price: "4.89 ETH",
+                    //     priceChange: "$12.246",
+                    //     wishlist: "100",
+                    //     imgCollection: imgCollection5,
+                    //     nameCollection: "Creative Art 3D"
+                    // },
+                    // {
+                    //     img: img6,
+                    //     title: "The RenaiXance Rising the sun ",
+                    //     tags: "bsc",
+                    //     imgAuthor: imga6,
+                    //     nameAuthor: "SalvadorDali",
+                    //     price: "4.89 ETH",
+                    //     priceChange: "$12.246",
+                    //     wishlist: "100",
+                    //     imgCollection: imgCollection6,
+                    //     nameCollection: "Creative Art 3D"
+                    // },
+                    // {
+                    //     img: img7,
+                    //     title: "The RenaiXance Rising the sun ",
+                    //     tags: "bsc",
+                    //     imgAuthor: imga7,
+                    //     nameAuthor: "SalvadorDali",
+                    //     price: "4.89 ETH",
+                    //     priceChange: "$12.246",
+                    //     wishlist: "100",
+                    //     imgCollection: imgCollection7,
+                    //     nameCollection: "Creative Art 3D"
+                    // },
+                    // {
+                    //     img: img8,
+                    //     title: "The RenaiXance Rising the sun ",
+                    //     tags: "bsc",
+                    //     imgAuthor: imga8,
+                    //     nameAuthor: "SalvadorDali",
+                    //     price: "4.89 ETH",
+                    //     priceChange: "$12.246",
+                    //     wishlist: "100",
+                    //     imgCollection: imgCollection8,
+                    //     nameCollection: "Creative Art 3D"
+                    // },
                 ]
             },
             {
@@ -317,190 +318,190 @@ const Authors02 = () => {
                     },
                 ]
             },
-            {
-                id: 3,
-                dataContent: [
-                    {
-                        id: 1,
-                        img: img1,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga1,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection1,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        id: 3,
-                        img: img3,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga3,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection3,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        id: 4,
-                        img: img4,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga4,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection4,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        id: 5,
-                        img: img5,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga5,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection5,
-                        nameCollection: "Creative Art 3D"
-                    },
-                ]
-            },
-            {
-                id: 4,
-                dataContent: [
-                    {
-                        id: 1,
-                        img: img1,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga1,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection1,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        id: 2,
-                        img: img2,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga2,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection2,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        id: 3,
-                        img: img3,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga3,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection3,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        id: 5,
-                        img: img5,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga5,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection5,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        id: 7,
-                        img: img7,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga7,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection7,
-                        nameCollection: "Creative Art 3D"
-                    },
-                ]
-            },
-            {
-                id: 5,
-                dataContent: [
-                    {
-                        id: 2,
-                        img: img2,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga2,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection2,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        id: 3,
-                        img: img3,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga3,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection3,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        id: 4,
-                        img: img4,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga4,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection4,
-                        nameCollection: "Creative Art 3D"
-                    },
-                    {
-                        id: 6,
-                        img: img5,
-                        title: "The RenaiXance Rising the sun ",
-                        tags: "bsc",
-                        imgAuthor: imga6,
-                        nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
-                        wishlist: "100",
-                        imgCollection: imgCollection6,
-                        nameCollection: "Creative Art 3D"
-                    },
-                ]
-            },
+            // {
+            //     id: 3,
+            //     dataContent: [
+            //         {
+            //             id: 1,
+            //             img: img1,
+            //             title: "The RenaiXance Rising the sun ",
+            //             tags: "bsc",
+            //             imgAuthor: imga1,
+            //             nameAuthor: "SalvadorDali",
+            //             price: "4.89 ETH",
+            //             priceChange: "$12.246",
+            //             wishlist: "100",
+            //             imgCollection: imgCollection1,
+            //             nameCollection: "Creative Art 3D"
+            //         },
+            //         {
+            //             id: 3,
+            //             img: img3,
+            //             title: "The RenaiXance Rising the sun ",
+            //             tags: "bsc",
+            //             imgAuthor: imga3,
+            //             nameAuthor: "SalvadorDali",
+            //             price: "4.89 ETH",
+            //             priceChange: "$12.246",
+            //             wishlist: "100",
+            //             imgCollection: imgCollection3,
+            //             nameCollection: "Creative Art 3D"
+            //         },
+            //         {
+            //             id: 4,
+            //             img: img4,
+            //             title: "The RenaiXance Rising the sun ",
+            //             tags: "bsc",
+            //             imgAuthor: imga4,
+            //             nameAuthor: "SalvadorDali",
+            //             price: "4.89 ETH",
+            //             priceChange: "$12.246",
+            //             wishlist: "100",
+            //             imgCollection: imgCollection4,
+            //             nameCollection: "Creative Art 3D"
+            //         },
+            //         {
+            //             id: 5,
+            //             img: img5,
+            //             title: "The RenaiXance Rising the sun ",
+            //             tags: "bsc",
+            //             imgAuthor: imga5,
+            //             nameAuthor: "SalvadorDali",
+            //             price: "4.89 ETH",
+            //             priceChange: "$12.246",
+            //             wishlist: "100",
+            //             imgCollection: imgCollection5,
+            //             nameCollection: "Creative Art 3D"
+            //         },
+            //     ]
+            // },
+            // {
+            //     id: 4,
+            //     dataContent: [
+            //         {
+            //             id: 1,
+            //             img: img1,
+            //             title: "The RenaiXance Rising the sun ",
+            //             tags: "bsc",
+            //             imgAuthor: imga1,
+            //             nameAuthor: "SalvadorDali",
+            //             price: "4.89 ETH",
+            //             priceChange: "$12.246",
+            //             wishlist: "100",
+            //             imgCollection: imgCollection1,
+            //             nameCollection: "Creative Art 3D"
+            //         },
+            //         {
+            //             id: 2,
+            //             img: img2,
+            //             title: "The RenaiXance Rising the sun ",
+            //             tags: "bsc",
+            //             imgAuthor: imga2,
+            //             nameAuthor: "SalvadorDali",
+            //             price: "4.89 ETH",
+            //             priceChange: "$12.246",
+            //             wishlist: "100",
+            //             imgCollection: imgCollection2,
+            //             nameCollection: "Creative Art 3D"
+            //         },
+            //         {
+            //             id: 3,
+            //             img: img3,
+            //             title: "The RenaiXance Rising the sun ",
+            //             tags: "bsc",
+            //             imgAuthor: imga3,
+            //             nameAuthor: "SalvadorDali",
+            //             price: "4.89 ETH",
+            //             priceChange: "$12.246",
+            //             wishlist: "100",
+            //             imgCollection: imgCollection3,
+            //             nameCollection: "Creative Art 3D"
+            //         },
+            //         {
+            //             id: 5,
+            //             img: img5,
+            //             title: "The RenaiXance Rising the sun ",
+            //             tags: "bsc",
+            //             imgAuthor: imga5,
+            //             nameAuthor: "SalvadorDali",
+            //             price: "4.89 ETH",
+            //             priceChange: "$12.246",
+            //             wishlist: "100",
+            //             imgCollection: imgCollection5,
+            //             nameCollection: "Creative Art 3D"
+            //         },
+            //         {
+            //             id: 7,
+            //             img: img7,
+            //             title: "The RenaiXance Rising the sun ",
+            //             tags: "bsc",
+            //             imgAuthor: imga7,
+            //             nameAuthor: "SalvadorDali",
+            //             price: "4.89 ETH",
+            //             priceChange: "$12.246",
+            //             wishlist: "100",
+            //             imgCollection: imgCollection7,
+            //             nameCollection: "Creative Art 3D"
+            //         },
+            //     ]
+            // },
+            // {
+            //     id: 5,
+            //     dataContent: [
+            //         {
+            //             id: 2,
+            //             img: img2,
+            //             title: "The RenaiXance Rising the sun ",
+            //             tags: "bsc",
+            //             imgAuthor: imga2,
+            //             nameAuthor: "SalvadorDali",
+            //             price: "4.89 ETH",
+            //             priceChange: "$12.246",
+            //             wishlist: "100",
+            //             imgCollection: imgCollection2,
+            //             nameCollection: "Creative Art 3D"
+            //         },
+            //         {
+            //             id: 3,
+            //             img: img3,
+            //             title: "The RenaiXance Rising the sun ",
+            //             tags: "bsc",
+            //             imgAuthor: imga3,
+            //             nameAuthor: "SalvadorDali",
+            //             price: "4.89 ETH",
+            //             priceChange: "$12.246",
+            //             wishlist: "100",
+            //             imgCollection: imgCollection3,
+            //             nameCollection: "Creative Art 3D"
+            //         },
+            //         {
+            //             id: 4,
+            //             img: img4,
+            //             title: "The RenaiXance Rising the sun ",
+            //             tags: "bsc",
+            //             imgAuthor: imga4,
+            //             nameAuthor: "SalvadorDali",
+            //             price: "4.89 ETH",
+            //             priceChange: "$12.246",
+            //             wishlist: "100",
+            //             imgCollection: imgCollection4,
+            //             nameCollection: "Creative Art 3D"
+            //         },
+            //         {
+            //             id: 6,
+            //             img: img5,
+            //             title: "The RenaiXance Rising the sun ",
+            //             tags: "bsc",
+            //             imgAuthor: imga6,
+            //             nameAuthor: "SalvadorDali",
+            //             price: "4.89 ETH",
+            //             priceChange: "$12.246",
+            //             wishlist: "100",
+            //             imgCollection: imgCollection6,
+            //             nameCollection: "Creative Art 3D"
+            //         },
+            //     ]
+            // },
         ]
     )
 
@@ -510,6 +511,42 @@ const Authors02 = () => {
     }
 
     const [modalShow, setModalShow] = useState(false);
+
+    function formatItems(items) {
+        return items.map(x => ({
+            id: x.collection.address + '-' + x.tokenId,
+            img: x.metadata.image,
+            title: x.collection.name + " #" + x.tokenId,
+            tags: "bsc",
+            imgAuthor: x.owner,
+            nameAuthor: x.owner,
+            price: x.listPrice + " ???",
+            priceChange: "$12.246",
+            wishlist: "100",
+            imgCollection: x.metadata.image,
+            nameCollection: x.collection.name
+        }));
+    }
+
+    async function refreshData() {
+        console.log('Refresh Start');
+        let items = await fetchAllMyItems();
+        console.log(items);
+        setPanelTab([
+            {
+                id: 1,
+                dataContent: formatItems(items),
+            },
+            {
+                id: 2,
+                dataContent: formatItems(items),
+            }
+        ]);
+    }
+
+    useEffect(() => {
+        refreshData();
+    }, [])
 
     return (
         <div className='authors-2'>
@@ -575,7 +612,7 @@ const Authors02 = () => {
                                     {
                                         panelTab.map((item, index) => (
                                             <TabPanel key={index}>
-                                                {/* {
+                                                {
                                                     item.dataContent.slice(0,visible).map((data,index) => (
                                                         <div key={index} className="col-xl-3 col-lg-4 col-md-6 col-12">
                                                             <div className="sc-card-product explode ">
@@ -614,13 +651,13 @@ const Authors02 = () => {
                                                             </div>
                                                         </div>
                                                     ))
-                                                } */}
-                                                {/* {
+                                                }
+                                                {
                                                     visible < item.dataContent.length && 
                                                     <div className="col-md-12 wrap-inner load-more text-center"> 
                                                         <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3" onClick={showMoreItems}><span>Load More</span></Link>
                                                     </div>
-                                                } */}
+                                                }
                                             </TabPanel>
                                         ))
                                     }
