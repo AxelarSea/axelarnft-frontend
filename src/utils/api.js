@@ -1,4 +1,5 @@
 import axios from "axios";
+import ERC721MetaMintable from "../contracts/ERC721MetaMintable";
 import Marketplace from "../contracts/Marketplace";
 import web3 from "../hooks/web3";
 import switchChain from "./switchChain";
@@ -35,18 +36,24 @@ export async function refreshMetadata(chainId, collectionAddress, tokenId) {
 }
 
 export async function listItem(chainId, collectionAddress, tokenId, listTokenAddress, listPrice, listAmount = 1) {
-  console.log(chainId, tokenId, listAmount, listTokenAddress, listPrice);
+  // console.log(chainId, tokenId, listAmount, listTokenAddress, listPrice);
   
   await switchChain(chainId);
 
-  console.log('BBB')
+  // console.log('BBB')
 
   await wait(500);
 
   let account = (await web3.eth.getAccounts())[0];
   let contract = new Marketplace(chainId, account);
+  let erc721 = new ERC721MetaMintable(chainId, collectionAddress, account);
+  let allowance = await erc721.allowance(account, contract.address);
+  
+  if (!allowance) {
+    await erc721.approve(contract.address);
+  }
 
-  console.log(collectionAddress, tokenId, listAmount, listTokenAddress, listPrice);
+  // console.log(collectionAddress, tokenId, listAmount, listTokenAddress, listPrice);
 
   await contract.list(collectionAddress, tokenId, listAmount, listTokenAddress, listPrice);
 

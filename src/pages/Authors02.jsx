@@ -668,9 +668,9 @@ const Authors02 = () => {
                                     </div>
                                     <div className="meta-info">
                                       <div className="author">
-                                        <div className="avatar">
+                                        {/* <div className="avatar">
                                           <img src={data.imgAuthor} alt="Axies" />
-                                        </div>
+                                        </div> */}
                                         <div className="info">
                                           <span>Creator</span>
                                           <h6>{data.nameAuthor}</h6>
