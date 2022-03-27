@@ -36,7 +36,7 @@ const SliderStyle4 = () => {
                                 <h1 className="heading mb-style"><span className="nft-marketplace-heading">NFT Marketplace</span>                                          
                                 </h1>
                                 {/* <h1 className="heading">Monster NFTs</h1> */}
-                                <p className="sub-heading mt-19 mb-40">Trade NFTs. Using any token. From any chain                
+                                <p className="sub-heading mt-19 mb-40">Trade NFTs. Using any token. From any chain         
                                 </p>
 
                                 <div className="flat-bt-slider flex style2">
