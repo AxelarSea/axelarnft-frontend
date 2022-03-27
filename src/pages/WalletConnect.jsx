@@ -15,16 +15,27 @@ import HeaderStyle2 from "../components/header/HeaderStyle2";
 
 import { ethers } from "ethers";
 import web3 from "../hooks/web3";
-
-function maskAddress(address) {
-  return address.substring(0, 6) + '...' + address.substring(address.length - 4);
-}
+import { useWallet } from "@terra-money/wallet-provider";
+import { maskAddress } from "../utils/address";
 
 const WalletConnect = () => {
   const [errorMessage, setErrorMessage] = useState(null);
   const [web3Account, setWeb3Account] = useState(null);
   const [userBalance, setUserBalance] = useState(null);
   const [connButtonText, setConnButtonText] = useState("Connect Wallet");
+
+  const {
+    status,
+    network,
+    wallets,
+    availableConnectTypes,
+    availableInstallTypes,
+    availableConnections,
+    supportFeatures,
+    connect,
+    install,
+    disconnect,
+  } = useWallet();
 
   const connectWalletHandler = () => {
     if (window.ethereum && window.ethereum.isMetaMask) {
@@ -79,6 +90,10 @@ const WalletConnect = () => {
   // console.log(web3.eth.accounts[0]);
   console.log(web3Account);
 
+  function connectTerra() {
+    connect("EXTENSION");
+  }
+
   const data = [
     {
       img: img1,
@@ -91,6 +106,8 @@ const WalletConnect = () => {
       img: img2,
       title: "Terra Station",
       description: "Terra Testnet",
+      onClick: connectTerra,
+      address: wallets[0]?.terraAddress,
     },
     // {
     //     img: img3,
