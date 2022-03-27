@@ -4,7 +4,7 @@ import MarketplaceMetaWallet from "./MarketplaceMetaWallet";
 
 const address = {
   80001: "0x5fA3b915A19D4a56417C06ba6617a8E90Ea149fD",
-  43113: "0x5fA3b915A19D4a56417C06ba6617a8E90Ea149fD",
+  43113: "0xefE5a3b23e3f38A1b0DCc88cb13415aCe6F1eBF1",
 }
 
 export default class Marketplace {

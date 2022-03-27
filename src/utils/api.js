@@ -61,3 +61,7 @@ export async function listItem(chainId, collectionAddress, tokenId, listTokenAdd
 
   await refreshMetadata(chainId, collectionAddress, tokenId);
 }
+
+export async function buyERC721(chainId, collectionAddress, tokenId) {
+
+}
