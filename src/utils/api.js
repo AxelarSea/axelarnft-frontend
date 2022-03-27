@@ -5,6 +5,71 @@ import web3 from "../hooks/web3";
 import switchChain from "./switchChain";
 import wait from "./wait";
 
+import {
+  GetDepositAddressDto,
+  GetDepositAddressPayload,
+  TransferAssetBridge,
+} from "@axelar-network/axelarjs-sdk";
+
+const environment = "testnet";
+const axelarApi = new TransferAssetBridge(environment);
+
+export const CROSS_CHAIN_TOKEN_ADDRESS = {
+  "uluna": {
+    3: "0x7Aa125543B9D4a361f58aC1Ff3Bea86eAF6D948B",
+    43113: "0x50a70aBb7bd6EbBcC46Df7C0d033C568F563cA27",
+    4002: "0x121286BeDd58d58558A30ED2db2f4a7c6Eb646A3",
+  },
+  "uusd": {
+    3: "0x1487F3faefE78792CDC48D87FF32aaC6650fd85f",
+    43113: "0x43F4600b552089655645f8c16D86A5a9Fa296bc3",
+    4002: "0x89A1D86901D25EFFe5D022bDD1132827e4D7f010",
+  }
+}
+
+export function crossChainTokenSymbol(chainId, tokenAddress) {
+  for (let symbol in CROSS_CHAIN_TOKEN_ADDRESS) {
+    if (CROSS_CHAIN_TOKEN_ADDRESS[symbol][chainId].toLowerCase() == tokenAddress.toLowerCase()) {
+      return symbol;
+    }
+  }
+}
+
+export async function getMetaWalletAddress(chainId, address) {
+  let response = await axios.post(process.env.REACT_APP_API_HOST + '/api/metatx/createMetaWallet/' + chainId + '/' + address);
+  return response.data.metaWalletAddress;
+}
+
+export const getDepositAddress = async (chainId, asset, destinationAddress) => {
+  let chainName = "";
+
+  switch (chainId) {
+    case 3: chainName = "ethereum"; break;
+    case 43113: chainName = "avalanche"; break;
+    case 4002: chainName = "fantom"; break;
+  }
+
+  const payload = {
+    fromChain: "terra",
+    toChain: "avalanche",
+    asset: asset,
+    destinationAddress: destinationAddress,
+  };
+  const requestPayload = {
+    payload,
+  };
+  const linkAddress = await axelarApi.getDepositAddress(requestPayload);
+  return linkAddress;
+};
+
+export async function buyERC721(chainId, collectionAddress, tokenId, listTokenAddress, listPrice) {
+  let address = (await web3.eth.getAccounts())[0];
+  let metaWalletAddress = await getMetaWalletAddress(chainId, address);
+  let symbol = crossChainTokenSymbol(chainId, listTokenAddress);
+  let depositAddress = await getDepositAddress(chainId, symbol, metaWalletAddress);
+  console.log(depositAddress);
+}
+
 export async function fetchAllItems() {
   let response = await axios.get(process.env.REACT_APP_API_HOST + '/api/nft/items');
   return response.data.docs;
@@ -27,7 +92,7 @@ export async function fetchAllMyItems() {
 }
 
 export async function fetchItem(collectionAddress, tokenId) {
-  let response = await axios.get(process.env.REACT_APP_API_HOST + '/api/nft/collection/' + collectionAddress + '/items/' + tokenId);
+  let response = await axios.get(process.env.REACT_APP_API_HOST + '/api/nft/collections/' + collectionAddress + '/items/' + tokenId);
   return response.data;
 }
 
@@ -60,8 +125,4 @@ export async function listItem(chainId, collectionAddress, tokenId, listTokenAdd
   await wait(1000);
 
   await refreshMetadata(chainId, collectionAddress, tokenId);
-}
-
-export async function buyERC721(chainId, collectionAddress, tokenId) {
-
 }

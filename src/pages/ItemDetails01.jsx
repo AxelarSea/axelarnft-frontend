@@ -16,6 +16,8 @@ import img6 from "../assets/images/avatar/avt-8.jpg";
 import img7 from "../assets/images/avatar/avt-2.jpg";
 import imgdetail1 from "../assets/images/box-item/images-item-details.jpg";
 import CardModal from "../components/layouts/CardModal";
+import { fetchItem } from "../utils/api";
+import { maskAddress } from "../utils/address";
 
 const ItemDetails01 = () => {
   const [data, setData] = useState({});
@@ -72,7 +74,13 @@ const ItemDetails01 = () => {
     // },
   ]);
 
-  useEffect(() => {}, []);
+  async function refreshData() {
+      setData(await fetchItem(collectionAddress, tokenId));
+  }
+
+  useEffect(() => {
+    refreshData();
+  }, []);
 
   return (
     <div className="item-details">
@@ -135,7 +143,7 @@ const ItemDetails01 = () => {
             <div className="col-xl-6 col-md-12">
               <div className="content-left">
                 <div className="media">
-                  <img src={imgdetail1} alt="Axies" />
+                  <img src={data.metadata?.image || imgdetail1} alt="Axies" />
                 </div>
               </div>
             </div>
@@ -143,7 +151,7 @@ const ItemDetails01 = () => {
               <div className="content-right">
                 <div className="sc-item-details">
                   <h2 className="style2">
-                    “The Fantasy Flower illustration ”{" "}
+                    {data.collection?.name} #{data.tokenId}
                   </h2>
                   <div className="meta-item">
                     <div className="left">
@@ -170,7 +178,7 @@ const ItemDetails01 = () => {
                           <span>Owned By</span>
                           <h6>
                             {" "}
-                            <Link to="/authors-02">Ralph Garraway</Link>{" "}
+                            <Link to="/authors-02">{maskAddress(data.owner)}</Link>{" "}
                           </h6>
                         </div>
                       </div>
@@ -184,25 +192,21 @@ const ItemDetails01 = () => {
                           <span>Create By</span>
                           <h6>
                             {" "}
-                            <Link to="/authors-02">Freddie Carpenter</Link>{" "}
+                            <Link to="/authors-02">{maskAddress(data.collection?.owner)}</Link>{" "}
                           </h6>
                         </div>
                       </div>
                     </div>
                   </div>
                   <p>
-                    Habitant sollicitudin faucibus cursus lectus pulvinar dolor
-                    non ultrices eget. Facilisi lobortisal morbi fringilla urna
-                    amet sed ipsum vitae ipsum malesuada. Habitant sollicitudin
-                    faucibus cursus lectus pulvinar dolor non ultrices eget.
-                    Facilisi lobortisal morbi fringilla urna amet sed ipsum
+                    {data.metadata?.description}
                   </p>
                   <div className="meta-item-details style2">
                     <div className="item meta-price">
                       <span className="heading">Current Bid</span>
                       <div className="price">
                         <div className="price-box">
-                          <h5> 4.89 ETH</h5>
+                          <h5>{data.listPrice} ??</h5>
                           <span>= $12.246</span>
                         </div>
                       </div>
@@ -252,7 +256,12 @@ const ItemDetails01 = () => {
                                             {item.name}{" "}
                                           </Link>
                                         </h6>{" "}
-                                        <span onClick={() => setModalShow(true)}> Buy Now</span>
+                                        <span
+                                          onClick={() => setModalShow(true)}
+                                        >
+                                          {" "}
+                                          Buy Now
+                                        </span>
                                       </div>
                                       <span className="time">{item.time}</span>
                                     </div>
@@ -291,7 +300,10 @@ const ItemDetails01 = () => {
                                           Mason Woodward{" "}
                                         </Link>
                                       </h6>{" "}
-                                      <span onClick={() => setModalShow(true)}> Buy Now</span>
+                                      <span onClick={() => setModalShow(true)}>
+                                        {" "}
+                                        Buy Now
+                                      </span>
                                     </div>
                                     <span className="time">8 hours ago</span>
                                   </div>
@@ -330,7 +342,15 @@ const ItemDetails01 = () => {
       <LiveAuction data={liveAuctionData} />
       <Footer />
 
-      <CardModal show={modalShow} onHide={() => setModalShow(false)} />
+      <CardModal 
+        show={modalShow} 
+        onHide={() => setModalShow(false)}
+        chainId={chainId}
+        collectionAddress={collectionAddress}
+        tokenId={tokenId}
+        listTokenAddress={data.listTokenAddress}
+        listPrice={data.listPrice}
+      />
     </div>
   );
 };
