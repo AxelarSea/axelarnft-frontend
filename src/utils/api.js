@@ -18,6 +18,7 @@ import {
   Coin,
 } from "@terra-money/terra.js";
 import ERC20 from "../contracts/ERC20";
+import { generateBuyERC721Signature } from "../contracts/generateSignature";
 
 const environment = "testnet";
 const axelarApi = new TransferAssetBridge(environment);
@@ -48,6 +49,11 @@ export async function getMetaWalletAddress(chainId, address) {
   return response.data.metaWalletAddress;
 }
 
+export async function executeMetaWalletTx(chainId, address, signature) {
+  let response = await axios.post(process.env.REACT_APP_API_HOST + '/api/metatx/metawallet/' + chainId + '/' + address, signature);
+  return true;
+}
+
 export const getDepositAddress = async (chainId, asset, destinationAddress) => {
   let chainName = "";
 
@@ -76,6 +82,9 @@ export async function buyERC721(wallet, chainId, collectionAddress, tokenId, lis
   let symbol = crossChainTokenSymbol(chainId, listTokenAddress);
   let depositAddress = await getDepositAddress(chainId, symbol, metaWalletAddress);
   console.log(depositAddress);
+
+  let seller = await new ERC721MetaMintable(chainId, collectionAddress, address, true).ownerOf(tokenId);
+  console.log('SELLER:', seller)
 
   const msgTransfer = new MsgTransfer(
     'transfer',
@@ -118,7 +127,12 @@ export async function buyERC721(wallet, chainId, collectionAddress, tokenId, lis
 
   console.log('Deposit arrived');
 
-  
+  let signature = await generateBuyERC721Signature(chainId, metaWalletAddress, collectionAddress, seller, tokenId);
+  console.log(signature);
+
+  await executeMetaWalletTx(chainId, address, signature);
+
+  window.alert("Buy success");
 }
 
 export async function fetchAllItems() {
@@ -171,7 +185,7 @@ export async function listItem(chainId, collectionAddress, tokenId, listTokenAdd
 
   // console.log(collectionAddress, tokenId, listAmount, listTokenAddress, listPrice);
 
-  await contract.list(collectionAddress, tokenId, listAmount, listTokenAddress, listPrice);
+  await contract.list(collectionAddress, tokenId, listAmount, listTokenAddress, Math.floor(listPrice * 1000000));
 
   await wait(1000);
 

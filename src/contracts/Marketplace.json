@@ -14,7 +14,7 @@
     "anonymous": false,
     "inputs": [
       {
-        "indexed": true,
+        "indexed": false,
         "internalType": "address",
         "name": "buyer",
         "type": "address"
@@ -50,7 +50,7 @@
         "type": "uint256"
       },
       {
-        "indexed": false,
+        "indexed": true,
         "internalType": "address",
         "name": "seller",
         "type": "address"
@@ -275,6 +275,11 @@
   {
     "inputs": [
       {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
         "internalType": "contract IERC1155",
         "name": "token",
         "type": "address"
@@ -302,6 +307,11 @@
   },
   {
     "inputs": [
+      {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
       {
         "internalType": "contract IERC721",
         "name": "token",
@@ -559,7 +569,7 @@
     "name": "metaWallet",
     "outputs": [
       {
-        "internalType": "address",
+        "internalType": "contract MarketplaceMetaWallet",
         "name": "",
         "type": "address"
       }

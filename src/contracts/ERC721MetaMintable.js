@@ -1,9 +1,14 @@
 import ERC721MetaMintableABI from "./ERC721MetaMintable.json";
-import ContractCache from "./ContractCache";
+import ContractCache, {ContractCacheReadOnly} from "./ContractCache";
 
 export default class ERC721MetaMintable {
-  constructor(chainId, address, from = "") {
-    this.contract = ContractCache(chainId, address, ERC721MetaMintableABI);
+  constructor(chainId, address, from = "", readOnly = false) {
+    if (readOnly) {
+      this.contract = new ContractCacheReadOnly(chainId, address, ERC721MetaMintableABI);
+    } else {
+      this.contract = ContractCache(chainId, address, ERC721MetaMintableABI);
+    }
+    
     this.from = from;
   }
 

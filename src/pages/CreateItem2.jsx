@@ -41,7 +41,7 @@ const CreateItem2 = () => {
       collectionAddress,
       tokenId,
       CROSS_CHAIN_TOKEN_ADDRESS[priceTypeSymbol][chainId],
-      web3.utils.toWei(price),
+      price,
     );
   }
 
