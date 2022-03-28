@@ -11,6 +11,14 @@ import {
   TransferAssetBridge,
 } from "@axelar-network/axelarjs-sdk";
 
+import {
+  LCDClient,
+  MnemonicKey,
+  MsgTransfer,
+  Coin,
+} from "@terra-money/terra.js";
+import ERC20 from "../contracts/ERC20";
+
 const environment = "testnet";
 const axelarApi = new TransferAssetBridge(environment);
 
@@ -62,12 +70,55 @@ export const getDepositAddress = async (chainId, asset, destinationAddress) => {
   return linkAddress;
 };
 
-export async function buyERC721(chainId, collectionAddress, tokenId, listTokenAddress, listPrice) {
+export async function buyERC721(wallet, chainId, collectionAddress, tokenId, listTokenAddress, listPrice) {
   let address = (await web3.eth.getAccounts())[0];
   let metaWalletAddress = await getMetaWalletAddress(chainId, address);
   let symbol = crossChainTokenSymbol(chainId, listTokenAddress);
   let depositAddress = await getDepositAddress(chainId, symbol, metaWalletAddress);
   console.log(depositAddress);
+
+  const msgTransfer = new MsgTransfer(
+    'transfer',
+    'channel-78', 
+    new Coin(symbol, Math.floor(listPrice * 1.05 * 1e6)), 
+    wallet.walletAddress,
+    depositAddress,
+    undefined, 
+    (Date.now() + 60 * 1000) * 1e6,
+  );
+
+  console.log(wallet)
+
+  await wallet.post({
+    msgs: [
+      msgTransfer
+    ],
+  });
+
+  // Polling
+  while (true) {
+    try {
+      let targetToken = new ERC20(chainId, listTokenAddress, address, true);
+      let balance = await targetToken.balanceOf(metaWalletAddress);
+  
+      // console.log(balance);
+      // console.log(parseFloat(balance) / 1000000, listPrice);
+  
+      if (parseFloat(balance) / 1000000 >= listPrice) {
+        break;
+      } else {
+        console.log('Not arrived');
+      }
+    } catch (err) {
+      console.error(err);
+    }
+
+    await wait(3000);
+  }
+
+  console.log('Deposit arrived');
+
+  
 }
 
 export async function fetchAllItems() {

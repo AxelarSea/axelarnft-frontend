@@ -224,20 +224,20 @@ const WalletConnect = () => {
       onClick: connectWalletHandler,
       address: web3Account,
     },
-    // {
-    //   img: img2,
-    //   title: "Terra Station",
-    //   description: "Terra Testnet",
-    //   onClick: connectTerra,
-    //   address: wallets[0]?.terraAddress,
-    // },
     {
       img: img2,
-      title: "Keplr",
-      description: "Terra Bombay Testnet",
-      onClick: connectKeplr,
-      address: keplrAddress,
+      title: "Terra Station",
+      description: "Terra Testnet",
+      onClick: connectTerra,
+      address: wallets[0]?.terraAddress,
     },
+    // {
+    //   img: img2,
+    //   title: "Keplr",
+    //   description: "Terra Bombay Testnet",
+    //   onClick: connectKeplr,
+    //   address: keplrAddress,
+    // },
     // {
     //     img: img3,
     //     title: 'Fortmatic',
@@ -272,7 +272,7 @@ const WalletConnect = () => {
 
   useEffect(() => {
     connectWalletHandler();
-    refreshKeplr();
+    // refreshKeplr();
   }, [])
 
   return (

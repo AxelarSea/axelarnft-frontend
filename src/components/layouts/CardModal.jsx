@@ -6,6 +6,8 @@ import AlunaLogo from "../../assets/images/icon/Luna.png";
 import AustLogo from "../../assets/images/icon/UST.png";
 import { buyERC721 } from "../../utils/api";
 
+import { useConnectedWallet } from "@terra-money/wallet-provider";
+
 const CardModal = (props) => {
   const [youPayPic, setYouPayPic] = useState(AustLogo);
 
@@ -15,8 +17,20 @@ const CardModal = (props) => {
 
   const [priceType, setPriceType] = useState("Luna");
 
+  const connectedWallet = useConnectedWallet();
+
   async function buyOnClick() {
-    await buyERC721(props.chainId, props.collectionAddress, props.tokenId, props.listTokenAddress, props.listPrice);
+    if (!connectedWallet) {
+      window.alert("Please connect to terra station wallet");
+      return;
+    }
+
+    if (connectedWallet.network.chainID.startsWith('columbus')) {
+      window.alert(`Please switch to Bombay testnet on your terra station`);
+      return;
+    }
+
+    await buyERC721(connectedWallet, props.chainId, props.collectionAddress, props.tokenId, props.listTokenAddress, props.listPrice);
   }
 
   return (
