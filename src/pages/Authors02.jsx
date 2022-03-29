@@ -6,7 +6,7 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import CardModal from "../components/layouts/CardModal";
 
-import avt from "../assets/images/avatar/avt-author-tab.jpg";
+import avt from "../assets/images/avatar/satoshi.png";
 import img1 from "../assets/images/box-item/card-item-3.jpg";
 import imga1 from "../assets/images/avatar/avt-1.jpg";
 import imgCollection1 from "../assets/images/avatar/avt-18.jpg";
@@ -578,11 +578,9 @@ const Authors02 = () => {
               </div>
               <div className="infor-profile">
                 <span>Author Profile</span>
-                <h2 className="title">Trista Francis</h2>
+                <h2 className="title">Satoshi Nakamoto</h2>
                 <p className="content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Laborum obcaecati dignissimos quae quo ad iste ipsum officiis
-                  deleniti asperiores sit.
+                A persons who developed bitcoin, authored the bitcoin white paper, and created and deployed bitcoin's original reference implementation.
                 </p>
                 <form>
                   <input

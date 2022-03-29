@@ -1,52 +1,52 @@
 const widgetSidebarData = [
-    {
-        id: 1,
-        title: "Status",
-        content : [
-            {
-                field: 'Buy Now',
-                checked: 'checked'
-            },
-            {
-                field: 'On Auctions'
-            },
-            {
-                field: 'Has Offers'
-            },
-        ]
-    },
-    {
-        id: 2,
-        title: "Categories",
-        content : [
-            {
-                field: 'Art'
-            },
-            {
-                field: 'Music'
-            },
-            {
-                field: 'Domain Names',
-                checked: 'checked'
-            },
-            {
-                field: 'Virtual Worlds'
-            },
-            {
-                field: 'Trading  Cards'
-            },
-            {
-                field: 'Collectibles',
-                checked: 'checked'
-            },
-            {
-                field: 'Sports'
-            },
-            {
-                field: 'Utility'
-            },
-        ]
-    },
+    // {
+    //     id: 1,
+    //     title: "Status",
+    //     content : [
+    //         {
+    //             field: 'Buy Now',
+    //             checked: 'checked'
+    //         },
+    //         {
+    //             field: 'On Auctions'
+    //         },
+    //         {
+    //             field: 'Has Offers'
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 2,
+    //     title: "Categories",
+    //     content : [
+    //         {
+    //             field: 'Art'
+    //         },
+    //         {
+    //             field: 'Music'
+    //         },
+    //         {
+    //             field: 'Domain Names',
+    //             checked: 'checked'
+    //         },
+    //         {
+    //             field: 'Virtual Worlds'
+    //         },
+    //         {
+    //             field: 'Trading  Cards'
+    //         },
+    //         {
+    //             field: 'Collectibles',
+    //             checked: 'checked'
+    //         },
+    //         {
+    //             field: 'Sports'
+    //         },
+    //         {
+    //             field: 'Utility'
+    //         },
+    //     ]
+    // },
     {
         id: 3,
         title: "Chains",
@@ -58,7 +58,7 @@ const widgetSidebarData = [
                 field: 'Polygon'
             },
             {
-                field: 'Klaytn'
+                field: 'Fantom'
             },
         ]
     },
@@ -67,22 +67,19 @@ const widgetSidebarData = [
         title: "Collections",
         content : [
             {
-                field: 'Abstraction'
+                field: 'MetaWarden'
             },
             {
-                field: 'Patternlicious'
+                field: 'CloneX'
             },
             {
-                field: 'Skecthify'
+                field: 'Bored ape yacht club'
             },
             {
-                field: 'Cartoonism'
+                field: 'Galactic Punk'
             },
             {
-                field: 'Virtuland'
-            },
-            {
-                field: 'Papercut'
+                field: 'Aavegotchi'
             },
         ]
     },

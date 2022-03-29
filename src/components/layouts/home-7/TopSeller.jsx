@@ -16,6 +16,9 @@ import img11 from '../../../assets/images/avatar/avt-32.jpg'
 import img12 from '../../../assets/images/avatar/avt-33.jpg'
 
 import imgAuthor from '../../../assets/images/avatar/img-author.svg'
+import imgAuthor2 from '../../../assets/images/avatar/img-author3.png'
+import imgAuthor3 from '../../../assets/images/avatar/img-author2.png'
+import imgAuthor4 from '../../../assets/images/avatar/img-author4.png'
 
 const TopSeller = () => {
     const [dataTopSellerTab] = useState(
@@ -38,31 +41,31 @@ const TopSeller = () => {
                 dataTopSellerContent: [
                     {
                         img: imgAuthor,
-                        name: 'Windsor Lane',
-                        mail: '@windsorlandhh',
+                        name: 'CLONE X - X TAKASHI...',
+                        mail: '0xF5ab…A754',
                         top: '1',
-                        price: '120.7 ETH'
+                        price: '$32,893.53'
                     },
                     {
-                        img: imgAuthor,
-                        name: 'Windsor Lane',
-                        mail: '@windsorlandhh',
+                        img: imgAuthor2,
+                        name: 'BoredApeYachtClub',
+                        mail: '0xs4dfb…A141',
                         top: '2',
-                        price: '120.7 ETH'
+                        price: '$28,425.24'
                     },
                     {
-                        img: imgAuthor,
-                        name: 'Windsor Lane',
-                        mail: '@windsorlandhh',
+                        img: imgAuthor3,
+                        name: 'MetaWarden',
+                        mail: '0xG341…A151',
                         top: '3',
-                        price: '120.7 ETH'
+                        price: '$25,893.53'
                     },
                     {
-                        img: imgAuthor,
-                        name: 'Windsor Lane',
-                        mail: '@windsorlandhh',
+                        img: imgAuthor4,
+                        name: 'Galactic Punk',
+                        mail: '0xF5ab…A754',
                         top: '4',
-                        price: '120.7 ETH'
+                        price: '$20,123.22'
                     },
                     // {
                     //     img: img5,

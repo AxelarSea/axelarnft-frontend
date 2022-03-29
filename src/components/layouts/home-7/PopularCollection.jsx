@@ -5,13 +5,16 @@ import img1Bottom1 from '../../../assets/images/box-item/img-demo.svg'
 import img1Bottom2 from '../../../assets/images/box-item/img-demo2.svg'
 import img1Bottom3 from '../../../assets/images/box-item/img-demo3.svg'
 import imgAuthor1 from '../../../assets/images/avatar/img-author.svg'
-import imgTop2 from '../../../assets/images/box-item/collection-item-21.jpg'
-import img2Bottom1 from '../../../assets/images/box-item/collection-item-22.jpg'
-import img2Bottom2 from '../../../assets/images/box-item/collection-item-23.jpg'
-import img2Bottom3 from '../../../assets/images/box-item/collection-item-24.jpg'
-import imgAuthor2 from '../../../assets/images/avatar/avt-10.jpg'
-import imgTop3 from '../../../assets/images/box-item/collection-item-25.jpg'
-import imgAuthor3 from '../../../assets/images/avatar/avt-3.jpg'
+import imgTop2 from '../../../assets/images/box-item/img-top2.png'
+import img2Bottom1 from '../../../assets/images/box-item/img2Bottom1.png'
+import img2Bottom2 from '../../../assets/images/box-item/img2Bottom2.png'
+import img2Bottom3 from '../../../assets/images/box-item/img2Bottom3.png'
+import imgAuthor2 from '../../../assets/images/avatar/img-author2.png'
+import imgTop3 from '../../../assets/images/box-item/img-top3.png'
+import img3Bottom1 from '../../../assets/images/box-item/img3Bottom1.png'
+import img3Bottom2 from '../../../assets/images/box-item/img3Bottom2.png'
+import img3Bottom3 from '../../../assets/images/box-item/img3Bottom3.png'
+import imgAuthor3 from '../../../assets/images/avatar/img-author3.png'
 
 import LogoSupport from '../../../assets/images/logo/Logo-Support.svg';
 import WeSupport from '../../../assets/images/logo/We-Support.svg';
@@ -26,60 +29,60 @@ const PopularCollection = () => {
                 imgBottom2: img1Bottom2,
                 imgBottom3: img1Bottom3,
                 imgAuthor: imgAuthor1,
-                title: 'Colorful Abstract',
+                title: 'CLONE X - X TAKASHI...',
                 name: 'Mason Woodward',
                 wishlist: '100'
             },
             {
-                imgTop: imgTop1,
-                imgBottom1: img1Bottom1,
-                imgBottom2: img1Bottom2,
-                imgBottom3: img1Bottom3,
-                imgAuthor: imgAuthor1,
-                title: 'Colorful Abstract',
+                imgTop: imgTop2,
+                imgBottom1: img2Bottom1,
+                imgBottom2: img2Bottom2,
+                imgBottom3: img2Bottom3,
+                imgAuthor: imgAuthor2,
+                title: 'MetaWarden',
                 name: 'Mason Woodward',
                 wishlist: '100'
             },
             {
-                imgTop: imgTop1,
-                imgBottom1: img1Bottom1,
-                imgBottom2: img1Bottom2,
-                imgBottom3: img1Bottom3,
-                imgAuthor: imgAuthor1,
-                title: 'Colorful Abstract',
+                imgTop: imgTop3,
+                imgBottom1: img3Bottom1,
+                imgBottom2: img3Bottom2,
+                imgBottom3: img3Bottom3,
+                imgAuthor: imgAuthor3,
+                title: 'BoredApeYachtClub',
                 name: 'Mason Woodward',
                 wishlist: '100'
             },
-            {
-                imgTop: imgTop1,
-                imgBottom1: img1Bottom1,
-                imgBottom2: img1Bottom2,
-                imgBottom3: img1Bottom3,
-                imgAuthor: imgAuthor1,
-                title: 'Colorful Abstract',
-                name: 'Mason Woodward',
-                wishlist: '100'
-            },
-            {
-                imgTop: imgTop1,
-                imgBottom1: img1Bottom1,
-                imgBottom2: img1Bottom2,
-                imgBottom3: img1Bottom3,
-                imgAuthor: imgAuthor1,
-                title: 'Colorful Abstract',
-                name: 'Mason Woodward',
-                wishlist: '100'
-            },
-            {
-                imgTop: imgTop1,
-                imgBottom1: img1Bottom1,
-                imgBottom2: img1Bottom2,
-                imgBottom3: img1Bottom3,
-                imgAuthor: imgAuthor1,
-                title: 'Colorful Abstract',
-                name: 'Mason Woodward',
-                wishlist: '100'
-            },
+            // {
+            //     imgTop: imgTop1,
+            //     imgBottom1: img1Bottom1,
+            //     imgBottom2: img1Bottom2,
+            //     imgBottom3: img1Bottom3,
+            //     imgAuthor: imgAuthor1,
+            //     title: 'Colorful Abstract',
+            //     name: 'Mason Woodward',
+            //     wishlist: '100'
+            // },
+            // {
+            //     imgTop: imgTop1,
+            //     imgBottom1: img1Bottom1,
+            //     imgBottom2: img1Bottom2,
+            //     imgBottom3: img1Bottom3,
+            //     imgAuthor: imgAuthor1,
+            //     title: 'Colorful Abstract',
+            //     name: 'Mason Woodward',
+            //     wishlist: '100'
+            // },
+            // {
+            //     imgTop: imgTop1,
+            //     imgBottom1: img1Bottom1,
+            //     imgBottom2: img1Bottom2,
+            //     imgBottom3: img1Bottom3,
+            //     imgAuthor: imgAuthor1,
+            //     title: 'Colorful Abstract',
+            //     name: 'Mason Woodward',
+            //     wishlist: '100'
+            // },
         ]
     )
 
