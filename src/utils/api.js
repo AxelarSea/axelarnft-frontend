@@ -57,7 +57,7 @@ export async function executeMetaWalletTx(chainId, address, signature) {
 export const getDepositAddress = async (chainId, asset, destinationAddress) => {
   let chainName = "";
 
-  switch (chainId) {
+  switch (parseInt(chainId)) {
     case 3: chainName = "ethereum"; break;
     case 43113: chainName = "avalanche"; break;
     case 4002: chainName = "fantom"; break;
