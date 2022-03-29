@@ -2,10 +2,10 @@ import AxelarSeaSampleNftABI from "./AxelarSeaSampleNft.json";
 import ContractCache from "./ContractCache";
 
 const address = {
-  3: "0x913fF316D6921438930e131b716344F42Cb79135",
+  3: "0xe54bd661dda41649A1c84b9D22Eb95BD1fc9BB58",
   80001: "0xe54bd661dda41649A1c84b9D22Eb95BD1fc9BB58",
-  43113: "0x8a30eA10604d39416fD6e14D4a7cde702eD5E1f1",
-  4002: "0x913fF316D6921438930e131b716344F42Cb79135"
+  43113: "0x7EE1704B30C7efE70e2cA7d143A4585F47E05eDf",
+  4002: "0xc873FA6c0068895f80C4A25021B94FCFA33E3268"
 }
 
 export default class AxelarSeaSampleNft {
