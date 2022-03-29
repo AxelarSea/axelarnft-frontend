@@ -6,7 +6,7 @@ import Footer from '../components/footer/Footer';
 import img1 from '../assets/images/icon/eth-facuet.png'
 import img2 from '../assets/images/icon/avax-facuet.png'
 import img3 from '../assets/images/icon/fantom-facuet.png'
-import img4 from '../assets/images/icon/connect-4.png'
+import img4 from '../assets/images/icon/terra-facuet.png'
 import img5 from '../assets/images/icon/connect-5.png'
 import img6 from '../assets/images/icon/connect-6.png'
 import img7 from '../assets/images/icon/connect-7.png'
@@ -42,11 +42,13 @@ const Faucet = () => {
                 website:'https://faucet.fantom.network/'
                 
             },
-            // {
-            //     img: img4,
-            //     title: 'Wallet Connect',
-            //     description: 'Metus corrupti itaque reiciendis, provident condimentum, reprehenderit numquam, mi'
-            // },
+            {
+                img: img4,
+                title: 'Terra Testnet Faucet',
+                description: 'Potenti eleifend faucibus quo vero nibh netus suspendisse unde? Consectetuer aspernatur',
+                website:'https://faucet.terra.money/'
+                
+            },
             // {
             //     img: img5,
             //     title: 'Coinbase Wallet',
