@@ -65,7 +65,7 @@ export const getDepositAddress = async (chainId, asset, destinationAddress) => {
 
   const payload = {
     fromChain: "terra",
-    toChain: "avalanche",
+    toChain: chainName,
     asset: asset,
     destinationAddress: destinationAddress,
   };
@@ -81,6 +81,8 @@ export async function buyERC721(wallet, chainId, collectionAddress, tokenId, lis
   let metaWalletAddress = await getMetaWalletAddress(chainId, address);
   let symbol = crossChainTokenSymbol(chainId, listTokenAddress);
   let depositAddress = await getDepositAddress(chainId, symbol, metaWalletAddress);
+  console.log('MetaWalletAddress', metaWalletAddress);
+  console.log('CHAIN ID', chainId)
   console.log(depositAddress);
 
   let seller = await new ERC721MetaMintable(chainId, collectionAddress, address, true).ownerOf(tokenId);
