@@ -19,6 +19,8 @@ const CardModal = (props) => {
 
   const connectedWallet = useConnectedWallet();
 
+  const [processing, setProcessing] = useState(false);
+
   async function buyOnClick() {
     if (!connectedWallet) {
       window.alert("Please connect to terra station wallet");
@@ -30,7 +32,14 @@ const CardModal = (props) => {
       return;
     }
 
-    await buyERC721(connectedWallet, props.chainId, props.collectionAddress, props.tokenId, props.listTokenAddress, props.listPrice);
+    try {
+      setProcessing(true);
+      await buyERC721(connectedWallet, props.chainId, props.collectionAddress, props.tokenId, props.listTokenAddress, props.listPrice);
+      window.alert("Buy success");
+    } finally {
+      setProcessing(false);
+    }
+    
   }
 
   return (
@@ -196,6 +205,7 @@ const CardModal = (props) => {
           data-dismiss="modal"
           aria-label="Close"
           onClick={buyOnClick}
+          disabled={processing}
         >
           Confirm
         </button>

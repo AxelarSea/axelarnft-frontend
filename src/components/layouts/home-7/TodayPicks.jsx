@@ -231,6 +231,7 @@ const TodayPicks = () => {
             nameAuthor: x.owner,
             price: x.listPrice + " ???",
             wishlist: "100",
+            raw: x,
         })));
     }
 
@@ -430,40 +431,42 @@ const TodayPicks = () => {
                         <div className='content-inner'>
                             {
                                 data.slice(0,visible).map((item,index) => (
-                                    <div key={index} className={`sc-card-product menu_card style-h7 ${item.feature ? 'comingsoon' : '' } `}>
-                                        
-                                        <div className="card-media">
-                                            <Link to="/item-details-01"><img src={item.img} alt="Axies" /></Link>
-                                        </div>
-                                        <div className="card-title">
-                                            <h5><Link to="/item-details-01">"{item.title}</Link></h5>
-                                        </div>
-                                        <div className="meta-info style">
-                                            <div className="author">
-                                                <div className="avatar">
-                                                    <img src={item.imgAuthor} alt="Axies" />
-                                                </div>
-                                                <div className="info">
-                                                    <span>Creator</span>
-                                                    <h6> <Link to="/author-02">{item.nameAuthor}</Link> </h6>
-                                                </div>
+                                    <Link to={"/item-details-01?chainId=" + item.raw?.collection.chainId + "&collection=" + item.raw?.collection.contractAddress + "&tokenId=" + item.raw?.tokenId}>
+                                        <div key={index} className={`sc-card-product menu_card style-h7 ${item.feature ? 'comingsoon' : '' } `}>
+                                            
+                                            <div className="card-media">
+                                                <img src={item.img} alt="Axies" />
                                             </div>
-                                            <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link>
-                                        </div>
-                                        <div className="meta-info">
-                                            <div className="author">
-                                                <div className="info style2">
-                                                    <span>Current Bid</span>
-                                                    <span className="pricing">{item.price}</span>
-                                                </div>
+                                            <div className="card-title">
+                                                <h5>{item.title}</h5>
                                             </div>
-                                            <div className="tags">{item.tags}</div>
+                                            <div className="meta-info style">
+                                                <div className="author">
+                                                    <div className="avatar">
+                                                        <img src={item.imgAuthor} alt="Axies" />
+                                                    </div>
+                                                    <div className="info">
+                                                        <span>Creator</span>
+                                                        <h6> <Link to="/author-02">{item.nameAuthor}</Link> </h6>
+                                                    </div>
+                                                </div>
+                                                <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link>
+                                            </div>
+                                            <div className="meta-info">
+                                                <div className="author">
+                                                    <div className="info style2">
+                                                        <span>Current Bid</span>
+                                                        <span className="pricing">{item.price}</span>
+                                                    </div>
+                                                </div>
+                                                <div className="tags">{item.tags}</div>
+                                            </div>
+                                            <div className="card-bottom">
+                                                <button onClick={() => setModalShow(true)} className="sc-button style bag fl-button pri-3 no-bg"><span>Buy Now</span></button>
+                                                {/* <Link to="/activity-01" className="view-history reload">View History</Link> */}
+                                            </div>
                                         </div>
-                                        <div className="card-bottom">
-                                            <button onClick={() => setModalShow(true)} className="sc-button style bag fl-button pri-3 no-bg"><span>Buy Now</span></button>
-                                            <Link to="/activity-01" className="view-history reload">View History</Link>
-                                        </div>
-                                    </div>
+                                    </Link>
                                 ))
                             }
                         </div>

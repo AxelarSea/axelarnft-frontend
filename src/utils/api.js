@@ -132,7 +132,9 @@ export async function buyERC721(wallet, chainId, collectionAddress, tokenId, lis
 
   await executeMetaWalletTx(chainId, address, signature);
 
-  window.alert("Buy success");
+  await wait(1000);
+
+  await refreshMetadata(chainId, collectionAddress, tokenId);
 }
 
 export async function fetchAllItems() {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
@@ -6,8 +6,41 @@ import Explore from '../components/layouts/explore-04/Explore';
 import widgetSidebarData from '../assets/fake-data/data-widget-sidebar'
 
 import HeaderStyle2 from '../components/header/HeaderStyle2';
+import { fetchAllListedItems } from '../utils/api';
     
 const Explore04 = () => {
+    const [items, setItems] = useState([]);
+
+    function formatItems(items) {
+        return items.map((x) => ({
+          id: x.collection.address + "-" + x.tokenId,
+          img: x.metadata.image,
+          title: x.collection.name + " #" + x.tokenId,
+          tags: "bsc",
+          imgAuthor: x.owner,
+          nameAuthor: x.owner,
+          price: x.listPrice + " ???",
+          priceChange: "$12.246",
+          wishlist: "100",
+          imgCollection: x.metadata.image,
+          nameCollection: x.collection.name,
+          tokenId: x.tokenId,
+          collectionAddress: x.collection.contractAddress,
+          chainId: x.collection.chainId,
+        }));
+      }
+    
+      async function refreshData() {
+        console.log("Refresh Start");
+        let items = await fetchAllListedItems();
+        console.log(items);
+        setItems(formatItems(items));
+      }
+    
+      useEffect(() => {
+        refreshData();
+      }, []);
+
     return (
         <div>
             <HeaderStyle2 />
@@ -30,7 +63,9 @@ const Explore04 = () => {
                     </div>
                 </div>                    
             </section>
-            <Explore data={widgetSidebarData} />
+            <Explore data={widgetSidebarData}>
+
+            </Explore>
             <Footer />
         </div>
     );

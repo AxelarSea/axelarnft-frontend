@@ -24,35 +24,45 @@ import web3 from "../hooks/web3";
 import switchChain from "../utils/switchChain";
 import wait from "../utils/wait";
 import axios from "axios";
+import { refreshMetadata } from "../utils/api";
 
 const CreateItem = () => {
   let [blockChain, setBlockChain] = useState("Ethereum");
+  const [processing, setProcessing] = useState(false);
 
   async function mint(e) {
     e.preventDefault();
 
-    let chainId;
+    try {
+      setProcessing(true);
 
-    // Get chainid from name
-    switch (blockChain) {
-      case 'Ethereum': chainId = 3; break;
-      case 'Avalanche': chainId = 43113; break;
-      case 'Fantom': chainId = 4002; break;
+      let chainId;
+
+      // Get chainid from name
+      switch (blockChain) {
+        case 'Ethereum': chainId = 3; break;
+        case 'Avalanche': chainId = 43113; break;
+        case 'Fantom': chainId = 4002; break;
+      }
+  
+      await switchChain(chainId);
+  
+      await wait(500);
+  
+      let account = (await web3.eth.getAccounts())[0];
+      let contract = new AxelarSeaSampleNft(chainId, account);
+      await contract.mint();
+  
+      await wait(1000);
+  
+      let totalSupply = await contract.totalSupply();
+
+      await refreshMetadata(chainId, contract.address, totalSupply)
+  
+      window.alert('Mint success');
+    } finally {
+      setProcessing(false);
     }
-
-    await switchChain(chainId);
-
-    await wait(500);
-
-    let account = (await web3.eth.getAccounts())[0];
-    let contract = new AxelarSeaSampleNft(chainId, account);
-    await contract.mint();
-
-    await wait(1000);
-
-    let totalSupply = await contract.totalSupply();
-
-    await axios.post(process.env.REACT_APP_API_HOST + '/api/nft/collections/' + contract.address + '/items/' + totalSupply + '/refreshMetadata');
   }
 
   return (
@@ -254,7 +264,7 @@ const CreateItem = () => {
                           </div>
                         </div>
 
-                        <button className="" style={{ marginTop: "90px" }} onClick={mint}>
+                        <button className="" style={{ marginTop: "90px" }} onClick={mint} disabled={processing}>
                           Submit
                         </button>
 

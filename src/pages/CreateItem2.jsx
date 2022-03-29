@@ -19,6 +19,7 @@ const CreateItem2 = () => {
   const [price, setPrice] = useState("");
   const [priceType, setPriceType] = useState("ALUNA");
   const [pricePic, setPricePic] = useState(AlunaLogo);
+  const [processing, setProcessing] = useState(false);
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -29,20 +30,29 @@ const CreateItem2 = () => {
   async function listItemOnClick(e) {
     e.preventDefault();
 
-    let priceTypeSymbol = "";
+    try {
+      setProcessing(true);
 
-    switch (priceType) {
-      case "ALUNA": priceTypeSymbol = "uluna"; break;
-      case "AUST": priceTypeSymbol = "uusd"; break;
+      let priceTypeSymbol = "";
+
+      switch (priceType) {
+        case "ALUNA": priceTypeSymbol = "uluna"; break;
+        case "AUST": priceTypeSymbol = "uusd"; break;
+      }
+  
+      await listItem(
+        chainId,
+        collectionAddress,
+        tokenId,
+        CROSS_CHAIN_TOKEN_ADDRESS[priceTypeSymbol][chainId],
+        price,
+      );
+
+      window.alert("List success");
+    } finally {
+      setProcessing(false);
     }
 
-    await listItem(
-      chainId,
-      collectionAddress,
-      tokenId,
-      CROSS_CHAIN_TOKEN_ADDRESS[priceTypeSymbol][chainId],
-      price,
-    );
   }
 
   return (
@@ -150,7 +160,7 @@ const CreateItem2 = () => {
                         <h4 className="price-item">Price</h4>
                         <div className="d-flex">
                           <div id="sort-by" className="dropdown">
-                            <Link to="#" className="btn-selector nolink">
+                            <a className="btn-selector nolink">
                               <img
                                 width="29"
                                 height="29"
@@ -158,7 +168,7 @@ const CreateItem2 = () => {
                                 style={{ marginRight: "14px" }}
                               />
                               {priceType}
-                            </Link>
+                            </a>
                             <ul>
                               <li
                                 onClick={() => {
@@ -259,7 +269,7 @@ const CreateItem2 = () => {
                                                     </div> */}
                           </div>
                         </div>
-                        <button className="" style={{ marginTop: "20px" }} onClick={listItemOnClick}>
+                        <button className="" style={{ marginTop: "20px" }} onClick={listItemOnClick} disabled={processing}>
                           Complete listing
                         </button>
                       </form>
