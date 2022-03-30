@@ -59,7 +59,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga1,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -69,7 +69,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga2,
                         nameAuthor: "Freddie Carpeter",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -79,7 +79,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga3,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -89,7 +89,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga4,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -99,7 +99,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga5,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -109,7 +109,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga1,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -119,7 +119,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga2,
                         nameAuthor: "Freddie Carpeter",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -129,7 +129,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga3,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -139,7 +139,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga4,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -149,7 +149,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga5,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -159,7 +159,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga1,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -169,7 +169,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga2,
                         nameAuthor: "Freddie Carpeter",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -179,7 +179,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga3,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -189,7 +189,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga4,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -199,7 +199,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga5,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -209,7 +209,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga1,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -219,7 +219,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga2,
                         nameAuthor: "Freddie Carpeter",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -229,7 +229,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga3,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -239,7 +239,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga4,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -249,7 +249,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga5,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     
@@ -265,7 +265,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga1,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -275,7 +275,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga2,
                         nameAuthor: "Freddie Carpeter",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -285,7 +285,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga3,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -295,7 +295,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga4,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -305,7 +305,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga5,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -315,7 +315,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga1,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -325,7 +325,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga2,
                         nameAuthor: "Freddie Carpeter",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -335,7 +335,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga3,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -345,7 +345,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga4,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -355,7 +355,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga5,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                 ]
@@ -370,7 +370,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga1,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -380,7 +380,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga2,
                         nameAuthor: "Freddie Carpeter",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -390,7 +390,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga3,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -400,7 +400,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga4,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -410,7 +410,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga5,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -420,7 +420,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga1,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -430,7 +430,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga2,
                         nameAuthor: "Freddie Carpeter",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -440,7 +440,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga3,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -450,7 +450,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga4,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -460,7 +460,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga5,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                 ]
@@ -475,7 +475,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga1,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -485,7 +485,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga2,
                         nameAuthor: "Freddie Carpeter",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -495,7 +495,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga3,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -505,7 +505,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga4,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -515,7 +515,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga5,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -525,7 +525,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga1,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -535,7 +535,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga2,
                         nameAuthor: "Freddie Carpeter",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -545,7 +545,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga3,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -555,7 +555,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga4,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                     {
@@ -565,7 +565,7 @@ const ItemContent = () => {
                         tags: "bsc",
                         imgAuthor: imga5,
                         nameAuthor: "Tyler Covington",
-                        price: "4.89 ETH",
+                        Price: "4.89 ETH",
                         wishlist: "100",
                     },
                 ]
@@ -699,8 +699,8 @@ const ItemContent = () => {
                                                 <div className="meta-info">
                                                     <div className="author">
                                                         <div className="info">
-                                                            <span>Current Bid</span>
-                                                            <span className="pricing">{item.price}</span>
+                                                            <span>Price</span>
+                                                            <span className="pricing">{item.Price}</span>
                                                         </div>
                                                     </div>
                                                     <div className="tags">{item.tags}</div>
@@ -760,8 +760,8 @@ const ItemContent = () => {
                                             <div className="meta-info">
                                                 <div className="author">
                                                     <div className="info">
-                                                        <p>Current Bid</p>
-                                                        <p className="pricing">{item.price}</p>
+                                                        <p>Price</p>
+                                                        <p className="pricing">{item.Price}</p>
                                                     </div>
                                                 </div>
                                             </div>

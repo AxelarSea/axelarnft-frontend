@@ -103,7 +103,7 @@ const TodayPicks = props => {
 
                                     <Dropdown.Menu style={{ margin: 0 }}>
                                     <Dropdown.Item href="#"> Timed auction</Dropdown.Item>
-                                    <Dropdown.Item href="#">Fixed price</Dropdown.Item>
+                                    <Dropdown.Item href="#">Fixed Price</Dropdown.Item>
                                     <Dropdown.Item href="#">Not for sale</Dropdown.Item>
                                     <Dropdown.Item href="#">Open for offers</Dropdown.Item>
                                     </Dropdown.Menu>
@@ -194,9 +194,9 @@ const TodayPicks = props => {
                                                     <h6> <Link to="/authors-02">{item.nameAuthor}</Link> </h6>
                                                 </div>
                                             </div>
-                                            <div className="price">
-                                                <span>Current Bid</span>
-                                                <h5> {item.price}</h5>
+                                            <div className="Price">
+                                                <span>Price</span>
+                                                <h5> {item.Price}</h5>
                                             </div>
                                         </div>
                                         <div className="card-bottom">

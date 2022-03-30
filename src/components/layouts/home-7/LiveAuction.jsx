@@ -29,7 +29,7 @@ const LiveAuction = () => {
                 tags: "bsc",
                 imgAuthor: imga1,
                 nameAuthor: "Tyler Covington",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -38,7 +38,7 @@ const LiveAuction = () => {
                 tags: "bsc",
                 imgAuthor: imga2,
                 nameAuthor: "Freddie Carpeter",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -47,7 +47,7 @@ const LiveAuction = () => {
                 tags: "bsc",
                 imgAuthor: imga3,
                 nameAuthor: "Tyler Covington",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -56,7 +56,7 @@ const LiveAuction = () => {
                 tags: "bsc",
                 imgAuthor: imga4,
                 nameAuthor: "Tyler Covington",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -65,7 +65,7 @@ const LiveAuction = () => {
                 tags: "bsc",
                 imgAuthor: imga5,
                 nameAuthor: "Tyler Covington",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -74,7 +74,7 @@ const LiveAuction = () => {
                 tags: "bsc",
                 imgAuthor: imga1,
                 nameAuthor: "Tyler Covington",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -83,7 +83,7 @@ const LiveAuction = () => {
                 tags: "bsc",
                 imgAuthor: imga2,
                 nameAuthor: "Freddie Carpeter",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -92,7 +92,7 @@ const LiveAuction = () => {
                 tags: "bsc",
                 imgAuthor: imga3,
                 nameAuthor: "Tyler Covington",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
         ]
@@ -172,8 +172,8 @@ const LiveAuction = () => {
                                                                     <div className="meta-info">
                                                                         <div className="author">
                                                                             <div className="info">
-                                                                                <span>Current Bid</span>
-                                                                                <span className="pricing">{item.price}</span>
+                                                                                <span>Price</span>
+                                                                                <span className="pricing">{item.Price}</span>
                                                                             </div>
                                                                         </div>
                                                                         <div className="tags">{item.tags}</div>

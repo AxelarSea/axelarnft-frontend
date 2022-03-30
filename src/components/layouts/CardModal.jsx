@@ -13,9 +13,9 @@ const CardModal = (props) => {
 
   const [youPayType, setYouPayType] = useState("UST");
 
-  const [pricePic, setPricePic] = useState(AlunaLogo);
+  const [PricePic, setPricePic] = useState(AlunaLogo);
 
-  const [priceType, setPriceType] = useState("Luna");
+  const [PriceType, setPriceType] = useState("Luna");
 
   const connectedWallet = useConnectedWallet();
 
@@ -50,7 +50,7 @@ const CardModal = (props) => {
         <h2>Checkout</h2>
         <p className="">
           You are about to purchase a{" "}
-          <span className="price color-popup">Cryptopunk #2</span>
+          <span className="Price color-popup">Cryptopunk #2</span>
         </p>
         <div className="d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-center">
@@ -98,10 +98,10 @@ const CardModal = (props) => {
                   <img
                     width="15"
                     height="15"
-                    src={pricePic}
+                    src={PricePic}
                     style={{ marginRight: "14px" }}
                   />
-                  {priceType}
+                  {PriceType}
                 </Link>
               </div>
               <p

@@ -23,43 +23,43 @@ const ItemDetails02 = () => {
                 img: img1,
                 name:"Mason Woodward",
                 time: "8 hours ago",
-                price: "4.89 ETH",
-                priceChange: "$12.246"
+                Price: "4.89 ETH",
+                PriceChange: "$12.246"
             },
             {
                 img: img2,
                 name:"Mason Woodward",
                 time: "at 06/10/2021, 3:20 AM",
-                price: "4.89 ETH",
-                priceChange: "$12.246"
+                Price: "4.89 ETH",
+                PriceChange: "$12.246"
             },
             {
                 img: img3,
                 name:"Mason Woodward",
                 time: "8 hours ago",
-                price: "4.89 ETH",
-                priceChange: "$12.246"
+                Price: "4.89 ETH",
+                PriceChange: "$12.246"
             },
             {
                 img: img4,
                 name:"Mason Woodward",
                 time: "8 hours ago",
-                price: "4.89 ETH",
-                priceChange: "$12.246"
+                Price: "4.89 ETH",
+                PriceChange: "$12.246"
             },
             {
                 img: img5,
                 name:"Mason Woodward",
                 time: "8 hours ago",
-                price: "4.89 ETH",
-                priceChange: "$12.246"
+                Price: "4.89 ETH",
+                PriceChange: "$12.246"
             },
             {
                 img: img6,
                 name:"Mason Woodward",
                 time: "8 hours ago",
-                price: "4.89 ETH",
-                priceChange: "$12.246"
+                Price: "4.89 ETH",
+                PriceChange: "$12.246"
             },
         ]
     )
@@ -145,10 +145,10 @@ const ItemDetails02 = () => {
                                             </ul>
                                         </div>
                                         <div className="item-style-2">
-                                            <div className="item meta-price">
-                                                <span className="heading">Current Bid</span>
-                                                <div className="price">
-                                                    <div className="price-box">
+                                            <div className="item meta-Price">
+                                                <span className="heading">Price</span>
+                                                <div className="Price">
+                                                    <div className="Price-box">
                                                         <h5> 4.89 ETH</h5>
                                                         <span>= $12.246</span>
                                                     </div>
@@ -192,9 +192,9 @@ const ItemDetails02 = () => {
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div className="price">
-                                                                    <h5>{item.price}</h5>
-                                                                    <span>= {item.priceChange}</span>
+                                                                <div className="Price">
+                                                                    <h5>{item.Price}</h5>
+                                                                    <span>= {item.PriceChange}</span>
                                                                 </div>
                                                             </div>
                                                         </li>

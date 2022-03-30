@@ -201,9 +201,9 @@ const WalletConnect = () => {
       // So, this is separated to support such chains.
       coinType: 118,
       // (Optional) This is used to set the fee of the transaction.
-      // If this field is not provided, Keplr extension will set the default gas price as (low: 0.01, average: 0.025, high: 0.04).
-      // Currently, Keplr doesn't support dynamic calculation of the gas prices based on on-chain data.
-      // Make sure that the gas prices are higher than the minimum gas prices accepted by chain validators and RPC/REST endpoint.
+      // If this field is not provided, Keplr extension will set the default gas Price as (low: 0.01, average: 0.025, high: 0.04).
+      // Currently, Keplr doesn't support dynamic calculation of the gas Prices based on on-chain data.
+      // Make sure that the gas Prices are higher than the minimum gas Prices accepted by chain validators and RPC/REST endpoint.
       gasPriceStep: {
           low: 0.01,
           average: 0.3,
@@ -315,10 +315,9 @@ const WalletConnect = () => {
             <div className="col-md-12">
               <div className="sc-box-icon-inner style-2">
                 {data.map((item, index) => (
-                  <div
-                    key={index}
-                    className="sc-box-icon"
-                    onClick={item.onClick}
+                  <div key={index} className="sc-box-icon d-flex flex-column align-items-center justify-content-center " 
+                  style={{cursor:'pointer'}}
+                  onClick={item.onClick}
                   >
                     <div className="img">
                       <img src={item.img} alt="Axies" />

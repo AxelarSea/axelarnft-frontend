@@ -70,8 +70,8 @@ const Authors02 = () => {
         //     tags: "bsc",
         //     imgAuthor: imga1,
         //     nameAuthor: "SalvadorDali",
-        //     price: "4.89 ETH",
-        //     priceChange: "$12.246",
+        //     Price: "4.89 ETH",
+        //     PriceChange: "$12.246",
         //     wishlist: "100",
         //     imgCollection: imgCollection1,
         //     nameCollection: "Creative Art 3D"
@@ -82,8 +82,8 @@ const Authors02 = () => {
         //     tags: "bsc",
         //     imgAuthor: imga2,
         //     nameAuthor: "SalvadorDali",
-        //     price: "4.89 ETH",
-        //     priceChange: "$12.246",
+        //     Price: "4.89 ETH",
+        //     PriceChange: "$12.246",
         //     wishlist: "100",
         //     imgCollection: imgCollection2,
         //     nameCollection: "Creative Art 3D"
@@ -94,8 +94,8 @@ const Authors02 = () => {
         //     tags: "bsc",
         //     imgAuthor: imga3,
         //     nameAuthor: "SalvadorDali",
-        //     price: "4.89 ETH",
-        //     priceChange: "$12.246",
+        //     Price: "4.89 ETH",
+        //     PriceChange: "$12.246",
         //     wishlist: "100",
         //     imgCollection: imgCollection3,
         //     nameCollection: "Creative Art 3D"
@@ -106,8 +106,8 @@ const Authors02 = () => {
         //     tags: "bsc",
         //     imgAuthor: imga4,
         //     nameAuthor: "SalvadorDali",
-        //     price: "4.89 ETH",
-        //     priceChange: "$12.246",
+        //     Price: "4.89 ETH",
+        //     PriceChange: "$12.246",
         //     wishlist: "100",
         //     imgCollection: imgCollection4,
         //     nameCollection: "Creative Art 3D"
@@ -118,8 +118,8 @@ const Authors02 = () => {
         //     tags: "bsc",
         //     imgAuthor: imga5,
         //     nameAuthor: "SalvadorDali",
-        //     price: "4.89 ETH",
-        //     priceChange: "$12.246",
+        //     Price: "4.89 ETH",
+        //     PriceChange: "$12.246",
         //     wishlist: "100",
         //     imgCollection: imgCollection5,
         //     nameCollection: "Creative Art 3D"
@@ -130,8 +130,8 @@ const Authors02 = () => {
         //     tags: "bsc",
         //     imgAuthor: imga6,
         //     nameAuthor: "SalvadorDali",
-        //     price: "4.89 ETH",
-        //     priceChange: "$12.246",
+        //     Price: "4.89 ETH",
+        //     PriceChange: "$12.246",
         //     wishlist: "100",
         //     imgCollection: imgCollection6,
         //     nameCollection: "Creative Art 3D"
@@ -142,8 +142,8 @@ const Authors02 = () => {
         //     tags: "bsc",
         //     imgAuthor: imga7,
         //     nameAuthor: "SalvadorDali",
-        //     price: "4.89 ETH",
-        //     priceChange: "$12.246",
+        //     Price: "4.89 ETH",
+        //     PriceChange: "$12.246",
         //     wishlist: "100",
         //     imgCollection: imgCollection7,
         //     nameCollection: "Creative Art 3D"
@@ -154,8 +154,8 @@ const Authors02 = () => {
         //     tags: "bsc",
         //     imgAuthor: imga8,
         //     nameAuthor: "SalvadorDali",
-        //     price: "4.89 ETH",
-        //     priceChange: "$12.246",
+        //     Price: "4.89 ETH",
+        //     PriceChange: "$12.246",
         //     wishlist: "100",
         //     imgCollection: imgCollection8,
         //     nameCollection: "Creative Art 3D"
@@ -166,8 +166,8 @@ const Authors02 = () => {
         //     tags: "bsc",
         //     imgAuthor: imga1,
         //     nameAuthor: "SalvadorDali",
-        //     price: "4.89 ETH",
-        //     priceChange: "$12.246",
+        //     Price: "4.89 ETH",
+        //     PriceChange: "$12.246",
         //     wishlist: "100",
         //     imgCollection: imgCollection1,
         //     nameCollection: "Creative Art 3D"
@@ -178,8 +178,8 @@ const Authors02 = () => {
         //     tags: "bsc",
         //     imgAuthor: imga2,
         //     nameAuthor: "SalvadorDali",
-        //     price: "4.89 ETH",
-        //     priceChange: "$12.246",
+        //     Price: "4.89 ETH",
+        //     PriceChange: "$12.246",
         //     wishlist: "100",
         //     imgCollection: imgCollection2,
         //     nameCollection: "Creative Art 3D"
@@ -190,8 +190,8 @@ const Authors02 = () => {
         //     tags: "bsc",
         //     imgAuthor: imga3,
         //     nameAuthor: "SalvadorDali",
-        //     price: "4.89 ETH",
-        //     priceChange: "$12.246",
+        //     Price: "4.89 ETH",
+        //     PriceChange: "$12.246",
         //     wishlist: "100",
         //     imgCollection: imgCollection3,
         //     nameCollection: "Creative Art 3D"
@@ -202,8 +202,8 @@ const Authors02 = () => {
         //     tags: "bsc",
         //     imgAuthor: imga4,
         //     nameAuthor: "SalvadorDali",
-        //     price: "4.89 ETH",
-        //     priceChange: "$12.246",
+        //     Price: "4.89 ETH",
+        //     PriceChange: "$12.246",
         //     wishlist: "100",
         //     imgCollection: imgCollection4,
         //     nameCollection: "Creative Art 3D"
@@ -214,8 +214,8 @@ const Authors02 = () => {
         //     tags: "bsc",
         //     imgAuthor: imga5,
         //     nameAuthor: "SalvadorDali",
-        //     price: "4.89 ETH",
-        //     priceChange: "$12.246",
+        //     Price: "4.89 ETH",
+        //     PriceChange: "$12.246",
         //     wishlist: "100",
         //     imgCollection: imgCollection5,
         //     nameCollection: "Creative Art 3D"
@@ -226,8 +226,8 @@ const Authors02 = () => {
         //     tags: "bsc",
         //     imgAuthor: imga6,
         //     nameAuthor: "SalvadorDali",
-        //     price: "4.89 ETH",
-        //     priceChange: "$12.246",
+        //     Price: "4.89 ETH",
+        //     PriceChange: "$12.246",
         //     wishlist: "100",
         //     imgCollection: imgCollection6,
         //     nameCollection: "Creative Art 3D"
@@ -238,8 +238,8 @@ const Authors02 = () => {
         //     tags: "bsc",
         //     imgAuthor: imga7,
         //     nameAuthor: "SalvadorDali",
-        //     price: "4.89 ETH",
-        //     priceChange: "$12.246",
+        //     Price: "4.89 ETH",
+        //     PriceChange: "$12.246",
         //     wishlist: "100",
         //     imgCollection: imgCollection7,
         //     nameCollection: "Creative Art 3D"
@@ -250,8 +250,8 @@ const Authors02 = () => {
         //     tags: "bsc",
         //     imgAuthor: imga8,
         //     nameAuthor: "SalvadorDali",
-        //     price: "4.89 ETH",
-        //     priceChange: "$12.246",
+        //     Price: "4.89 ETH",
+        //     PriceChange: "$12.246",
         //     wishlist: "100",
         //     imgCollection: imgCollection8,
         //     nameCollection: "Creative Art 3D"
@@ -268,8 +268,8 @@ const Authors02 = () => {
           tags: "bsc",
           imgAuthor: imga2,
           nameAuthor: "SalvadorDali",
-          price: "4.89 ETH",
-          priceChange: "$12.246",
+          Price: "4.89 ETH",
+          PriceChange: "$12.246",
           wishlist: "100",
           imgCollection: imgCollection2,
           nameCollection: "Creative Art 3D",
@@ -281,8 +281,8 @@ const Authors02 = () => {
           tags: "bsc",
           imgAuthor: imga3,
           nameAuthor: "SalvadorDali",
-          price: "4.89 ETH",
-          priceChange: "$12.246",
+          Price: "4.89 ETH",
+          PriceChange: "$12.246",
           wishlist: "100",
           imgCollection: imgCollection3,
           nameCollection: "Creative Art 3D",
@@ -294,8 +294,8 @@ const Authors02 = () => {
           tags: "bsc",
           imgAuthor: imga4,
           nameAuthor: "SalvadorDali",
-          price: "4.89 ETH",
-          priceChange: "$12.246",
+          Price: "4.89 ETH",
+          PriceChange: "$12.246",
           wishlist: "100",
           imgCollection: imgCollection4,
           nameCollection: "Creative Art 3D",
@@ -307,8 +307,8 @@ const Authors02 = () => {
           tags: "bsc",
           imgAuthor: imga5,
           nameAuthor: "SalvadorDali",
-          price: "4.89 ETH",
-          priceChange: "$12.246",
+          Price: "4.89 ETH",
+          PriceChange: "$12.246",
           wishlist: "100",
           imgCollection: imgCollection5,
           nameCollection: "Creative Art 3D",
@@ -325,8 +325,8 @@ const Authors02 = () => {
     //             tags: "bsc",
     //             imgAuthor: imga1,
     //             nameAuthor: "SalvadorDali",
-    //             price: "4.89 ETH",
-    //             priceChange: "$12.246",
+    //             Price: "4.89 ETH",
+    //             PriceChange: "$12.246",
     //             wishlist: "100",
     //             imgCollection: imgCollection1,
     //             nameCollection: "Creative Art 3D"
@@ -338,8 +338,8 @@ const Authors02 = () => {
     //             tags: "bsc",
     //             imgAuthor: imga3,
     //             nameAuthor: "SalvadorDali",
-    //             price: "4.89 ETH",
-    //             priceChange: "$12.246",
+    //             Price: "4.89 ETH",
+    //             PriceChange: "$12.246",
     //             wishlist: "100",
     //             imgCollection: imgCollection3,
     //             nameCollection: "Creative Art 3D"
@@ -351,8 +351,8 @@ const Authors02 = () => {
     //             tags: "bsc",
     //             imgAuthor: imga4,
     //             nameAuthor: "SalvadorDali",
-    //             price: "4.89 ETH",
-    //             priceChange: "$12.246",
+    //             Price: "4.89 ETH",
+    //             PriceChange: "$12.246",
     //             wishlist: "100",
     //             imgCollection: imgCollection4,
     //             nameCollection: "Creative Art 3D"
@@ -364,8 +364,8 @@ const Authors02 = () => {
     //             tags: "bsc",
     //             imgAuthor: imga5,
     //             nameAuthor: "SalvadorDali",
-    //             price: "4.89 ETH",
-    //             priceChange: "$12.246",
+    //             Price: "4.89 ETH",
+    //             PriceChange: "$12.246",
     //             wishlist: "100",
     //             imgCollection: imgCollection5,
     //             nameCollection: "Creative Art 3D"
@@ -382,8 +382,8 @@ const Authors02 = () => {
     //             tags: "bsc",
     //             imgAuthor: imga1,
     //             nameAuthor: "SalvadorDali",
-    //             price: "4.89 ETH",
-    //             priceChange: "$12.246",
+    //             Price: "4.89 ETH",
+    //             PriceChange: "$12.246",
     //             wishlist: "100",
     //             imgCollection: imgCollection1,
     //             nameCollection: "Creative Art 3D"
@@ -395,8 +395,8 @@ const Authors02 = () => {
     //             tags: "bsc",
     //             imgAuthor: imga2,
     //             nameAuthor: "SalvadorDali",
-    //             price: "4.89 ETH",
-    //             priceChange: "$12.246",
+    //             Price: "4.89 ETH",
+    //             PriceChange: "$12.246",
     //             wishlist: "100",
     //             imgCollection: imgCollection2,
     //             nameCollection: "Creative Art 3D"
@@ -408,8 +408,8 @@ const Authors02 = () => {
     //             tags: "bsc",
     //             imgAuthor: imga3,
     //             nameAuthor: "SalvadorDali",
-    //             price: "4.89 ETH",
-    //             priceChange: "$12.246",
+    //             Price: "4.89 ETH",
+    //             PriceChange: "$12.246",
     //             wishlist: "100",
     //             imgCollection: imgCollection3,
     //             nameCollection: "Creative Art 3D"
@@ -421,8 +421,8 @@ const Authors02 = () => {
     //             tags: "bsc",
     //             imgAuthor: imga5,
     //             nameAuthor: "SalvadorDali",
-    //             price: "4.89 ETH",
-    //             priceChange: "$12.246",
+    //             Price: "4.89 ETH",
+    //             PriceChange: "$12.246",
     //             wishlist: "100",
     //             imgCollection: imgCollection5,
     //             nameCollection: "Creative Art 3D"
@@ -434,8 +434,8 @@ const Authors02 = () => {
     //             tags: "bsc",
     //             imgAuthor: imga7,
     //             nameAuthor: "SalvadorDali",
-    //             price: "4.89 ETH",
-    //             priceChange: "$12.246",
+    //             Price: "4.89 ETH",
+    //             PriceChange: "$12.246",
     //             wishlist: "100",
     //             imgCollection: imgCollection7,
     //             nameCollection: "Creative Art 3D"
@@ -452,8 +452,8 @@ const Authors02 = () => {
     //             tags: "bsc",
     //             imgAuthor: imga2,
     //             nameAuthor: "SalvadorDali",
-    //             price: "4.89 ETH",
-    //             priceChange: "$12.246",
+    //             Price: "4.89 ETH",
+    //             PriceChange: "$12.246",
     //             wishlist: "100",
     //             imgCollection: imgCollection2,
     //             nameCollection: "Creative Art 3D"
@@ -465,8 +465,8 @@ const Authors02 = () => {
     //             tags: "bsc",
     //             imgAuthor: imga3,
     //             nameAuthor: "SalvadorDali",
-    //             price: "4.89 ETH",
-    //             priceChange: "$12.246",
+    //             Price: "4.89 ETH",
+    //             PriceChange: "$12.246",
     //             wishlist: "100",
     //             imgCollection: imgCollection3,
     //             nameCollection: "Creative Art 3D"
@@ -478,8 +478,8 @@ const Authors02 = () => {
     //             tags: "bsc",
     //             imgAuthor: imga4,
     //             nameAuthor: "SalvadorDali",
-    //             price: "4.89 ETH",
-    //             priceChange: "$12.246",
+    //             Price: "4.89 ETH",
+    //             PriceChange: "$12.246",
     //             wishlist: "100",
     //             imgCollection: imgCollection4,
     //             nameCollection: "Creative Art 3D"
@@ -491,8 +491,8 @@ const Authors02 = () => {
     //             tags: "bsc",
     //             imgAuthor: imga6,
     //             nameAuthor: "SalvadorDali",
-    //             price: "4.89 ETH",
-    //             priceChange: "$12.246",
+    //             Price: "4.89 ETH",
+    //             PriceChange: "$12.246",
     //             wishlist: "100",
     //             imgCollection: imgCollection6,
     //             nameCollection: "Creative Art 3D"
@@ -516,8 +516,8 @@ const Authors02 = () => {
       tags: "bsc",
       imgAuthor: x.owner,
       nameAuthor: x.owner,
-      price: x.listPrice + " ???",
-      priceChange: "$12.246",
+      Price: x.listPrice + " ???",
+      PriceChange: "$12.246",
       wishlist: "100",
       imgCollection: x.metadata.image,
       nameCollection: x.collection.name,
@@ -577,7 +577,7 @@ const Authors02 = () => {
                 <img src={avt} alt="Axies" className="avatar" />
               </div>
               <div className="infor-profile">
-                <span>Author Profile</span>
+                <span>User Profile</span>
                 <h2 className="title">Satoshi Nakamoto</h2>
                 <p className="content">
                 A persons who developed bitcoin, authored the bitcoin white paper, and created and deployed bitcoin's original reference implementation.
@@ -594,7 +594,7 @@ const Authors02 = () => {
                   </button>
                 </form>
               </div>
-              <div className="widget-social style-3">
+              {/* <div className="widget-social style-3">
                 <ul>
                   <li>
                     <Link to="#">
@@ -622,7 +622,7 @@ const Authors02 = () => {
                     Follow
                   </Link>
                 </div>
-              </div>
+              </div> */}
             </div>
             <Tabs>
               <TabList>
@@ -677,11 +677,11 @@ const Authors02 = () => {
                                       <div className="tags">{data.tags}</div>
                                     </div>
                                     <div className="card-bottom style-explode">
-                                      <div className="price">
-                                        <span>Current Bid</span>
-                                        <div className="price-details">
-                                          <h5>{data.price}</h5>
-                                          <span>= {data.priceChange}</span>
+                                      <div className="Price">
+                                        <span>Price</span>
+                                        <div className="Price-details">
+                                          <h5>{data.Price}</h5>
+                                          <span>= {data.PriceChange}</span>
                                         </div>
                                       </div>
                                       {/* <Link to="/activity-01" className="view-history reload">View History</Link> */}

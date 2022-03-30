@@ -79,9 +79,9 @@ const TodayPicks = props => {
                                                     <h6> <Link to="/author-02">{item.nameAuthor}</Link> </h6>
                                                 </div>
                                             </div>
-                                            <div className="price">
-                                                <span>Current Bid</span>
-                                                <h5>{item.price}</h5>
+                                            <div className="Price">
+                                                <span>Price</span>
+                                                <h5>{item.Price}</h5>
                                             </div>
                                         </div>
                                         <div className="card-bottom">

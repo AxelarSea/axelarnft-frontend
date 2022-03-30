@@ -21,7 +21,7 @@ const Ranking = () => {
                 volume: '12,4353',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                Price: '12,4353 ETH',
                 owners: '3.3k',
                 assets: '23k'
             },
@@ -33,7 +33,7 @@ const Ranking = () => {
                 volume: '12,4353',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                Price: '12,4353 ETH',
                 owners: '3.3k',
                 assets: '23k'
             },
@@ -45,7 +45,7 @@ const Ranking = () => {
                 volume: '12,4353',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                Price: '12,4353 ETH',
                 owners: '3.3k',
                 assets: '23k'
             },
@@ -57,7 +57,7 @@ const Ranking = () => {
                 volume: '12,4353',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                Price: '12,4353 ETH',
                 owners: '3.3k',
                 assets: '23k'
             },
@@ -69,7 +69,7 @@ const Ranking = () => {
                 volume: '12,4353',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                Price: '12,4353 ETH',
                 owners: '3.3k',
                 assets: '23k'
             },
@@ -81,7 +81,7 @@ const Ranking = () => {
                 volume: '12,4353',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                Price: '12,4353 ETH',
                 owners: '3.3k',
                 assets: '23k'
             },
@@ -93,7 +93,7 @@ const Ranking = () => {
                 volume: '12,4353',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                Price: '12,4353 ETH',
                 owners: '3.3k',
                 assets: '23k'
             },
@@ -105,7 +105,7 @@ const Ranking = () => {
                 volume: '12,4353',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                Price: '12,4353 ETH',
                 owners: '3.3k',
                 assets: '23k'
             },
@@ -117,7 +117,7 @@ const Ranking = () => {
                 volume: '12,4353',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                Price: '12,4353 ETH',
                 owners: '3.3k',
                 assets: '23k'
             },
@@ -129,7 +129,7 @@ const Ranking = () => {
                 volume: '12,4353',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                Price: '12,4353 ETH',
                 owners: '3.3k',
                 assets: '23k'
             },
@@ -141,7 +141,7 @@ const Ranking = () => {
                 volume: '12,4353',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                Price: '12,4353 ETH',
                 owners: '3.3k',
                 assets: '23k'
             },
@@ -153,7 +153,7 @@ const Ranking = () => {
                 volume: '12,4353',
                 day: '+3456%',
                 week: '-564%',
-                price: '12,4353 ETH',
+                Price: '12,4353 ETH',
                 owners: '3.3k',
                 assets: '23k'
             },
@@ -245,7 +245,7 @@ const Ranking = () => {
                                                     <span>{item.week}</span>
                                                 </div>
                                                 <div className="column td4">
-                                                    <span>{item.price}</span>
+                                                    <span>{item.Price}</span>
                                                 </div>
                                                 <div className="column td5">
                                                     <span>{item.owners}</span>

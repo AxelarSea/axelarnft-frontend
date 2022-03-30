@@ -40,13 +40,13 @@
       {
         "indexed": false,
         "internalType": "address",
-        "name": "priceToken",
+        "name": "PriceToken",
         "type": "address"
       },
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "price",
+        "name": "Price",
         "type": "uint256"
       },
       {
@@ -139,13 +139,13 @@
       {
         "indexed": false,
         "internalType": "address",
-        "name": "priceToken",
+        "name": "PriceToken",
         "type": "address"
       },
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "price",
+        "name": "Price",
         "type": "uint256"
       }
     ],
@@ -482,12 +482,12 @@
           },
           {
             "internalType": "contract IERC20",
-            "name": "priceToken",
+            "name": "PriceToken",
             "type": "address"
           },
           {
             "internalType": "uint256",
-            "name": "price",
+            "name": "Price",
             "type": "uint256"
           }
         ],
@@ -518,12 +518,12 @@
       },
       {
         "internalType": "contract IERC20",
-        "name": "priceToken",
+        "name": "PriceToken",
         "type": "address"
       },
       {
         "internalType": "uint256",
-        "name": "price",
+        "name": "Price",
         "type": "uint256"
       }
     ],

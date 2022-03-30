@@ -108,7 +108,7 @@ const CreateItem = () => {
                       alt="Axies"
                     />
                   </Link>
-                  <Link to="/login" className="wishlist-button heart">
+                  {/* <Link to="/login" className="wishlist-button heart">
                     <span className="number-like"> 100</span>
                   </Link>
                   <div className="featured-countdown">
@@ -116,15 +116,15 @@ const CreateItem = () => {
                     <Countdown date={Date.now() + 500000000}>
                       <span>You are good to go!</span>
                     </Countdown>
-                  </div>
+                  </div> */}
                 </div>
-                <div className="card-title">
+                {/* <div className="card-title">
                   <h5>
                     <Link to="/item-details-01">"Cyber Doberman #766”</Link>
                   </h5>
                   <div className="tags">bsc</div>
-                </div>
-                <div className="meta-info">
+                </div> */}
+                {/* <div className="meta-info">
                   <div className="author">
                     <div className="avatar">
                       <img src={avt} alt="Axies" />
@@ -137,12 +137,12 @@ const CreateItem = () => {
                       </h6>
                     </div>
                   </div>
-                  <div className="price">
-                    <span>Current Bid</span>
+                  <div className="Price">
+                    <span>Price</span>
                     <h5> 4.89 ETH</h5>
                   </div>
-                </div>
-                <div className="card-bottom">
+                </div> */}
+                {/* <div className="card-bottom">
                   <Link
                     to="/wallet-connect"
                     className="sc-button style bag fl-button pri-3"
@@ -152,18 +152,19 @@ const CreateItem = () => {
                   <Link to="/activity-01" className="view-history reload">
                     View History
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-xl-9 col-lg-6 col-md-12 col-12">
               <div className="form-create-item">
                 <form action="#">
                   <h4 className="title-create-item">Upload file</h4>
-                  <label className="uploadFile">
+                  <label className="uploadFile" style={{cursor:'default'}}>
                     <span className="filename">
                       PNG, JPG, GIF, WEBP or MP4. Max 200mb.
                     </span>
                     <input
+                    disabled
                       type="file"
                       className="inputfile form-control"
                       name="file"
@@ -184,7 +185,7 @@ const CreateItem = () => {
                         <h4 className="title-create-item d-flex">
                           Name<h4 style={{ color: "red" }}>*</h4>
                         </h4>
-                        <input type="text" placeholder="" value="price" />
+                        <input disabled type="text" placeholder="" value="AxelarRobot" style={{ cursor:'default'}}/>
 
                         <h4
                           className="title-create-item"
@@ -205,25 +206,29 @@ const CreateItem = () => {
                           welcome to link to your own webpage with more details.
                         </p>
                         <input
+                        disabled
                           type="text"
                           placeholder=""
-                          value="ex youwebsite.com"
+                          value="https://axelar.network/"
+                          style={{cursor:'default'}}
                         />
 
                         <h4 className="title-create-item">Description</h4>
-                        <textarea value="The description will be included on the item's detail page underneath its image"></textarea>
+                        <textarea value="The description will be included on the item's detail page underneath its image" style={{cursor:'default'}}></textarea>
 
                         <h4 className="title-create-item d-flex ">
                           Collection
                         </h4>
                         <input
+                        disabled
                           type="text"
                           placeholder=""
-                          value="Select collection"
+                          value="AxelarSea Collection."
+                          style={{cursor:'default'}}
                         />
 
                         <h4 className="title-create-item d-flex">Supply</h4>
-                        <input type="text" placeholder="" value="1" />
+                        <input disabled type="text" placeholder="" value="1" style={{cursor:'default'}}/>
 
                         <h4 className="title-create-item d-flex">Blockchain</h4>
                         {/* <input type="text" placeholder="" value="1"  /> */}
@@ -353,7 +358,7 @@ const CreateItem = () => {
                         <h4 className="title-create-item">Price</h4>
                         <input
                           type="text"
-                          placeholder="Enter price for one item (ETH)"
+                          placeholder="Enter Price for one item (ETH)"
                         />
 
                         <h4 className="title-create-item">Minimum bid</h4>

@@ -40,77 +40,77 @@ const TopSeller = () => {
                     {
                         img: img1,
                         name: 'Crispin Berry',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img2,
                         name: 'Samson Frost',
-                        price: '205.43 ETH'
+                        Price: '205.43 ETH'
                     },
                     {
                         img: img3,
                         name: 'Tommy Alvarez',
-                        price: '170.3 ETH'
+                        Price: '170.3 ETH'
                     },
                     {
                         img: img4,
                         name: 'Windsor Lane',
-                        price: '120.7 ETH'
+                        Price: '120.7 ETH'
                     },
                     {
                         img: img5,
                         name: 'Andy Hurlbutt',
-                        price: '82.79 ETH'
+                        Price: '82.79 ETH'
                     },
                     {
                         img: img6,
                         name: 'Blake Banks',
-                        price: '68.2 ETH'
+                        Price: '68.2 ETH'
                     },
                     {
                         img: img7,
                         name: 'Monica Lucas',
-                        price: '52.8 ETH'
+                        Price: '52.8 ETH'
                     },
                     {
                         img: img8,
                         name: 'Matt Ramos',
-                        price: '38.4 ETH'
+                        Price: '38.4 ETH'
                     },
                     {
                         img: img9,
                         name: 'Harper Wilcher',
-                        price: '29.2 ETH'
+                        Price: '29.2 ETH'
                     },
                     {
                         img: img1,
                         name: 'Crispin Berry',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img2,
                         name: 'Samson Frost',
-                        price: '205.43 ETH'
+                        Price: '205.43 ETH'
                     },
                     {
                         img: img3,
                         name: 'Tommy Alvarez',
-                        price: '170.3 ETH'
+                        Price: '170.3 ETH'
                     },
                     {
                         img: img4,
                         name: 'Windsor Lane',
-                        price: '120.7 ETH'
+                        Price: '120.7 ETH'
                     },
                     {
                         img: img5,
                         name: 'Andy Hurlbutt',
-                        price: '82.79 ETH'
+                        Price: '82.79 ETH'
                     },
                     {
                         img: img6,
                         name: 'Blake Banks',
-                        price: '68.2 ETH'
+                        Price: '68.2 ETH'
                     },
                 ]
             },
@@ -120,77 +120,77 @@ const TopSeller = () => {
                     {
                         img: img1,
                         name: 'Crispin Berry',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img2,
                         name: 'Samson Frost',
-                        price: '205.43 ETH'
+                        Price: '205.43 ETH'
                     },
                     {
                         img: img3,
                         name: 'Tommy Alvarez',
-                        price: '170.3 ETH'
+                        Price: '170.3 ETH'
                     },
                     {
                         img: img4,
                         name: 'Windsor Lane',
-                        price: '120.7 ETH'
+                        Price: '120.7 ETH'
                     },
                     {
                         img: img5,
                         name: 'Andy Hurlbutt',
-                        price: '82.79 ETH'
+                        Price: '82.79 ETH'
                     },
                     {
                         img: img6,
                         name: 'Blake Banks',
-                        price: '68.2 ETH'
+                        Price: '68.2 ETH'
                     },
                     {
                         img: img7,
                         name: 'Monica Lucas',
-                        price: '52.8 ETH'
+                        Price: '52.8 ETH'
                     },
                     {
                         img: img8,
                         name: 'Matt Ramos',
-                        price: '38.4 ETH'
+                        Price: '38.4 ETH'
                     },
                     {
                         img: img9,
                         name: 'Harper Wilcher',
-                        price: '29.2 ETH'
+                        Price: '29.2 ETH'
                     },
                     {
                         img: img1,
                         name: 'Crispin Berry',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img2,
                         name: 'Samson Frost',
-                        price: '205.43 ETH'
+                        Price: '205.43 ETH'
                     },
                     {
                         img: img3,
                         name: 'Tommy Alvarez',
-                        price: '170.3 ETH'
+                        Price: '170.3 ETH'
                     },
                     {
                         img: img4,
                         name: 'Windsor Lane',
-                        price: '120.7 ETH'
+                        Price: '120.7 ETH'
                     },
                     {
                         img: img5,
                         name: 'Andy Hurlbutt',
-                        price: '82.79 ETH'
+                        Price: '82.79 ETH'
                     },
                     {
                         img: img6,
                         name: 'Blake Banks',
-                        price: '68.2 ETH'
+                        Price: '68.2 ETH'
                     },
                 ]
             },
@@ -200,77 +200,77 @@ const TopSeller = () => {
                     {
                         img: img1,
                         name: 'Crispin Berry',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img2,
                         name: 'Samson Frost',
-                        price: '205.43 ETH'
+                        Price: '205.43 ETH'
                     },
                     {
                         img: img3,
                         name: 'Tommy Alvarez',
-                        price: '170.3 ETH'
+                        Price: '170.3 ETH'
                     },
                     {
                         img: img4,
                         name: 'Windsor Lane',
-                        price: '120.7 ETH'
+                        Price: '120.7 ETH'
                     },
                     {
                         img: img5,
                         name: 'Andy Hurlbutt',
-                        price: '82.79 ETH'
+                        Price: '82.79 ETH'
                     },
                     {
                         img: img6,
                         name: 'Blake Banks',
-                        price: '68.2 ETH'
+                        Price: '68.2 ETH'
                     },
                     {
                         img: img7,
                         name: 'Monica Lucas',
-                        price: '52.8 ETH'
+                        Price: '52.8 ETH'
                     },
                     {
                         img: img8,
                         name: 'Matt Ramos',
-                        price: '38.4 ETH'
+                        Price: '38.4 ETH'
                     },
                     {
                         img: img9,
                         name: 'Harper Wilcher',
-                        price: '29.2 ETH'
+                        Price: '29.2 ETH'
                     },
                     {
                         img: img1,
                         name: 'Crispin Berry',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img2,
                         name: 'Samson Frost',
-                        price: '205.43 ETH'
+                        Price: '205.43 ETH'
                     },
                     {
                         img: img3,
                         name: 'Tommy Alvarez',
-                        price: '170.3 ETH'
+                        Price: '170.3 ETH'
                     },
                     {
                         img: img4,
                         name: 'Windsor Lane',
-                        price: '120.7 ETH'
+                        Price: '120.7 ETH'
                     },
                     {
                         img: img5,
                         name: 'Andy Hurlbutt',
-                        price: '82.79 ETH'
+                        Price: '82.79 ETH'
                     },
                     {
                         img: img6,
                         name: 'Blake Banks',
-                        price: '68.2 ETH'
+                        Price: '68.2 ETH'
                     },
                 ]
             },
@@ -351,7 +351,7 @@ const SliderItem = props => (
         </div>
         <div className="author-infor">
             <h5><Link to="/author-02">{props.item.name}</Link></h5>
-            <span className="price">{props.item.price}</span>
+            <span className="Price">{props.item.Price}</span>
         </div>
     </div>    
 )

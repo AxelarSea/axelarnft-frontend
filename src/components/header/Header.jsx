@@ -108,7 +108,7 @@ const Header = () => {
 
                                     <div className="admin_active" id="header_admin">
                                         <div className="header_avatar">
-                                            <div className="price">
+                                            <div className="Price">
                                                 <span>2.45 <strong>ETH</strong> </span>
                                             </div>
                                             <img

@@ -44,84 +44,84 @@ const TopSeller = () => {
                         name: 'CLONE X - X TAKASHI...',
                         mail: '0xF5ab…A754',
                         top: '1',
-                        price: '$32,893.53'
+                        Price: '$32,893.53'
                     },
                     {
                         img: imgAuthor2,
                         name: 'BoredApeYachtClub',
                         mail: '0xs4dfb…A141',
                         top: '2',
-                        price: '$28,425.24'
+                        Price: '$28,425.24'
                     },
                     {
                         img: imgAuthor3,
                         name: 'MetaWarden',
                         mail: '0xG341…A151',
                         top: '3',
-                        price: '$25,893.53'
+                        Price: '$25,893.53'
                     },
                     {
                         img: imgAuthor4,
                         name: 'Galactic Punk',
                         mail: '0xF5ab…A754',
                         top: '4',
-                        price: '$20,123.22'
+                        Price: '$20,123.22'
                     },
                     // {
                     //     img: img5,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '2',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img6,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '5',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img7,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '8',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img8,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '11',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img9,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '3',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img10,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '6',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img11,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '9',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img12,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '12',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                 ]
             },
@@ -133,56 +133,56 @@ const TopSeller = () => {
                         name: 'Windsor Lane',
                         mail: '@windsorlandhh',
                         top: '1',
-                        price: '120.7 ETH'
+                        Price: '120.7 ETH'
                     },
                     {
                         img: imgAuthor,
                         name: 'Windsor Lane',
                         mail: '@windsorlandhh',
                         top: '2',
-                        price: '120.7 ETH'
+                        Price: '120.7 ETH'
                     },
                     {
                         img: imgAuthor,
                         name: 'Windsor Lane',
                         mail: '@windsorlandhh',
                         top: '3',
-                        price: '120.7 ETH'
+                        Price: '120.7 ETH'
                     },
                     {
                         img: imgAuthor,
                         name: 'Windsor Lane',
                         mail: '@windsorlandhh',
                         top: '4',
-                        price: '120.7 ETH'
+                        Price: '120.7 ETH'
                     },
                     // {
                     //     img: img5,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '2',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img6,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '4',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img7,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '6',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img8,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '8',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     
                 ]
@@ -195,84 +195,84 @@ const TopSeller = () => {
                         name: 'Windsor Lane',
                         mail: '@windsorlandhh',
                         top: '1',
-                        price: '120.7 ETH'
+                        Price: '120.7 ETH'
                     },
                     {
                         img: imgAuthor,
                         name: 'Windsor Lane',
                         mail: '@windsorlandhh',
                         top: '2',
-                        price: '120.7 ETH'
+                        Price: '120.7 ETH'
                     },
                     {
                         img: imgAuthor,
                         name: 'Windsor Lane',
                         mail: '@windsorlandhh',
                         top: '3',
-                        price: '120.7 ETH'
+                        Price: '120.7 ETH'
                     },
                     {
                         img: imgAuthor,
                         name: 'Windsor Lane',
                         mail: '@windsorlandhh',
                         top: '4',
-                        price: '120.7 ETH'
+                        Price: '120.7 ETH'
                     },
                     // {
                     //     img: img5,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '2',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img6,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '5',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img7,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '8',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img8,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '11',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img9,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '3',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img10,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '6',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img11,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '9',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                     // {
                     //     img: img12,
                     //     name: 'Windsor Lane',
                     //     mail: '@windsorlandhh',
                     //     top: '12',
-                    //     price: '120.7 ETH'
+                    //     Price: '120.7 ETH'
                     // },
                 ]
             },
@@ -318,7 +318,7 @@ const TopSeller = () => {
                                                                 <div className="author-infor">
                                                                     <h5><Link to="#">{item.name}</Link></h5>
                                                                     <div className="tag">{item.mail}</div>
-                                                                    <span className="price">{item.price}</span>
+                                                                    <span className="Price">{item.Price}</span>
                                                                 </div>
                                                             </div>
                                                             <div className="action">

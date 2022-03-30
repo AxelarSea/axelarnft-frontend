@@ -42,7 +42,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -51,7 +51,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -60,7 +60,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -69,7 +69,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -78,7 +78,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -87,7 +87,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -96,7 +96,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -105,7 +105,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -114,7 +114,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -123,7 +123,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -132,7 +132,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -141,7 +141,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -150,7 +150,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -159,7 +159,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -168,7 +168,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -177,7 +177,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -186,7 +186,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -195,7 +195,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -204,7 +204,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -213,7 +213,7 @@ const TodayPicks = () => {
                 tags: "bsc",
                 imgAuthor: imgAuthor,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
 
@@ -229,7 +229,7 @@ const TodayPicks = () => {
             tags: "bsc",
             imgAuthor: x.owner,
             nameAuthor: x.owner,
-            price: x.listPrice + " ???",
+            Price: x.listPrice + " ???",
             wishlist: "100",
             raw: x,
         })));
@@ -332,7 +332,7 @@ const TodayPicks = () => {
 
                                     <Dropdown.Menu style={{ margin: 0 }}>
                                     <Dropdown.Item href="#"> Timed auction</Dropdown.Item>
-                                    <Dropdown.Item href="#">Fixed price</Dropdown.Item>
+                                    <Dropdown.Item href="#">Fixed Price</Dropdown.Item>
                                     <Dropdown.Item href="#">Not for sale</Dropdown.Item>
                                     <Dropdown.Item href="#">Open for offers</Dropdown.Item>
                                     </Dropdown.Menu>
@@ -455,8 +455,8 @@ const TodayPicks = () => {
                                             <div className="meta-info">
                                                 <div className="author">
                                                     <div className="info style2">
-                                                        <span>Current Bid</span>
-                                                        <span className="pricing">{item.price}</span>
+                                                        <span>Price</span>
+                                                        <span className="pricing">{item.Price}</span>
                                                     </div>
                                                 </div>
                                                 <div className="tags">{item.tags}</div>

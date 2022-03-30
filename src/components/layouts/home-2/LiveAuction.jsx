@@ -85,11 +85,11 @@ const LiveAuction = props => {
                                                                     <div className="tags">{item.tags}</div>
                                                                 </div>
                                                                 <div className="card-bottom style-explode">
-                                                                    <div className="price">
-                                                                        <span>Current Bid</span>
-                                                                        <div className="price-details">
-                                                                            <h5>{item.price}</h5>
-                                                                            <span>= {item.priceChange}</span>
+                                                                    <div className="Price">
+                                                                        <span>Price</span>
+                                                                        <div className="Price-details">
+                                                                            <h5>{item.Price}</h5>
+                                                                            <span>= {item.PriceChange}</span>
                                                                         </div>
                                                                     </div>
                                                                     <Link to="/login" className="wishlist-button public heart"><span className="number-like">{item.wishlist}</span></Link>

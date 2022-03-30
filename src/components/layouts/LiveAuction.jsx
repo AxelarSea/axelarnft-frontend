@@ -61,12 +61,12 @@ const LiveAuction = props => {
                                                                         <div className="card-media">
                                                                             <Link to="/item-details-01"><img src={item.img} alt="axies" /></Link>
                                                                             <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link>
-                                                                            <div className="featured-countdown">
+                                                                            {/* <div className="featured-countdown">
                                                                                 <span className="slogan"></span>
                                                                                 <Countdown date={Date.now() + 500000000}>
                                                                                     <span>You are good to go!</span>
                                                                                 </Countdown>
-                                                                            </div>
+                                                                            </div> */}
                                                                             <div className="button-place-bid">
                                                                                 <button onClick={() => setModalShow(true)} className="sc-button style-place-bid style bag fl-button pri-3"><span>Buy Now</span></button>
                                                                             </div>
@@ -86,9 +86,9 @@ const LiveAuction = props => {
                                                                                     </Link> </h6>
                                                                                 </div>
                                                                             </div>
-                                                                            <div className="price">
-                                                                                <span>Current Bid</span>
-                                                                                <h5> {item.price}</h5>
+                                                                            <div className="Price">
+                                                                                <span>Price</span>
+                                                                                <h5> {item.Price}</h5>
                                                                             </div>
                                                                         </div>
                                                                     </div>    	

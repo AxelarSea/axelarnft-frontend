@@ -29,42 +29,42 @@ const TopSeller = () => {
                     {
                         img: img1,
                         name: 'Crispin Berry',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img1,
                         name: 'Crispin Berry',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img2,
                         name: 'Monica Lucas',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img2,
                         name: 'Monica Lucas',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img3,
                         name: 'Crispin Berry',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img3,
                         name: 'Crispin Berry',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img4,
                         name: 'Windsor Lane',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img4,
                         name: 'Windsor Lane',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                 ]
             },
@@ -74,32 +74,32 @@ const TopSeller = () => {
                     {
                         img: img2,
                         name: 'Monica Lucas',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img2,
                         name: 'Monica Lucas',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img3,
                         name: 'Crispin Berry',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img3,
                         name: 'Crispin Berry',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img4,
                         name: 'Windsor Lane',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img4,
                         name: 'Windsor Lane',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                 ]
             },
@@ -109,22 +109,22 @@ const TopSeller = () => {
                     {
                         img: img3,
                         name: 'Crispin Berry',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img3,
                         name: 'Crispin Berry',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img4,
                         name: 'Windsor Lane',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                     {
                         img: img4,
                         name: 'Windsor Lane',
-                        price: '214.2 ETH'
+                        Price: '214.2 ETH'
                     },
                 ]
             },
@@ -163,7 +163,7 @@ const TopSeller = () => {
                                                         </div>
                                                         <div className="author-infor">
                                                             <h5><Link to="/authors-02">{item.name}</Link></h5>
-                                                            <span className="price">{item.price}</span>
+                                                            <span className="Price">{item.Price}</span>
                                                         </div>
                                                     </div>
                                                 </div> 
@@ -205,7 +205,7 @@ const TopSeller = () => {
                                                         </div>
                                                         <div className="author-infor">
                                                             <h5><Link to="#">{item.name}</Link></h5>
-                                                            <span className="price">{item.price}</span>
+                                                            <span className="Price">{item.Price}</span>
                                                         </div>
                                                     </div>
                                                 </div> 

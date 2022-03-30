@@ -21,8 +21,8 @@ export default class Marketplace {
     return "AxelarSeaMarketplace";
   }
 
-  async list(tokenAddress, tokenId, amount, priceToken, price) {
-    return await this.contract.methods.list(tokenAddress, tokenId, amount, priceToken, price).send({from: this.from});
+  async list(tokenAddress, tokenId, amount, PriceToken, Price) {
+    return await this.contract.methods.list(tokenAddress, tokenId, amount, PriceToken, Price).send({from: this.from});
   }
 
   async cancelListing(tokenAddress, tokenId) {

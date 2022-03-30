@@ -6,7 +6,7 @@ import Countdown from "react-countdown";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import img1 from "../assets/images/box-item/image-box-6.jpg";
-import avt from "../assets/images/avatar/avt-9.jpg";
+import avt from "../assets/images/avatar/satoshi.png";
 
 import AlunaLogo from "../assets/images/icon/Luna.png";
 import AustLogo from "../assets/images/icon/UST.png";
@@ -16,9 +16,9 @@ import { CROSS_CHAIN_TOKEN_ADDRESS, listItem } from "../utils/api";
 import web3 from "../hooks/web3";
 
 const CreateItem2 = () => {
-  const [price, setPrice] = useState("");
-  const [priceType, setPriceType] = useState("ALUNA");
-  const [pricePic, setPricePic] = useState(AlunaLogo);
+  const [Price, setPrice] = useState("");
+  const [PriceType, setPriceType] = useState("LUNA");
+  const [PricePic, setPricePic] = useState(AlunaLogo);
   const [processing, setProcessing] = useState(false);
 
   const [searchParams, setSearchParams] = useSearchParams();
@@ -33,19 +33,19 @@ const CreateItem2 = () => {
     try {
       setProcessing(true);
 
-      let priceTypeSymbol = "";
+      let PriceTypeSymbol = "";
 
-      switch (priceType) {
-        case "ALUNA": priceTypeSymbol = "uluna"; break;
-        case "AUST": priceTypeSymbol = "uusd"; break;
+      switch (PriceType) {
+        case "ALUNA": PriceTypeSymbol = "uluna"; break;
+        case "AUST": PriceTypeSymbol = "uusd"; break;
       }
   
       await listItem(
         chainId,
         collectionAddress,
         tokenId,
-        CROSS_CHAIN_TOKEN_ADDRESS[priceTypeSymbol][chainId],
-        price,
+        CROSS_CHAIN_TOKEN_ADDRESS[PriceTypeSymbol][chainId],
+        Price,
       );
 
       window.alert("List success");
@@ -87,21 +87,21 @@ const CreateItem2 = () => {
                   <Link to="/item-details-01">
                     <img src={img1} alt="Axies" />
                   </Link>
-                  <Link to="/login" className="wishlist-button heart">
+                  {/* <Link to="/login" className="wishlist-button heart">
                     <span className="number-like"> 100</span>
-                  </Link>
-                  <div className="featured-countdown">
+                  </Link> */}
+                  {/* <div className="featured-countdown">
                     <span className="slogan"></span>
                     <Countdown date={Date.now() + 500000000}>
                       <span>You are good to go!</span>
                     </Countdown>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="card-title">
                   <h5>
                     <Link to="/item-details-01">"Cyber Doberman #766”</Link>
                   </h5>
-                  <div className="tags">bsc</div>
+                  {/* <div className="tags">bsc</div> */}
                 </div>
                 <div className="meta-info">
                   <div className="author">
@@ -116,12 +116,12 @@ const CreateItem2 = () => {
                       </h6>
                     </div>
                   </div>
-                  <div className="price">
-                    <span>Current Bid</span>
-                    <h5> 4.89 ETH</h5>
+                  <div className="Price">
+                    <span>Price</span>
+                    <h5>{Price} {PriceType}</h5>
                   </div>
                 </div>
-                <div className="card-bottom">
+                {/* <div className="card-bottom">
                   <Link
                     to="/wallet-connect"
                     className="sc-button style bag fl-button pri-3"
@@ -131,7 +131,7 @@ const CreateItem2 = () => {
                   <Link to="/activity-01" className="view-history reload">
                     View History
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-xl-9 col-lg-6 col-md-12 col-12">
@@ -150,29 +150,29 @@ const CreateItem2 = () => {
                       <Tab>
                         <span className="icon-fl-tag"></span>Fixed Price
                       </Tab>
-                      <Tab>
-                        <span className="icon-fl-clock"></span>Time Auctions
+                      <Tab disabled>
+                        <span className="icon-fl-clock" disabled></span>Time Auctions
                       </Tab>
                     </TabList>
 
                     <TabPanel>
                       <form action="#">
-                        <h4 className="price-item">Price</h4>
+                        <h4 className="Price-item">Price</h4>
                         <div className="d-flex">
                           <div id="sort-by" className="dropdown">
                             <a className="btn-selector nolink">
                               <img
                                 width="29"
                                 height="29"
-                                src={pricePic}
+                                src={PricePic}
                                 style={{ marginRight: "14px" }}
                               />
-                              {priceType}
+                              {PriceType}
                             </a>
                             <ul>
                               <li
                                 onClick={() => {
-                                  setPriceType("ALUNA");
+                                  setPriceType("LUNA");
                                   setPricePic(AlunaLogo);
                                 }}
                               >
@@ -184,13 +184,13 @@ const CreateItem2 = () => {
                                       src={AlunaLogo}
                                       style={{ marginRight: "14px" }}
                                     />
-                                    ALUNA
+                                    LUNA
                                   </span>
                                 </div>
                               </li>
                               <li
                                 onClick={() => {
-                                  setPriceType("AUST");
+                                  setPriceType("UST");
                                   setPricePic(AustLogo);
                                 }}
                               >
@@ -201,12 +201,12 @@ const CreateItem2 = () => {
                                     src={AustLogo}
                                     style={{ marginRight: "14px" }}
                                   />
-                                  AUST
+                                  UST
                                 </span>
                               </li>
                             </ul>
                           </div>
-                          <input type="text" placeholder="Enter price" onChange={(e) => setPrice(e.target.value)} />
+                          <input type="text" placeholder="Enter Price(at least 10UST /0.1 Luna)" className="big-dog" onChange={(e) => setPrice(e.target.value)} />
                         </div>
 
                         <h4
@@ -220,7 +220,7 @@ const CreateItem2 = () => {
                             <div className="seclect-box">
                               <div id="all-items" className="dropdown">
                                 <Link to="#" className="btn-selector">
-                                  7 Day
+                                No expiration Date
                                 </Link>
                               </div>
                             </div>
@@ -314,7 +314,7 @@ const CreateItem2 = () => {
                         <h4 className="title-create-item">Price</h4>
                         <input
                           type="text"
-                          placeholder="Enter price for one item (ETH)"
+                          placeholder="Enter Price for one item (ETH)"
                         />
 
                         <h4 className="title-create-item">Minimum bid</h4>

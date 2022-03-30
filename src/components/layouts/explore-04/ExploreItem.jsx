@@ -43,11 +43,11 @@ const ExploreItem = props => {
                                 <div className="tags">{item.tags}</div>
                             </div>
                             <div className="card-bottom style-explode">
-                                <div className="price">
+                                <div className="Price">
                                     <span>Price</span>
-                                    <div className="price-details">
-                                        <h5>{item.price}</h5>
-                                        <span>= {item.priceChange}</span>
+                                    <div className="Price-details">
+                                        <h5>{item.Price}</h5>
+                                        <span>= {item.PriceChange}</span>
                                     </div>
                                 </div>
                                 <Link to="/activity-01" className="view-history reload">View History</Link>

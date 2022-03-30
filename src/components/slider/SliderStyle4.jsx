@@ -6,10 +6,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
-import img1 from '../../assets/images/box-item/img_item1.svg'
-import img2 from '../../assets/images/box-item/img_item2.svg'
-import img3 from '../../assets/images/box-item/img_item3.svg'
-import img4 from '../../assets/images/box-item/img_item4.svg'
+import img1 from '../../assets/images/box-item/img1.svg'
+import img2 from '../../assets/images/box-item/img2.svg'
+import img3 from '../../assets/images/box-item/img3.svg'
+import img4 from '../../assets/images/box-item/img4.svg'
+import img5 from '../../assets/images/box-item/img5.svg'
+import img6 from '../../assets/images/box-item/img6.svg'
 import shape1 from '../../assets/images/backgroup-secsion/bg-gradient1.png'
 import shape2 from '../../assets/images/backgroup-secsion/bg-gradient2.png'
 import shape3 from '../../assets/images/backgroup-secsion/bg-gradient3.png'
@@ -63,7 +65,7 @@ const SliderStyle4 = () => {
                                 <SwiperSlide><img src={img2} alt="Axies" /></SwiperSlide>
                                 <SwiperSlide><img src={img3} alt="Axies" /></SwiperSlide>
                                 <SwiperSlide><img src={img4} alt="Axies" /></SwiperSlide>
-                                <SwiperSlide><img src={img3} alt="Axies" /></SwiperSlide>
+                                <SwiperSlide><img src={img5} alt="Axies" /></SwiperSlide>
 
                             </Swiper>
                             <Swiper
@@ -80,9 +82,9 @@ const SliderStyle4 = () => {
                                 speed= {1800}
                             >
                                 <SwiperSlide><img src={img4} alt="Axies" /></SwiperSlide>
-                                <SwiperSlide><img src={img2} alt="Axies" /></SwiperSlide>
+                                <SwiperSlide><img src={img5} alt="Axies" /></SwiperSlide>
                                 <SwiperSlide><img src={img1} alt="Axies" /></SwiperSlide>
-                                <SwiperSlide><img src={img3} alt="Axies" /></SwiperSlide>
+                                <SwiperSlide><img src={img6} alt="Axies" /></SwiperSlide>
                                 <SwiperSlide><img src={img2} alt="Axies" /></SwiperSlide>
 
                             </Swiper>
@@ -99,9 +101,9 @@ const SliderStyle4 = () => {
                                 }}
                                 speed= {2200}
                             >
-                                <SwiperSlide><img src={img4} alt="Axies" /></SwiperSlide>
+                                <SwiperSlide><img src={img5} alt="Axies" /></SwiperSlide>
                                 <SwiperSlide><img src={img2} alt="Axies" /></SwiperSlide>
-                                <SwiperSlide><img src={img4} alt="Axies" /></SwiperSlide>
+                                <SwiperSlide><img src={img6} alt="Axies" /></SwiperSlide>
                                 <SwiperSlide><img src={img1} alt="Axies" /></SwiperSlide>
                                 <SwiperSlide><img src={img3} alt="Axies" /></SwiperSlide>
 

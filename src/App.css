@@ -19,7 +19,7 @@ button:disabled {
 .wrap-heading {
 
 
-  background-image: url('../public/assets/images/backgroup-secsion/bgmaintop.jpg'); 
+  /* background-image: url('../public/assets/images/backgroup-secsion/bg-new.svg');  */
 
   background-position: center bottom	;
   background-repeat: no-repeat;
@@ -30,7 +30,8 @@ button:disabled {
 }
 
 .wrap-heading-content {
-  margin-left: 80px;
+  margin-left: 120px;
+  margin-right: 12%;
 
 }
 

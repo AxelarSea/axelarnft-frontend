@@ -67,8 +67,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga1,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection1,
                         nameCollection: "Creative Art 3D"
@@ -80,8 +80,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga2,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection2,
                         nameCollection: "Creative Art 3D",
@@ -94,8 +94,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga3,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection3,
                         nameCollection: "Creative Art 3D"
@@ -107,8 +107,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga4,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection4,
                         nameCollection: "Creative Art 3D"
@@ -120,8 +120,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga5,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection5,
                         nameCollection: "Creative Art 3D"
@@ -133,8 +133,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga6,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection6,
                         nameCollection: "Creative Art 3D"
@@ -146,8 +146,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga7,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection7,
                         nameCollection: "Creative Art 3D"
@@ -159,8 +159,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga8,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection8,
                         nameCollection: "Creative Art 3D"
@@ -172,8 +172,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga1,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection1,
                         nameCollection: "Creative Art 3D"
@@ -185,8 +185,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga2,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection2,
                         nameCollection: "Creative Art 3D"
@@ -198,8 +198,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga3,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection3,
                         nameCollection: "Creative Art 3D"
@@ -211,8 +211,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga4,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection4,
                         nameCollection: "Creative Art 3D"
@@ -224,8 +224,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga5,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection5,
                         nameCollection: "Creative Art 3D"
@@ -237,8 +237,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga6,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection6,
                         nameCollection: "Creative Art 3D"
@@ -250,8 +250,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga7,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection7,
                         nameCollection: "Creative Art 3D"
@@ -263,8 +263,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga8,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection8,
                         nameCollection: "Creative Art 3D"
@@ -281,8 +281,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga2,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection2,
                         nameCollection: "Creative Art 3D"
@@ -294,8 +294,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga3,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection3,
                         nameCollection: "Creative Art 3D"
@@ -307,8 +307,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga4,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection4,
                         nameCollection: "Creative Art 3D"
@@ -320,8 +320,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga5,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection5,
                         nameCollection: "Creative Art 3D"
@@ -338,8 +338,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga1,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection1,
                         nameCollection: "Creative Art 3D"
@@ -351,8 +351,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga3,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection3,
                         nameCollection: "Creative Art 3D"
@@ -364,8 +364,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga4,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection4,
                         nameCollection: "Creative Art 3D"
@@ -377,8 +377,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga5,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection5,
                         nameCollection: "Creative Art 3D"
@@ -395,8 +395,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga1,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection1,
                         nameCollection: "Creative Art 3D"
@@ -408,8 +408,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga2,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection2,
                         nameCollection: "Creative Art 3D"
@@ -421,8 +421,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga3,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection3,
                         nameCollection: "Creative Art 3D"
@@ -434,8 +434,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga5,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection5,
                         nameCollection: "Creative Art 3D"
@@ -447,8 +447,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga7,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection7,
                         nameCollection: "Creative Art 3D"
@@ -465,8 +465,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga2,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection2,
                         nameCollection: "Creative Art 3D"
@@ -478,8 +478,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga3,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection3,
                         nameCollection: "Creative Art 3D"
@@ -491,8 +491,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga4,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection4,
                         nameCollection: "Creative Art 3D"
@@ -504,8 +504,8 @@ const TodayPicks = () => {
                         tags: "bsc",
                         imgAuthor: imga6,
                         nameAuthor: "SalvadorDali",
-                        price: "4.89 ETH",
-                        priceChange: "$12.246",
+                        Price: "4.89 ETH",
+                        PriceChange: "$12.246",
                         wishlist: "100",
                         imgCollection: imgCollection6,
                         nameCollection: "Creative Art 3D"
@@ -589,11 +589,11 @@ const TodayPicks = () => {
                                                             <div className="tags">{item.tags}</div>
                                                         </div>
                                                         <div className="card-bottom style-explode">
-                                                            <div className="price">
-                                                                <span>Current Bid</span>
-                                                                <div className="price-details">
-                                                                    <h5>{item.price}</h5>
-                                                                    <span>= {item.priceChange}</span>
+                                                            <div className="Price">
+                                                                <span>Price</span>
+                                                                <div className="Price-details">
+                                                                    <h5>{item.Price}</h5>
+                                                                    <span>= {item.PriceChange}</span>
                                                                 </div>
                                                             </div>
                                                             <Link to="/activity-01" className="view-history reload">View History</Link>

@@ -25,7 +25,7 @@ const LiveAuction = () => {
                 tags: "bsc",
                 imgAuthor: imga1,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -34,7 +34,7 @@ const LiveAuction = () => {
                 tags: "bsc",
                 imgAuthor: imga2,
                 nameAuthor: "Trista Francis",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -43,7 +43,7 @@ const LiveAuction = () => {
                 tags: "bsc",
                 imgAuthor: imga3,
                 nameAuthor: "Trista Francis",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -52,7 +52,7 @@ const LiveAuction = () => {
                 tags: "bsc",
                 imgAuthor: imga1,
                 nameAuthor: "SalvadorDali",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -61,7 +61,7 @@ const LiveAuction = () => {
                 tags: "bsc",
                 imgAuthor: imga2,
                 nameAuthor: "Trista Francis",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
             {
@@ -70,7 +70,7 @@ const LiveAuction = () => {
                 tags: "bsc",
                 imgAuthor: imga3,
                 nameAuthor: "Trista Francis",
-                price: "4.89 ETH",
+                Price: "4.89 ETH",
                 wishlist: "100",
             },
 
@@ -147,9 +147,9 @@ const LiveAuction = () => {
                                                                                 </Link> </h4>
                                                                             </div>
                                                                         </div>
-                                                                        <div className="price">
-                                                                            <span>Current Bid</span>
-                                                                            <h5> {item.price}</h5>
+                                                                        <div className="Price">
+                                                                            <span>Price</span>
+                                                                            <h5> {item.Price}</h5>
                                                                         </div>
                                                                     </div>
                                                                 </div>    	

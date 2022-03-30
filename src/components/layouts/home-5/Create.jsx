@@ -21,7 +21,7 @@ const Create = () => {
         },
         {
             title: "List Them For Sale",
-            description: "Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to sell your NFTs!",
+            description: "Choose between auctions, fixed-Price listings, and declining-Price listings. You choose how you want to sell your NFTs!",
             colorbg : "#DF4949"
         },
     ]

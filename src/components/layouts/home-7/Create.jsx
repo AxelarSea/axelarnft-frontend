@@ -15,7 +15,7 @@ const Create = () => {
         },
         {
             title: "Interoperable NFTs Selling",
-            description: "Choose between auctions and fixed-price listings. You choose the chain where you want to receive your payment!",
+            description: "Choose between auctions and fixed-Price listings. You choose the chain where you want to receive your payment!",
             icon : icon2,
             colorbg : "icon-color4"
         },
@@ -27,7 +27,7 @@ const Create = () => {
         },
         {
             title: "Manage Your Sales",
-            description: "Check all your NFT sales from multiple chains. Make price adjustments, reconfigures or cancels the sale from a single place",
+            description: "Check all your NFT sales from multiple chains. Make Price adjustments, reconfigures or cancels the sale from a single place",
             icon : icon4,
             colorbg : "icon-color4"
         },
