@@ -31,7 +31,8 @@ import imga10 from '../../../assets/images/avatar/avt-10.jpg'
 
 import imgTodayPick from '../../../assets/images/box-item/img-today-pick-demo.svg'
 import imgAuthor from '../../../assets/images/avatar/img-today-pick-author.svg'
-import { fetchAllListedItems } from '../../../utils/api';
+import { crossChainTokenLabel, fetchAllListedItems } from '../../../utils/api';
+import { maskAddress } from '../../../utils/address';
 
 const TodayPicks = () => {
     const [data, setData] = useState(
@@ -229,7 +230,7 @@ const TodayPicks = () => {
             tags: "bsc",
             imgAuthor: x.owner,
             nameAuthor: x.owner,
-            Price: x.listPrice + " ???",
+            price: x.listPrice + " " + crossChainTokenLabel(x.collection.chainId, x.listTokenAddress),
             wishlist: "100",
             raw: x,
         })));
@@ -431,8 +432,8 @@ const TodayPicks = () => {
                         <div className='content-inner'>
                             {
                                 data.slice(0,visible).map((item,index) => (
-                                    <Link to={"/item-details-01?chainId=" + item.raw?.collection.chainId + "&collection=" + item.raw?.collection.contractAddress + "&tokenId=" + item.raw?.tokenId}>
-                                        <div key={index} className={`sc-card-product menu_card style-h7 ${item.feature ? 'comingsoon' : '' } `}>
+                                    <Link to={"/item-details-01?chainId=" + item.raw?.collection.chainId + "&collection=" + item.raw?.collection.contractAddress + "&tokenId=" + item.raw?.tokenId} key={index} className={`sc-card-product menu_card style-h7 ${item.feature ? 'comingsoon' : '' } `}>
+                                        <div>
                                             
                                             <div className="card-media">
                                                 <img src={item.img} alt="Axies" />
@@ -447,7 +448,7 @@ const TodayPicks = () => {
                                                     </div>
                                                     <div className="info">
                                                         <span>Creator</span>
-                                                        <h6> <Link to="/author-02">{item.nameAuthor}</Link> </h6>
+                                                        <h6> <Link to="/author-02">{maskAddress(item.nameAuthor)}</Link> </h6>
                                                     </div>
                                                 </div>
                                                 <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link>
@@ -456,7 +457,7 @@ const TodayPicks = () => {
                                                 <div className="author">
                                                     <div className="info style2">
                                                         <span>Price</span>
-                                                        <span className="pricing">{item.Price}</span>
+                                                        <span className="pricing">{item.price}</span>
                                                     </div>
                                                 </div>
                                                 <div className="tags">{item.tags}</div>

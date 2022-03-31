@@ -1,5 +1,7 @@
 import React , { useState , Fragment } from 'react';
 import { Link } from 'react-router-dom'
+import { maskAddress } from '../../../utils/address';
+import { fetchAllListedItems } from '../../../utils/api';
 import CardModal from '../CardModal';
 
 const ExploreItem = props => {
@@ -34,9 +36,30 @@ const ExploreItem = props => {
                                     <div className="avatar">
                                         <img src={item.imgAuthor} alt="Axies" />
                                     </div>
-                                    <div className="info">
-                                        <span>Creator</span>
-                                        <h6> <Link to="/authors-02">{item.nameAuthor}</Link> </h6>
+                                    <div className="card-title">
+                                        <h5>{item.title}</h5>
+                                    </div>
+                                    <div className="meta-info">
+                                        <div className="author">
+                                            <div className="avatar">
+                                                <img src={item.imgAuthor} alt="Axies" />
+                                            </div>
+                                            <div className="info">
+                                                <span>Creator</span>
+                                                <h6> {maskAddress(item.nameAuthor)} </h6>
+                                            </div>
+                                        </div>
+                                        <div className="tags">{item.tags}</div>
+                                    </div>
+                                    <div className="card-bottom style-explode">
+                                        <div className="price">
+                                            <span>Price</span>
+                                            <div className="price-details">
+                                                <h5>{item.price}</h5>
+                                                <span>= {item.priceChange}</span>
+                                            </div>
+                                        </div>
+                                        {/* <Link to="/activity-01" className="view-history reload">View History</Link> */}
                                     </div>
                                 </div>
                                 <div className="tags">{item.tags}</div>

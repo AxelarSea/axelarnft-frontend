@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Modal } from "react-bootstrap";
 
 import AlunaLogo from "../../assets/images/icon/Luna.png";
 import AustLogo from "../../assets/images/icon/UST.png";
-import { buyERC721 } from "../../utils/api";
+import { buyERC721, crossChainTokenLabel, crossChainTokenSymbol } from "../../utils/api";
 
-import { useConnectedWallet } from "@terra-money/wallet-provider";
+import { useConnectedWallet, useLCDClient } from "@terra-money/wallet-provider";
+import web3 from "../../hooks/web3";
+import { maskAddress } from "../../utils/address";
 
 const CardModal = (props) => {
+  const lcd = useLCDClient();
+
   const [youPayPic, setYouPayPic] = useState(AustLogo);
 
   const [youPayType, setYouPayType] = useState("UST");
@@ -20,6 +24,9 @@ const CardModal = (props) => {
   const connectedWallet = useConnectedWallet();
 
   const [processing, setProcessing] = useState(false);
+
+  const [balance, setBalance] = useState(0);
+  const [metamaskAccount, setMetamaskAccount] = useState("");
 
   async function buyOnClick() {
     if (!connectedWallet) {
@@ -42,6 +49,28 @@ const CardModal = (props) => {
     
   }
 
+  async function refreshBalance() {
+    const accounts = await web3.eth.getAccounts();
+    setMetamaskAccount(accounts[0]);
+
+    if (connectedWallet) {
+      let [coins] = await lcd.bank.balance(connectedWallet.walletAddress);
+      console.log(coins.get(crossChainTokenSymbol(props.chainId, props.listTokenAddress)))
+      setBalance(coins.get(crossChainTokenSymbol(props.chainId, props.listTokenAddress)).amount / 1000000);
+    }
+  }
+
+  useEffect(() => {
+    const priceType = crossChainTokenLabel(props.chainId, props.listTokenAddress)
+    setPriceType(priceType);
+    setYouPayType(priceType);
+    
+    setPricePic(priceType == 'UST' ? AustLogo : AlunaLogo);
+    setYouPayPic(priceType == 'UST' ? AustLogo : AlunaLogo);
+
+    refreshBalance();
+  }, [props.chainId, props.listTokenAddress, connectedWallet])
+
   return (
     <Modal show={props.show} onHide={props.onHide}>
       <Modal.Header closeButton></Modal.Header>
@@ -50,7 +79,7 @@ const CardModal = (props) => {
         <h2>Checkout</h2>
         <p className="">
           You are about to purchase a{" "}
-          <span className="Price color-popup">Cryptopunk #2</span>
+          <span className="price color-popup">{props.name}</span>
         </p>
         <div className="d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-center">
@@ -65,7 +94,7 @@ const CardModal = (props) => {
                         </ul> */}
             </div>
           </div>
-          <p>Balance 10.330</p>
+          <p>Balance {balance.toFixed(3)} {youPayType}</p>
         </div>
         {/* <input type="text" className="form-control"
             placeholder="00.00 ETH" /> */}
@@ -81,7 +110,7 @@ const CardModal = (props) => {
             <div className="d-flex justify-content-between align-items-center">
               <p style={{ fontSize: "14px", marginLeft: "5px" }}>Price</p>
               <p style={{ fontSize: "14px", marginRight: "5px" }}>
-                -$24,055.16
+                {/* $24,055.16 */}
               </p>
             </div>
             <div className="d-flex justify-content-between align-items-center">
@@ -90,8 +119,7 @@ const CardModal = (props) => {
                 className="dropdown"
                 style={{ marginLeft: "5px" }}
               >
-                <Link
-                  to="#"
+                <a
                   className="btn-selector nolink"
                   style={{ minWidth: "100px" }}
                 >
@@ -102,7 +130,7 @@ const CardModal = (props) => {
                     style={{ marginRight: "14px" }}
                   />
                   {PriceType}
-                </Link>
+                </a>
               </div>
               <p
                 style={{
@@ -111,7 +139,7 @@ const CardModal = (props) => {
                   marginRight: "5px",
                 }}
               >
-                $5.89
+                {props.listPrice}
               </p>
             </div>
           </div>
@@ -119,17 +147,16 @@ const CardModal = (props) => {
             <div className="d-flex justify-content-between align-items-center">
               <p style={{ fontSize: "14px", marginLeft: "5px" }}>You pay</p>
               <p style={{ fontSize: "14px", marginRight: "5px" }}>
-                -$24,055.16
+                {/* $24,055.16 */}
               </p>
             </div>
-            <div className="d-flex justify-content-between align-items-center">
+            <div className="d-flex justify-content-between align-items-center" style={{pointerEvents: "none"}}>
               <div
                 id="sort-by"
                 className="dropdown"
                 style={{ marginLeft: "5px" }}
               >
-                <Link
-                  to="#"
+                <a
                   className="btn-selector nolink"
                   style={{ minWidth: "100px" }}
                 >
@@ -140,7 +167,7 @@ const CardModal = (props) => {
                     style={{ marginRight: "14px" }}
                   />
                   {youPayType}
-                </Link>
+                </a>
                 <ul>
                   <li
                     onClick={() => {
@@ -183,7 +210,7 @@ const CardModal = (props) => {
                   marginRight: "5px",
                 }}
               >
-                $24,055.16
+                {props.listPrice}
               </p>
             </div>
           </div>
@@ -195,7 +222,7 @@ const CardModal = (props) => {
           <p> You want to Receive NFT</p>
         </div>
         <div className="d-flex justify-content-between">
-          <p> To</p>
+          <p> To {maskAddress(metamaskAccount)} </p>
         </div>
 
         <button

@@ -35,7 +35,8 @@ import HeaderStyle2 from "../components/header/HeaderStyle2";
 
 import Explore from "../components/layouts/explore-04/Explore";
 import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
-import { fetchAllMyItems } from "../utils/api";
+import { crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
+import { maskAddress } from "../utils/address";
 
 const Authors02 = () => {
   const [menuTab] = useState([
@@ -516,8 +517,8 @@ const Authors02 = () => {
       tags: "bsc",
       imgAuthor: x.owner,
       nameAuthor: x.owner,
-      Price: x.listPrice + " ???",
-      PriceChange: "$12.246",
+      price: x.listPrice + " " + crossChainTokenLabel(x.collection.chainId, x.listTokenAddress),
+      priceChange: "$12.246",
       wishlist: "100",
       imgCollection: x.metadata.image,
       nameCollection: x.collection.name,
@@ -671,7 +672,7 @@ const Authors02 = () => {
                                         </div> */}
                                         <div className="info">
                                           <span>Creator</span>
-                                          <h6>{data.nameAuthor}</h6>
+                                          <h6>{maskAddress(data.nameAuthor)}</h6>
                                         </div>
                                       </div>
                                       <div className="tags">{data.tags}</div>

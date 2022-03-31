@@ -145,10 +145,10 @@ const ItemDetails02 = () => {
                                             </ul>
                                         </div>
                                         <div className="item-style-2">
-                                            <div className="item meta-Price">
+                                            <div className="item meta-price">
                                                 <span className="heading">Price</span>
-                                                <div className="Price">
-                                                    <div className="Price-box">
+                                                <div className="price">
+                                                    <div className="price-box">
                                                         <h5> 4.89 ETH</h5>
                                                         <span>= $12.246</span>
                                                     </div>

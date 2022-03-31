@@ -135,9 +135,9 @@ const NoResult = () => {
                                                                             </Link> </h6>
                                                                         </div>
                                                                     </div>
-                                                                    <div className="Price">
+                                                                    <div className="price">
                                                                         <span>Price</span>
-                                                                        <h5> {item.Price}</h5>
+                                                                        <h5> {item.price}</h5>
                                                                     </div>
                                                                 </div>
                                                             </div>    	

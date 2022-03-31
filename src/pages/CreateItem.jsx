@@ -137,7 +137,11 @@ const CreateItem = () => {
                       </h6>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div className="Price">
+=======
+                  <div className="price">
+>>>>>>> 33fdb633f6a647eec98d006e8311eecd628ccd72
                     <span>Price</span>
                     <h5> 4.89 ETH</h5>
                   </div>

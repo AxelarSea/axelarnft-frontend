@@ -38,10 +38,23 @@ export const CROSS_CHAIN_TOKEN_ADDRESS = {
 
 export function crossChainTokenSymbol(chainId, tokenAddress) {
   for (let symbol in CROSS_CHAIN_TOKEN_ADDRESS) {
-    if (CROSS_CHAIN_TOKEN_ADDRESS[symbol][chainId].toLowerCase() == tokenAddress.toLowerCase()) {
+    console.log(CROSS_CHAIN_TOKEN_ADDRESS[symbol][chainId]);
+    if ((CROSS_CHAIN_TOKEN_ADDRESS[symbol][chainId] || "").toLowerCase() == (tokenAddress || "").toLowerCase()) {
       return symbol;
     }
   }
+  return "";
+}
+
+export function crossChainTokenLabel(chainId, tokenAddress) {
+  let symbol = crossChainTokenSymbol(chainId, tokenAddress);
+
+  switch (symbol) {
+    case 'uluna': return 'LUNA';
+    case 'uusd': return 'UST';
+  }
+
+  return symbol;
 }
 
 export async function getMetaWalletAddress(chainId, address) {
@@ -172,6 +185,13 @@ export async function fetchItem(collectionAddress, tokenId) {
 
 export async function refreshMetadata(chainId, collectionAddress, tokenId) {
   return await axios.post(process.env.REACT_APP_API_HOST + '/api/nft/collections/' + collectionAddress + '/items/' + tokenId + '/refreshMetadata');
+}
+
+export async function cancelListing(chainId, collectionAddress, tokenId) {
+  let account = (await web3.eth.getAccounts())[0];
+  let response = await new Marketplace(chainId, account).cancelListing(collectionAddress, tokenId);
+  await refreshMetadata(chainId, collectionAddress, tokenId);
+  return response;
 }
 
 export async function listItem(chainId, collectionAddress, tokenId, listTokenAddress, listPrice, listAmount = 1) {
