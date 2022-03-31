@@ -209,7 +209,7 @@ const ItemDetails01 = () => {
                   </p>
                   <div className="meta-item-details style2">
                     <div className="item meta-price">
-                      <span className="heading">Current Bid</span>
+                      <span className="heading">Price</span>
                       <div className="price">
                         <div className="price-box">
                           <h5>{data.listPrice} ??</h5>

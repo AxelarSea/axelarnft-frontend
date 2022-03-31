@@ -80,7 +80,7 @@ const TodayPicks = props => {
                                                 </div>
                                             </div>
                                             <div className="price">
-                                                <span>Current Bid</span>
+                                                <span>Price</span>
                                                 <h5>{item.price}</h5>
                                             </div>
                                         </div>

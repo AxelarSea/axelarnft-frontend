@@ -603,7 +603,7 @@ const Authors03 = () => {
                                                                 </div>
                                                                 <div className="card-bottom style-explode">
                                                                     <div className="price">
-                                                                        <span>Current Bid</span>
+                                                                        <span>Price</span>
                                                                         <div className="price-details">
                                                                             <h5>{data.price}</h5>
                                                                             <span>= {data.priceChange}</span>

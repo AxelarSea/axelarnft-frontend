@@ -31,7 +31,8 @@ import imga10 from '../../../assets/images/avatar/avt-10.jpg'
 
 import imgTodayPick from '../../../assets/images/box-item/img-today-pick-demo.svg'
 import imgAuthor from '../../../assets/images/avatar/img-today-pick-author.svg'
-import { fetchAllListedItems } from '../../../utils/api';
+import { crossChainTokenLabel, fetchAllListedItems } from '../../../utils/api';
+import { maskAddress } from '../../../utils/address';
 
 const TodayPicks = () => {
     const [data, setData] = useState(
@@ -229,7 +230,7 @@ const TodayPicks = () => {
             tags: "bsc",
             imgAuthor: x.owner,
             nameAuthor: x.owner,
-            price: x.listPrice + " ???",
+            price: x.listPrice + " " + crossChainTokenLabel(x.collection.chainId, x.listTokenAddress),
             wishlist: "100",
             raw: x,
         })));
@@ -447,7 +448,7 @@ const TodayPicks = () => {
                                                     </div>
                                                     <div className="info">
                                                         <span>Creator</span>
-                                                        <h6> <Link to="/author-02">{item.nameAuthor}</Link> </h6>
+                                                        <h6> <Link to="/author-02">{maskAddress(item.nameAuthor)}</Link> </h6>
                                                     </div>
                                                 </div>
                                                 <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link>
@@ -455,7 +456,7 @@ const TodayPicks = () => {
                                             <div className="meta-info">
                                                 <div className="author">
                                                     <div className="info style2">
-                                                        <span>Current Bid</span>
+                                                        <span>Price</span>
                                                         <span className="pricing">{item.price}</span>
                                                     </div>
                                                 </div>

@@ -54,7 +54,7 @@ const TodayPicks = props => {
                                         </div>
                                         <div className="card-bottom style-explode">
                                             <div className="price">
-                                                <span>Current Bid</span>
+                                                <span>Price</span>
                                                 <div className="price-details">
                                                     <h5>{item.price}</h5>
                                                     <span>= {item.priceChange}</span>

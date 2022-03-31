@@ -172,7 +172,7 @@ const LiveAuction = () => {
                                                                     <div className="meta-info">
                                                                         <div className="author">
                                                                             <div className="info">
-                                                                                <span>Current Bid</span>
+                                                                                <span>Price</span>
                                                                                 <span className="pricing">{item.price}</span>
                                                                             </div>
                                                                         </div>

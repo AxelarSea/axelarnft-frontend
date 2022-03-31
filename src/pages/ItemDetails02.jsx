@@ -146,7 +146,7 @@ const ItemDetails02 = () => {
                                         </div>
                                         <div className="item-style-2">
                                             <div className="item meta-price">
-                                                <span className="heading">Current Bid</span>
+                                                <span className="heading">Price</span>
                                                 <div className="price">
                                                     <div className="price-box">
                                                         <h5> 4.89 ETH</h5>

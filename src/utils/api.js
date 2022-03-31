@@ -43,6 +43,7 @@ export function crossChainTokenSymbol(chainId, tokenAddress) {
       return symbol;
     }
   }
+  return "";
 }
 
 export function crossChainTokenLabel(chainId, tokenAddress) {

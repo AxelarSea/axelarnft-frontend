@@ -138,7 +138,7 @@ const CreateItem = () => {
                     </div>
                   </div>
                   <div className="price">
-                    <span>Current Bid</span>
+                    <span>Price</span>
                     <h5> 4.89 ETH</h5>
                   </div>
                 </div>

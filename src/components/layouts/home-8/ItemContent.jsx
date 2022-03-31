@@ -699,7 +699,7 @@ const ItemContent = () => {
                                                 <div className="meta-info">
                                                     <div className="author">
                                                         <div className="info">
-                                                            <span>Current Bid</span>
+                                                            <span>Price</span>
                                                             <span className="pricing">{item.price}</span>
                                                         </div>
                                                     </div>
@@ -760,7 +760,7 @@ const ItemContent = () => {
                                             <div className="meta-info">
                                                 <div className="author">
                                                     <div className="info">
-                                                        <p>Current Bid</p>
+                                                        <p>Price</p>
                                                         <p className="pricing">{item.price}</p>
                                                     </div>
                                                 </div>

@@ -6,7 +6,7 @@ import Explore from '../components/layouts/explore-04/Explore';
 import widgetSidebarData from '../assets/fake-data/data-widget-sidebar'
 
 import HeaderStyle2 from '../components/header/HeaderStyle2';
-import { fetchAllListedItems } from '../utils/api';
+import { crossChainTokenLabel, fetchAllListedItems } from '../utils/api';
 import ExploreItem from '../components/layouts/explore-04/ExploreItem';
     
 const Explore04 = () => {
@@ -20,7 +20,7 @@ const Explore04 = () => {
           tags: "bsc",
           imgAuthor: x.owner,
           nameAuthor: x.owner,
-          price: x.listPrice + " ???",
+          price: x.listPrice + " " + crossChainTokenLabel(x.collection.chainId, x.listTokenAddress),
           priceChange: "$12.246",
           wishlist: "100",
           imgCollection: x.metadata.image,

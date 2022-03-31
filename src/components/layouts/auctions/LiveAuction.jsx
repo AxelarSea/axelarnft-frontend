@@ -75,7 +75,7 @@ const LiveAuctionItem = props => (
                     </div>
                 </div>
                 <div className="price">
-                    <span>Current Bid</span>
+                    <span>Price</span>
                     <h5> {props.item.price}</h5>
                 </div>
             </div>
