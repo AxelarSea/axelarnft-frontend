@@ -17,7 +17,7 @@ import img6 from "../assets/images/avatar/satoshi.png";
 import img7 from "../assets/images/avatar/avt-2.jpg";
 import imgdetail1 from "../assets/images/box-item/images-item-details.jpg";
 import CardModal from "../components/layouts/CardModal";
-import { cancelListing, fetchItem } from "../utils/api";
+import { cancelListing, crossChainTokenLabel, fetchItem } from "../utils/api";
 import { maskAddress } from "../utils/address";
 
 const ItemDetails01 = () => {
@@ -88,6 +88,8 @@ const ItemDetails01 = () => {
   useEffect(() => {
     refreshData();
   }, []);
+
+  console.log(data)
 
 
   return (
@@ -215,7 +217,7 @@ const ItemDetails01 = () => {
                       <span className="heading">Price</span>
                       <div className="Price">
                         <div className="Price-box">
-                          <h5>{data.listPrice}</h5>
+                          <h5>{data.listPrice} {crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId)}</h5>
                           {/* <span>= $12.246</span> */}
                         </div>
                       </div>
@@ -236,10 +238,10 @@ const ItemDetails01 = () => {
                   </button>
                   <button
                   style={{marginLeft:'2rem'}}
-                    onClick={() => setModalShow(true)}
+                    onClick={() => cancelListingAction()}
                     className="sc-button loadmore fl-button pri-3 "
                   >
-                    <span>Cancle Listing</span>
+                    <span>Cancel Listing</span>
                   </button>
                   </div>
                   <div className="flat-tabs themesflat-tabs">
