@@ -57,7 +57,7 @@ export async function executeMetaWalletTx(chainId, address, signature) {
 export const getDepositAddress = async (chainId, asset, destinationAddress) => {
   let chainName = "";
 
-  switch (chainId) {
+  switch (parseInt(chainId)) {
     case 3: chainName = "ethereum"; break;
     case 43113: chainName = "avalanche"; break;
     case 4002: chainName = "fantom"; break;
@@ -65,7 +65,7 @@ export const getDepositAddress = async (chainId, asset, destinationAddress) => {
 
   const payload = {
     fromChain: "terra",
-    toChain: "avalanche",
+    toChain: chainName,
     asset: asset,
     destinationAddress: destinationAddress,
   };
@@ -80,49 +80,56 @@ export async function buyERC721(wallet, chainId, collectionAddress, tokenId, lis
   let address = (await web3.eth.getAccounts())[0];
   let metaWalletAddress = await getMetaWalletAddress(chainId, address);
   let symbol = crossChainTokenSymbol(chainId, listTokenAddress);
-  let depositAddress = await getDepositAddress(chainId, symbol, metaWalletAddress);
-  console.log(depositAddress);
+  let targetToken = new ERC20(chainId, listTokenAddress, address, true);
 
   let seller = await new ERC721MetaMintable(chainId, collectionAddress, address, true).ownerOf(tokenId);
   console.log('SELLER:', seller)
 
-  const msgTransfer = new MsgTransfer(
-    'transfer',
-    'channel-78', 
-    new Coin(symbol, Math.floor(listPrice * 1.05 * 1e6)), 
-    wallet.walletAddress,
-    depositAddress,
-    undefined, 
-    (Date.now() + 60 * 1000) * 1e6,
-  );
+  let startBalance = await targetToken.balanceOf(metaWalletAddress);
 
-  console.log(wallet)
-
-  await wallet.post({
-    msgs: [
-      msgTransfer
-    ],
-  });
-
-  // Polling
-  while (true) {
-    try {
-      let targetToken = new ERC20(chainId, listTokenAddress, address, true);
-      let balance = await targetToken.balanceOf(metaWalletAddress);
+  if (parseFloat(startBalance) / 1000000 < listPrice) {
+    let depositAddress = await getDepositAddress(chainId, symbol, metaWalletAddress);
+    console.log('MetaWalletAddress', metaWalletAddress);
+    console.log('CHAIN ID', chainId)
+    console.log(depositAddress);
   
-      // console.log(balance);
-      // console.log(parseFloat(balance) / 1000000, listPrice);
+    const msgTransfer = new MsgTransfer(
+      'transfer',
+      'channel-78', 
+      new Coin(symbol, Math.floor(listPrice * 1.05 * 1e6)), 
+      wallet.walletAddress,
+      depositAddress,
+      undefined, 
+      (Date.now() + 60 * 1000) * 1e6,
+    );
   
-      if (parseFloat(balance) / 1000000 >= listPrice) {
-        break;
-      } else {
-        console.log('Not arrived');
+    console.log(wallet)
+  
+    await wallet.post({
+      msgs: [
+        msgTransfer
+      ],
+    });
+  
+    // Polling
+    while (true) {
+      try {
+        let balance = await targetToken.balanceOf(metaWalletAddress);
+    
+        // console.log(balance);
+        // console.log(parseFloat(balance) / 1000000, listPrice);
+    
+        if (parseFloat(balance) / 1000000 >= listPrice) {
+          break;
+        } else {
+          console.log('Not arrived');
+        }
+      } catch (err) {
+        console.error(err);
       }
-    } catch (err) {
-      console.error(err);
+  
+      await wait(3000);
     }
-
-    await wait(3000);
   }
 
   console.log('Deposit arrived');

@@ -41,6 +41,15 @@ export default async function switchChain(chainId) {
 
   if (currentChainId == chainId) return true;
 
+  console.log('0x' + parseInt(chainId).toString(16))
+
+  if (chainId < 10) {
+    return await window.ethereum.request({
+      method: 'wallet_switchEthereumChain',
+      params: [{ chainId: '0x' + parseInt(chainId).toString(16) }],
+    });
+  }
+
   return await window.ethereum.request({
     method: 'wallet_addEthereumChain',
     params: [networkData[chainId]],

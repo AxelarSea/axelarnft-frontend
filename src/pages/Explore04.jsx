@@ -7,6 +7,7 @@ import widgetSidebarData from '../assets/fake-data/data-widget-sidebar'
 
 import HeaderStyle2 from '../components/header/HeaderStyle2';
 import { fetchAllListedItems } from '../utils/api';
+import ExploreItem from '../components/layouts/explore-04/ExploreItem';
     
 const Explore04 = () => {
     const [items, setItems] = useState([]);
@@ -64,7 +65,9 @@ const Explore04 = () => {
                 </div>                    
             </section>
             <Explore data={widgetSidebarData}>
-
+                <div className="col-xl-9 col-lg-9 col-md-12">
+                    <ExploreItem data={items} />
+                </div>
             </Explore>
             <Footer />
         </div>

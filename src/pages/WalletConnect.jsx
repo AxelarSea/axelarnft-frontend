@@ -80,7 +80,7 @@ const WalletConnect = () => {
 
   const chainChangedHandler = () => {
     // reload the page to avoid any errors with chain change mid use of application
-    window.location.reload();
+    // window.location.reload();
   };
 
   // listen for account changes
@@ -307,9 +307,7 @@ const WalletConnect = () => {
                 Connect Your Wallet
               </h2>
               <h5 className="sub-title ct style-1 pad-400">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Laborum obcaecati dignissimos quae quo ad iste ipsum officiis
-                deleniti asperiores sit.
+              Connect with one or more of our available wallet providers below in order to unlock the features of AxelarSea.
               </h5>
             </div>
             <div className="col-md-12">

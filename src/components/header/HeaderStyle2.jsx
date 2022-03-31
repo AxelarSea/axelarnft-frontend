@@ -6,9 +6,14 @@ import logodark from '../../assets/images/logo/logo_dark.png'
 import avt from '../../assets/images/avatar/avt-2.jpg'
 import coin from '../../assets/images/logo/coin.svg'
 import logosvg from '../../assets/images/logo/logosvg.svg'
+import web3 from '../../hooks/web3';
+import { useConnectedWallet } from '@terra-money/wallet-provider';
 
 
 const HeaderStyle2 = () => {
+    const [connected, setConnected] = useState(false);
+    const connectedTerraStationWallet = useConnectedWallet();
+
     const { pathname } = useLocation();
 
     const headerRef = useRef (null)
@@ -38,6 +43,17 @@ const HeaderStyle2 = () => {
     const handleOnClick = index => {
         setActiveIndex(index); 
     };
+
+    async function checkConnectedStatus() {
+        let accounts = await web3.eth.getAccounts();
+        setConnected(accounts.length > 0 || connectedTerraStationWallet);
+    }
+
+    window.ethereum.on("accountsChanged", checkConnectedStatus);
+
+    useEffect(() => {
+        checkConnectedStatus();
+    }, [connectedTerraStationWallet])
 
     return (
         <header id="header_main" className="header_1 header_2 style2 js-header" ref={headerRef}>
@@ -110,7 +126,7 @@ const HeaderStyle2 = () => {
                                 <div className="flat-search-btn flex">
                                     <div className="sc-btn-top mg-r-12" id="site-header">
                                         <Link to="/wallet-connect" className="sc-button header-slider style style-1 wallet fl-button pri-1">
-                                            <span>Wallet connect
+                                            <span>{connected ? "Connected" : "Wallet connect"}
                                         </span>
                                         </Link>
                                     </div>

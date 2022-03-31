@@ -1,6 +1,5 @@
-import React , { useState , Fragment, useEffect } from 'react';
+import React , { useState , Fragment } from 'react';
 import { Link } from 'react-router-dom'
-import { fetchAllListedItems } from '../../../utils/api';
 import CardModal from '../CardModal';
 
 const ExploreItem = props => {
@@ -43,11 +42,11 @@ const ExploreItem = props => {
                                 <div className="tags">{item.tags}</div>
                             </div>
                             <div className="card-bottom style-explode">
-                                <div className="Price">
+                                <div className="price">
                                     <span>Price</span>
-                                    <div className="Price-details">
-                                        <h5>{item.Price}</h5>
-                                        <span>= {item.PriceChange}</span>
+                                    <div className="price-details">
+                                        <h5>{item.price}</h5>
+                                        <span>= {item.priceChange}</span>
                                     </div>
                                 </div>
                                 <Link to="/activity-01" className="view-history reload">View History</Link>
