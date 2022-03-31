@@ -16,7 +16,7 @@ import img6 from "../assets/images/avatar/avt-8.jpg";
 import img7 from "../assets/images/avatar/avt-2.jpg";
 import imgdetail1 from "../assets/images/box-item/images-item-details.jpg";
 import CardModal from "../components/layouts/CardModal";
-import { fetchItem } from "../utils/api";
+import { cancelListing, fetchItem } from "../utils/api";
 import { maskAddress } from "../utils/address";
 
 const ItemDetails01 = () => {
@@ -76,6 +76,12 @@ const ItemDetails01 = () => {
 
   async function refreshData() {
       setData(await fetchItem(collectionAddress, tokenId));
+  }
+
+  async function cancelListingAction() {
+    await cancelListing(chainId, collectionAddress, tokenId);
+    await refreshData();
+    window.alert('Cancel success');
   }
 
   useEffect(() => {
@@ -224,6 +230,12 @@ const ItemDetails01 = () => {
                   >
                     <span>Buy Now</span>
                   </button>
+                  <button
+                    onClick={() => cancelListingAction()}
+                    className="sc-button loadmore style fl-button pri-3"
+                  >
+                    <span>Cancel Listing</span>
+                  </button>
                   <div className="flat-tabs themesflat-tabs">
                     <Tabs>
                       <TabList>
@@ -343,8 +355,9 @@ const ItemDetails01 = () => {
       <Footer />
 
       <CardModal 
-        show={modalShow} 
+        show={modalShow}
         onHide={() => setModalShow(false)}
+        name={data.collection?.name + ' #' + data.tokenId}
         chainId={chainId}
         collectionAddress={collectionAddress}
         tokenId={tokenId}

@@ -431,8 +431,8 @@ const TodayPicks = () => {
                         <div className='content-inner'>
                             {
                                 data.slice(0,visible).map((item,index) => (
-                                    <Link to={"/item-details-01?chainId=" + item.raw?.collection.chainId + "&collection=" + item.raw?.collection.contractAddress + "&tokenId=" + item.raw?.tokenId}>
-                                        <div key={index} className={`sc-card-product menu_card style-h7 ${item.feature ? 'comingsoon' : '' } `}>
+                                    <Link to={"/item-details-01?chainId=" + item.raw?.collection.chainId + "&collection=" + item.raw?.collection.contractAddress + "&tokenId=" + item.raw?.tokenId} key={index} className={`sc-card-product menu_card style-h7 ${item.feature ? 'comingsoon' : '' } `}>
+                                        <div>
                                             
                                             <div className="card-media">
                                                 <img src={item.img} alt="Axies" />

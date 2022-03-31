@@ -1,5 +1,6 @@
 import React , { useState , Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom'
+import { maskAddress } from '../../../utils/address';
 import { fetchAllListedItems } from '../../../utils/api';
 import CardModal from '../CardModal';
 
@@ -38,7 +39,7 @@ const ExploreItem = props => {
                                             </div>
                                             <div className="info">
                                                 <span>Creator</span>
-                                                <h6> {item.nameAuthor} </h6>
+                                                <h6> {maskAddress(item.nameAuthor)} </h6>
                                             </div>
                                         </div>
                                         <div className="tags">{item.tags}</div>
