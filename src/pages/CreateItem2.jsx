@@ -19,7 +19,7 @@ import { chainLabel, maskAddress } from "../utils/address";
 const CreateItem2 = () => {
   const [data, setData] = useState({});
   const [Price, setPrice] = useState("");
-  const [PriceType, setPriceType] = useState("LUNA");
+  const [PriceType, setPriceType] = useState("aLUNA");
   const [PricePic, setPricePic] = useState(AlunaLogo);
   const [processing, setProcessing] = useState(false);
 
@@ -196,7 +196,7 @@ const CreateItem2 = () => {
                                       src={AlunaLogo}
                                       style={{ marginRight: "14px" }}
                                     />
-                                    LUNA
+                                    aLUNA
                                   </span>
                                 </div>
                               </li>
@@ -213,7 +213,7 @@ const CreateItem2 = () => {
                                     src={AustLogo}
                                     style={{ marginRight: "14px" }}
                                   />
-                                  UST
+                                  aUST
                                 </span>
                               </li>
                             </ul>

@@ -55,7 +55,7 @@ const widgetSidebarData = [
                 field: 'Ethereum'
             },
             {
-                field: 'Polygon'
+                field: 'Avalanche'
             },
             {
                 field: 'Fantom'
