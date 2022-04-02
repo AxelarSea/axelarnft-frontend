@@ -52,25 +52,25 @@ const ExploreItem = (props) => {
               </div>
               <div className="meta-info">
                 <div className="author">
-                  <div className="avatar">
+                  {/* <div className="avatar">
                     <img src={item.imgAuthor} alt="Axies" />
                   </div>
                   <div className="card-title">
                     <h5>{item.title}</h5>
-                  </div>
+                  </div> */}
                   <div className="meta-info">
                     <div className="author">
                       <div className="avatar">
                         <img src={item.imgAuthor} alt="Axies" />
                       </div>
                       <div className="info">
-                        <span>Creator</span>
+                        <span>Owned By</span>
                         <h6> {maskAddress(item.nameAuthor)} </h6>
                       </div>
                     </div>
-                    <div className="tags">{item.tags}</div>
+                    {/* <div className="tags">{item.tags}</div> */}
                   </div>
-                  <div className="card-bottom style-explode">
+                  {/* <div className="card-bottom style-explode">
                     <div className="price">
                       <span>Price</span>
                       <div className="price-details">
@@ -78,17 +78,17 @@ const ExploreItem = (props) => {
                         <span>= {item.priceChange}</span>
                       </div>
                     </div>
-                    {/* <Link to="/activity-01" className="view-history reload">View History</Link> */}
-                  </div>
+                    <Link to="/activity-01" className="view-history reload">View History</Link>
+                  </div> */}
                 </div>
                 <div className="tags">{item.tags}</div>
               </div>
               <div className="card-bottom style-explode">
                 <div className="price">
                   <span>Price</span>
-                  <div className="price-details">
+                  <div className="price-details mt-1">
                     <h5>{item.price}</h5>
-                    <span>= {item.priceChange}</span>
+                    {/* <span>= {item.priceChange}</span> */}
                   </div>
                 </div>
                 {/* <Link to="/activity-01" className="view-history reload">View History</Link> */}

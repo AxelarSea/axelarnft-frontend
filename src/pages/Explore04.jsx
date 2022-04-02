@@ -18,7 +18,7 @@ const Explore04 = () => {
           img: x.metadata.image,
           title: x.collection.name + " #" + x.tokenId,
           tags: "bsc",
-          imgAuthor: x.owner,
+          imgAuthor: "/static/media/satoshi.292d298576777494a217.png",
           nameAuthor: x.owner,
           price: x.listPrice + " " + crossChainTokenLabel(x.collection.chainId, x.listTokenAddress),
           priceChange: "$12.246",
