@@ -36,9 +36,11 @@ const CreateItem2 = () => {
       let PriceTypeSymbol = "";
 
       switch (PriceType) {
-        case "ALUNA": PriceTypeSymbol = "uluna"; break;
-        case "AUST": PriceTypeSymbol = "uusd"; break;
+        case "LUNA": PriceTypeSymbol = "uluna"; break;
+        case "UST": PriceTypeSymbol = "uusd"; break;
       }
+
+      console.log(PriceTypeSymbol)
   
       await listItem(
         chainId,
