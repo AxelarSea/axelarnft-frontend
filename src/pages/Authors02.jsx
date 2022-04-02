@@ -547,10 +547,6 @@ const Authors02 = () => {
     ]);
   }
 
-  useEffect(() => {
-    refreshData();
-  }, []);
-
   const [account, setAccount] = useState("");
   const terraAccount = useConnectedWallet();
 
@@ -558,7 +554,7 @@ const Authors02 = () => {
     setAccount((await web3.eth.getAccounts())[0] ?? "");
   }
 
-  window.ethereum.on("accountsChanged", setAccount);
+  window.ethereum.on("accountsChanged", account => setAccount(account[0]));
 
   useEffect(fetchMetamaskAccount, []);
 
@@ -571,6 +567,10 @@ const Authors02 = () => {
   async function sellAction(data) {
     window.location.href = "/list-item?chainId=" + data.chainId + "&collection=" + data.collectionAddress + "&tokenId=" + data.tokenId
   }
+
+  useEffect(() => {
+    refreshData();
+  }, [account, terraAccount]);
 
   return (
     <div className="authors-2">

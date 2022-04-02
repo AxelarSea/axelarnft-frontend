@@ -9,9 +9,9 @@ const ProcessModal = (props) => {
       <div className="modal-body space-y-20 pd-40">
           <h5>Waiting for transaction, follow these steps:</h5>
 
-      <ul className="list-group" >
+      <ul className="list-group" style={{fontSize: "1.5rem"}} >
             <li class="list-group-item  " style={{background:'#343444' , border:'none'}}>Get deposit address from Axelar Network</li>
-            <li class="list-group-item" style={{background:'#343444', border:'none'}}> Transfer XXX UST to axelar network using Terra Station</li>
+            <li class="list-group-item" style={{background:'#343444', border:'none'}}>Transfer token to axelar network using Terra Station</li>
             <li class="list-group-item" style={{background:'#343444', border:'none'}}>Wait for deposit arrival in the destination chain</li>
             <li class="list-group-item" style={{background:'#343444', border:'none'}}>Sign signature in metamask to confirm buying transaction</li>
             <li class="list-group-item" style={{background:'#343444', border:'none'}}>Wait for transaction to complete </li>

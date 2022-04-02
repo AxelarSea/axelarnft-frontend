@@ -38,8 +38,8 @@ const CreateItem2 = () => {
       let PriceTypeSymbol = "";
 
       switch (PriceType) {
-        case "LUNA": PriceTypeSymbol = "uluna"; break;
-        case "UST": PriceTypeSymbol = "uusd"; break;
+        case "aLUNA": PriceTypeSymbol = "uluna"; break;
+        case "aUST": PriceTypeSymbol = "uusd"; break;
       }
 
       console.log(PriceTypeSymbol)
@@ -184,7 +184,7 @@ const CreateItem2 = () => {
                             <ul>
                               <li
                                 onClick={() => {
-                                  setPriceType("LUNA");
+                                  setPriceType("aLUNA");
                                   setPricePic(AlunaLogo);
                                 }}
                               >
@@ -202,7 +202,7 @@ const CreateItem2 = () => {
                               </li>
                               <li
                                 onClick={() => {
-                                  setPriceType("UST");
+                                  setPriceType("aUST");
                                   setPricePic(AustLogo);
                                 }}
                               >

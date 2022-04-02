@@ -8,6 +8,7 @@ export function chainLabel(chainId) {
 }
 
 export function maskAddress(address) {
+  // console.log(address);
   if (!address) return address;
   if (address.startsWith('0x')) {
     return address.substring(0, 6) + '...' + address.substring(address.length - 4);
