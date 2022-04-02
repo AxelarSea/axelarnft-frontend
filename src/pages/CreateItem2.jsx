@@ -19,7 +19,7 @@ import { chainLabel, maskAddress } from "../utils/address";
 const CreateItem2 = () => {
   const [data, setData] = useState({});
   const [Price, setPrice] = useState("");
-  const [PriceType, setPriceType] = useState("ALUNA");
+  const [PriceType, setPriceType] = useState("aLUNA");
   const [PricePic, setPricePic] = useState(AlunaLogo);
   const [processing, setProcessing] = useState(false);
 
@@ -38,8 +38,8 @@ const CreateItem2 = () => {
       let PriceTypeSymbol = "";
 
       switch (PriceType) {
-        case "ALUNA": PriceTypeSymbol = "uluna"; break;
-        case "AUST": PriceTypeSymbol = "uusd"; break;
+        case "aLUNA": PriceTypeSymbol = "uluna"; break;
+        case "aUST": PriceTypeSymbol = "uusd"; break;
       }
 
       console.log(PriceTypeSymbol)
@@ -184,7 +184,7 @@ const CreateItem2 = () => {
                             <ul>
                               <li
                                 onClick={() => {
-                                  setPriceType("ALUNA");
+                                  setPriceType("aLUNA");
                                   setPricePic(AlunaLogo);
                                 }}
                               >
@@ -196,13 +196,13 @@ const CreateItem2 = () => {
                                       src={AlunaLogo}
                                       style={{ marginRight: "14px" }}
                                     />
-                                    ALUNA
+                                    aLUNA
                                   </span>
                                 </div>
                               </li>
                               <li
                                 onClick={() => {
-                                  setPriceType("AUST");
+                                  setPriceType("aUST");
                                   setPricePic(AustLogo);
                                 }}
                               >
@@ -213,7 +213,7 @@ const CreateItem2 = () => {
                                     src={AustLogo}
                                     style={{ marginRight: "14px" }}
                                   />
-                                  AUST
+                                  aUST
                                 </span>
                               </li>
                             </ul>

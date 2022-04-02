@@ -22,6 +22,7 @@ import { maskAddress } from "../utils/address";
 import web3 from "../hooks/web3";
 
 const ItemDetails01 = () => {
+  // const navigate = useNavigate()
   const [data, setData] = useState({});
   const [searchParams, setSearchParams] = useSearchParams();
   const [account, setAccount] = useState("");
