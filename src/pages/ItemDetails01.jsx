@@ -22,7 +22,6 @@ import { maskAddress } from "../utils/address";
 import web3 from "../hooks/web3";
 
 const ItemDetails01 = () => {
-  const navigate = useNavigate()
   const [data, setData] = useState({});
   const [searchParams, setSearchParams] = useSearchParams();
   const [account, setAccount] = useState("");
@@ -88,22 +87,21 @@ const ItemDetails01 = () => {
     window.alert('Cancel success');
   }
 
-  useEffect(() => {
-    refreshData();
-  }, []);
-
   console.log(data)
 
   async function fetchMetamaskAccount() {
     setAccount((await web3.eth.getAccounts())[0] ?? "");
   }
 
-  window.ethereum.on("accountsChanged", setAccount);
+  window.ethereum.on("accountsChanged", account => setAccount(account[0]));
 
   useEffect(fetchMetamaskAccount, []);
 
   // console.log(account)
 
+  useEffect(() => {
+    refreshData();
+  }, [account]);
 
   return (
     <div className="item-details">

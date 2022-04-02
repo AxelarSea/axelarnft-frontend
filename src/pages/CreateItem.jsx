@@ -64,7 +64,7 @@ const CreateItem = () => {
       // window.alert('Mint success');
       Swal.fire(
         'Mint Success!',
-        'You clicked the button!',
+        'You have minted NFT on ' + blockChain + '!',
         'success'
       )
     } finally {

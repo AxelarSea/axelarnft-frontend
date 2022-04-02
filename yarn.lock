@@ -11429,22 +11429,15 @@ swarm-js@^0.1.40:
     tar "^4.0.2"
     xhr-request "^1.0.1"
 
-<<<<<<< HEAD
-"sweetalert2@^11.4.8":
-  "integrity" "sha512-BDS/+E8RwaekGSxCPUbPnsRAyQ439gtXkTF/s98vY2l9DaVEOMjGj1FaQSorfGREKsbbxGSP7UXboibL5vgTMA=="
-  "resolved" "https://registry.npmjs.org/sweetalert2/-/sweetalert2-11.4.8.tgz"
-  "version" "11.4.8"
+sweetalert2@^11.4.8:
+  version "11.4.8"
+  resolved "https://registry.npmjs.org/sweetalert2/-/sweetalert2-11.4.8.tgz"
+  integrity sha512-BDS/+E8RwaekGSxCPUbPnsRAyQ439gtXkTF/s98vY2l9DaVEOMjGj1FaQSorfGREKsbbxGSP7UXboibL5vgTMA==
 
-"swiper@^7.4.1":
-  "integrity" "sha512-dhbL4tpYFvHug1J7GnKElfTi6EYhlZy/vNZRhHkWFyUsWZ1Vovipxj3la5gqllMogygXJMe3zvVv+f6eppvWiA=="
-  "resolved" "https://registry.npmjs.org/swiper/-/swiper-7.4.1.tgz"
-  "version" "7.4.1"
-=======
 swiper@^7.4.1:
   version "7.4.1"
   resolved "https://registry.npmjs.org/swiper/-/swiper-7.4.1.tgz"
   integrity sha512-dhbL4tpYFvHug1J7GnKElfTi6EYhlZy/vNZRhHkWFyUsWZ1Vovipxj3la5gqllMogygXJMe3zvVv+f6eppvWiA==
->>>>>>> 75033308d04eeb27b0c1c0b4e9aab27cc0d5d85d
   dependencies:
     dom7 "^4.0.2"
     ssr-window "^4.0.2"

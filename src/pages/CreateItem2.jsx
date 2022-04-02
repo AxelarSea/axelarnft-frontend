@@ -19,7 +19,7 @@ import { chainLabel, maskAddress } from "../utils/address";
 const CreateItem2 = () => {
   const [data, setData] = useState({});
   const [Price, setPrice] = useState("");
-  const [PriceType, setPriceType] = useState("LUNA");
+  const [PriceType, setPriceType] = useState("ALUNA");
   const [PricePic, setPricePic] = useState(AlunaLogo);
   const [processing, setProcessing] = useState(false);
 
@@ -38,8 +38,8 @@ const CreateItem2 = () => {
       let PriceTypeSymbol = "";
 
       switch (PriceType) {
-        case "LUNA": PriceTypeSymbol = "uluna"; break;
-        case "UST": PriceTypeSymbol = "uusd"; break;
+        case "ALUNA": PriceTypeSymbol = "uluna"; break;
+        case "AUST": PriceTypeSymbol = "uusd"; break;
       }
 
       console.log(PriceTypeSymbol)
@@ -184,7 +184,7 @@ const CreateItem2 = () => {
                             <ul>
                               <li
                                 onClick={() => {
-                                  setPriceType("LUNA");
+                                  setPriceType("ALUNA");
                                   setPricePic(AlunaLogo);
                                 }}
                               >
@@ -196,13 +196,13 @@ const CreateItem2 = () => {
                                       src={AlunaLogo}
                                       style={{ marginRight: "14px" }}
                                     />
-                                    LUNA
+                                    ALUNA
                                   </span>
                                 </div>
                               </li>
                               <li
                                 onClick={() => {
-                                  setPriceType("UST");
+                                  setPriceType("AUST");
                                   setPricePic(AustLogo);
                                 }}
                               >
@@ -213,7 +213,7 @@ const CreateItem2 = () => {
                                     src={AustLogo}
                                     style={{ marginRight: "14px" }}
                                   />
-                                  UST
+                                  AUST
                                 </span>
                               </li>
                             </ul>
