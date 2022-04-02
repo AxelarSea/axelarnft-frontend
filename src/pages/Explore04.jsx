@@ -65,7 +65,7 @@ const Explore04 = () => {
                     </div>
                 </div>                    
             </section>
-            <Explore data={widgetSidebarData}>
+            <Explore data={widgetSidebarData} setItems={setItems} items={items} formatItems={formatItems} >
                 <div className="col-xl-9 col-lg-9 col-md-12">
                     <ExploreItem data={items} />
                 </div>

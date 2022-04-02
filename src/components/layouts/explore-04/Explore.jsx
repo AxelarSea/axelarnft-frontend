@@ -1,10 +1,64 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import { Accordion } from 'react-bootstrap-accordion'
 import ExploreItem from './ExploreItem';
 import todayPickData from '../../../assets/fake-data/data-today-pick';
+import { fetchAllListedItems } from '../../../utils/api';
 
 const Explore = props => {
     const data = props.data;
+    const items = props.items;
+    const defaultItems = [...items]
+    const setItems = props.setItems;
+    const formatItems = props.formatItems
+
+    const [check,setCheck] = useState({
+        eth:false,
+        avax:false,
+        ftm:false
+    })
+
+    const setData = async () => {
+        if(check.eth){
+            const filterItems = defaultItems.filter(itemm => itemm.chainId === 3)
+            setItems(filterItems)
+        }
+        if(check.avax){
+            const filterItems = defaultItems.filter(itemm => itemm.chainId === 43113)
+            setItems(filterItems)
+        }
+        if(check.ftm){
+            const filterItems = defaultItems.filter(itemm => itemm.chainId === 4002)
+            setItems(filterItems)
+        }
+        if (!check.eth && !check.avax && !check.ftm){
+            const items =  await fetchAllListedItems()
+            setItems(formatItems(items))
+        }
+    }
+
+    const handleCheck = (i) => {
+        if(i === 0){
+            setCheck({...check , eth:!check.eth})
+            
+        }
+        
+        if(i === 1){
+            setCheck({...check , avax:!check.avax})
+           
+        }
+        if(i === 2){
+            setCheck({...check , ftm:!check.ftm})
+        }
+        
+    }
+
+    console.log(defaultItems)
+
+
+    useEffect(() => {
+        setData()
+    },[check])
+
     // const items = props.items;
     return (
         <section className="tf-explore tf-section">
@@ -22,7 +76,7 @@ const Explore = props => {
                                                         item.content.map((itemm , index) => (
                                                             <div key={index}>
                                                                 <label>{itemm.field}
-                                                                    <input type="checkbox" defaultChecked={itemm.checked} />
+                                                                    <input type="checkbox" defaultChecked={itemm.checked} onChange={() => handleCheck(index)}/>
                                                                     <span className="btn-checkbox"></span>
                                                                 </label><br/>
                                                             </div>
