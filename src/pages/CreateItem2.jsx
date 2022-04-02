@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
@@ -12,10 +12,12 @@ import AlunaLogo from "../assets/images/icon/Luna.png";
 import AustLogo from "../assets/images/icon/UST.png";
 
 import HeaderStyle2 from "../components/header/HeaderStyle2";
-import { CROSS_CHAIN_TOKEN_ADDRESS, listItem } from "../utils/api";
+import { CROSS_CHAIN_TOKEN_ADDRESS, fetchItem, listItem } from "../utils/api";
 import web3 from "../hooks/web3";
+import { chainLabel, maskAddress } from "../utils/address";
 
 const CreateItem2 = () => {
+  const [data, setData] = useState({});
   const [Price, setPrice] = useState("");
   const [PriceType, setPriceType] = useState("LUNA");
   const [PricePic, setPricePic] = useState(AlunaLogo);
@@ -36,9 +38,11 @@ const CreateItem2 = () => {
       let PriceTypeSymbol = "";
 
       switch (PriceType) {
-        case "ALUNA": PriceTypeSymbol = "uluna"; break;
-        case "AUST": PriceTypeSymbol = "uusd"; break;
+        case "LUNA": PriceTypeSymbol = "uluna"; break;
+        case "UST": PriceTypeSymbol = "uusd"; break;
       }
+
+      console.log(PriceTypeSymbol)
   
       await listItem(
         chainId,
@@ -54,6 +58,14 @@ const CreateItem2 = () => {
     }
 
   }
+
+  async function refreshData() {
+    setData(await fetchItem(collectionAddress, tokenId));
+  }
+
+  useEffect(() => {
+    refreshData();
+  }, []);
 
   return (
     <div className="create-item">
@@ -85,7 +97,7 @@ const CreateItem2 = () => {
               <div className="sc-card-product">
                 <div className="card-media">
                   <Link to="/item-details-01">
-                    <img src={img1} alt="Axies" />
+                    <img src={data.metadata?.image} alt="Axies" />
                   </Link>
                   {/* <Link to="/login" className="wishlist-button heart">
                     <span className="number-like"> 100</span>
@@ -99,27 +111,27 @@ const CreateItem2 = () => {
                 </div>
                 <div className="card-title">
                   <h5>
-                    <Link to="/item-details-01">"Cyber Doberman #766”</Link>
+                    {data.collection?.name} #{data.tokenId}
                   </h5>
                   {/* <div className="tags">bsc</div> */}
                 </div>
                 <div className="meta-info">
                   <div className="author">
-                    <div className="avatar">
-                      <img src={avt} alt="Axies" />
-                    </div>
+                    {/* <div className="avatar">
+                      <img src={data.metadata?.image} alt="Axies" />
+                    </div> */}
                     <div className="info">
                       <span>Owned By</span>
                       <h6>
-                        {" "}
-                        <Link to="/author-02">Freddie Carpenter</Link>
+                        {maskAddress(data.owner)}
                       </h6>
                     </div>
                   </div>
-                  <div className="Price">
+                  <div className="tags">{chainLabel(data.collection?.chainId)}</div>
+                  {/* <div className="Price">
                     <span>Price</span>
                     <h5>{Price} {PriceType}</h5>
-                  </div>
+                  </div> */}
                 </div>
                 {/* <div className="card-bottom">
                   <Link

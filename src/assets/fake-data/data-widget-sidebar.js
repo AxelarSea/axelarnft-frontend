@@ -62,27 +62,27 @@ const widgetSidebarData = [
             },
         ]
     },
-    {
-        id: 4,
-        title: "Collections",
-        content : [
-            {
-                field: 'MetaWarden'
-            },
-            {
-                field: 'CloneX'
-            },
-            {
-                field: 'Bored ape yacht club'
-            },
-            {
-                field: 'Galactic Punk'
-            },
-            {
-                field: 'Aavegotchi'
-            },
-        ]
-    },
+    // {
+    //     id: 4,
+    //     title: "Collections",
+    //     content : [
+    //         {
+    //             field: 'MetaWarden'
+    //         },
+    //         {
+    //             field: 'CloneX'
+    //         },
+    //         {
+    //             field: 'Bored ape yacht club'
+    //         },
+    //         {
+    //             field: 'Galactic Punk'
+    //         },
+    //         {
+    //             field: 'Aavegotchi'
+    //         },
+    //     ]
+    // },
 ]
 
 export default widgetSidebarData;

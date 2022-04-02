@@ -32,7 +32,7 @@ import imga10 from '../../../assets/images/avatar/avt-10.jpg'
 import imgTodayPick from '../../../assets/images/box-item/img-today-pick-demo.svg'
 import imgAuthor from '../../../assets/images/avatar/img-today-pick-author.svg'
 import { crossChainTokenLabel, fetchAllListedItems } from '../../../utils/api';
-import { maskAddress } from '../../../utils/address';
+import { chainLabel, maskAddress } from '../../../utils/address';
 
 const TodayPicks = () => {
     const [data, setData] = useState(
@@ -227,8 +227,8 @@ const TodayPicks = () => {
         setData(listed.map(x => ({
             img: x.metadata.image,
             title: x.collection.name + " #" + x.tokenId,
-            tags: "bsc",
-            imgAuthor: x.owner,
+            tags: chainLabel(x.collection.chainId),
+            imgAuthor: '/static/media/satoshi.292d298576777494a217.png',
             nameAuthor: x.owner,
             price: x.listPrice + " " + crossChainTokenLabel(x.collection.chainId, x.listTokenAddress),
             wishlist: "100",
@@ -441,13 +441,13 @@ const TodayPicks = () => {
                                             <div className="card-title">
                                                 <h5>{item.title}</h5>
                                             </div>
-                                            <div className="meta-info style">
+                                            <div className="meta-info style mt-2">
                                                 <div className="author">
                                                     <div className="avatar">
                                                         <img src={item.imgAuthor} alt="Axies" />
                                                     </div>
                                                     <div className="info">
-                                                        <span>Creator</span>
+                                                        <span>Owned By</span>
                                                         <h6> <Link to="/author-02">{maskAddress(item.nameAuthor)}</Link> </h6>
                                                     </div>
                                                 </div>

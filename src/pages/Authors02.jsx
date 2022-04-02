@@ -35,8 +35,10 @@ import HeaderStyle2 from "../components/header/HeaderStyle2";
 
 import Explore from "../components/layouts/explore-04/Explore";
 import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
-import { crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
-import { maskAddress } from "../utils/address";
+import { cancelListing, crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
+import { chainLabel, maskAddress } from "../utils/address";
+import web3 from "../hooks/web3";
+import { useConnectedWallet } from "@terra-money/wallet-provider";
 
 const Authors02 = () => {
   const [menuTab] = useState([
@@ -514,10 +516,10 @@ const Authors02 = () => {
       id: x.collection.address + "-" + x.tokenId,
       img: x.metadata.image,
       title: x.collection.name + " #" + x.tokenId,
-      tags: "bsc",
+      tags: chainLabel(x.collection.chainId),
       imgAuthor: x.owner,
       nameAuthor: x.owner,
-      price: x.listPrice + " " + crossChainTokenLabel(x.collection.chainId, x.listTokenAddress),
+      price: (x.listPrice || "-") + " " + crossChainTokenLabel(x.collection.chainId, x.listTokenAddress),
       priceChange: "$12.246",
       wishlist: "100",
       imgCollection: x.metadata.image,
@@ -525,6 +527,7 @@ const Authors02 = () => {
       tokenId: x.tokenId,
       collectionAddress: x.collection.contractAddress,
       chainId: x.collection.chainId,
+      listAmount: x.listAmount,
     }));
   }
 
@@ -547,6 +550,27 @@ const Authors02 = () => {
   useEffect(() => {
     refreshData();
   }, []);
+
+  const [account, setAccount] = useState("");
+  const terraAccount = useConnectedWallet();
+
+  async function fetchMetamaskAccount() {
+    setAccount((await web3.eth.getAccounts())[0] ?? "");
+  }
+
+  window.ethereum.on("accountsChanged", setAccount);
+
+  useEffect(fetchMetamaskAccount, []);
+
+  async function cancelListingAction(data) {
+    await cancelListing(data.chainId, data.collectionAddress, data.tokenId);
+    await refreshData();
+    window.alert("Cancel Listing Success");
+  }
+
+  async function sellAction(data) {
+    window.location.href = "/list-item?chainId=" + data.chainId + "&collection=" + data.collectionAddress + "&tokenId=" + data.tokenId
+  }
 
   return (
     <div className="authors-2">
@@ -583,17 +607,30 @@ const Authors02 = () => {
                 <p className="content">
                 A persons who developed bitcoin, authored the bitcoin white paper, and created and deployed bitcoin's original reference implementation.
                 </p>
-                <form>
-                  <input
-                    type="text"
-                    className="inputcopy"
-                    defaultValue="DdzFFzCqrhshMSxABCdfrge"
-                    readOnly
-                  />
-                  <button type="button" className="btn-copycode">
-                    <i className="icon-fl-file-1"></i>
-                  </button>
-                </form>
+                <div className="d-flex">
+                  <form className="mr-3">
+                    <input
+                      type="text"
+                      className="inputcopy"
+                      value={maskAddress(account) || "Not Connected"}
+                      readOnly
+                    />
+                    <button type="button" className="btn-copycode">
+                      <i className="icon-fl-file-1"></i>
+                    </button>
+                  </form>
+                  <form>
+                    <input
+                      type="text"
+                      className="inputcopy"
+                      value={maskAddress(terraAccount?.walletAddress) || "Not Connected"}
+                      readOnly
+                    />
+                    <button type="button" className="btn-copycode">
+                      <i className="icon-fl-file-1"></i>
+                    </button>
+                  </form>
+                </div>
               </div>
               {/* <div className="widget-social style-3">
                 <ul>
@@ -646,7 +683,7 @@ const Authors02 = () => {
                               .map((data, index) => (
                                 <Link
                                   to={"/item-details-01?chainId=" + data.chainId + "&collection=" + data.collectionAddress + "&tokenId=" + data.tokenId}
-                                  className="col-xl-3 col-lg-4 col-md-6 col-12"
+                                  className="col-xl-4 col-lg-4 col-md-6 col-12"
                                   key={index}
                                 >
                                   <div className="sc-card-product explode ">
@@ -654,10 +691,13 @@ const Authors02 = () => {
                                       <img src={data.img} alt="Axies" />
                                       <div className="button-place-bid ">
                                         <button
-                                          onClick={() => setModalShow(true)}
+                                          onClick={(e) => {
+                                            e.preventDefault();
+                                            if (data.listAmount > 0) cancelListingAction(data); else sellAction(data);
+                                          }}
                                           className="sc-button style-place-bid style bag fl-button pri-3"
                                         >
-                                          <span>Buy Now</span>
+                                          <span>{data.listAmount > 0 ? "Cancel Listing" : "Sell"}</span>
                                         </button>
                                       </div>
                                       {/* <Link to="/login" className="wishlist-button heart"><span className="number-like"> {data.wishlist}</span></Link> */}
@@ -681,8 +721,8 @@ const Authors02 = () => {
                                       <div className="Price">
                                         <span>Price</span>
                                         <div className="Price-details">
-                                          <h5>{data.Price}</h5>
-                                          <span>= {data.PriceChange}</span>
+                                          <h5>{data.price}</h5>
+                                          {/* <span>= {data.PriceChange}</span> */}
                                         </div>
                                       </div>
                                       {/* <Link to="/activity-01" className="view-history reload">View History</Link> */}

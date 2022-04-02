@@ -17,14 +17,15 @@ import img6 from "../assets/images/avatar/satoshi.png";
 import img7 from "../assets/images/avatar/avt-2.jpg";
 import imgdetail1 from "../assets/images/box-item/images-item-details.jpg";
 import CardModal from "../components/layouts/CardModal";
-import { cancelListing, fetchItem } from "../utils/api";
+import { cancelListing, crossChainTokenLabel, fetchItem } from "../utils/api";
 import { maskAddress } from "../utils/address";
-import { useNavigate } from 'react-router-dom'
+import web3 from "../hooks/web3";
 
 const ItemDetails01 = () => {
   const navigate = useNavigate()
   const [data, setData] = useState({});
   const [searchParams, setSearchParams] = useSearchParams();
+  const [account, setAccount] = useState("");
 
   const [modalShow, setModalShow] = useState(false);
 
@@ -91,6 +92,18 @@ const ItemDetails01 = () => {
     refreshData();
   }, []);
 
+  console.log(data)
+
+  async function fetchMetamaskAccount() {
+    setAccount((await web3.eth.getAccounts())[0] ?? "");
+  }
+
+  window.ethereum.on("accountsChanged", setAccount);
+
+  useEffect(fetchMetamaskAccount, []);
+
+  // console.log(account)
+
 
   return (
     <div className="item-details">
@@ -124,24 +137,28 @@ const ItemDetails01 = () => {
           <div className="row">
             <div className="col-xl-6 col-md-12">
               <div className="content-left">
-                <button onClick ={() => navigate(-1)}>Back</button>
+                <Link to="/">
+                  <button>Back</button>
+                </Link>
               </div>
             </div>
             <div className="col-xl-6 col-md-12">
               <div className="content-right">
-                <Link
-                  to={
-                    "/list-item?chainId=" +
-                    chainId +
-                    "&collection=" +
-                    collectionAddress +
-                    "&tokenId=" +
-                    tokenId
-                  }
-                >
-                  <button style={{ float: "right" }}>Sell</button> 
-                  
-                </Link>
+                {data.listAmount == 0 && data.owner.toLowerCase() == account.toLowerCase() &&
+                  <Link
+                    to={
+                      "/list-item?chainId=" +
+                      chainId +
+                      "&collection=" +
+                      collectionAddress +
+                      "&tokenId=" +
+                      tokenId
+                    }
+                  >
+                    <button style={{ float: "right" }}>Sell</button> 
+                    
+                  </Link>
+                }
               </div>
             </div>
           </div>
@@ -168,7 +185,7 @@ const ItemDetails01 = () => {
                     <div className="left">
                       <span className="viewed eye">225</span>
                       <span
-                        to="/login"
+                        
                         className="liked heart wishlist-button mg-l-8"
                       >
                         <span className="number-like">100</span>
@@ -217,7 +234,7 @@ const ItemDetails01 = () => {
                       <span className="heading">Price</span>
                       <div className="Price">
                         <div className="Price-box">
-                          <h5>{data.listPrice}</h5>
+                          <h5>{data.listPrice || "-"} {crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId)}</h5>
                           {/* <span>= $12.246</span> */}
                         </div>
                       </div>
@@ -230,19 +247,50 @@ const ItemDetails01 = () => {
                     </div>
                   </div>
                   <div class="d-flex align-items-center justify-content-center">
-                  <button
-                    onClick={() => setModalShow(true)}
-                    className="sc-button loadmore fl-button pri-3 "
-                  >
-                    <span>Buy Now</span>
-                  </button>
-                  <button
-                  style={{marginLeft:'2rem'}}
-                    onClick={() => setModalShow(true)}
-                    className="sc-button loadmore fl-button pri-3 "
-                  >
-                    <span>Cancle Listing</span>
-                  </button>
+                  {data.listAmount > 0 && data.owner.toLowerCase() != account.toLowerCase() &&
+                    <button
+                      onClick={() => setModalShow(true)}
+                      className="sc-button loadmore fl-button pri-3 "
+                    >
+                      <span>Buy Now</span>
+                    </button>
+                  }
+                  {data.listAmount > 0 && data.owner.toLowerCase() == account.toLowerCase() &&
+                    <button
+                      style={{marginLeft:'2rem'}}
+                      onClick={() => cancelListingAction()}
+                      className="sc-button loadmore fl-button pri-3 "
+                    >
+                      <span>Cancel Listing</span>
+                    </button>
+                  }
+                  {data.listAmount == 0 && data.owner.toLowerCase() == account.toLowerCase() &&
+                    <Link
+                      to={
+                        "/list-item?chainId=" +
+                        chainId +
+                        "&collection=" +
+                        collectionAddress +
+                        "&tokenId=" +
+                        tokenId
+                      }
+                    >
+                      <button
+                        style={{marginLeft:'2rem'}}
+                        className="sc-button loadmore fl-button pri-3 "
+                      >
+                        <span>Sell</span>
+                      </button>
+                    </Link>
+                  }
+                  {data.listAmount == 0 && data.owner.toLowerCase() != account.toLowerCase() &&
+                    <button
+                      style={{marginLeft:'2rem', opacity: 0.6, pointerEvents: "none"}}
+                      className="sc-button loadmore fl-button pri-3 "
+                    >
+                      <span>Not for sale</span>
+                    </button>
+                  }
                   </div>
                   <div className="flat-tabs themesflat-tabs">
                     <Tabs>

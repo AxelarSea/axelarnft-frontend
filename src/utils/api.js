@@ -188,6 +188,7 @@ export async function refreshMetadata(chainId, collectionAddress, tokenId) {
 }
 
 export async function cancelListing(chainId, collectionAddress, tokenId) {
+  await switchChain(chainId);
   let account = (await web3.eth.getAccounts())[0];
   let response = await new Marketplace(chainId, account).cancelListing(collectionAddress, tokenId);
   await refreshMetadata(chainId, collectionAddress, tokenId);
