@@ -35,7 +35,7 @@ import HeaderStyle2 from "../components/header/HeaderStyle2";
 
 import Explore from "../components/layouts/explore-04/Explore";
 import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
-import { crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
+import { cancelListing, crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
 import { chainLabel, maskAddress } from "../utils/address";
 import web3 from "../hooks/web3";
 import { useConnectedWallet } from "@terra-money/wallet-provider";
@@ -527,6 +527,7 @@ const Authors02 = () => {
       tokenId: x.tokenId,
       collectionAddress: x.collection.contractAddress,
       chainId: x.collection.chainId,
+      listAmount: x.listAmount,
     }));
   }
 
@@ -560,6 +561,16 @@ const Authors02 = () => {
   window.ethereum.on("accountsChanged", setAccount);
 
   useEffect(fetchMetamaskAccount, []);
+
+  async function cancelListingAction(data) {
+    await cancelListing(data.chainId, data.collectionAddress, data.tokenId);
+    await refreshData();
+    window.alert("Cancel Listing Success");
+  }
+
+  async function sellAction(data) {
+    window.location.href = "/list-item?chainId=" + data.chainId + "&collection=" + data.collectionAddress + "&tokenId=" + data.tokenId
+  }
 
   return (
     <div className="authors-2">
@@ -680,10 +691,13 @@ const Authors02 = () => {
                                       <img src={data.img} alt="Axies" />
                                       <div className="button-place-bid ">
                                         <button
-                                          onClick={() => setModalShow(true)}
+                                          onClick={(e) => {
+                                            e.preventDefault();
+                                            if (data.listAmount > 0) cancelListingAction(data); else sellAction(data);
+                                          }}
                                           className="sc-button style-place-bid style bag fl-button pri-3"
                                         >
-                                          <span>Buy Now</span>
+                                          <span>{data.listAmount > 0 ? "Cancel Listing" : "Sell"}</span>
                                         </button>
                                       </div>
                                       {/* <Link to="/login" className="wishlist-button heart"><span className="number-like"> {data.wishlist}</span></Link> */}
