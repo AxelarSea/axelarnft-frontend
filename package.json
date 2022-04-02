@@ -25,6 +25,7 @@
     "react-tabs": "^3.2.3",
     "react-transition-group": "^4.4.2",
     "sass": "^1.45.1",
+    "sweetalert2": "^11.4.8",
     "swiper": "^7.4.1",
     "web-vitals": "^2.1.2",
     "web3": "^1.7.1"

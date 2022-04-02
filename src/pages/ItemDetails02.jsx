@@ -150,7 +150,7 @@ const ItemDetails02 = () => {
                                                 <div className="price">
                                                     <div className="price-box">
                                                         <h5> 4.89 ETH</h5>
-                                                        <span>= $12.246</span>
+                                                        {/* <span>= $12.246</span> */}
                                                     </div>
                                                 </div>
                                             </div>

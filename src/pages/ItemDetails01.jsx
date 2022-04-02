@@ -19,8 +19,10 @@ import imgdetail1 from "../assets/images/box-item/images-item-details.jpg";
 import CardModal from "../components/layouts/CardModal";
 import { cancelListing, fetchItem } from "../utils/api";
 import { maskAddress } from "../utils/address";
+import { useNavigate } from 'react-router-dom'
 
 const ItemDetails01 = () => {
+  const navigate = useNavigate()
   const [data, setData] = useState({});
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -122,7 +124,7 @@ const ItemDetails01 = () => {
           <div className="row">
             <div className="col-xl-6 col-md-12">
               <div className="content-left">
-                <button>Back</button>
+                <button onClick ={() => navigate(-1)}>Back</button>
               </div>
             </div>
             <div className="col-xl-6 col-md-12">
@@ -361,6 +363,7 @@ const ItemDetails01 = () => {
       <Footer />
 
       <CardModal 
+        setBuyNowModal={setModalShow}
         show={modalShow}
         onHide={() => setModalShow(false)}
         name={data.collection?.name + ' #' + data.tokenId}

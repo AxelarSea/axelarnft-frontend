@@ -5,6 +5,7 @@ import { Modal } from "react-bootstrap";
 import AlunaLogo from "../../assets/images/icon/Luna.png";
 import AustLogo from "../../assets/images/icon/UST.png";
 import { buyERC721, crossChainTokenLabel, crossChainTokenSymbol } from "../../utils/api";
+import ProcessModal from './ProcessModal'
 
 import { useConnectedWallet, useLCDClient } from "@terra-money/wallet-provider";
 import web3 from "../../hooks/web3";
@@ -12,6 +13,8 @@ import { maskAddress } from "../../utils/address";
 
 const CardModal = (props) => {
   const lcd = useLCDClient();
+
+  const [modalShow , setModalShow] = useState(false);
 
   const [youPayPic, setYouPayPic] = useState(AustLogo);
 
@@ -38,8 +41,9 @@ const CardModal = (props) => {
       window.alert(`Please switch to Bombay testnet on your terra station`);
       return;
     }
-
     try {
+      props.setBuyNowModal(false)
+      setModalShow(true)
       setProcessing(true);
       await buyERC721(connectedWallet, props.chainId, props.collectionAddress, props.tokenId, props.listTokenAddress, props.listPrice);
       window.alert("Buy success");
@@ -72,7 +76,8 @@ const CardModal = (props) => {
   }, [props.chainId, props.listTokenAddress, connectedWallet])
 
   return (
-    <Modal show={props.show} onHide={props.onHide}>
+    <div>
+     <Modal show={props.show} onHide={props.onHide}>
       <Modal.Header closeButton></Modal.Header>
 
       <div className="modal-body space-y-20 pd-40">
@@ -85,7 +90,7 @@ const CardModal = (props) => {
           <div className="d-flex align-items-center">
             <p>On</p>
             <div id="buy" className="dropdown">
-              <Link to="#" className="btn-selector nolink">
+              <Link to="#" className="btn-selectornolink">
                 Terra
               </Link>
               {/* <ul >
@@ -237,7 +242,14 @@ const CardModal = (props) => {
           Confirm
         </button>
       </div>
+      
     </Modal>
+        <ProcessModal 
+        onShow={modalShow}
+        onHide={() => setModalShow(false)}
+        />
+    </div>
+    
   );
 };
 

@@ -8,6 +8,8 @@ import "react-tabs/style/react-tabs.css";
 import img1 from "../assets/images/box-item/image-box-6.jpg";
 import avt from "../assets/images/avatar/avt-9.jpg";
 import { Dropdown } from "react-bootstrap";
+import Swal from 'sweetalert2'
+
 
 import imgfilter1 from "../assets/images/icon/menu.png";
 import imgfilter2 from "../assets/images/icon/rainbow.png";
@@ -59,7 +61,12 @@ const CreateItem = () => {
 
       await refreshMetadata(chainId, contract.address, totalSupply)
   
-      window.alert('Mint success');
+      // window.alert('Mint success');
+      Swal.fire(
+        'Mint Success!',
+        'You clicked the button!',
+        'success'
+      )
     } finally {
       setProcessing(false);
     }
@@ -273,9 +280,12 @@ const CreateItem = () => {
                           </div>
                         </div>
 
-                        <button className="" style={{ marginTop: "90px" }} onClick={mint} disabled={processing}>
+                        <button className="" id="liveToastBtn" style={{ marginTop: "90px" }} onClick={mint} disabled={processing}>
                           Submit
                         </button>
+                        
+                          
+                           
 
                         {/* <Dropdown>
                                     <Dropdown.Toggle id="dropdown-basic">
