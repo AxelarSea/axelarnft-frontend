@@ -101,7 +101,7 @@ const ItemDetails01 = () => {
 
   useEffect(fetchMetamaskAccount, []);
 
-  console.log(account)
+  // console.log(account)
 
 
   return (
@@ -184,7 +184,7 @@ const ItemDetails01 = () => {
                     <div className="left">
                       <span className="viewed eye">225</span>
                       <span
-                        to="/login"
+                        
                         className="liked heart wishlist-button mg-l-8"
                       >
                         <span className="number-like">100</span>

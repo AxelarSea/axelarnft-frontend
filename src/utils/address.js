@@ -1,3 +1,12 @@
+export function chainLabel(chainId) {
+  switch (parseInt(chainId)) {
+    case 3: return 'ETH';
+    case 43113: return 'AVAX';
+    case 4002: return 'FTM';
+  }
+  return "UNKNOWN";
+}
+
 export function maskAddress(address) {
   if (!address) return address;
   if (address.startsWith('0x')) {

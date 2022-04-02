@@ -8,6 +8,7 @@ import widgetSidebarData from '../assets/fake-data/data-widget-sidebar'
 import HeaderStyle2 from '../components/header/HeaderStyle2';
 import { crossChainTokenLabel, fetchAllListedItems } from '../utils/api';
 import ExploreItem from '../components/layouts/explore-04/ExploreItem';
+import { chainLabel } from '../utils/address';
     
 const Explore04 = () => {
     const [items, setItems] = useState([]);
@@ -17,7 +18,7 @@ const Explore04 = () => {
           id: x.collection.address + "-" + x.tokenId,
           img: x.metadata.image,
           title: x.collection.name + " #" + x.tokenId,
-          tags: "bsc",
+          tags: chainLabel(x.collection.chainId),
           imgAuthor: "/static/media/satoshi.292d298576777494a217.png",
           nameAuthor: x.owner,
           price: x.listPrice + " " + crossChainTokenLabel(x.collection.chainId, x.listTokenAddress),
