@@ -41,6 +41,8 @@ import web3 from "../hooks/web3";
 import { useConnectedWallet } from "@terra-money/wallet-provider";
 
 const Authors02 = () => {
+  const [items, setItems] = useState([]);
+
   const [menuTab] = useState([
     {
       class: "active",
@@ -512,6 +514,7 @@ const Authors02 = () => {
   const [modalShow, setModalShow] = useState(false);
 
   function formatItems(items) {
+    console.log(items);
     return items.map((x) => ({
       id: x.collection.address + "-" + x.tokenId,
       img: x.metadata.image,
@@ -535,17 +538,21 @@ const Authors02 = () => {
     console.log("Refresh Start");
     let items = await fetchAllMyItems();
     console.log(items);
+    setItems(formatItems(items));
+  }
+
+  useEffect(() => {
     setPanelTab([
       {
         id: 1,
-        dataContent: formatItems(items),
+        dataContent: items,
       },
       {
         id: 2,
-        dataContent: formatItems(items.filter((x) => x.listAmount)),
+        dataContent: items.filter((x) => x.listAmount),
       },
     ]);
-  }
+  }, [items]);
 
   const [account, setAccount] = useState("");
   const terraAccount = useConnectedWallet();
@@ -671,7 +678,7 @@ const Authors02 = () => {
 
               <div className="content-tab">
                 <div className="content-inner">
-                  <Explore data={widgetSidebarData}>
+                  <Explore data={widgetSidebarData} setItems={setItems} items={items} formatItems={formatItems}>
                     <div className="col-xl-9 col-lg-9 col-md-12">
                       {panelTab.map((item, index) => (
                         <TabPanel

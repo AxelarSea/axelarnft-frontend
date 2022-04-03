@@ -7,9 +7,11 @@ import { fetchAllListedItems } from '../../../utils/api';
 const Explore = props => {
     const data = props.data;
     const items = props.items;
-    const defaultItems = [...items]
+    const defaultItems = [...(items || [])]
     const setItems = props.setItems;
     const formatItems = props.formatItems
+
+    const [baselineItems, setBaselineItems] = useState([]);
 
     const [check,setCheck] = useState({
         eth:false,
@@ -18,21 +20,18 @@ const Explore = props => {
     })
 
     const setData = async () => {
-        if(check.eth){
-            const filterItems = defaultItems.filter(itemm => itemm.chainId === 3)
-            setItems(filterItems)
-        }
-        if(check.avax){
-            const filterItems = defaultItems.filter(itemm => itemm.chainId === 43113)
-            setItems(filterItems)
-        }
-        if(check.ftm){
-            const filterItems = defaultItems.filter(itemm => itemm.chainId === 4002)
-            setItems(filterItems)
-        }
-        if (!check.eth && !check.avax && !check.ftm){
+        let chains = [];
+
+        if (check.eth) chains.push(3);
+        if (check.avax) chains.push(43113);
+        if (check.ftm) chains.push(4002);
+
+        if (chains.length == 0){
             const items =  await fetchAllListedItems()
             setItems(formatItems(items))
+            setBaselineItems(formatItems(items))
+        } else {
+            setItems(baselineItems.filter(itemm => chains.indexOf(itemm.chainId) != -1))
         }
     }
 
