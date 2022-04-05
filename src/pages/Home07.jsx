@@ -8,18 +8,21 @@ import SliderStyle4 from '../components/slider/SliderStyle4';
 import TodayPicks from '../components/layouts/home-7/TodayPicks';
 import Create from '../components/layouts/home-7/Create';
 import PopularCollection from '../components/layouts/home-7/PopularCollection';
+import bg from '../assets/images/backgroup-secsion/bghome.jpg'
 
 const Home07 = () => {
     return (
         <div className='home-7'>
             <HeaderStyle2 />
                 <SliderStyle4 />
+                <div className='banding-bg' style={{backgroundImage:`url(${bg})`,backgroundRepeat:'no-repeat' , backgroundSize:'cover' }} >
                     <PopularCollection />
                     <TopSeller />
                     {/* <LiveAuction /> */}
                     {/* <Category /> */}
                     <TodayPicks />
                     <Create />
+                </div>    
             <Footer />
         </div>
     );
