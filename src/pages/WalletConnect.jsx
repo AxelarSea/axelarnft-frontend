@@ -231,13 +231,13 @@ const WalletConnect = () => {
       onClick: connectTerra,
       address: wallets[0]?.terraAddress,
     },
-    // {
-    //   img: img2,
-    //   title: "Keplr",
-    //   description: "Terra Bombay Testnet",
-    //   onClick: connectKeplr,
-    //   address: keplrAddress,
-    // },
+    {
+      img: img2,
+      title: "Keplr",
+      description: "Terra Bombay Testnet",
+      onClick: connectKeplr,
+      address: keplrAddress,
+    },
     // {
     //     img: img3,
     //     title: 'Fortmatic',

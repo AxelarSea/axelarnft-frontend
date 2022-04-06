@@ -34,6 +34,17 @@ const networkData = {
     },
     blockExplorerUrls: ['https://testnet.ftmscan.com'],
   },
+  1287: {
+    chainId: '0x507',
+    chainName: 'Moonbase Alpha Testnet',
+    rpcUrls: ['https://rpc.testnet.moonbeam.network'],
+    nativeCurrency: {
+      name: 'GLMR Development',
+      symbol: 'DEV',
+      decimals: 18,
+    },
+    blockExplorerUrls: ['https://moonbase.moonscan.io'],
+  },
 };
 
 export default async function switchChain(chainId) {
