@@ -234,7 +234,7 @@ const WalletConnect = () => {
     {
       img: img2,
       title: "Keplr",
-      description: "Terra Bombay Testnet",
+      description: "Terra Testnet",
       onClick: connectKeplr,
       address: keplrAddress,
     },
