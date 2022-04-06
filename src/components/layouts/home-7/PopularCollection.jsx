@@ -91,7 +91,7 @@ const PopularCollection = () => {
         setVisible((prevValue) => prevValue + 3);
     }
     return (
-        <section className="tf-section live-auctions style4 home4 live-auctions-style7">
+        <section className="tf-section live-auctions style4 home4 live-auctions-style7" >
             <div className="themesflat-container">
                 <div className='d-flex flex-column align-items-center justify-content-center' style={{marginBottom:'6rem'}}>
                 <img src={WeSupport} style={{marginBottom:'4rem'}} alt="" width="137px" height="33px" />

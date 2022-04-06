@@ -1096,9 +1096,17 @@ label.error { color: red; }
 .pd-15{
     padding: 0 15px;
 }
-.bg-style{
+/* .bg-style{
     background-color: var(--primary-color5) !important;
+} */
+
+.banding-bg{
+    background-image:url('../images/backgroup-secsion/bghome.jpg') no-repeat center center fixed !important;
+    background-size: cover;
+
+
 }
+
 .bg-style2{
     background-color: #fff!important;
 }
@@ -1324,7 +1332,7 @@ a:focus {
     --primary-color5: #F8F8F8;
     --primary-color6: #14141F;
     --primary-color7: #F8F8F8;
-    --bg-section : #fff;
+    /* --bg-section : #fff; */
     --bg-section2 : #f8f8f8;
     --primary-color8: #7A798A;
     --primary-color9: #7A798A;
@@ -1337,7 +1345,7 @@ a:focus {
     --primary-color5: #030303;
     --primary-color6: #ffffff;
     --primary-color7: #343444;
-    --bg-section: #14141F;
+    /* --bg-section: #14141F; */
     --bg-section2 : #14141F;
     --primary-color8: #fff;
     --primary-color9: #8A8AA0;

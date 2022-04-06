@@ -6592,21 +6592,21 @@ button.accordion-button {
 
 /* Home 7 Update
 -------------------------------------------------------------- */
-.home-7 .bg-style{
+/* .home-7 .bg-style{
     background: #fff !important;
-}
+} */
 
-.is_dark .home-7 .bg-style{
+/* .is_dark .home-7 .bg-style{
     background: #101017 !important;
-}
+} */
 
-.home-7 .tf-section {
+/* .home-7 .tf-section {
     background: #f8f8f8;
-}
+} */
 
-.is_dark .home-7 .tf-section {
+/* .is_dark .home-7 .tf-section {
     background: #14141F;
-}
+} */
 
 .flat-title-page.style3{
     padding: 105px 0 0;
