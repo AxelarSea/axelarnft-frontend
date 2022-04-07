@@ -21,7 +21,7 @@ const networkData = {
       symbol: 'MATIC',
       decimals: 18,
     },
-    blockExplorerUrls: ['https://testnet.explorer.avax.network'],
+    blockExplorerUrls: ['https://mumbai.polygonscan.com/'],
   },
   43113: {
     chainId: '0xA869',
