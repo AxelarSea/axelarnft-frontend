@@ -8,7 +8,7 @@ import wait from "./wait";
 import {
   GetDepositAddressDto,
   GetDepositAddressPayload,
-  TransferAssetBridge,
+  AxelarAssetTransfer,
 } from "@axelar-network/axelarjs-sdk";
 
 import {
@@ -21,7 +21,7 @@ import ERC20 from "../contracts/ERC20";
 import { generateBuyERC721Signature } from "../contracts/generateSignature";
 
 const environment = "testnet";
-const axelarApi = new TransferAssetBridge(environment);
+const axelarApi = new AxelarAssetTransfer({ environment });
 
 export const CROSS_CHAIN_TOKEN_ADDRESS = {
   "uluna": {
@@ -79,13 +79,16 @@ export const getDepositAddress = async (chainId, asset, destinationAddress) => {
   const payload = {
     fromChain: "terra",
     toChain: chainName,
-    asset: asset,
     destinationAddress: destinationAddress,
+    asset: asset,
   };
-  const requestPayload = {
-    payload,
-  };
-  const linkAddress = await axelarApi.getDepositAddress(requestPayload);
+
+  const linkAddress = await axelarApi.getDepositAddress(
+    payload.fromChain,
+    payload.toChain,
+    payload.destinationAddress,
+    payload.asset,
+  );
   return linkAddress;
 };
 
