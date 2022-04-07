@@ -28,7 +28,7 @@
     "swiper": "^7.4.1",
     "web-vitals": "^2.1.2",
     "web3": "^1.7.1",
-	"@axelar-network/axelarjs-sdk": "https://github.com/axelarnetwork/axelarjs-sdk#v0.5.0-alpha.8"
+	  "@axelar-network/axelarjs-sdk": "@axelar-network/axelarjs-sdk@alpha"
   },
   "scripts": {
     "start": "react-app-rewired start",
