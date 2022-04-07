@@ -66,7 +66,7 @@ const CardModal = (props) => {
 
   useEffect(() => {
     const priceType = crossChainTokenLabel(props.chainId, props.listTokenAddress)
-    setPriceType(priceType);
+    setPriceType("a" + priceType);
     setYouPayType(priceType);
     
     setPricePic(priceType == 'UST' ? AustLogo : AlunaLogo);

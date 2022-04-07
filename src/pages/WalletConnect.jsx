@@ -24,6 +24,7 @@ const WalletConnect = () => {
   const [userBalance, setUserBalance] = useState(null);
   const [connButtonText, setConnButtonText] = useState("Connect Wallet");
   const [keplrAddress, setKeplrAddress] = useState("");
+  const [terraWallet, setTerraWallet] = useState(window.localStorage.getItem("TERRA_WALLET") || "TERRA_STATION")
 
   const {
     status,
@@ -93,6 +94,8 @@ const WalletConnect = () => {
 
   function connectTerra() {
     connect("EXTENSION");
+    window.localStorage.setItem("TERRA_WALLET", "TERRA_STATION");
+    setTerraWallet("TERRA_STATION")
   }
 
   async function refreshKeplr() {
@@ -100,6 +103,8 @@ const WalletConnect = () => {
     const offlineSigner = window.keplr.getOfflineSigner(chainId);
     const accounts = await offlineSigner.getAccounts();
     setKeplrAddress(accounts[0]?.address || "");
+    window.localStorage.setItem("TERRA_WALLET", "KEPLR");
+    setTerraWallet("KEPLR")
   }
 
   async function connectKeplr() {
@@ -229,14 +234,14 @@ const WalletConnect = () => {
       title: "Terra Station",
       description: "Terra Testnet",
       onClick: connectTerra,
-      address: wallets[0]?.terraAddress,
+      address: terraWallet == "TERRA_STATION" ? wallets[0]?.terraAddress : "",
     },
     {
       img: img2,
       title: "Keplr",
       description: "Terra Testnet",
       onClick: connectKeplr,
-      address: keplrAddress,
+      address: terraWallet == "KEPLR" ? keplrAddress : "",
     },
     // {
     //     img: img3,
@@ -272,7 +277,7 @@ const WalletConnect = () => {
 
   useEffect(() => {
     connectWalletHandler();
-    // refreshKeplr();
+    refreshKeplr();
   }, [])
 
   return (

@@ -12,6 +12,17 @@ const networkData = {
     },
     blockExplorerUrls: ['https://ropsten.etherscan.io'],
   },
+  80001: {
+    chainId: '0x13881',
+    chainName: 'Polygon Mumbai Testnet',
+    rpcUrls: ['https://rpc-mumbai.maticvigil.com'],
+    nativeCurrency: {
+      name: 'Matic',
+      symbol: 'MATIC',
+      decimals: 18,
+    },
+    blockExplorerUrls: ['https://testnet.explorer.avax.network'],
+  },
   43113: {
     chainId: '0xA869',
     chainName: 'Avalanche FUJI Testnet',

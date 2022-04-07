@@ -1,8 +1,10 @@
 export function chainLabel(chainId) {
   switch (parseInt(chainId)) {
     case 3: return 'ETH';
+    case 80001: return 'POLYGON';
     case 43113: return 'AVAX';
     case 4002: return 'FTM';
+    case 1287: return 'MOONBEAM';
   }
   return "UNKNOWN";
 }
