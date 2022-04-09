@@ -14,7 +14,7 @@ const Create = () => {
     const data = [
         {
             title: "Interoperable NFTs Browsing",
-            description: "Simply enter a keyword or a collection's name. AxelarSea allows you to search for NFTs from multiple chains that match a keyword. Too many? Too few? You can filter the shown NFTs based on their chains.",
+            description: "Simply enter a keyword or a collection's name. AxelarNFT allows you to search for NFTs from multiple chains that match a keyword. Too many? Too few? You can filter the shown NFTs based on their chains.",
             icon : icon3,
             colorbg : "icon-color4"
         },
@@ -26,7 +26,7 @@ const Create = () => {
         },
         {
             title: "Purchase From Any Chain",
-            description: "Buyers can purchase an NFT with any token from any chain. They are no longer required to manually move their asset across chains. Simply click buy, and AxelarSea will take care of the rest!",
+            description: "Buyers can purchase an NFT with any token from any chain. They are no longer required to manually move their asset across chains. Simply click buy, and AxelarNFT will take care of the rest!",
             icon : icon1,
             colorbg : "icon-color4"
         },
@@ -46,7 +46,7 @@ const Create = () => {
                         <h3 className="heading-fill mg-bt-16">One-stop Interoperable NFT Marketplace</h3>
                         <h2 className="tf-title text-left pb-15">Discover & Sell NFTs From Any Chain</h2>                    
                         <p className="content">Interoperability has been a fundamental issue in the blockchain ecosystem since its inception. This includes the NFT market where buyers and sellers are 
-                        limited by the difficulty of moving assets across chains. AxelarSea's goal is to provide solutions that facilitates buyers in making a purchase using tokens from any chain and sellers in receiving the payment on any chain and tracking their sales across multiple chains.
+                        limited by the difficulty of moving assets across chains. AxelarNFT's goal is to provide solutions that facilitates buyers in making a purchase using tokens from any chain and sellers in receiving the payment on any chain and tracking their sales across multiple chains.
                         </p>     
                     </div>
                 </div>                          

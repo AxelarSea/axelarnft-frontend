@@ -239,7 +239,7 @@ const CreateItem = () => {
                         disabled
                           type="text"
                           placeholder=""
-                          value="AxelarSea Collection."
+                          value="AxelarNFT Collection."
                           style={{cursor:'default'}}
                         />
 

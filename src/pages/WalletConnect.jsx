@@ -314,7 +314,7 @@ const WalletConnect = () => {
                 Connect Your Wallet
               </h2>
               <h5 className="sub-title ct style-1 pad-400">
-              Connect with one or more of our available wallet providers below in order to unlock the features of AxelarSea.
+              Connect with one or more of our available wallet providers below in order to unlock the features of AxelarNFT.
               </h5>
             </div>
             <div className="col-md-12">
