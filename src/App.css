@@ -76,3 +76,9 @@ button:disabled {
 .inputcopy::before{
   content: url('../src/assets/images/icon/ethwallet.svg');
 }
+
+.wrap-heading2 {
+  background-image: url('../public/assets/images/backgroup-secsion/bgsupported.png'); 
+  background-size: auto;
+  background-repeat: no-repeat;
+}

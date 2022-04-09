@@ -39,8 +39,8 @@ const Create = () => {
         },
     ]
     return (
-        <section className="tf-box-icon live-auctions tf-section style7 bg-style">
-        <div className="themesflat-container"  style={{marginBottom:'4rem'}}>
+        <section className=" tf-box-icon live-auctions tf-section style7 bg-style">
+        <div className="wrap-heading2 themesflat-container">
             <div className="row" >
                 <div className="col-xl-4 col-lg-12 col-md-12">
                     <div className="heading-live-auctions style2 mg-t-3 mg-bt-22">
@@ -60,18 +60,18 @@ const Create = () => {
                         }
                     </div>  
                 </div> 
+            </div>
+            <div className='d-flex flex-column align-items-center justify-content-center supported-by'>
+                <h2 style={{marginBottom:'4rem',marginTop:'4rem'}}>Supported by</h2>
+                <div className='flex-column align-items-center justify-content-center' style={{marginBottom:'6rem'}}>
+                    <img src={axelarlogo} alt="" style={{marginRight:'2rem'}}/>
+                    <img src={cd} alt="" style={{marginLeft:'2rem'}}/>
+                </div>
             </div>                 
         </div>
         <div className='tf-section d-flex flex-column align-items-center justify-content-center' style={{marginBottom:'6rem',backgroundColor:'#cfcfcf'}}>
                 <img src={WeSupport} style={{marginBottom:'4rem'}} alt="" width="137px" height="33px" />
                 <img src={LogoSupport} alt="" />
-        </div>
-        <div className='d-flex flex-column align-items-center justify-content-center supported' style={{backgroundImage: 'bgsupported'}}>
-            <h2 style={{marginBottom:'2rem',marginTop:'6rem'}}>Supported by</h2>
-            <div className='flex-column align-items-center justify-content-center' style={{marginBottom:'8rem'}}>
-                <img src={axelarlogo} alt="" style={{marginRight:'2rem'}}/>
-                <img src={cd} alt="" style={{marginLeft:'2rem'}}/>
-            </div>
         </div>
     </section>
     );
