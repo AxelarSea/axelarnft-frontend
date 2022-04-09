@@ -6,6 +6,7 @@ const RPC_URL_LIST = {
   80001: "https://rpc-mumbai.maticvigil.com",
   43113: "https://api.avax-test.network/ext/bc/C/rpc",
   4002: "https://rpc.testnet.fantom.network/",
+  1287: "https://rpc.testnet.moonbeam.network/",
 }
 
 const WEB3_LIST = {};
