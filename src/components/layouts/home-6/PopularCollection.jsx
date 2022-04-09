@@ -124,7 +124,7 @@ const PopularCollectionItem = props => (
                     <h4><Link to="/authors-01">{props.item.title}</Link></h4>
                     <div className="infor">
                         <span>Created by</span>
-                        <span className="name"><Link to="/author-02">{props.item.name}</Link></span>
+                        <span className="name"><Link to="/Authors-Profile">{props.item.name}</Link></span>
                     </div>
                 </div>
             </div>

@@ -26,37 +26,37 @@ const Footer = () => {
     const accountList = [
         {
             title: "Authors",
-            link: "/authors-01"
+            link: ""
         },
         {
             title: "Collection",
-            link: "/wallet-connect"
+            link: ""
         },
         {
             title: "Author Profile",
-            link: "/edit-profile"
+            link: ""
         },
         {
             title: "Create Item",
-            link: "/create-item"
+            link: ""
         },
     ]
     const resourcesList = [
         {
             title: "Help & Support",
-            link: "/help-center"
+            link: ""
         },
         {
             title: "Live Auctions",
-            link: "/live-auctions"
+            link: ""
         },
         {
             title: "Item Details",
-            link: "/item-details-01"
+            link: ""
         },
         {
             title: "Activity",
-            link: "/activity-01"
+            link: ""
         },
     ]
     const companyList = [

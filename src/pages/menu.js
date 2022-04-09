@@ -49,7 +49,7 @@ const menus = [
     {
         id: 2,
         name: 'Explore',
-        links: '/explore-04',
+        links: '/Explore',
         
     },{
         id: 3,
@@ -60,7 +60,7 @@ const menus = [
     {
         id: 4,
         name: 'Profile',
-        links: '/authors-02',
+        links: '/Authors-Profile',
         
     },
     {

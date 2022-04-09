@@ -110,8 +110,9 @@ const CardModal = (props) => {
           <div
             className="w-50"
             style={{
-              backgroundColor: "#343444",
-              borderRight: "0.5px solid grey",
+              backgroundColor: "rgb(245 245 245)",
+              borderRight: "1px solid white",
+              borderRadius:"10px"
             }}
           >
             <div className="d-flex justify-content-between align-items-center">
@@ -150,7 +151,7 @@ const CardModal = (props) => {
               </p>
             </div>
           </div>
-          <div className="w-50" style={{ backgroundColor: "#343444" }}>
+          <div className="w-50" style={{ backgroundColor: "rgb(245 245 245)",borderLeft: "1px solid white",borderRadius:"10px"}}>
             <div className="d-flex justify-content-between align-items-center">
               <p style={{ fontSize: "14px", marginLeft: "5px" }}>You pay</p>
               <p style={{ fontSize: "14px", marginRight: "5px" }}>
@@ -229,7 +230,12 @@ const CardModal = (props) => {
           <p> You want to Receive NFT</p>
         </div>
         <div className="d-flex justify-content-between">
-          <p> To {maskAddress(metamaskAccount)} </p>
+          <p> 
+            To 
+            <a style={{ backgroundColor: "rgb(245 245 245)",borderRadius:"10px"}}>
+              {maskAddress(metamaskAccount)}
+            </a> 
+          </p>
         </div>
 
         <button

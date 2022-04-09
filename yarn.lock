@@ -2194,7 +2194,7 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@terra-money/terra.js@^3.0.0", "@terra-money/terra.js@^3.0.9":
+"@terra-money/terra.js@3.0.9", "@terra-money/terra.js@^3.0.0":
   version "3.0.9"
   resolved "https://registry.npmjs.org/@terra-money/terra.js/-/terra.js-3.0.9.tgz"
   integrity sha512-jC7E8SjYiUV7nTk8g3LwQhJXlW5t2aiulB6Qg+K9dWpNzfqMn1ovuOD250gyx9aFaCilbDVLzPiZJLLbKPCO0w==

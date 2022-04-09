@@ -4,6 +4,12 @@ import { maskAddress } from "../../../utils/address";
 import { fetchAllListedItems } from "../../../utils/api";
 import CardModal from "../CardModal";
 
+import ethLogo from '../../../assets/images/icon/eth-logo.svg'
+import polygonLogo from '../../../assets/images/icon/polygon-logo.svg'
+import avaxLogo from '../../../assets/images/icon/avax-logo.svg'
+import moonbeamLogo from '../../../assets/images/icon/moonbeam-logo.svg'
+import fantomLogo from '../../../assets/images/icon/fantom-logo.svg'
+
 const ExploreItem = (props) => {
   const data = props.data;
 
@@ -20,7 +26,7 @@ const ExploreItem = (props) => {
           {data.slice(0, visible).map((item, index) => (
             <Link
               to={
-                "/item-details-01?chainId=" +
+                "/ItemDetails?chainId=" +
                 item.chainId +
                 "&collection=" +
                 item.collectionAddress +
@@ -81,7 +87,11 @@ const ExploreItem = (props) => {
                     <Link to="/activity-01" className="view-history reload">View History</Link>
                   </div> */}
                 </div>
-                <div className="tags">{item.tags}</div>
+                <div className="d-flex align-items-center justify-content-around" style={{width:'8rem'}}>
+                <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === '' ? moonbeamLogo : item.tags === 'MATIC' ? polygonLogo : ''} alt=""  width="40px"/>
+                  {/* <h5 style={{fontSize:'11px'}}>{item.tags}</h5> */}
+                  
+                  </div>
               </div>
               <div className="card-bottom style-explode">
                 <div className="price">

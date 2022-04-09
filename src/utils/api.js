@@ -27,13 +27,17 @@ const axelarApi = new AxelarAssetTransfer({ environment });
 export const CROSS_CHAIN_TOKEN_ADDRESS = {
   uluna: {
     3: "0x7Aa125543B9D4a361f58aC1Ff3Bea86eAF6D948B",
+    80001: "0x6Ad38DD216DC344c6B3CeDc34612e1014e2aa469",
     43113: "0x50a70aBb7bd6EbBcC46Df7C0d033C568F563cA27",
     4002: "0x121286BeDd58d58558A30ED2db2f4a7c6Eb646A3",
+    1287: "0xa1cF442E73045F1ea9960499FC8771454a01019D",
   },
   uusd: {
     3: "0x1487F3faefE78792CDC48D87FF32aaC6650fd85f",
+    80001: "0xa32575f477FDEbFA02513880d47F6515Da42FB90",
     43113: "0x43F4600b552089655645f8c16D86A5a9Fa296bc3",
     4002: "0x89A1D86901D25EFFe5D022bDD1132827e4D7f010",
+    1287: "0xD34007Bb8A54B2FBb1D6647c5AbA04D507ABD21d",
   },
 };
 
@@ -93,11 +97,17 @@ export const getDepositAddress = async (chainId, asset, destinationAddress) => {
     case 3:
       chainName = "ethereum";
       break;
+    case 80001:
+      chainName = "polygon";
+      break;
     case 43113:
       chainName = "avalanche";
       break;
     case 4002:
       chainName = "fantom";
+      break;
+    case 1287:
+      chainName = "moonbeam";
       break;
   }
 
@@ -222,7 +232,6 @@ export async function buyERC721(
       } catch (err) {
         console.error(err);
       }
-
       await wait(3000);
     }
   }
@@ -325,7 +334,6 @@ export async function listItem(
   let contract = new Marketplace(chainId, account);
   let erc721 = new ERC721MetaMintable(chainId, collectionAddress, account);
   let allowance = await erc721.allowance(account, contract.address);
-
   if (!allowance) {
     await erc721.approve(contract.address);
   }

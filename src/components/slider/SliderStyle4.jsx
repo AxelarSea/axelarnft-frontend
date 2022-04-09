@@ -9,9 +9,9 @@ import 'swiper/scss/pagination';
 import img1 from '../../assets/images/box-item/img1.svg'
 import img2 from '../../assets/images/box-item/img2.svg'
 import img3 from '../../assets/images/box-item/img3.svg'
-import img4 from '../../assets/images/box-item/img4.svg'
-import img5 from '../../assets/images/box-item/img5.svg'
-import img6 from '../../assets/images/box-item/img6.svg'
+// import img4 from '../../assets/images/box-item/img4.svg'
+// import img5 from '../../assets/images/box-item/img5.svg'
+// import img6 from '../../assets/images/box-item/img6.svg'
 import shape1 from '../../assets/images/backgroup-secsion/bg-gradient1.png'
 import shape2 from '../../assets/images/backgroup-secsion/bg-gradient2.png'
 import shape3 from '../../assets/images/backgroup-secsion/bg-gradient3.png'
@@ -42,9 +42,9 @@ const SliderStyle4 = () => {
                                 </p>
 
                                 <div className="flat-bt-slider flex style2">
-                                    <Link to="/explore-01" className="sc-button header-slider style style-1 rocket fl-button pri-1"><span>Explore Now
+                                    <Link to="/Explore" className="sc-button header-slider style style-1  fl-button pri-1"><span>Explore
                                     </span></Link>
-                                    <Link to="/create-item" className="sc-button header-slider style style-1 note fl-button pri-1"><span>Sell NFT
+                                    <Link to="/create-item" className="sc-button header-slider style style-1  fl-button pri-1" style={{color:'#FF4F0D' }}><span style={{textAlign:'center'}}>Sell NFT
                                     </span></Link>
                                 </div>
                             </div>
@@ -61,11 +61,11 @@ const SliderStyle4 = () => {
                                 }}
                                 speed= {2000}
                             >
-                                <SwiperSlide><img src={img1} alt="Axies" /></SwiperSlide>
+                                {/* <SwiperSlide><img src={img1} alt="Axies" /></SwiperSlide>
                                 <SwiperSlide><img src={img2} alt="Axies" /></SwiperSlide>
                                 <SwiperSlide><img src={img3} alt="Axies" /></SwiperSlide>
-                                <SwiperSlide><img src={img4} alt="Axies" /></SwiperSlide>
-                                <SwiperSlide><img src={img5} alt="Axies" /></SwiperSlide>
+                                <SwiperSlide><img src={img1} alt="Axies" /></SwiperSlide>
+                                <SwiperSlide><img src={img2} alt="Axies" /></SwiperSlide> */}
 
                             </Swiper>
                             <Swiper
@@ -81,11 +81,11 @@ const SliderStyle4 = () => {
                                 }}
                                 speed= {1800}
                             >
-                                <SwiperSlide><img src={img4} alt="Axies" /></SwiperSlide>
-                                <SwiperSlide><img src={img5} alt="Axies" /></SwiperSlide>
-                                <SwiperSlide><img src={img1} alt="Axies" /></SwiperSlide>
-                                <SwiperSlide><img src={img6} alt="Axies" /></SwiperSlide>
+                                {/* <SwiperSlide><img src={img3} alt="Axies" /></SwiperSlide>
                                 <SwiperSlide><img src={img2} alt="Axies" /></SwiperSlide>
+                                <SwiperSlide><img src={img1} alt="Axies" /></SwiperSlide>
+                                <SwiperSlide><img src={img3} alt="Axies" /></SwiperSlide>
+                                <SwiperSlide><img src={img2} alt="Axies" /></SwiperSlide> */}
 
                             </Swiper>
                             <Swiper
@@ -101,11 +101,11 @@ const SliderStyle4 = () => {
                                 }}
                                 speed= {2200}
                             >
-                                <SwiperSlide><img src={img5} alt="Axies" /></SwiperSlide>
-                                <SwiperSlide><img src={img2} alt="Axies" /></SwiperSlide>
-                                <SwiperSlide><img src={img6} alt="Axies" /></SwiperSlide>
+                                {/* <SwiperSlide><img src={img3} alt="Axies" /></SwiperSlide>
                                 <SwiperSlide><img src={img1} alt="Axies" /></SwiperSlide>
+                                <SwiperSlide><img src={img2} alt="Axies" /></SwiperSlide>
                                 <SwiperSlide><img src={img3} alt="Axies" /></SwiperSlide>
+                                <SwiperSlide><img src={img1} alt="Axies" /></SwiperSlide> */}
 
                             </Swiper>
                         </div>

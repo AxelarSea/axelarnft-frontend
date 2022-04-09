@@ -19,6 +19,8 @@ import imgfilter4 from "../assets/images/icon/itunes.png";
 import ETH from "../assets/images/avatar/ETH.jpg";
 import AVAX from "../assets/images/avatar/AVAX.jpg";
 import FTM from "../assets/images/avatar/FTM.jpg";
+import Moonbeam from "../assets/images/avatar/moonbeam.gif";
+import Polygon from "../assets/images/avatar/polygon.gif";
 
 import HeaderStyle2 from "../components/header/HeaderStyle2";
 import AxelarSeaSampleNft from "../contracts/AxelarSeaSampleNft";
@@ -45,6 +47,8 @@ const CreateItem = () => {
         case 'Ethereum': chainId = 3; break;
         case 'Avalanche': chainId = 43113; break;
         case 'Fantom': chainId = 4002; break;
+        case 'Moonbeam': chainId = 1287; break;
+        case 'Polygon': chainId = 80001; break;
       }
   
       await switchChain(chainId);
@@ -101,7 +105,7 @@ const CreateItem = () => {
               <h4 className="title-create-item">Preview item</h4>
               <div className="sc-card-product">
                 <div className="card-media">
-                  <Link to="/item-details-01">
+                  <Link to="/ItemDetails">
                     <img
                       src={
                         blockChain === "Ethereum"
@@ -110,7 +114,12 @@ const CreateItem = () => {
                           ? FTM
                           : blockChain === "Avalanche"
                           ? AVAX
+                          : blockChain === "Moonbeam"
+                          ? Moonbeam
+                          : blockChain === "Polygon"
+                          ? Polygon
                           : img1
+                          
                       }
                       alt="Axies"
                     />
@@ -127,7 +136,7 @@ const CreateItem = () => {
                 </div>
                 {/* <div className="card-title">
                   <h5>
-                    <Link to="/item-details-01">"Cyber Doberman #766”</Link>
+                    <Link to="/ItemDetails">"Cyber Doberman #766”</Link>
                   </h5>
                   <div className="tags">bsc</div>
                 </div> */}
@@ -140,15 +149,11 @@ const CreateItem = () => {
                       <span>Owned By</span>
                       <h6>
                         {" "}
-                        <Link to="/author-02">Freddie Carpenter</Link>
+                        <Link to="/Authors-Profile">Freddie Carpenter</Link>
                       </h6>
                     </div>
                   </div>
-<<<<<<< HEAD
-                  <div className="Price">
-=======
                   <div className="price">
->>>>>>> 33fdb633f6a647eec98d006e8311eecd628ccd72
                     <span>Price</span>
                     <h5> 4.89 ETH</h5>
                   </div>
@@ -270,6 +275,12 @@ const CreateItem = () => {
                                   <li onClick={() => setBlockChain("Fantom")}>
                                     <span>Fantom</span>
                                   </li>
+                                  <li onClick={() => setBlockChain("Moonbeam")}>
+                                    <span>Moonbeam</span>
+                                  </li>
+                                  <li onClick={() => setBlockChain("Polygon")}>
+                                    <span>Polygon</span>
+                                  </li>
                                   {/* <li><span>Virtual World</span></li>
                                                                     <li><span>Trading Cards</span></li>
                                                                     <li><span>Sports</span></li>
@@ -280,7 +291,7 @@ const CreateItem = () => {
                           </div>
                         </div>
 
-                        <button className="" id="liveToastBtn" style={{ marginTop: "90px" }} onClick={mint} disabled={processing}>
+                        <button className="" id="liveToastBtn" style={{ marginTop: "160px" }} onClick={mint} disabled={processing}>
                           Submit
                         </button>
                         

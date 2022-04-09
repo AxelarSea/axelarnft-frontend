@@ -7,7 +7,7 @@
     "@axelar-network/axelarjs-sdk": "@axelar-network/axelarjs-sdk@alpha",
     "@cosmjs/launchpad": "^0.27.1",
     "@cosmjs/stargate": "^0.28.2",
-    "@terra-money/terra.js": "^3.0.9",
+    "@terra-money/terra.js": "3.0.9",
     "@terra-money/wallet-provider": "^3.8.0",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",

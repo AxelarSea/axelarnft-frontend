@@ -676,13 +676,13 @@ const ItemContent = () => {
                                                         </div>
                                                         <div className="info">
                                                             <span>Creator</span>
-                                                            <h6> <Link to="/author-02">{item.nameAuthor}</Link> </h6>
+                                                            <h6> <Link to="/Authors-Profile">{item.nameAuthor}</Link> </h6>
                                                         </div>
                                                     </div>
                                                     <button className="wishlist-button heart"><span className="number-like"> {item.wishlist}</span></button>
                                                 </div>
                                                 <div className="card-media">
-                                                    <Link to="/item-details-01"><img src={item.img} alt="Axies" /></Link>
+                                                    <Link to="/ItemDetails"><img src={item.img} alt="Axies" /></Link>
                                                     <div className="featured-countdown">
                                                         <span className="slogan"></span>
                                                         <Countdown date={Date.now() + 500000000}>
@@ -724,12 +724,12 @@ const ItemContent = () => {
                                         <div className="sc-card-product menu_card style-h7">
                                             <div className="wrap-media">
                                                 <div className="card-media">
-                                                    <Link to="/item-details-01"><img src={item.img} alt="Axies" /></Link>                                                                                                            
+                                                    <Link to="/ItemDetails"><img src={item.img} alt="Axies" /></Link>                                                                                                            
                                                 </div>
                                             </div>
                                             <div className="card-title">
                                                 <p>Item Name</p>
-                                                <h4><Link to="/item-details-01">{item.title}</Link></h4>
+                                                <h4><Link to="/ItemDetails">{item.title}</Link></h4>
                                             </div>
                                             <div className="meta-info style">
                                                 <p>Creator</p>

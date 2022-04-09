@@ -72,3 +72,7 @@ button:disabled {
     transform: rotate(360deg);
   }
 }
+
+.inputcopy::before{
+  content: url('../src/assets/images/icon/ethwallet.svg');
+}

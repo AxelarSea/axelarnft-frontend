@@ -64,7 +64,7 @@ const HeaderStyle2 = () => {
                             <div className="wrap-box flex">
                                 <div id="site-logo" className="clearfix">
                                     <div id="site-logo-inner">
-                                        <Link to="/home-07" rel="home" className="main-logo">
+                                        <Link to="/Home" rel="home" className="main-logo">
                                             <img   id="logo_header" src={logosvg} alt="nft-gaming" />
                                         </Link>
                                     </div>
@@ -180,7 +180,7 @@ const HeaderStyle2 = () => {
                     </div>
                 </div>
             </div>
-            <DarkMode />
+            {/* <DarkMode /> */}
         </header>
     );
 }

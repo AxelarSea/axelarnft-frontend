@@ -5,7 +5,7 @@ import imgsun from '../../assets/images/icon/sun.png'
 const DarkMode = () => {
     let clickedClass = "clicked"
     const body = document.body
-    const lightTheme = "is_dark"
+    const lightTheme = "light"
     const darkTheme = "is_dark"
     let theme
 
@@ -13,7 +13,7 @@ const DarkMode = () => {
         theme = localStorage.getItem("theme")
     }
     if (theme === lightTheme || theme === darkTheme) {
-        body.classList.add(darkTheme)
+        body.classList.add(theme)
     } else {
         body.classList.add(darkTheme)
     }
@@ -22,8 +22,8 @@ const DarkMode = () => {
         if (theme === darkTheme) {
             body.classList.replace(darkTheme, lightTheme)
             e.target.classList.remove(clickedClass)
-            localStorage.setItem("theme", "is_dark")
-            theme = darkTheme
+            localStorage.setItem("theme", "light")
+            theme = lightTheme
         } else {
             body.classList.replace(lightTheme, darkTheme)
             e.target.classList.add(clickedClass)
@@ -33,11 +33,11 @@ const DarkMode = () => {
     }
     return (
         <div className="mode_switcher">
-        <h6>Dark mode <strong>Available</strong></h6>
+        {/* <h6>Dark mode <strong>Available</strong></h6>
         <Link to="#" 
             onClick={e => switchTheme(e)}  >
             <img src={imgsun} alt="" />
-        </Link>
+        </Link> */}
 
     </div>
     );

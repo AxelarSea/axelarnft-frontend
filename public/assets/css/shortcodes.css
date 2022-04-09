@@ -26,7 +26,7 @@
 
 .tf-section {
     padding: 80px 0;
-    background: var(--bg-section);
+    background: var(--primary-color5);
     margin-bottom: 0 !important;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -34,6 +34,18 @@
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+
+.tf-section2 {
+    padding: 80px 0;
+    background: var(--primary-color);
+    margin-bottom: 0 !important;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
 .tf-connect-wallet.tf-section {
     padding: 80px 0 50px;
 }
@@ -198,7 +210,7 @@
 .sc-button {
     display      : inline-block;
     border       : 2px solid var(--primary-color3);
-    color        : var(--primary-color3);
+    color        : var(--primary-color);
     box-sizing   : border-box;
     padding      : 11px 35px;
     border-radius: 30px;
@@ -262,9 +274,12 @@
 /* button style */
 /* style-1 */
 .sc-button.style-1 {
-    border    : 2px solid #fff;
-    color     : #fff;
+    /* border    : linear-gradient(100.83deg, #FF4F0D 22.55%, #7AB694 81.21%); */
+    color     : #000000;
     background: transparent none repeat scroll 0 0;
+    border-color: grey;
+ 
+
 }
 
 .is_dark .sc-button.style-1 {
@@ -339,8 +354,8 @@
 
 /* style loadmore */
 .sc-button.loadmore {
-    background-color: #eeecff;
-    border          : 2px solid #eeecff;
+    background-color: linear-gradient(216.56deg,#ff4f0d 5.32%,#7ab795 94.32%);
+    border          : 2px solid linear-gradient(216.56deg,#ff4f0d 5.32%,#7ab795 94.32%);
     padding         : 14px 40px;
 }
 
@@ -352,11 +367,11 @@
 
 .is_dark .sc-button.loadmore{
     background: transparent none repeat scroll 0 0;
-    border-color: #fff;
+    border-color: linear-gradient(216.56deg,#ff4f0d 5.32%,#7ab795 94.32%);
 }
 
 .is_dark .sc-button.loadmore:hover:after{
-    background-color: #fff;
+    background-color: linear-gradient(216.56deg,#ff4f0d 5.32%,#7ab795 94.32%);
 }
 
 .sc-button.loadmore span {
@@ -1083,14 +1098,14 @@
 }
 
 .sc-card-product .tags {
-    width           : 49px;
+    width           : 80px;
     height          : 24px;
     line-height     : 24px;
     text-align      : center;
     font-weight     : bold;
     font-size       : 12px;
-    color           : #fff;
-    background-color: var(--primary-color3);
+    color           : rgb(0, 0, 0);
+    background-color: var(--primary-color2);
     border-radius   : 10px;
     letter-spacing  : 0.1em;
     text-transform  : uppercase;
@@ -1180,7 +1195,7 @@
 .sc-card-product.explode .card-bottom {
     margin-top : 18px;
     padding-top: 15px;
-    border-top : 1px solid#EBEBEB;
+    border-top : 1px solid #EBEBEB;
 }
 
 .is_dark .sc-card-product.explode .card-bottom {
@@ -1699,7 +1714,7 @@
 -------------------------------------------------------------- */
 .flat-title-page {
     position       : relative;
-    background-image     : url('../images/backgroup-secsion/bg-new.png') center center no-repeat;
+    background-image     : url('../images/backgroup-secsion/bghome-w.jpg') center center no-repeat;
     background-size: cover;
     padding: 100px 0 20px;
 }
@@ -1716,6 +1731,8 @@
     width           : 100%;
     height          : 100%;
     /* background-color: rgb(52 52 68/30%); */
+    background-image:  url('../images/backgroup-secsion/bghome-w.jpg')  ;
+    background-size: cover;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
@@ -1732,7 +1749,7 @@
     font-size  : 56px;
     line-height: 1.3;
     font-weight: 700;
-    color      : #fff;
+    /* color      : #fff; */
 }
 
  .flat-slider .heading .style {
@@ -1775,7 +1792,7 @@
 .flat-slider .sub-heading {
     font-size     : 20px;
     line-height   : 30px;
-    color         : #EBEBEB;
+    color         : #B0B5B7;
     text-transform: capitalize;
     margin-top: 29px;
     margin-bottom: 44px;
@@ -3640,7 +3657,7 @@ section.today-picks {
     -o-border-radius     : 20px;
     -moz-border-radius   : 20px;
     border-radius        : 20px;
-    background-color     : #f8f8f8;
+    background-color     : #2e2e2e;
 }
 
 .tab-authors .author-profile .infor-profile button {
@@ -3848,7 +3865,7 @@ section.today-picks {
 
 .tf-item-details .content-right .client-infor .meta-info,
 .tf-item-details .content-right .meta-item-details .item {
-    width        : 50%;
+    width        : 100%;
     margin-right : 30px;
     background   : var(--primary-color7);
     border-radius: 16px;
@@ -5353,9 +5370,9 @@ button.accordion-button {
 
 .header_2 .question-form input[type="text"]{
     padding: 13px 18px 13px 66px;
-    background-color: transparent;
+    background-color: rgba(201, 201, 201, 0.1);   ;
     border-radius: 25px;
-    border: 2px solid #fff;
+    /* border: 2px solid #fff; */
     outline: none;
     font-size: 13px;
     line-height: 20px;
@@ -7357,9 +7374,10 @@ button.accordion-button {
     box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 50%);
 }
 .header_1.header_2.style2 {
-    background: linear-gradient( 
+    /* background: linear-gradient( 
 227.3deg
-, #8A208C 0%, #181B81 100.84%);
+, #8A208C 0%, #181B81 100.84%); */
+    background: #ffffff;
 }
 
 .tf-item {

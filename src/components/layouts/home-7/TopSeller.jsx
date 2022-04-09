@@ -129,32 +129,32 @@ const TopSeller = () => {
                 id: 2,
                 dataTopSellerContent: [
                     {
-                        img: imgAuthor,
-                        name: 'Windsor Lane',
-                        mail: '@windsorlandhh',
+                        img: imgAuthor2,
+                        name: 'BoredApeYachtClub',
+                        mail: '0xs4dfb…A141',
                         top: '1',
-                        Price: '120.7 ETH'
+                        Price: '$28,425.24'
                     },
                     {
                         img: imgAuthor,
-                        name: 'Windsor Lane',
-                        mail: '@windsorlandhh',
+                        name: 'CLONE X - X TAKASHI...',
+                        mail: '0xF5ab…A754',
                         top: '2',
-                        Price: '120.7 ETH'
+                        Price: '$32,893.53'
                     },
                     {
-                        img: imgAuthor,
-                        name: 'Windsor Lane',
-                        mail: '@windsorlandhh',
+                        img: imgAuthor4,
+                        name: 'Galactic Punk',
+                        mail: '0xF5ab…A754',
                         top: '3',
-                        Price: '120.7 ETH'
+                        Price: '$20,123.22'
                     },
                     {
-                        img: imgAuthor,
-                        name: 'Windsor Lane',
-                        mail: '@windsorlandhh',
+                        img: imgAuthor3,
+                        name: 'MetaWarden',
+                        mail: '0xG341…A151',
                         top: '4',
-                        Price: '120.7 ETH'
+                        Price: '$25,893.53'
                     },
                     // {
                     //     img: img5,
@@ -192,31 +192,31 @@ const TopSeller = () => {
                 dataTopSellerContent: [
                     {
                         img: imgAuthor,
-                        name: 'Windsor Lane',
-                        mail: '@windsorlandhh',
+                        name: 'CLONE X - X TAKASHI...',
+                        mail: '0xF5ab…A754',
                         top: '1',
-                        Price: '120.7 ETH'
+                        Price: '$32,893.53'
                     },
                     {
-                        img: imgAuthor,
-                        name: 'Windsor Lane',
-                        mail: '@windsorlandhh',
+                        img: imgAuthor2,
+                        name: 'BoredApeYachtClub',
+                        mail: '0xs4dfb…A141',
                         top: '2',
-                        Price: '120.7 ETH'
+                        Price: '$28,425.24'
                     },
                     {
-                        img: imgAuthor,
-                        name: 'Windsor Lane',
-                        mail: '@windsorlandhh',
+                        img: imgAuthor4,
+                        name: 'Galactic Punk',
+                        mail: '0xF5ab…A754',
                         top: '3',
-                        Price: '120.7 ETH'
+                        Price: '$20,123.22'
                     },
                     {
-                        img: imgAuthor,
-                        name: 'Windsor Lane',
-                        mail: '@windsorlandhh',
+                        img: imgAuthor3,
+                        name: 'MetaWarden',
+                        mail: '0xG341…A151',
                         top: '4',
-                        Price: '120.7 ETH'
+                        Price: '$25,893.53'
                     },
                     // {
                     //     img: img5,
@@ -287,11 +287,11 @@ const TopSeller = () => {
                             <div className="heading-live-auctions">
                                 <h2 className="tf-title pb-16">
                                     Top Seller</h2>
-                                <a href="/explore-03" className="exp style2 see-all">SEE ALL</a>
+                                {/* <a href="/Explore" className="exp style2 see-all">SEE ALL</a> */}
                             </div>
                             <div className="flat-tabs seller-tab">
                             <Tabs>
-                                <TabList>
+                                <TabList disabled>
                                     {
                                         dataTopSellerTab.map((item,index) =>(
                                             <Tab key={index} >{item.title}</Tab>
@@ -324,7 +324,7 @@ const TopSeller = () => {
                                                             <div className="action">
                                                                 <div className="number">#{item.top}</div>
                                                                 <div className="btn-follow">
-                                                                    <Link to="/login">Follow</Link>
+                                                                    <Link to="#">Follow</Link>
                                                                 </div>
                                                             </div>
                                                         </div>
