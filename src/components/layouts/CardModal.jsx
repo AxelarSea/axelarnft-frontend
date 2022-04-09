@@ -34,15 +34,18 @@ const CardModal = (props) => {
   const [terraWallet, setTerraWallet] = useState(window.localStorage.getItem("TERRA_WALLET") || "TERRA_STATION")
 
   async function buyOnClick() {
-    if (!connectedWallet) {
-      window.alert("Please connect to terra station wallet");
-      return;
+    if (terraWallet == "TERRA_STATION") {
+      if (!connectedWallet) {
+        window.alert("Please connect to terra station wallet");
+        return;
+      }
+  
+      if (connectedWallet.network.chainID.startsWith('columbus')) {
+        window.alert(`Please switch to Bombay testnet on your terra station`);
+        return;
+      }
     }
 
-    if (connectedWallet.network.chainID.startsWith('columbus')) {
-      window.alert(`Please switch to Bombay testnet on your terra station`);
-      return;
-    }
     try {
       props.setBuyNowModal(false)
       setModalShow(true)

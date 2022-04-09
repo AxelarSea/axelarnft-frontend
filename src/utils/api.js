@@ -189,7 +189,7 @@ export async function buyERC721(
           source_channel: "channel-78",
           token: {
             denom: symbol,
-            amount: Math.floor(listPrice * 1.05 * 1e6),
+            amount: Math.floor(listPrice * 1.05 * 1e6).toString(),
           },
           sender: accounts[0]?.address,
           receiver: depositAddress,
@@ -210,7 +210,7 @@ export async function buyERC721(
           gas: "150000",
           amount: [{
             denom: 'uluna',
-            amount: 270000,
+            amount: "18750",
           }]
         }
       })
