@@ -26,7 +26,11 @@
 
 .tf-section {
     padding: 80px 0;
+<<<<<<< HEAD
     background: var(--primary-color5);
+=======
+    background: var(--bg-section);
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     margin-bottom: 0 !important;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -34,6 +38,7 @@
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+<<<<<<< HEAD
 
 .tf-section2 {
     padding: 80px 0;
@@ -46,6 +51,8 @@
     transition: all 0.3s ease-in-out;
 }
 
+=======
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
 .tf-connect-wallet.tf-section {
     padding: 80px 0 50px;
 }
@@ -210,7 +217,11 @@
 .sc-button {
     display      : inline-block;
     border       : 2px solid var(--primary-color3);
+<<<<<<< HEAD
     color        : var(--primary-color);
+=======
+    color        : var(--primary-color3);
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     box-sizing   : border-box;
     padding      : 11px 35px;
     border-radius: 30px;
@@ -274,12 +285,18 @@
 /* button style */
 /* style-1 */
 .sc-button.style-1 {
+<<<<<<< HEAD
     /* border    : linear-gradient(100.83deg, #FF4F0D 22.55%, #7AB694 81.21%); */
     color     : #000000;
     background: transparent none repeat scroll 0 0;
     border-color: grey;
  
 
+=======
+    border    : 2px solid #fff;
+    color     : #fff;
+    background: transparent none repeat scroll 0 0;
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
 }
 
 .is_dark .sc-button.style-1 {
@@ -354,8 +371,13 @@
 
 /* style loadmore */
 .sc-button.loadmore {
+<<<<<<< HEAD
     background-color: linear-gradient(216.56deg,#ff4f0d 5.32%,#7ab795 94.32%);
     border          : 2px solid linear-gradient(216.56deg,#ff4f0d 5.32%,#7ab795 94.32%);
+=======
+    background-color: #eeecff;
+    border          : 2px solid #eeecff;
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     padding         : 14px 40px;
 }
 
@@ -367,11 +389,19 @@
 
 .is_dark .sc-button.loadmore{
     background: transparent none repeat scroll 0 0;
+<<<<<<< HEAD
     border-color: linear-gradient(216.56deg,#ff4f0d 5.32%,#7ab795 94.32%);
 }
 
 .is_dark .sc-button.loadmore:hover:after{
     background-color: linear-gradient(216.56deg,#ff4f0d 5.32%,#7ab795 94.32%);
+=======
+    border-color: #fff;
+}
+
+.is_dark .sc-button.loadmore:hover:after{
+    background-color: #fff;
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
 }
 
 .sc-button.loadmore span {
@@ -1098,14 +1128,23 @@
 }
 
 .sc-card-product .tags {
+<<<<<<< HEAD
     width           : 80px;
+=======
+    width           : 49px;
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     height          : 24px;
     line-height     : 24px;
     text-align      : center;
     font-weight     : bold;
     font-size       : 12px;
+<<<<<<< HEAD
     color           : rgb(0, 0, 0);
     background-color: var(--primary-color2);
+=======
+    color           : #fff;
+    background-color: var(--primary-color3);
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     border-radius   : 10px;
     letter-spacing  : 0.1em;
     text-transform  : uppercase;
@@ -1714,7 +1753,11 @@
 -------------------------------------------------------------- */
 .flat-title-page {
     position       : relative;
+<<<<<<< HEAD
     background-image     : url('../images/backgroup-secsion/bghome-w.jpg') center center no-repeat;
+=======
+    background-image     : url('../images/backgroup-secsion/bg-new.png') center center no-repeat;
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     background-size: cover;
     padding: 100px 0 20px;
 }
@@ -1731,8 +1774,11 @@
     width           : 100%;
     height          : 100%;
     /* background-color: rgb(52 52 68/30%); */
+<<<<<<< HEAD
     background-image:  url('../images/backgroup-secsion/bghome-w.jpg')  ;
     background-size: cover;
+=======
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
@@ -1749,7 +1795,11 @@
     font-size  : 56px;
     line-height: 1.3;
     font-weight: 700;
+<<<<<<< HEAD
     /* color      : #fff; */
+=======
+    color      : #fff;
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
 }
 
  .flat-slider .heading .style {
@@ -1792,7 +1842,11 @@
 .flat-slider .sub-heading {
     font-size     : 20px;
     line-height   : 30px;
+<<<<<<< HEAD
     color         : #B0B5B7;
+=======
+    color         : #EBEBEB;
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     text-transform: capitalize;
     margin-top: 29px;
     margin-bottom: 44px;
@@ -3657,7 +3711,11 @@ section.today-picks {
     -o-border-radius     : 20px;
     -moz-border-radius   : 20px;
     border-radius        : 20px;
+<<<<<<< HEAD
     background-color     : #2e2e2e;
+=======
+    background-color     : #f8f8f8;
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
 }
 
 .tab-authors .author-profile .infor-profile button {
@@ -3865,7 +3923,11 @@ section.today-picks {
 
 .tf-item-details .content-right .client-infor .meta-info,
 .tf-item-details .content-right .meta-item-details .item {
+<<<<<<< HEAD
     width        : 100%;
+=======
+    width        : 50%;
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     margin-right : 30px;
     background   : var(--primary-color7);
     border-radius: 16px;
@@ -5370,9 +5432,15 @@ button.accordion-button {
 
 .header_2 .question-form input[type="text"]{
     padding: 13px 18px 13px 66px;
+<<<<<<< HEAD
     background-color: rgba(201, 201, 201, 0.1);   ;
     border-radius: 25px;
     /* border: 2px solid #fff; */
+=======
+    background-color: transparent;
+    border-radius: 25px;
+    border: 2px solid #fff;
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     outline: none;
     font-size: 13px;
     line-height: 20px;
@@ -7374,10 +7442,16 @@ button.accordion-button {
     box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 50%);
 }
 .header_1.header_2.style2 {
+<<<<<<< HEAD
     /* background: linear-gradient( 
 227.3deg
 , #8A208C 0%, #181B81 100.84%); */
     background: #ffffff;
+=======
+    background: linear-gradient( 
+227.3deg
+, #8A208C 0%, #181B81 100.84%);
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
 }
 
 .tf-item {

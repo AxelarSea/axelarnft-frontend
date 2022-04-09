@@ -19,8 +19,11 @@ import imgfilter4 from "../assets/images/icon/itunes.png";
 import ETH from "../assets/images/avatar/ETH.jpg";
 import AVAX from "../assets/images/avatar/AVAX.jpg";
 import FTM from "../assets/images/avatar/FTM.jpg";
+<<<<<<< HEAD
 import Moonbeam from "../assets/images/avatar/moonbeam.gif";
 import Polygon from "../assets/images/avatar/polygon.gif";
+=======
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
 
 import HeaderStyle2 from "../components/header/HeaderStyle2";
 import AxelarSeaSampleNft from "../contracts/AxelarSeaSampleNft";
@@ -47,8 +50,11 @@ const CreateItem = () => {
         case 'Ethereum': chainId = 3; break;
         case 'Avalanche': chainId = 43113; break;
         case 'Fantom': chainId = 4002; break;
+<<<<<<< HEAD
         case 'Moonbeam': chainId = 4002; break;
         case 'Polygon': chainId = 4002; break;
+=======
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
       }
   
       await switchChain(chainId);
@@ -105,7 +111,11 @@ const CreateItem = () => {
               <h4 className="title-create-item">Preview item</h4>
               <div className="sc-card-product">
                 <div className="card-media">
+<<<<<<< HEAD
                   <Link to="/ItemDetails">
+=======
+                  <Link to="/item-details-01">
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                     <img
                       src={
                         blockChain === "Ethereum"
@@ -114,12 +124,16 @@ const CreateItem = () => {
                           ? FTM
                           : blockChain === "Avalanche"
                           ? AVAX
+<<<<<<< HEAD
                           : blockChain === "Moonbeam"
                           ? Moonbeam
                           : blockChain === "Polygon"
                           ? Polygon
                           : img1
                           
+=======
+                          : img1
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                       }
                       alt="Axies"
                     />
@@ -136,7 +150,11 @@ const CreateItem = () => {
                 </div>
                 {/* <div className="card-title">
                   <h5>
+<<<<<<< HEAD
                     <Link to="/ItemDetails">"Cyber Doberman #766”</Link>
+=======
+                    <Link to="/item-details-01">"Cyber Doberman #766”</Link>
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                   </h5>
                   <div className="tags">bsc</div>
                 </div> */}
@@ -149,11 +167,23 @@ const CreateItem = () => {
                       <span>Owned By</span>
                       <h6>
                         {" "}
+<<<<<<< HEAD
                         <Link to="/Authors-Profile">Freddie Carpenter</Link>
                       </h6>
                     </div>
                   </div>
                   <div className="price">
+=======
+                        <Link to="/author-02">Freddie Carpenter</Link>
+                      </h6>
+                    </div>
+                  </div>
+<<<<<<< HEAD
+                  <div className="Price">
+=======
+                  <div className="price">
+>>>>>>> 33fdb633f6a647eec98d006e8311eecd628ccd72
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                     <span>Price</span>
                     <h5> 4.89 ETH</h5>
                   </div>
@@ -275,12 +305,15 @@ const CreateItem = () => {
                                   <li onClick={() => setBlockChain("Fantom")}>
                                     <span>Fantom</span>
                                   </li>
+<<<<<<< HEAD
                                   <li onClick={() => setBlockChain("Moonbeam")}>
                                     <span>Moonbeam</span>
                                   </li>
                                   <li onClick={() => setBlockChain("Polygon")}>
                                     <span>Polygon</span>
                                   </li>
+=======
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                   {/* <li><span>Virtual World</span></li>
                                                                     <li><span>Trading Cards</span></li>
                                                                     <li><span>Sports</span></li>
@@ -291,7 +324,11 @@ const CreateItem = () => {
                           </div>
                         </div>
 
+<<<<<<< HEAD
                         <button className="" id="liveToastBtn" style={{ marginTop: "160px" }} onClick={mint} disabled={processing}>
+=======
+                        <button className="" id="liveToastBtn" style={{ marginTop: "90px" }} onClick={mint} disabled={processing}>
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                           Submit
                         </button>
                         

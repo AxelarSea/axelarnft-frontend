@@ -7,8 +7,13 @@ import img1 from '../assets/images/icon/eth-facuet.png'
 import img2 from '../assets/images/icon/avax-facuet.png'
 import img3 from '../assets/images/icon/fantom-facuet.png'
 import img4 from '../assets/images/icon/terra-facuet.png'
+<<<<<<< HEAD
 import img5 from '../assets/images/icon/moonbeam-facuet.png'
 import img6 from '../assets/images/icon/polygon-facuet.png'
+=======
+import img5 from '../assets/images/icon/connect-5.png'
+import img6 from '../assets/images/icon/connect-6.png'
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
 import img7 from '../assets/images/icon/connect-7.png'
 import img8 from '../assets/images/icon/connect-8.png'
 import HeaderStyle2 from '../components/header/HeaderStyle2';
@@ -49,6 +54,7 @@ const Faucet = () => {
                 website:'https://faucet.terra.money/'
                 
             },
+<<<<<<< HEAD
             {
                 img: img5,
                 title: 'Moonbeam Faucet',
@@ -59,6 +65,18 @@ const Faucet = () => {
                 title: 'Polygon Faucet',
                 description: 'Purus irure lacinia eiusmod inventore bibendum habitant potenti non sint rem! Felis, asper'
             },
+=======
+            // {
+            //     img: img5,
+            //     title: 'Coinbase Wallet',
+            //     description: 'Sollicitudin iure conubia vivamus habitasse aptent, eligendi deserunt excepteur tellus non'
+            // },
+            // {
+            //     img: img6,
+            //     title: 'Authereum',
+            //     description: 'Purus irure lacinia eiusmod inventore bibendum habitant potenti non sint rem! Felis, asper'
+            // },
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
             // {
             //     img: img7,
             //     title: 'Kaikas',

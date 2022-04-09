@@ -28,12 +28,15 @@ import img9 from '../../../assets/images/box-item/image-box-44.jpg'
 import imga9 from '../../../assets/images/avatar/avt-2.jpg'
 import img10 from '../../../assets/images/box-item/image-box-45.jpg'
 import imga10 from '../../../assets/images/avatar/avt-10.jpg'
+<<<<<<< HEAD
 import ethLogo from '../../../assets/images/icon/eth-logo.svg'
 import polygonLogo from '../../../assets/images/icon/polygon-logo.svg'
 import avaxLogo from '../../../assets/images/icon/avax-logo.svg'
 import moonbeamLogo from '../../../assets/images/icon/moonbeam-logo.svg'
 import fantomLogo from '../../../assets/images/icon/fantom-logo.svg'
 
+=======
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
 
 import imgTodayPick from '../../../assets/images/box-item/img-today-pick-demo.svg'
 import imgAuthor from '../../../assets/images/avatar/img-today-pick-author.svg'
@@ -41,7 +44,10 @@ import { crossChainTokenLabel, fetchAllListedItems } from '../../../utils/api';
 import { chainLabel, maskAddress } from '../../../utils/address';
 
 const TodayPicks = () => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     const [data, setData] = useState(
         [
             {
@@ -228,9 +234,12 @@ const TodayPicks = () => {
         ]
     )
 
+<<<<<<< HEAD
     const [allData , setAllData] = useState('')
 
 
+=======
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     async function refreshData() {
         let listed = await fetchAllListedItems();
         listed = listed.slice(0, 20);
@@ -243,6 +252,7 @@ const TodayPicks = () => {
             price: x.listPrice + " " + crossChainTokenLabel(x.collection.chainId, x.listTokenAddress),
             wishlist: "100",
             raw: x,
+<<<<<<< HEAD
             chainId:x.collection.chainId
         })));
     
@@ -275,6 +285,9 @@ const TodayPicks = () => {
         else{
             setData(data)
         }
+=======
+        })));
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     }
 
     const [visible , setVisible] = useState(10);
@@ -288,11 +301,17 @@ const TodayPicks = () => {
         refreshData();
     }, [])
 
+<<<<<<< HEAD
     console.log(data)
 
     return (
         <Fragment>
             <section className="tf-section2 today-pick">
+=======
+    return (
+        <Fragment>
+            <section className="tf-section today-pick">
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                 <div className="themesflat-container">
                     <div className="row">
                         <div className="col-md-12">
@@ -300,13 +319,21 @@ const TodayPicks = () => {
                                 <h2 className="tf-title">
                                     Recently Listed
                                 </h2>
+<<<<<<< HEAD
                                 <Link to="/explore" className="exp style2">EXPLORE MORE</Link>
+=======
+                                <Link to="/explore-04" className="exp style2">EXPLORE MORE</Link>
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                             </div>
                         </div>
                         <div className="col-md-12">
                             <div className="tf-soft">
                             <div className="soft-left">
+<<<<<<< HEAD
                                 {/* <Dropdown>
+=======
+                                <Dropdown>
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                     <Dropdown.Toggle id="dropdown-basic">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 10H7C9 10 10 9 10 7V5C10 3 9 2 7 2H5C3 2 2 3 2 5V7C2 9 3 10 5 10Z" stroke="white" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
@@ -343,8 +370,13 @@ const TodayPicks = () => {
                                         </div>
                                     </Dropdown.Item>
                                     </Dropdown.Menu>
+<<<<<<< HEAD
                                 </Dropdown> */}
                                 {/* <Dropdown>
+=======
+                                </Dropdown>
+                                <Dropdown>
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                     <Dropdown.Toggle id="dropdown-basic">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.67188 14.3298C8.67188 15.6198 9.66188 16.6598 10.8919 16.6598H13.4019C14.4719 16.6598 15.3419 15.7498 15.3419 14.6298C15.3419 13.4098 14.8119 12.9798 14.0219 12.6998L9.99187 11.2998C9.20187 11.0198 8.67188 10.5898 8.67188 9.36984C8.67188 8.24984 9.54187 7.33984 10.6119 7.33984H13.1219C14.3519 7.33984 15.3419 8.37984 15.3419 9.66984" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -380,7 +412,11 @@ const TodayPicks = () => {
                                     <Dropdown.Item href="#">Not for sale</Dropdown.Item>
                                     <Dropdown.Item href="#">Open for offers</Dropdown.Item>
                                     </Dropdown.Menu>
+<<<<<<< HEAD
                                 </Dropdown> */}
+=======
+                                </Dropdown>
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                 <Dropdown>
                                     <Dropdown.Toggle id="dropdown-basic">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -392,11 +428,22 @@ const TodayPicks = () => {
                                     </Dropdown.Toggle>
 
                                     <Dropdown.Menu style={{ margin: 0 }}>
+<<<<<<< HEAD
                                     <Dropdown.Item href="#" onClick={() => handleBlockchainChange('AVAX')}>Avalanche</Dropdown.Item>
                                     <Dropdown.Item href="#" onClick={() => handleBlockchainChange('ETH')}>Ethereum</Dropdown.Item>
                                     <Dropdown.Item href="#" onClick={() => handleBlockchainChange('FTM')}>Fantom</Dropdown.Item>
                                     <Dropdown.Item href="#" onClick={() => handleBlockchainChange('GLMR')}>Moonbeam</Dropdown.Item>
                                     <Dropdown.Item href="#" onClick={() => handleBlockchainChange('MATIC')}>Polygon</Dropdown.Item>
+=======
+                                    <Dropdown.Item href="#">Avalanche</Dropdown.Item>
+                                    <Dropdown.Item href="#">Cosmoshub</Dropdown.Item>
+                                    <Dropdown.Item href="#">Ethereum</Dropdown.Item>
+                                    <Dropdown.Item href="#">Fantom</Dropdown.Item>
+                                    <Dropdown.Item href="#">Moonbeam</Dropdown.Item>
+                                    <Dropdown.Item href="#">Osmosis</Dropdown.Item>
+                                    <Dropdown.Item href="#">Polygon</Dropdown.Item>
+                                    <Dropdown.Item href="#">Terra</Dropdown.Item>
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                     </Dropdown.Menu>
                                 </Dropdown>
                             </div>
@@ -472,7 +519,11 @@ const TodayPicks = () => {
                         <div className='content-inner'>
                             {
                                 data.slice(0,visible).map((item,index) => (
+<<<<<<< HEAD
                                     <Link to={"/ItemDetails?chainId=" + item.raw?.collection.chainId + "&collection=" + item.raw?.collection.contractAddress + "&tokenId=" + item.raw?.tokenId} key={index} className={`sc-card-product menu_card style-h7 ${item.feature ? 'comingsoon' : '' } `}>
+=======
+                                    <Link to={"/item-details-01?chainId=" + item.raw?.collection.chainId + "&collection=" + item.raw?.collection.contractAddress + "&tokenId=" + item.raw?.tokenId} key={index} className={`sc-card-product menu_card style-h7 ${item.feature ? 'comingsoon' : '' } `}>
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                         <div>
                                             
                                             <div className="card-media">
@@ -488,6 +539,7 @@ const TodayPicks = () => {
                                                     </div>
                                                     <div className="info">
                                                         <span>Owned By</span>
+<<<<<<< HEAD
                                                         <h6> <Link to="/Authors-Profile">{maskAddress(item.nameAuthor)}</Link> </h6>
                                                     </div>
                                                 </div>
@@ -510,6 +562,26 @@ const TodayPicks = () => {
                                                 <button onClick={() => setModalShow(true)} className="sc-button style bag fl-button pri-3 no-bg"><span>Buy Now</span></button>
                                                 <Link to="/activity-01" className="view-history reload">View History</Link>
                                             </div> */}
+=======
+                                                        <h6> <Link to="/author-02">{maskAddress(item.nameAuthor)}</Link> </h6>
+                                                    </div>
+                                                </div>
+                                                <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link>
+                                            </div>
+                                            <div className="meta-info">
+                                                <div className="author">
+                                                    <div className="info style2">
+                                                        <span>Price</span>
+                                                        <span className="pricing">{item.price}</span>
+                                                    </div>
+                                                </div>
+                                                <div className="tags">{item.tags}</div>
+                                            </div>
+                                            <div className="card-bottom">
+                                                <button onClick={() => setModalShow(true)} className="sc-button style bag fl-button pri-3 no-bg"><span>Buy Now</span></button>
+                                                {/* <Link to="/activity-01" className="view-history reload">View History</Link> */}
+                                            </div>
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                         </div>
                                     </Link>
                                 ))

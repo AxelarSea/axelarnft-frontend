@@ -4,11 +4,14 @@ import icon1 from '../../../assets/images/icon/Wallet.png'
 import icon2 from '../../../assets/images/icon/Category.png'
 import icon3 from '../../../assets/images/icon/Image2.png'
 import icon4 from '../../../assets/images/icon/Bookmark.png'
+<<<<<<< HEAD
 import axelarlogo from '../../../assets/images/logo/axelar.svg'
 import cd from '../../../assets/images/logo/ContributionDAO.svg'
 import LogoSupport from '../../../assets/images/logo/Logo-Support.svg';
 import WeSupport from '../../../assets/images/logo/We-Support.svg';
 import Bgfoot from '../../../assets/images/backgroup-secsion/bgtoppage-w.jpg'
+=======
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
 
 const Create = () => {
     const data = [
@@ -39,8 +42,13 @@ const Create = () => {
     ]
     return (
         <section className="tf-box-icon live-auctions tf-section style7 bg-style">
+<<<<<<< HEAD
         <div className="themesflat-container"  style={{marginBottom:'4rem'}}>
             <div className="row" >
+=======
+        <div className="themesflat-container">
+            <div className="row">
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                 <div className="col-xl-4 col-lg-12 col-md-12">
                     <div className="heading-live-auctions style2 mg-t-3 mg-bt-22">
                         <h3 className="heading-fill mg-bt-16">One-stop Interoperable NFT Marketplace</h3>
@@ -61,6 +69,7 @@ const Create = () => {
                 </div> 
             </div>                 
         </div>
+<<<<<<< HEAD
         <div className='tf-section d-flex flex-column align-items-center justify-content-center' style={{marginBottom:'6rem',backgroundColor:'gray'}}>
                 <img src={WeSupport} style={{marginBottom:'4rem'}} alt="" width="137px" height="33px" />
                 <img src={LogoSupport} alt="" />
@@ -72,6 +81,8 @@ const Create = () => {
                 <img src={cd} alt="" style={{marginLeft:'2rem'}}/>
             </div>
         </div>
+=======
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     </section>
     );
 }

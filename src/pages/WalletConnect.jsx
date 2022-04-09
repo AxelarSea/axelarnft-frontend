@@ -24,6 +24,10 @@ const WalletConnect = () => {
   const [userBalance, setUserBalance] = useState(null);
   const [connButtonText, setConnButtonText] = useState("Connect Wallet");
   const [keplrAddress, setKeplrAddress] = useState("");
+<<<<<<< HEAD
+=======
+  const [terraWallet, setTerraWallet] = useState(window.localStorage.getItem("TERRA_WALLET") || "TERRA_STATION")
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
 
   const {
     status,
@@ -93,6 +97,11 @@ const WalletConnect = () => {
 
   function connectTerra() {
     connect("EXTENSION");
+<<<<<<< HEAD
+=======
+    window.localStorage.setItem("TERRA_WALLET", "TERRA_STATION");
+    setTerraWallet("TERRA_STATION")
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
   }
 
   async function refreshKeplr() {
@@ -100,6 +109,11 @@ const WalletConnect = () => {
     const offlineSigner = window.keplr.getOfflineSigner(chainId);
     const accounts = await offlineSigner.getAccounts();
     setKeplrAddress(accounts[0]?.address || "");
+<<<<<<< HEAD
+=======
+    window.localStorage.setItem("TERRA_WALLET", "KEPLR");
+    setTerraWallet("KEPLR")
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
   }
 
   async function connectKeplr() {
@@ -206,7 +220,11 @@ const WalletConnect = () => {
       // Make sure that the gas Prices are higher than the minimum gas Prices accepted by chain validators and RPC/REST endpoint.
       gasPriceStep: {
           low: 0.01,
+<<<<<<< HEAD
           average: 0.3,
+=======
+          average: 0.015,
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
           high: 0.04
       }
     });
@@ -229,6 +247,7 @@ const WalletConnect = () => {
       title: "Terra Station",
       description: "Terra Testnet",
       onClick: connectTerra,
+<<<<<<< HEAD
       address: wallets[0]?.terraAddress,
     },
     // {
@@ -238,6 +257,17 @@ const WalletConnect = () => {
     //   onClick: connectKeplr,
     //   address: keplrAddress,
     // },
+=======
+      address: terraWallet == "TERRA_STATION" ? wallets[0]?.terraAddress : "",
+    },
+    {
+      img: img2,
+      title: "Keplr",
+      description: "Terra Testnet",
+      onClick: connectKeplr,
+      address: terraWallet == "KEPLR" ? keplrAddress : "",
+    },
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     // {
     //     img: img3,
     //     title: 'Fortmatic',
@@ -272,7 +302,13 @@ const WalletConnect = () => {
 
   useEffect(() => {
     connectWalletHandler();
+<<<<<<< HEAD
     // refreshKeplr();
+=======
+    if (terraWallet == "KEPLR") {
+      refreshKeplr();
+    }
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
   }, [])
 
   return (

@@ -31,6 +31,11 @@ const CardModal = (props) => {
   const [balance, setBalance] = useState(0);
   const [metamaskAccount, setMetamaskAccount] = useState("");
 
+<<<<<<< HEAD
+=======
+  const [terraWallet, setTerraWallet] = useState(window.localStorage.getItem("TERRA_WALLET") || "TERRA_STATION")
+
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
   async function buyOnClick() {
     if (!connectedWallet) {
       window.alert("Please connect to terra station wallet");
@@ -45,7 +50,11 @@ const CardModal = (props) => {
       props.setBuyNowModal(false)
       setModalShow(true)
       setProcessing(true);
+<<<<<<< HEAD
       await buyERC721(connectedWallet, props.chainId, props.collectionAddress, props.tokenId, props.listTokenAddress, props.listPrice);
+=======
+      await buyERC721(terraWallet == "TERRA_STATION" ? connectedWallet : terraWallet, props.chainId, props.collectionAddress, props.tokenId, props.listTokenAddress, props.listPrice);
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
       window.alert("Buy success");
     } finally {
       setProcessing(false);
@@ -66,7 +75,11 @@ const CardModal = (props) => {
 
   useEffect(() => {
     const priceType = crossChainTokenLabel(props.chainId, props.listTokenAddress)
+<<<<<<< HEAD
     setPriceType(priceType);
+=======
+    setPriceType("a" + priceType);
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     setYouPayType(priceType);
     
     setPricePic(priceType == 'UST' ? AustLogo : AlunaLogo);
@@ -108,9 +121,14 @@ const CardModal = (props) => {
           <div
             className="w-50"
             style={{
+<<<<<<< HEAD
               backgroundColor: "rgb(245 245 245)",
               borderRight: "1px solid white",
               borderRadius:"10px"
+=======
+              backgroundColor: "#343444",
+              borderRight: "0.5px solid grey",
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
             }}
           >
             <div className="d-flex justify-content-between align-items-center">
@@ -149,7 +167,11 @@ const CardModal = (props) => {
               </p>
             </div>
           </div>
+<<<<<<< HEAD
           <div className="w-50" style={{ backgroundColor: "rgb(245 245 245)",borderLeft: "1px solid white",borderRadius:"10px"}}>
+=======
+          <div className="w-50" style={{ backgroundColor: "#343444" }}>
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
             <div className="d-flex justify-content-between align-items-center">
               <p style={{ fontSize: "14px", marginLeft: "5px" }}>You pay</p>
               <p style={{ fontSize: "14px", marginRight: "5px" }}>
@@ -228,12 +250,16 @@ const CardModal = (props) => {
           <p> You want to Receive NFT</p>
         </div>
         <div className="d-flex justify-content-between">
+<<<<<<< HEAD
           <p> 
             To 
             <a style={{ backgroundColor: "rgb(245 245 245)",borderRadius:"10px"}}>
               {maskAddress(metamaskAccount)}
             </a> 
           </p>
+=======
+          <p> To {maskAddress(metamaskAccount)} </p>
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
         </div>
 
         <button

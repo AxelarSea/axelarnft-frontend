@@ -149,13 +149,21 @@ const LiveAuction = () => {
                                                                             </div>
                                                                             <div className="info">
                                                                                 <span>Creator</span>
+<<<<<<< HEAD
                                                                                 <h6> <Link to="/Authors-Profile">{item.nameAuthor}</Link> </h6>
+=======
+                                                                                <h6> <Link to="/author-02">{item.nameAuthor}</Link> </h6>
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                                                             </div>
                                                                         </div>
                                                                         <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link>
                                                                     </div>
                                                                     <div className="card-media">
+<<<<<<< HEAD
                                                                         <Link to="/ItemDetails"><img src={item.img} alt="Axies" /></Link>
+=======
+                                                                        <Link to="/item-details-01"><img src={item.img} alt="Axies" /></Link>
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                                                         <div className="featured-countdown">
                                                                             <span className="slogan"></span>
                                                                             <Countdown date={Date.now() + 500000000}>
@@ -167,7 +175,11 @@ const LiveAuction = () => {
                                                                         </div>
                                                                     </div>
                                                                     <div className="card-title">
+<<<<<<< HEAD
                                                                         <h5><Link to="/ItemDetails">"{item.title}</Link></h5>
+=======
+                                                                        <h5><Link to="/item-details-01">"{item.title}</Link></h5>
+>>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                                                     </div>
                                                                     <div className="meta-info">
                                                                         <div className="author">
