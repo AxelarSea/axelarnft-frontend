@@ -9,12 +9,8 @@ module.exports = function override(config) {
         "http": require.resolve("stream-http"),
         "https": require.resolve("https-browserify"),
         "os": require.resolve("os-browserify"),
-<<<<<<< HEAD
-        "url": require.resolve("url")
-=======
         "url": require.resolve("url"),
         "path": require.resolve("path-browserify"),
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     })
     config.resolve.fallback = fallback;
     config.plugins = (config.plugins || []).concat([

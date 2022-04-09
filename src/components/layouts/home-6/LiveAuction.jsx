@@ -120,11 +120,7 @@ const LiveAuction = () => {
                                                             <div className="slider-item">										
                                                                 <div className="sc-card-product">
                                                                     <div className="card-media">
-<<<<<<< HEAD
                                                                         <Link to="/ItemDetails"><img src={item.img} alt="axies" /></Link>
-=======
-                                                                        <Link to="/item-details-01"><img src={item.img} alt="axies" /></Link>
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                                                         <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link>
                                                                         <div className="featured-countdown">
                                                                             <span className="slogan"></span>
@@ -137,11 +133,7 @@ const LiveAuction = () => {
                                                                         </div>
                                                                     </div>
                                                                     <div className="card-title">
-<<<<<<< HEAD
                                                                         <h3><Link to="/ItemDetails">"{item.title}</Link></h3>
-=======
-                                                                        <h3><Link to="/item-details-01">"{item.title}</Link></h3>
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                                                         <div className="tags">{item.tags}</div>
                                                                     </div>
                                                                     <div className="meta-info">

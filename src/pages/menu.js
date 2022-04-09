@@ -49,11 +49,7 @@ const menus = [
     {
         id: 2,
         name: 'Explore',
-<<<<<<< HEAD
         links: '/Explore',
-=======
-        links: '/explore-04',
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
         
     },{
         id: 3,
@@ -64,11 +60,7 @@ const menus = [
     {
         id: 4,
         name: 'Profile',
-<<<<<<< HEAD
         links: '/Authors-Profile',
-=======
-        links: '/authors-02',
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
         
     },
     {

@@ -12,8 +12,6 @@ const networkData = {
     },
     blockExplorerUrls: ['https://ropsten.etherscan.io'],
   },
-<<<<<<< HEAD
-=======
   80001: {
     chainId: '0x13881',
     chainName: 'Polygon Mumbai Testnet',
@@ -25,7 +23,6 @@ const networkData = {
     },
     blockExplorerUrls: ['https://mumbai.polygonscan.com/'],
   },
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
   43113: {
     chainId: '0xA869',
     chainName: 'Avalanche FUJI Testnet',
@@ -48,8 +45,6 @@ const networkData = {
     },
     blockExplorerUrls: ['https://testnet.ftmscan.com'],
   },
-<<<<<<< HEAD
-=======
   1287: {
     chainId: '0x507',
     chainName: 'Moonbase Alpha Testnet',
@@ -61,7 +56,6 @@ const networkData = {
     },
     blockExplorerUrls: ['https://moonbase.moonscan.io'],
   },
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
 };
 
 export default async function switchChain(chainId) {

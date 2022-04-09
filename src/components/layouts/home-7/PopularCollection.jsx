@@ -91,21 +91,12 @@ const PopularCollection = () => {
         setVisible((prevValue) => prevValue + 3);
     }
     return (
-<<<<<<< HEAD
         <section className="tf-section2 live-auctions style4 home4 live-auctions-style7" >
             <div className="themesflat-container">
                 {/* <div className='d-flex flex-column align-items-center justify-content-center' style={{marginBottom:'6rem'}}>
                 <img src={WeSupport} style={{marginBottom:'4rem'}} alt="" width="137px" height="33px" />
                 <img src={LogoSupport} alt="" />
                 </div> */}
-=======
-        <section className="tf-section live-auctions style4 home4 live-auctions-style7" >
-            <div className="themesflat-container">
-                <div className='d-flex flex-column align-items-center justify-content-center' style={{marginBottom:'6rem'}}>
-                <img src={WeSupport} style={{marginBottom:'4rem'}} alt="" width="137px" height="33px" />
-                <img src={LogoSupport} alt="" />
-                </div>
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
             
 
                 <div className="row">
@@ -132,17 +123,10 @@ const PopularCollection = () => {
                                     <div className="card-bottom">
                                         <div className="author">
                                             <div className="content">
-<<<<<<< HEAD
                                                 <h5><Link to="/Collection">{item.title}</Link></h5>
                                                 <div className="infor">
                                                     <span>Created by</span>
                                                     <span className="name"><Link to="/Authors-Profile">{item.name}</Link></span>
-=======
-                                                <h5><Link to="/authors-03">{item.title}</Link></h5>
-                                                <div className="infor">
-                                                    <span>Created by</span>
-                                                    <span className="name"><Link to="/authors-02">{item.name}</Link></span>
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                                 </div>
                                             </div>
                                         </div>

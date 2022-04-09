@@ -602,19 +602,11 @@ const Authors03 = () => {
                                                                     <div className="tags">{data.tags}</div>
                                                                 </div>
                                                                 <div className="card-bottom style-explode">
-<<<<<<< HEAD
                                                                     <div className="Price">
                                                                         <span>Price</span>
                                                                         <div className="Price-details">
                                                                             <h5>{data.Price}</h5>
                                                                             <span>= {data.PriceChange}</span>
-=======
-                                                                    <div className="price">
-                                                                        <span>Price</span>
-                                                                        <div className="price-details">
-                                                                            <h5>{data.price}</h5>
-                                                                            <span>= {data.priceChange}</span>
->>>>>>> 33fdb633f6a647eec98d006e8311eecd628ccd72
                                                                         </div>
                                                                     </div>
                                                                     <Link to="/activity-01" className="view-history reload">View History</Link>

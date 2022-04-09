@@ -26,7 +26,6 @@ const Footer = () => {
     const accountList = [
         {
             title: "Authors",
-<<<<<<< HEAD
             link: ""
         },
         {
@@ -40,27 +39,11 @@ const Footer = () => {
         {
             title: "Create Item",
             link: ""
-=======
-            link: "/authors-01"
-        },
-        {
-            title: "Collection",
-            link: "/wallet-connect"
-        },
-        {
-            title: "Author Profile",
-            link: "/edit-profile"
-        },
-        {
-            title: "Create Item",
-            link: "/create-item"
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
         },
     ]
     const resourcesList = [
         {
             title: "Help & Support",
-<<<<<<< HEAD
             link: ""
         },
         {
@@ -74,21 +57,6 @@ const Footer = () => {
         {
             title: "Activity",
             link: ""
-=======
-            link: "/help-center"
-        },
-        {
-            title: "Live Auctions",
-            link: "/live-auctions"
-        },
-        {
-            title: "Item Details",
-            link: "/item-details-01"
-        },
-        {
-            title: "Activity",
-            link: "/activity-01"
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
         },
     ]
     const companyList = [

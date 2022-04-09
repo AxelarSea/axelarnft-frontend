@@ -565,11 +565,7 @@ const TodayPicks = () => {
                                                     data.dataContent.slice(0,visible).map (item=>(
                                                     <div key={item.id} className={`sc-card-product explode style2 mg-bt ${item.feature ? 'comingsoon' : '' } `}>                               
                                                         <div className="card-media">
-<<<<<<< HEAD
                                                             <Link to="/ItemDetails"><img src={item.img} alt="Axies" /></Link>
-=======
-                                                            <Link to="/item-details-01"><img src={item.img} alt="Axies" /></Link>
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                                             <div className="button-place-bid">
                                                                 <button onClick={() => setModalShow(true)} className="sc-button style-place-bid style bag fl-button pri-3"><span>Buy Now</span></button>
                                                             </div>
@@ -577,11 +573,7 @@ const TodayPicks = () => {
                                                             <div className="coming-soon">{item.feature}</div>
                                                         </div>
                                                         <div className="card-title">
-<<<<<<< HEAD
                                                             <h5><Link to="/ItemDetails">"{item.title}"</Link></h5>
-=======
-                                                            <h5><Link to="/item-details-01">"{item.title}"</Link></h5>
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                                             
                                                         </div>
                                                         <div className="meta-info">

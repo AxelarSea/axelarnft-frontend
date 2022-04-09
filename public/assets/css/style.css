@@ -239,10 +239,7 @@ img {
     max-width             : 100%;
     vertical-align        : middle;
     -ms-interpolation-mode: bicubic
-<<<<<<< HEAD
     
-=======
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
 }
 
 p {
@@ -1349,11 +1346,7 @@ a:focus {
     --primary-color5: #030303;
     --primary-color6: #ffffff;
     --primary-color7: #343444;
-<<<<<<< HEAD
     --bg-section: #14141F;
-=======
-    /* --bg-section: #14141F; */
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     --bg-section2 : #14141F;
     --primary-color8: #fff;
     --primary-color9: #8A8AA0;
@@ -1378,11 +1371,7 @@ header{
 }
 .header_1.header_2.style2 {
     height: 104px;
-<<<<<<< HEAD
     border-bottom: 1px solid grey;
-=======
-    border: none;
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     display: flex;
     align-items: center;
 }
@@ -1591,11 +1580,7 @@ header{
     font-size    : 18px;
     line-height  : 26px;
     font-weight  : 700;
-<<<<<<< HEAD
     color        : #000000;
-=======
-    color        : #fff;
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
     padding-right: 15.5px;
 }
 
@@ -2215,11 +2200,7 @@ header{
 -------------------------------------------------------------- */
 #footer {
     padding: 80px 0 80px;
-<<<<<<< HEAD
     background: var(--primary-color);
-=======
-    background: var(--bg-section);
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
 }
 
 #footer.style-2 {
@@ -3347,8 +3328,5 @@ header{
     top        : 0px;
     color      : #fff;
 }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8

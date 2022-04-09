@@ -71,11 +71,8 @@ button:disabled {
   to {
     transform: rotate(360deg);
   }
-<<<<<<< HEAD
 }
 
 .inputcopy::before{
   content: url('../src/assets/images/icon/ethwallet.svg');
-=======
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
 }

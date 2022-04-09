@@ -90,11 +90,7 @@ const LiveAuction = props => {
                                                                     </div>
                                                                 </div>
                                                                 <div className="card-media">
-<<<<<<< HEAD
                                                                     <Link to="/ItemDetails"><img src={item.img} alt="Axies" /></Link>
-=======
-                                                                    <Link to="/item-details-01"><img src={item.img} alt="Axies" /></Link>
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                                                     <Link to="/login" className="wishlist-button heart"><span className="number-like"> {item.wishlist}</span></Link>
                                                                     <div className="featured-countdown">
                                                                         <span className="slogan"></span>
@@ -107,11 +103,7 @@ const LiveAuction = props => {
                                                                     </div>
                                                                 </div>
                                                                 <div className="card-title">
-<<<<<<< HEAD
                                                                     <h5><Link to="/ItemDetails">"{item.title} "</Link></h5>
-=======
-                                                                    <h5><Link to="/item-details-01">"{item.title} "</Link></h5>
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                                                     <div className="tags">{item.tags}</div>
                                                                 </div>
                                                                 <div className="meta-info">
@@ -121,11 +113,7 @@ const LiveAuction = props => {
                                                                         </div>
                                                                         <div className="info">
                                                                             <span>Creator</span>
-<<<<<<< HEAD
                                                                             <h6> <Link to="/Authors-Profile">{item.nameAuthor}
-=======
-                                                                            <h6> <Link to="/author-02">{item.nameAuthor}
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                                                             </Link> </h6>
                                                                         </div>
                                                                     </div>

@@ -37,11 +37,7 @@ const TodayPicks = props => {
                                                 </div>
                                                 <div className="info">
                                                     <span>Collection</span>
-<<<<<<< HEAD
                                                     <h6> <Link to="/Authors-Profile">{item.nameCollection}</Link> </h6>
-=======
-                                                    <h6> <Link to="/author-02">{item.nameCollection}</Link> </h6>
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                                 </div>
                                             </div>
                                             <div className="menu_card">
@@ -65,20 +61,12 @@ const TodayPicks = props => {
                                             </div>
                                         </div>
                                         <div className="card-media">
-<<<<<<< HEAD
                                             <Link to="/ItemDetails"><img src={item.img} alt="Axies" /></Link>
-=======
-                                            <Link to="/item-details-01"><img src={item.img} alt="Axies" /></Link>
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                             <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link>
                                             <div className="coming-soon">{item.feature}</div>
                                         </div>
                                         <div className="card-title">
-<<<<<<< HEAD
                                             <h5 className="style2"><Link to="/ItemDetails">"{item.title}"</Link></h5>
-=======
-                                            <h5 className="style2"><Link to="/item-details-01">"{item.title}"</Link></h5>
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                             <div className="tags">{item.tags}</div>
                                         </div>
                                         <div className="meta-info">
@@ -88,11 +76,7 @@ const TodayPicks = props => {
                                                 </div>
                                                 <div className="info">
                                                     <span>Owned By</span>
-<<<<<<< HEAD
                                                     <h6> <Link to="/Authors-Profile">{item.nameAuthor}</Link> </h6>
-=======
-                                                    <h6> <Link to="/author-02">{item.nameAuthor}</Link> </h6>
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                                 </div>
                                             </div>
                                             <div className="Price">

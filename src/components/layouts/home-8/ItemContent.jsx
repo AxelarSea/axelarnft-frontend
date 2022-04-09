@@ -676,21 +676,13 @@ const ItemContent = () => {
                                                         </div>
                                                         <div className="info">
                                                             <span>Creator</span>
-<<<<<<< HEAD
                                                             <h6> <Link to="/Authors-Profile">{item.nameAuthor}</Link> </h6>
-=======
-                                                            <h6> <Link to="/author-02">{item.nameAuthor}</Link> </h6>
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                                         </div>
                                                     </div>
                                                     <button className="wishlist-button heart"><span className="number-like"> {item.wishlist}</span></button>
                                                 </div>
                                                 <div className="card-media">
-<<<<<<< HEAD
                                                     <Link to="/ItemDetails"><img src={item.img} alt="Axies" /></Link>
-=======
-                                                    <Link to="/item-details-01"><img src={item.img} alt="Axies" /></Link>
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                                     <div className="featured-countdown">
                                                         <span className="slogan"></span>
                                                         <Countdown date={Date.now() + 500000000}>
@@ -732,20 +724,12 @@ const ItemContent = () => {
                                         <div className="sc-card-product menu_card style-h7">
                                             <div className="wrap-media">
                                                 <div className="card-media">
-<<<<<<< HEAD
                                                     <Link to="/ItemDetails"><img src={item.img} alt="Axies" /></Link>                                                                                                            
-=======
-                                                    <Link to="/item-details-01"><img src={item.img} alt="Axies" /></Link>                                                                                                            
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                                 </div>
                                             </div>
                                             <div className="card-title">
                                                 <p>Item Name</p>
-<<<<<<< HEAD
                                                 <h4><Link to="/ItemDetails">{item.title}</Link></h4>
-=======
-                                                <h4><Link to="/item-details-01">{item.title}</Link></h4>
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
                                             </div>
                                             <div className="meta-info style">
                                                 <p>Creator</p>
