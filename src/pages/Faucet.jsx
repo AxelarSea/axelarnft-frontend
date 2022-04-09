@@ -52,12 +52,14 @@ const Faucet = () => {
             {
                 img: img5,
                 title: 'Moonbeam Faucet',
-                description: 'Sollicitudin iure conubia vivamus habitasse aptent, eligendi deserunt excepteur tellus non'
+                description: 'Sollicitudin iure conubia vivamus habitasse aptent, eligendi deserunt excepteur tellus non',
+                website:'https://glmr.supply/'
             },
             {
                 img: img6,
                 title: 'Polygon Faucet',
-                description: 'Purus irure lacinia eiusmod inventore bibendum habitant potenti non sint rem! Felis, asper'
+                description: 'Purus irure lacinia eiusmod inventore bibendum habitant potenti non sint rem! Felis, asper',
+                website:'https://faucet.polygon.technology/'
             },
             // {
             //     img: img7,
