@@ -31,6 +31,8 @@ const CardModal = (props) => {
   const [balance, setBalance] = useState(0);
   const [metamaskAccount, setMetamaskAccount] = useState("");
 
+  const [terraWallet, setTerraWallet] = useState(window.localStorage.getItem("TERRA_WALLET") || "TERRA_STATION")
+
   async function buyOnClick() {
     if (!connectedWallet) {
       window.alert("Please connect to terra station wallet");
@@ -45,7 +47,7 @@ const CardModal = (props) => {
       props.setBuyNowModal(false)
       setModalShow(true)
       setProcessing(true);
-      await buyERC721(connectedWallet, props.chainId, props.collectionAddress, props.tokenId, props.listTokenAddress, props.listPrice);
+      await buyERC721(terraWallet == "TERRA_STATION" ? connectedWallet : terraWallet, props.chainId, props.collectionAddress, props.tokenId, props.listTokenAddress, props.listPrice);
       window.alert("Buy success");
     } finally {
       setProcessing(false);

@@ -211,7 +211,7 @@ const WalletConnect = () => {
       // Make sure that the gas Prices are higher than the minimum gas Prices accepted by chain validators and RPC/REST endpoint.
       gasPriceStep: {
           low: 0.01,
-          average: 0.3,
+          average: 0.015,
           high: 0.04
       }
     });
@@ -277,7 +277,9 @@ const WalletConnect = () => {
 
   useEffect(() => {
     connectWalletHandler();
-    refreshKeplr();
+    if (terraWallet == "KEPLR") {
+      refreshKeplr();
+    }
   }, [])
 
   return (
