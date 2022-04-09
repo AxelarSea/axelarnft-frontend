@@ -41,11 +41,17 @@ const SliderStyle4 = () => {
                                 <p className="sub-heading mt-19 mb-40">Trade NFTs. Using any token. From any chain                
                                 </p>
 
-                                <div className="flat-bt-slider flex style2">
-                                    <Link to="/Explore" className="sc-button header-slider style style-1  fl-button pri-1"><span>Explore
-                                    </span></Link>
-                                    <Link to="/create-item" className="sc-button header-slider style style-1  fl-button pri-1" style={{color:'#FF4F0D' }}><span style={{textAlign:'center'}}>Sell NFT
-                                    </span></Link>
+                                <div className="flat-bt-slider flex style2 d-inline-flex p-2">
+                                    <Link to="/Explore" className="sc-button header-slider style style-1  fl-button pri-1">
+                                        <span style={{marginLeft:'-2.5rem'}}>
+                                            Explore
+                                        </span>
+                                    </Link>
+                                    <Link to="/create-item" className="sc-button header-slider style style-1  fl-button pri-1">
+                                        <span style={{marginLeft:'-2.5rem'}}>
+                                            Sell NFT
+                                        </span>
+                                    </Link>
                                 </div>
                             </div>
                             <Swiper

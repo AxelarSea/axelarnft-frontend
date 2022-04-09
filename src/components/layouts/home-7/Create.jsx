@@ -8,7 +8,8 @@ import axelarlogo from '../../../assets/images/logo/axelar.svg'
 import cd from '../../../assets/images/logo/ContributionDAO.svg'
 import LogoSupport from '../../../assets/images/logo/Logo-Support.svg';
 import WeSupport from '../../../assets/images/logo/We-Support.svg';
-import Bgfoot from '../../../assets/images/backgroup-secsion/bgtoppage-w.jpg'
+import bgsupported from '../../../assets/images/backgroup-secsion/bgsupported.png'
+import { urlToHttpOptions } from 'url';
 
 const Create = () => {
     const data = [
@@ -61,11 +62,11 @@ const Create = () => {
                 </div> 
             </div>                 
         </div>
-        <div className='tf-section d-flex flex-column align-items-center justify-content-center' style={{marginBottom:'6rem',backgroundColor:'gray'}}>
+        <div className='tf-section d-flex flex-column align-items-center justify-content-center' style={{marginBottom:'6rem',backgroundColor:'#cfcfcf'}}>
                 <img src={WeSupport} style={{marginBottom:'4rem'}} alt="" width="137px" height="33px" />
                 <img src={LogoSupport} alt="" />
         </div>
-        <div className='d-flex flex-column align-items-center justify-content-center'>
+        <div className='d-flex flex-column align-items-center justify-content-center supported' style={{backgroundImage: 'bgsupported'}}>
             <h2 style={{marginBottom:'2rem',marginTop:'6rem'}}>Supported by</h2>
             <div className='flex-column align-items-center justify-content-center' style={{marginBottom:'8rem'}}>
                 <img src={axelarlogo} alt="" style={{marginRight:'2rem'}}/>

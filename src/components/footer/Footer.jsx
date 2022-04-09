@@ -1,8 +1,8 @@
 import { getDefaultNormalizer } from '@testing-library/react';
 import React, { useState ,useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import logodark from '../../assets/images/logo/logosvg.svg'
-import logofooter from '../../assets/images/logo/logosvg.svg'
+import logodark from '../../assets/images/logo/logoaxelarnft.svg'
+import logofooter from '../../assets/images/logo/logoaxelarnft.svg'
 const Footer = () => {
 
     const aboutList = [

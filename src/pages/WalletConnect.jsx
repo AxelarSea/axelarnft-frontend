@@ -237,7 +237,7 @@ const WalletConnect = () => {
       address: terraWallet == "TERRA_STATION" ? wallets[0]?.terraAddress : "",
     },
     {
-      img: img2,
+      img: img3,
       title: "Keplr",
       description: "Terra Testnet",
       onClick: connectKeplr,

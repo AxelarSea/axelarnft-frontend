@@ -228,7 +228,7 @@ input,
 select,
 textarea {
     font-family            : 'Urbanist', sans-serif;
-    color                  : var(--primary-color2);
+    color                  : var(--primary-color1);
     -webkit-font-smoothing : antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering         : optimizeLegibility;

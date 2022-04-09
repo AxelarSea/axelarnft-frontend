@@ -5,7 +5,7 @@ import DarkMode from './DarkMode';
 import logodark from '../../assets/images/logo/logo_dark.png'
 import avt from '../../assets/images/avatar/avt-2.jpg'
 import coin from '../../assets/images/logo/coin.svg'
-import logosvg from '../../assets/images/logo/logosvg.svg'
+import logosvg from '../../assets/images/logo/logoaxelarnft.svg'
 import web3 from '../../hooks/web3';
 import { useConnectedWallet } from '@terra-money/wallet-provider';
 
