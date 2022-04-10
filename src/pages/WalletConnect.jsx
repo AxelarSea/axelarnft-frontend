@@ -61,9 +61,12 @@ const WalletConnect = () => {
 
   // update account, will cause component re-render
   const accountChangedHandler = (newAccount) => {
-    // console.log(newAccount);
+    if (Array.isArray(newAccount)) {
+      newAccount = newAccount[0];
+    }
     setWeb3Account(newAccount);
     getAccountBalance(newAccount.toString());
+    // window.location.reload();
 
     // console.log(web3.eth.accounts[0]);
   };

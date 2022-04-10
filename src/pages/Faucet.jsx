@@ -53,7 +53,7 @@ const Faucet = () => {
                 img: img5,
                 title: 'Moonbeam Faucet',
                 description: 'Sollicitudin iure conubia vivamus habitasse aptent, eligendi deserunt excepteur tellus non',
-                website:'https://glmr.supply/'
+                website:'https://docs.moonbeam.network/learn/platform/networks/moonbase/'
             },
             {
                 img: img6,
