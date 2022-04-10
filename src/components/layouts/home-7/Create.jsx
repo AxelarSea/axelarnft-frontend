@@ -41,7 +41,7 @@ const Create = () => {
     return (
         <section className=" tf-box-icon live-auctions tf-section style7 bg-style">
         <div className="wrap-heading2 themesflat-container">
-            <div className="row" >
+            <div className="row" style={{paddingTop:'6rem'}}>
                 <div className="col-xl-4 col-lg-12 col-md-12">
                     <div className="heading-live-auctions style2 mg-t-3 mg-bt-22">
                         <h3 className="heading-fill mg-bt-16">One-stop Interoperable NFT Marketplace</h3>

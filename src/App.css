@@ -79,6 +79,6 @@ button:disabled {
 
 .wrap-heading2 {
   background-image: url('../public/assets/images/backgroup-secsion/bgsupported.png'); 
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }

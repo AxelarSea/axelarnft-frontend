@@ -41,21 +41,21 @@ const TopSeller = () => {
                 dataTopSellerContent: [
                     {
                         img: imgAuthor,
-                        name: 'CLONE X - X TAKASHI...',
+                        name: 'XelarGEN2',
                         mail: '0xF5ab…A754',
                         top: '1',
                         Price: '$32,893.53'
                     },
                     {
                         img: imgAuthor2,
-                        name: 'BoredApeYachtClub',
+                        name: 'INKstyle',
                         mail: '0xs4dfb…A141',
                         top: '2',
                         Price: '$28,425.24'
                     },
                     {
                         img: imgAuthor3,
-                        name: 'MetaWarden',
+                        name: 'PlantanimalNFT',
                         mail: '0xG341…A151',
                         top: '3',
                         Price: '$25,893.53'
@@ -129,33 +129,33 @@ const TopSeller = () => {
                 id: 2,
                 dataTopSellerContent: [
                     {
-                        img: imgAuthor2,
-                        name: 'BoredApeYachtClub',
+                        img: imgAuthor,
+                        name: 'XelarGEN2',
                         mail: '0xs4dfb…A141',
                         top: '1',
                         Price: '$28,425.24'
                     },
                     {
-                        img: imgAuthor,
-                        name: 'CLONE X - X TAKASHI...',
+                        img: imgAuthor2,
+                        name: 'INKstyle',
                         mail: '0xF5ab…A754',
                         top: '2',
                         Price: '$32,893.53'
                     },
                     {
-                        img: imgAuthor4,
-                        name: 'Galactic Punk',
+                        img: imgAuthor3,
+                        name: 'PlantanimalNFT',
                         mail: '0xF5ab…A754',
                         top: '3',
                         Price: '$20,123.22'
                     },
-                    {
-                        img: imgAuthor3,
-                        name: 'MetaWarden',
-                        mail: '0xG341…A151',
-                        top: '4',
-                        Price: '$25,893.53'
-                    },
+                    // {
+                    //     img: imgAuthor3,
+                    //     name: 'MetaWarden',
+                    //     mail: '0xG341…A151',
+                    //     top: '4',
+                    //     Price: '$25,893.53'
+                    // },
                     // {
                     //     img: img5,
                     //     name: 'Windsor Lane',
@@ -192,32 +192,32 @@ const TopSeller = () => {
                 dataTopSellerContent: [
                     {
                         img: imgAuthor,
-                        name: 'CLONE X - X TAKASHI...',
+                        name: 'XelarGEN2',
                         mail: '0xF5ab…A754',
                         top: '1',
                         Price: '$32,893.53'
                     },
                     {
                         img: imgAuthor2,
-                        name: 'BoredApeYachtClub',
+                        name: 'INKstyle',
                         mail: '0xs4dfb…A141',
                         top: '2',
                         Price: '$28,425.24'
                     },
                     {
-                        img: imgAuthor4,
-                        name: 'Galactic Punk',
+                        img: imgAuthor3,
+                        name: 'PlantanimalNFT',
                         mail: '0xF5ab…A754',
                         top: '3',
                         Price: '$20,123.22'
                     },
-                    {
-                        img: imgAuthor3,
-                        name: 'MetaWarden',
-                        mail: '0xG341…A151',
-                        top: '4',
-                        Price: '$25,893.53'
-                    },
+                    // {
+                    //     img: imgAuthor3,
+                    //     name: 'MetaWarden',
+                    //     mail: '0xG341…A151',
+                    //     top: '4',
+                    //     Price: '$25,893.53'
+                    // },
                     // {
                     //     img: img5,
                     //     name: 'Windsor Lane',

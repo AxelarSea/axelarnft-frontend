@@ -29,8 +29,8 @@ const PopularCollection = () => {
                 imgBottom2: img1Bottom2,
                 imgBottom3: img1Bottom3,
                 imgAuthor: imgAuthor1,
-                title: 'CLONE X - X TAKASHI...',
-                name: 'Mason Woodward',
+                title: 'XelarGEN2',
+                name: '0xF5ab…A754',
                 wishlist: '100'
             },
             {
@@ -39,8 +39,8 @@ const PopularCollection = () => {
                 imgBottom2: img2Bottom2,
                 imgBottom3: img2Bottom3,
                 imgAuthor: imgAuthor2,
-                title: 'MetaWarden',
-                name: 'Mason Woodward',
+                title: 'INKstyle',
+                name: '0xs4dfb…A141',
                 wishlist: '100'
             },
             {
@@ -49,8 +49,8 @@ const PopularCollection = () => {
                 imgBottom2: img3Bottom2,
                 imgBottom3: img3Bottom3,
                 imgAuthor: imgAuthor3,
-                title: 'BoredApeYachtClub',
-                name: 'Mason Woodward',
+                title: 'PlantanimalNFT',
+                name: '0xG341…A151',
                 wishlist: '100'
             },
             // {

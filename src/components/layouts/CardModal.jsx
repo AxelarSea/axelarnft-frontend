@@ -6,6 +6,8 @@ import AlunaLogo from "../../assets/images/icon/Luna.png";
 import AustLogo from "../../assets/images/icon/UST.png";
 import { buyERC721, crossChainTokenLabel, crossChainTokenSymbol } from "../../utils/api";
 import ProcessModal from './ProcessModal'
+import SelectTokenModal from "./SelectTokenModal";
+import SelectChainModal from './SelectChainModal'
 
 import { useConnectedWallet, useLCDClient } from "@terra-money/wallet-provider";
 import web3 from "../../hooks/web3";
@@ -13,6 +15,8 @@ import { maskAddress } from "../../utils/address";
 
 const CardModal = (props) => {
   const lcd = useLCDClient();
+
+  const [selectTokenModalShow , setSelectTokenModalShow]  = useState(false);
 
   const [modalShow , setModalShow] = useState(false);
 
@@ -32,6 +36,11 @@ const CardModal = (props) => {
   const [metamaskAccount, setMetamaskAccount] = useState("");
 
   const [terraWallet, setTerraWallet] = useState(window.localStorage.getItem("TERRA_WALLET") || "TERRA_STATION")
+
+  const tokenOnClick = () => {
+    setSelectTokenModalShow(true)
+    
+  }
 
   async function buyOnClick() {
     if (terraWallet == "TERRA_STATION") {
@@ -57,6 +66,8 @@ const CardModal = (props) => {
     }
     
   }
+
+  
 
   async function refreshBalance() {
     const accounts = await web3.eth.getAccounts();
@@ -129,6 +140,7 @@ const CardModal = (props) => {
                 id="sort-by"
                 className="dropdown"
                 style={{ marginLeft: "5px" }}
+                onClick={() => tokenOnClick()}
               >
                 <a
                   className="btn-selector nolink"
@@ -166,6 +178,7 @@ const CardModal = (props) => {
                 id="sort-by"
                 className="dropdown"
                 style={{ marginLeft: "5px" }}
+                
               >
                 <a
                   className="btn-selector nolink"
@@ -254,11 +267,17 @@ const CardModal = (props) => {
         </button>
       </div>
       
+      
     </Modal>
         <ProcessModal 
         onShow={modalShow}
         onHide={() => setModalShow(false)}
         />
+        <SelectTokenModal 
+        onShow={selectTokenModalShow}
+        onHide={() => setSelectTokenModalShow(false)}
+        />
+        
     </div>
     
   );
