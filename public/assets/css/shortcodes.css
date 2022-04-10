@@ -26,7 +26,7 @@
 
 .tf-section {
     padding: 80px 0;
-    background: var(--primary-color5);
+    background: var(--primary-color1);
     margin-bottom: 0 !important;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -224,7 +224,7 @@
     background: transparent;
 }
 .is_dark .sc-button {
-    color: #fff;
+    color: #FFEFE9;
 }
 .sc-button span {
     font-weight       : 700;
@@ -248,12 +248,12 @@
 .is_dark .sc-button.style-1:hover,
 .sc-button.fl-button:hover{
     border: 2px solid #fff;
-    background-color: #fff;
+    background-color: #FFEFE9;
 }
 
 .sc-button.fl-button:hover span,
 .sc-button.fl-button.active span {
-    color:#ffffff;
+    color:#FF4F0D;
 }
 
 /* button style icon */
@@ -275,9 +275,9 @@
 /* style-1 */
 .sc-button.style-1 {
     /* border    : linear-gradient(100.83deg, #FF4F0D 22.55%, #7AB694 81.21%); */
-    color     : #000000;
-    background: transparent none repeat scroll 0 0;
-    border-color: grey;
+    color     : #FF4F0D;
+    background-color: #FFEFE9;
+
  
 
 }
@@ -1724,6 +1724,7 @@
 .home-3 .flat-title-page {
     padding: 111px 0 228px;
 }
+
 .flat-title-page .overlay {
     position        : absolute;
     top             : 0;
@@ -1997,7 +1998,7 @@
 }
 .page-title-heading .heading {
     line-height: 58px;
-    color      : #fff;
+    color      : rgb(0, 0, 0);
 }
 
 /* breadcrumbs */
@@ -3694,7 +3695,7 @@ section.today-picks {
     -o-border-radius: 0 0 12px 12px;
     -moz-border-radius: 0 0 12px 12px;
      border-radius: 0 0 12px 12px;
-     background: var(--primary-color7);
+     background: #F8F8F8;
      border: none;
 }
 
@@ -6972,6 +6973,7 @@ button.accordion-button {
 
 .home-7 .tf-section.top-seller {
     padding: 76px 0 96px;
+    background-color: white;
 }
 
 .heading-live-auctions .see-all{
@@ -7182,7 +7184,13 @@ button.accordion-button {
 }
 
 .tf-section.live-auctions.style7 {
+    padding: 81px 0 0px;
+    background-color: white;
+} 
+
+.tf-section.live-auctions.style7.supported {
     padding: 81px 0 24px;
+    background-color: rgb(17, 16, 16);
 } 
 
 .heading-live-auctions.style2 .content {
@@ -8293,3 +8301,7 @@ hr.new1 {
 input[type="text"].big-dog::-webkit-input-placeholder {
     color: orange;
   }
+
+.home-7 .supported-by {
+    background-image: url(../../../src/assets/images/backgroup-secsion/bgsupported.png);
+}

@@ -8,7 +8,8 @@ import axelarlogo from '../../../assets/images/logo/axelar.svg'
 import cd from '../../../assets/images/logo/ContributionDAO.svg'
 import LogoSupport from '../../../assets/images/logo/Logo-Support.svg';
 import WeSupport from '../../../assets/images/logo/We-Support.svg';
-import Bgfoot from '../../../assets/images/backgroup-secsion/bgtoppage-w.jpg'
+import bgsupported from '../../../assets/images/backgroup-secsion/bgsupported.png'
+import { urlToHttpOptions } from 'url';
 
 const Create = () => {
     const data = [
@@ -38,9 +39,9 @@ const Create = () => {
         },
     ]
     return (
-        <section className="tf-box-icon live-auctions tf-section style7 bg-style">
-        <div className="themesflat-container"  style={{marginBottom:'4rem'}}>
-            <div className="row" >
+        <section className=" tf-box-icon live-auctions tf-section style7 bg-style">
+        <div className="wrap-heading2 themesflat-container">
+            <div className="row" style={{paddingTop:'6rem'}}>
                 <div className="col-xl-4 col-lg-12 col-md-12">
                     <div className="heading-live-auctions style2 mg-t-3 mg-bt-22">
                         <h3 className="heading-fill mg-bt-16">One-stop Interoperable NFT Marketplace</h3>
@@ -59,18 +60,18 @@ const Create = () => {
                         }
                     </div>  
                 </div> 
+            </div>
+            <div className='d-flex flex-column align-items-center justify-content-center supported-by'>
+                <h2 style={{marginBottom:'4rem',marginTop:'4rem'}}>Supported by</h2>
+                <div className='flex-column align-items-center justify-content-center' style={{marginBottom:'6rem'}}>
+                    <img src={axelarlogo} alt="" style={{marginRight:'2rem'}}/>
+                    <img src={cd} alt="" style={{marginLeft:'2rem'}}/>
+                </div>
             </div>                 
         </div>
-        <div className='tf-section d-flex flex-column align-items-center justify-content-center' style={{marginBottom:'6rem',backgroundColor:'gray'}}>
+        <div className='tf-section d-flex flex-column align-items-center justify-content-center' style={{marginBottom:'-2rem',backgroundColor:'#F8F8F8'}}>
                 <img src={WeSupport} style={{marginBottom:'4rem'}} alt="" width="137px" height="33px" />
                 <img src={LogoSupport} alt="" />
-        </div>
-        <div className='d-flex flex-column align-items-center justify-content-center'>
-            <h2 style={{marginBottom:'2rem',marginTop:'6rem'}}>Supported by</h2>
-            <div className='flex-column align-items-center justify-content-center' style={{marginBottom:'8rem'}}>
-                <img src={axelarlogo} alt="" style={{marginRight:'2rem'}}/>
-                <img src={cd} alt="" style={{marginLeft:'2rem'}}/>
-            </div>
         </div>
     </section>
     );

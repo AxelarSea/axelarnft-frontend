@@ -6,7 +6,7 @@ import Countdown from "react-countdown";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import img1 from "../assets/images/box-item/image-box-6.jpg";
-import avt from "../assets/images/avatar/satoshi.png";
+import avt from "../assets/images/avatar/satoshi.svg";
 
 import AlunaLogo from "../assets/images/icon/Luna.png";
 import AustLogo from "../assets/images/icon/UST.png";

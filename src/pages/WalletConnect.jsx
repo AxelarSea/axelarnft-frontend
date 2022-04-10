@@ -240,7 +240,7 @@ const WalletConnect = () => {
       address: terraWallet == "TERRA_STATION" ? wallets[0]?.terraAddress : "",
     },
     {
-      img: img2,
+      img: img3,
       title: "Keplr",
       description: "Terra Testnet",
       onClick: connectKeplr,
@@ -293,18 +293,18 @@ const WalletConnect = () => {
         <div className="themesflat-container">
           <div className="row">
             <div className="col-md-12">
-              <div className="page-title-heading mg-bt-12">
+              <div className="page-title-heading mg-bt-12" style={{marginTop:'6rem', marginBottom:'2rem'}}>
                 <h1 className="heading text-center">Connect Wallet</h1>
               </div>
-              <div className="breadcrumbs style2">
+              {/* <div className="breadcrumbs style2">
                 <ul>
                   <li>
                     <Link to="/">Home</Link>
                   </li>
-                  {/* <li><Link to="#">Pages</Link></li> */}
+                  <li><Link to="#">Pages</Link></li>
                   <li>Connect Wallet</li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -313,9 +313,9 @@ const WalletConnect = () => {
         <div className="themesflat-container">
           <div className="row">
             <div className="col-12">
-              <h2 className="tf-title-heading ct style-2 mg-bt-12">
+              {/* <h2 className="tf-title-heading ct style-2 mg-bt-12">
                 Connect Your Wallet
-              </h2>
+              </h2> */}
               <h5 className="sub-title ct style-1 pad-400">
               Connect with one or more of our available wallet providers below in order to unlock the features of AxelarNFT.
               </h5>

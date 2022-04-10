@@ -228,7 +228,7 @@ input,
 select,
 textarea {
     font-family            : 'Urbanist', sans-serif;
-    color                  : var(--primary-color2);
+    color                  : var(--primary-color1);
     -webkit-font-smoothing : antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering         : optimizeLegibility;
@@ -2200,7 +2200,8 @@ header{
 -------------------------------------------------------------- */
 #footer {
     padding: 80px 0 80px;
-    background: var(--primary-color);
+    /* background: var(--primary-color); */
+    background-color: #F8F8F8;
 }
 
 #footer.style-2 {

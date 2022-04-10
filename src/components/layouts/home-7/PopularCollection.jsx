@@ -1,10 +1,10 @@
 import React , { useState } from 'react';
 import { Link } from 'react-router-dom'
-import imgTop1 from '../../../assets/images/box-item/img-top.svg'
-import img1Bottom1 from '../../../assets/images/box-item/img-demo.svg'
-import img1Bottom2 from '../../../assets/images/box-item/img-demo2.svg'
-import img1Bottom3 from '../../../assets/images/box-item/img-demo3.svg'
-import imgAuthor1 from '../../../assets/images/avatar/img-author.svg'
+import imgTop1 from '../../../assets/images/box-item/img-top1.png'
+import img1Bottom1 from '../../../assets/images/box-item/img1Bottom1.png'
+import img1Bottom2 from '../../../assets/images/box-item/img1Bottom2.png'
+import img1Bottom3 from '../../../assets/images/box-item/img1Bottom3.png'
+import imgAuthor1 from '../../../assets/images/avatar/img-author1.png'
 import imgTop2 from '../../../assets/images/box-item/img-top2.png'
 import img2Bottom1 from '../../../assets/images/box-item/img2Bottom1.png'
 import img2Bottom2 from '../../../assets/images/box-item/img2Bottom2.png'
@@ -29,8 +29,8 @@ const PopularCollection = () => {
                 imgBottom2: img1Bottom2,
                 imgBottom3: img1Bottom3,
                 imgAuthor: imgAuthor1,
-                title: 'CLONE X - X TAKASHI...',
-                name: 'Mason Woodward',
+                title: 'XelarGEN2',
+                name: '0xF5ab…A754',
                 wishlist: '100'
             },
             {
@@ -39,8 +39,8 @@ const PopularCollection = () => {
                 imgBottom2: img2Bottom2,
                 imgBottom3: img2Bottom3,
                 imgAuthor: imgAuthor2,
-                title: 'MetaWarden',
-                name: 'Mason Woodward',
+                title: 'INKstyle',
+                name: '0xs4dfb…A141',
                 wishlist: '100'
             },
             {
@@ -49,8 +49,8 @@ const PopularCollection = () => {
                 imgBottom2: img3Bottom2,
                 imgBottom3: img3Bottom3,
                 imgAuthor: imgAuthor3,
-                title: 'BoredApeYachtClub',
-                name: 'Mason Woodward',
+                title: 'PlantanimalNFT',
+                name: '0xG341…A151',
                 wishlist: '100'
             },
             // {

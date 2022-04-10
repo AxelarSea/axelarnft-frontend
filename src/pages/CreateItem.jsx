@@ -83,7 +83,7 @@ const CreateItem = () => {
         <div className="overlay"></div>
         <div className="themesflat-container">
           <div className="row">
-            <div className="col-md-12">
+            <div className="col-md-12" style={{marginTop:'6rem', marginBottom:'2rem'}}>
               <div className="page-title-heading mg-bt-12">
                 <h1 className="heading text-center">Create Item</h1>
               </div>

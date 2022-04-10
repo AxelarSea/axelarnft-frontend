@@ -81,17 +81,17 @@ const Faucet = () => {
                 <div className="overlay"></div>
                 <div className="themesflat-container">
                     <div className="row">
-                        <div className="col-md-12">
-                            <div className="page-title-heading mg-bt-12">
+                        <div className="col-md-12" style={{marginTop:'6rem', marginBottom:'2rem'}}>
+                            <div className="page-title-heading mg-bt-12" >
                                 <h1 className="heading text-center">Faucet</h1>
                             </div>
-                            <div className="breadcrumbs style2">
+                            {/* <div className="breadcrumbs style2">
                                 <ul>
                                     <li><Link to="/">Home</Link></li>
-                                    {/* <li><Link to="#">Pages</Link></li> */}
+                                    <li><Link to="#">Pages</Link></li>
                                     <li>Faucet</li>
                                 </ul>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>                    
