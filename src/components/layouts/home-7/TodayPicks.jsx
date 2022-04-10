@@ -33,6 +33,7 @@ import polygonLogo from '../../../assets/images/icon/polygon-logo.svg'
 import avaxLogo from '../../../assets/images/icon/avax-logo.svg'
 import moonbeamLogo from '../../../assets/images/icon/moonbeam-logo.svg'
 import fantomLogo from '../../../assets/images/icon/fantom-logo.svg'
+import satoshi from '../../../assets/images/avatar/satoshi.svg'
 
 
 import imgTodayPick from '../../../assets/images/box-item/img-today-pick-demo.svg'
@@ -237,7 +238,7 @@ const TodayPicks = () => {
             img: x.metadata.image,
             title: x.collection.name + " #" + x.tokenId,
             tags: chainLabel(x.collection.chainId),
-            imgAuthor: '/static/media/satoshi.292d298576777494a217.png',
+            imgAuthor: satoshi,
             nameAuthor: x.owner,
             price: x.listPrice + " " + crossChainTokenLabel(x.collection.chainId, x.listTokenAddress),
             wishlist: "100",
@@ -305,7 +306,47 @@ const TodayPicks = () => {
                         <div className="col-md-12">
                             <div className="tf-soft">
                             <div className="soft-left">
-                                {/* <Dropdown>
+                                <Dropdown>
+                                    <Dropdown.Toggle id="dropdown-basic">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.16992 7.44043L11.9999 12.5504L20.7699 7.47043" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                            <path d="M12 21.61V12.54" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                            <path d="M9.92965 2.48028L4.58965 5.44028C3.37965 6.11028 2.38965 7.79028 2.38965 9.17028V14.8203C2.38965 16.2003 3.37965 17.8803 4.58965 18.5503L9.92965 21.5203C11.0696 22.1503 12.9396 22.1503 14.0796 21.5203L19.4196 18.5503C20.6296 17.8803 21.6196 16.2003 21.6196 14.8203V9.17028C21.6196 7.79028 20.6296 6.11028 19.4196 5.44028L14.0796 2.47028C12.9296 1.84028 11.0696 1.84028 9.92965 2.48028Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg>
+                                        <span>Blockchain</span>
+                                    </Dropdown.Toggle>
+
+                                    <Dropdown.Menu style={{ margin: 0 }}>
+                                    <Dropdown.Item href="#" onClick={() => handleBlockchainChange('AVAX')}>Avalanche</Dropdown.Item>
+                                    <Dropdown.Item href="#" onClick={() => handleBlockchainChange('ETH')}>Ethereum</Dropdown.Item>
+                                    <Dropdown.Item href="#" onClick={() => handleBlockchainChange('FTM')}>Fantom</Dropdown.Item>
+                                    <Dropdown.Item href="#" onClick={() => handleBlockchainChange('GLMR')}>Moonbeam</Dropdown.Item>
+                                    <Dropdown.Item href="#" onClick={() => handleBlockchainChange('MATIC')}>Polygon</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                                <Dropdown>
+                                    <Dropdown.Toggle id="dropdown-basic">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.67188 14.3298C8.67188 15.6198 9.66188 16.6598 10.8919 16.6598H13.4019C14.4719 16.6598 15.3419 15.7498 15.3419 14.6298C15.3419 13.4098 14.8119 12.9798 14.0219 12.6998L9.99187 11.2998C9.20187 11.0198 8.67188 10.5898 8.67188 9.36984C8.67188 8.24984 9.54187 7.33984 10.6119 7.33984H13.1219C14.3519 7.33984 15.3419 8.37984 15.3419 9.66984" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                            <path d="M12 6V18" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                        </svg> 
+                                        <span>Price range</span>
+                                    </Dropdown.Toggle>
+
+                                    <Dropdown.Menu style={{ margin: 0 }}>
+                                    <Dropdown.Item href="#">
+                                        <div className='sort-filter'>
+                                            <span>Price: Low to High</span>
+                                            <i className="fal fa-check"></i>
+                                        </div></Dropdown.Item>
+                                    <Dropdown.Item href="#"><div className='sort-filter'>
+                                            <span>Price: High to Low</span>
+                                            <i className="fal fa-check"></i>
+                                        </div></Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                                {/* {/* <Dropdown>
                                     <Dropdown.Toggle id="dropdown-basic">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 10H7C9 10 10 9 10 7V5C10 3 9 2 7 2H5C3 2 2 3 2 5V7C2 9 3 10 5 10Z" stroke="white" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
@@ -346,31 +387,9 @@ const TodayPicks = () => {
                                 </Dropdown> */}
                                 {/* <Dropdown>
 =======
-                                </Dropdown>
-                                <Dropdown>
->>>>>>> fbc57f3d23fc30983d8d562b3367c6eed39dd8e8
-                                    <Dropdown.Toggle id="dropdown-basic">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8.67188 14.3298C8.67188 15.6198 9.66188 16.6598 10.8919 16.6598H13.4019C14.4719 16.6598 15.3419 15.7498 15.3419 14.6298C15.3419 13.4098 14.8119 12.9798 14.0219 12.6998L9.99187 11.2998C9.20187 11.0198 8.67188 10.5898 8.67188 9.36984C8.67188 8.24984 9.54187 7.33984 10.6119 7.33984H13.1219C14.3519 7.33984 15.3419 8.37984 15.3419 9.66984" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                                            <path d="M12 6V18" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                                        </svg> 
-                                        <span>Price range</span>
-                                    </Dropdown.Toggle>
-
-                                    <Dropdown.Menu style={{ margin: 0 }}>
-                                    <Dropdown.Item href="#">
-                                        <div className='sort-filter'>
-                                            <span>Price: Low to High</span>
-                                            <i className="fal fa-check"></i>
-                                        </div></Dropdown.Item>
-                                    <Dropdown.Item href="#"><div className='sort-filter'>
-                                            <span>Price: High to Low</span>
-                                            <i className="fal fa-check"></i>
-                                        </div></Dropdown.Item>
-                                    </Dropdown.Menu>
-                                </Dropdown>
-                                <Dropdown>
+                                </Dropdown> */}
+                                
+                                {/* <Dropdown>
                                     <Dropdown.Toggle id="dropdown-basic">
                                         <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.0901 12.2799H6.1801V19.4799C6.1801 21.1599 7.0901 21.4999 8.2001 20.2399L15.7701 11.6399C16.7001 10.5899 16.3101 9.7199 14.9001 9.7199H11.8101V2.5199C11.8101 0.839898 10.9001 0.499897 9.7901 1.7599L2.2201 10.3599C1.3001 11.4199 1.6901 12.2799 3.0901 12.2799Z" stroke="white" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
@@ -385,7 +404,7 @@ const TodayPicks = () => {
                                     <Dropdown.Item href="#">Open for offers</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown> */}
-                                <Dropdown>
+                                {/* <Dropdown>
                                     <Dropdown.Toggle id="dropdown-basic">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.16992 7.44043L11.9999 12.5504L20.7699 7.47043" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -402,7 +421,7 @@ const TodayPicks = () => {
                                     <Dropdown.Item href="#" onClick={() => handleBlockchainChange('GLMR')}>Moonbeam</Dropdown.Item>
                                     <Dropdown.Item href="#" onClick={() => handleBlockchainChange('MATIC')}>Polygon</Dropdown.Item>
                                     </Dropdown.Menu>
-                                </Dropdown>
+                                </Dropdown> */}
                             </div>
                             <div className="soft-right">
                                 <Dropdown>
@@ -501,7 +520,7 @@ const TodayPicks = () => {
                                                 </div>
                                                 {/* <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link> */}
                                             </div>
-                                            <div className="meta-info " >
+                                            <div className="meta-info  " id='cardprice' >
                                                 <div className="author">
                                                     <div className="info style2 " style={{marginButtom:'1rem'}}>
                                                         <span>Price</span>

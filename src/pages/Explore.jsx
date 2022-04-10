@@ -4,6 +4,7 @@ import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import Explore from '../components/layouts/explore-04/Explore';
 import widgetSidebarData from '../assets/fake-data/data-widget-sidebar'
+import satoshi from '../assets/images/avatar/satoshi.svg'
 
 import HeaderStyle2 from '../components/header/HeaderStyle2';
 import { crossChainTokenLabel, fetchAllListedItems } from '../utils/api';
@@ -19,7 +20,7 @@ const Explore04 = () => {
           img: x.metadata.image,
           title: x.collection.name + " #" + x.tokenId,
           tags: chainLabel(x.collection.chainId),
-          imgAuthor: "/static/media/satoshi.292d298576777494a217.png",
+          imgAuthor: satoshi,
           nameAuthor: x.owner,
           price: x.listPrice + " " + crossChainTokenLabel(x.collection.chainId, x.listTokenAddress),
           priceChange: "$12.246",

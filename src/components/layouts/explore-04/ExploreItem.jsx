@@ -39,7 +39,7 @@ const ExploreItem = (props) => {
               key={index}
             >
               <div className="card-media">
-                <img src={item.img} alt="Axies" />
+                <img src={item.img} alt="AxelarNFT" />
                 <div className="button-place-bid">
                   <button
                     onClick={() => setModalShow(true)}
@@ -67,7 +67,7 @@ const ExploreItem = (props) => {
                   <div className="meta-info">
                     <div className="author">
                       <div className="avatar">
-                        <img src={item.imgAuthor} alt="Axies" />
+                        <img src={item.imgAuthor} alt="AxelarNFT" />
                       </div>
                       <div className="info">
                         <span>Owned By</span>
@@ -114,7 +114,7 @@ const ExploreItem = (props) => {
               className="sc-button loadmore fl-button pri-3"
               onClick={showMoreItems}
             >
-              <span>Load More</span>
+              <span >Load More</span>
             </Link>
           </div>
         )}

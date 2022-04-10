@@ -33,22 +33,22 @@ const SliderStyle4 = () => {
                 <div className="themesflat-container ">
                         <div className="wrap-heading flat-slider flex">
                             <div className="wrap-heading-content">
-                                <h2 className="heading mt-15">First Cross-Chain
-                                </h2>	
-                                <h1 className="heading mb-style"><span className="nft-marketplace-heading">NFT Marketplace</span>                                          
+                                <h1 className="heading ">First Cross-Chain
+                                </h1>	
+                                <h1 className="heading mb-style"><span className="nft-marketplace-heading" >NFT Marketplace</span>                                          
                                 </h1>
                                 {/* <h1 className="heading">Monster NFTs</h1> */}
                                 <p className="sub-heading mt-19 mb-40">Trade NFTs. Using any token. From any chain                
                                 </p>
 
                                 <div className="flat-bt-slider flex style2 d-inline-flex p-2">
-                                    <Link to="/Explore" className="sc-button header-slider style style-1  fl-button pri-1">
-                                        <span style={{marginLeft:'-2.5rem'}}>
+                                    <Link to="/Explore" className="sc-button header-slider style style-1 rocket fl-button pri-1">
+                                        <span >
                                             Explore
                                         </span>
                                     </Link>
-                                    <Link to="/create-item" className="sc-button header-slider style style-1  fl-button pri-1">
-                                        <span style={{marginLeft:'-2.5rem'}}>
+                                    <Link to="/create-item" className="sc-button header-slider style style-1 note fl-button pri-1">
+                                        <span>
                                             Sell NFT
                                         </span>
                                     </Link>

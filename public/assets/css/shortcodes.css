@@ -209,8 +209,8 @@
 --------------------------------------------------*/
 .sc-button {
     display      : inline-block;
-    border       : 2px solid var(--primary-color3);
-    color        : var(--primary-color);
+    border       : 1px solid var(--primary-color3);
+    color        : var(--primary-color3);
     box-sizing   : border-box;
     padding      : 11px 35px;
     border-radius: 30px;
@@ -247,13 +247,18 @@
 
 .is_dark .sc-button.style-1:hover,
 .sc-button.fl-button:hover{
-    border: 2px solid #fff;
-    background-color: #FFEFE9;
+    border: 1px solid #FF4F0D;
+    background-color: #FF4F0D;
 }
 
 .sc-button.fl-button:hover span,
 .sc-button.fl-button.active span {
     color:#FF4F0D;
+}
+
+.sc-button span:hover,
+.flat-bt-slider:hover {
+    color: #fff;
 }
 
 /* button style icon */
@@ -276,7 +281,7 @@
 .sc-button.style-1 {
     /* border    : linear-gradient(100.83deg, #FF4F0D 22.55%, #7AB694 81.21%); */
     color     : #FF4F0D;
-    background-color: #FFEFE9;
+    background-color: transparent;
 
  
 
@@ -364,6 +369,9 @@
     outline: 0 none;
     background: transparent none repeat scroll 0 0;
 }
+.sc-button.loadmore:hover span{
+    color:#fff;
+}
 
 .is_dark .sc-button.loadmore{
     background: transparent none repeat scroll 0 0;
@@ -378,9 +386,15 @@
     font-size: 15px;
 }
 
+#loadmore{
+    color:'#FF4F0D';
+
+}
+
 .is_dark .sc-button.loadmore:hover {
     border-color: transparent;
     outline: 0 none;
+    color:white;
 }
 
 
@@ -389,6 +403,9 @@
     content: "\e91d";
 }
 
+.sc-button.style.rocket:hover{
+    color: #ffffff;
+}
 .sc-button.style.note span::before {
     content  : "\e91b";
     font-size: 20px;
@@ -540,9 +557,9 @@
     -o-border-radius     : 16px;
     -moz-border-radius   : 16px;
     border-radius        : 16px;
-    -moz-box-shadow      : 0px 3px 16px 0px #2F536D1F;
-    -webkit-box-shadow   : 0px 3px 16px 0px #2F536D1F;
-    box-shadow           : 0px 3px 16px 0px #2F536D1F;
+    -moz-box-shadow      : 0px 10px 16px 0px #2F536D1F;
+    -webkit-box-shadow   : 0px 10px 16px 0px #2F536D1F;
+    box-shadow           : 0px 10px 16px 0px #2F536D1F;
     margin-bottom        : 30px;
     background: var(--primary-color);
 }
@@ -872,7 +889,7 @@
 .sc-card-product {
     padding      : 20px;
     background   : var(--primary-color);
-    box-shadow   : 0px 3px 16px rgba(47, 83, 109, 0.12);
+    box-shadow   : 0px 10px 25px rgba(47, 83, 109, 0.12);
     border-radius: 20px;
     margin-bottom: 40px;
     overflow: hidden;
@@ -1716,7 +1733,7 @@
     position       : relative;
     background-image     : url('../images/backgroup-secsion/bghome-w.jpg') center center no-repeat;
     background-size: cover;
-    padding: 100px 0 20px;
+    padding: 194px 74px 252px;
 }
 .home-2 .flat-title-page {
     padding: 84px 0 156px; 
@@ -1747,7 +1764,7 @@
     -webkit-text-fill-color: rgb(0 0 0/0%);
 }
 .flat-slider .heading {
-    font-size  : 56px;
+    font-size  : 72px;
     line-height: 1.3;
     font-weight: 700;
     /* color      : #fff; */
@@ -1840,6 +1857,10 @@
     padding-left      : 28px;
 }
 
+.btn-axelarsea :hover {
+    color: #ffffff;
+}
+
 .sc-btn-top .sc-button {
     padding: 12px 35px 12px 32px;
 }
@@ -1873,7 +1894,7 @@
 }
 
 .flat-bt-slider .sc-button.style span::before {
-    color             : #fff;
+    color             : #FF4F0D;
     top               : -2px;
     font-size         : 26px;
     -webkit-transition: all 0.3s ease;
@@ -1883,14 +1904,24 @@
     transition        : all 0.3s ease;
 }
 
+.flat-bt-slider .sc-button:hover span{
+    color:#fff;
+}
+
 .flat-bt-slider .sc-button:hover span::before {
-    color             : #FF4F0D;
+    color             : #ffffff;
 }
 
 .flat-bt-slider .sc-button.style.note span::before{
     font-size: 20px;
 }
 
+.sc-btn-top .sc-button:hover span{
+    color:#fff;
+}
+.sc-btn-top .sc-button:hover span::before{
+    color:#fff;
+}
 
 
 /* animation slider */
@@ -5334,7 +5365,7 @@ button.accordion-button {
 }
 
 .header_1.header_2 #main-nav{
-    left: 42.4%;
+    left: 15%;
 }
 
 .header_2 #main-nav>ul>li {
@@ -6870,7 +6901,13 @@ button.accordion-button {
 }
 
 .sc-card-product.style-h7 .meta-info {
-    margin-bottom: 0px;
+    
+}
+
+#cardprice {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid #EBEBEB;
 }
 
 .home-7 .tf-section.live-auctions {
@@ -7184,7 +7221,7 @@ button.accordion-button {
 }
 
 .tf-section.live-auctions.style7 {
-    padding: 81px 0 0px;
+    padding: 0px 0 0px;
     background-color: white;
 } 
 
@@ -8304,4 +8341,10 @@ input[type="text"].big-dog::-webkit-input-placeholder {
 
 .home-7 .supported-by {
     background-image: url(../../../src/assets/images/backgroup-secsion/bgsupported.png);
+}
+
+.sticky{
+    position:sticky;
+    position:-webkit-sticky;
+    top:0;
 }

@@ -13,16 +13,14 @@ import bg from '../assets/images/backgroup-secsion/bghome.jpg'
 const Home07 = () => {
     return (
         <div className='home-7'>
-            <HeaderStyle2 />
-                <SliderStyle4 />
-                <div className='banding-bg' style={{backgroundImage:`url(${bg})`,backgroundRepeat:'no-repeat' , backgroundSize:'cover' }} >
+            <Header />
+                <SliderStyle1 />
                     <PopularCollection />
                     <TopSeller />
                     {/* <LiveAuction /> */}
                     {/* <Category /> */}
                     <TodayPicks />
-                    <Create />
-                </div>    
+                    <Create />   
             <Footer />
         </div>
     );

@@ -22,6 +22,7 @@ import moonbeamLogo from '../assets/images/icon/moonbeam-logo.svg'
 import fantomLogo from '../assets/images/icon/fantom-logo.svg'
 import lunaLogo from '../assets/images/icon/Luna.svg'
 import ustLogo from '../assets/images/icon/UST.png'
+import noHistory from '../assets/images/icon/NoHistory.svg'
 
 import imgdetail1 from "../assets/images/box-item/images-item-details.jpg";
 import CardModal from "../components/layouts/CardModal";
@@ -118,35 +119,12 @@ const ItemDetails = () => {
   return (
     <div className="item-details">
       <Header />
-      <section className="flat-title-page">
-        {/* <div className="d-flex align-items-center justify-content-between" style={{width:'75%'}}>
-                    <button>Back</button>
-                    <button>Sell</button>
-                </div> */}
-        {/* <div className="overlay"></div> */}
-        {/* <div className="themesflat-container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="page-title-heading mg-bt-12">
-                                <h1 className="heading text-center">Item Details 1</h1>
-                            </div>
-                            <div className="breadcrumbs style2">
-                                <ul>
-                                    <li><Link to="/">Home</Link></li>
-                                    <li><Link to="#">Explore</Link></li>
-                                    <li>Item Details 1</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>                     */}
-      </section>
-
-      <div className="tf-section tf-item-details">
+      
+      <div className="tf-section tf-item-details" > 
         <div className="themesflat-container">
           <div className="row">
-            <div className="col-xl-6 col-md-12">
-              <div className="content-left">
+            <div className="col-xl-6 col-md-12" >
+              <div className="content-left" style={{paddingTop:'3rem'}}>
                 <Link to="/">
                   <button>Back</button>
                 </Link>
@@ -320,7 +298,12 @@ const ItemDetails = () => {
 
                       <TabPanel>
                         <ul className="bid-history-list">
-                          {dataHistory.map((item, index) => (
+                          {}
+                          {dataHistory.length == 0  ? 
+                            <div className="text-center" style={{backgroundColor:'#F8F8F8' , borderRadius:'10px' , paddingTop:'2rem' , paddingBottom:'2rem'}}>
+                                <img src={noHistory} alt="" />
+                            </div>
+                          : (dataHistory.map((item, index) => (
                             <li key={index} item={item}>
                               <div className="content">
                                 <div className="client">
@@ -359,7 +342,7 @@ const ItemDetails = () => {
                                 </div>
                               </div>
                             </li>
-                          ))}
+                          )))}
                         </ul>
                       </TabPanel>
                       <TabPanel>

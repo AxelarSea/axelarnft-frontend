@@ -101,8 +101,8 @@ const CreateItem = () => {
       <div className="tf-create-item tf-section">
         <div className="themesflat-container">
           <div className="row">
-            <div className="col-xl-3 col-lg-6 col-md-6 col-12">
-              <h4 className="title-create-item">Preview item</h4>
+            <div className="col-xl-3 col-lg-6 col-md-6 col-12 ">
+              <h4 className="title-create-item ">Preview item</h4>
               <div className="sc-card-product">
                 <div className="card-media">
                   <Link to="/ItemDetails">

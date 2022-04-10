@@ -557,6 +557,11 @@ const Authorsprofile = () => {
     ]);
   }, [items]);
 
+  const filterItem = () => {
+    const item = panelTab.filter(itemm => maskAddress(itemm.nameAuthor) === maskAddress(account))
+    setPanelTab(item)
+  }
+
   const [account, setAccount] = useState("");
   const terraAccount = useConnectedWallet();
 
@@ -580,6 +585,7 @@ const Authorsprofile = () => {
 
   useEffect(() => {
     refreshData();
+    filterItem();
   }, [account, terraAccount]);
 
   return (
@@ -742,7 +748,7 @@ const Authorsprofile = () => {
                                     </div>
                                   </div>
                                 </Link>
-                              ))}
+                              )) }
                           </div>
                           {visible < item.dataContent.length && (
                             <div className="col-md-12 wrap-inner load-more text-center">

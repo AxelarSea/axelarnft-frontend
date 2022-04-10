@@ -117,7 +117,7 @@ video {
     padding       : 0;
     border        : 0;
     outline       : 0;
-    font-size     : 100%;
+    font-size     : 80%;
     font          : inherit;
     vertical-align: baseline;
     font-family   : inherit;
@@ -156,7 +156,7 @@ html {
 }
 
 body {
-    background : var(--primary-color);
+    /* background : var(--primary-color); */
     line-height: 1;
     padding-right: 0 !important;
     overflow: hidden;
@@ -660,8 +660,8 @@ input[type="submit"] {
     font-weight       : 700;
     font-size         : 15px;
     line-height       : 22px;
-    background-color  : var(--primary-color3);
-    color             : #fff;
+    background-color  : white;
+    color             : var(--primary-color3);
     border-radius     : 30px;
     padding           : 15px 39px;
     border            : 1px solid var(--primary-color3);
@@ -670,6 +670,11 @@ input[type="submit"] {
     -webkit-transition: all ease 0.3s;
     -moz-transition   : all ease 0.3s;
     transition        : all ease 0.3s;
+}
+
+#liveToastBtn:hover{
+    color:#fff;
+    background-color: var(--primary-color3);
 }
 
 /* Button hover + focus */
@@ -1326,7 +1331,7 @@ a:focus {
 
 :root {
     /* color */
-    --primary-color : #fff;
+    --primary-color : #F8F8F8;
     --primary-color2: #1F1F2C;
     --primary-color3: #FF4F0D;
     --primary-color4: #7A798A;
@@ -1927,7 +1932,7 @@ header{
 
 .header-search .show-search {
     font-size: 20px;
-    color: #fff;
+    color: #000000;
 }
 .top-search.active {
     visibility: visible;
@@ -2092,8 +2097,7 @@ header{
     width     : 100%;
     box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 30%);
     z-index   : 9999;
-    background: linear-gradient(
-        227.3deg, #8A208C 0%, #181B81 100.84%);
+    background: #fff;
     border: none;
     opacity: 1;
     -webkit-transition: all 0.5s ease;
@@ -3329,5 +3333,6 @@ header{
     top        : 0px;
     color      : #fff;
 }
+
 
 

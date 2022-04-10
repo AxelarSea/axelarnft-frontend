@@ -32,12 +32,16 @@ const HeaderStyle2 = () => {
 
     const menuLeft = useRef(null)
     const btnToggle = useRef(null)
+    const btnSearch = useRef(null)
 
     const menuToggle = () => {
         menuLeft.current.classList.toggle('active');
         btnToggle.current.classList.toggle('active');
     }
 
+    const searchBtn = () => {
+        btnSearch.current.classList.toggle('active');
+    }
 
     const [activeIndex, setActiveIndex] = useState(null);
     const handleOnClick = index => {
@@ -56,7 +60,7 @@ const HeaderStyle2 = () => {
     }, [connectedTerraStationWallet])
 
     return (
-        <header id="header_main" className="header_1 header_2 style2 js-header" ref={headerRef}>
+        <header id="header_main" className="header_1 header_2  js-header" ref={headerRef}>
             <div className="themesflat-container">
                 <div className="row">
                     <div className="col-md-12">                              
@@ -70,7 +74,7 @@ const HeaderStyle2 = () => {
                                     </div>
                                 </div>
                                 <div className="mobile-button" ref={btnToggle} onClick={menuToggle}><span></span></div>
-                                <div className="question-form">
+                                {/* <div className="question-form">
                                     <form action="#" method="get">
                                         <input type="text" placeholder="Search items, Collections, and Accounts"  />
                                         <button type="submit">
@@ -92,9 +96,9 @@ const HeaderStyle2 = () => {
                                                 </svg>
                                         </button>
                                     </form>
-                                </div>
+                                </div> */}
                                 <nav id="main-nav" className="main-nav"   >
-                                    <ul id="menu-primary-menu" className="menu" style={{marginLeft:'25rem'}}>
+                                    <ul id="menu-primary-menu" className="menu" >
                                         {
                                             menus.map((data,index) => (
                                                 <li key={index} onClick={()=> handleOnClick(index)} className={`menu-item ${data.namesub ? 'menu-item-has-children' : '' } ${activeIndex === index ? 'active' : ''} ` }   >
@@ -124,6 +128,19 @@ const HeaderStyle2 = () => {
                                     </ul>
                                 </nav>
                                 <div className="flat-search-btn flex">
+                                    <div className="header-search flat-show-search" id="s1">
+                                        <Link to="#" className="show-search header-search-trigger" onClick={searchBtn}>
+                                            <i className="far fa-search"></i>
+                                        </Link>
+                                        <div className="top-search" ref={btnSearch}>
+                                            <form action="#" method="get" role="search" className="search-form" style={{color:'#000000'}}>
+                                                <input type="search" id="s" className="search-field" placeholder="Search..." name="s" title="Search for" required="" />
+                                                <button className="search search-submit" type="submit" title="Search">
+                                                    <i className="icon-fl-search-filled"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
                                     <div className="sc-btn-top mg-r-12" id="site-header">
                                         <Link to="/wallet-connect" className="sc-button header-slider style style-1 wallet fl-button pri-1">
                                             <span>{connected ? "Connected" : "Wallet connect"}

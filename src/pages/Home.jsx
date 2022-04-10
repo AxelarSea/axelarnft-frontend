@@ -1,4 +1,5 @@
 import React  from 'react';
+
 import HeaderStyle2 from '../components/header/HeaderStyle2';
 import Footer from '../components/footer/Footer';
 import Category from '../components/layouts/home-7/Category';
