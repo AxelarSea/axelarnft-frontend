@@ -69,7 +69,7 @@ const Create = () => {
                 </div>
             </div>                 
         </div>
-        <div className='tf-section d-flex flex-column align-items-center justify-content-center' style={{marginBottom:'6rem',backgroundColor:'#cfcfcf'}}>
+        <div className='tf-section d-flex flex-column align-items-center justify-content-center' style={{marginBottom:'-2rem',backgroundColor:'#F8F8F8'}}>
                 <img src={WeSupport} style={{marginBottom:'4rem'}} alt="" width="137px" height="33px" />
                 <img src={LogoSupport} alt="" />
         </div>

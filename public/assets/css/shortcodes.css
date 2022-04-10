@@ -224,7 +224,7 @@
     background: transparent;
 }
 .is_dark .sc-button {
-    color: #fff;
+    color: #FFEFE9;
 }
 .sc-button span {
     font-weight       : 700;
@@ -248,12 +248,12 @@
 .is_dark .sc-button.style-1:hover,
 .sc-button.fl-button:hover{
     border: 2px solid #fff;
-    background-color: #fff;
+    background-color: #FFEFE9;
 }
 
 .sc-button.fl-button:hover span,
 .sc-button.fl-button.active span {
-    color:#ffffff;
+    color:#FF4F0D;
 }
 
 /* button style icon */
@@ -275,9 +275,9 @@
 /* style-1 */
 .sc-button.style-1 {
     /* border    : linear-gradient(100.83deg, #FF4F0D 22.55%, #7AB694 81.21%); */
-    color     : #000000;
-    background: transparent none repeat scroll 0 0;
-    border-color: grey;
+    color     : #FF4F0D;
+    background-color: #FFEFE9;
+
  
 
 }
@@ -7184,7 +7184,7 @@ button.accordion-button {
 }
 
 .tf-section.live-auctions.style7 {
-    padding: 81px 0 24px;
+    padding: 81px 0 0px;
     background-color: white;
 } 
 

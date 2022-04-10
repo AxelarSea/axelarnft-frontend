@@ -13,14 +13,14 @@ import img2 from "../assets/images/avatar/avt-11.jpg";
 import img3 from "../assets/images/avatar/avt-1.jpg";
 import img4 from "../assets/images/avatar/avt-5.jpg";
 import img5 from "../assets/images/avatar/avt-7.jpg";
-import img6 from "../assets/images/avatar/satoshi.png";
+import img6 from "../assets/images/avatar/satoshi.svg";
 import img7 from "../assets/images/avatar/avt-2.jpg";
-import ethLogo from '../assets/images/icon/eth-logo.png'
-import polygonLogo from '../assets/images/icon/polygon-logo.png'
-import avaxLogo from '../assets/images/icon/avax-logo.png'
-import moonbeamLogo from '../assets/images/icon/moonbeam-logo.png'
-import fantomLogo from '../assets/images/icon/fantom-logo.png'
-import lunaLogo from '../assets/images/icon/Luna.png'
+import ethLogo from '../assets/images/icon/eth-logo.svg'
+import polygonLogo from '../assets/images/icon/polygon-logo.svg'
+import avaxLogo from '../assets/images/icon/avax-logo.svg'
+import moonbeamLogo from '../assets/images/icon/moonbeam-logo.svg'
+import fantomLogo from '../assets/images/icon/fantom-logo.svg'
+import lunaLogo from '../assets/images/icon/Luna.svg'
 import ustLogo from '../assets/images/icon/UST.png'
 
 import imgdetail1 from "../assets/images/box-item/images-item-details.jpg";

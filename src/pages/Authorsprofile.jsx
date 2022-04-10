@@ -6,7 +6,7 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import CardModal from "../components/layouts/CardModal";
 
-import avt from "../assets/images/avatar/satoshi.png";
+import avt from "../assets/images/avatar/satoshi.svg";
 import img1 from "../assets/images/box-item/card-item-3.jpg";
 import imga1 from "../assets/images/avatar/avt-1.jpg";
 import imgCollection1 from "../assets/images/avatar/avt-18.jpg";
@@ -606,7 +606,7 @@ const Authorsprofile = () => {
             </section> */}
       <section className="tf-section authors">
         <div className="themesflat-container">
-          <div className="flat-tabs tab-authors">
+          <div className="flat-tabs tab-authors" style={{marginTop:'8rem'}}>
             <div className="author-profile flex">
               <div className="feature-profile">
                 <img src={avt} alt="Axies" className="avatar" />
