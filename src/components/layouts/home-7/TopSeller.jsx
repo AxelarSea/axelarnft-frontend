@@ -60,13 +60,13 @@ const TopSeller = () => {
                         top: '3',
                         Price: '$25,893.53'
                     },
-                    // {
-                    //     img: imgAuthor4,
-                    //     name: 'Galactic Punk',
-                    //     mail: '0xF5ab…A754',
-                    //     top: '4',
-                    //     Price: '$20,123.22'
-                    // },
+                    {
+                        img: imgAuthor4,
+                        name: 'AxelarNFT',
+                        mail: '0xG341…Aw24',
+                        top: '4',
+                        Price: '$20,123.22'
+                    },
                     // {
                     //     img: img5,
                     //     name: 'Windsor Lane',
