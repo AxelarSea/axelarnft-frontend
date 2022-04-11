@@ -13,6 +13,7 @@ import { chainLabel } from '../utils/address';
     
 const Explore04 = () => {
     const [items, setItems] = useState([]);
+    const [defaultItems, setDefaultItems] = useState([]);
 
     function formatItems(items) {
         return items.map((x) => ({
@@ -38,6 +39,7 @@ const Explore04 = () => {
         let items = await fetchAllListedItems();
         console.log(items);
         setItems(formatItems(items));
+        setDefaultItems(formatItems(items));
       }
     
       useEffect(() => {
@@ -66,7 +68,7 @@ const Explore04 = () => {
                     </div>
                 </div>                    
             </section>
-            <Explore data={widgetSidebarData} setItems={setItems} items={items} formatItems={formatItems} >
+            <Explore data={widgetSidebarData} setItems={setItems} items={items} defaultItems={defaultItems} formatItems={formatItems} >
                 <div className="col-xl-9 col-lg-9 col-md-12">
                     <ExploreItem data={items} />
                 </div>
