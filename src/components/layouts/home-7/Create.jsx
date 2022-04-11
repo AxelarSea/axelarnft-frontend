@@ -63,7 +63,7 @@ const Create = () => {
             </div>
             <div className='d-flex flex-column align-items-center justify-content-center supported-by'>
                 <h2 style={{marginBottom:'4rem',marginTop:'4rem'}}>Supported by</h2>
-                <div className='flex-column align-items-center justify-content-center' style={{marginBottom:'6rem'}}>
+                <div className='flex-column align-items-center justify-content-center axelarNFT-supported' style={{marginBottom:'6rem'}}>
                     <img src={axelarlogo} alt="" style={{marginRight:'2rem'}}/>
                     <img src={cd} alt="" style={{marginLeft:'2rem'}}/>
                 </div>

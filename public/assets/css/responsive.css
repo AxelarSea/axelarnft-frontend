@@ -289,7 +289,7 @@
   .themesflat-container {
     width    : 1200px;
     max-width: 100%;
-    padding-bottom:120px;
+    padding-bottom:0px;
   }
 
   .wrap-heading{
@@ -1516,5 +1516,13 @@
     font-size: 12px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .author-wallet-bar{
+    display:flex;
+    flex-direction: column;
+  }
+  .axelarNFT-supported{
+    display:flex;
+    flex-direction: column;
   }
 }

@@ -121,10 +121,10 @@ const ItemDetails = () => {
       <Header />
       
       <div className="tf-section tf-item-details" > 
-        <div className="themesflat-container">
-          <div className="row">
+        <div className="themesflat-container " style={{backgroundColor:'#F8F8F8' , borderRadius:'10px'}}>
+          <div className="row d-flex align-items-center justify-content-between">
             <div className="col-xl-6 col-md-12" >
-              <div className="content-left" style={{paddingTop:'3rem'}}>
+              <div className="content-left" style={{paddingTop:'3rem' , marginBottom:'2rem'}}>
                 <Link to="/">
                   <button>Back</button>
                 </Link>

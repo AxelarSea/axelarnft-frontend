@@ -6,83 +6,83 @@ import logofooter from '../../assets/images/logo/logoaxelarnft.svg'
 const Footer = () => {
 
     const aboutList = [
-        {
-            title:"Product",
-            link:""
-        },
+        // {
+        //     title:"Product",
+        //     link:""
+        // },
         {
             title:"Resource",
             link:""
         },
-        {
-            title:"Term & Condition",
-            link:""
-        },
-        {
-            title:"FAQ",
-            link:""
-        },
+        // {
+        //     title:"Term & Condition",
+        //     link:""
+        // },
+        // {
+        //     title:"FAQ",
+        //     link:""
+        // },
     ]
-    const accountList = [
-        {
-            title: "Authors",
-            link: ""
-        },
-        {
-            title: "Collection",
-            link: ""
-        },
-        {
-            title: "Author Profile",
-            link: ""
-        },
-        {
-            title: "Create Item",
-            link: ""
-        },
-    ]
-    const resourcesList = [
-        {
-            title: "Help & Support",
-            link: ""
-        },
-        {
-            title: "Live Auctions",
-            link: ""
-        },
-        {
-            title: "Item Details",
-            link: ""
-        },
-        {
-            title: "Activity",
-            link: ""
-        },
-    ]
-    const companyList = [
-        {
-            title: "Our Team",
-            link: ""
-        },
-        {
-            title: "Partner With Us",
-            link: ""
-        },
-        {
-            title: "Privacy & Policy",
-            link: ""
-        },
-        {
-            title: "Features",
-            link: ""
-        },
-    ]
+    // const accountList = [
+    //     {
+    //         title: "Authors",
+    //         link: ""
+    //     },
+    //     {
+    //         title: "Collection",
+    //         link: ""
+    //     },
+    //     {
+    //         title: "Author Profile",
+    //         link: ""
+    //     },
+    //     {
+    //         title: "Create Item",
+    //         link: ""
+    //     },
+    // ]
+    // const resourcesList = [
+    //     {
+    //         title: "Help & Support",
+    //         link: ""
+    //     },
+    //     {
+    //         title: "Live Auctions",
+    //         link: ""
+    //     },
+    //     {
+    //         title: "Item Details",
+    //         link: ""
+    //     },
+    //     {
+    //         title: "Activity",
+    //         link: ""
+    //     },
+    // ]
+    // const companyList = [
+    //     {
+    //         title: "Our Team",
+    //         link: ""
+    //     },
+    //     {
+    //         title: "Partner With Us",
+    //         link: ""
+    //     },
+    //     {
+    //         title: "Privacy & Policy",
+    //         link: ""
+    //     },
+    //     {
+    //         title: "Features",
+    //         link: ""
+    //     },
+    // ]
 
     const Contract = [
-        {
-            title: "+012 3456789",
-            link: "#"
-        },
+        // {
+        //     title: "+012 3456789",
+        //     link: "#"
+        // },
         {
             title: "info@axelarnft.com",
             link: "#"
@@ -92,20 +92,20 @@ const Footer = () => {
     const socialList = [
         {
             icon: "fab fa-twitter",
-            link: "https://twitter.com/axelarsea"
+            link: "#"
         },
-        // {
-        //     icon: "fab fa-telegram-plane",
-        //     link: "#"
-        // },
-        // {
-        //     icon: "fab fa-youtube",
-        //     link: "#"
-        // },
-        // {
-        //     icon: "icon-fl-vt",
-        //     link: "#"
-        // },
+        {
+            icon: "fab fa-telegram-plane",
+            link: "#"
+        },
+        {
+            icon: "fab fa-youtube",
+            link: "#"
+        },
+        {
+            icon: "icon-fl-vt",
+            link: "#"
+        },
         
 
     ]
@@ -148,7 +148,7 @@ const Footer = () => {
                                         
                                     </Link>
                                 </div>
-                                <p className="sub-widget-logo">AxelarSea is a one-stop interoperable NFT marketplace across chains where buyers can pay for an NFT on any supported chain using a token from a completely different chain, and sellers can list an NFT for sale on any supported chain while receiving payments on another chain.</p>
+                                <p className="sub-widget-logo">AxelarNFT is a one-stop interoperable NFT marketplace across chains where buyers can pay for an NFT on any supported chain using a token from a completely different chain, and sellers can list an NFT for sale on any supported chain while receiving payments on another chain.</p>
                             </div>
                         </div>
                         <div className="col-lg-2 col-md-4 col-sm-5 col-5">
@@ -175,7 +175,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div> */}
-                        <div className="col-lg-2 col-md-4 col-sm-5 col-5">
+                        {/* <div className="col-lg-2 col-md-4 col-sm-5 col-5">
                             <div className="widget widget-menu fl-st-3">
                                 <h5 className="title-widget">Company</h5>
                                 <ul>
@@ -186,10 +186,10 @@ const Footer = () => {
                                     }
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="col-lg-2 col-md-4 col-sm-5 col-5">
                             <div className="widget widget-menu fl-st-3">
-                                <h5 className="title-widget">Contract</h5>
+                                <h5 className="title-widget">Contact</h5>
                                 <ul>
                                     {
                                         Contract.map((item,index) =>(
