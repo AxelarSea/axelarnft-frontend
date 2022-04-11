@@ -1733,7 +1733,7 @@
     position       : relative;
     background-image     : url('../images/backgroup-secsion/bghome-w.jpg') center center no-repeat;
     background-size: cover;
-    padding: 194px 74px 252px;
+    /* padding: 194px 74px 252px; */
 }
 .home-2 .flat-title-page {
     padding: 84px 0 156px; 
