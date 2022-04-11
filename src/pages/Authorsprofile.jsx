@@ -51,6 +51,7 @@ import { useConnectedWallet } from "@terra-money/wallet-provider";
 
 const Authorsprofile = () => {
   const [items, setItems] = useState([]);
+  const [defaultItems, setDefaultItems] = useState([]);
 
   const [menuTab] = useState([
     {
@@ -548,6 +549,7 @@ const Authorsprofile = () => {
     let items = await fetchAllMyItems();
     console.log(items);
     setItems(formatItems(items));
+    setDefaultItems(formatItems(items));
   }
 
   useEffect(() => {
@@ -696,7 +698,7 @@ const Authorsprofile = () => {
 
               <div className="content-tab">
                 <div className="content-inner">
-                  <Explore data={widgetSidebarData} setItems={setItems} items={items} formatItems={formatItems}>
+                  <Explore data={widgetSidebarData} setItems={setItems} items={items} defaultItems={defaultItems} formatItems={formatItems}>
                     <div className="col-xl-9 col-lg-9 col-md-12">
                       {panelTab.map((item, index) => (
                         <TabPanel

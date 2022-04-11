@@ -7,11 +7,9 @@ import { fetchAllListedItems } from '../../../utils/api';
 const Explore = props => {
     const data = props.data;
     const items = props.items;
-    const defaultItems = [...(items || [])]
+    const defaultItems = props.defaultItems || [...(items || [])];
     const setItems = props.setItems;
     const formatItems = props.formatItems
-
-    const [baselineItems, setBaselineItems] = useState([]);
 
     const [check,setCheck] = useState({
         eth:false,
@@ -26,12 +24,10 @@ const Explore = props => {
         if (check.avax) chains.push(43113);
         if (check.ftm) chains.push(4002);
 
-        if (chains.length == 0){
-            const items =  await fetchAllListedItems()
-            setItems(formatItems(items))
-            setBaselineItems(formatItems(items))
+        if (chains.length == 0) {
+            setItems(defaultItems);
         } else {
-            setItems(baselineItems.filter(itemm => chains.indexOf(itemm.chainId) != -1))
+            setItems(defaultItems.filter(itemm => chains.indexOf(itemm.chainId) != -1))
         }
     }
 
