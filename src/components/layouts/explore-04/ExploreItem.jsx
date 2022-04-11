@@ -48,7 +48,7 @@ const ExploreItem = (props) => {
                     <span>Buy Now</span>
                   </button>
                 </div>
-                <Link to="/login" className="wishlist-button heart">
+                <Link to="#" className="wishlist-button heart">
                   <span className="number-like">{item.wishlist}</span>
                 </Link>
                 <div className="coming-soon">{item.feature}</div>
