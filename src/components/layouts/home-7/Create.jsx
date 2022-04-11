@@ -8,6 +8,13 @@ import axelarlogo from '../../../assets/images/logo/axelar.svg'
 import cd from '../../../assets/images/logo/ContributionDAO.svg'
 import LogoSupport from '../../../assets/images/logo/Logo-Support.svg';
 import WeSupport from '../../../assets/images/logo/We-Support.svg';
+import fantom from '../../../assets/images/logo/fantom-logo.svg';
+import polygon from '../../../assets/images/logo/polygon-logo.svg';
+import ethereum from '../../../assets/images/logo/eth-logo.svg';
+import terra from '../../../assets/images/logo/terra-logo.svg';
+import moonbeam from '../../../assets/images/logo/moonbeam-logo.svg';
+import avalanche from '../../../assets/images/logo/avax-logo.svg';
+
 import bgsupported from '../../../assets/images/backgroup-secsion/bgsupported.png'
 import { urlToHttpOptions } from 'url';
 
@@ -64,14 +71,21 @@ const Create = () => {
             <div className='d-flex flex-column align-items-center justify-content-center supported-by'>
                 <h2 style={{marginBottom:'4rem',marginTop:'4rem'}}>Supported by</h2>
                 <div className='flex-column align-items-center justify-content-center axelarNFT-supported' style={{marginBottom:'6rem'}}>
-                    <img src={axelarlogo} alt="" style={{marginRight:'2rem'}}/>
-                    <img src={cd} alt="" style={{marginLeft:'2rem'}}/>
+                    <img src={axelarlogo} alt="" />
+                    <img src={cd} alt="" />
                 </div>
             </div>                 
         </div>
-        <div className='tf-section d-flex flex-column align-items-center justify-content-center' style={{marginBottom:'-2rem',backgroundColor:'#F8F8F8'}}>
+        <div className='tf-section d-flex flex-column align-items-center justify-content-center chain-support' style={{marginBottom:'0rem',backgroundColor:'#F8F8F8'}}>
                 <img src={WeSupport} style={{marginBottom:'4rem'}} alt="" width="137px" height="33px" />
-                <img src={LogoSupport} alt="" />
+                <div className='flex-column align-items-center justify-content-center axelarNFT-supported' style={{marginBottom:'6rem'}}>
+                    <img src={fantom} alt='' width='160px'/>
+                    <img src={polygon} alt='' width='160px'/>
+                    <img src={ethereum} alt='' width='160px'/>
+                    <img src={terra} alt='' width='160px'/>
+                    <img src={moonbeam} alt='' width='160px'/>
+                    <img src={avalanche} alt='' width='160px'/>
+                </div>
         </div>
     </section>
     );

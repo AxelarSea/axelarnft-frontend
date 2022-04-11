@@ -87,6 +87,7 @@ const SliderStyle4 = () => {
                                 }}
                                 speed= {1800}
                             >
+                                
                                 {/* <SwiperSlide><img src={img3} alt="AxelarNFT" /></SwiperSlide>
                                 <SwiperSlide><img src={img2} alt="AxelarNFT" /></SwiperSlide>
                                 <SwiperSlide><img src={img1} alt="AxelarNFT" /></SwiperSlide>
