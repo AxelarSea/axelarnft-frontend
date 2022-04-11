@@ -289,8 +289,12 @@
   .themesflat-container {
     width    : 1200px;
     max-width: 100%;
+    padding-bottom:120px;
   }
 
+  .wrap-heading{
+    padding-top:50px;
+  }
   .tf-item-details .content-left .media img{
     width: 100% !important;
   }
@@ -869,6 +873,7 @@
 .home-7 .today-pick .content-inner .sc-card-product {
   width: calc(50% - 26px);
 }
+ใ
 
 }
 @media only screen and (max-width: 767px) {

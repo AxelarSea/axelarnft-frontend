@@ -510,7 +510,7 @@ const Authorsprofile = () => {
   ]);
 
   const [visible, setVisible] = useState(8);
-  const showMoreItems = () => {
+  const showMoreItemsProfile = () => {
     setVisible((prevValue) => prevValue + 4);
   };
 
@@ -756,7 +756,7 @@ const Authorsprofile = () => {
                                 to="#"
                                 id="load-more"
                                 className="sc-button loadmore fl-button pri-3"
-                                onClick={showMoreItems}
+                                onClick={showMoreItemsProfile}
                               >
                                 <span>Load More</span>
                               </Link>

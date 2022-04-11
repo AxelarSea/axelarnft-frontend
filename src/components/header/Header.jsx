@@ -36,9 +36,14 @@ const Header = () => {
     const btnToggle = useRef(null)
     const btnSearch = useRef(null)
 
+    const [btnToggleActive ,setBtnToggleActive] = useState(false)
+    const [menuLeftActive ,setMenuLeftActive] = useState(false)
+
     const menuToggle = () => {
-        menuLeft.current.classList.toggle('active');
-        btnToggle.current.classList.toggle('active');
+        // menuLeft.current.classList.toggle(' active');
+        // btnToggle.current.classList.toggle(' active');
+        setBtnToggleActive(!btnToggleActive)
+        setMenuLeftActive(!menuLeftActive)
     }
 
     const searchBtn = () => {
@@ -77,8 +82,8 @@ const Header = () => {
                                         </Link>
                                     </div>
                                 </div>
-                                <div className="mobile-button" ref={btnToggle} onClick={menuToggle}><span></span></div>
-                                <nav id="main-nav" className="main-nav" ref={menuLeft} >
+                                <div className={`mobile-button ${btnToggleActive ? 'active' : ''}`}  onClick={menuToggle}><span></span></div>
+                                <nav id="main-nav" className={`main-nav ${menuLeftActive ? 'active' : ''}`}   >
                                     <ul id="menu-primary-menu" className="menu">
                                         {
                                             menus.map((data,index) => (

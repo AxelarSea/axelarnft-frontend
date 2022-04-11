@@ -34,9 +34,14 @@ const HeaderStyle2 = () => {
     const btnToggle = useRef(null)
     const btnSearch = useRef(null)
 
+     const [btnToggleActive ,setBtnToggleActive] = useState(false)
+    const [menuLeftActive ,setMenuLeftActive] = useState(false)
+
     const menuToggle = () => {
-        menuLeft.current.classList.toggle('active');
-        btnToggle.current.classList.toggle('active');
+        // menuLeft.current.classList.toggle('active');
+        // btnToggle.current.classList.toggle('active');
+        setBtnToggleActive(!btnToggleActive)
+        setMenuLeftActive(!menuLeftActive)
     }
 
     const searchBtn = () => {
@@ -73,7 +78,11 @@ const HeaderStyle2 = () => {
                                         </Link>
                                     </div>
                                 </div>
-                                <div className="mobile-button" ref={btnToggle} onClick={menuToggle}><span></span></div>
+                                <div className={`mobile-button ${btnToggleActive ? 'active' : ''}`} onClick={menuToggle}>
+                                    <span>
+
+                                    </span>
+                                </div>
                                 {/* <div className="question-form">
                                     <form action="#" method="get">
                                         <input type="text" placeholder="Search items, Collections, and Accounts"  />
@@ -97,7 +106,7 @@ const HeaderStyle2 = () => {
                                         </button>
                                     </form>
                                 </div> */}
-                                <nav id="main-nav" className="main-nav"   >
+                                <nav id="main-nav" className={`main-nav ${menuLeftActive ? 'active' : ''}`}    >
                                     <ul id="menu-primary-menu" className="menu" >
                                         {
                                             menus.map((data,index) => (

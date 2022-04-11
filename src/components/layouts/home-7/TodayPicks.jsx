@@ -515,7 +515,7 @@ const TodayPicks = () => {
                                                     </div>
                                                 </div>
                                                 <div className=" d-flex align-items-center justify-content-around" style={{width:'6rem',marginLeft:'2.2rem'}}>
-                                                        <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === '' ? moonbeamLogo : item.tags === 'MATIC' ? polygonLogo : ''} alt="" width={'40'}/>
+                                                        <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === 'MOONBEAM' ? moonbeamLogo : item.tags === 'POLYGON' ? polygonLogo : ''} alt="" width={'40'}/>
                                                         {/* <h5 style={{fontSize:'14px'}}>{item.tags}</h5> */}
                                                 </div>
                                                 {/* <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link> */}
