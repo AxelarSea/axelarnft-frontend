@@ -530,11 +530,12 @@ const TodayPicks = () => {
                                                 {/* <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link> */}
                                             </div>
                                             <div className="meta-info  " id='cardprice' >
-                                                <div className="author">
-                                                    <div className="info style2 " style={{marginButtom:'1rem'}}>
+                                                <div className="card-bottom style-explode">
+                                                    <div className="price">
                                                         <span>Price</span>
-                                                        <span className="pricing">
-                                                            {item.price}</span>
+                                                        <div className="price-details mt-1">
+                                                            <h5>{item.price}</h5>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
