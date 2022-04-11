@@ -27,7 +27,7 @@ const TodayPicks = props => {
                                 <div key={index} className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
                                     <div className={`sc-card-product style2 mg-bt ${item.feature ? 'comingsoon' : '' } `}>                               
                                         <div className="card-media">
-                                            <Link to="/ItemDetails"><img src={item.img} alt="Axies" /></Link>
+                                            <Link to="/ItemDetails"><img src={item.img} alt="AxelarNFT" /></Link>
                                             <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link>
                                             <div className="coming-soon">{item.feature}</div>
                                         </div>
@@ -38,7 +38,7 @@ const TodayPicks = props => {
                                         <div className="meta-info">
                                             <div className="author">
                                                 <div className="avatar">
-                                                    <img src={item.imgAuthor} alt="Axies" />
+                                                    <img src={item.imgAuthor} alt="AxelarNFT" />
                                                 </div>
                                                 <div className="info">
                                                     <span>Creator</span>

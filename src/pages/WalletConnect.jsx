@@ -328,7 +328,7 @@ const WalletConnect = () => {
                   onClick={item.onClick}
                   >
                     <div className="img">
-                      <img src={item.img} alt="Axies" />
+                      <img src={item.img} alt="AxelarNFT" />
                     </div>
                     <h4 className="heading">{item.title}</h4>
                     <p className="content" style={{ marginBottom: 8 }}>

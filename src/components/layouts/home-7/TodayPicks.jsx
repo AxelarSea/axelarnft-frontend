@@ -499,7 +499,7 @@ const TodayPicks = () => {
                                         <div>
                                             
                                             <div className="card-media">
-                                                <img src={item.img} alt="Axies" />
+                                                <img src={item.img} alt="AxelarNFT" />
                                             </div>
                                             <div className="card-title">
                                                 <h5>{item.title}</h5>
@@ -507,7 +507,7 @@ const TodayPicks = () => {
                                             <div className="meta-info style mt-2">
                                                 <div className="author">
                                                     <div className="avatar">
-                                                        <img src={item.imgAuthor} alt="Axies" />
+                                                        <img src={item.imgAuthor} alt="AxelarNFT" />
                                                     </div>
                                                     <div className="info">
                                                         <span>Owned By</span>

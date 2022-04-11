@@ -115,7 +115,7 @@ const Faucet = () => {
                                         
                                         <div key={index} className="sc-box-icon d-flex flex-column align-items-center justify-content-center " style={{cursor:'pointer'}} target="_blank" onClick={() => goSite(item.website)}>
                                             <div className="img">
-                                                <img src={item.img} alt="Axies" />
+                                                <img src={item.img} alt="AxelarNFT" />
                                             </div>
                                             <h4 className="heading"><a href={item.website} target="_blank">{item.title}</a> </h4>
                                             

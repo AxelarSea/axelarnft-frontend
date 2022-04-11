@@ -121,7 +121,7 @@ const CreateItem = () => {
                           : img1
                           
                       }
-                      alt="Axies"
+                      alt="AxelarNFT"
                     />
                   </Link>
                   {/* <Link to="/login" className="wishlist-button heart">
@@ -143,7 +143,7 @@ const CreateItem = () => {
                 {/* <div className="meta-info">
                   <div className="author">
                     <div className="avatar">
-                      <img src={avt} alt="Axies" />
+                      <img src={avt} alt="AxelarNFT" />
                     </div>
                     <div className="info">
                       <span>Owned By</span>

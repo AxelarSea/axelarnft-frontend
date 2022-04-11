@@ -59,7 +59,7 @@ const ExploreItem = (props) => {
               <div className="meta-info">
                 <div className="author">
                   {/* <div className="avatar">
-                    <img src={item.imgAuthor} alt="Axies" />
+                    <img src={item.imgAuthor} alt="AxelarNFT" />
                   </div>
                   <div className="card-title">
                     <h5>{item.title}</h5>

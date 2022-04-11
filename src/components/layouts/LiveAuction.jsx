@@ -59,7 +59,7 @@ const LiveAuction = props => {
                                                                 <div className="slider-item">										
                                                                     <div className="sc-card-product">
                                                                         <div className="card-media">
-                                                                            <Link to="/ItemDetails"><img src={item.img} alt="axies" /></Link>
+                                                                            <Link to="/ItemDetails"><img src={item.img} alt="AxelarNFT" /></Link>
                                                                             <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link>
                                                                             {/* <div className="featured-countdown">
                                                                                 <span className="slogan"></span>
@@ -78,7 +78,7 @@ const LiveAuction = props => {
                                                                         <div className="meta-info">
                                                                             <div className="author">
                                                                                 <div className="avatar">
-                                                                                    <img src={item.imgAuthor} alt="axies" />
+                                                                                    <img src={item.imgAuthor} alt="AxelarNFT" />
                                                                                 </div>
                                                                                 <div className="info">
                                                                                     <span>Creator</span>

@@ -170,7 +170,7 @@ const ItemDetails01 = () => {
             <div className="col-xl-6 col-md-12">
               <div className="content-left">
                 <div className="media">
-                  <img src={data.metadata?.image || imgdetail1} alt="Axies" />
+                  <img src={data.metadata?.image || imgdetail1} alt="AxelarNFT" />
                 </div>
               </div>
             </div>
@@ -199,7 +199,7 @@ const ItemDetails01 = () => {
                     <div className="meta-info">
                       <div className="author">
                         <div className="avatar">
-                          <img src={img6} alt="Axies" />
+                          <img src={img6} alt="AxelarNFT" />
                         </div>
                         <div className="info">
                           <span>Owned By</span>
@@ -213,7 +213,7 @@ const ItemDetails01 = () => {
                     <div className="meta-info">
                       <div className="author">
                         <div className="avatar">
-                          <img src={img6} alt="Axies" />
+                          <img src={img6} alt="AxelarNFT" />
                         </div>
                         <div className="info">
                           <span>Create By</span>
@@ -310,7 +310,7 @@ const ItemDetails01 = () => {
                                       <Link to="#">
                                         <img
                                           src={item.img}
-                                          alt="Axies"
+                                          alt="AxelarNFT"
                                           className="avatar"
                                         />
                                       </Link>
@@ -353,7 +353,7 @@ const ItemDetails01 = () => {
                                     <Link to="#">
                                       <img
                                         src={img1}
-                                        alt="Axies"
+                                        alt="AxelarNFT"
                                         className="avatar"
                                       />
                                     </Link>

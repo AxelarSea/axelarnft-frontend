@@ -606,7 +606,7 @@ const Authors02 = () => {
           <div className="flat-tabs tab-authors">
             <div className="author-profile flex">
               <div className="feature-profile">
-                <img src={avt} alt="Axies" className="avatar" />
+                <img src={avt} alt="AxelarNFT" className="avatar" />
               </div>
               <div className="infor-profile">
                 <span>User Profile</span>
@@ -695,7 +695,7 @@ const Authors02 = () => {
                                 >
                                   <div className="sc-card-product explode ">
                                     <div className="card-media">
-                                      <img src={data.img} alt="Axies" />
+                                      <img src={data.img} alt="AxelarNFT" />
                                       <div className="button-place-bid ">
                                         <button
                                           onClick={(e) => {
@@ -715,7 +715,7 @@ const Authors02 = () => {
                                     <div className="meta-info">
                                       <div className="author">
                                         {/* <div className="avatar">
-                                          <img src={data.imgAuthor} alt="Axies" />
+                                          <img src={data.imgAuthor} alt="AxelarNFT" />
                                         </div> */}
                                         <div className="info">
                                           <span>Creator</span>

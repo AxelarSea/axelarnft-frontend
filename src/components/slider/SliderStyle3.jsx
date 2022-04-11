@@ -96,7 +96,7 @@ const SliderItem = props => (
                     <div className="cart_item style2 style3">
                         <div className="inner-cart">
                             <div className="overlay"></div>
-                            <img src={props.item.img} alt="Axies" />
+                            <img src={props.item.img} alt="AxelarNFT" />
                             <div className="content">
                                 <div className="fs-16"><Link to="/ItemDetails">{props.item.title}</Link></div>
                                 <p>{props.item.category}</p>

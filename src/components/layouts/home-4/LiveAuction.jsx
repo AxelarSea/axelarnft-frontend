@@ -62,7 +62,7 @@ const LiveAuction = props => {
                                                                 <div className="meta-info style">
                                                                     <div className="author">
                                                                         <div className="avatar">
-                                                                            <img src={item.imgCollection} alt="Axies" />
+                                                                            <img src={item.imgCollection} alt="AxelarNFT" />
                                                                         </div>
                                                                         <div className="info">
                                                                             <span>Collection</span>
@@ -90,7 +90,7 @@ const LiveAuction = props => {
                                                                     </div>
                                                                 </div>
                                                                 <div className="card-media">
-                                                                    <Link to="/ItemDetails"><img src={item.img} alt="Axies" /></Link>
+                                                                    <Link to="/ItemDetails"><img src={item.img} alt="AxelarNFT" /></Link>
                                                                     <Link to="/login" className="wishlist-button heart"><span className="number-like"> {item.wishlist}</span></Link>
                                                                     <div className="featured-countdown">
                                                                         <span className="slogan"></span>
@@ -109,7 +109,7 @@ const LiveAuction = props => {
                                                                 <div className="meta-info">
                                                                     <div className="author">
                                                                         <div className="avatar">
-                                                                            <img src={item.imgAuthor} alt="Axies" />
+                                                                            <img src={item.imgAuthor} alt="AxelarNFT" />
                                                                         </div>
                                                                         <div className="info">
                                                                             <span>Creator</span>

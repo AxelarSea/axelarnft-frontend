@@ -53,7 +53,7 @@ const TodayPicks = props => {
                                                             <div className="slider-item">										
                                                         <div className={`sc-card-product ${item.feature ? 'comingsoon' : '' } `}>
                                                         <div className="card-media">
-                                                            <Link to="/ItemDetails"><img src={item.img} alt="axies" /></Link>
+                                                            <Link to="/ItemDetails"><img src={item.img} alt="AxelarNFT" /></Link>
                                                             <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link>
                                                             <div className="coming-soon">{item.feature}</div>
                                                         </div>
@@ -64,7 +64,7 @@ const TodayPicks = props => {
                                                         <div className="meta-info">
                                                             <div className="author">
                                                                 <div className="avatar">
-                                                                    <img src={item.imgAuthor} alt="axies" />
+                                                                    <img src={item.imgAuthor} alt="AxelarNFT" />
                                                                 </div>
                                                                 <div className="info">
                                                                     <span>Owned By</span>

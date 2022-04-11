@@ -97,7 +97,7 @@ const CreateItem2 = () => {
               <div className="sc-card-product">
                 <div className="card-media">
                   <Link to="/ItemDetails">
-                    <img src={data.metadata?.image} alt="Axies" />
+                    <img src={data.metadata?.image} alt="AxelarNFT" />
                   </Link>
                   {/* <Link to="/login" className="wishlist-button heart">
                     <span className="number-like"> 100</span>
@@ -118,7 +118,7 @@ const CreateItem2 = () => {
                 <div className="meta-info">
                   <div className="author">
                     {/* <div className="avatar">
-                      <img src={data.metadata?.image} alt="Axies" />
+                      <img src={data.metadata?.image} alt="AxelarNFT" />
                     </div> */}
                     <div className="info">
                       <span>Owned By</span>
