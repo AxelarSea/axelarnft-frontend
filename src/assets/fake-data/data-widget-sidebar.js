@@ -60,6 +60,12 @@ const widgetSidebarData = [
             {
                 field: 'Fantom'
             },
+            {
+                field: 'Polygon'
+            },
+            {
+                field: 'Moonbeam'
+            },
         ]
     },
     // {

@@ -14,7 +14,9 @@ const Explore = props => {
     const [check,setCheck] = useState({
         eth:false,
         avax:false,
-        ftm:false
+        ftm:false,
+        polygon:false,
+        moonbeam:false,
     })
 
     const setData = async () => {
@@ -23,6 +25,8 @@ const Explore = props => {
         if (check.eth) chains.push(3);
         if (check.avax) chains.push(43113);
         if (check.ftm) chains.push(4002);
+        if (check.polygon) chains.push(80001);
+        if (check.moonbeam) chains.push(1287);
 
         if (chains.length == 0) {
             setItems(defaultItems);
@@ -44,7 +48,12 @@ const Explore = props => {
         if(i === 2){
             setCheck({...check , ftm:!check.ftm})
         }
-        
+        if(i === 3){
+            setCheck({...check , polygon:!check.polygon})
+        }
+        if(i === 4){
+            setCheck({...check , moonbeam:!check.moonbeam})
+        }
     }
 
     console.log(defaultItems)
