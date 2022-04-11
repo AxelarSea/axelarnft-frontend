@@ -704,7 +704,7 @@ const Authorsprofile = () => {
                         <TabPanel
                           key={index}
                         >
-                          <div className="row">
+                          <div className="row w-100">
                             {item.dataContent
                               .slice(0, visible)
                               .map((data, index) => (
