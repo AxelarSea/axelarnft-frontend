@@ -35,6 +35,12 @@ import HeaderStyle2 from "../components/header/HeaderStyle2";
 import ethwallet from '../assets/images/icon/ethwallet.svg'
 import terrawallet from '../assets/images/icon/terrawallet.svg'
 
+import ethLogo from '../assets/images/icon/eth-logo.svg'
+import polygonLogo from '../assets/images/icon/polygon-logo.svg'
+import avaxLogo from '../assets/images/icon/avax-logo.svg'
+import moonbeamLogo from '..//assets/images/icon/moonbeam-logo.svg'
+import fantomLogo from '../assets/images/icon/fantom-logo.svg'
+
 
 import Explore from "../components/layouts/explore-04/Explore";
 import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
@@ -734,7 +740,10 @@ const Authorsprofile = () => {
                                           <h6>{maskAddress(data.nameAuthor)}</h6>
                                         </div>
                                       </div>
-                                      <div className="tags">{data.tags}</div>
+                                      <div className="">
+                                      <img src={data.tags === 'ETH' ? ethLogo : data.tags === 'AVAX' ? avaxLogo : data.tags === 'FTM' ? fantomLogo : data.tags === 'MOONBEAM' ? moonbeamLogo : data.tags === 'POLYGON' ? polygonLogo : ''} alt="" width={'40'}/>
+
+                                      </div>
                                     </div>
                                     <div className="card-bottom style-explode">
                                       <div className="Price">
