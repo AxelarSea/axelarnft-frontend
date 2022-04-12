@@ -53,7 +53,7 @@ const Faucet = () => {
                 img: img5,
                 title: 'Moonbeam Faucet',
                 description: 'Sollicitudin iure conubia vivamus habitasse aptent, eligendi deserunt excepteur tellus non',
-                website:'https://docs.moonbeam.network/learn/platform/networks/moonbase/'
+                website:'https://axelarnft.gitbook.io/axelarnft-docs/testnet/funding-testnet-wallet/moonbeam-alpha-testnet'
             },
             {
                 img: img6,
