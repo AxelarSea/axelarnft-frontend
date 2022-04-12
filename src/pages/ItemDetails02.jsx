@@ -91,7 +91,7 @@ const ItemDetails02 = () => {
                         <div className="col-xl-6 col-md-12">
                             <div className="content-left">
                                 <div className="media">
-                                    <img src={imgdetail1} alt="AxelarNFT" />
+                                    <img src={imgdetail1} alt="AxelarSea" />
                                 </div>
                             </div>
                         </div>
@@ -111,7 +111,7 @@ const ItemDetails02 = () => {
                                         <div className="meta-info">
                                             <div className="author">
                                                 <div className="avatar">
-                                                    <img src={img6} alt="AxelarNFT" />
+                                                    <img src={img6} alt="AxelarSea" />
                                                 </div>
                                                 <div className="info">
                                                     <span>Owned By</span>
@@ -122,7 +122,7 @@ const ItemDetails02 = () => {
                                         <div className="meta-info">
                                             <div className="author">
                                                 <div className="avatar">
-                                                    <img src={img7} alt="AxelarNFT" />
+                                                    <img src={img7} alt="AxelarSea" />
                                                 </div>
                                                 <div className="info">
                                                     <span>Create By</span>
@@ -180,7 +180,7 @@ const ItemDetails02 = () => {
                                                                     <div className="sc-author-box style-2">
                                                                         <div className="author-avatar">
                                                                             <Link to="#">
-                                                                                <img src={item.img} alt="AxelarNFT" className="avatar" />
+                                                                                <img src={item.img} alt="AxelarSea" className="avatar" />
                                                                             </Link>
                                                                             <div className="badge"></div>
                                                                         </div>
@@ -210,7 +210,7 @@ const ItemDetails02 = () => {
                                                                 <div className="sc-author-box style-2">
                                                                     <div className="author-avatar">
                                                                         <Link to="#">
-                                                                            <img src={img1} alt="AxelarNFT" className="avatar" />
+                                                                            <img src={img1} alt="AxelarSea" className="avatar" />
                                                                         </Link>
                                                                         <div className="badge"></div>
                                                                     </div>

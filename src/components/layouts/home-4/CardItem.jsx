@@ -19,7 +19,7 @@ const CardItem = () => {
                             <div className="cart_item">                                   
                                 <div className="inner-cart">
                                     <div className="overlay"></div>
-                                    <img src={img1} alt="AxelarNFT" />
+                                    <img src={img1} alt="AxelarSea" />
                                     <div className="content">
                                         <div className="fs-16"><a href="/ItemDetails">"Hamlet Contemplates Hamlet Contemplates</a></div>
                                         <p>Graphic Art 3D</p>
@@ -27,7 +27,7 @@ const CardItem = () => {
                                 </div>
                                 <div className="inner-cart">
                                     <div className="overlay"></div>
-                                    <img src={img2} alt="AxelarNFT" />
+                                    <img src={img2} alt="AxelarSea" />
                                     <div className="content">
                                         <div className="fs-16"><a href="/ItemDetails">"Hamlet Contemplates ...</a></div>
                                         <p>Graphic Art 3D</p>
@@ -37,7 +37,7 @@ const CardItem = () => {
                             <div className="cart_item style2">
                                 <div className="inner-cart">
                                     <div className="overlay"></div>
-                                    <img src={img3} alt="AxelarNFT" />
+                                    <img src={img3} alt="AxelarSea" />
                                     <div className="content">
                                         <div className="fs-16"><a href="/ItemDetails">CYBER ART</a></div>
                                         <p>Graphic Art 3D</p>
@@ -50,7 +50,7 @@ const CardItem = () => {
                             <div className="cart_item">
                                 <div className="inner-cart">
                                     <div className="overlay"></div>
-                                    <img src={img4} alt="AxelarNFT" />
+                                    <img src={img4} alt="AxelarSea" />
                                     <div className="content">
                                         <div className="fs-16"><a href="/ItemDetails">"Hamlet Contemplates ...</a></div>
                                         <p>Graphic Art 3D</p>
@@ -58,7 +58,7 @@ const CardItem = () => {
                                 </div>
                                 <div className="inner-cart">
                                     <div className="overlay"></div>
-                                    <img src={img5} alt="AxelarNFT" />
+                                    <img src={img5} alt="AxelarSea" />
                                     <div className="content">
                                         <div className="fs-16"><a href="/ItemDetails">"Hamlet Contemplates ...</a></div>
                                         <p>Graphic Art 3D</p>
@@ -68,7 +68,7 @@ const CardItem = () => {
                             <div className="cart_item">
                                 <div className="inner-cart mg-bt-30">
                                     <div className="overlay"></div>
-                                    <img src={img6} alt="AxelarNFT" />
+                                    <img src={img6} alt="AxelarSea" />
                                     <div className="content">
                                         <div className="fs-16"><a href="/ItemDetails">"Hamlet Contemplates ...</a></div>
                                         <p>Graphic Art 3D</p>
@@ -76,7 +76,7 @@ const CardItem = () => {
                                 </div>
                                 <div className="inner-cart">
                                     <div className="overlay"></div>
-                                    <img src={img7} alt="AxelarNFT" />
+                                    <img src={img7} alt="AxelarSea" />
                                     <div className="content">
                                         <div className="fs-16"><a href="/ItemDetails">"Hamlet Contemplates ...</a></div>
                                         <p>Graphic Art 3D</p>

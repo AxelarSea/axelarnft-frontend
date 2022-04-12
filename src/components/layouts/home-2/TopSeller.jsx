@@ -34,7 +34,7 @@ const TopSellerItem = props => (
         <div className="sc-author-box style-3 pd-0">
             <div className="author-avatar">
                 <Link to="/authors-02">
-                    <img src={props.item.img} alt="AxelarNFT" className="avatar" />
+                    <img src={props.item.img} alt="AxelarSea" className="avatar" />
                 </Link>
                 <div className="badge"><i className="ripple"></i></div>
             </div>

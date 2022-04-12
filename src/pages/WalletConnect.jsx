@@ -317,7 +317,7 @@ const WalletConnect = () => {
                 Connect Your Wallet
               </h2> */}
               <h5 className="sub-title ct style-1 pad-400">
-              Connect with one or more of our available wallet providers below in order to unlock the features of AxelarNFT.
+              Connect with one or more of our available wallet providers below in order to unlock the features of AxelarSea.
               </h5>
             </div>
             <div className="col-md-12">
@@ -328,7 +328,7 @@ const WalletConnect = () => {
                   onClick={item.onClick}
                   >
                     <div className="img">
-                      <img src={item.img} alt="AxelarNFT" />
+                      <img src={item.img} alt="AxelarSea" />
                     </div>
                     <h4 className="heading">{item.title}</h4>
                     <p className="content" style={{ marginBottom: 8 }}>

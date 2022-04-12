@@ -120,7 +120,7 @@ const LiveAuction = () => {
                                                             <div className="slider-item">										
                                                                 <div className="sc-card-product">
                                                                     <div className="card-media">
-                                                                        <Link to="/ItemDetails"><img src={item.img} alt="AxelarNFT" /></Link>
+                                                                        <Link to="/ItemDetails"><img src={item.img} alt="AxelarSea" /></Link>
                                                                         <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link>
                                                                         <div className="featured-countdown">
                                                                             <span className="slogan"></span>
@@ -139,7 +139,7 @@ const LiveAuction = () => {
                                                                     <div className="meta-info">
                                                                         <div className="author">
                                                                             <div className="avatar">
-                                                                                <img src={item.imgAuthor} alt="AxelarNFT" />
+                                                                                <img src={item.imgAuthor} alt="AxelarSea" />
                                                                             </div>
                                                                             <div className="info">
                                                                                 <span>Creator</span>

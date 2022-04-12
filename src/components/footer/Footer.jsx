@@ -1,8 +1,8 @@
 import { getDefaultNormalizer } from '@testing-library/react';
 import React, { useState ,useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import logodark from '../../assets/images/logo/logoaxelarnft.svg'
-import logofooter from '../../assets/images/logo/logoaxelarnft.svg'
+import logodark from '../../assets/images/logo/logoaxelarsea.svg'
+import logofooter from '../../assets/images/logo/logoaxelarsea.svg'
 const Footer = () => {
 
     const aboutList = [
@@ -84,7 +84,7 @@ const Footer = () => {
             link: "#"
         },
         {
-            title: "info@axelarnft.com",
+            title: "info@axelarsea.com",
             link: "#"
         },
     ]
@@ -206,7 +206,7 @@ const Footer = () => {
                                         }
                                         {/* <div key={index} className="sc-box-icon d-flex flex-column align-items-center justify-content-center " style={{cursor:'pointer'}} target="_blank" onClick={() => goSite(item.website)}>
                                             <div className="img">
-                                                <img src={item.img} alt="AxelarNFT" />
+                                                <img src={item.img} alt="AxelarSea" />
                                             </div>
                                             <h4 className="heading"><a href={item.website} target="_blank">{item.title}</a> </h4>
                                             

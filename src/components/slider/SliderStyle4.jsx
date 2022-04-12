@@ -25,10 +25,10 @@ const SliderStyle4 = () => {
     return (
         <div>
             <section className="flat-title-page mainslider" >
-            <img className="bgr-gradient gradient2" src={shape2} alt="AxelarNFT" />
-                 {/* <img className="bgr-gradient gradient3" src={shape4} alt="AxelarNFT" />
-                <img className="bgr-gradient gradient2" src={shape2} alt="AxelarNFT" />
-                <img className="bgr-gradient gradient1" src={shape3} alt="AxelarNFT" />  */}
+            <img className="bgr-gradient gradient2" src={shape2} alt="AxelarSea" />
+                 {/* <img className="bgr-gradient gradient3" src={shape4} alt="AxelarSea" />
+                <img className="bgr-gradient gradient2" src={shape2} alt="AxelarSea" />
+                <img className="bgr-gradient gradient1" src={shape3} alt="AxelarSea" />  */}
                 <div className="overlay"></div>
                 <div className="themesflat-container ">
                         <div className="wrap-heading flat-slider flex">
@@ -67,11 +67,11 @@ const SliderStyle4 = () => {
                                 }}
                                 speed= {2000}
                             >
-                                {/* <SwiperSlide><img src={img1} alt="AxelarNFT" /></SwiperSlide>
-                                <SwiperSlide><img src={img2} alt="AxelarNFT" /></SwiperSlide>
-                                <SwiperSlide><img src={img3} alt="AxelarNFT" /></SwiperSlide>
-                                <SwiperSlide><img src={img1} alt="AxelarNFT" /></SwiperSlide>
-                                <SwiperSlide><img src={img2} alt="AxelarNFT" /></SwiperSlide> */}
+                                {/* <SwiperSlide><img src={img1} alt="AxelarSea" /></SwiperSlide>
+                                <SwiperSlide><img src={img2} alt="AxelarSea" /></SwiperSlide>
+                                <SwiperSlide><img src={img3} alt="AxelarSea" /></SwiperSlide>
+                                <SwiperSlide><img src={img1} alt="AxelarSea" /></SwiperSlide>
+                                <SwiperSlide><img src={img2} alt="AxelarSea" /></SwiperSlide> */}
 
                             </Swiper>
                             <Swiper
@@ -87,11 +87,11 @@ const SliderStyle4 = () => {
                                 }}
                                 speed= {1800}
                             >
-                                {/* <SwiperSlide><img src={img3} alt="AxelarNFT" /></SwiperSlide>
-                                <SwiperSlide><img src={img2} alt="AxelarNFT" /></SwiperSlide>
-                                <SwiperSlide><img src={img1} alt="AxelarNFT" /></SwiperSlide>
-                                <SwiperSlide><img src={img3} alt="AxelarNFT" /></SwiperSlide>
-                                <SwiperSlide><img src={img2} alt="AxelarNFT" /></SwiperSlide> */}
+                                {/* <SwiperSlide><img src={img3} alt="AxelarSea" /></SwiperSlide>
+                                <SwiperSlide><img src={img2} alt="AxelarSea" /></SwiperSlide>
+                                <SwiperSlide><img src={img1} alt="AxelarSea" /></SwiperSlide>
+                                <SwiperSlide><img src={img3} alt="AxelarSea" /></SwiperSlide>
+                                <SwiperSlide><img src={img2} alt="AxelarSea" /></SwiperSlide> */}
 
                             </Swiper>
                             <Swiper
@@ -107,11 +107,11 @@ const SliderStyle4 = () => {
                                 }}
                                 speed= {2200}
                             >
-                                {/* <SwiperSlide><img src={img3} alt="AxelarNFT" /></SwiperSlide>
-                                <SwiperSlide><img src={img1} alt="AxelarNFT" /></SwiperSlide>
-                                <SwiperSlide><img src={img2} alt="AxelarNFT" /></SwiperSlide>
-                                <SwiperSlide><img src={img3} alt="AxelarNFT" /></SwiperSlide>
-                                <SwiperSlide><img src={img1} alt="AxelarNFT" /></SwiperSlide> */}
+                                {/* <SwiperSlide><img src={img3} alt="AxelarSea" /></SwiperSlide>
+                                <SwiperSlide><img src={img1} alt="AxelarSea" /></SwiperSlide>
+                                <SwiperSlide><img src={img2} alt="AxelarSea" /></SwiperSlide>
+                                <SwiperSlide><img src={img3} alt="AxelarSea" /></SwiperSlide>
+                                <SwiperSlide><img src={img1} alt="AxelarSea" /></SwiperSlide> */}
 
                             </Swiper>
                         </div>

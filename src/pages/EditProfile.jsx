@@ -35,7 +35,7 @@ const EditProfile = () => {
                          <div className="col-xl-3 col-lg-4 col-md-6 col-12">
                             <div className="sc-card-profile text-center">
                                 <div className="card-media">
-                                    <img id="profileimg" src={avt} alt="AxelarNFT" />                         
+                                    <img id="profileimg" src={avt} alt="AxelarSea" />                         
                                 </div>
                             <div id="upload-profile">
                                 <Link to="#" className="btn-upload">
@@ -56,10 +56,10 @@ const EditProfile = () => {
                                         </label>
                                     </form>
                                     <div className="image">
-                                        <img src={bg1} alt="AxelarNFT" />
+                                        <img src={bg1} alt="AxelarSea" />
                                     </div>
                                     <div className="image style2">
-                                        <img src={bg2} alt="AxelarNFT" />
+                                        <img src={bg2} alt="AxelarSea" />
                                     </div>
                                 </div>
 

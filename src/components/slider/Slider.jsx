@@ -44,9 +44,9 @@ Slider.propTypes = {
 }
 const SliderItem = props => (
     <div className="flat-title-page" style={{backgroundImage: `url(${imgbg})`}}>
-        <img className="bgr-gradient gradient1" src={shape1} alt="AxelarNFT" />
-        <img className="bgr-gradient gradient2" src={shape2} alt="AxelarNFT" />
-        <img className="bgr-gradient gradient3" src={shape3} alt="AxelarNFT" />
+        <img className="bgr-gradient gradient1" src={shape1} alt="AxelarSea" />
+        <img className="bgr-gradient gradient2" src={shape2} alt="AxelarSea" />
+        <img className="bgr-gradient gradient3" src={shape3} alt="AxelarSea" />
         <div className="shape item-w-16"></div>
         <div className="shape item-w-22"></div>
         <div className="shape item-w-32"></div>
@@ -76,8 +76,8 @@ const SliderItem = props => (
                                     </div>
                                 </div>
                                 <div className="image">
-                                    <img className="img-bg" src={props.item.imgbg} alt="AxelarNFT" />
-                                    <img src={props.item.img} alt="AxelarNFT" />
+                                    <img className="img-bg" src={props.item.imgbg} alt="AxelarSea" />
+                                    <img src={props.item.img} alt="AxelarSea" />
                                 </div>
                             </div>   
                         </div>					                           

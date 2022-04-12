@@ -121,7 +121,7 @@ const CreateItem = () => {
                           : img1
                           
                       }
-                      alt="AxelarNFT"
+                      alt="AxelarSea"
                     />
                   </Link>
                   {/* <Link to="/login" className="wishlist-button heart">
@@ -143,7 +143,7 @@ const CreateItem = () => {
                 {/* <div className="meta-info">
                   <div className="author">
                     <div className="avatar">
-                      <img src={avt} alt="AxelarNFT" />
+                      <img src={avt} alt="AxelarSea" />
                     </div>
                     <div className="info">
                       <span>Owned By</span>
@@ -239,7 +239,7 @@ const CreateItem = () => {
                         disabled
                           type="text"
                           placeholder=""
-                          value="AxelarNFT Collection."
+                          value="AxelarSea Collection."
                           style={{cursor:'default'}}
                         />
 

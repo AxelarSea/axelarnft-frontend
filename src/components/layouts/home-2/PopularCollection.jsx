@@ -63,13 +63,13 @@ const PopularCollectionItem = props => (
                         <Link to="/authors-02">
                             <div className="media-images-box">
                                 <div className="top-media">
-                                    <img src={props.item.imgleft} alt="AxelarNFT" />
-                                    <img src={props.item.imgright3} alt="AxelarNFT" />
+                                    <img src={props.item.imgleft} alt="AxelarSea" />
+                                    <img src={props.item.imgright3} alt="AxelarSea" />
                                     </div>
                                 <div className="bottom-media">
-                                    <img src={props.item.imgright1} alt="AxelarNFT" />
-                                    <img src={props.item.imgright2} alt="AxelarNFT" />
-                                    <img src={props.item.imgright4} alt="AxelarNFT" />
+                                    <img src={props.item.imgright1} alt="AxelarSea" />
+                                    <img src={props.item.imgright2} alt="AxelarSea" />
+                                    <img src={props.item.imgright4} alt="AxelarSea" />
                                 </div>
                             </div>
                         </Link>

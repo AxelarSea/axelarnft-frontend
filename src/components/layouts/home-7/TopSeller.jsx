@@ -62,7 +62,7 @@ const TopSeller = () => {
                     },
                     {
                         img: imgAuthor4,
-                        name: 'AxelarNFT',
+                        name: 'AxelarSea',
                         mail: '0xG341…Aw24',
                         top: '4',
                         Price: '$20,123.22'
@@ -311,7 +311,7 @@ const TopSeller = () => {
                                                             <div className="author-style2 flex">
                                                                 <div className="author-avatar">
                                                                     <Link to="#">
-                                                                        <img src={item.img} alt="AxelarNFT" className="avatar" />
+                                                                        <img src={item.img} alt="AxelarSea" className="avatar" />
                                                                     </Link>
                                                                     <div className="badge"><i className="ripple"></i></div>
                                                                 </div>

@@ -59,12 +59,12 @@ const BlogItem = props => (
     <div className="fl-blog fl-item2 col-lg-4 col-md-6">
         <article className="sc-card-article">
             <div className="card-media">
-                <Link to="/blog-details"><img src={props.item.img} alt="AxelarNFT" /></Link>
+                <Link to="/blog-details"><img src={props.item.img} alt="AxelarSea" /></Link>
             </div>
             <div className="meta-info">
                 <div className="author">
                     <div className="avatar">
-                        <img src={props.item.imgAuthor} alt="AxelarNFT" />
+                        <img src={props.item.imgAuthor} alt="AxelarSea" />
                     </div>
                     <div className="info">
                         <span>Post owner</span>

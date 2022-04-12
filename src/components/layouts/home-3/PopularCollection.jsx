@@ -62,11 +62,11 @@ const PopularCollectionItem = props => (
                     <div className="sc-card-collection">
                         <Link to="/authors-01">
                             <div className="media-images-box">
-                                <img src={props.item.imgtop} alt="AxelarNFT" />
+                                <img src={props.item.imgtop} alt="AxelarSea" />
                                 <div className="bottom-media">
-                                    <img src={props.item.imgright1} alt="AxelarNFT" />
-                                    <img src={props.item.imgright2} alt="AxelarNFT" />
-                                    <img src={props.item.imgright3} alt="AxelarNFT" />
+                                    <img src={props.item.imgright1} alt="AxelarSea" />
+                                    <img src={props.item.imgright2} alt="AxelarSea" />
+                                    <img src={props.item.imgright3} alt="AxelarSea" />
                                 </div>
                             </div>
                         </Link>
@@ -74,7 +74,7 @@ const PopularCollectionItem = props => (
                             <div className="author">
                                 <div className="sc-author-box style-2">
                                     <div className="author-avatar">
-                                        <img src={props.item.imgAuthor} alt="AxelarNFT" className="avatar" />
+                                        <img src={props.item.imgAuthor} alt="AxelarSea" className="avatar" />
                                         <div className="badge"><i className="ripple"></i></div>
                                     </div>
                                 </div>

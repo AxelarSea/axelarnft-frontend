@@ -538,7 +538,7 @@ const Collection = () => {
                     <div className="flat-tabs tab-authors">
                         <div className="author-profile flex">
                             <div className="feature-profile">
-                                <img src={avt} alt="AxelarNFT" className="avatar" />
+                                <img src={avt} alt="AxelarSea" className="avatar" />
                             </div>
                             <div className="infor-profile">
                                 <span>Author Profile</span>
@@ -580,7 +580,7 @@ const Collection = () => {
                                                         <div key={index} className="col-xl-3 col-lg-4 col-md-6 col-12">
                                                             <div className="sc-card-product explode ">
                                                                 <div className="card-media">
-                                                                    <Link to="/ItemDetails"><img src={data.img} alt="AxelarNFT" /></Link>
+                                                                    <Link to="/ItemDetails"><img src={data.img} alt="AxelarSea" /></Link>
                                                                     <div className="button-place-bid ">
                                                                         <button onClick={() => setModalShow(true)} className="sc-button style-place-bid style bag fl-button pri-3"><span>Buy Now</span></button>
                                                                     </div>
@@ -592,7 +592,7 @@ const Collection = () => {
                                                                 <div className="meta-info">
                                                                     <div className="author">
                                                                         <div className="avatar">
-                                                                            <img src={data.imgAuthor} alt="AxelarNFT" />
+                                                                            <img src={data.imgAuthor} alt="AxelarSea" />
                                                                         </div>
                                                                         <div className="info">
                                                                             <span>Creator</span>
