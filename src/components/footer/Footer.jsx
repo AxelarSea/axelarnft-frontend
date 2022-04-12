@@ -100,7 +100,7 @@ const Footer = () => {
         },
         {
             icon: "fab fa-telegram-plane",
-            link: "https://t.me/axelarseaannouncement"
+            link: "https://t.me/axelarnftannouncement"
         },
         {
             icon: "fab fa-youtube",
