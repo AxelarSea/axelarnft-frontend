@@ -12,7 +12,7 @@ const Footer = () => {
         // },
         {
             title:"Resource",
-            link:""
+            link:"https://axelarnft.gitbook.io/axelarnft-docs/"
         },
         // {
         //     title:"Term & Condition",
@@ -96,7 +96,11 @@ const Footer = () => {
         },
         {
             icon: "fab fa-telegram-plane",
-            link: "#"
+            link: "https://t.me/AxelarNFT"
+        },
+        {
+            icon: "fab fa-telegram-plane",
+            link: "https://t.me/axelarseaannouncement"
         },
         {
             icon: "fab fa-youtube",
@@ -104,7 +108,7 @@ const Footer = () => {
         },
         {
             icon: "icon-fl-vt",
-            link: "#"
+            link: "https://discord.gg/dUwcAj7C46"
         },
         
 
@@ -157,8 +161,10 @@ const Footer = () => {
                                 <ul>
                                     {
                                         aboutList.map((item,index) =>(
-                                            <li key={index}><Link to={item.link}>{item.title}</Link></li>
+                                            <li key={index}><a to={item.link} href={item.link} target="_blank">{item.title}</a></li>
                                         ))
+                                        //     <li key={index}><Link to={item.link} href={item.link} target="_blank">{item.title}</Link></li>
+                                        // ))
                                     }
                                 </ul>
                             </div>
