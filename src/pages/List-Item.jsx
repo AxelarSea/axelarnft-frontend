@@ -218,7 +218,7 @@ const CreateItem2 = () => {
                               </li>
                             </ul>
                           </div>
-                          <input type="text" placeholder="Enter Price(at least 10UST /0.1 Luna)" className="big-dog" onChange={(e) => setPrice(e.target.value)} />
+                          <input type="text" placeholder="Enter Price(at least 10UST /0.1 Luna)" className="" onChange={(e) => setPrice(e.target.value)} />
                         </div>
 
                         <h4
