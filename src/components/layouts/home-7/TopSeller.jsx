@@ -131,31 +131,31 @@ const TopSeller = () => {
                     {
                         img: imgAuthor,
                         name: 'XelarGEN2',
-                        mail: '0xs4dfb…A141',
-                        top: '1',
-                        Price: '$28,425.24'
-                    },
-                    {
-                        img: imgAuthor2,
-                        name: 'INKstyle',
                         mail: '0xF5ab…A754',
-                        top: '2',
-                        Price: '$32,893.53'
+                        top: '1',
+                        Price: '$240,163.92'
                     },
                     {
                         img: imgAuthor3,
                         name: 'PlantanimalNFT',
-                        mail: '0xF5ab…A754',
-                        top: '3',
-                        Price: '$20,123.22'
+                        mail: '0xG341…A151',
+                        top: '2',
+                        Price: '$196,749.11'
                     },
-                    // {
-                    //     img: imgAuthor3,
-                    //     name: 'MetaWarden',
-                    //     mail: '0xG341…A151',
-                    //     top: '4',
-                    //     Price: '$25,893.53'
-                    // },
+                    {
+                        img: imgAuthor2,
+                        name: 'INKstyle',
+                        mail: '0xs4dfb…A141',
+                        top: '3',
+                        Price: '$190,405.82'
+                    },
+                    {
+                        img: imgAuthor4,
+                        name: 'AxelarNFT',
+                        mail: '0xG341…Aw24',
+                        top: '4',
+                        Price: '$128,772.29'
+                    },
                     // {
                     //     img: img5,
                     //     name: 'Windsor Lane',
@@ -195,29 +195,29 @@ const TopSeller = () => {
                         name: 'XelarGEN2',
                         mail: '0xF5ab…A754',
                         top: '1',
-                        Price: '$32,893.53'
+                        Price: '$863,439.41'
                     },
                     {
                         img: imgAuthor2,
                         name: 'INKstyle',
                         mail: '0xs4dfb…A141',
                         top: '2',
-                        Price: '$28,425.24'
+                        Price: '$716,853.67'
                     },
                     {
                         img: imgAuthor3,
                         name: 'PlantanimalNFT',
-                        mail: '0xF5ab…A754',
+                        mail: '0xG341…A151',
                         top: '3',
-                        Price: '$20,123.22'
+                        Price: '$662,157.60'
                     },
-                    // {
-                    //     img: imgAuthor3,
-                    //     name: 'MetaWarden',
-                    //     mail: '0xG341…A151',
-                    //     top: '4',
-                    //     Price: '$25,893.53'
-                    // },
+                    {
+                        img: imgAuthor4,
+                        name: 'AxelarNFT',
+                        mail: '0xG341…Aw24',
+                        top: '4',
+                        Price: '$493,893.88'
+                    },
                     // {
                     //     img: img5,
                     //     name: 'Windsor Lane',

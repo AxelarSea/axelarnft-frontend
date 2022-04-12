@@ -631,7 +631,7 @@ const Authorsprofile = () => {
                 <p className="content">
                 A persons who developed bitcoin, authored the bitcoin white paper, and created and deployed bitcoin's original reference implementation.
                 </p>
-                <div className="d-flex">
+                <div className="d-flex author-wallet-bar">
                   <form className="mr-3 d-flex justify-content-around">
                     <img src={ethwallet} alt="" style={{marginRight:'0.5rem'}}/>
                     <input
@@ -734,11 +734,11 @@ const Authorsprofile = () => {
                                     </div>
                                     <div className="meta-info">
                                       <div className="author">
-                                        {/* <div className="avatar">
-                                          <img src={data.imgAuthor} alt="AxelarSea" />
-                                        </div> */}
+                                        <div className="avatar">
+                                          <img src={avt} alt="AxelarNFT" />
+                                        </div>
                                         <div className="info">
-                                          <span>Creator</span>
+                                          <span>Owned By</span>
                                           <h6>{maskAddress(data.nameAuthor)}</h6>
                                         </div>
                                       </div>

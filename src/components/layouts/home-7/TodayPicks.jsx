@@ -42,6 +42,7 @@ import { crossChainTokenLabel, fetchAllListedItems } from '../../../utils/api';
 import { chainLabel, maskAddress } from '../../../utils/address';
 
 const TodayPicks = () => {
+
     const [data, setData] = useState(
         [
             {
@@ -306,8 +307,8 @@ const TodayPicks = () => {
                         <div className="col-md-12">
                             <div className="tf-soft">
                             <div className="soft-left">
-                                <Dropdown>
-                                    <Dropdown.Toggle id="dropdown-basic">
+                                <Dropdown disabled>
+                                    <Dropdown.Toggle id="dropdown-basic" disabled>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.16992 7.44043L11.9999 12.5504L20.7699 7.47043" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                             <path d="M12 21.61V12.54" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -324,8 +325,8 @@ const TodayPicks = () => {
                                     <Dropdown.Item href="#" onClick={() => handleBlockchainChange('MATIC')}>Polygon</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
-                                <Dropdown>
-                                    <Dropdown.Toggle id="dropdown-basic">
+                                <Dropdown disabled>
+                                    <Dropdown.Toggle id="dropdown-basic" disabled>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.67188 14.3298C8.67188 15.6198 9.66188 16.6598 10.8919 16.6598H13.4019C14.4719 16.6598 15.3419 15.7498 15.3419 14.6298C15.3419 13.4098 14.8119 12.9798 14.0219 12.6998L9.99187 11.2998C9.20187 11.0198 8.67188 10.5898 8.67188 9.36984C8.67188 8.24984 9.54187 7.33984 10.6119 7.33984H13.1219C14.3519 7.33984 15.3419 8.37984 15.3419 9.66984" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                             <path d="M12 6V18" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -383,10 +384,6 @@ const TodayPicks = () => {
                                         </div>
                                     </Dropdown.Item>
                                     </Dropdown.Menu>
-<<< HEAD
-                                </Dropdown> */}
-                                {/* <Dropdown>
-=======
                                 </Dropdown> */}
                                 
                                 {/* <Dropdown>
@@ -425,7 +422,7 @@ const TodayPicks = () => {
                             </div>
                             <div className="soft-right">
                                 <Dropdown>
-                                    <Dropdown.Toggle id="dropdown-basic">
+                                    <Dropdown.Toggle id="dropdown-basic" disabled>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3 7H21" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
                                             <path d="M6 12H18" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
@@ -434,7 +431,7 @@ const TodayPicks = () => {
                                         <span>Sort By: Recently Added</span>
                                     </Dropdown.Toggle>
 
-                                    <Dropdown.Menu style={{ margin: 0 }}>
+                                    <Dropdown.Menu style={{ margin: 0 }} >
                                     <Dropdown.Item href="#">
                                         <span>Recently added</span>
                                         <i className="fal fa-check"></i>
@@ -499,7 +496,15 @@ const TodayPicks = () => {
                                         <div>
                                             
                                             <div className="card-media">
-                                                <img src={item.img} alt="AxelarSea" />
+                                                <img src={item.img} alt="AxelarNFT" />
+                                                <div className="button-place-bid">
+                                            <button
+                                                onClick={() => setModalShow(true)}
+                                                className="sc-button style-place-bid style bag fl-button pri-3"
+                                            >
+                                                <span>Buy Now</span>
+                                            </button>
+                                            </div>
                                             </div>
                                             <div className="card-title">
                                                 <h5>{item.title}</h5>
@@ -521,11 +526,12 @@ const TodayPicks = () => {
                                                 {/* <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link> */}
                                             </div>
                                             <div className="meta-info  " id='cardprice' >
-                                                <div className="author">
-                                                    <div className="info style2 " style={{marginButtom:'1rem'}}>
+                                                <div className="card-bottom style-explode">
+                                                    <div className="price">
                                                         <span>Price</span>
-                                                        <span className="pricing">
-                                                            {item.price}</span>
+                                                        <div className="price-details mt-1">
+                                                            <h5>{item.price}</h5>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

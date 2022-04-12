@@ -3277,6 +3277,7 @@ section.today-picks {
 
 .sc-card-product.explode.style2 {
     padding-bottom: 13px;
+    margin-right: 1rem;
 }
 
 .sc-card-product.explode.style2 .card-media {
@@ -4332,7 +4333,7 @@ section.today-picks {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
 }
 

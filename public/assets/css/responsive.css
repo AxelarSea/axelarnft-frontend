@@ -289,7 +289,7 @@
   .themesflat-container {
     width    : 1200px;
     max-width: 100%;
-    padding-bottom:120px;
+    padding-bottom:0px;
   }
 
   .wrap-heading{
@@ -738,7 +738,7 @@
 
   #footer.style-2,
   #footer {
-    padding: 70px 0px !important;
+    padding: 0px 0px !important;
   }
 
   .tf-section.live-auctions.style2{
@@ -873,7 +873,13 @@
 .home-7 .today-pick .content-inner .sc-card-product {
   width: calc(50% - 26px);
 }
-ใ
+.axelarNFT-supported {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
 
 }
 @media only screen and (max-width: 767px) {
@@ -1503,6 +1509,10 @@
   .sc-card-activity .content .media{
     height: auto;
   }
+  .home-7  .tf-box-icon.tf-section.live-auctions.style7 {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
 
   .sc-card-activity .content .media img,
   .tf-box .box-item{
@@ -1517,4 +1527,19 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+  .author-wallet-bar{
+    display:flex;
+    flex-direction: column;
+  }
+  .axelarNFT-supported {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+  .axelarNFT-supported img {
+    margin: 20px 0px;
+    display: inline-block;
+}
+
 }

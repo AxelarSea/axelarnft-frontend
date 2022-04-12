@@ -130,7 +130,7 @@ const PopularCollection = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <Link to="/login" className="wishlist-button public heart mg-t-6"><span className="number-like">{item.wishlist}</span></Link>
+                                        <Link to="#" className="wishlist-button public heart mg-t-6"><span className="number-like">{item.wishlist}</span></Link>
                                     </div>
                                     <div className="sc-author-box style-2">
                                         <div className="author-avatar">

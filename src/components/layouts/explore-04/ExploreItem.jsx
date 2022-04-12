@@ -48,7 +48,7 @@ const ExploreItem = (props) => {
                     <span>Buy Now</span>
                   </button>
                 </div>
-                <Link to="/login" className="wishlist-button heart">
+                <Link to="#" className="wishlist-button heart">
                   <span className="number-like">{item.wishlist}</span>
                 </Link>
                 <div className="coming-soon">{item.feature}</div>
@@ -88,7 +88,7 @@ const ExploreItem = (props) => {
                   </div> */}
                 </div>
                 <div className="d-flex align-items-center justify-content-around" style={{width:'8rem'}}>
-                <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === '' ? moonbeamLogo : item.tags === 'MATIC' ? polygonLogo : ''} alt=""  width="40px"/>
+                <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === 'MOONBEAM' ? moonbeamLogo : item.tags === 'POLYGON' ? polygonLogo : ''} alt=""  width="40px"/>
                   {/* <h5 style={{fontSize:'11px'}}>{item.tags}</h5> */}
                   
                   </div>
