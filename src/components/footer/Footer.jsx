@@ -92,7 +92,7 @@ const Footer = () => {
     const socialList = [
         {
             icon: "fab fa-twitter",
-            link: "#"
+            link: "https://twitter.com/axelarnft"
         },
         {
             icon: "fab fa-telegram-plane",
