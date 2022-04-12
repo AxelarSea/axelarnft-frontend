@@ -104,7 +104,7 @@ const Footer = () => {
         },
         {
             icon: "fab fa-youtube",
-            link: "#"
+            link: "https://www.youtube.com/channel/UCg0Rd2h0ezE28te9DF2tPgQ"
         },
         {
             icon: "icon-fl-vt",
