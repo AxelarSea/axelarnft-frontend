@@ -14,10 +14,10 @@ const Footer = () => {
             title:"Resource",
             link:"https://axelarnft.gitbook.io/axelarnft-docs/"
         },
-        // {
-        //     title:"Term & Condition",
-        //     link:""
-        // },
+        {
+            title:"Medium",
+            link:"https://medium.com/@AxelarNFT"
+        },
         // {
         //     title:"FAQ",
         //     link:""
