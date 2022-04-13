@@ -735,7 +735,7 @@ const Authorsprofile = () => {
                                     <div className="meta-info">
                                       <div className="author">
                                         <div className="avatar">
-                                          <img src={avt} alt="AxelarNFT" />
+                                          <img src={avt} alt="AxelarSea" />
                                         </div>
                                         <div className="info">
                                           <span>Owned By</span>

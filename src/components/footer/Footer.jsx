@@ -12,11 +12,11 @@ const Footer = () => {
         // },
         {
             title:"Resource",
-            link:"https://axelarnft.gitbook.io/axelarnft-docs/"
+            link:"https://axelarsea.gitbook.io/axelarsea-docs/"
         },
         {
             title:"Medium",
-            link:"https://medium.com/@AxelarNFT"
+            link:"https://medium.com/@AxelarSea"
         },
         // {
         //     title:"FAQ",
@@ -92,15 +92,15 @@ const Footer = () => {
     const socialList = [
         {
             icon: "fab fa-twitter",
-            link: "https://twitter.com/axelarnft"
+            link: "https://twitter.com/axelarsea"
         },
         {
             icon: "fab fa-telegram-plane",
-            link: "https://t.me/AxelarNFT"
+            link: "https://t.me/AxelarSea"
         },
         {
             icon: "fab fa-telegram-plane",
-            link: "https://t.me/axelarnftannouncement"
+            link: "https://t.me/axelarseaannouncement"
         },
         {
             icon: "fab fa-youtube",
@@ -152,7 +152,7 @@ const Footer = () => {
                                         
                                     </Link>
                                 </div>
-                                <p className="sub-widget-logo">AxelarNFT is a one-stop interoperable NFT marketplace across chains where buyers can pay for an NFT on any supported chain using a token from a completely different chain, and sellers can list an NFT for sale on any supported chain while receiving payments on another chain.</p>
+                                <p className="sub-widget-logo">AxelarSea is a one-stop interoperable NFT marketplace across chains where buyers can pay for an NFT on any supported chain using a token from a completely different chain, and sellers can list an NFT for sale on any supported chain while receiving payments on another chain.</p>
                             </div>
                         </div>
                         <div className="col-lg-2 col-md-4 col-sm-5 col-5">

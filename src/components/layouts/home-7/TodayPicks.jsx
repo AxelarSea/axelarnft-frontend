@@ -496,7 +496,7 @@ const TodayPicks = () => {
                                         <div>
                                             
                                             <div className="card-media">
-                                                <img src={item.img} alt="AxelarNFT" />
+                                                <img src={item.img} alt="AxelarSea" />
                                                 <div className="button-place-bid">
                                             <button
                                                 onClick={() => setModalShow(true)}
