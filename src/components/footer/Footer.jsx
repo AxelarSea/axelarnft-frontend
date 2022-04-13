@@ -1,8 +1,8 @@
 import { getDefaultNormalizer } from '@testing-library/react';
 import React, { useState ,useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import logodark from '../../assets/images/logo/logoaxelarsea.svg'
-import logofooter from '../../assets/images/logo/logoaxelarsea.svg'
+import logodark from '../../assets/images/logo/logoaxelarsea.png'
+import logofooter from '../../assets/images/logo/logoaxelarsea.png'
 const Footer = () => {
 
     const aboutList = [
@@ -84,7 +84,7 @@ const Footer = () => {
         //     link: "#"
         // },
         {
-            title: "info@axelarsea.com",
+            title: "axelarsea@gmail.com",
             link: "#"
         },
     ]
