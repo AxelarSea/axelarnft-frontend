@@ -60,7 +60,7 @@ const routes = [
   { path: '/Authors-Profile', component: <Authorsprofile />},
   { path: '/Collection', component: <Collection />},
   { path: '/wallet-connect', component: <WalletConnect />},
-  { path: '/facuet', component: <Faucet />},
+  { path: '/faucet', component: <Faucet />},
   { path: '/create-item', component: <CreateItem />},
   { path: '/list-item', component: <CreateItem2 />},
   // { path: '/edit-profile', component: <EditProfile />},

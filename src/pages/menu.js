@@ -66,7 +66,7 @@ const menus = [
     {
         id: 5,
         name: 'Faucet',
-        links: '/facuet',
+        links: '/faucet',
         
     },
     // {
