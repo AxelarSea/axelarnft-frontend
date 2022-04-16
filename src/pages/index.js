@@ -23,12 +23,13 @@
 // import Contact01 from "./Contact01";
 // import Contact02 from "./Contact02";
 // import LiveAuctions from "./LiveAuctions";
+// import Collection from "./Collection";
+// import Authors01 from "./Explore-Authors";
+
 import Home from "./Home";
 import Explore from "./Explore";
 import ItemDetails from "./ItemDetails";
-import Authors01 from "./Explore-Authors";
 import Authorsprofile from "./Authorsprofile";
-import Collection from "./Collection";
 import WalletConnect from "./WalletConnect";
 import CreateItem from "./CreateItem";
 import ListItem from "./List-Item";
