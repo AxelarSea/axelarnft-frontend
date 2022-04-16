@@ -9,7 +9,6 @@ import 'swiper/scss/pagination';
 import shape1 from '../../assets/images/backgroup-secsion/bg-gradient1.png'
 import shape2 from '../../assets/images/backgroup-secsion/bg-gradient2.png'
 import shape3 from '../../assets/images/backgroup-secsion/bg-gradient3.png'
-import imgbg from '../../assets/images/backgroup-secsion/img_bg_page_title_inner.jpg'
 
 const SliderStyle1 = props => {
     const data = props.data
@@ -39,7 +38,7 @@ SliderStyle1.propTypes = {
     data: PropTypes.array.isRequired,
 }
 const SliderItem = props => (
-    <div className="flat-title-page" style={{backgroundImage: `url(${imgbg})`}}>
+    <div className="flat-title-page">
         <img className="bgr-gradient gradient1" src={shape1} alt="AxelarSea" />
         <img className="bgr-gradient gradient2" src={shape2} alt="AxelarSea" />
         <img className="bgr-gradient gradient3" src={shape3} alt="AxelarSea" />
