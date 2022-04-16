@@ -43,13 +43,13 @@ const SliderItem = props => (
         <img className="bgr-gradient gradient1" src={shape1} alt="AxelarSea" />
         <img className="bgr-gradient gradient2" src={shape2} alt="AxelarSea" />
         <img className="bgr-gradient gradient3" src={shape3} alt="AxelarSea" />
-        <div className="shape item-w-16"></div>
+        {/* <div className="shape item-w-16"></div>
         <div className="shape item-w-22"></div>
         <div className="shape item-w-32"></div>
         <div className="shape item-w-48"></div>
         <div className="shape style2 item-w-51"></div>
         <div className="shape style2 item-w-51 position2"></div>
-        <div className="shape item-w-68"></div>
+        <div className="shape item-w-68"></div> */}
         <div className="overlay"></div>
         <div className="swiper-container mainslider home">
             <div className="swiper-wrapper">
@@ -58,10 +58,9 @@ const SliderItem = props => (
                         <div className="themesflat-container ">
                             <div className="wrap-heading flat-slider flex">
                                 <div className="content">
-                                    <h2 className="heading">{props.item.title_1}</h2>	
-                                    <h1 className="heading mb-style"><span className="">{props.item.title_2}</span>                                          
-                                    </h1>
-                                    <h1 className="heading"><span className='fill'>{props.item.title_3}</span>{props.item.title_4}</h1>
+                                    <h1 className="heading">{props.item.title_1}</h1>
+                                    <h1 className="heading"><span className='fill'>{props.item.title_2}</span></h1>	
+                                    <h2 className="heading mb-style"><span className="">{props.item.title_3}</span></h2>
                                     <p className="sub-heading">{props.item.description}
                                     </p>
                                     <div className="flat-bt-slider flex style2">
@@ -72,7 +71,6 @@ const SliderItem = props => (
                                     </div>
                                 </div>
                                 <div className="image">
-                                    <img className="img-bg" src={props.item.imgbg} alt="AxelarSea" />
                                     <img src={props.item.img} alt="AxelarSea" />
                                 </div>
                             </div>   

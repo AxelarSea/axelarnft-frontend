@@ -10,6 +10,11 @@ import avt from "../assets/images/avatar/satoshi.svg";
 
 import AlunaLogo from "../assets/images/icon/Luna.png";
 import AustLogo from "../assets/images/icon/UST.png";
+import ethLogo from '../assets/images/icon/eth-logo.svg'
+import polygonLogo from '../assets/images/icon/polygon-logo.svg'
+import avaxLogo from '../assets/images/icon/avax-logo.svg'
+import moonbeamLogo from '../assets/images/icon/moonbeam-logo.svg'
+import fantomLogo from '../assets/images/icon/fantom-logo.svg'
 
 import HeaderStyle2 from "../components/header/HeaderStyle2";
 import { CROSS_CHAIN_TOKEN_ADDRESS, fetchItem, listItem } from "../utils/api";
@@ -66,6 +71,8 @@ const CreateItem2 = () => {
   useEffect(() => {
     refreshData();
   }, []);
+
+  console.log(data)
 
   return (
     <div className="create-item">
@@ -127,12 +134,15 @@ const CreateItem2 = () => {
                       </h6>
                     </div>
                   </div>
-                  <div className="tags">{chainLabel(data.collection?.chainId)}</div>
+                  {/* <div className="tags">{chainLabel(data.collection?.chainId)}</div> */}
+                  <img src={data.collection?.chainId === 3 ? ethLogo : data.collection?.chainId === 43113 ? avaxLogo : data.collection?.chainId === 4002 ? fantomLogo : data.collection?.chainId === 1283 ? moonbeamLogo : data.collection?.chainId === 80001 ? polygonLogo : ''} alt=""  width="40px"/>
+
                   {/* <div className="Price">
                     <span>Price</span>
                     <h5>{Price} {PriceType}</h5>
                   </div> */}
                 </div>
+                
                 {/* <div className="card-bottom">
                   <Link
                     to="/wallet-connect"
