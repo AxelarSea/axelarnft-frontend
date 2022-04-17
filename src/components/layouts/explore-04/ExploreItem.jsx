@@ -10,12 +10,17 @@ import avaxLogo from '../../../assets/images/icon/avax-logo.svg'
 import moonbeamLogo from '../../../assets/images/icon/moonbeam-logo.svg'
 import fantomLogo from '../../../assets/images/icon/fantom-logo.svg'
 
+const ITEM_PER_PAGE = 18;
+
 const ExploreItem = (props) => {
   const data = props.data;
 
-  const [visible, setVisible] = useState(6);
+  const [visible, setVisible] = useState(ITEM_PER_PAGE);
   const showMoreItems = () => {
-    setVisible((prevValue) => prevValue + 6);
+    setVisible((prevValue) => prevValue + ITEM_PER_PAGE);
+    if (props.loadMore) {
+      props.loadMore(ITEM_PER_PAGE);
+    }
   };
 
   const [modalShow, setModalShow] = useState(false);
@@ -106,7 +111,7 @@ const ExploreItem = (props) => {
             </Link>
           ))}
         </div>
-        {visible < data.length && (
+        {(true || visible < data.length) && (
           <div className="btn-auction center">
             <Link
               to="#"

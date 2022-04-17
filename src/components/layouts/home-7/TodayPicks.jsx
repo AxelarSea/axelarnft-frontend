@@ -233,8 +233,8 @@ const TodayPicks = () => {
 
 
     async function refreshData() {
-        let listed = await fetchAllListedItems();
-        listed = listed.slice(0, 20);
+        let listed = await fetchAllListedItems({ limit: 20 });
+        // listed = listed.slice(0, 20);
         setData(listed.map(x => ({
             img: x.metadata.image,
             title: x.collection.name + " #" + x.tokenId,
@@ -278,7 +278,7 @@ const TodayPicks = () => {
         }
     }
 
-    const [visible , setVisible] = useState(10);
+    const [visible , setVisible] = useState(20);
     const showMoreItems = () => {
         setVisible((prevValue) => prevValue + 5);
     }

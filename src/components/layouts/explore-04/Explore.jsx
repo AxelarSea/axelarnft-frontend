@@ -61,7 +61,7 @@ const Explore = props => {
 
     useEffect(() => {
         setData()
-    },[check])
+    },[check, defaultItems])
 
     // const items = props.items;
     return (

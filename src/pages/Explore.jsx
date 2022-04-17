@@ -15,6 +15,8 @@ const Explore04 = () => {
     const [items, setItems] = useState([]);
     const [defaultItems, setDefaultItems] = useState([]);
 
+    const [currentCursor, setCurrentCursor] = useState(0);
+
     function formatItems(items) {
         return items.map((x) => ({
           id: x.collection.address + "-" + x.tokenId,
@@ -34,16 +36,16 @@ const Explore04 = () => {
         }));
       }
     
-      async function refreshData() {
+      async function loadMore(pageSize = 18) {
         console.log("Refresh Start");
-        let items = await fetchAllListedItems();
+        let items = await fetchAllListedItems({ limit: pageSize, skip: currentCursor });
         console.log(items);
-        setItems(formatItems(items));
-        setDefaultItems(formatItems(items));
+        setDefaultItems([...defaultItems, ...formatItems(items)]);
+        setCurrentCursor(currentCursor + pageSize);
       }
     
       useEffect(() => {
-        refreshData();
+        loadMore();
       }, []);
 
     return (
@@ -70,7 +72,7 @@ const Explore04 = () => {
             </section>
             <Explore data={widgetSidebarData} setItems={setItems} items={items} defaultItems={defaultItems} formatItems={formatItems} >
                 <div className="col-xl-9 col-lg-9 col-md-12">
-                    <ExploreItem data={items} />
+                    <ExploreItem data={items} loadMore={loadMore} />
                 </div>
             </Explore>
             <Footer />
