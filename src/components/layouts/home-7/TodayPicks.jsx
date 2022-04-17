@@ -37,7 +37,7 @@ import satoshi from '../../../assets/images/avatar/satoshi.svg'
 
 
 import imgTodayPick from '../../../assets/images/box-item/img-today-pick-demo.svg'
-import imgAuthor from '../../../assets/images/avatar/img-today-pick-author.svg'
+import imgAuthor from '../../../assets/images/avatar/satoshi.svg'
 import { crossChainTokenLabel, fetchAllListedItems } from '../../../utils/api';
 import { chainLabel, maskAddress } from '../../../utils/address';
 

@@ -5257,7 +5257,7 @@ button.accordion-button {
     border-radius: 20px !important;
     border: none !important;
     box-shadow: 0px 3px 16px rgb(47 83 109 / 12%) !important;
-    background-color: var(--primary-color);
+    background-color: #ffffff;
     width: 100%;
     position: relative;
     display: flex;
@@ -8358,4 +8358,80 @@ input[type="text"].big-dog::-webkit-input-placeholder {
     position:sticky;
     position:-webkit-sticky;
     top:0;
+}
+
+.testnetcheck {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    background: radial-gradient(83.78% 518.77% at 38.06% 16.22%, #FF4F0D 0%, #7AB694 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 3rem;
+    cursor: pointer;
+}
+
+.testnetquest {
+    color: #FF4F0D;
+}
+
+.modal-tesnetcheck {
+    position: absolute;
+    width: 508px;
+    height: 594px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+
+}
+
+.search-wallet {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    position: absolute;
+    width: 464px;
+    height: 38px;
+    left: 22px;
+    top: 78px;
+    background: #F8F8F8;
+    border-radius: 10px;
+}
+
+.questlist{
+    background: #F8F8F8;
+    border: 1px solid #F8F8F8;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.showlist {
+    margin-top: 6rem;
+}
+
+.data-showlist {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 36px;
+    text-align: center;
+    color: #FF4F0D;
+}
+
+.title-showlist {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #17191E;
+    margin-top: 1rem;
 }

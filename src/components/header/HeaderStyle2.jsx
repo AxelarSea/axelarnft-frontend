@@ -8,6 +8,7 @@ import coin from '../../assets/images/logo/coin.svg'
 import logosvg from '../../assets/images/logo/logoaxelarsea.png'
 import web3 from '../../hooks/web3';
 import { useConnectedWallet } from '@terra-money/wallet-provider';
+import TestnetCheck from '../layouts/TestnetCheck';
 
 
 const HeaderStyle2 = () => {
@@ -52,6 +53,8 @@ const HeaderStyle2 = () => {
     const handleOnClick = index => {
         setActiveIndex(index); 
     };
+
+    const [modalShow, setModalShow] = useState(false);
 
     async function checkConnectedStatus() {
         let accounts = await web3.eth.getAccounts();
@@ -137,8 +140,14 @@ const HeaderStyle2 = () => {
                                     </ul>
                                 </nav>
                                 <div className="flat-search-btn flex">
+                                    <div className='testnetcheck'> 
+                                        <span onClick={() => setModalShow(true)}>
+                                        Testnet Check
+                                      </span>
+                                            
+                                    </div>
                                     <div className="header-search flat-show-search" id="s1">
-                                        <Link to="#" className="show-search header-search-trigger" onClick={searchBtn}>
+                                        <Link to="" className="show-search header-search-trigger" onClick={searchBtn}>
                                             <i className="far fa-search"></i>
                                         </Link>
                                         <div className="top-search" ref={btnSearch}>
@@ -207,6 +216,11 @@ const HeaderStyle2 = () => {
                 </div>
             </div>
             {/* <DarkMode /> */}
+            <TestnetCheck 
+            setBuyNowModal={setModalShow}
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+            />
         </header>
     );
 }

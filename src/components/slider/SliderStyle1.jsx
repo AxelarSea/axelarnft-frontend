@@ -1,16 +1,25 @@
-import React from 'react';
+import React,{useState , useEffect} from 'react';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { Navigation, Scrollbar, A11y   } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import axios from 'axios'
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import shape1 from '../../assets/images/backgroup-secsion/bg-gradient1.png'
 import shape2 from '../../assets/images/backgroup-secsion/bg-gradient2.png'
 import shape3 from '../../assets/images/backgroup-secsion/bg-gradient3.png'
+import { _fetchData } from 'ethers/lib/utils';
+import { setupAuthExtension } from '@cosmjs/stargate';
 
 const SliderStyle1 = props => {
+
+
+    
+    
+    
+    
     const data = props.data
     return (
         <div className="mainslider" >
@@ -37,7 +46,29 @@ const SliderStyle1 = props => {
 SliderStyle1.propTypes = {
     data: PropTypes.array.isRequired,
 }
-const SliderItem = props => (
+const SliderItem = props => {
+
+    const [count,setCount] = useState({})
+
+
+    const fetchData = async() => {
+        await axios.get(
+            process.env.REACT_APP_API_HOST +'/api/nft/testnetv1/stat'
+            )
+        .then(res => {
+            setCount(res.data)
+            console.log(res.data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
+
+    useEffect(() => {
+        fetchData()
+    },[])
+
+    return(
     <div className="flat-title-page">
         <img className="bgr-gradient gradient1" src={shape1} alt="AxelarSea" />
         <img className="bgr-gradient gradient2" src={shape2} alt="AxelarSea" />
@@ -68,6 +99,21 @@ const SliderItem = props => (
                                         <Link to="/create-item" className="sc-button header-slider style style-1 note fl-button pri-1"><span>Create
                                         </span></Link>
                                     </div>
+                                    <div className="flat-bt-slider flex style2 showlist">
+                                        <div>
+                                            <h1 className='data-showlist'>{count.nftCount}</h1>
+                                            <h6 className='title-showlist'>Minted</h6>
+                                        </div>
+                                        <div style={{marginLeft:'8rem'}}>
+                                            <h1 className='data-showlist'>{count.listedCount}</h1>
+                                            <h6 className='title-showlist'>Listed</h6>
+                                        </div>
+                                        <div style={{marginLeft:'8rem'}}>
+                                            <h1 className='data-showlist'>{count.walletCount}</h1>
+                                            <h6 className='title-showlist'>Wallet</h6>
+                                        </div>
+                                        
+                                    </div>
                                 </div>
                                 <div className="image">
                                     <img src={props.item.img} alt="AxelarSea" />
@@ -79,6 +125,7 @@ const SliderItem = props => (
             </div>
         </div>        
     </div>
+    )
     
-)
+}
 export default SliderStyle1;

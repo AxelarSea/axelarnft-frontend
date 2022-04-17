@@ -110,6 +110,7 @@ const Header = () => {
                                     </ul>
                                 </nav>
                                 <div className="flat-search-btn flex">
+                                    
                                     <div className="header-search flat-show-search" id="s1">
                                         <Link to="#" className="show-search header-search-trigger" onClick={searchBtn}>
                                             <i className="far fa-search"></i>
