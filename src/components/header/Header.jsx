@@ -13,6 +13,7 @@ import { useConnectedWallet } from '@terra-money/wallet-provider';
 
 
 const Header = () => {
+
     const [connected, setConnected] = useState(false);
     const connectedTerraStationWallet = useConnectedWallet();
 

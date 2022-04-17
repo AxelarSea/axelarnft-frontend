@@ -13,6 +13,7 @@ import TestnetCheck from '../layouts/TestnetCheck';
 
 const HeaderStyle2 = () => {
     const [connected, setConnected] = useState(false);
+
     const connectedTerraStationWallet = useConnectedWallet();
 
     const { pathname } = useLocation();
@@ -217,8 +218,8 @@ const HeaderStyle2 = () => {
             </div>
             {/* <DarkMode /> */}
             <TestnetCheck 
-            setBuyNowModal={setModalShow}
-            show={modalShow}
+            // setBuyNowModal={setModalShow}
+            onShow={modalShow}
             onHide={() => setModalShow(false)}
             />
         </header>
