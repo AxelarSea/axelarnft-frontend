@@ -4,6 +4,7 @@ import { Modal } from "react-bootstrap";
 
 import AlunaLogo from "../../assets/images/icon/Luna.png";
 import AustLogo from "../../assets/images/icon/UST.png";
+import ethlogo from "../../assets/images/icon/eth-logo.svg";
 import { buyERC721, crossChainTokenLabel, crossChainTokenSymbol } from "../../utils/api";
 import ProcessModal from './ProcessModal'
 import SelectTokenModal from "./SelectTokenModal";
@@ -246,9 +247,12 @@ const CardModal = (props) => {
           <p> You want to Receive NFT</p>
         </div>
         <div className="d-flex justify-content-between">
-          <p> 
-            To 
-            <a style={{ backgroundColor: "rgb(245 245 245)",borderRadius:"10px"}}>
+          <p> To
+            <img style={{marginLeft:"1rem"}} src={ethlogo}/>
+            <a style={{ backgroundColor: "#f8f8f8",borderRadius:"20px",marginLeft:"0.5rem"}}>
+              Ethereum
+            </a>
+            <a style={{ backgroundColor: "#f8f8f8",borderRadius:"20px",marginLeft:"1.5rem"}}>
               {maskAddress(metamaskAccount)}
             </a> 
           </p>
