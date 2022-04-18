@@ -163,7 +163,7 @@ button:disabled {
 }
 
 .title-showlist {
-  font-family: 'Poppins';
+  font-family: 'Urbanist';
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -188,4 +188,43 @@ button:disabled {
   background: #7AB694;
 }
 
+.transaction-step-box {
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: #F8F8F8;
+  border-radius: 100px;
+}
 
+.transaction-step-detail {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  padding: 10px 20px;
+}
+
+.transaction-sign-detail {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #B0B5B7;
+  padding: 0px 20px 20px;
+  /* margin-left: 3.8rem; */
+}
+
+.transaction-note {
+  font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+color: #B0B5B7;
+}
