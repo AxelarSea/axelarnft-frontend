@@ -194,7 +194,17 @@ button:disabled {
   top: 0%;
   bottom: 0%;
   background: #F8F8F8;
-  border-radius: 100px;
+  border-radius: 20px;
+}
+
+.transaction-step-sign-box {
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: #F8F8F8;
+  border-radius: 20px;
+  padding-bottom: 15px;
 }
 
 .transaction-step-detail {
@@ -227,4 +237,37 @@ font-size: 16px;
 line-height: 19px;
 text-align: center;
 color: #B0B5B7;
+}
+
+.transaction-warning-box {
+  display: flex;
+  align-items: center;
+  background: rgba(232, 65, 66, 0.2);;
+  border-radius: 100px;
+  height: 36px;
+  align-content: center;
+  flex: auto;
+  justify-content: center;
+}
+
+.transaction-warning-detail {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #E84142;
+}
+
+.transaction-sign-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 14px;
+  width: 100px;
+  height: 30px;
+  background: #FFEFE9;
+  margin-left: 20px;
+  margin-top: -10px;
 }

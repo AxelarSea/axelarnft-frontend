@@ -11,7 +11,10 @@ const ProcessModal = (props) => {
     return (
         <Modal show={props.onShow} onHide={props.onHide}>
       <Modal.Header closeButton></Modal.Header>
-      <div className="modal-body space-y-20 pd-40">
+      <div className="modal-body space-y-20 pd-40" style={{paddingTop:'1rem'}}>
+          <div  className="transaction-warning-box">
+            <h6 className="transaction-warning-detail">This is not real information you can track transaction in Testnet V.2</h6>
+          </div>
           <h4>Waiting for transaction, follow these steps:</h4>
           <div className="transaction-step-box">
             <h6 className="transaction-step-detail"><img src={one} style={{marginRight: '1rem'}}/>Get deposit address from Axelar Network.</h6>
@@ -22,9 +25,11 @@ const ProcessModal = (props) => {
           <div className="transaction-step-box">
             <h6 className="transaction-step-detail"><img src={three} style={{marginRight: '1rem'}}/>Wait for deposit arrival in the destination chain.</h6>
           </div>
-          <div className="transaction-step-box">
+          <div className="transaction-step-sign-box">
             <h6 className="transaction-step-detail"><img src={four} style={{marginRight: '1rem'}}/>Sign signature in metamask to confirm buying transaction.</h6>
             <p className="transaction-sign-detail">Sign a message using your wallet to continue.</p>
+            {/* <button className="d-flex align-items-center" type="submit" style={{marginLeft:'25px' ,height:'10px',backgroundColor:'#FFEFE9' , color:'#FF4F0D' , padding:'0x 20px'}}>Sign</button> */}
+            <button className="transaction-sign-btn" type="submit">Sign</button>
           </div>
           <div className="transaction-step-box">
             <h6 className="transaction-step-detail"><img src={five} style={{marginRight: '1rem'}}/>Wait for transaction to complete.</h6>
