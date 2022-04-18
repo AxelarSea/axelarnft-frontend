@@ -5,11 +5,37 @@ import checkcircle from "../../assets/images/icon/check-circle.svg";
 import tool from "../../assets/images/icon/tool.svg";
 import axios from 'axios'
 
+
 const TestnetCheck = (props) => {
 
   const [data,setData] = useState({})
   
   const [wallet , setWallet] = useState('')
+
+  const [metamaskAccount, setMetamaskAccount] = useState("");
+
+ 
+
+  const connectWalletHandler = () => {
+    if (window.ethereum && window.ethereum.isMetaMask) {
+      console.log("MetaMask Here!");
+
+      window.ethereum
+        .request({ method: "eth_requestAccounts" })
+        .then((result) => {
+         setWallet(result[0]);
+          // setConnButtonText("Wallet Connected");
+        })
+        .catch((error) => {
+          console.log(error)
+        });
+    } else {
+      console.log("Need to install MetaMask");
+      // setErrorMessage("Please install MetaMask browser extension to interact");
+    }
+  };
+
+
 
   // const fetchData = async() => {
   //   await axios.get(
@@ -33,9 +59,16 @@ const TestnetCheck = (props) => {
       })
   }
 
+
+
   const handleWalletChange = e => {
     setWallet(e.target.value)
   }
+
+  useEffect(() => {
+    // connectWallet()
+    connectWalletHandler()
+  },[])
 
   // useEffect(() => {
   //   fetchData()
@@ -48,9 +81,9 @@ const TestnetCheck = (props) => {
       <h5>Please enter your MetaMask wallet address:</h5>
       <form className="search-form" onSubmit={e => walletSubmit(e)}>         
        <input onChange={e =>handleWalletChange(e)} value={wallet} className="search-wallet" placeholder="Paste your MetaMask address and Enter." required="" />
-       {/* <button className="search search-submit" type="submit" value="submit">
-        <i className="icon-fl-search-filled"></i>
-      </button> */}
+       <button className="search search-submit d-flex align-items-center " style={{height:'38px'}}type="submit" value="submit">
+        <i className="icon-fl-search-filled" ></i>
+      </button>
       </form>
         <h5 className="testnetquest">Quest : Mint at least 1 NFT in all five supported EVM chains</h5>
           <ul className="questlist">
