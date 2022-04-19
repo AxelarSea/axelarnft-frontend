@@ -90,7 +90,7 @@ const ItemDetails = () => {
   ]);
 
   async function refreshData() {
-      setData(await fetchItem(collectionAddress, tokenId));
+      setData(await fetchItem(chainId, collectionAddress, tokenId));
   }
 
   async function cancelListingAction() {

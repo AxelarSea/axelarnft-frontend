@@ -65,7 +65,7 @@ const CreateItem2 = () => {
   }
 
   async function refreshData() {
-    setData(await fetchItem(collectionAddress, tokenId));
+    setData(await fetchItem(chainId, collectionAddress, tokenId));
   }
 
   useEffect(() => {

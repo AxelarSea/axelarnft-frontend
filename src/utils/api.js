@@ -181,7 +181,7 @@ export async function buyERC721(
       const rpcCosmos = "https://terra-bombay-rpc.axelarnft.workers.dev/";
       const offlineSigner = window.keplr.getOfflineSigner(chainIdCosmos);
       const accounts = await offlineSigner.getAccounts();
-      
+
       const msgTransfer = {
         type: "cosmos-sdk/MsgTransfer",
         value: {
@@ -208,12 +208,14 @@ export async function buyERC721(
         rpcUrl: rpcCosmos,
         fee: {
           gas: "150000",
-          amount: [{
-            denom: 'uluna',
-            amount: "18750",
-          }]
-        }
-      })
+          amount: [
+            {
+              denom: "uluna",
+              amount: "18750",
+            },
+          ],
+        },
+      });
     }
 
     // Polling
@@ -261,14 +263,14 @@ export async function fetchAllItems() {
   return response.data.docs;
 }
 
-export async function fetchAllListedItems({limit = 500, skip = 0} = {}) {
+export async function fetchAllListedItems({ limit = 500, skip = 0 } = {}) {
   let response = await axios.get(
     process.env.REACT_APP_API_HOST + "/api/nft/items/listed",
     {
       params: {
         limit,
         skip,
-      }
+      },
     }
   );
   return response.data.docs;
@@ -287,11 +289,13 @@ export async function fetchAllMyItems() {
   return await fetchAllHolderItems(address);
 }
 
-export async function fetchItem(collectionAddress, tokenId) {
+export async function fetchItem(chainId, collectionAddress, tokenId) {
   let response = await axios.get(
     process.env.REACT_APP_API_HOST +
       "/api/nft/collections/" +
       collectionAddress +
+      "/" +
+      chainId +
       "/items/" +
       tokenId
   );
@@ -303,6 +307,8 @@ export async function refreshMetadata(chainId, collectionAddress, tokenId) {
     process.env.REACT_APP_API_HOST +
       "/api/nft/collections/" +
       collectionAddress +
+      "/" +
+      chainId +
       "/items/" +
       tokenId +
       "/refreshMetadata"
