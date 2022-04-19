@@ -13,23 +13,23 @@ const ProcessModal = (props) => {
       <Modal.Header closeButton></Modal.Header>
       <div className="modal-body space-y-20 pd-20" style={{paddingTop:'1rem'}}>
           <div  className="transaction-warning-box">
-            <h6 className="transaction-warning-detail">This is not real information you can track transaction in Testnet V.2</h6>
+            <h6 className="transaction-warning-detail">In future versions, users will be able to track the buying process in real time.</h6>
           </div>
-          <h4>Waiting for transaction, follow these steps:</h4>
+          <h5 className="transaction-header">Please wait while the transaction is being processed.</h5>
           <div className="transaction-step-box">
             <h6 className="transaction-step-detail"><img src={one} style={{marginRight: '1rem'}}/>Get deposit address from Axelar Network.</h6>
           </div>
           <div className="transaction-step-box">
-            <h6 className="transaction-step-detail"><img src={two} style={{marginRight: '1rem'}}/> Transfer XXX UST to axelar network using Terra Station.</h6>
+            <h6 className="transaction-step-detail"><img src={two} style={{marginRight: '1rem'}}/>Users sign their signatures in TerraStation/Keplr  to transfer xxx UST to Axelar Network.</h6>
           </div>
           <div className="transaction-step-box">
             <h6 className="transaction-step-detail"><img src={three} style={{marginRight: '1rem'}}/>Wait for deposit arrival in the destination chain.</h6>
           </div>
           <div className="transaction-step-sign-box">
             <h6 className="transaction-step-detail"><img src={four} style={{marginRight: '1rem'}}/>Sign signature in metamask to confirm buying transaction.</h6>
-            <p className="transaction-sign-detail">Sign a message using your wallet to continue.</p>
+            <p className="transaction-sign-detail">Users sign their signatures in MetaMask confirming the transaction.</p>
             {/* <button className="d-flex align-items-center" type="submit" style={{marginLeft:'25px' ,height:'10px',backgroundColor:'#FFEFE9' , color:'#FF4F0D' , padding:'0x 20px'}}>Sign</button> */}
-            <button className="transaction-sign-btn" type="submit">Sign</button>
+            <button className="transaction-sign-btn" type="submit" disabled>Sign</button>
           </div>
           <div className="transaction-step-box">
             <h6 className="transaction-step-detail"><img src={five} style={{marginRight: '1rem'}}/>Wait for transaction to complete.</h6>
