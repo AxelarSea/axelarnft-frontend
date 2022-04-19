@@ -4,6 +4,7 @@ import { Modal } from "react-bootstrap";
 import checkcircle from "../../assets/images/icon/check-circle.svg";
 import tool from "../../assets/images/icon/tool.svg";
 import axios from 'axios'
+import { ethers } from "ethers";
 
 
 const TestnetCheck = (props) => {
@@ -48,9 +49,9 @@ const TestnetCheck = (props) => {
   //     })
   // }
   const walletSubmit = async(e)=>{
-    e.preventDefault()
+    if (e) e.preventDefault()
     await axios.get(
-      process.env.REACT_APP_API_HOST+`/api/nft/testnetv1/${wallet}`
+      process.env.REACT_APP_API_HOST+`/api/nft/testnetv1/${ethers.utils.getAddress(wallet)}`
       ).then(res => {
         setData(res.data)
         console.log(res.data)
@@ -69,6 +70,10 @@ const TestnetCheck = (props) => {
     // connectWallet()
     connectWalletHandler()
   },[])
+
+  useEffect(() => {
+    walletSubmit()
+  }, [wallet]);
 
   // useEffect(() => {
   //   fetchData()
