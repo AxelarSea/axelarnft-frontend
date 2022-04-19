@@ -11,7 +11,7 @@ const ProcessModal = (props) => {
     return (
         <Modal show={props.onShow} onHide={props.onHide}>
       <Modal.Header closeButton></Modal.Header>
-      <div className="modal-body space-y-20 pd-40" style={{paddingTop:'1rem'}}>
+      <div className="modal-body space-y-20 pd-20" style={{paddingTop:'1rem'}}>
           <div  className="transaction-warning-box">
             <h6 className="transaction-warning-detail">This is not real information you can track transaction in Testnet V.2</h6>
           </div>

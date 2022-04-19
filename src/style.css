@@ -1163,6 +1163,11 @@ label.error { color: red; }
 .pb-20 {
     padding-bottom: 20px !important;
 }
+
+.pd-20 {
+    padding: 20px;
+}
+
 .pb-22 {
     padding-bottom: 22px !important;
 }
