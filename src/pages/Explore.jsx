@@ -33,6 +33,8 @@ const Explore04 = () => {
           tokenId: x.tokenId,
           collectionAddress: x.collection.contractAddress,
           chainId: x.collection.chainId,
+          listPrice:x.listPrice,
+          priceTag:crossChainTokenLabel(x.collection.chainId, x.listTokenAddress)
         }));
       }
     
@@ -43,6 +45,8 @@ const Explore04 = () => {
         setDefaultItems([...defaultItems, ...formatItems(items)]);
         setCurrentCursor(currentCursor + pageSize);
       }
+
+      
     
       useEffect(() => {
         loadMore();

@@ -244,12 +244,15 @@ const TodayPicks = () => {
             price: x.listPrice + " " + crossChainTokenLabel(x.collection.chainId, x.listTokenAddress),
             wishlist: "100",
             raw: x,
-            chainId:x.collection.chainId
+            chainId:x.collection.chainId,
+            listPrice:x.listPrice,
+            priceTag:crossChainTokenLabel(x.collection.chainId, x.listTokenAddress)
         })));
     
         
 
     }
+
     
 
     const handleBlockchainChange = (blockChain) => {
@@ -492,6 +495,10 @@ const TodayPicks = () => {
                         <div className='content-inner'>
                             {
                                 data.slice(0,visible).map((item,index) => (
+                                    ((item.priceTag == "LUNA" && item.listPrice < 0.1) || (item.priceTag == "UST" && item.listPrice < 10) ?
+                                    ""
+                                    :
+                                    
                                     <Link to={"/ItemDetails?chainId=" + item.raw?.collection.chainId + "&collection=" + item.raw?.collection.contractAddress + "&tokenId=" + item.raw?.tokenId} key={index} className={`sc-card-product menu_card style-h7 ${item.feature ? 'comingsoon' : '' } `}>
                                         <div>
                                             
@@ -541,7 +548,7 @@ const TodayPicks = () => {
                                             </div> */}
                                         </div>
                                     </Link>
-                                ))
+                                )))
                             }
                         </div>
                         {/* {

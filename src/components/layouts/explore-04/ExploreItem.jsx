@@ -29,6 +29,9 @@ const ExploreItem = (props) => {
       <div className="explore">
         <div className="box-epxlore">
           {data.slice(0, visible).map((item, index) => (
+            ((item.priceTag == "LUNA" && item.listPrice < 0.1) || (item.priceTag == "UST" && item.listPrice < 10) ?
+            ""
+            :
             <Link
               to={
                 "/ItemDetails?chainId=" +
@@ -109,7 +112,7 @@ const ExploreItem = (props) => {
                 {/* <Link to="/activity-01" className="view-history reload">View History</Link> */}
               </div>
             </Link>
-          ))}
+          )))}
         </div>
         {(true || visible < data.length) && (
           <div className="btn-auction center">

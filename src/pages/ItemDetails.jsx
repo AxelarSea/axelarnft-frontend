@@ -242,51 +242,72 @@ const ItemDetails = () => {
                     </div> */}
                   </div>
                   <div class="d-flex align-items-center justify-content-center">
-                  {data.listAmount > 0 && data.owner.toLowerCase() != account.toLowerCase() &&
-                    <button
-                      onClick={() => setModalShow(true)}
-                      className="sc-button loadmore fl-button pri-3"
-                      style={{width:'100%'}}
-                    >
-                      <span>Buy Now</span>
-                    </button>
-                  }
-                  {data.listAmount > 0 && data.owner.toLowerCase() == account.toLowerCase() &&
-                    <button
-                      style={{marginLeft:'2rem'}}
-                      onClick={() => cancelListingAction()}
-                      className="sc-button loadmore fl-button pri-3 "
-                    >
-                      <span>Cancel Listing</span>
-                    </button>
-                  }
-                  {data.listAmount == 0 && data.owner.toLowerCase() == account.toLowerCase() &&
-                    <Link
-                      to={
-                        "/list-item?chainId=" +
-                        chainId +
-                        "&collection=" +
-                        collectionAddress +
-                        "&tokenId=" +
-                        tokenId
-                      }
-                    >
+                    {data.listAmount > 0 && data.owner.toLowerCase() != account.toLowerCase() &&
+                      <button
+                        onClick={() => setModalShow(true)}
+                        className="sc-button loadmore fl-button pri-3"
+                        style={{width:'100%'}}
+                        disabled={(data.listPrice < 0.1 && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) == "LUNA") || (data.listPrice < 10 && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) == "UST")? true : false}
+                      >
+                        <span>Buy Now</span>
+                      </button>
+                    }
+                    {data.listAmount > 0 && data.owner.toLowerCase() == account.toLowerCase() &&
                       <button
                         style={{marginLeft:'2rem'}}
+                        onClick={() => cancelListingAction()}
                         className="sc-button loadmore fl-button pri-3 "
                       >
-                        <span>Sell</span>
+                        <span>Cancel Listing</span>
                       </button>
-                    </Link>
-                  }
-                  {data.listAmount == 0 && data.owner.toLowerCase() != account.toLowerCase() &&
-                    <button
-                      style={{marginLeft:'2rem', opacity: 0.6, pointerEvents: "none"}}
-                      className="sc-button loadmore fl-button pri-3 "
-                    >
-                      <span>Not for sale</span>
-                    </button>
-                  }
+                    }
+                    {data.listAmount == 0 && data.owner.toLowerCase() == account.toLowerCase() &&
+                      <Link
+                        to={
+                          "/list-item?chainId=" +
+                          chainId +
+                          "&collection=" +
+                          collectionAddress +
+                          "&tokenId=" +
+                          tokenId
+                        }
+                      >
+                        <button
+                          style={{marginLeft:'2rem'}}
+                          className="sc-button loadmore fl-button pri-3 "
+                        >
+                          <span>Sell</span>
+                        </button>
+                      </Link>
+                    }
+                    {/* {data.listAmount == 0 && data.owner.toLowerCase() == account.toLowerCase() &&
+                      <Link
+                        to={
+                          "/NFT-Bridge?chainId=" +
+                          chainId +
+                          "&collection=" +
+                          collectionAddress +
+                          "&tokenId=" +
+                          tokenId
+                        }
+                        // to='/NFT-Bridge'
+                      >
+                        <button
+                          style={{marginLeft:'2rem'}}
+                          className="sc-button loadmore fl-button pri-3 "
+                        >
+                          <span>Bridge</span>
+                        </button>
+                      </Link>
+                    } */}
+                    {data.listAmount == 0 && data.owner.toLowerCase() != account.toLowerCase() &&
+                      <button
+                        style={{marginLeft:'2rem', opacity: 0.6, pointerEvents: "none"}}
+                        className="sc-button loadmore fl-button pri-3 "
+                      >
+                        <span>Not for sale</span>
+                      </button>
+                    }
                   </div>
                   <div className="flat-tabs themesflat-tabs">
                     <Tabs>
