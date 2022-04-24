@@ -19,7 +19,7 @@
 // import Login from "./Login";
 // import SignUp from "./SignUp";
 // import NoResult from "./NoResult";
-// import FAQ from "./FAQ";
+import FAQ from "./FAQ";
 // import Contact01 from "./Contact01";
 // import Contact02 from "./Contact02";
 // import LiveAuctions from "./LiveAuctions";
@@ -58,7 +58,7 @@ const routes = [
   // { path: '/login', component: <Login />},
   // { path: '/sign-up', component: <SignUp />},
   // { path: '/no-result', component: <NoResult />},
-  // { path: '/faq', component: <FAQ />},
+  { path: '/faq', component: <FAQ />},
   // { path: '/contact-01', component: <Contact01 />},
   // { path: '/contact-02', component: <Contact02 />},
   // { path: '/live-auctions', component: <LiveAuctions />},
