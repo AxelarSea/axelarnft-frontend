@@ -25,7 +25,7 @@ const FAQ = () => {
             {
                 key: "3",
                 title: 'How do I know if I qualify for the “Testnet Tester” role?',
-                text: <a href="https://medium.com/@axelarsea/how-to-claim-the-testnet-tester-role-9818f195d8ef " class="link-secondary" style={{fontSize:'1.5rem'}}>How to claim the “Testnet Tester” role.</a>
+                text: <a href="https://medium.com/@axelarsea/how-to-claim-the-testnet-tester-role-9818f195d8ef "  target='_blank' class="link-secondary" style={{fontSize:'1.5rem'}}>How to claim the “Testnet Tester” role.</a>
             },
             {
                 key: "4",
