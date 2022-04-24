@@ -64,7 +64,7 @@ const FaqTestnetModal = (props) => {
    
 
     return(
-    <Modal show={props.onShow} onHide={props.onHide}>
+    <Modal show={props.onShow} onHide={props.onHide} size="xl">
         <Modal.Header closeButton></Modal.Header>
         <div className="modal-body space-y-20 pd-10">
             <div className="col-md-12">
