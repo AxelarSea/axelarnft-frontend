@@ -73,8 +73,8 @@ const routes = [
   { path: '/faucet', component: <Faucet />},
   { path: '/create-item', component: <CreateItem />},
   { path: '/list-item', component: <ListItem />},
-  { path: '//NFT-Bridge', component: <NFTBridge />},
-  { path: '//NFT-Bridge02', component: <NFTBridge02 />},
+  { path: '/NFT-Bridge', component: <NFTBridge />},
+  { path: '/NFT-Bridge02', component: <NFTBridge02 />},
 ]
 
 export default routes;
