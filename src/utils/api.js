@@ -270,6 +270,7 @@ export async function fetchAllListedItems({ limit = 500, skip = 0 } = {}) {
       params: {
         limit,
         skip,
+        priceStart: 0.1,
       },
     }
   );
