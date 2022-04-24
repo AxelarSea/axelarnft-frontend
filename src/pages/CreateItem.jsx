@@ -54,6 +54,8 @@ const CreateItem = () => {
       await switchChain(chainId);
   
       await wait(500);
+
+      let totalSupplyBefore = await contract.totalSupply();
   
       let account = (await web3.eth.getAccounts())[0];
       let contract = new AxelarSeaSampleNft(chainId, account);
@@ -63,7 +65,9 @@ const CreateItem = () => {
   
       let totalSupply = await contract.totalSupply();
 
-      await refreshMetadata(chainId, contract.address, totalSupply)
+      for (let i = totalSupplyBefore; i <= totalSupply; i++) {
+        await refreshMetadata(chainId, contract.address, i)
+      }
   
       // window.alert('Mint success');
       Swal.fire(
