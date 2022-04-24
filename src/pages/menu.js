@@ -39,6 +39,11 @@ const menus = [
         links: '/faucet',
         
     },
+    // {
+    //     id: 5,
+    //     name: 'Bridge',
+    //     links: '/NFT-Bridge',
+    // },
 ]
 
 export default menus;

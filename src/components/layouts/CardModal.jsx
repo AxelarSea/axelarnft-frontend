@@ -9,6 +9,7 @@ import { buyERC721, crossChainTokenLabel, crossChainTokenSymbol } from "../../ut
 import ProcessModal from './ProcessModal'
 import SelectTokenModal from "./SelectTokenModal";
 import SelectChainModal from './SelectChainModal'
+import FaqTestnetModal from './FaqTestnetModal'
 
 import { useConnectedWallet, useLCDClient } from "@terra-money/wallet-provider";
 import web3 from "../../hooks/web3";
@@ -28,6 +29,8 @@ const CardModal = (props) => {
   const [PricePic, setPricePic] = useState(AlunaLogo);
 
   const [PriceType, setPriceType] = useState("Luna");
+
+  const [faqModalShow , setFaqModalShow] = useState(false)
 
   const connectedWallet = useConnectedWallet();
 
@@ -245,6 +248,7 @@ const CardModal = (props) => {
         <div className="hr"></div>
         <div className="d-flex justify-content-between">
           <p> You want to Receive NFT</p>
+          
         </div>
         <div className="d-flex justify-content-between">
           <p> To
@@ -252,9 +256,10 @@ const CardModal = (props) => {
             <a style={{ backgroundColor: "#f8f8f8",borderRadius:"20px",marginLeft:"0.5rem"}}>
               Ethereum
             </a>
-            <a style={{ backgroundColor: "#f8f8f8",borderRadius:"20px",marginLeft:"1.5rem"}}>
+            <a style={{ backgroundColor: "#f8f8f8",borderRadius:"20px",marginLeft:"1.5rem",marginRight:'6.5rem'}}>
               {maskAddress(metamaskAccount)}
-            </a> 
+            </a>
+            <button onClick={() => setFaqModalShow(true)} style={{padding:'0.5rem 3rem'}}>FAQ</button> 
           </p>
         </div>
 
@@ -280,6 +285,10 @@ const CardModal = (props) => {
         <SelectTokenModal 
         onShow={selectTokenModalShow}
         onHide={() => setSelectTokenModalShow(false)}
+        />
+        <FaqTestnetModal
+        onShow={faqModalShow}
+        onHide={() => setFaqModalShow(false)}
         />
         
     </div>
