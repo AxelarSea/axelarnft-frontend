@@ -18,10 +18,10 @@ const Footer = () => {
             title:"Medium",
             link:"https://medium.com/@AxelarSea"
         },
-        // {
-        //     title:"FAQ",
-        //     link:""
-        // },
+        {
+            title:"FAQ",
+            link:"/FAQ"
+        },
     ]
     // const accountList = [
     //     {
