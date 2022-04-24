@@ -28,7 +28,7 @@ import web3 from "../hooks/web3";
 import switchChain from "../utils/switchChain";
 import wait from "../utils/wait";
 import axios from "axios";
-import { refreshMetadata } from "../utils/api";
+import { refreshMetadata, fetchItem } from "../utils/api";
 
 const CreateItem = () => {
   let [blockChain, setBlockChain] = useState("Ethereum");
@@ -72,7 +72,11 @@ const CreateItem = () => {
       let totalSupply = await contract.totalSupply();
 
       for (let i = totalSupplyBefore; i <= totalSupply; i++) {
-        await refreshMetadata(chainId, contract.address, i)
+        try {
+          await fetchItem(chainId, contract.address, i);
+        } catch (err) {
+          await refreshMetadata(chainId, contract.address, i)
+        }
       }
   
       // window.alert('Mint success');
