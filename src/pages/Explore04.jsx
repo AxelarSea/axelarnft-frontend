@@ -15,7 +15,7 @@ const Explore04 = () => {
 
     function formatItems(items) {
         return items.map((x) => ({
-          id: x.collection.address + "-" + x.tokenId,
+          id: x.collection.contractAddress + "-" + x.tokenId,
           img: x.metadata.image,
           title: x.collection.name + " #" + x.tokenId,
           tags: chainLabel(x.collection.chainId),
