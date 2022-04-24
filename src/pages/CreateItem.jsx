@@ -60,6 +60,12 @@ const CreateItem = () => {
 
       let totalSupplyBefore = await contract.totalSupply();
       await contract.mint();
+
+      Swal.fire(
+        'Please wait',
+        "Please wait for data syncing. Don't close tab or navigate to any page.",
+        'warning'
+      )
   
       await wait(500);
   
