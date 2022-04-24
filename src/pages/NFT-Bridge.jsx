@@ -406,7 +406,7 @@ const NFTBridge = () => {
                   <h6 className="bridge-text" style={{marginTop:'7px'}}>Select Destination chain</h6>
                 </div>
               </div>
-              <div className="d-flex justify-content-center " style={{marginTop:'10px' , background:'#F8F8F8'}}> 
+              <div className="d-flex justify-content-center " style={{marginTop:'20px' , background:'#F8F8F8'}}> 
               {/* style={{marginTop:'15px',backgroundColor:'#F8F8F8',borderRadius:'10px'}} */}
 
                 <div className="bridge-text d-flex align-items-center bridge-select-box1" onClick={() => setModalShow(true)}>
@@ -445,7 +445,7 @@ const NFTBridge = () => {
               <div className="d-flex justify-content-center">
               <button style={{padding:'10px 25px', marginTop:'30px'}} type="submit" disabled> Bridge & Transfer</button>
               </div>
-              <div className="nftbridge-process-detail" style={{marginTop:'25px'}}>
+              <div className="nftbridge-process-detail" style={{marginTop:'20px'}}>
                 <p className="nftbridge-wallet-title">Send to address</p>
                 <div className="destiantion-wallet-box d-flex justify-content-center" style={{marginTop:'10px'}}>
                   <h6 className="d-flex align-items-center">{nftSelect == null ? "Not Connected" : maskAddress(nftSelect.nameAuthor)}</h6>
