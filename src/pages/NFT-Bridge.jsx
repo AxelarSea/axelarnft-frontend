@@ -44,6 +44,7 @@ import fantomLogo from '../assets/images/icon/fantom-logo.svg'
 import bridgeimg from '../assets/images/backgroup-secsion/bridge_effect.gif'
 import iconnfttable from '../assets/images/icon/icon-nft-table.svg'
 import iconnfttableselect from '../assets/images/icon/icon-nft-table-select.svg'
+import AxelarSeaBridgeLogo from '../assets/images/logo/axelarsea-bridge-logo.svg'
 
 
 import HeaderStyle2 from "../components/header/HeaderStyle2";
@@ -323,19 +324,9 @@ const NFTBridge = () => {
         <div className="page-title-heading"></div>
         <div className="nft-bridge-section">
           <div className="nftbridge-section">
-            <h1 className="nftbridge-header">NFT Bridge</h1>
+            {/* <h1 className="nftbridge-header">NFT Bridge</h1> */}
+            <img src={AxelarSeaBridgeLogo} alt="AxelarSeaLogo" width='500rem' style={{marginBottom:'2rem'}}/>
             <div className="nftbridge-box pd-20">
-              <div className="nftbridge-process">
-                <div className="nftbridge-process-detail" style={{marginLeft:'8rem'}}>
-                 <img src={one} width='30px'/>
-                  <h6 className="bridge-text" style={{marginTop:'7px'}}>Select  your NFT</h6>
-                </div>
-                {/* <hr className="line-banner" style={{width:'242px' , border:'1px solid '}}/> */}
-                <div  className="nftbridge-process-detail" style={{marginRight:'5rem'}}>
-                  <img src={two} width='30px'/>
-                  <h6 className="bridge-text" style={{marginTop:'7px'}}>Select Destination chain</h6>
-                </div>
-              </div>
               <div className="nftbridge-card-section">
                 <div className="nftbridge-card d-flex justify-content-center" onClick={() => setSelectNftModalShow(true)} style={{cursor:'pointer'}}>
                   {nftSelect == null 
@@ -368,6 +359,7 @@ const NFTBridge = () => {
                                     </div>
                       </div>
                   }
+                  
                 </div>
                 <img className="bridge-animation" src={bridgeimg}/>
                 <div className="nftbridge-card d-flex justify-content-center">
@@ -404,8 +396,15 @@ const NFTBridge = () => {
                 </div>
               </div>
               <div className="d-flex justify-content-between " style={{marginTop:'25px'}}>
-                <h3>My NFT On</h3>
-                <h3>Destination</h3>
+                <div className="nftbridge-process-detail" style={{marginLeft:'7rem'}}>
+                 <img src={one} width='30px'/>
+                  <h6 className="bridge-text" style={{marginTop:'7px'}}>Select  your NFT</h6>
+                </div>
+                {/* <hr className="line-banner" style={{width:'242px' , border:'1px solid '}}/> */}
+                <div  className="nftbridge-process-detail" style={{marginRight:'5rem'}}>
+                  <img src={two} width='30px'/>
+                  <h6 className="bridge-text" style={{marginTop:'7px'}}>Select Destination chain</h6>
+                </div>
               </div>
               <div className="d-flex justify-content-center " style={{marginTop:'10px' , background:'#F8F8F8'}}> 
               {/* style={{marginTop:'15px',backgroundColor:'#F8F8F8',borderRadius:'10px'}} */}
