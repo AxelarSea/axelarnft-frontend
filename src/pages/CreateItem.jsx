@@ -55,13 +55,13 @@ const CreateItem = () => {
   
       await wait(500);
 
-      let totalSupplyBefore = await contract.totalSupply();
-  
       let account = (await web3.eth.getAccounts())[0];
       let contract = new AxelarSeaSampleNft(chainId, account);
+
+      let totalSupplyBefore = await contract.totalSupply();
       await contract.mint();
   
-      await wait(1000);
+      await wait(500);
   
       let totalSupply = await contract.totalSupply();
 
