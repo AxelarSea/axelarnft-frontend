@@ -1,3 +1,9 @@
+import ethLogo from '../images/icon/eth-logo.svg'
+import avaxLogo from '../images/icon/avax-logo.svg'
+import moonbeamLogo from '../images/icon/moonbeam-logo.svg'
+import fantomLogo from '../images/icon/fantom-logo.svg'
+import polygonLogo from '../images/icon/polygon-logo.svg'
+
 const widgetSidebarData = [
     // {
     //     id: 1,
@@ -52,19 +58,24 @@ const widgetSidebarData = [
         title: "Chains",
         content : [
             {
-                field: 'Ethereum'
+                field: 'Ethereum',
+                img:ethLogo
             },
             {
-                field: 'Avalanche'
+                field: 'Avalanche',
+                img:avaxLogo
             },
             {
-                field: 'Fantom'
+                field: 'Fantom',
+                img:fantomLogo
             },
             {
-                field: 'Polygon'
+                field: 'Polygon',
+                img:polygonLogo
             },
             {
-                field: 'Moonbeam'
+                field: 'Moonbeam',
+                img:moonbeamLogo
             },
         ]
     },

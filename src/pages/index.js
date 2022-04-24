@@ -34,7 +34,8 @@ import WalletConnect from "./WalletConnect";
 import CreateItem from "./CreateItem";
 import ListItem from "./List-Item";
 import Faucet from "./Faucet";
-
+import NFTBridge from "./NFT-Bridge";
+import NFTBridge02 from "./NFT-Bridge02";
 
 const routes = [
   // { path: '/home-02', component: <Home02 />},
@@ -72,6 +73,8 @@ const routes = [
   { path: '/faucet', component: <Faucet />},
   { path: '/create-item', component: <CreateItem />},
   { path: '/list-item', component: <ListItem />},
+  { path: '//NFT-Bridge', component: <NFTBridge />},
+  { path: '//NFT-Bridge02', component: <NFTBridge02 />},
 ]
 
 export default routes;

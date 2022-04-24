@@ -37,7 +37,7 @@ const SelectTokenModal = (props) => {
             <input type="text" placeholder="Search token"/>
             <ul className="list-group">
             {data.map(item => (
-                <li classBane="list-group-item list-group-item-action">
+                <li className="list-group-item list-group-item-action">
                     <div className="d-flex align-items-center justify-content-between">
                             <div className="d-flex align-items-center justify-content-center">
                                 <img src={item.img} alt="" width="25" height="25"/>

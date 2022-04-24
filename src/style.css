@@ -1126,6 +1126,9 @@ label.error { color: red; }
 .pb-10 {
     padding-bottom: 10px !important;
 }
+.pd-10 {
+    padding: 10px;
+}
 .pb-11 {
     padding-bottom: 11px !important;
 }
@@ -1706,7 +1709,7 @@ header{
       }
   }
 /* Mobile Menu */
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1080px) {
     .main-nav {
         margin          : 0 auto;
         width           : 40%;
@@ -3331,3 +3334,6 @@ header{
     display: inline-block;
 }
 
+.modal-xl{
+    max-width: 1500px;
+}

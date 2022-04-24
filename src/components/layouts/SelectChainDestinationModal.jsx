@@ -9,7 +9,7 @@ import polygonLogo from '../../assets/images/icon/polygon-logo.png'
 import avaxLogo from '../../assets/images/icon/avax-logo.png'
 import fantomLogo from '../../assets/images/icon/fantom-logo.png'
 
-const SelectChainModal = (props) => {
+const SelectChainDestinationModal = (props) => {
 
     const [data,setData] = useState([
         {
@@ -45,9 +45,9 @@ const SelectChainModal = (props) => {
     ])
 
     const handleChangeChain = (topic,img,index) => {
-        props.setMyNftOn(topic)
-        props.setMyNftOnImg(img)
-        props.setModalShow(false)
+        props.setDestinationNftChain(topic)
+        props.setDestinationNftChainImg(img)
+        props.setSelectChainDestinationShow(false)
 
         // const clearSelect = data.map(item => (
         //     item.select == false
@@ -90,4 +90,4 @@ const SelectChainModal = (props) => {
     )
 }
 
-export default SelectChainModal;
+export default SelectChainDestinationModal;

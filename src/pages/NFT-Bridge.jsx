@@ -1,0 +1,494 @@
+import React, { useEffect, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
+import Countdown from "react-countdown";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+
+import avt from "../assets/images/avatar/satoshi.svg";
+import img1 from "../assets/images/box-item/card-item-3.jpg";
+import imga1 from "../assets/images/avatar/avt-1.jpg";
+import imgCollection1 from "../assets/images/avatar/avt-18.jpg";
+import img2 from "../assets/images/box-item/card-item-4.jpg";
+import imga2 from "../assets/images/avatar/avt-2.jpg";
+import imgCollection2 from "../assets/images/avatar/avt-18.jpg";
+import img3 from "../assets/images/box-item/card-item-2.jpg";
+import imga3 from "../assets/images/avatar/avt-4.jpg";
+import imgCollection3 from "../assets/images/avatar/avt-18.jpg";
+import img4 from "../assets/images/box-item/card-item-7.jpg";
+import imga4 from "../assets/images/avatar/avt-3.jpg";
+import imgCollection4 from "../assets/images/avatar/avt-18.jpg";
+import img5 from "../assets/images/box-item/card-item8.jpg";
+import imga5 from "../assets/images/avatar/avt-12.jpg";
+import imgCollection5 from "../assets/images/avatar/avt-18.jpg";
+import img6 from "../assets/images/box-item/card-item-9.jpg";
+import imga6 from "../assets/images/avatar/avt-1.jpg";
+import imgCollection6 from "../assets/images/avatar/avt-18.jpg";
+import img7 from "../assets/images/box-item/image-box-6.jpg";
+import imga7 from "../assets/images/avatar/avt-4.jpg";
+import imgCollection7 from "../assets/images/avatar/avt-18.jpg";
+import img8 from "../assets/images/box-item/image-box-11.jpg";
+import imga8 from "../assets/images/avatar/avt-3.jpg";
+import imgCollection8 from "../assets/images/avatar/avt-18.jpg";
+import ethwallet from '../assets/images/icon/ethwallet.svg'
+import terrawallet from '../assets/images/icon/terrawallet.svg'
+
+import AlunaLogo from "../assets/images/icon/Luna.png";
+import AustLogo from "../assets/images/icon/UST.png";
+import ethLogo from '../assets/images/icon/eth-logo.svg'
+import polygonLogo from '../assets/images/icon/polygon-logo.svg'
+import avaxLogo from '../assets/images/icon/avax-logo.svg'
+import moonbeamLogo from '../assets/images/icon/moonbeam-logo.svg'
+import fantomLogo from '../assets/images/icon/fantom-logo.svg'
+import bridgeimg from '../assets/images/backgroup-secsion/bridge_effect.gif'
+import iconnfttable from '../assets/images/icon/icon-nft-table.svg'
+import iconnfttableselect from '../assets/images/icon/icon-nft-table-select.svg'
+
+
+import HeaderStyle2 from "../components/header/HeaderStyle2";
+import { CROSS_CHAIN_TOKEN_ADDRESS, fetchItem, listItem } from "../utils/api";
+import web3 from "../hooks/web3";
+import { chainLabel, maskAddress } from "../utils/address";
+
+import one from "../../src/assets/images/icon/1.svg"
+import two from "../../src/assets/images/icon/2.svg"
+import Bridge from "../../src/assets/images/icon/bridgeandborder.svg"
+
+import SelectChainModal from "../components/layouts/SelectChainModal";
+import SelectChainDestinationModal from "../components/layouts/SelectChainDestinationModal";
+import SelectNftModal from '../components/layouts/SelectNftModal'
+
+import Explore from "../components/layouts/explore-04/Explore";
+import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
+import { cancelListing, crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
+
+
+const NFTBridge = () => {
+
+  const [selectChainDestinationShow,setSelectChainDestinationShow] = useState(false)
+
+  const [nftSelect,setNftSelect] = useState(null)
+
+  const [items, setItems] = useState([]);
+  const [defaultItems, setDefaultItems] = useState([]);
+
+  const [selectNftModalShow,setSelectNftModalShow] = useState(false)
+
+  const [menuTab] = useState([
+    {
+      class: "active",
+      name: "Collected",
+    },
+    {
+      class: "",
+      name: "Listing",
+    },
+    // {
+    //     class: '',
+    //     name: 'MUSIC'
+    // },
+    // {
+    //     class: '',
+    //     name: 'COLLECTIBLES'
+    // },
+    // {
+    //     class: '',
+    //     name: 'SPORTS'
+    // },
+  ]);
+  const [panelTab, setPanelTab] = useState([
+    {
+      id: 2,
+      dataContent: [
+        {
+          id: 2,
+          img: img2,
+          title: "The RenaiXance Rising the sun ",
+          tags: "bsc",
+          imgAuthor: imga2,
+          nameAuthor: "SalvadorDali",
+          Price: "4.89 ETH",
+          PriceChange: "$12.246",
+          wishlist: "100",
+          imgCollection: imgCollection2,
+          nameCollection: "Creative Art 3D",
+        },
+        {
+          id: 3,
+          img: img3,
+          title: "The RenaiXance Rising the sun ",
+          tags: "bsc",
+          imgAuthor: imga3,
+          nameAuthor: "SalvadorDali",
+          Price: "4.89 ETH",
+          PriceChange: "$12.246",
+          wishlist: "100",
+          imgCollection: imgCollection3,
+          nameCollection: "Creative Art 3D",
+        },
+        {
+          id: 4,
+          img: img4,
+          title: "The RenaiXance Rising the sun ",
+          tags: "bsc",
+          imgAuthor: imga4,
+          nameAuthor: "SalvadorDali",
+          Price: "4.89 ETH",
+          PriceChange: "$12.246",
+          wishlist: "100",
+          imgCollection: imgCollection4,
+          nameCollection: "Creative Art 3D",
+        },
+        {
+          id: 5,
+          img: img5,
+          title: "The RenaiXance Rising the sun ",
+          tags: "bsc",
+          imgAuthor: imga5,
+          nameAuthor: "SalvadorDali",
+          Price: "4.89 ETH",
+          PriceChange: "$12.246",
+          wishlist: "100",
+          imgCollection: imgCollection5,
+          nameCollection: "Creative Art 3D",
+        },
+      ],
+    },
+  ]);
+  const [data, setData] = useState({});
+  const [Price, setPrice] = useState("");
+  const [PriceType, setPriceType] = useState("aLUNA");
+  const [PricePic, setPricePic] = useState(AlunaLogo);
+  const [processing, setProcessing] = useState(false);
+
+  const [modalShow , setModalShow] = useState(false)
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const collectionAddress = searchParams.get('collection');
+  const tokenId = searchParams.get('tokenId');
+  const chainId = searchParams.get('chainId');
+
+  const [myNftOn , setMyNftOn] = useState(null)
+  const [myNftOnImg , setMyNftOnImg] = useState(null)
+
+  const [destinationNftChain , setDestinationNftChain] = useState(null)
+  const [destinationNftChainImg , setDestinationNftChainImg] = useState(null)
+
+  const [visible, setVisible] = useState(8);
+
+  const onSelect = id => {
+    setSelectNftModalShow(false)
+    console.log(id)
+    const filterItem = defaultItems.filter(item => item.id === id)
+    setNftSelect(filterItem[0])
+    console.log(filterItem[0])
+
+    if(filterItem[0].chainId === 43113){
+      setMyNftOn('Avalanche')
+      setMyNftOnImg(avaxLogo)
+    }
+    if(filterItem[0].chainId === 3){
+      setMyNftOn('Ethereum')
+      setMyNftOnImg(ethLogo)
+    }
+    if(filterItem[0].chainId === 80001){
+      setMyNftOn('Poloygon')
+      setMyNftOnImg(polygonLogo)
+    }
+    if(filterItem[0].chainId === 4002){
+      setMyNftOn('Fantom')
+      setMyNftOnImg(fantomLogo)
+    }
+    if(filterItem[0].chainId === 1287){
+      setMyNftOn('Moonbeam')
+      setMyNftOnImg(moonbeamLogo)
+    }
+
+  }
+  const showMoreItemsProfile = () => {
+    setVisible((prevValue) => prevValue + 4);
+  };
+
+  async function cancelListingAction(data) {
+    await cancelListing(data.chainId, data.collectionAddress, data.tokenId);
+    await refreshData();
+    window.alert("Cancel Listing Success");
+  }
+
+  async function sellAction(data) {
+    window.location.href = "/list-item?chainId=" + data.chainId + "&collection=" + data.collectionAddress + "&tokenId=" + data.tokenId
+  }
+
+  function formatItems(items) {
+    console.log(items);
+    return items.map((x) => ({
+      id: x.collection.address + "-" + x.tokenId,
+      img: x.metadata.image,
+      title: x.collection.name + " #" + x.tokenId,
+      tags: chainLabel(x.collection.chainId),
+      imgAuthor: x.owner,
+      nameAuthor: x.owner,
+      price: (x.listPrice || "-") + " " + crossChainTokenLabel(x.collection.chainId, x.listTokenAddress),
+      priceChange: "$12.246",
+      wishlist: "100",
+      imgCollection: x.metadata.image,
+      nameCollection: x.collection.name,
+      tokenId: x.tokenId,
+      collectionAddress: x.collection.contractAddress,
+      chainId: x.collection.chainId,
+      listAmount: x.listAmount,
+    }));
+  }
+
+  async function refreshData2() {
+    console.log("Refresh Start");
+    let items = await fetchAllMyItems();
+    console.log(items);
+    let newItem = formatItems(items)
+    let filterNewItem = newItem.filter(item  => item.price === '- ')
+    console.log(filterNewItem)
+    setItems(filterNewItem);
+    setDefaultItems(filterNewItem);
+  }
+
+  useEffect(() => {
+    setPanelTab([
+      {
+        id: 1,
+        dataContent: items,
+      },
+      {
+        id: 2,
+        dataContent: items.filter((x) => x.listAmount),
+      },
+    ]);
+  }, [items]);
+
+  async function listItemOnClick(e) {
+    e.preventDefault();
+
+    try {
+      setProcessing(true);
+
+      let PriceTypeSymbol = "";
+
+      switch (PriceType) {
+        case "aLUNA": PriceTypeSymbol = "uluna"; break;
+        case "aUST": PriceTypeSymbol = "uusd"; break;
+      }
+
+      console.log(PriceTypeSymbol)
+  
+      await listItem(
+        chainId,
+        collectionAddress,
+        tokenId,
+        CROSS_CHAIN_TOKEN_ADDRESS[PriceTypeSymbol][chainId],
+        Price,
+      );
+
+      window.alert("List success");
+    } finally {
+      setProcessing(false);
+    }
+
+  }
+
+
+
+  async function refreshData() {
+    let x = await fetchItem(chainId, collectionAddress, tokenId)
+    console.log(x)
+    let y = formatItems([x])
+    setNftSelect(y[0])
+    console.log(y)
+  }
+  
+
+  useEffect(() => {
+    refreshData();
+    refreshData2();
+  }, []);
+
+  console.log(data)
+
+  return (
+    <div className="create-item">
+      <HeaderStyle2 />
+      <section >
+        <div className="overlay2"></div>
+        <div className="themesflat-container-bridge">
+        <div className="page-title-heading"></div>
+        <div className="nft-bridge-section">
+          <div className="nftbridge-section">
+            <h1 className="nftbridge-header">NFT Bridge</h1>
+            <div className="nftbridge-box pd-20">
+              <div className="nftbridge-process">
+                <div className="nftbridge-process-detail" style={{marginLeft:'8rem'}}>
+                 <img src={one} width='30px'/>
+                  <h6 className="bridge-text" style={{marginTop:'7px'}}>Select  your NFT</h6>
+                </div>
+                {/* <hr className="line-banner" style={{width:'242px' , border:'1px solid '}}/> */}
+                <div  className="nftbridge-process-detail" style={{marginRight:'5rem'}}>
+                  <img src={two} width='30px'/>
+                  <h6 className="bridge-text" style={{marginTop:'7px'}}>Select Destination chain</h6>
+                </div>
+              </div>
+              <div className="nftbridge-card-section">
+                <div className="nftbridge-card d-flex justify-content-center" onClick={() => setSelectNftModalShow(true)} style={{cursor:'pointer'}}>
+                  {nftSelect == null 
+                  ?
+                   <img className="img-chain-select" src={iconnfttableselect} width='128px'/> 
+                   : 
+                   <div className="nftbridge-card pd-10">
+                      <div className="nftbridge-nft-img-box d-flex justify-content-center">
+                        <img className="nftbridge-nft-img" src={nftSelect.img} alt="AxelarSea" width='200px'/>
+                        {/* style={{height:'200px'}} */}
+                      </div>
+                      <div className="card-title mg-bt-6" style={{marginTop:'10px'}}>
+                        <h5 className="nft-text-l" >{nftSelect.title}</h5>
+                      </div>
+
+                      <div className="meta-info d-flex justify-content-between align-items-center">
+                                      <div className="author d-flex align-items-center">
+                                        <div className="avatar">
+                                          <img className="avt-img" src={avt} alt="AxelarSea" width="30px"/>
+                                        </div>
+                                        <div className="info" style={{marginLeft:'1rem'}}>
+                                          <span className="nft-text-s">Owned By</span>
+                                          <h6 className="nft-text-m">{maskAddress(nftSelect.nameAuthor)}</h6>
+                                        </div>
+                                      </div>
+                                      <div className="chain-icon">
+                                      <img src={nftSelect.tags === 'ETH' ? ethLogo : nftSelect.tags === 'AVAX' ? avaxLogo : nftSelect.tags === 'FTM' ? fantomLogo : nftSelect.tags === 'MOONBEAM' ? moonbeamLogo : nftSelect.tags === 'POLYGON' ? polygonLogo : ''} alt="" width="25px"/>
+
+                                      </div>
+                                    </div>
+                      </div>
+                  }
+                </div>
+                <img className="bridge-animation" src={bridgeimg}/>
+                <div className="nftbridge-card d-flex justify-content-center">
+                  {nftSelect == null
+                  ?
+                  <img src={iconnfttable} width='70px'/>
+                  :
+                  <div className="nftbridge-card pd-10">
+                      <div className="nftbridge-nft-img-box d-flex justify-content-center">
+                        <img className="nftbridge-nft-img" src={nftSelect.img} alt="AxelarSea" width='200px'/>
+                        {/* style={{height:'200px'}} */}
+                      </div>
+                      <div className="card-title mg-bt-6" style={{marginTop:'10px'}}>
+                        <h5 className="nft-text-l">{nftSelect.title}</h5>
+                      </div>
+
+                      <div className="meta-info d-flex justify-content-between align-items-center">
+                                      <div className="author d-flex align-items-center">
+                                        <div className="avatar">
+                                          <img className="avt-img" src={avt} alt="AxelarSea" width="30px"/>
+                                        </div>
+                                        <div className="info" style={{marginLeft:'1rem'}}>
+                                          <span className="nft-text-s">Owned By</span>
+                                          <h6 className="nft-text-m">{maskAddress(nftSelect.nameAuthor)}</h6>
+                                        </div>
+                                      </div>
+                                      <div className="">
+                                      <img className="chain-icon" src={destinationNftChainImg} alt="" width="25px"/>
+
+                                      </div>
+                                    </div>
+                      </div>
+                  }
+                </div>
+              </div>
+              <div className="d-flex justify-content-between " style={{marginTop:'25px'}}>
+                <h3>My NFT On</h3>
+                <h3>Destination</h3>
+              </div>
+              <div className="d-flex justify-content-center " style={{marginTop:'10px' , background:'#F8F8F8'}}> 
+              {/* style={{marginTop:'15px',backgroundColor:'#F8F8F8',borderRadius:'10px'}} */}
+
+                <div className="bridge-text d-flex align-items-center bridge-select-box1" onClick={() => setModalShow(true)}>
+                  {myNftOn == null ? 'Source chain My NFT on'
+                  :
+                  <div className=" d-flex align-items-center bridge-select-box1">
+                    <img src={myNftOnImg} style={{marginRight:'13px'}} width ='40px'/>
+                    <div >
+                      <h5>{myNftOn}</h5>
+                      <p><small>Source chain</small></p>
+                    </div>
+                  </div>
+                  }
+                  
+                </div>
+                  <img className="bridge-icon" src={Bridge} alt="" />
+                <div className="d-flex align-items-center bridge-select-box2"  onClick={() => setSelectChainDestinationShow(true)}>
+                  {destinationNftChain == null ?
+                    <div className="bridge-text d-flex align-items-center bridge-select-box2">
+                      Select Destination chain 
+                    </div>
+
+                  :
+                    <div className="d-flex align-items-center bridge-select-box">
+                      <img src={destinationNftChainImg}  style={{marginRight:'13px'}} width ='40px'/>
+                        <div>
+                        <h5>{destinationNftChain}</h5>
+                        <p><small>Destination chain</small></p>
+                      </div>
+                    </div>
+                  }
+                  
+                </div>
+              </div>
+
+              <div className="d-flex justify-content-center">
+              <button style={{padding:'10px 25px', marginTop:'20px'}} type="submit" disabled> Bridge & Transfer</button>
+              </div>
+              <div className="nftbridge-process-detail" style={{marginTop:'10px'}}>
+                <p className="nftbridge-wallet-title">Send to address</p>
+                <div className="destiantion-wallet-box d-flex justify-content-center" style={{marginTop:'5px'}}>
+                  <h6 className="d-flex align-items-center">{nftSelect == null ? "Not Connected" : maskAddress(nftSelect.nameAuthor)}</h6>
+                </div>
+                {/* <form className="mr-3 d-flex justify-content-around"  style={{marginTop:'5px'}}>
+                  <img src={ethLogo} alt="" style={{marginRight:'0.5rem'}}/>
+                  <input
+                  type="text"
+                  className="inputcopy"
+                  value="Not Connected"
+                  readOnly
+                  />
+                </form> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+      <Footer />
+      <SelectChainModal
+        onShow={modalShow}
+        onHide={() => setModalShow(false)}
+        setMyNftOn={setMyNftOn}
+        setMyNftOnImg={setMyNftOnImg}
+        setModalShow={setModalShow}
+      />
+      <SelectNftModal 
+        onShow={selectNftModalShow}
+        onHide={() => setSelectNftModalShow(false)}
+        items={items}
+        onSelect={onSelect}
+      />
+      <SelectChainDestinationModal 
+        onShow={selectChainDestinationShow}
+        onHide={() => setSelectChainDestinationShow(false)}
+        setDestinationNftChain={setDestinationNftChain}
+        setDestinationNftChainImg={setDestinationNftChainImg}
+        setSelectChainDestinationShow={setSelectChainDestinationShow}
+      />
+    </div>
+  );
+};
+
+export default NFTBridge;
