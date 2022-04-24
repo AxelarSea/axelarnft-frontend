@@ -10,6 +10,8 @@ import web3 from '../../hooks/web3';
 import { useConnectedWallet } from '@terra-money/wallet-provider';
 import TestnetCheck from '../layouts/TestnetCheck';
 
+import FaqTestnetModal from '../layouts/FaqTestnetModal';
+
 
 const HeaderStyle2 = () => {
     const [connected, setConnected] = useState(false);
@@ -28,8 +30,8 @@ const HeaderStyle2 = () => {
     const isSticky = (e) => {
         const header = document.querySelector('.js-header');
         const scrollTop = window.scrollY;
-        scrollTop >= 300 ? header.classList.add('is-fixed') : header.classList.remove('is-fixed');
-        scrollTop >= 400 ? header.classList.add('is-small') : header.classList.remove('is-small');
+        scrollTop >= 500 ? header.classList.add('is-fixed') : header.classList.remove('is-fixed');
+        scrollTop >= 600 ? header.classList.add('is-small') : header.classList.remove('is-small');
     };
 
     const menuLeft = useRef(null)
@@ -38,6 +40,8 @@ const HeaderStyle2 = () => {
 
      const [btnToggleActive ,setBtnToggleActive] = useState(false)
     const [menuLeftActive ,setMenuLeftActive] = useState(false)
+
+    const [faqModalShow,setFaqModalShow] = useState(false)
 
     const menuToggle = () => {
         // menuLeft.current.classList.toggle('active');
@@ -137,15 +141,21 @@ const HeaderStyle2 = () => {
                                         <li className="menu-item" >
                                             <a href="https://axelarsea.gitbook.io/axelarsea-docs/" target="_blank">Docs</a>
                                         </li>
-
+                                        {/* <li className="menu-item" >
+                                            <div className='newpage-title' style={{marginTop:'2px'}}>
+                                            <Link className='newpage-title' to='/NFT-Bridge'>Bridge</Link>
+                                            </div>
+                                        </li> */}
                                     </ul>
                                 </nav>
                                 <div className="flat-search-btn flex">
-                                    <div className='testnetcheck'> 
+                                    <div className='testnetcheck d-flex justify-content-between'> 
                                         <span onClick={() => setModalShow(true)}>
                                         Testnet Check
                                       </span>
-                                            
+                                        <span onClick={() => setFaqModalShow(true)} style={{marginLeft:'3rem'}}>
+                                        FAQ
+                                      </span>
                                     </div>
                                     <div className="header-search flat-show-search" id="s1">
                                         <Link to="" className="show-search header-search-trigger" onClick={searchBtn}>
@@ -221,6 +231,10 @@ const HeaderStyle2 = () => {
             // setBuyNowModal={setModalShow}
             onShow={modalShow}
             onHide={() => setModalShow(false)}
+            />
+            <FaqTestnetModal
+            onShow={faqModalShow}
+            onHide={() => setFaqModalShow(false)}
             />
         </header>
     );

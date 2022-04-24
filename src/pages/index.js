@@ -19,7 +19,7 @@
 // import Login from "./Login";
 // import SignUp from "./SignUp";
 // import NoResult from "./NoResult";
-// import FAQ from "./FAQ";
+import FAQ from "./FAQ";
 // import Contact01 from "./Contact01";
 // import Contact02 from "./Contact02";
 // import LiveAuctions from "./LiveAuctions";
@@ -34,7 +34,8 @@ import WalletConnect from "./WalletConnect";
 import CreateItem from "./CreateItem";
 import ListItem from "./List-Item";
 import Faucet from "./Faucet";
-
+import NFTBridge from "./NFT-Bridge";
+import NFTBridge02 from "./NFT-Bridge02";
 
 const routes = [
   // { path: '/home-02', component: <Home02 />},
@@ -57,7 +58,7 @@ const routes = [
   // { path: '/login', component: <Login />},
   // { path: '/sign-up', component: <SignUp />},
   // { path: '/no-result', component: <NoResult />},
-  // { path: '/faq', component: <FAQ />},
+  { path: '/faq', component: <FAQ />},
   // { path: '/contact-01', component: <Contact01 />},
   // { path: '/contact-02', component: <Contact02 />},
   // { path: '/live-auctions', component: <LiveAuctions />},
@@ -72,6 +73,8 @@ const routes = [
   { path: '/faucet', component: <Faucet />},
   { path: '/create-item', component: <CreateItem />},
   { path: '/list-item', component: <ListItem />},
+  { path: '/NFT-Bridge', component: <NFTBridge />},
+  { path: '/NFT-Bridge02', component: <NFTBridge02 />},
 ]
 
 export default routes;

@@ -65,7 +65,7 @@ const Explore = props => {
 
     // const items = props.items;
     return (
-        <section className="tf-explore tf-section">
+        <section className="tf-explore tf-section" style={{paddingTop:'20px'}}>
             <div className="themesflat-container">
                 <div className="row">
                     <div className="col-xl-3 col-lg-3 col-md-12">
@@ -79,7 +79,10 @@ const Explore = props => {
                                                     {
                                                         item.content.map((itemm , index) => (
                                                             <div key={index}>
-                                                                <label>{itemm.field}
+                                                                
+                                                                <label>
+                                                                    <img src={itemm.img} alt="" width="17" height="17" style={{marginRight:'0.5rem'}}/>
+                                                                    {itemm.field}
                                                                     <input type="checkbox" defaultChecked={itemm.checked} onChange={() => handleCheck(index)}/>
                                                                     <span className="btn-checkbox"></span>
                                                                 </label><br/>

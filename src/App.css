@@ -90,7 +90,8 @@ button:disabled {
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
-  background: radial-gradient(83.78% 518.77% at 38.06% 16.22%, #FF4F0D 0%, #7AB694 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  background: black;
+  /* background: radial-gradient(83.78% 518.77% at 38.06% 16.22%, #FF4F0D 0%, #7AB694 100%); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-right: 3rem;
@@ -270,4 +271,288 @@ color: #B0B5B7;
   background: #FFEFE9;
   margin-left: 20px;
   margin-top: -10px;
+}
+
+.bridge-box {
+  width: 73%;
+  background: #FFFFFF;
+  border: 1px solid #E7E7E7;
+  box-shadow: 4px 4px 4px rgb(0 0 0 / 5%);
+  border-radius: 20px;
+  margin-top: -4rem;
+  z-index: 1;
+}
+
+.bridge-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bridge-header {
+  display: flex;
+  align-items: center;
+}
+
+.bridge-content {
+  display: flex;
+  justify-content: center;
+}
+
+.bridge-select-box1 {
+  padding: 10px 20px;
+  background: #F8F8F8;
+  border-radius: 10px 0px 0px 10px;
+  width: 100%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.bridge-select-box2 {
+  padding: 10px 20px;
+  background: #F8F8F8;
+  border-radius: 0px 10px 10px 0px;
+  width: 100%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.nftbridge-section {
+  background-image: url('../public/assets/images/backgroup-secsion/bgbridge-w.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 139px 0 59px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nftbridge-box {
+  width: 615px;
+  height: 682px;
+  left: 413px;
+  top: 200px;
+  background: #FFFFFF;
+  border: 1px solid #DCDCE2;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.nft-bridge-sectio {
+  display: flex;
+  
+}
+
+.themesflat-container-bridge {
+    max-width: 100%;
+}
+
+.nftbridge-header {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(83.78% 518.77% at 38.06% 16.22%, #FF4F0D 0%, #7AB694 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-right: 435px;
+  margin-bottom: 30px;
+  width: 100%;
+  justify-content: center;
+}
+.nftbridge-header-modal {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(83.78% 518.77% at 38.06% 16.22%, #FF4F0D 0%, #7AB694 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-right: 435px;
+  margin-bottom: 30px;
+  width: 100%;
+  justify-content: center;
+}
+
+.nftbridge-process {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nftbridge-process-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line-banner {
+  color: #FF4F0D
+}
+
+.nftbridge-wallet-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #B0B5B7;
+}
+
+.nftbridge-card-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.nftbridge-card {
+  width: 232px;
+  height: 294px;
+  left: 0px;
+  top: 0px;
+  background: #F8F8F8;
+  border: 0.5px solid #DCDCE2;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.sc-button.style.check span::before {
+  content: "\f772";
+  -webkit-transition: all 0.05s ease;
+  -moz-transition: all 0.05s ease;
+  -ms-transition: all 0.05s ease;
+  -o-transition: all 0.05s ease;
+  transition: all 0.05s ease;
+}
+
+.nftbridge-nft-img-box {
+  /* object-fit: cover;
+  height: 200px;
+  display: block;
+  aspect-ratio: 1/1; */
+}
+
+.nftbridge-nft-img {
+  width: 200px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.bridge-nft-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.destiantion-wallet-box {
+  width: 299px;
+  height: 38px;
+  left: 572px;
+  top: 824px;
+  background: #F8F8F8;
+  border-radius: 10px;
+}
+
+.hov.hover-ecfect, .newpage-title {
+    background: linear-gradient(to right, #ff4f0d,#7ab795,#ff4f0d);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: 700;
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    color: var(--primary-color2);
+    transition: color .2s ease-in-out;
+}
+
+.newpage-title {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 3rem;
+  cursor: pointer;
+}
+.nft-text-l {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+.bridge-head-logo {
+  margin-bottom: 1rem;
+  margin-right: 35rem;
+  width: 25rem;
+}
+
+@media only screen and (max-width: 620px) {
+  .nftbridge-card {
+    width: 150px;
+    height: 190px;
+  }
+  .nftbridge-box {
+    width: 380px;
+    height: auto;
+    padding: 10px;
+  }
+  .nftbridge-process{
+    display: flex;
+  }
+  .bridge-text {
+    font-size: 10px;
+  }
+  .nftbridge-header {
+    display: flex;
+    margin-left: 24.5rem;
+  }
+  .nftbridge-header-modal {
+    font-size: 25px;
+  }
+  .bridge-icon {
+    width: 20px;
+  }
+  .bridge-select-box1, .bridge-select-box2 {
+    padding: 10px;
+  }
+  .img-chain-select {
+    width: 80%;
+  }
+  .nft-text-l {
+    font-size: 10px;
+  }
+  .nft-text-m {
+    font-size: 10px;
+  }
+  .nft-text-s {
+    font-size: 8px;
+  }
+  .avt-img {
+    width: 20px;
+  }
+  .chain-icon {
+    width: 20px;
+  }
+  .bridge-animation {
+    height: 150px;
+  }
+  .bridge-head-logo {
+    margin-bottom: 1rem;
+    margin-right: 17rem;
+    width: 20rem;
+  }
 }

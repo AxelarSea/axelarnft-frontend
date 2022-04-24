@@ -7,7 +7,11 @@ import three from "../../assets/images/icon/3.svg";
 import four from "../../assets/images/icon/4.svg";
 import five from "../../assets/images/icon/5.svg";
 
+import FaqTestnetModal from "./FaqTestnetModal";
+
 const ProcessModal = (props) => {
+
+  const [faqModalShow,setFaqModalShow] = useState(false)
     return (
         <Modal show={props.onShow} onHide={props.onHide}>
       <Modal.Header closeButton></Modal.Header>
@@ -27,18 +31,28 @@ const ProcessModal = (props) => {
           </div>
           <div className="transaction-step-sign-box">
             <h6 className="transaction-step-detail"><img src={four} style={{marginRight: '1rem'}}/>Sign signature in metamask to confirm buying transaction.</h6>
-            <p className="transaction-sign-detail">Users sign their signatures in MetaMask confirming the transaction.</p>
+            {/* <p className="transaction-sign-detail">Users sign their signatures in MetaMask confirming the transaction.</p> */}
             {/* <button className="d-flex align-items-center" type="submit" style={{marginLeft:'25px' ,height:'10px',backgroundColor:'#FFEFE9' , color:'#FF4F0D' , padding:'0x 20px'}}>Sign</button> */}
-            <button className="transaction-sign-btn" type="submit" disabled>Sign</button>
+            {/* <button className="transaction-sign-btn" type="submit" disabled>Sign</button> */}
           </div>
           <div className="transaction-step-box">
             <h6 className="transaction-step-detail"><img src={five} style={{marginRight: '1rem'}}/>Wait for transaction to complete.</h6>
           </div>
-          <h5 className="transaction-note">Depending on network congestion, the entire process</h5>
-          <h5 className="transaction-note" style={{marginTop: '5px'}}>could take up to 10 minutes.</h5>
+          {/* <h5 className="transaction-note">Depending on network congestion, the entire process</h5>
+          
+          <h5 className="transaction-note" style={{marginTop: '5px'}}>could take up to 10 minutes.</h5> */}
+          <div className="center">
+          <button  onClick={() => setFaqModalShow(true)}>FAQ</button>
+
+          </div>
       </div>
+      <FaqTestnetModal 
+      onShow={faqModalShow}
+      onHide={() => setFaqModalShow(false)}
+      />
 
       </Modal>
+      
     )
 }
 export default ProcessModal

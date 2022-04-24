@@ -90,13 +90,13 @@ const TestnetCheck = (props) => {
         <i className="icon-fl-search-filled" ></i>
       </button>
       </form>
-        <h5 className="testnetquest">Quest : Mint at least 1 NFT in all five supported EVM chains</h5>
+        <h5 className="testnetquest">Quest: Mint NFTs on any three chains out of five supported EVM chains.</h5>
           <ul className="questlist">
-            <li className={data.mint_3 > 0 ? 'green' : 'questlist-text'}><img  src={checkcircle} width='20px' style={{marginRight:'1rem'}}/>Minted NFT on Ethereum Testnet (Ropsten) (Optional)</li>
+            <li className={data.mint_3 > 0 ? 'green' : 'questlist-text'}><img  src={checkcircle} width='20px' style={{marginRight:'1rem'}}/>Minted NFT on Ethereum Testnet (Ropsten)</li>
             <li className={data.mint_43113 > 0 ? 'green ' : 'questlist-text'}><img src={checkcircle} width='20px' style={{marginRight:'1rem'}}/>Minted NFT on Avalanche Fuji Testnet</li>
             <li className={data.mint_4002 > 0 ? 'green' : 'questlist-text'}><img src={checkcircle} width='20px' style={{marginRight:'1rem'}}/>Minted NFT on Fantom Testnet</li>
             <li className={data.mint_1287 > 0 ? 'green ' : 'questlist-text'}><img src={checkcircle} width='20px' style={{marginRight:'1rem'}}/>Minted NFT on Moonbeam Alpha Testnet</li>
-            <li className={data.mint_80001 > 0 ? 'green ' : 'questlist-text'}><img src={checkcircle} width='20px' style={{marginRight:'1rem'}}/>Minted NFT on Polygon Mumbai Testnet (Optional)</li>
+            <li className={data.mint_80001 > 0 ? 'green ' : 'questlist-text'}><img src={checkcircle} width='20px' style={{marginRight:'1rem'}}/>Minted NFT on Polygon Mumbai Testnet</li>
           </ul>
         <h5 className="testnetquest">Quest : Place NFT on sale on at least one of the five supported EVM chain</h5>
           <ul className="questlist">

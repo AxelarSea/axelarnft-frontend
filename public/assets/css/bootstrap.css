@@ -5437,6 +5437,34 @@ button.close {
   margin: 10px;
 }
 
+.modal.fade2 .modal-dialog2 {
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out, -o-transform 0.3s ease-out;
+  -webkit-transform: translate(0, -25%);
+       -o-transform: translate(0, -25%);
+          transform: translate(0, -25%);
+}
+
+.modal.show2 .modal-dialog2 {
+  -webkit-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.modal-open2 .modal2 {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal-dialog2 {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
 .modal-content {
   position: relative;
   display: -webkit-box;
@@ -5503,6 +5531,8 @@ button.close {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   padding: 15px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
 }
 
 .modal-footer {
@@ -5541,6 +5571,11 @@ button.close {
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 500px;
+    margin: 30px auto;
+  }
+
+  .modal-dialog2 {
+    max-width: 1500px;
     margin: 30px auto;
   }
   .modal-sm {
