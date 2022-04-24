@@ -395,7 +395,7 @@ const NFTBridge = () => {
                   }
                 </div>
               </div>
-              <div className="d-flex justify-content-between " style={{marginTop:'25px'}}>
+              <div className="d-flex justify-content-between " style={{marginTop:'15px'}}>
                 <div className="nftbridge-process-detail" style={{marginLeft:'7rem'}}>
                  <img src={one} width='30px'/>
                   <h6 className="bridge-text" style={{marginTop:'7px'}}>Select  your NFT</h6>
@@ -443,11 +443,11 @@ const NFTBridge = () => {
               </div>
 
               <div className="d-flex justify-content-center">
-              <button style={{padding:'10px 25px', marginTop:'20px'}} type="submit" disabled> Bridge & Transfer</button>
+              <button style={{padding:'10px 25px', marginTop:'30px'}} type="submit" disabled> Bridge & Transfer</button>
               </div>
-              <div className="nftbridge-process-detail" style={{marginTop:'10px'}}>
+              <div className="nftbridge-process-detail" style={{marginTop:'25px'}}>
                 <p className="nftbridge-wallet-title">Send to address</p>
-                <div className="destiantion-wallet-box d-flex justify-content-center" style={{marginTop:'5px'}}>
+                <div className="destiantion-wallet-box d-flex justify-content-center" style={{marginTop:'10px'}}>
                   <h6 className="d-flex align-items-center">{nftSelect == null ? "Not Connected" : maskAddress(nftSelect.nameAuthor)}</h6>
                 </div>
                 {/* <form className="mr-3 d-flex justify-content-around"  style={{marginTop:'5px'}}>
