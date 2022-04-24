@@ -325,7 +325,7 @@ const NFTBridge = () => {
         <div className="nft-bridge-section">
           <div className="nftbridge-section">
             {/* <h1 className="nftbridge-header">NFT Bridge</h1> */}
-            <img src={AxelarSeaBridgeLogo} alt="AxelarSeaLogo" width='500rem' style={{marginBottom:'2rem'}}/>
+            <img className="bridge-head-logo" src={AxelarSeaBridgeLogo} alt="AxelarSeaLogo" width='500rem'/>
             <div className="nftbridge-box pd-20">
               <div className="nftbridge-card-section">
                 <div className="nftbridge-card d-flex justify-content-center" onClick={() => setSelectNftModalShow(true)} style={{cursor:'pointer'}}>
