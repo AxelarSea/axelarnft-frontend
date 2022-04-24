@@ -19,7 +19,7 @@ const FaqItems = () => {
             {
                 key: "2",
                 title: 'What do I need to do to get the "Testnet Testers" Role?',
-                text: <p>Mint at least one NFT on ALL five EVM chains. Place at least one NFT on sell. DON`T NEED TO BUY.</p>
+                text: <p>Mint NFT on at least 3 out of 5 supported EVM chains. Place at least one NFT on sell. DON'T NEED TO BUY. Complete the tasks and claim the role in our Discord before Sun 24 Apr 23:59 (UTC)</p>
             },
             {
                 key: "3",

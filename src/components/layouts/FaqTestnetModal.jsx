@@ -16,7 +16,21 @@ const FaqTestnetModal = (props) => {
 
     const [data] = useState(
         [
-           
+            {
+                key: "1",
+                title: 'What can I do with the testnet version?',
+                text: <p>Users can mint and sell NFTs from five EVM chains, using MetaMask. In order to do so, just connect MetaMask to the website. NO NEED TO CONNECT TERRA STATION OR KEPLR. For the buying, due to the struggling performance of Axelar Network, you can`t perform a buy right now. We will update again if it`s back online!</p>
+            },
+            {
+                key: "2",
+                title: 'What do I need to do to get the "Testnet Testers" Role?',
+                text: <p>Mint NFT on at least 3 out of 5 supported EVM chains. Place at least one NFT on sell. DON'T NEED TO BUY. Complete the tasks and claim the role in our Discord before Sun 24 Apr 23:59 (UTC)</p>
+            },
+            {
+                key: "3",
+                title: 'How do I know if I qualify for the “Testnet Tester” role?',
+                text: <a href="https://medium.com/@axelarsea/how-to-claim-the-testnet-tester-role-9818f195d8ef "  target='_blank' class="link-secondary" style={{fontSize:'1.5rem'}}>How to claim the “Testnet Tester” role.</a>
+            },
             {
                 key: "5",
                 title: 'Why can`t I buy an NFT?',
@@ -52,7 +66,7 @@ const FaqTestnetModal = (props) => {
     return(
     <Modal show={props.onShow} onHide={props.onHide}>
         <Modal.Header closeButton></Modal.Header>
-        <div className="modal-body space-y-20 pd-40">
+        <div className="modal-body space-y-20 pd-10">
             <div className="col-md-12">
             <h2 className="tf-title-heading ct style-2 fs-30 mg-bt-10">
                                 Frequently Asked Questions
