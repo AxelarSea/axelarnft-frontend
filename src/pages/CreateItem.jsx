@@ -37,11 +37,11 @@ const CreateItem = () => {
   async function mint(e) {
     e.preventDefault();
 
-    Swal.fire(
-      'Sorry',
-      "Testnet V1 has been ended, please wait for further announcement.",
-      'warning'
-    )
+    // Swal.fire(
+    //   'Sorry',
+    //   "Testnet V1 has been paused, please wait for further announcement.",
+    //   'warning'
+    // )
 
     return;
 
