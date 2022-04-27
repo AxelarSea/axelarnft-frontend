@@ -76,6 +76,33 @@ const NFTBridge = () => {
 
   const [selectNftModalShow,setSelectNftModalShow] = useState(false)
 
+  const [wallet , setWallet] = useState('')
+
+  const [WalletAdress, setWalletAdress] = useState('')
+
+  const handleWalletChange = e => {
+    setWalletAdress(e.target.value)
+  }
+
+  const connectWalletHandler = () => {
+    if (window.ethereum && window.ethereum.isMetaMask) {
+      console.log("MetaMask Here!");
+
+      window.ethereum
+        .request({ method: "eth_requestAccounts" })
+        .then((result) => {
+         setWallet(result[0]);
+          // setConnButtonText("Wallet Connected");
+        })
+        .catch((error) => {
+          console.log(error)
+        });
+    } else {
+      console.log("Need to install MetaMask");
+      // setErrorMessage("Please install MetaMask browser extension to interact");
+    }
+  };
+
   const [menuTab] = useState([
     {
       class: "active",
@@ -184,6 +211,7 @@ const NFTBridge = () => {
     console.log(id)
     const filterItem = defaultItems.filter(item => item.id === id)
     setNftSelect(filterItem[0])
+    setWalletAdress(filterItem[0].nameAuthor)
     console.log(filterItem[0])
 
     if(filterItem[0].chainId === 43113){
@@ -312,6 +340,7 @@ const NFTBridge = () => {
     refreshData();
     refreshData2();
   }, []);
+
 
   console.log(data)
 
@@ -448,7 +477,7 @@ const NFTBridge = () => {
               <div className="nftbridge-process-detail" style={{marginTop:'20px'}}>
                 <p className="nftbridge-wallet-title">Send to address</p>
                 <div className="destiantion-wallet-box d-flex justify-content-center" style={{marginTop:'10px'}}>
-                  <input  type="text" value={nftSelect == null ? "Not Connected" : maskAddress(nftSelect.nameAuthor)}/>
+                  <input onChange={e =>handleWalletChange(e)} type="text" value={nftSelect == null ? "Not Connected" : (WalletAdress)}/>
                 </div>
                 {/* <form className="mr-3 d-flex justify-content-around"  style={{marginTop:'5px'}}>
                   <img src={ethLogo} alt="" style={{marginRight:'0.5rem'}}/>
@@ -478,6 +507,7 @@ const NFTBridge = () => {
         onHide={() => setSelectNftModalShow(false)}
         items={items}
         onSelect={onSelect}
+        WalletAdress={WalletAdress}
       />
       <SelectChainDestinationModal 
         onShow={selectChainDestinationShow}
