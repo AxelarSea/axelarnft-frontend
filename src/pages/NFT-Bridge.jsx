@@ -477,7 +477,7 @@ const NFTBridge = () => {
               <div className="nftbridge-process-detail" style={{marginTop:'20px'}}>
                 <p className="nftbridge-wallet-title">Send to address</p>
                 <div className="destiantion-wallet-box d-flex justify-content-center" style={{marginTop:'10px'}}>
-                  <input onChange={e =>handleWalletChange(e)} type="text" value={nftSelect == null ? "Not Connected" : (WalletAdress)}/>
+                  <input onChange={e =>handleWalletChange(e)} type="text" value={nftSelect == null ? " " : (WalletAdress)}/>
                 </div>
                 {/* <form className="mr-3 d-flex justify-content-around"  style={{marginTop:'5px'}}>
                   <img src={ethLogo} alt="" style={{marginRight:'0.5rem'}}/>
