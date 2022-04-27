@@ -645,7 +645,17 @@ const SelectNftModal = (props) => {
                               .slice(0, visible)
                               .map((data, index) => (
                                 <Link
-                                  to={"/ItemDetails?chainId=" + data.chainId + "&collection=" + data.collectionAddress + "&tokenId=" + data.tokenId}
+                                  to={
+                                    "/NFT-Bridge?chainId=" +
+                                     data.chainId +
+                                    "&collection=" +
+                                     data.collectionAddress +
+                                    "&tokenId=" +
+                                     data.tokenId
+                                    }
+                                    onClick={(e) => {
+                                      props.onSelect(data.id)
+                                    }}
                                   className="col-xl-4 col-lg-4 col-md-6 col-12"
                                   key={index}
                                 >
@@ -664,7 +674,7 @@ const SelectNftModal = (props) => {
                                             data.tokenId
                                           }
                                           >
-                                        <button
+                                        {/* <button
                                           onClick={(e) => {
                                             props.onSelect(data.id)
                                           }}
@@ -678,7 +688,7 @@ const SelectNftModal = (props) => {
                                           <span>{"Select"}</span>
                                           
                                           
-                                        </button>
+                                        </button> */}
                                         </Link>
                                       </div>
                                         :

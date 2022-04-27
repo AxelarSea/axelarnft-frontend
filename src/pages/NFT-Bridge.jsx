@@ -63,6 +63,7 @@ import SelectNftModal from '../components/layouts/SelectNftModal'
 import Explore from "../components/layouts/explore-04/Explore";
 import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
 import { cancelListing, crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
+import Swal from "sweetalert2";
 
 const sampleNftId = {
   "3": "1020847100762815390390123822295304634369",
@@ -83,6 +84,33 @@ const NFTBridge = () => {
   const [defaultItems, setDefaultItems] = useState([]);
 
   const [selectNftModalShow,setSelectNftModalShow] = useState(false)
+
+  const [wallet , setWallet] = useState('')
+
+  const [WalletAdress, setWalletAdress] = useState('')
+
+  const handleWalletChange = e => {
+    setWalletAdress(e.target.value)
+  }
+
+  const connectWalletHandler = () => {
+    if (window.ethereum && window.ethereum.isMetaMask) {
+      console.log("MetaMask Here!");
+
+      window.ethereum
+        .request({ method: "eth_requestAccounts" })
+        .then((result) => {
+         setWallet(result[0]);
+          // setConnButtonText("Wallet Connected");
+        })
+        .catch((error) => {
+          console.log(error)
+        });
+    } else {
+      console.log("Need to install MetaMask");
+      // setErrorMessage("Please install MetaMask browser extension to interact");
+    }
+  };
 
   const [menuTab] = useState([
     {
@@ -194,6 +222,7 @@ const NFTBridge = () => {
     console.log(id)
     const filterItem = defaultItems.filter(item => item.id === id)
     setNftSelect(filterItem[0])
+    setWalletAdress(filterItem[0].nameAuthor)
     console.log(filterItem[0])
 
     if(filterItem[0].chainId === 43113){
@@ -324,6 +353,12 @@ const NFTBridge = () => {
 
   async function bridge() {
     await bridgeNft(nftSelect.chainId, destinationNftChainId, sampleNftId[nftSelect.chainId], nftSelect.tokenId, nftSelect.owner);
+
+    Swal.fire(
+      'Bridge Success!',
+      'You have bridged NFT on ' + myNftOn + ' to ' + destinationNftChain + '!',
+      'success'
+    )
   }
   
 
@@ -331,6 +366,7 @@ const NFTBridge = () => {
     refreshData();
     refreshData2();
   }, []);
+
 
   console.log(data)
 
@@ -428,7 +464,7 @@ const NFTBridge = () => {
               <div className="d-flex justify-content-center " style={{marginTop:'20px' , background:'#F8F8F8'}}> 
               {/* style={{marginTop:'15px',backgroundColor:'#F8F8F8',borderRadius:'10px'}} */}
 
-                <div className="bridge-text d-flex align-items-center bridge-select-box1" onClick={() => setModalShow(true)}>
+                <div className="bridge-text d-flex align-items-center bridge-select-box1">
                   {myNftOn == null ? 'Source chain My NFT on'
                   :
                   <div className=" d-flex align-items-center bridge-select-box1">
@@ -460,14 +496,14 @@ const NFTBridge = () => {
                   
                 </div>
               </div>
-
+              
               <div className="d-flex justify-content-center">
               <button style={{padding:'10px 25px', marginTop:'30px'}} type="submit" disabled={!destinationNftChainId} onClick={bridge}> Bridge & Transfer</button>
               </div>
               <div className="nftbridge-process-detail" style={{marginTop:'20px'}}>
                 <p className="nftbridge-wallet-title">Send to address</p>
                 <div className="destiantion-wallet-box d-flex justify-content-center" style={{marginTop:'10px'}}>
-                  <h6 className="d-flex align-items-center">{nftSelect == null ? "Not Connected" : maskAddress(nftSelect.nameAuthor)}</h6>
+                  <input onChange={e =>handleWalletChange(e)} type="text" value={nftSelect == null ? " " : (WalletAdress)}/>
                 </div>
                 {/* <form className="mr-3 d-flex justify-content-around"  style={{marginTop:'5px'}}>
                   <img src={ethLogo} alt="" style={{marginRight:'0.5rem'}}/>
@@ -497,6 +533,7 @@ const NFTBridge = () => {
         onHide={() => setSelectNftModalShow(false)}
         items={items}
         onSelect={onSelect}
+        WalletAdress={WalletAdress}
       />
       <SelectChainDestinationModal 
         onShow={selectChainDestinationShow}

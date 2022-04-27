@@ -319,6 +319,7 @@ color: #B0B5B7;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
+  cursor: pointer;
 }
 
 .nftbridge-section {
@@ -460,7 +461,7 @@ color: #B0B5B7;
 }
 
 .destiantion-wallet-box {
-  width: 299px;
+  width: 455px;
   height: 38px;
   left: 572px;
   top: 824px;
