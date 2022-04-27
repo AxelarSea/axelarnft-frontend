@@ -15,39 +15,44 @@ const SelectChainDestinationModal = (props) => {
         {
             topic:'Polygon',
             img:polygonLogo,
+            chainId: 80001,
             select:false
         },
         {
             topic:'Moonbeam',
             img:moonbeamLogo,
+            chainId: 1287,
             select:false
 
         },
         {
             topic:'Fantom',
             img:fantomLogo,
+            chainId: 4002,
             select:false
 
         },
         {
             topic:'ETH',
             img:ethLogo,
+            chainId: 3,
             select:false
-
-     
         },
         {
             topic:'Avalanche',
             img:avaxLogo,
+            chainId: 43113,
             select:false
      
         },
     ])
 
-    const handleChangeChain = (topic,img,index) => {
-        props.setDestinationNftChain(topic)
-        props.setDestinationNftChainImg(img)
-        props.setSelectChainDestinationShow(false)
+    const handleChangeChain = (topic,chainId,img,index) => {
+        props.onChange(topic, chainId, img)
+
+        // props.setDestinationNftChain(topic)
+        // props.setDestinationNftChainImg(img)
+        // props.setSelectChainDestinationShow(false)
 
         // const clearSelect = data.map(item => (
         //     item.select == false
@@ -79,7 +84,7 @@ const SelectChainDestinationModal = (props) => {
                                 </div>
                             </div>
                     </div>
-                    <h5 style={{fontSize:'16px' , fontWeight:'600' , cursor:'pointer'}} onClick={() => handleChangeChain(item.topic , item.img ,index)}>{item.select ? 'Selected' : 'Select'}</h5>
+                    <h5 style={{fontSize:'16px' , fontWeight:'600' , cursor:'pointer'}} onClick={() => handleChangeChain(item.topic, item.chainId, item.img, index)}>{item.select ? 'Selected' : 'Select'}</h5>
 
                 </li>
             ))}

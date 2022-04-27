@@ -48,7 +48,7 @@ import AxelarSeaBridgeLogo from '../assets/images/logo/axelarsea-bridge-logo.svg
 
 
 import HeaderStyle2 from "../components/header/HeaderStyle2";
-import { CROSS_CHAIN_TOKEN_ADDRESS, fetchItem, listItem } from "../utils/api";
+import { bridgeNft, CROSS_CHAIN_TOKEN_ADDRESS, fetchItem, listItem } from "../utils/api";
 import web3 from "../hooks/web3";
 import { chainLabel, maskAddress } from "../utils/address";
 
@@ -63,6 +63,14 @@ import SelectNftModal from '../components/layouts/SelectNftModal'
 import Explore from "../components/layouts/explore-04/Explore";
 import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
 import { cancelListing, crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
+
+const sampleNftId = {
+  "3": "1020847100762815390390123822295304634369",
+  "1287": "437943406227247802477363119764685688143873",
+  "4002": "1361810032417595730780425178941936382246913",
+  "43113": "14670593685062419975296469450205822900502529",
+  "80001": "27222929636041998015533431969148888684691457"
+}
 
 
 const NFTBridge = () => {
@@ -172,9 +180,11 @@ const NFTBridge = () => {
   const chainId = searchParams.get('chainId');
 
   const [myNftOn , setMyNftOn] = useState(null)
+  const [myNftOnChainId , setMyNftOnChainId] = useState(null)
   const [myNftOnImg , setMyNftOnImg] = useState(null)
 
   const [destinationNftChain , setDestinationNftChain] = useState(null)
+  const [destinationNftChainId , setDestinationNftChainId] = useState(null)
   const [destinationNftChainImg , setDestinationNftChainImg] = useState(null)
 
   const [visible, setVisible] = useState(8);
@@ -188,25 +198,29 @@ const NFTBridge = () => {
 
     if(filterItem[0].chainId === 43113){
       setMyNftOn('Avalanche')
+      setMyNftOnChainId(43113)
       setMyNftOnImg(avaxLogo)
     }
     if(filterItem[0].chainId === 3){
       setMyNftOn('Ethereum')
+      setMyNftOnChainId(3)
       setMyNftOnImg(ethLogo)
     }
     if(filterItem[0].chainId === 80001){
-      setMyNftOn('Poloygon')
+      setMyNftOn('Polygon')
+      setMyNftOnChainId(80001)
       setMyNftOnImg(polygonLogo)
     }
     if(filterItem[0].chainId === 4002){
       setMyNftOn('Fantom')
+      setMyNftOnChainId(4002)
       setMyNftOnImg(fantomLogo)
     }
     if(filterItem[0].chainId === 1287){
       setMyNftOn('Moonbeam')
+      setMyNftOnChainId(1287)
       setMyNftOnImg(moonbeamLogo)
     }
-
   }
   const showMoreItemsProfile = () => {
     setVisible((prevValue) => prevValue + 4);
@@ -240,6 +254,7 @@ const NFTBridge = () => {
       collectionAddress: x.collection.contractAddress,
       chainId: x.collection.chainId,
       listAmount: x.listAmount,
+      owner: x.owner,
     }));
   }
 
@@ -305,6 +320,10 @@ const NFTBridge = () => {
     let y = formatItems([x])
     setNftSelect(y[0])
     console.log(y)
+  }
+
+  async function bridge() {
+    await bridgeNft(nftSelect.chainId, destinationNftChainId, sampleNftId[nftSelect.chainId], nftSelect.tokenId, nftSelect.owner);
   }
   
 
@@ -443,7 +462,7 @@ const NFTBridge = () => {
               </div>
 
               <div className="d-flex justify-content-center">
-              <button style={{padding:'10px 25px', marginTop:'30px'}} type="submit" disabled> Bridge & Transfer</button>
+              <button style={{padding:'10px 25px', marginTop:'30px'}} type="submit" disabled={!destinationNftChainId} onClick={bridge}> Bridge & Transfer</button>
               </div>
               <div className="nftbridge-process-detail" style={{marginTop:'20px'}}>
                 <p className="nftbridge-wallet-title">Send to address</p>
@@ -482,9 +501,14 @@ const NFTBridge = () => {
       <SelectChainDestinationModal 
         onShow={selectChainDestinationShow}
         onHide={() => setSelectChainDestinationShow(false)}
-        setDestinationNftChain={setDestinationNftChain}
-        setDestinationNftChainImg={setDestinationNftChainImg}
-        setSelectChainDestinationShow={setSelectChainDestinationShow}
+        onChange={(name, chainId, img) => {
+          setDestinationNftChain(name);
+          setDestinationNftChainId(chainId);
+          setDestinationNftChainImg(img);
+        }}
+        // setDestinationNftChain={setDestinationNftChain}
+        // setDestinationNftChainImg={setDestinationNftChainImg}
+        // setSelectChainDestinationShow={setSelectChainDestinationShow}
       />
     </div>
   );

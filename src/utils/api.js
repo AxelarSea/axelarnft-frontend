@@ -20,6 +20,7 @@ import {
 import ERC20 from "../contracts/ERC20";
 import { generateBuyERC721Signature } from "../contracts/generateSignature";
 import { executeCosmosTransaction } from "./keplr";
+import NftBridgeController from "../contracts/NftBridgeController";
 
 const environment = "testnet";
 const axelarApi = new AxelarAssetTransfer({ environment });
@@ -364,4 +365,45 @@ export async function listItem(
   await wait(1000);
 
   await refreshMetadata(chainId, collectionAddress, tokenId);
+}
+
+export async function bridgeNft(sourceChainId, destChainId, nftId, tokenId, to) {
+  await switchChain(sourceChainId);
+  let account = (await web3.eth.getAccounts())[0];
+
+  const toEncoded = web3.eth.abi.encodeParameters(
+    ['address'],
+    [to]
+  );
+
+  let sourceBridgeController = new NftBridgeController(sourceChainId, account);
+  let sourceNftAddress = await sourceBridgeController.nftId2address(nftId);
+  let sourceNft = new ERC721MetaMintable(sourceChainId, sourceNftAddress, account);
+
+  await sourceNft.approve(sourceBridgeController.address);
+
+  await sourceBridgeController.bridge(destChainId, nftId, tokenId, 1, toEncoded, web3.utils.toWei("1"));
+
+  await wait(500);
+
+  refreshMetadata(sourceChainId, sourceNftAddress, tokenId);
+
+  let destBridgeController = new NftBridgeController(destChainId, account, true);
+  let destNftAddress = await destBridgeController.nftId2address(nftId);
+  let destNft = new ERC721MetaMintable(destChainId, destNftAddress, account, true);
+  let unlocked = false;
+
+  while (!unlocked) {
+    console.log('WAITING FOR UNLOCK')
+
+    try {
+      if ((await destNft.ownerOf(tokenId)).toLowerCase() == account.toLowerCase()) {
+        unlocked = true;
+      }
+    } catch (err) {}
+
+    await wait(1000);
+  }
+
+  await refreshMetadata(destChainId, destNftAddress, tokenId);
 }
