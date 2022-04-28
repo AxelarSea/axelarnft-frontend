@@ -285,7 +285,7 @@ const NFTBridge = () => {
       chainId: x.collection.chainId,
       listAmount: x.listAmount,
       owner: x.owner,
-      nftId: x.nftId,
+      nftId: x.collection.nftId,
     }));
   }
 
@@ -354,6 +354,7 @@ const NFTBridge = () => {
   }
 
   async function bridge() {
+    console.log(nftSelect.chainId, destinationNftChainId, nftSelect.nftId, nftSelect.tokenId, nftSelect.owner)
     await bridgeNft(nftSelect.chainId, destinationNftChainId, nftSelect.nftId, nftSelect.tokenId, nftSelect.owner);
 
     Swal.fire(
