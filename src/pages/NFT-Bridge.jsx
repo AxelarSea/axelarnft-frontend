@@ -81,6 +81,8 @@ const NFTBridge = () => {
 
   const [nftSelect,setNftSelect] = useState(null)
 
+  const [isSelect,setIsSelect] = useState(true)
+
   const [items, setItems] = useState([]);
   const [defaultItems, setDefaultItems] = useState([]);
 
@@ -226,6 +228,7 @@ const NFTBridge = () => {
     setNftSelect(filterItem[0])
     setWalletAdress(filterItem[0].owner)
     console.log(filterItem[0])
+    setIsSelect(false)
 
     if(filterItem[0].chainId === 43113){
       setMyNftOn('Avalanche')
@@ -497,12 +500,13 @@ const NFTBridge = () => {
                   
                 </div>
                   <img className="bridge-icon" src={Bridge} alt="" />
-                <div 
-                className="d-flex align-items-center bridge-select-box2"  
-                onClick={() => setSelectChainDestinationShow(true)}
+                <div  className="d-flex align-items-center bridge-select-box2"  
+                      onClick={!isSelect ? () => setSelectChainDestinationShow(true) : undefined}
                 >
                   {destinationNftChain == null ?
-                    <div className="bridge-text d-flex align-items-center bridge-select-box2">
+                    <div className="bridge-text d-flex align-items-center bridge-select-box2"
+                    
+                    >
                       Select Destination chain 
                     </div>
 
