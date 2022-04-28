@@ -615,6 +615,7 @@ const SelectNftModal = (props) => {
         <Modal.Header closeButton></Modal.Header>
         <div className="modal-body space-y-20 pd-80">
             <h3 className="nftbridge-header-modal">Select NFT Want to Bridge</h3>
+            <p className="d-flex justify-content-center">(Listed NFT cannot use bridging function)</p>
             <Tabs>
               {/* <TabList>
                 {menuTab.map((item, index) => (

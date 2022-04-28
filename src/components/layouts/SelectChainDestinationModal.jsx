@@ -19,7 +19,7 @@ const SelectChainDestinationModal = (props) => {
             select:false
         },
         {
-            topic:'Moonbeam',
+            topic:'Moonbeam (Currently not supported)',
             img:moonbeamLogo,
             chainId: 1287,
             select:false
@@ -33,7 +33,7 @@ const SelectChainDestinationModal = (props) => {
 
         },
         {
-            topic:'ETH',
+            topic:'ETH (Currently not supported)',
             img:ethLogo,
             chainId: 3,
             select:false
@@ -49,10 +49,11 @@ const SelectChainDestinationModal = (props) => {
 
     const handleChangeChain = (topic,chainId,img,index) => {
         props.onChange(topic, chainId, img)
-
+        props.setSelectChainDestinationShow(false)
+        
         // props.setDestinationNftChain(topic)
         // props.setDestinationNftChainImg(img)
-        // props.setSelectChainDestinationShow(false)
+        
 
         // const clearSelect = data.map(item => (
         //     item.select == false

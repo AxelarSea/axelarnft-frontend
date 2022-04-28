@@ -17,25 +17,22 @@ const SelectChainModal = (props) => {
             img:polygonLogo,
             select:false
         },
-        {
-            topic:'Moonbeam',
-            img:moonbeamLogo,
-            select:false
-
-        },
+        // {
+        //     topic:'Moonbeam',
+        //     img:moonbeamLogo,
+        //     select:false
+        // },
         {
             topic:'Fantom',
             img:fantomLogo,
             select:false
 
         },
-        {
-            topic:'ETH',
-            img:ethLogo,
-            select:false
-
-     
-        },
+        // {
+        //     topic:'ETH',
+        //     img:ethLogo,
+        //     select:false
+        // },
         {
             topic:'Avalanche',
             img:avaxLogo,

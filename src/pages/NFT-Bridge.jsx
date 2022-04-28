@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Component } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
@@ -44,6 +44,7 @@ import fantomLogo from '../assets/images/icon/fantom-logo.svg'
 import bridgeimg from '../assets/images/backgroup-secsion/bridge_effect.gif'
 import iconnfttable from '../assets/images/icon/icon-nft-table.svg'
 import iconnfttableselect from '../assets/images/icon/icon-nft-table-select.svg'
+import spin from '../assets/images/icon/processing.gif'
 import AxelarSeaBridgeLogo from '../assets/images/logo/axelarsea-bridge-logo.svg'
 
 
@@ -255,6 +256,8 @@ const NFTBridge = () => {
   const showMoreItemsProfile = () => {
     setVisible((prevValue) => prevValue + 4);
   };
+
+  
 
   async function cancelListingAction(data) {
     await cancelListing(data.chainId, data.collectionAddress, data.tokenId);
@@ -494,7 +497,10 @@ const NFTBridge = () => {
                   
                 </div>
                   <img className="bridge-icon" src={Bridge} alt="" />
-                <div className="d-flex align-items-center bridge-select-box2"  onClick={() => setSelectChainDestinationShow(true)}>
+                <div 
+                className="d-flex align-items-center bridge-select-box2"  
+                onClick={() => setSelectChainDestinationShow(true)}
+                >
                   {destinationNftChain == null ?
                     <div className="bridge-text d-flex align-items-center bridge-select-box2">
                       Select Destination chain 
@@ -514,11 +520,20 @@ const NFTBridge = () => {
               </div>
               
               <div className="d-flex justify-content-center">
-              <button style={{padding:'10px 25px', marginTop:'30px'}} type="submit" disabled={!destinationNftChainId} onClick={bridge}> Bridge & Transfer</button>
+              <button 
+                style={{padding:'10px 25px', marginTop:'20px'}} 
+                type="submit" 
+                disabled={!destinationNftChainId} 
+                onClick={bridge}> 
+                  
+                {processing && <span><img src={spin} alt="processing" style={{marginRight:'5px'}} width='25px'/>Processing</span>}
+                {!processing && <span>Bridge & Transfer</span>}
+              </button>
               </div>
-              <div className="nftbridge-process-detail" style={{marginTop:'20px'}}>
+              <p className="d-flex justify-content-center">(The process will take around 5 min)</p>
+              <div className="nftbridge-process-detail" style={{marginTop:'5px'}}>
                 <p className="nftbridge-wallet-title">Send to address</p>
-                <div className="destiantion-wallet-box d-flex justify-content-center" style={{marginTop:'10px'}}>
+                <div className="destiantion-wallet-box d-flex justify-content-center" style={{marginTop:'7px'}}>
                   <input onChange={e =>handleWalletChange(e)} type="text" value={nftSelect == null ? " " : (WalletAdress)}/>
                 </div>
                 {/* <form className="mr-3 d-flex justify-content-around"  style={{marginTop:'5px'}}>
@@ -558,6 +573,7 @@ const NFTBridge = () => {
           setDestinationNftChain(name);
           setDestinationNftChainId(chainId);
           setDestinationNftChainImg(img);
+          setSelectChainDestinationShow(false)
         }}
         // setDestinationNftChain={setDestinationNftChain}
         // setDestinationNftChainImg={setDestinationNftChainImg}
