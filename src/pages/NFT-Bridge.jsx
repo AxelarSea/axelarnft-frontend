@@ -268,7 +268,7 @@ const NFTBridge = () => {
   function formatItems(items) {
     console.log(items);
     return items.map((x) => ({
-      id: x.collection.address + "-" + x.tokenId,
+      id: x.collection.contractAddress + "-" + x.tokenId,
       img: x.metadata.image,
       title: x.collection.name + " #" + x.tokenId,
       tags: chainLabel(x.collection.chainId),
@@ -284,6 +284,7 @@ const NFTBridge = () => {
       chainId: x.collection.chainId,
       listAmount: x.listAmount,
       owner: x.owner,
+      nftId: x.nftId,
     }));
   }
 
@@ -352,7 +353,7 @@ const NFTBridge = () => {
   }
 
   async function bridge() {
-    await bridgeNft(nftSelect.chainId, destinationNftChainId, sampleNftId[nftSelect.chainId], nftSelect.tokenId, nftSelect.owner);
+    await bridgeNft(nftSelect.chainId, destinationNftChainId, nftSelect.nftId, nftSelect.tokenId, nftSelect.owner);
 
     Swal.fire(
       'Bridge Success!',
