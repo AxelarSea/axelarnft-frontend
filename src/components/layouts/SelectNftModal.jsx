@@ -560,9 +560,12 @@ const SelectNftModal = (props) => {
   async function refreshData() {
     console.log("Refresh Start");
     let items = await fetchAllMyItems();
+    let newItems = formatItems(items);
+    const filterItems = newItems.filter(item => ((item.chainId === 80001 || item.chainId === 43113 || item.chainId === 4002) && item.price === "- "))
+    console.log(filterItems)
     console.log(items);
-    setItems(formatItems(items));
-    setDefaultItems(formatItems(items));
+    setItems(filterItems);
+    setDefaultItems(filterItems);
   }
 
   useEffect(() => {
