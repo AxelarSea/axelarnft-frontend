@@ -501,6 +501,23 @@ color: #B0B5B7;
   width: 25rem;
 }
 
+.hov.hover-ecfect, .congratulation-title {
+  background: linear-gradient(to right, #ff4f0d,#7ab795,#ff4f0d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 700;
+  background-size: 200% 200%;
+  animation: rainbow 2s ease-in-out infinite;
+  color: var(--primary-color2);
+  transition: color .2s ease-in-out;
+}
+
+.congratulation-title {
+height: 41px;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
 @media only screen and (max-width: 620px) {
   .nftbridge-card {
     width: 150px;
