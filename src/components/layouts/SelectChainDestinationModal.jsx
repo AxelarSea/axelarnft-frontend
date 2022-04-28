@@ -18,13 +18,13 @@ const SelectChainDestinationModal = (props) => {
             chainId: 80001,
             select:false
         },
-        {
-            topic:'Moonbeam (Currently not supported)',
-            img:moonbeamLogo,
-            chainId: 1287,
-            select:false
+        // {
+        //     topic:'Moonbeam (Currently not supported)',
+        //     img:moonbeamLogo,
+        //     chainId: 1287,
+        //     select:false
 
-        },
+        // },
         {
             topic:'Fantom',
             img:fantomLogo,
@@ -32,12 +32,12 @@ const SelectChainDestinationModal = (props) => {
             select:false
 
         },
-        {
-            topic:'ETH (Currently not supported)',
-            img:ethLogo,
-            chainId: 3,
-            select:false
-        },
+        // {
+        //     topic:'ETH (Currently not supported)',
+        //     img:ethLogo,
+        //     chainId: 3,
+        //     select:false
+        // },
         {
             topic:'Avalanche',
             img:avaxLogo,
