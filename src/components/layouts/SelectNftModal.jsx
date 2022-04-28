@@ -528,7 +528,7 @@ const SelectNftModal = (props) => {
   function formatItems(items) {
     console.log(items);
     return items.map((x) => ({
-      id: x.collection.address + "-" + x.tokenId,
+      id: x.collection.contractAddress + "-" + x.tokenId,
       img: x.metadata.image,
       title: x.collection.name + " #" + x.tokenId,
       tags: chainLabel(x.collection.chainId),
@@ -644,7 +644,7 @@ const SelectNftModal = (props) => {
                             {item.dataContent
                               .slice(0, visible)
                               .map((data, index) => (
-                                <Link
+                                <div
                                   to={
                                     "/NFT-Bridge?chainId=" +
                                      data.chainId +
@@ -727,7 +727,7 @@ const SelectNftModal = (props) => {
                                     </div>
 
                                   </div>
-                                </Link>
+                                </div>
                               )) }
                           </div>
                           {visible < item.dataContent.length && (

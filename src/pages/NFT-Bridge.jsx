@@ -221,8 +221,9 @@ const NFTBridge = () => {
     setSelectNftModalShow(false)
     console.log(id)
     const filterItem = defaultItems.filter(item => item.id === id)
+    console.log(defaultItems)
     setNftSelect(filterItem[0])
-    setWalletAdress(filterItem[0].nameAuthor)
+    setWalletAdress(filterItem[0].owner)
     console.log(filterItem[0])
 
     if(filterItem[0].chainId === 43113){
@@ -367,6 +368,12 @@ const NFTBridge = () => {
     refreshData();
     refreshData2();
   }, []);
+
+  useEffect(() => {
+    if (collectionAddress && tokenId && !myNftOn && defaultItems.length > 0) {
+      onSelect(collectionAddress + '-' + tokenId);
+    }
+  }, [defaultItems])
 
 
   console.log(data)
