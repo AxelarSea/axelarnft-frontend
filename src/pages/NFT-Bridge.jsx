@@ -65,6 +65,7 @@ import Explore from "../components/layouts/explore-04/Explore";
 import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
 import { cancelListing, crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
 import Swal from "sweetalert2";
+import CongratBridgeModal from "../components/layouts/CongratBridgeModal";
 
 const sampleNftId = {
   "3": "1020847100762815390390123822295304634369",
@@ -76,6 +77,8 @@ const sampleNftId = {
 
 
 const NFTBridge = () => {
+
+  const [congratBridgeModalShow,setCongratBridgeModalShow] = useState(false)
 
   const [selectChainDestinationShow,setSelectChainDestinationShow] = useState(false)
 
@@ -370,6 +373,8 @@ const NFTBridge = () => {
         'Bridge Success!',
         'You have bridged NFT on ' + myNftOn + ' to ' + destinationNftChain + '!',
         'success'
+      ).then(
+        setCongratBridgeModalShow(true)
       )
     } finally {
       setProcessing(false);
@@ -579,9 +584,17 @@ const NFTBridge = () => {
           setDestinationNftChainImg(img);
           setSelectChainDestinationShow(false)
         }}
+        
         // setDestinationNftChain={setDestinationNftChain}
         // setDestinationNftChainImg={setDestinationNftChainImg}
         // setSelectChainDestinationShow={setSelectChainDestinationShow}
+      />
+      <CongratBridgeModal 
+        onShow={congratBridgeModalShow}
+        onHide={() => setCongratBridgeModalShow(false)}
+        nftSelect={nftSelect}
+        myNftOnImg={myNftOnImg}
+        destinationNftChainImg={destinationNftChainImg}
       />
     </div>
   );
