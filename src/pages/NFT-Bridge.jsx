@@ -354,14 +354,21 @@ const NFTBridge = () => {
   }
 
   async function bridge() {
-    console.log(nftSelect.chainId, destinationNftChainId, nftSelect.nftId, nftSelect.tokenId, nftSelect.owner)
-    await bridgeNft(nftSelect.chainId, destinationNftChainId, nftSelect.nftId, nftSelect.tokenId, nftSelect.owner);
+    try {
+      setProcessing(true);
 
-    Swal.fire(
-      'Bridge Success!',
-      'You have bridged NFT on ' + myNftOn + ' to ' + destinationNftChain + '!',
-      'success'
-    )
+      console.log(nftSelect.chainId, destinationNftChainId, nftSelect.nftId, nftSelect.tokenId, nftSelect.owner)
+      await bridgeNft(nftSelect.chainId, destinationNftChainId, nftSelect.nftId, nftSelect.tokenId, nftSelect.owner);
+  
+      Swal.fire(
+        'Bridge Success!',
+        'You have bridged NFT on ' + myNftOn + ' to ' + destinationNftChain + '!',
+        'success'
+      )
+    } finally {
+      setProcessing(false);
+    }
+
   }
   
 
