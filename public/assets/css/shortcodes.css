@@ -5262,6 +5262,8 @@ button.accordion-button {
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 98%;
+    margin-top: 2rem;
 }
 .modal-dialog .modal-header {
     border: none;

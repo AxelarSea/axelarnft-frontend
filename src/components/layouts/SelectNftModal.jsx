@@ -618,7 +618,7 @@ const SelectNftModal = (props) => {
         <Modal.Header closeButton></Modal.Header>
         <div className="modal-body space-y-20 pd-80">
             <h3 className="nftbridge-header-modal">Select NFT Want to Bridge</h3>
-            <p className="d-flex justify-content-center">(Listed NFT cannot use bridging function)</p>
+            <p className="d-flex justify-content-center">(Bridging function is not available for listed NFTs)</p>
             <Tabs>
               {/* <TabList>
                 {menuTab.map((item, index) => (
@@ -637,7 +637,7 @@ const SelectNftModal = (props) => {
                           <div className="d-flex justify-content-between align-items-center" style={{marginBottom:'1rem'}}>
                             <h5 style={{fontSize:'3rem' , color:'grey'}}>{`${item.dataContent.length} items`}</h5>
                             <input   className="search-wallet" placeholder="Search" required="" />
-                            <button className="search search-submit d-flex align-items-center " style={{height:'38px'}}type="submit" value="submit">
+                            <button className="search search-submit d-flex align-items-center " style={{height:'38px',marginRight:'1rem', opacity:'0.4'}}type="submit" value="submit">
                                 <i className="icon-fl-search-filled" ></i>
                             </button>
                           </div>
@@ -662,6 +662,7 @@ const SelectNftModal = (props) => {
                                     }}
                                   className="col-xl-4 col-lg-4 col-md-6 col-12"
                                   key={index}
+                                  style={{cursor:'pointer'}}
                                 >
                                   <div className="sc-card-product explode ">
                                     <div className="card-media">

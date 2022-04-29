@@ -46,7 +46,7 @@ import iconnfttable from '../assets/images/icon/icon-nft-table.svg'
 import iconnfttableselect from '../assets/images/icon/icon-nft-table-select.svg'
 import spin from '../assets/images/icon/processing.gif'
 import AxelarSeaBridgeLogo from '../assets/images/logo/axelarsea-bridge-logo.svg'
-
+import qusetionMark from '../assets/images/icon/question-mark.svg'
 
 import HeaderStyle2 from "../components/header/HeaderStyle2";
 import { bridgeNft, CROSS_CHAIN_TOKEN_ADDRESS, fetchItem, listItem } from "../utils/api";
@@ -56,6 +56,8 @@ import { chainLabel, maskAddress } from "../utils/address";
 import one from "../../src/assets/images/icon/1.svg"
 import two from "../../src/assets/images/icon/2.svg"
 import Bridge from "../../src/assets/images/icon/bridgeandborder.svg"
+import stepOne from "../../src/assets/images/icon/stepone.svg"
+import stepTwo from "../../src/assets/images/icon/steptwo.svg"
 
 import SelectChainModal from "../components/layouts/SelectChainModal";
 import SelectChainDestinationModal from "../components/layouts/SelectChainDestinationModal";
@@ -478,21 +480,21 @@ const NFTBridge = () => {
                 </div>
               </div>
               <div className="d-flex justify-content-between " style={{marginTop:'15px'}}>
-                <div className="nftbridge-process-detail" style={{marginLeft:'7rem'}}>
-                 <img src={one} width='30px'/>
-                  <h6 className="bridge-text" style={{marginTop:'7px'}}>Select  your NFT</h6>
+                <div className="nftbridge-process-detail" >
+                 <img src={stepOne}/>
                 </div>
                 {/* <hr className="line-banner" style={{width:'242px' , border:'1px solid '}}/> */}
-                <div  className="nftbridge-process-detail" style={{marginRight:'5rem'}}>
-                  <img src={two} width='30px'/>
-                  <h6 className="bridge-text" style={{marginTop:'7px'}}>Select Destination chain</h6>
+                <div  className="nftbridge-process-detail" >
+                  <img src={stepTwo}/>
                 </div>
               </div>
               <div className="d-flex justify-content-center " style={{marginTop:'20px' , background:'#F8F8F8'}}> 
               {/* style={{marginTop:'15px',backgroundColor:'#F8F8F8',borderRadius:'10px'}} */}
 
-                <div className="bridge-text d-flex align-items-center bridge-select-box1">
-                  {myNftOn == null ? 'Source chain My NFT on'
+                <div className="bridge-text d-flex justify-content-center align-items-center bridge-select-box1" 
+                
+                >
+                  {myNftOn == null ? 'Source Chain'
                   :
                   <div className=" d-flex align-items-center bridge-select-box1">
                     <img src={myNftOnImg} style={{marginRight:'13px'}} width ='40px'/>
@@ -509,10 +511,10 @@ const NFTBridge = () => {
                       onClick={!isSelect ? () => setSelectChainDestinationShow(true) : undefined}
                 >
                   {destinationNftChain == null ?
-                    <div className="bridge-text d-flex align-items-center bridge-select-box2"
+                    <div className="bridge-text d-flex justify-content-center align-items-center bridge-select-box2"
                     
                     >
-                      Select Destination chain 
+                      Destination Chain 
                     </div>
 
                   :
@@ -539,7 +541,7 @@ const NFTBridge = () => {
                 {!processing && <span>Bridge & Transfer</span>}
               </button>
               </div>
-              <p className="d-flex justify-content-center">(The process will take around 5 min)</p>
+              <p className="d-flex justify-content-center">(This process will take around 5 mins)</p>
               <div className="nftbridge-process-detail" style={{marginTop:'5px'}}>
                 <p className="nftbridge-wallet-title">Send to address</p>
                 <div className="destiantion-wallet-box d-flex justify-content-center" style={{marginTop:'7px'}}>
