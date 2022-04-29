@@ -14,6 +14,9 @@ import fantomLogo from '../../assets/images/icon/fantom-logo.png'
 const CongratBridgeModal = (props) => {
 
     console.log(props.nftSelect)
+    const viewDetail =(chainId,collectionAddress,tokenId)=>{
+        window.open("/ItemDetails?chainId=" + chainId + "&collection=" + collectionAddress + "&tokenId=" + tokenId)
+    }
 
 
 
@@ -59,8 +62,13 @@ const CongratBridgeModal = (props) => {
                         <h6 style={{marginTop:'1.5rem'}}>Destination</h6>
                     </div>
                 </div>
+                
                 <div className="d-flex justify-content-center">
-                    <button>View Detail</button>
+                    
+
+                    
+                    <button onClick={() => viewDetail(props.nftSelect.chainId,props.nftSelect.collectionAddress,props.nftSelect.tokenId)}>View Detail</button>
+                    
                 </div>
             </div>
         </Modal>
