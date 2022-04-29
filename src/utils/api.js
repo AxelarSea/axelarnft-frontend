@@ -407,3 +407,13 @@ export async function bridgeNft(sourceChainId, destChainId, nftId, tokenId, to) 
 
   await refreshMetadata(destChainId, destNftAddress, tokenId);
 }
+
+export async function getDestinationNftAddress(sourceChainId, sourceNftAddress, destChainId) {
+  let account = (await web3.eth.getAccounts())[0];
+
+  let sourceBridgeController = new NftBridgeController(sourceChainId, account, true);
+  let nftId = await sourceBridgeController.address2nftId(sourceNftAddress);
+
+  let destBridgeController = new NftBridgeController(destChainId, account, true);
+  return await destBridgeController.nftId2address(nftId);
+}

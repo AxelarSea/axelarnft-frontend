@@ -595,6 +595,7 @@ const NFTBridge = () => {
         nftSelect={nftSelect}
         myNftOnImg={myNftOnImg}
         destinationNftChainImg={destinationNftChainImg}
+        destinationNftChainId={destinationNftChainId}
         collectionAddress={collectionAddress}
         tokenId={tokenId}
         chainId={chainId}
