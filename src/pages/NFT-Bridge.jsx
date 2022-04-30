@@ -47,6 +47,8 @@ import iconnfttableselect from '../assets/images/icon/icon-nft-table-select.svg'
 import spin from '../assets/images/icon/processing.gif'
 import AxelarSeaBridgeLogo from '../assets/images/logo/axelarsea-bridge-logo.svg'
 import qusetionMark from '../assets/images/icon/question-mark.svg'
+import menu from '../assets/images/icon/icon-menu.svg'
+
 
 import HeaderStyle2 from "../components/header/HeaderStyle2";
 import { bridgeNft, CROSS_CHAIN_TOKEN_ADDRESS, fetchItem, listItem } from "../utils/api";
@@ -514,7 +516,8 @@ const NFTBridge = () => {
                     <div className="bridge-text d-flex justify-content-center align-items-center bridge-select-box2"
                     
                     >
-                      Destination Chain 
+                      <a style={{marginRight:'1rem', marginLeft:'1rem'}}>Destination Chain</a>
+                      <img className="p-2" src={menu} alt=""/> 
                     </div>
 
                   :

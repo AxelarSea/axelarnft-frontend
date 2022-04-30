@@ -31,7 +31,8 @@ const CongratBridgeModal = (props) => {
         "&collection=" +
         destAddress +
         "&tokenId=" +
-        tokenId
+        tokenId,
+        "_self"
     );
   };
 

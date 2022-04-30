@@ -543,6 +543,7 @@ const SelectNftModal = (props) => {
       collectionAddress: x.collection.contractAddress,
       chainId: x.collection.chainId,
       listAmount: x.listAmount,
+      
     }));
   }
 
@@ -636,10 +637,12 @@ const SelectNftModal = (props) => {
                         >
                           <div className="d-flex justify-content-between align-items-center" style={{marginBottom:'1rem'}}>
                             <h5 style={{fontSize:'3rem' , color:'grey'}}>{`${item.dataContent.length} items`}</h5>
-                            <input   className="search-wallet" placeholder="Search" required="" />
-                            <button className="search search-submit d-flex align-items-center " style={{height:'38px',marginRight:'1rem', opacity:'0.4'}}type="submit" value="submit">
-                                <i className="icon-fl-search-filled" ></i>
-                            </button>
+                            <div style={{paddingLeft:'2rem'}}>
+                              <input   className="search-wallet" placeholder="Search" required="" />
+                              <button className="search search-submit d-flex align-items-center " style={{height:'38px',marginRight:'1rem', opacity:'0.4'}}type="submit" value="submit">
+                                  <i className="icon-fl-search-filled" ></i>
+                              </button>
+                            </div>
                           </div>
                           
 
@@ -720,16 +723,16 @@ const SelectNftModal = (props) => {
 
                                       </div>
                                     </div>
-                                    <div className="card-bottom style-explode">
+                                    {/* <div className="card-bottom style-explode">
                                       <div className="Price">
                                         <span>Price</span>
                                         <div className="Price-details">
                                           <h5>{data.price}</h5>
-                                          {/* <span>= {data.PriceChange}</span> */}
+                                          <span>= {data.PriceChange}</span>
                                         </div>
                                       </div>
-                                      {/* <Link to="/activity-01" className="view-history reload">View History</Link> */}
-                                    </div>
+                                      <Link to="/activity-01" className="view-history reload">View History</Link>
+                                    </div> */}
 
                                   </div>
                                 </div>
