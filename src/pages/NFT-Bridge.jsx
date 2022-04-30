@@ -516,7 +516,7 @@ const NFTBridge = () => {
                     <div className="bridge-text d-flex justify-content-end align-items-center bridge-select-box2"
                     style={{paddingRight:'2rem'}}
                     >
-                      <a className={!isSelect ? "animated-text" : null}
+                      <a className={!isSelect ? "destination-chain-title" : null}
                       style={{fontSize:'16px' ,marginRight:'-2.1rem', marginLeft:'1rem'}}
                       >
                         Destination Chain
