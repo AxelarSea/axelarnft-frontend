@@ -617,7 +617,7 @@ const SelectNftModal = (props) => {
     <Modal show={props.onShow} onHide={props.onHide} size="xl">
         <Modal.Header closeButton></Modal.Header>
         <div className="modal-body space-y-20 pd-80">
-            <h3 className="nftbridge-header-modal">Select NFT Want to Bridge</h3>
+            <h3 className="nftbridge-header-modal">Select an NFT to Bridge</h3>
             <p className="d-flex justify-content-center">(Bridging function is not available for listed NFTs)</p>
             <Tabs>
               {/* <TabList>
