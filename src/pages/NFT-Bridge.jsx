@@ -513,11 +513,12 @@ const NFTBridge = () => {
                       onClick={!isSelect ? () => setSelectChainDestinationShow(true) : undefined}
                 >
                   {destinationNftChain == null ?
-                    <div className="bridge-text d-flex justify-content-center align-items-center bridge-select-box2"
-                    
+                    <div className="bridge-text d-flex justify-content-end align-items-center bridge-select-box2"
+                    style={{paddingRight:'2rem'}}
                     >
-                      <a style={{marginRight:'1rem', marginLeft:'1rem'}}>Destination Chain</a>
-                      <img className="p-2" src={menu} alt=""/> 
+                      <a className="animated-text" style={{fontSize:'16px' ,marginRight:'-2.1rem', marginLeft:'1rem'}}>Destination Chain
+                      <img style={{marginLeft:'4.5rem'}} src={menu} alt=""/>
+                      </a>
                     </div>
 
                   :
