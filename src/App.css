@@ -514,6 +514,27 @@ line-height: 22px;
 cursor: pointer;
 }
 
+.hov.hover-ecfect, .destination-chain-title {
+  background: linear-gradient(to right, #ff4f0d,#7ab795,#ff4f0d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200% 200%;
+  animation: rainbow 3s ease-in-out infinite;
+  color: var(--primary-color2);
+  transition: color .2s ease-in-out;
+}
+
+.destination-chain-title {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-size: 21px;
+  font-weight: 1000;
+  line-height: 22px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
 .nft-text-l {
   font-size: 14px;
   margin-bottom: 0px;
