@@ -83,14 +83,14 @@ const TestnetCheck = (props) => {
         <Modal show={props.onShow} onHide={props.onHide}>
       <Modal.Header closeButton></Modal.Header>
       <div className="modal-body space-y-20 pd-40">
-      <h5>Please enter your MetaMask wallet address:</h5>
+      <h5>Your connected MetaMask wallet address</h5>
       <form className="search-form" onSubmit={e => walletSubmit(e)}>         
        <input onChange={e =>handleWalletChange(e)} value={wallet} className="search-wallet" placeholder="Paste your MetaMask address and Enter." required="" />
        <button className="search search-submit d-flex align-items-center " style={{height:'38px'}}type="submit" value="submit">
         <i className="icon-fl-search-filled" ></i>
       </button>
       </form>
-        <h5 className="testnetquest">Quest: Mint NFTs on any three chains out of five supported EVM chains.</h5>
+        <h5 className="testnetquest">Mint NFTs on the five supported EVM chains.</h5>
           <ul className="questlist">
             <li className={data.mint_3 > 0 ? 'green' : 'questlist-text'}><img  src={checkcircle} width='20px' style={{marginRight:'1rem'}}/>Minted NFT on Ethereum Testnet (Ropsten)</li>
             <li className={data.mint_43113 > 0 ? 'green ' : 'questlist-text'}><img src={checkcircle} width='20px' style={{marginRight:'1rem'}}/>Minted NFT on Avalanche Fuji Testnet</li>
@@ -98,16 +98,17 @@ const TestnetCheck = (props) => {
             <li className={data.mint_1287 > 0 ? 'green ' : 'questlist-text'}><img src={checkcircle} width='20px' style={{marginRight:'1rem'}}/>Minted NFT on Moonbeam Alpha Testnet</li>
             <li className={data.mint_80001 > 0 ? 'green ' : 'questlist-text'}><img src={checkcircle} width='20px' style={{marginRight:'1rem'}}/>Minted NFT on Polygon Mumbai Testnet</li>
           </ul>
-        <h5 className="testnetquest">Quest : Place NFT on sale on at least one of the five supported EVM chain</h5>
+        <h5 className="testnetquest">Place an NFT on sale</h5>
           <ul className="questlist">
             <li className={data.list_3 > 0 ? 'green' : data.list_1287 > 0 ?  'green' : data.list_4002 > 0 ? 'green' : data.list_43113 > 0 ? 'green' : data.list_80001 > 0 ? 'green' : 'questlist-text'}><img src={checkcircle} width='20px' style={{marginRight:'1rem'}}/>Placed NFT on sale at least once.</li>
           </ul>
-        <h5 className="testnetquest">Quest: Bought at least one NFT on AxelarSea (Optional)</h5>
+        <h5 className="testnetquest">Buy an NFT on AxelarSea</h5>
           <ul className="questlist">
             <li className={data.buy_3 > 0 ? 'green' : data.buy_1287 > 0 ?  'green' : data.buy_4002 > 0 ? 'green' : data.buy_43113 > 0 ? 'green' : data.buy_80001 > 0 ? 'green' : 'questlist-text'}><img src={tool} width='20px' style={{marginRight:'1rem'}}/>Bought an NFT using UST or LUNA</li>
           </ul>
+          <p className="center">Tutorial: How to place a sale - <a href="https://youtu.be/sysSofNXAPk"  target="_blank">here</a></p>
+          <p className="center" style={{marginTop:'0.5rem'}}>Tutorial: How to make a buy - <a href="https://youtu.be/1Bh89jYzy-8" target="_blank">here</a></p>
         </div>
-
       </Modal>
     )
 }
