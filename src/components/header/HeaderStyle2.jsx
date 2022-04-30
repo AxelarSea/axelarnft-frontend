@@ -150,8 +150,8 @@ const HeaderStyle2 = () => {
                                 </nav>
                                 <div className="flat-search-btn flex">
                                     <div className='testnetcheck d-flex justify-content-between'> 
-                                        <span onClick={() => setModalShow(true)}>
-                                        Testnet Check
+                                        <span className='animated-text'  onClick={() => setModalShow(true)}>
+                                        Live on Testnet
                                       </span>
                                         <span onClick={() => setFaqModalShow(true)} style={{marginLeft:'3rem'}}>
                                         FAQ
