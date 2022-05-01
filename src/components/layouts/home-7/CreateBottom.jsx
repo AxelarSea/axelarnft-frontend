@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import icon1 from '../../../assets/images/icon/Wallet.png'
-import icon2 from '../../../assets/images/icon/Category.png'
-import icon3 from '../../../assets/images/icon/Image2.png'
-import icon4 from '../../../assets/images/icon/Bookmark.png'
+import icon1 from '../../../assets/images/icon/feature-1.svg'
+import icon2 from '../../../assets/images/icon/feature-4.svg'
+import icon3 from '../../../assets/images/icon/feature-5.svg'
+import icon4 from '../../../assets/images/icon/feature-6.svg'
+import icon5 from '../../../assets/images/icon/feature-7.svg'
+import icon6 from '../../../assets/images/icon/feature-8.svg'
 import axelarlogo from '../../../assets/images/logo/axelar.svg'
 import cd from '../../../assets/images/logo/ContributionDAO.svg'
 import LogoSupport from '../../../assets/images/logo/Logo-Support.svg';
@@ -20,38 +22,38 @@ const Create = () => {
         {
             title: "Purchase From Any Chain",
             description: "Buyers can purchase an NFT with any token from any chain. They are no longer required to manually move their asset across chains. Simply click buy, and AxelarSea will take care of the rest!",
-            icon : icon4,
-            colorbg : "icon-color1"
+            icon : icon1,
+            colorbg : ""
         },
         {
             title: "Manage Your NFTs Sales",
             description: "Check all your NFT sales from multiple chains. Make price adjustments, reconfigures or cancels the sale from a single place. You choose the chain where you want to receive your payment!",
-            icon : icon4,
-            colorbg : "icon-color2",
+            icon : icon2,
+            colorbg : "",
         },
         {
             title: "Bridge NFTs while maintaining metadata",
             description: "AxelarSea's NFT bridge offers a novel solution for preserving metadata of bridged NFT, such as collection id and other stats. This enables DApps on the destination chain to trace it back and verify the authenticity of the NFT on the source chain.",
-            icon : icon4,
-            colorbg : "icon-color2",
+            icon : icon3,
+            colorbg : "",
         },
         {
             title: "NFT x Decentralized Applications",
             description: "Due to AxelarSea Bridge's metadata-preserving capabilities, NFT can be fully used in other industries such as DeFi and GameFi. Bridged NFTs, for example, can be used as collateral, whereas NFT game characters can move freely from one chain to the next.",
             icon : icon4,
-            colorbg : "icon-color2",
+            colorbg : "",
         },
         {
             title: "Lower Trading Fees",
             description: "Trading and gas fees add up over time for seasoned traders, diminishing profits. NFTs can now be bridged to a chain with lower fees while maintaining the same collection.",
-            icon : icon4,
-            colorbg : "icon-color2",
+            icon : icon5,
+            colorbg : "",
         },
         {
             title: "Cross-Chain Collection Verification",
             description: "Wondering if the collection you're about to buy is authentic? No longer! The NFT bridge from AxelarSea allows NFT collections to be verified across multiple chains at the same time, eliminating all fakes",
-            icon : icon4,
-            colorbg : "icon-color2",
+            icon : icon6,
+            colorbg : "",
         },
     ]
     return (
