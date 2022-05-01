@@ -236,6 +236,7 @@ const NFTBridge = () => {
     setWalletAdress(filterItem[0].owner)
     console.log(filterItem[0])
     setIsSelect(false)
+    setDestinationNftChainImg(qusetionMark)
 
     if(filterItem[0].chainId === 43113){
       setMyNftOn('Avalanche')
@@ -600,7 +601,16 @@ const NFTBridge = () => {
       />
       <CongratBridgeModal 
         onShow={congratBridgeModalShow}
-        onHide={() => setCongratBridgeModalShow(false)}
+        onHide={() => {
+                  setCongratBridgeModalShow(false)
+                  setNftSelect(null)
+                  setDestinationNftChainImg(null)
+                  setDestinationNftChain(null)
+                  setMyNftOn(null)
+                  setMyNftOnImg(null)
+                  setIsSelect(true)
+                }
+            }
         nftSelect={nftSelect}
         myNftOnImg={myNftOnImg}
         destinationNftChainImg={destinationNftChainImg}
