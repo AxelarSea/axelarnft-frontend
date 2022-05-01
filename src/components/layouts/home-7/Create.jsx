@@ -44,11 +44,23 @@ const Create = () => {
             icon : icon4,
             colorbg : "icon-color4"
         },
+        {
+            title: "Manage Your Sales",
+            description: "Check all your NFT sales from multiple chains. Make Price adjustments, reconfigures or cancels the sale from a single place",
+            icon : icon4,
+            colorbg : "icon-color4"
+        },
+        {
+            title: "Manage Your Sales",
+            description: "Check all your NFT sales from multiple chains. Make Price adjustments, reconfigures or cancels the sale from a single place",
+            icon : icon4,
+            colorbg : "icon-color4"
+        },
     ]
     return (
         <section className=" tf-box-icon live-auctions tf-section style7 bg-style">
         <div className="wrap-heading2 themesflat-container">
-            <div className="row" style={{paddingTop:'6rem'}}>
+            <div className="column justify-content-center" style={{paddingTop:'6rem'}}>
                 <div className="col-xl-4 col-lg-12 col-md-12">
                     <div className="heading-live-auctions style2 mg-t-3 mg-bt-22">
                         <h3 className="heading-fill mg-bt-16">One-stop Interoperable NFT Marketplace</h3>
