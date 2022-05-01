@@ -76,9 +76,9 @@ const SelectChainDestinationModal = (props) => {
                 <li className="list-group-item list-group-item-action justify-content-between" style={{border:'none', cursor:'pointer'}} onClick={() => handleChangeChain(item.topic, item.chainId, item.img ,index)} >
                     <div className="d-flex align-items-center justify-content-between">
                             <div className="d-flex align-items-center justify-content-center">
-                                <img src={item.img} alt="" width="25" height="25"/>
+                                <img src={item.img} alt="" width="40px" height="40px"/>
                                 <div className="d-flex flex-column  justify-content-center" style={{marginLeft:'3rem'}}>
-                                    <h5 style={{fontSize:'16px'}}>{item.topic}</h5>
+                                    <h5 style={{fontSize:'18px'}}>{item.topic}</h5>
                                     <p style={{color:'grey' , fontSize:'12px'}}>{item.detail}</p>
                                 </div>
                             </div>
@@ -90,9 +90,9 @@ const SelectChainDestinationModal = (props) => {
                 <li className="list-group-item list-group-item-action justify-content-between" style={{border:'none', opacity:'0.6',cursor:'not-allowed'}}>
                     <div className="d-flex align-items-center justify-content-between">
                             <div className="d-flex align-items-center justify-content-center">
-                                <img src={ethLogo} alt="" width="25" height="25"/>
+                                <img src={ethLogo} alt="" width="40px" height="40px"/>
                                 <div className="d-flex flex-column  justify-content-center" style={{marginLeft:'3rem'}}>
-                                    <h5 style={{fontSize:'16px'}}>ETH (Currently not supported)</h5>
+                                    <h5 style={{fontSize:'18px'}}>ETH (Currently not supported)</h5>
                                 </div>
                             </div>
                     </div>
@@ -100,9 +100,9 @@ const SelectChainDestinationModal = (props) => {
                 <li className="list-group-item list-group-item-action justify-content-between" style={{border:'none', opacity:'0.6', cursor:'not-allowed'}}>
                     <div className="d-flex align-items-center justify-content-between">
                             <div className="d-flex align-items-center justify-content-center">
-                                <img src={moonbeamLogo} alt="" width="25" height="25"/>
+                                <img src={moonbeamLogo} alt="" width="40px" height="40px"/>
                                 <div className="d-flex flex-column  justify-content-center" style={{marginLeft:'3rem'}}>
-                                    <h5 style={{fontSize:'16px'}}>Moonbeam (Currently not supported)</h5>
+                                    <h5 style={{fontSize:'18px'}}>Moonbeam (Currently not supported)</h5>
                                 </div>
                             </div>
                     </div>
