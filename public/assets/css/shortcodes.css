@@ -2902,7 +2902,8 @@ section.today-picks {
     margin-bottom: 50px;
 }
 .tf-box-icon.create{
-    padding: 36px 0 79px;
+    padding: 36px 0 13px;
+    background: white;
 }
 .home-2 .tf-box-icon.create {
     padding: 72px 0 82px;
