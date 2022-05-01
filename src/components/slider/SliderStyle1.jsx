@@ -90,7 +90,7 @@ const SliderItem = props => {
                                 <div className="content">
                                     <h1 className="heading">{props.item.title_1}</h1>
                                     <h1 className="heading"><span className='fill'>{props.item.title_2}</span></h1>	
-                                    <h2 className="heading mb-style"><span className="">{props.item.title_3}</span></h2>
+                                    <h2 className="heading mb-style"><span style={{fontSize:'30px'}}>{props.item.title_3}</span></h2>
                                     <p className="sub-heading">{props.item.description}
                                     </p>
                                     <div className="flat-bt-slider flex style2">
