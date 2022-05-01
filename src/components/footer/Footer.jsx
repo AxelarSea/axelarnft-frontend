@@ -84,7 +84,7 @@ const Footer = () => {
         //     link: "#"
         // },
         {
-            title: "axelarsea@gmail.com",
+            title: "info@axelarsea.com",
             link: "#"
         },
     ]
