@@ -98,7 +98,7 @@ const NFTBridge = () => {
 
   const [wallet , setWallet] = useState('')
 
-  const [walletAdress, setwalletAddress] = useState('')
+  const [walletAddress, setwalletAddress] = useState('')
 
   const handleWalletChange = e => {
     setwalletAddress(e.target.value)
