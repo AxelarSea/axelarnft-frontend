@@ -48,6 +48,7 @@ import spin from '../assets/images/icon/processing.gif'
 import AxelarSeaBridgeLogo from '../assets/images/logo/axelarsea-bridge-logo.svg'
 import qusetionMark from '../assets/images/icon/question-mark.svg'
 import menu from '../assets/images/icon/icon-menu.svg'
+import processText from '../assets/images/icon/processing-text.gif'
 
 
 import HeaderStyle2 from "../components/header/HeaderStyle2";
@@ -545,7 +546,7 @@ const NFTBridge = () => {
                 disabled={!destinationNftChainId} 
                 onClick={bridge}> 
                   
-                {processing && <span><img src={spin} alt="processing" style={{marginRight:'5px'}} width='25px'/>Processing</span>}
+                {processing && <span><img src={spin} alt="processing" style={{marginRight:'5px'}} width='25px'/><img src={processText} alt="processing"/></span>}
                 {!processing && <span>Bridge & Transfer</span>}
               </button>
               </div>
