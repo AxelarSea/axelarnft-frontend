@@ -8,34 +8,28 @@ import icon4 from '../../../assets/images/icon/Bookmark.png'
 const Create = () => {
     const data = [
         {
-            title: "Set Up Your Wallet",
-            description: "Once you’ve set up your wallet of choice, connect it to OpenSeaby clicking the NFT Marketplacein the top right corner.",
+            title: "One-Click Payment Gateway",
+            description: "Both sides of NFT trades - making payment and receiving compensation - can be completed in a single step from any chain using any token.",
             icon : icon1,
             colorbg : "icon-color1"
         },
         {
-            title: "Create Your Collection",
-            description: "Click Create and set up your collection. Add social links, a description, profile & banner images, and set a secondary sales fee.",
-            icon : icon2,
+            title: "One-stop NFT bazaar",
+            description: "A single place where NFTs from all chains can be sold, resulting in a wide range of options for shoppers.",
+            icon : icon4,
             colorbg : "icon-color2",
         },
         {
-            title: "Add Your NFTs",
-            description: "Upload your work (image, video, audio, or 3D art), add a title and description, and customize your NFTs with properties, stats",
+            title: "NFT Bridge",
+            description: "Bridge NFT to unlock its potential by combining its utilization with DeFi & GameFi or simply enjoying lower trading fees.",
             icon : icon3,
             colorbg : "icon-color3",
-        },
-        {
-            title: "List Them For Sale",
-            description: "Choose between auctions, fixed-Price listings, and declining-Price listings. You choose how you want to sell your NFTs!",
-            icon : icon4,
-            colorbg : "icon-color4",
         },
     ]
     return (
         <section className="tf-box-icon create tf-section bg-home-3">
-            <div className="themesflat-container">
-                <div className="row">
+            <div className="themesflat-container" style={{marginBottom:'4rem'}}>
+                <div className="row d-flex justify-content-center">
                     {
                         data.map((item , index) => (
                             <CreateItem key={index} item={item} />
@@ -48,7 +42,7 @@ const Create = () => {
 }
 
 const CreateItem = props => (
-    <div className='col-lg-3 col-md-6 col-12'>
+    <div className='col-lg-4 col-md-6 col-12'>
         <div className="sc-box-icon">
         <div className="image center">
             <div className={`icon-create ${props.item.colorbg}`}>
