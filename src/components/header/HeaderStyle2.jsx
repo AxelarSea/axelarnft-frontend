@@ -86,7 +86,7 @@ const HeaderStyle2 = () => {
                                         <Link to="/Home" rel="home" className="main-logo" style={{marginRight:'1rem'}}>
                                             <img   id="logo_header" src={logosvg} alt="nft-gaming" />
                                         </Link>
-                                        <img src={logoGif} alt=""  width="70px"  onClick={() => setModalShow(true)}/>
+                                        <img src={logoGif} alt=""  width="70px"  onClick={() => setModalShow(true)} style={{cursor:'pointer', padding:'5px'}}/>
                                     </div>
                                 </div>
                                 <div className={`mobile-button ${btnToggleActive ? 'active' : ''}`} onClick={menuToggle}>
@@ -145,7 +145,7 @@ const HeaderStyle2 = () => {
                                             <a href="https://axelarsea.gitbook.io/axelarsea-docs/" target="_blank">Docs</a>
                                         </li>
                                         <li className="menu-item" >
-                                        <a onClick={() => setFaqModalShow(true)}>FAQ</a>
+                                        <a onClick={() => setFaqModalShow(true)} style={{cursor:'pointer'}}>FAQ</a>
                                         </li>
                                         {/* <li className="menu-item">
                                         <a className='liveontestnet'  onClick={() => setModalShow(true)}>Live on Testnet</a>
