@@ -118,7 +118,7 @@ const HeaderStyle2 = () => {
                                     </form>
                                 </div> */}
                                 <nav id="main-nav" className={`main-nav ${menuLeftActive ? 'active' : ''}`}    >
-                                    <ul id="menu-primary-menu" className="menu" style={{marginLeft:'5rem'}}>
+                                    <ul id="menu-primary-menu" className="menu">
                                         {
                                             menus.map((data,index) => (
                                                 <li key={index} onClick={()=> handleOnClick(index)} className={`menu-item ${data.namesub ? 'menu-item-has-children' : '' } ${activeIndex === index ? 'active' : ''} ` }   >
