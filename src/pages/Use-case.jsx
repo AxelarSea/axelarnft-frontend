@@ -33,7 +33,6 @@ import imga8 from "../assets/images/avatar/avt-3.jpg";
 import imgCollection8 from "../assets/images/avatar/avt-18.jpg";
 import ethwallet from '../assets/images/icon/ethwallet.svg'
 import terrawallet from '../assets/images/icon/terrawallet.svg'
-
 import AlunaLogo from "../assets/images/icon/Luna.png";
 import AustLogo from "../assets/images/icon/UST.png";
 import ethLogo from '../assets/images/icon/eth-logo.svg'
@@ -49,18 +48,18 @@ import AxelarSeaBridgeLogo from '../assets/images/logo/axelarsea-bridge-logo.svg
 import qusetionMark from '../assets/images/icon/question-mark.svg'
 import menu from '../assets/images/icon/icon-menu.svg'
 import processText from '../assets/images/icon/processing-text.gif'
-
+import bgGamrfi from "../assets/images/backgroup-secsion/bg-gamefi.png"
+import greenCheck from '../assets/images/icon/green-check.svg'
+import check from '../assets/images/icon/check.svg'
 
 import HeaderStyle2 from "../components/header/HeaderStyle2";
 import { bridgeNft, CROSS_CHAIN_TOKEN_ADDRESS, fetchItem, listItem } from "../utils/api";
 import web3 from "../hooks/web3";
 import { chainLabel, maskAddress } from "../utils/address";
 
-import one from "../../src/assets/images/icon/1.svg"
-import two from "../../src/assets/images/icon/2.svg"
-import Bridge from "../../src/assets/images/icon/bridgeandborder.svg"
-import stepOne from "../../src/assets/images/icon/stepone.svg"
-import stepTwo from "../../src/assets/images/icon/steptwo.svg"
+import atk from "../../src/assets/images/icon/icon-atk.svg"
+import dex from "../../src/assets/images/icon/icon-dex.svg"
+import agi from "../../src/assets/images/icon/icon-agi.svg"
 
 import SelectChainModal from "../components/layouts/SelectChainModal";
 import SelectChainDestinationModal from "../components/layouts/SelectChainDestinationModal";
@@ -372,7 +371,6 @@ const NFTBridge = () => {
     try {
       setProcessing(true);
 
-      // console.log(nftSelect.chainId, destinationNftChainId, nftSelect.nftId, nftSelect.tokenId, nftSelect.owner)
       await bridgeNft(nftSelect.chainId, destinationNftChainId, nftSelect.nftId, nftSelect.tokenId, walletAddress);
   
       Swal.fire(
@@ -411,162 +409,132 @@ const NFTBridge = () => {
         <div className="themesflat-container-bridge">
         <div className="page-title-heading"></div>
         <div className="nft-bridge-section">
-          <div className="nftbridge-section">
-            {/* <h1 className="nftbridge-header">NFT Bridge</h1> */}
-            <img className="bridge-head-logo" src={AxelarSeaBridgeLogo} alt="AxelarSeaLogo" width='500rem'/>
-            <div className="nftbridge-box pd-20">
-              <div className="nftbridge-card-section">
-                <div className="d-flex flex-column align-items-center">
-                <div className="nftbridge-card d-flex justify-content-center" onClick={() => setSelectNftModalShow(true)} style={{cursor:'pointer'}}>
+          <div className="usecase-section">
+            <h1 style={{marginLeft:'4rem'}}>Use Case for NFT Bridge </h1>
+            <div className="d-flex" style={{paddingTop:'4rem'}}>
+              <div className="mb-auto p-2">
+                <div className="usecase-box d-flex justify-content-between align-items-center pd-20">
+                  <div>
+                    <h6 className="d-flex align-items-center" style={{fontSize:'18px'}}>Quest : play AxelarSea infinity</h6>
+                    <p style={{fontSize:'14px', lineHeight:'17px', inlineSize:'283px', marginTop:'8px'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  </div>
+                  <div>
+                    <img src={check} alt="" />
+                  </div>
+                </div>
+                <div className="usecase-box d-flex justify-content-between align-items-center pd-20">
+                  <div>
+                    <h6 className="d-flex align-items-center" style={{fontSize:'18px'}}>Quest : Use NFT Staking</h6>
+                    <p style={{fontSize:'14px', lineHeight:'17px', inlineSize:'283px', marginTop:'8px'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                  </div>
+                  <div>
+                    <img src={check} alt="" />
+                  </div>
+                </div>
+                <div className="usecase-box d-flex justify-content-center">
+                  <h6 className="d-flex align-items-center" style={{opacity:'0.6'}}>coming soon</h6>
+                </div>
+                <div className="usecase-box d-flex justify-content-center">
+                  <h6 className="d-flex align-items-center" style={{opacity:'0.6'}}>coming soon</h6>
+                </div>
+              </div>
+              <div className="d-flex align-items-start flex-column">
+                <div className="d-flex align-items-cente justify-content-between">
+                  <div>
+                    <h2 className="heading-color-animated align-items-start" >AxelarSea infinity</h2>
+                    <h6 style={{marginTop:'12px'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h6>
+                  </div>
+                  <Link to="/nft-bridge">
+                  <button 
+                  style={{marginLeft:'15rem'}}
+                    type="submit" >
+                    <span>NFT Bridge</span>
+                  </button>
+                  </Link>
+                </div>
+                <div className="gamefi-section" style={{marginTop:'27px'}}>
+                <div className="nftgamefi-card d-flex justify-content-center" onClick={() => setSelectNftModalShow(true)} style={{cursor:'pointer'}}>
                   {nftSelect == null 
                   ?
                    <img className="img-chain-select" src={iconnfttableselect} width='128px'/> 
                    : 
-                   <div className="nftbridge-card pd-10">
-                      <div className="nftbridge-nft-img-box d-flex justify-content-center">
-                        <img className="nftbridge-nft-img" src={nftSelect.img} alt="AxelarSea" width='200px'/>
-                        {/* style={{height:'200px'}} */}
+                   <div className="pd-10">
+                      <div className="nftgamefi-card-img-box d-flex justify-content-center">
+                        <img className="nftgamefi-card-img" src={nftSelect.img} alt="AxelarSea" width='155px'/>
                       </div>
-                      <div className="card-title mg-bt-6" style={{marginTop:'10px'}}>
-                        <h5 className="nft-text-l" >{nftSelect.title}</h5>
+                      <div className="card-title mg-bt-6" style={{marginTop:'9px'}}>
+                        <h5 className="nft-text-l" style={{fontSize:'9px'}}>{nftSelect.title}</h5>
                       </div>
-                      <div className="meta-info d-flex justify-content-between align-items-center">
-                          <div className="author d-flex align-items-center">
-                            <div className="avatar">
-                              <img className="avt-img" src={avt} alt="AxelarSea" width="30px"/>
-                            </div>
-                            <div className="info" style={{marginLeft:'1rem'}}>
-                              <span className="nft-text-s">Owned By</span>
-                              <h6 className="nft-text-m">{maskAddress(nftSelect.nameAuthor)}</h6>
-                            </div>
-                          </div>
-                          <div className="chain-icon">
-                            <img src={nftSelect.tags === 'ETH' ? ethLogo : nftSelect.tags === 'AVAX' ? avaxLogo : nftSelect.tags === 'FTM' ? fantomLogo : nftSelect.tags === 'MOONBEAM' ? moonbeamLogo : nftSelect.tags === 'POLYGON' ? polygonLogo : ''} alt="" width="25px"/>
-                          </div>
-                        </div>
-                      </div>
-                  }
-                </div>
-                  <img src={stepOne} style={{marginTop:'2rem'}}/>
-                </div>
-                <img className="bridge-animation" src={bridgeimg} style={{marginTop:'3.5rem'}}/>
-                <div className="d-flex flex-column align-items-center">
-                <div className="nftbridge-card d-flex justify-content-center">
-                  {nftSelect == null
-                  ?
-                  <img src={iconnfttable} width='70px'/>
-                  :
-                  <div className="nftbridge-card pd-10">
-                      <div className="nftbridge-nft-img-box d-flex justify-content-center">
-                        <img className="nftbridge-nft-img" src={nftSelect.img} alt="AxelarSea" width='200px'/>
-                        {/* style={{height:'200px'}} */}
-                      </div>
-                      <div className="card-title mg-bt-6" style={{marginTop:'10px'}}>
-                        <h5 className="nft-text-l">{nftSelect.title}</h5>
-                      </div>
-
                       <div className="meta-info d-flex justify-content-between align-items-center">
                         <div className="author d-flex align-items-center">
                           <div className="avatar">
                             <img className="avt-img" src={avt} alt="AxelarSea" width="30px"/>
                           </div>
                           <div className="info" style={{marginLeft:'1rem'}}>
-                            <span className="nft-text-s">Owned By</span>
-                            <h6 className="nft-text-m">{maskAddress(nftSelect.nameAuthor)}</h6>
+                            <span className="nft-text-s"style={{fontSize:'8px'}}>Owned By</span>
+                            <h6 className="nft-text-m"style={{fontSize:'8px'}}>{maskAddress(nftSelect.nameAuthor)}</h6>
                           </div>
                         </div>
-                        <div className="">
-                          <img className="chain-icon" src={destinationNftChainImg} alt="" width="25px"/>
+                        <div className="chain-icon">
+                          <img src={nftSelect.tags === 'ETH' ? ethLogo : nftSelect.tags === 'AVAX' ? avaxLogo : nftSelect.tags === 'FTM' ? fantomLogo : nftSelect.tags === 'MOONBEAM' ? moonbeamLogo : nftSelect.tags === 'POLYGON' ? polygonLogo : ''} alt="" width="25px"/>
                         </div>
                       </div>
                     </div>
                   }
                 </div>
-                  <img src={stepTwo} style={{marginTop:'2rem'}}/>
-                </div>
-              </div>
-              {/* <div className="d-flex justify-content-between " style={{marginTop:'15px'}}>
-                <div className="nftbridge-process-detail" >
-                 <img src={stepOne}/>
-                </div>
-                <hr className="line-banner" style={{width:'242px' , border:'1px solid '}}/>
-                <div  className="nftbridge-process-detail" >
-                  <img src={stepTwo}/>
-                </div>
-              </div> */}
-              <div className="d-flex justify-content-center " style={{marginTop:'20px' , background:'#F8F8F8'}}> 
-              {/* style={{marginTop:'15px',backgroundColor:'#F8F8F8',borderRadius:'10px'}} */}
-
-                <div className="bridge-text d-flex justify-content-center align-items-center bridge-select-box1" 
-                
-                >
-                  {myNftOn == null ? 'Source Chain'
-                  :
-                  <div className=" d-flex align-items-center bridge-select-box1">
-                    <img src={myNftOnImg} style={{marginRight:'13px'}} width ='40px'/>
-                    <div >
-                      <h5>{myNftOn}</h5>
-                      <p><small>Source chain</small></p>
+                <div className="gamefi-box-detail pd-20">
+                  <div className="mb-auto d-flex justify-content-between">
+                    <div className="p-2">
+                      <h5>MG_AMDARAIS</h5>
+                    </div>
+                    <div className="d-flex align-items-center">
+                      <h5>AxelarMETA #2</h5>
+                      <img src={avaxLogo} alt="" width="32px" style={{marginLeft:'13px'}}/>
                     </div>
                   </div>
-                  }
-                  
-                </div>
-                  <img className="bridge-icon" src={Bridge} alt="" />
-                <div  className="d-flex align-items-center bridge-select-box2"
-                      onClick={!isSelect ? () => setSelectChainDestinationShow(true) : undefined}
-                >
-                  {destinationNftChain == null ?
-                    <div className="bridge-text d-flex justify-content-end align-items-center bridge-select-box2"
-                    style={{paddingRight:'2rem'}}
-                    >
-                      <a className={!isSelect ? "destination-chain-title" : null}
-                      style={{fontSize:'16px' ,marginRight:'-2.1rem', marginLeft:'1rem'}}
-                      >
-                        Destination Chain
-                      <img style={{marginLeft:'4.5rem'}} src={menu} alt=""/>
-                      </a>
-                    </div>
-
-                  :
-                    <div className="d-flex align-items-center bridge-select-box">
-                      <img src={destinationNftChainImg}  style={{marginRight:'13px'}} width ='40px'/>
-                        <div>
-                        <h5>{destinationNftChain}</h5>
-                        <p><small>Destination chain</small></p>
+                  <div className="d-flex justify-content-between">
+                    <div className="hero-detail-box pd-20">
+                      <div className="d-flex align-items-center justify-content-between">
+                        <img src={atk} alt="" />
+                        <h6>Atk</h6>
+                        <h5>93</h5>
+                      </div>
+                      <div className="d-flex align-items-center justify-content-between" style={{marginTop:'0.7rem'}}>
+                        <img src={dex} alt="" />
+                        <h6>Dex</h6>
+                        <h5>96</h5>
+                      </div>
+                      <div className="d-flex align-items-center justify-content-between" style={{marginTop:'0.7rem'}}>
+                        <img src={agi} alt="" />
+                        <h6>Agi</h6>
+                        <h5>87</h5>
                       </div>
                     </div>
-                  }
-                  
+                    <button
+                      style={{padding:'10px 25px', marginTop:'6rem', width:'200px', height:'45px'}} 
+                      type="submit" >
+                      <span>Start Fight</span>
+                    </button>
+                    <div className="hero-detail-box pd-20">
+                      <div className="d-flex align-items-center justify-content-between">
+                        <img src={atk} alt="" />
+                        <h6>Atk</h6>
+                        <h5>93</h5>
+                      </div>
+                      <div className="d-flex align-items-center justify-content-between" style={{marginTop:'0.7rem'}}>
+                        <img src={dex} alt="" />
+                        <h6>Dex</h6>
+                        <h5>96</h5>
+                      </div>
+                      <div className="d-flex align-items-center justify-content-between" style={{marginTop:'0.7rem'}}>
+                        <img src={agi} alt="" />
+                        <h6>Agi</h6>
+                        <h5>87</h5>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="d-flex justify-content-center">
-              <button 
-                style={{padding:'10px 25px', marginTop:'20px'}} 
-                type="submit" 
-                disabled={!destinationNftChainId} 
-                onClick={bridge}> 
-                  
-                {processing && <span><img src={spin} alt="processing" style={{marginRight:'5px'}} width='25px'/><img src={processText} alt="processing"/></span>}
-                {!processing && <span>Bridge & Transfer</span>}
-              </button>
-              </div>
-              <p className="d-flex justify-content-center">(This process will take around 5 mins)</p>
-              <div className="nftbridge-process-detail" style={{marginTop:'5px'}}>
-                <p className="nftbridge-wallet-title">Send to address</p>
-                <div className="destiantion-wallet-box d-flex justify-content-center" style={{marginTop:'7px'}}>
-                  <input onChange={e =>handleWalletChange(e)} type="text" value={nftSelect == null ? " " : (walletAddress)}/>
                 </div>
-                {/* <form className="mr-3 d-flex justify-content-around"  style={{marginTop:'5px'}}>
-                  <img src={ethLogo} alt="" style={{marginRight:'0.5rem'}}/>
-                  <input
-                  type="text"
-                  className="inputcopy"
-                  value="Not Connected"
-                  readOnly
-                  />
-                </form> */}
               </div>
             </div>
           </div>

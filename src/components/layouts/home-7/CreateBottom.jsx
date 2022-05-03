@@ -81,18 +81,7 @@ const Create = () => {
                         <img src={axelarlogo} alt="" />
                         <img src={cd} alt="" />
                     </div>
-                </div>     
-                <div className='tf-section d-flex flex-column align-items-center justify-content-center chain-support' style={{marginBottom:'0rem',backgroundColor:'#F8F8F8'}}>
-                <img src={WeSupport} style={{marginBottom:'4rem'}} alt="" width="137px" height="33px" />
-                    <div className='flex-column align-items-center justify-content-center axelarNFT-supported' style={{marginBottom:'6rem'}}>
-                        <img src={fantom} alt='' width='160px'/>
-                        <img src={polygon} alt='' width='160px'/>
-                        <img src={ethereum} alt='' width='160px'/>
-                        <img src={terra} alt='' width='160px'/>
-                        <img src={moonbeam} alt='' width='160px'/>
-                        <img src={avalanche} alt='' width='160px'/>
-                    </div>
-                </div>                 
+                </div>                     
             </div>
             
         </section>

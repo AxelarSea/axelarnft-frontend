@@ -6,6 +6,8 @@ import logodark from '../../assets/images/logo/logo_dark.png'
 import avt from '../../assets/images/avatar/avt-2.jpg'
 import coin from '../../assets/images/logo/coin.svg'
 import logosvg from '../../assets/images/logo/logoaxelarsea.svg'
+import nftBridge from '../../assets/images/icon/bridge-soon.svg'
+import logoGif from '../../assets/images/icon/axelarsea-testnet-live.gif'
 import web3 from '../../hooks/web3';
 import { useConnectedWallet } from '@terra-money/wallet-provider';
 import TestnetCheck from '../layouts/TestnetCheck';
@@ -81,9 +83,10 @@ const HeaderStyle2 = () => {
                             <div className="wrap-box flex">
                                 <div id="site-logo" className="clearfix">
                                     <div id="site-logo-inner">
-                                        <Link to="/Home" rel="home" className="main-logo">
+                                        <Link to="/Home" rel="home" className="main-logo" style={{marginRight:'1rem'}}>
                                             <img   id="logo_header" src={logosvg} alt="nft-gaming" />
                                         </Link>
+                                        <img src={logoGif} alt=""  width="70px"  onClick={() => setModalShow(true)}/>
                                     </div>
                                 </div>
                                 <div className={`mobile-button ${btnToggleActive ? 'active' : ''}`} onClick={menuToggle}>
@@ -141,6 +144,16 @@ const HeaderStyle2 = () => {
                                         <li className="menu-item" >
                                             <a href="https://axelarsea.gitbook.io/axelarsea-docs/" target="_blank">Docs</a>
                                         </li>
+                                        <li className="menu-item" >
+                                        <a onClick={() => setFaqModalShow(true)}>FAQ</a>
+                                        </li>
+                                        {/* <li className="menu-item">
+                                        <a className='liveontestnet'  onClick={() => setModalShow(true)}>Live on Testnet</a>
+                                        </li> */}
+                                        <li className="menu-item">
+                                        <img src={nftBridge} alt="" />
+                                        </li>
+
                                         {/* <li className="menu-item" >
                                             <div className='newpage-title' style={{marginTop:'2px'}}>
                                             <Link className='newpage-title' to='/NFT-Bridge'>Bridge</Link>
@@ -149,14 +162,14 @@ const HeaderStyle2 = () => {
                                     </ul>
                                 </nav>
                                 <div className="flat-search-btn flex">
-                                    <div className='testnetcheck d-flex justify-content-between'> 
+                                    {/* <div className='testnetcheck d-flex justify-content-between menu-item'> 
                                         <span className='animated-text'  onClick={() => setModalShow(true)}>
                                         Live on Testnet
                                       </span>
                                         <span onClick={() => setFaqModalShow(true)} style={{marginLeft:'3rem'}}>
                                         FAQ
                                       </span>
-                                    </div>
+                                    </div> */}
                                     <div className="header-search flat-show-search" id="s1">
                                         <Link to="" className="show-search header-search-trigger" onClick={searchBtn}>
                                             <i className="far fa-search"></i>

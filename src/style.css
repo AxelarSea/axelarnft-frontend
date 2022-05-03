@@ -1536,6 +1536,8 @@ header{
     -ms-transform    : translateY(-50%);
     -o-transform     : translateY(-50%);
     transform        : translateY(-50%);
+    display: flex;
+    align-items: center;
 }
 .main-logo img {
     width: 133px;

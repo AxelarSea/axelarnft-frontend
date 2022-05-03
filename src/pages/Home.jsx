@@ -4,11 +4,11 @@ import heroSliderData from '../assets/fake-data/data-slider-2';
 import SliderStyle1 from '../components/slider/SliderStyle1';
 import Footer from '../components/footer/Footer';
 import TopSeller from '../components/layouts/home-7/TopSeller';
-import SliderStyle4 from '../components/slider/SliderStyle4';
-import TodayPicks from '../components/layouts/home-7/TodayPicks';
+import RecentlyListed from '../components/layouts/home-7/RecentlyListed';
 import Create from '../components/layouts/home-7/CreateBottom';
 import CreateTop from '../components/layouts/home-2/Create';
 import PopularCollection from '../components/layouts/home-7/PopularCollection';
+import Support from '../components/layouts/home-7/chainSupport';
 
 const Home = () => {
     return (
@@ -18,8 +18,9 @@ const Home = () => {
             <CreateTop />
             <PopularCollection />
             <TopSeller />
-            <TodayPicks />
+            <RecentlyListed />
             <Create />
+            <Support />
             <Footer />
         </div>
     );

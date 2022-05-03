@@ -596,6 +596,7 @@ const SelectNftModal = (props) => {
 
   window.ethereum.on("accountsChanged", account => setAccount(account[0]));
 
+
   useEffect(fetchMetamaskAccount, []);
 
   async function cancelListingAction(data) {
@@ -619,7 +620,7 @@ const SelectNftModal = (props) => {
         <Modal.Header closeButton></Modal.Header>
         <div className="modal-body space-y-20 pd-80">
             <h3 className="nftbridge-header-modal">Select an NFT to Bridge</h3>
-            <p className="d-flex justify-content-center">(Bridging function is not available for listed NFTs)</p>
+            <p className="d-flex justify-content-center nftbridge-subtitle-modal" style={{marginTop:'-3rem'}}>(Bridging function is not available for listed NFTs)</p>
             <Tabs>
               {/* <TabList>
                 {menuTab.map((item, index) => (
@@ -635,8 +636,8 @@ const SelectNftModal = (props) => {
                         <TabPanel
                           key={index}
                         >
-                          <div className="d-flex justify-content-between align-items-center" style={{marginBottom:'1rem'}}>
-                            <h5 style={{fontSize:'3rem' , color:'grey'}}>{`${item.dataContent.length} items`}</h5>
+                          <div className="d-flex justify-content-between align-items-center count-search" style={{marginBottom:'1rem'}}>
+                            <h5 className="nftcount-text">{`${item.dataContent.length} items`}</h5>
                             <div style={{paddingLeft:'2rem'}}>
                               <input   className="search-wallet" placeholder="Search" required="" />
                               <button className="search search-submit d-flex align-items-center " style={{height:'38px',marginRight:'1rem', opacity:'0.4'}}type="submit" value="submit">

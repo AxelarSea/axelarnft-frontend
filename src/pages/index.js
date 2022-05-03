@@ -19,7 +19,6 @@
 // import Login from "./Login";
 // import SignUp from "./SignUp";
 // import NoResult from "./NoResult";
-import FAQ from "./FAQ";
 // import Contact01 from "./Contact01";
 // import Contact02 from "./Contact02";
 // import LiveAuctions from "./LiveAuctions";
@@ -27,6 +26,7 @@ import FAQ from "./FAQ";
 // import Authors01 from "./Explore-Authors";
 
 import Home from "./Home";
+import FAQ from "./FAQ";
 import Explore from "./Explore";
 import ItemDetails from "./ItemDetails";
 import Authorsprofile from "./Authorsprofile";
@@ -36,6 +36,7 @@ import ListItem from "./List-Item";
 import Faucet from "./Faucet";
 import NFTBridge from "./NFT-Bridge";
 import NFTBridge02 from "./NFT-Bridge02";
+import Usecase from "./Use-case";
 
 const routes = [
   // { path: '/home-02', component: <Home02 />},
@@ -75,6 +76,7 @@ const routes = [
   { path: '/list-item', component: <ListItem />},
   { path: '/NFT-Bridge', component: <NFTBridge />},
   { path: '/NFT-Bridge02', component: <NFTBridge02 />},
+  { path: '/use-case-bridge', component: <Usecase />},
 ]
 
 export default routes;

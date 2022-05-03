@@ -9,25 +9,16 @@ import img1 from "../assets/images/box-item/image-box-6.jpg";
 import avt from "../assets/images/avatar/avt-9.jpg";
 import { Dropdown } from "react-bootstrap";
 import Swal from 'sweetalert2'
-
-
-import imgfilter1 from "../assets/images/icon/menu.png";
-import imgfilter2 from "../assets/images/icon/rainbow.png";
-import imgfilter3 from "../assets/images/icon/photo.png";
-import imgfilter4 from "../assets/images/icon/itunes.png";
-
 import ETH from "../assets/images/avatar/ETH.jpg";
 import AVAX from "../assets/images/avatar/AVAX.jpg";
 import FTM from "../assets/images/avatar/FTM.jpg";
 import Moonbeam from "../assets/images/avatar/moonbeam.gif";
 import Polygon from "../assets/images/avatar/polygon.gif";
-
 import HeaderStyle2 from "../components/header/HeaderStyle2";
 import AxelarSeaSampleNft from "../contracts/AxelarSeaSampleNft";
 import web3 from "../hooks/web3";
 import switchChain from "../utils/switchChain";
 import wait from "../utils/wait";
-import axios from "axios";
 import { refreshMetadata, fetchItem } from "../utils/api";
 
 const CreateItem = () => {

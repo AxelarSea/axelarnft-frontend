@@ -10,6 +10,7 @@ import 'swiper/scss/pagination';
 import shape1 from '../../assets/images/backgroup-secsion/bg-gradient1.png'
 import shape2 from '../../assets/images/backgroup-secsion/bg-gradient2.png'
 import shape3 from '../../assets/images/backgroup-secsion/bg-gradient3.png'
+import imgbg from '../../assets/images/backgroup-secsion/bghome-w.png'
 import { _fetchData } from 'ethers/lib/utils';
 import { setupAuthExtension } from '@cosmjs/stargate';
 
@@ -69,7 +70,7 @@ const SliderItem = props => {
     },[])
 
     return(
-    <div className="flat-title-page">
+    <div className="flat-title-page"style={{backgroundSize:'cover'}}>
         <img className="bgr-gradient gradient1" src={shape1} alt="AxelarSea" />
         <img className="bgr-gradient gradient2" src={shape2} alt="AxelarSea" />
         <img className="bgr-gradient gradient3" src={shape3} alt="AxelarSea" />
@@ -85,7 +86,7 @@ const SliderItem = props => {
             <div className="swiper-wrapper">
                 <div className="swiper-slide">
                     <div className="slider-item">	
-                        <div className="themesflat-container ">
+                        <div className="themesflat-container top-page-containner">
                             <div className="wrap-heading flat-slider flex">
                                 <div className="content">
                                     <h1 className="heading">{props.item.title_1}</h1>
@@ -99,24 +100,27 @@ const SliderItem = props => {
                                         <Link to="/create-item" className="sc-button header-slider style style-1 note fl-button pri-1"><span>Create
                                         </span></Link>
                                     </div>
-                                    <div className="flat-bt-slider flex style2 showlist">
-                                        <div>
-                                            <h1 className='data-showlist'>{count.nftCount}</h1>
-                                            <h6 className='title-showlist'>Minted</h6>
+                                    {props.item.status == null ? ''
+                                        :
+                                        <div className="flat-bt-slider flex style2 showlist"
+                                            >
+                                            <div>
+                                                <h1 className='data-showlist'>{count.nftCount}</h1>
+                                                <h6 className='title-showlist'>Minted</h6>
+                                            </div>
+                                            <div style={{marginLeft:'8rem'}}>
+                                                <h1 className='data-showlist'>{count.listedCount}</h1>
+                                                <h6 className='title-showlist'>Listed</h6>
+                                            </div>
+                                            <div style={{marginLeft:'8rem'}}>
+                                                <h1 className='data-showlist'>{count.walletCount}</h1>
+                                                <h6 className='title-showlist'>Wallet</h6>
+                                            </div>
                                         </div>
-                                        <div style={{marginLeft:'8rem'}}>
-                                            <h1 className='data-showlist'>{count.listedCount}</h1>
-                                            <h6 className='title-showlist'>Listed</h6>
-                                        </div>
-                                        <div style={{marginLeft:'8rem'}}>
-                                            <h1 className='data-showlist'>{count.walletCount}</h1>
-                                            <h6 className='title-showlist'>Wallet</h6>
-                                        </div>
-                                        
-                                    </div>
+                                    }
                                 </div>
-                                <div className="image">
-                                    <img src={props.item.img} alt="AxelarSea" />
+                                <div className="image" style={{marginInline:'2rem'}}>
+                                    <img src={props.item.img} alt="AxelarSea"  width='600px'/>
                                 </div>
                             </div>   
                         </div>					                           
