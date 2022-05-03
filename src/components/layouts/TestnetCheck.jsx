@@ -85,7 +85,7 @@ const TestnetCheck = (props) => {
       <div className="modal-body space-y-20 pd-40">
       <h5>Your connected MetaMask wallet address</h5>
       <form className="search-form" onSubmit={e => walletSubmit(e)}>         
-       <input onChange={e =>handleWalletChange(e)} value={wallet} className="search-wallet" placeholder="Paste your MetaMask address and Enter." required="" />
+       <input onChange={e =>handleWalletChange(e)} style={{width:'100%'}} value={wallet} className="search-wallet" placeholder="Paste your MetaMask address and Enter." required="" />
        <button className="search search-submit d-flex align-items-center " style={{height:'38px'}}type="submit" value="submit">
         <i className="icon-fl-search-filled" ></i>
       </button>
