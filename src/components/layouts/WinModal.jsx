@@ -33,7 +33,7 @@ const WinModal = (props) => {
       <Modal.Header closeButton></Modal.Header>
         
         <div className="modal-body space-y-20 pd-40">
-        <h2 className="d-flex justify-content-center congratulation-title">
+        <h2 className="d-flex justify-content-center">
         {props.result}
         </h2>
         <div className="d-flex justify-content-center">
@@ -86,9 +86,8 @@ const WinModal = (props) => {
             </div>
           </div>
         </div>
-       
-
-        <div className="d-flex justify-content-center">
+        <div className="align-items-center justify-content-center d-flex flex-column">
+        {props.exp}
           <button
             onClick={() =>{
                 props.setNftSelect(null)

@@ -539,7 +539,12 @@ const PlayAxelar = () => {
                         setWinModalShow(false)
                         setNftSelect(null)
                       }}
-        result={nftSelect == null ? "-" : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX") ? 'You Lose' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? 'You Win!!' : '-'}
+        result={nftSelect == null ? "-" 
+        : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX")
+         ? <h1 style={{color:'red'}}>You Lose</h1> : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? <h1 className="congratulation-title">You Win!!</h1> : '-'}
+        exp={nftSelect == null ? "-" 
+        : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX")
+         ? <h4 style={{color:'red', marginBottom:'20px'}}>Exp -2,300</h4> : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? <h4 className="congratulation-title">Exp +1000</h4> : '-'}
         nftSelect={nftSelect}
         setWinModalShow={setWinModalShow}
         setNftSelect={setNftSelect}

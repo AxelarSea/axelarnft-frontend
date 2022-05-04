@@ -58,7 +58,6 @@ const CongratBridgeModal = (props) => {
                 alt="AxelarSea"
                 width="200px"
               />
-              {/* style={{height:'200px'}} */}
             </div>
             <div className="card-title mg-bt-6" style={{ marginTop: "10px" }}>
               <h5 className="nft-text-l">
