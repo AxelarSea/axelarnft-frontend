@@ -81,7 +81,7 @@ const sampleNftId = {
 }
 
 
-const CollateralLending = () => {
+const CollateralLending = (props) => {
 
   const [congratBridgeModalShow,setCongratBridgeModalShow] = useState(false)
 
@@ -443,7 +443,7 @@ const CollateralLending = () => {
             <div className="nftbridge-card pd-10 d-flex flex-column align-items-center" style={{marginTop:'3rem'}}>
                 <img src={fantomLogo} alt="" width='40px' style={{marginTop:'2rem'}}/>
                 <h3 style={{marginTop:'2rem'}}>Stake on Fantom</h3>
-                <h1 className="d-flex justify-content-center align-content-center" style={{marginTop:'4rem'}}>- %</h1>
+                <h1 className="d-flex justify-content-center align-content-center" style={{marginTop:'4rem'}}>{nftSelect == null ? '- %' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "FTM") ? '5 %' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "FTM") ? '15 %' : '- %'}</h1>
                 <h5 className="d-flex justify-content-center align-content-end" style={{marginTop:'2rem'}}>APY</h5>
             </div>
         </div>

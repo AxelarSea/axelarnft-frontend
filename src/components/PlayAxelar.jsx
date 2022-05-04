@@ -99,6 +99,8 @@ const PlayAxelar = () => {
 
   const [walletAddress, setwalletAddress] = useState('')
 
+  const [winModalShow , setWinModalShow] = useState(false)
+
   const handleWalletChange = e => {
     setwalletAddress(e.target.value)
   }
@@ -454,7 +456,7 @@ const PlayAxelar = () => {
                       <h5>MG_AMDARAIS</h5>
                     </div>
                     <div className="d-flex align-items-center" style={{marginBottom:'1rem'}}>
-                      <h5 >Select Your Avalanche NFT</h5>
+                      <h5 >{nftSelect == null ? 'Select Your Avalanche NFT' : nftSelect.title}</h5>
                       <img src={avaxLogo} alt="" width="32px" style={{marginLeft:'13px'}}/>
                     </div>
                   </div>
@@ -479,7 +481,7 @@ const PlayAxelar = () => {
                     <button
                       style={{padding:'10px 25px', marginTop:'6rem', width:'200px', height:'45px'}} 
                       type="submit" 
-                      onClick={() => setCongratBridgeModalShow(true)}
+                      // onClick={() => setWinModalShow(true)}
                       >
                       <span>Start Fight</span>
                     </button>
@@ -487,17 +489,17 @@ const PlayAxelar = () => {
                       <div className="d-flex align-items-center justify-content-between">
                         <img src={atk} alt="" />
                         <h6>Atk</h6>
-                        <h5>-</h5>
+                        <h5>{nftSelect == null ? '-' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX") ? '83' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? '99' : '-'}</h5>
                       </div>
                       <div className="d-flex align-items-center justify-content-between" style={{marginTop:'0.7rem'}}>
                         <img src={dex} alt="" />
                         <h6>Dex</h6>
-                        <h5>-</h5>
+                        <h5>{nftSelect == null ? '-' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX") ? '85' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? '99' : '-'}</h5>
                       </div>
                       <div className="d-flex align-items-center justify-content-between" style={{marginTop:'0.7rem'}}>
                         <img src={agi} alt="" />
                         <h6>Agi</h6>
-                        <h5>-</h5>
+                        <h5>{nftSelect == null ? '-' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX") ? '81' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? '99' : '-'}</h5>
                       </div>
                     </div>
                   </div>
@@ -529,6 +531,7 @@ const PlayAxelar = () => {
           setSelectChainDestinationShow(false)
         }}
       />
+     
       <CongratBridgeModal 
         onShow={congratBridgeModalShow}
         onHide={() => {
