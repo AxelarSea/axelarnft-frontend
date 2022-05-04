@@ -36,7 +36,7 @@ import ListItem from "./List-Item";
 import Faucet from "./Faucet";
 import NFTBridge from "./NFT-Bridge";
 import NFTBridge02 from "./NFT-Bridge02";
-import Usecase from "./Use-case";
+import Usecase from "./Use-case-bridge";
 
 const routes = [
   // { path: '/home-02', component: <Home02 />},
