@@ -503,7 +503,6 @@ const PlayAxelar = () => {
             </div>
         </div>
                 
-      <Footer />
       <SelectChainModal
         onShow={modalShow}
         onHide={() => setModalShow(false)}
