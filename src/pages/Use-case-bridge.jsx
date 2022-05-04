@@ -45,7 +45,7 @@ import iconnfttable from '../assets/images/icon/icon-nft-table.svg'
 import iconnfttableselect from '../assets/images/icon/icon-nft-table-select.svg'
 import spin from '../assets/images/icon/processing.gif'
 import AxelarSeaBridgeLogo from '../assets/images/logo/axelarsea-bridge-logo.svg'
-import qusetionMark from '../assets/images/icon/question-mark.svg'
+import questionMark from '../assets/images/icon/question-mark.svg'
 import menu from '../assets/images/icon/icon-menu.svg'
 import processText from '../assets/images/icon/processing-text.gif'
 import bgGamrfi from "../assets/images/backgroup-secsion/bg-gamefi.png"
@@ -242,7 +242,7 @@ const UseCase = () => {
     setwalletAddress(filterItem[0].owner)
     console.log(filterItem[0])
     setIsSelect(false)
-    setDestinationNftChainImg(qusetionMark)
+    setDestinationNftChainImg(questionMark)
 
     if(filterItem[0].chainId === 43113){
       setMyNftOn('Avalanche')
@@ -424,7 +424,7 @@ const UseCase = () => {
                                       setContentName('PlayAxelar')}}>
                   <div>
                     <h6 className="d-flex align-items-center" style={{fontSize:'18px'}}>Quest : play AxelarSea infinity</h6>
-                    <p style={{fontSize:'14px', lineHeight:'17px', inlineSize:'283px', marginTop:'8px'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p style={{fontSize:'14px', lineHeight:'17px', inlineSize:'283px', marginTop:'8px'}}>Bridging an NFT without losing its meta data from Fantom to Avalanche for GameFi.</p>
                   </div>
                   <div>
                     <img src={contentName === 'PlayAxelar' ? greenCheck : check} alt="" />
@@ -437,7 +437,7 @@ const UseCase = () => {
                         }}>
                   <div>
                     <h6 className="d-flex align-items-center" style={{fontSize:'18px'}}>Quest : Use NFT Staking</h6>
-                    <p style={{fontSize:'14px', lineHeight:'17px', inlineSize:'283px', marginTop:'8px'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p style={{fontSize:'14px', lineHeight:'17px', inlineSize:'283px', marginTop:'8px'}}>Bridging an NFT without losing its meta data from Avalanche to stake it on Fantom.</p>
                   </div>
                   <div>
                     <img src={contentName === 'CollateralLending' ? greenCheck : check} alt="" />

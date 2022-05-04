@@ -46,7 +46,7 @@ import iconnfttable from '../assets/images/icon/icon-nft-table.svg'
 import iconnfttableselect from '../assets/images/icon/icon-nft-table-select.svg'
 import spin from '../assets/images/icon/processing.gif'
 import AxelarSeaBridgeLogo from '../assets/images/logo/axelarsea-bridge-logo.svg'
-import qusetionMark from '../assets/images/icon/question-mark.svg'
+import questionMark from '../assets/images/icon/question-mark.svg'
 import menu from '../assets/images/icon/icon-menu.svg'
 import processText from '../assets/images/icon/processing-text.gif'
 
@@ -237,7 +237,7 @@ const NFTBridge = () => {
     setwalletAddress(filterItem[0].owner)
     console.log(filterItem[0])
     setIsSelect(false)
-    setDestinationNftChainImg(qusetionMark)
+    setDestinationNftChainImg(questionMark)
 
     if(filterItem[0].chainId === 43113){
       setMyNftOn('Avalanche')

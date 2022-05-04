@@ -45,7 +45,7 @@ import iconnfttable from '../assets/images/icon/icon-nft-table.svg'
 import iconnfttableselect from '../assets/images/icon/icon-nft-table-select.svg'
 import spin from '../assets/images/icon/processing.gif'
 import AxelarSeaBridgeLogo from '../assets/images/logo/axelarsea-bridge-logo.svg'
-import qusetionMark from '../assets/images/icon/question-mark.svg'
+import questionMark from '../assets/images/icon/question-mark.svg'
 import menu from '../assets/images/icon/icon-menu.svg'
 import processText from '../assets/images/icon/processing-text.gif'
 import bgGamrfi from "../assets/images/backgroup-secsion/bg-gamefi.png"
@@ -63,13 +63,13 @@ import agi from "../../src/assets/images/icon/icon-agi.svg"
 
 import SelectChainModal from "./layouts/SelectChainModal";
 import SelectChainDestinationModal from "./layouts/SelectChainDestinationModal";
-import SelectNftModal from './layouts/SelectNftModal'
+import SelectNftModal from './layouts/SelectNftModalGamefi'
 
 import Explore from "./layouts/explore-04/Explore";
 import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
 import { cancelListing, crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
 import Swal from "sweetalert2";
-import CongratBridgeModal from "./layouts/CongratBridgeModal";
+import CongratBridgeModal from "./layouts/GamefiModal";
 
 const sampleNftId = {
   "3": "1020847100762815390390123822295304634369",
@@ -236,7 +236,7 @@ const PlayAxelar = () => {
     setwalletAddress(filterItem[0].owner)
     console.log(filterItem[0])
     setIsSelect(false)
-    setDestinationNftChainImg(qusetionMark)
+    setDestinationNftChainImg(questionMark)
 
     if(filterItem[0].chainId === 43113){
       setMyNftOn('Avalanche')
@@ -408,11 +408,11 @@ const PlayAxelar = () => {
                 <div className="d-flex align-items-cente justify-content-between">
                   <div>
                     <h2 className="heading-color-animated align-items-start" >AxelarSea infinity</h2>
-                    <h6 style={{marginTop:'12px'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h6>
+                    <h6 style={{marginTop:'12px', inlineSize:'660px'}}>AxelarSea infinity is a GameFi running on Avalanche. Having trouble with using AxelarNFT on Avalanche to beat the bosses? Try bridging AxelarNFT on Fantom to fight them instead!</h6>
                   </div>
                   <Link to="/nft-bridge">
                   <button 
-                  style={{marginLeft:'15rem'}}
+                  style={{marginLeft:'0rem'}}
                     type="submit" >
                     <span>NFT Bridge</span>
                   </button>
@@ -453,8 +453,8 @@ const PlayAxelar = () => {
                     <div className="p-2">
                       <h5>MG_AMDARAIS</h5>
                     </div>
-                    <div className="d-flex align-items-center">
-                      <h5>AxelarMETA #2</h5>
+                    <div className="d-flex align-items-center" style={{marginBottom:'1rem'}}>
+                      <h5 >Select Your Avalanche NFT</h5>
                       <img src={avaxLogo} alt="" width="32px" style={{marginLeft:'13px'}}/>
                     </div>
                   </div>
@@ -478,24 +478,26 @@ const PlayAxelar = () => {
                     </div>
                     <button
                       style={{padding:'10px 25px', marginTop:'6rem', width:'200px', height:'45px'}} 
-                      type="submit" >
+                      type="submit" 
+                      onClick={() => setCongratBridgeModalShow(true)}
+                      >
                       <span>Start Fight</span>
                     </button>
                     <div className="hero-detail-box pd-20">
                       <div className="d-flex align-items-center justify-content-between">
                         <img src={atk} alt="" />
                         <h6>Atk</h6>
-                        <h5>93</h5>
+                        <h5>-</h5>
                       </div>
                       <div className="d-flex align-items-center justify-content-between" style={{marginTop:'0.7rem'}}>
                         <img src={dex} alt="" />
                         <h6>Dex</h6>
-                        <h5>96</h5>
+                        <h5>-</h5>
                       </div>
                       <div className="d-flex align-items-center justify-content-between" style={{marginTop:'0.7rem'}}>
                         <img src={agi} alt="" />
                         <h6>Agi</h6>
-                        <h5>87</h5>
+                        <h5>-</h5>
                       </div>
                     </div>
                   </div>
@@ -526,10 +528,6 @@ const PlayAxelar = () => {
           setDestinationNftChainImg(img);
           setSelectChainDestinationShow(false)
         }}
-        
-        // setDestinationNftChain={setDestinationNftChain}
-        // setDestinationNftChainImg={setDestinationNftChainImg}
-        // setSelectChainDestinationShow={setSelectChainDestinationShow}
       />
       <CongratBridgeModal 
         onShow={congratBridgeModalShow}
