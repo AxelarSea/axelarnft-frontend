@@ -253,6 +253,7 @@ const CollateralLending = (props) => {
     console.log(filterItem[0])
     setIsSelect(false)
     setDestinationNftChainImg(questionMark)
+    setApy('- %')
 
     if(filterItem[0].chainId === 43113){
       setMyNftOn('Avalanche')
