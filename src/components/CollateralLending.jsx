@@ -83,6 +83,19 @@ const sampleNftId = {
 
 const CollateralLending = (props) => {
 
+  const stakeNow = () => {
+    if(nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "FTM"){
+      setApy('5 %')
+    }
+    else if(nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "FTM"){
+      setApy('15 %')
+    }
+    else{
+      setApy('- %')
+    }
+
+  }
+
   const [congratBridgeModalShow,setCongratBridgeModalShow] = useState(false)
 
   const [selectChainDestinationShow,setSelectChainDestinationShow] = useState(false)
@@ -209,6 +222,8 @@ const CollateralLending = (props) => {
   const [PriceType, setPriceType] = useState("aLUNA");
   const [PricePic, setPricePic] = useState(AlunaLogo);
   const [processing, setProcessing] = useState(false);
+
+  const [apy,setApy] = useState('- %')
 
   const [modalShow , setModalShow] = useState(false)
 
@@ -437,13 +452,17 @@ const CollateralLending = (props) => {
             </div>
             <button
                 style={{padding:'10px 25px', width:'200px', height:'45px'}} 
-                type="submit" >
+                type="submit" 
+                disabled={nftSelect == null ? true : false}
+                onClick={() => stakeNow()}
+                >
+                
                 <span>Stake Now!</span>
             </button>
             <div className="nftbridge-card pd-10 d-flex flex-column align-items-center" style={{marginTop:'3rem'}}>
                 <img src={fantomLogo} alt="" width='40px' style={{marginTop:'2rem'}}/>
                 <h3 style={{marginTop:'2rem'}}>Stake on Fantom</h3>
-                <h1 className="d-flex justify-content-center align-content-center" style={{marginTop:'4rem'}}>{nftSelect == null ? '- %' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "FTM") ? '5 %' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "FTM") ? '15 %' : '- %'}</h1>
+                <h1 className="d-flex justify-content-center align-content-center" style={{marginTop:'4rem'}}>{apy}</h1>
                 <h5 className="d-flex justify-content-center align-content-end" style={{marginTop:'2rem'}}>APY</h5>
             </div>
         </div>
