@@ -70,6 +70,7 @@ import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
 import { cancelListing, crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
 import Swal from "sweetalert2";
 import CongratBridgeModal from "./layouts/GamefiModal";
+import WinModal from "./layouts/WinModal";
 
 const sampleNftId = {
   "3": "1020847100762815390390123822295304634369",
@@ -481,7 +482,8 @@ const PlayAxelar = () => {
                     <button
                       style={{padding:'10px 25px', marginTop:'6rem', width:'200px', height:'45px'}} 
                       type="submit" 
-                      // onClick={() => setWinModalShow(true)}
+                      onClick={() => setWinModalShow(true)}
+                      disabled={nftSelect == null ? true : false}
                       >
                       <span>Start Fight</span>
                     </button>
@@ -530,6 +532,17 @@ const PlayAxelar = () => {
           setDestinationNftChainImg(img);
           setSelectChainDestinationShow(false)
         }}
+      />
+      <WinModal 
+        onShow={winModalShow}
+        onHide={() => {
+                        setWinModalShow(false)
+                        setNftSelect(null)
+                      }}
+        result={nftSelect == null ? "-" : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX") ? 'You Lose' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? 'You Win!!' : '-'}
+        nftSelect={nftSelect}
+        setWinModalShow={setWinModalShow}
+        setNftSelect={setNftSelect}
       />
      
       <CongratBridgeModal 
