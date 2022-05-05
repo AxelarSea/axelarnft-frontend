@@ -40,6 +40,8 @@ import polygonLogo from '../assets/images/icon/polygon-logo.svg'
 import avaxLogo from '../assets/images/icon/avax-logo.svg'
 import moonbeamLogo from '../assets/images/icon/moonbeam-logo.svg'
 import fantomLogo from '../assets/images/icon/fantom-logo.svg'
+import defiStep1 from '../assets/images/icon/defi-step1.svg'
+import defiStep2 from '../assets/images/icon/defi-step2.svg'
 import bridgeimg from '../assets/images/backgroup-secsion/bridge_effect.gif'
 import iconnfttable from '../assets/images/icon/icon-nft-table.svg'
 import iconnfttableselect from '../assets/images/icon/icon-nft-table-select.svg'
@@ -52,6 +54,7 @@ import bgGamrfi from "../assets/images/backgroup-secsion/bg-gamefi.png"
 import greenCheck from '../assets/images/icon/green-check.svg'
 import check from '../assets/images/icon/check.svg'
 import banner from "../assets/images/backgroup-secsion/bg-lending.png"
+import DeFiModal from "./layouts/DeFiModal";
 
 import HeaderStyle2 from "./header/HeaderStyle2";
 import { bridgeNft, CROSS_CHAIN_TOKEN_ADDRESS, fetchItem, listItem } from "../utils/api";
@@ -86,12 +89,18 @@ const CollateralLending = (props) => {
   const stakeNow = () => {
     if(nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "FTM"){
       setApy('5 %')
+      setReward('0.012 %')
+      setNFTPrice('1.32 ETH ($40,234)')
     }
     else if(nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "FTM"){
       setApy('15 %')
+      setReward('0.04 %')
+      setNFTPrice('1.32 ETH ($40,234)')
     }
     else{
       setApy('- %')
+      setReward('- %')
+      setNFTPrice('-')
     }
 
   }
@@ -224,8 +233,11 @@ const CollateralLending = (props) => {
   const [processing, setProcessing] = useState(false);
 
   const [apy,setApy] = useState('- %')
+  const [reward,setReward] = useState('- %')
+  const [NFTPrice,setNFTPrice] = useState('-')
 
   const [modalShow , setModalShow] = useState(false)
+  const [DeFiModalShow , setDeFiModalShow] = useState(false)
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -240,6 +252,7 @@ const CollateralLending = (props) => {
   const [destinationNftChain , setDestinationNftChain] = useState(null)
   const [destinationNftChainId , setDestinationNftChainId] = useState(null)
   const [destinationNftChainImg , setDestinationNftChainImg] = useState(null)
+  
 
   const [visible, setVisible] = useState(8);
 
@@ -254,6 +267,7 @@ const CollateralLending = (props) => {
     setIsSelect(false)
     setDestinationNftChainImg(questionMark)
     setApy('- %')
+    setReward('-')
 
     if(filterItem[0].chainId === 43113){
       setMyNftOn('Avalanche')
@@ -419,39 +433,112 @@ const CollateralLending = (props) => {
   console.log(data)
 
   return (
-    <div >
+    <div>
       <img src={banner} alt="" />
-        <div className="d-flex align-items-center justify-content-between">
-            <div className="nftbridge-card d-flex justify-content-center" onClick={() => setSelectNftModalShow(true)} style={{cursor:'pointer', marginTop:'3rem'}}>
-                {nftSelect == null 
-                ?
-                <img className="img-chain-select" src={iconnfttableselect} width='128px'/> 
-                : 
-                    <div className="nftbridge-card pd-10">
-                        <div className="nftbridge-nft-img-box d-flex justify-content-center">
-                            <img className="nftbridge-nft-img" src={nftSelect.img} alt="AxelarSea" width='200px'/>
+      <div className="d-flex justify-content-around">
+        <div className="select-nft-box pd-20 ">
+          <img src={defiStep1} alt="" style={{marginBottom:'1rem'}}/>
+          <div className="nftdefi-card d-flex justify-content-center" onClick={() => setSelectNftModalShow(true)} style={{cursor:'pointer'}}>
+                    {nftSelect == null 
+                    ?
+                    <img className="img-chain-select" src={iconnfttableselect} width='128px'/> 
+                    : 
+                    <div className="pd-10">
+                        <div className="nftgamefi-card-img-box d-flex justify-content-center">
+                          <img className="nftgamefi-card-img" src={nftSelect.img} alt="AxelarSea" width='155px'/>
                         </div>
-                        <div className="card-title mg-bt-6" style={{marginTop:'10px'}}>
-                            <h5 className="nft-text-l" >{nftSelect.title}</h5>
+                        <div className="card-title mg-bt-6" style={{marginTop:'9px'}}>
+                          <h5 className="nft-text-l" style={{fontSize:'9px'}}>{nftSelect.title}</h5>
                         </div>
                         <div className="meta-info d-flex justify-content-between align-items-center">
-                            <div className="author d-flex align-items-center">
-                                <div className="avatar">
-                                    <img className="avt-img" src={avt} alt="AxelarSea" width="30px"/>
-                                </div>
-                                <div className="info" style={{marginLeft:'1rem'}}>
-                                    <span className="nft-text-s">Owned By</span>
-                                    <h6 className="nft-text-m">{maskAddress(nftSelect.nameAuthor)}</h6>
-                                </div>
+                          <div className="author d-flex align-items-center">
+                            <div className="avatar">
+                              <img className="avt-img" src={avt} alt="AxelarSea" width="30px"/>
                             </div>
-                            <div className="chain-icon">
-                                <img src={nftSelect.tags === 'ETH' ? ethLogo : nftSelect.tags === 'AVAX' ? avaxLogo : nftSelect.tags === 'FTM' ? fantomLogo : nftSelect.tags === 'MOONBEAM' ? moonbeamLogo : nftSelect.tags === 'POLYGON' ? polygonLogo : ''} alt="" width="25px"/>
+                            <div className="info" style={{marginLeft:'1rem'}}>
+                              <span className="nft-text-s"style={{fontSize:'8px'}}>Owned By</span>
+                              <h6 className="nft-text-m"style={{fontSize:'8px'}}>{maskAddress(nftSelect.nameAuthor)}</h6>
                             </div>
+                          </div>
+                          <div className="chain-icon">
+                            <img src={nftSelect.tags === 'ETH' ? ethLogo : nftSelect.tags === 'AVAX' ? avaxLogo : nftSelect.tags === 'FTM' ? fantomLogo : nftSelect.tags === 'MOONBEAM' ? moonbeamLogo : nftSelect.tags === 'POLYGON' ? polygonLogo : ''} alt="" width="25px"/>
+                          </div>
                         </div>
-                    </div>
-                }
+                      </div>
+                    }
+                  </div>
             </div>
+            <div className="detail-nft-box pd-20">
+              <img src={defiStep2} alt="" width='105px'/>
+              <div className="stake-detail pd-10 d-flex justify-content-around">
+              <div>
+                  <div>
+                    <p>NFT Name :</p>
+                    <h6 >{nftSelect == null ? 'Select Your Fantom NFT' : nftSelect.title}</h6>
+                  </div>
+                  <div style={{marginTop:'5px'}}>
+                    <p>Total APY  :</p>
+                    <h6 >{nftSelect == null ? '- %' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "FTM") ? '5 %' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "FTM") ? '15 %' : '- %'}</h6>
+                  </div>
+                  <div style={{marginTop:'5px'}}>
+                    <p>Rewards :</p>
+                    <h6 ><img src={fantomLogo} alt="" style={{marginRight:'1rem'}}/>Fantom</h6>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <p>NFT Avg Price :</p>
+                    <h6 >{nftSelect == null ? '- %' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "FTM") ? '1.32 ETH ($40,234)' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "FTM") ? '1.32 ETH ($40,234)' : '- ETH'}</h6>
+                  </div>
+                  <div style={{marginTop:'5px'}}>
+                    <p>Daily APR  :</p>
+                    <h6 >{nftSelect == null ? '- %' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "FTM") ? '0.012 %' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "FTM") ? '0.04 %' : '- %'}</h6>
+                  </div>
+                </div>
+                {/* <div>
+                  <div>
+                    <p>NFT Name :</p>
+                    <h6 >{nftSelect == null ? 'Select Your Fantom NFT' : nftSelect.title}</h6>
+                  </div>
+                  <div style={{marginTop:'5px'}}>
+                    <p>Total APR  :</p>
+                    <h6 >{nftSelect == null ? '- %' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "FTM") ? '5 %' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "FTM") ? '15 %' : '- %'}</h6>
+                  </div>
+                  <div style={{marginTop:'5px'}}>
+                    <p>Rewards :</p>
+                    <h6 ><img src={fantomLogo} alt="" style={{marginRight:'1rem'}}/>Fantom</h6>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <p>NFT Avg Price :</p>
+                    <h6 >{NFTPrice}</h6>
+                  </div>
+                  <div style={{marginTop:'5px'}}>
+                    <p>Daily APR  :</p>
+                    <h6 >{reward}</h6>
+                  </div>
+                </div> */}
+              </div>
             <button
+                  style={{padding:'10px 25px', width:'460px', height:'45px'}} 
+                  type="submit" 
+                  disabled={nftSelect == null ? true : false}
+                  onClick={() => setDeFiModalShow(true)}
+                  >
+                  <span>Stake Now!</span>
+            </button>
+            {/* <button
+                  style={{padding:'10px 25px', width:'460px', height:'45px'}} 
+                  type="submit" 
+                  disabled={nftSelect == null ? true : false}
+                  onClick={() => stakeNow()}
+                  >
+                  <span>Stake Now!</span>
+            </button> */}
+            </div>
+      </div>
+            {/* <button
                 style={{padding:'10px 25px', width:'200px', height:'45px'}} 
                 type="submit" 
                 disabled={nftSelect == null ? true : false}
@@ -465,16 +552,8 @@ const CollateralLending = (props) => {
                 <h3 style={{marginTop:'2rem'}}>Stake on Fantom</h3>
                 <h1 className="d-flex justify-content-center align-content-center" style={{marginTop:'4rem'}}>{apy}</h1>
                 <h5 className="d-flex justify-content-center align-content-end" style={{marginTop:'2rem'}}>APY</h5>
-            </div>
-        </div>
+            </div> */}
 
-      <SelectChainModal
-        onShow={modalShow}
-        onHide={() => setModalShow(false)}
-        setMyNftOn={setMyNftOn}
-        setMyNftOnImg={setMyNftOnImg}
-        setModalShow={setModalShow}
-      />
       <SelectNftModal 
         onShow={selectNftModalShow}
         onHide={() => setSelectNftModalShow(false)}
@@ -482,35 +561,21 @@ const CollateralLending = (props) => {
         onSelect={onSelect}
         walletAddress={walletAddress}
       />
-      <SelectChainDestinationModal 
-        onShow={selectChainDestinationShow}
-        onHide={() => setSelectChainDestinationShow(false)}
-        onChange={(name, chainId, img) => {
-          setDestinationNftChain(name);
-          setDestinationNftChainId(chainId);
-          setDestinationNftChainImg(img);
-          setSelectChainDestinationShow(false)
-        }}
-      />
-      <CongratBridgeModal 
-        onShow={congratBridgeModalShow}
+      <DeFiModal 
+        onShow={DeFiModalShow}
         onHide={() => {
-                  setCongratBridgeModalShow(false)
-                  setNftSelect(null)
-                  setDestinationNftChainImg(null)
-                  setDestinationNftChain(null)
-                  setMyNftOn(null)
-                  setMyNftOnImg(null)
-                  setIsSelect(true)
-                }
-            }
+                        setDeFiModalShow(false)
+                        setNftSelect(null)
+                      }}
+        result={nftSelect == null ? "-" 
+        : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "FTM")
+         ? <h2 className="congratulation-title">Staking Success</h2> : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "FTM") ? <h2 style={{color:'red'}}>Staking Success</h2> : '-'}
+        exp={nftSelect == null ? "-" 
+        : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "FTM")
+         ? <h4 className="congratulation-title">Rewards +0.0084</h4> : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "FTM") ? <h4 style={{color:'red', marginBottom:'20px'}}>Rewards +0.0032</h4> : '-'}
         nftSelect={nftSelect}
-        myNftOnImg={myNftOnImg}
-        destinationNftChainImg={destinationNftChainImg}
-        destinationNftChainId={destinationNftChainId}
-        collectionAddress={collectionAddress}
-        tokenId={tokenId}
-        chainId={chainId}
+        setDeFiModalShow={setDeFiModalShow}
+        setNftSelect={setNftSelect}
       />
     </div>
   );
