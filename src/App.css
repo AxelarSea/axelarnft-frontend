@@ -453,7 +453,17 @@ color: #B0B5B7;
   border: 0.5px solid #DCDCE2;
   box-sizing: border-box;
   border-radius: 10px;
-  margin: 172px 0px 0px 534px;
+  margin: 172px 0px 0px 110px;
+}
+.nftdefi-card {
+  width: 180px;
+  height: 229px;
+  left: 0px;
+  top: 0px;
+  background: #F8F8F8;
+  border: 0.5px solid #DCDCE2;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 .nftgamefi-card-detail {
   width: 180px;
@@ -741,4 +751,33 @@ height: 41px;
   width: 827px;
   height: 521px;
   background-image: url('./assets/images/backgroup-secsion/bg-gamefi.png');
+}
+
+.select-nft-box {
+width: 223px;
+height: 301px;
+left: 520px;
+top: 487px;
+background: #FFFFFF;
+border: 1px solid #E7E7E7;
+border-radius: 20px;
+margin-top: 2rem;
+}
+.detail-nft-box {
+width: 500px;
+height: 301px;
+left: 520px;
+top: 487px;
+background: #FFFFFF;
+border: 1px solid #E7E7E7;
+border-radius: 20px;
+margin-top: 2rem;
+}
+.stake-detail {
+  width: 460px;
+  height: 175px;
+  background: #F8F8F8;
+  border: 1px solid #DCDCE2;
+  border-radius: 10px;
+  margin: 10px 0px;
 }

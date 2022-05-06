@@ -2,11 +2,12 @@ import { Modal } from "react-bootstrap";
 import { maskAddress } from "../../utils/address";
 
 import avt from "../../assets/images/avatar/satoshi.svg";
+import fantomLogo from "../../assets/images/icon/fantom-logo.svg";
 import arrowbridge from "../../assets/images/backgroup-secsion/arrow-bridge.svg";
 import { getDestinationNftAddress } from "../../utils/api";
 
 
-const WinModal = (props) => {
+const DeFiModal = (props) => {
     const viewDetail = async (
         sourceChainId,
         collectionAddress,
@@ -87,11 +88,15 @@ const WinModal = (props) => {
           </div>
         </div>
         <div className="align-items-center justify-content-center d-flex flex-column">
-        {props.exp}
+          <div className="d-flex align-items-start justify-content-center">
+          {props.exp}
+          <img src={fantomLogo} alt="" style={{marginLeft:'1rem'}}/>
+          </div>
+        
           <button
             onClick={() =>{
                 props.setNftSelect(null)
-                props.setWinModalShow(false)
+                props.setDeFiModalShow(false)
             }
             }
           >
@@ -102,4 +107,4 @@ const WinModal = (props) => {
         </Modal>
     )
 }
-export default WinModal;
+export default DeFiModal;

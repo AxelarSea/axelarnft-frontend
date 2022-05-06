@@ -40,6 +40,8 @@ import polygonLogo from '../assets/images/icon/polygon-logo.svg'
 import avaxLogo from '../assets/images/icon/avax-logo.svg'
 import moonbeamLogo from '../assets/images/icon/moonbeam-logo.svg'
 import fantomLogo from '../assets/images/icon/fantom-logo.svg'
+import downRed from '../assets/images/icon/down-red.png'
+import upGreen from '../assets/images/icon/up-green.png'
 import bridgeimg from '../assets/images/backgroup-secsion/bridge_effect.gif'
 import iconnfttable from '../assets/images/icon/icon-nft-table.svg'
 import iconnfttableselect from '../assets/images/icon/icon-nft-table-select.svg'
@@ -410,7 +412,9 @@ const PlayAxelar = () => {
               <div className="d-flex align-items-start flex-column">
                 <div className="d-flex align-items-cente justify-content-between">
                   <div>
-                    <h2 className="heading-color-animated align-items-start" >AxelarSea infinity</h2>
+                    <div className="d-flex align-items-center">
+                    <h2 className="heading-color-animated align-items-start" >AxelarSea infinity</h2> <img src={avaxLogo} alt="" width='50px' style={{marginLeft:'1rem'}}/>
+                    </div>
                     <h6 style={{marginTop:'12px', inlineSize:'660px'}}>AxelarSea infinity is a GameFi running on Avalanche. Having trouble with using AxelarNFT on Avalanche to beat the bosses? Try bridging AxelarNFT on Fantom to fight them instead!</h6>
                   </div>
                   <Link to="/nft-bridge">
@@ -454,14 +458,43 @@ const PlayAxelar = () => {
                 <div className="gamefi-box-detail pd-20">
                   <div className="mb-auto d-flex justify-content-between">
                     <div className="p-2">
-                      <h5>MG_AMDARAIS</h5>
+                      <h5 >{nftSelect == null ? 'Select Your Avalanche NFT' : nftSelect.title}</h5>
                     </div>
                     <div className="d-flex align-items-center" style={{marginBottom:'1rem'}}>
-                      <h5 >{nftSelect == null ? 'Select Your Avalanche NFT' : nftSelect.title}</h5>
-                      <img src={avaxLogo} alt="" width="32px" style={{marginLeft:'13px'}}/>
+                    <h5>MG_AMDARAIS</h5>
+                      {/* <img src={avaxLogo} alt="" width="32px" style={{marginLeft:'13px'}}/> */}
                     </div>
                   </div>
                   <div className="d-flex justify-content-between">
+                  <div className="hero-detail-box pd-20">
+                      <div className="d-flex align-items-center justify-content-between">
+                        <img src={atk} alt="" />
+                        <h6>Atk</h6>
+                        <h5>{nftSelect == null ? '-' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX") ? '83' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? '99' : '-'}</h5>
+                        <img src={nftSelect == null ? '-' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX") ? downRed : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? upGreen : '-'} alt="" style={{height:'2rem'}}/>
+                      </div>
+                      <div className="d-flex align-items-center justify-content-between" style={{marginTop:'0.7rem'}}>
+                        <img src={dex} alt="" />
+                        <h6>Dex</h6>
+                        <h5>{nftSelect == null ? '-' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX") ? '85' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? '99' : '-'}</h5>
+                        <img src={nftSelect == null ? '-' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX") ? downRed : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? upGreen : '-'} alt=""  style={{height:'2rem'}}/>
+                      </div>
+                      <div className="d-flex align-items-center justify-content-between" style={{marginTop:'0.7rem'}}>
+                        <img src={agi} alt="" />
+                        <h6>Agi</h6>
+                        <h5>{nftSelect == null ? '-' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX") ? '81' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? '99' : '-'}</h5>
+                        <img src={nftSelect == null ? '-' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX") ? downRed : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? upGreen : '-'} alt=""  style={{height:'2rem'}}/>
+                      </div>
+                    </div>
+                    
+                    <button
+                      style={{padding:'10px 25px', marginTop:'6rem', width:'200px', height:'45px'}} 
+                      type="submit" 
+                      onClick={() => setWinModalShow(true)}
+                      disabled={nftSelect == null ? true : false}
+                      >
+                      <span>Start Fight</span>
+                    </button>
                     <div className="hero-detail-box pd-20">
                       <div className="d-flex align-items-center justify-content-between">
                         <img src={atk} alt="" />
@@ -477,31 +510,6 @@ const PlayAxelar = () => {
                         <img src={agi} alt="" />
                         <h6>Agi</h6>
                         <h5>87</h5>
-                      </div>
-                    </div>
-                    <button
-                      style={{padding:'10px 25px', marginTop:'6rem', width:'200px', height:'45px'}} 
-                      type="submit" 
-                      onClick={() => setWinModalShow(true)}
-                      disabled={nftSelect == null ? true : false}
-                      >
-                      <span>Start Fight</span>
-                    </button>
-                    <div className="hero-detail-box pd-20">
-                      <div className="d-flex align-items-center justify-content-between">
-                        <img src={atk} alt="" />
-                        <h6>Atk</h6>
-                        <h5>{nftSelect == null ? '-' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX") ? '83' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? '99' : '-'}</h5>
-                      </div>
-                      <div className="d-flex align-items-center justify-content-between" style={{marginTop:'0.7rem'}}>
-                        <img src={dex} alt="" />
-                        <h6>Dex</h6>
-                        <h5>{nftSelect == null ? '-' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX") ? '85' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? '99' : '-'}</h5>
-                      </div>
-                      <div className="d-flex align-items-center justify-content-between" style={{marginTop:'0.7rem'}}>
-                        <img src={agi} alt="" />
-                        <h6>Agi</h6>
-                        <h5>{nftSelect == null ? '-' : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX") ? '81' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? '99' : '-'}</h5>
                       </div>
                     </div>
                   </div>
@@ -539,7 +547,12 @@ const PlayAxelar = () => {
                         setWinModalShow(false)
                         setNftSelect(null)
                       }}
-        result={nftSelect == null ? "-" : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX") ? 'You Lose' : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? 'You Win!!' : '-'}
+        result={nftSelect == null ? "-" 
+        : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX")
+         ? <h1 style={{color:'red'}}>You Lose</h1> : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? <h1 className="congratulation-title">You Win!!</h1> : '-'}
+        exp={nftSelect == null ? "-" 
+        : (nftSelect.nameCollection == "AxelarNFT AVAX" && nftSelect.tags == "AVAX")
+         ? <h4 style={{color:'red', marginBottom:'20px'}}>Exp -2,300</h4> : (nftSelect.nameCollection == "AxelarNFT Fantom" && nftSelect.tags == "AVAX") ? <h4 className="congratulation-title">Exp +1000</h4> : '-'}
         nftSelect={nftSelect}
         setWinModalShow={setWinModalShow}
         setNftSelect={setNftSelect}

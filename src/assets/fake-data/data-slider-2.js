@@ -6,7 +6,7 @@ const heroSliderData = [
         title_1: "First Cross-Chain",
         title_2: "NFT Bridge & Marketplace",
         title_3: "Unleashing the hidden potential of your NFTs",
-        description: "Unshackle your NFTs from the constraints of chains. Trades with any tokens from any chains. Bridge NFTs with full utilization.",
+        description: "Novel NFT bridging standard and interoperable one-stop marketplace where NFT can be utilized to its full potential and traded with tokens from any chain in a single location.",
         img: img1,
         class: 'left',
         status: 'a'
