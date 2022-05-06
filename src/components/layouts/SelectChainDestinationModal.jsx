@@ -73,7 +73,7 @@ const SelectChainDestinationModal = (props) => {
             <input type="text" placeholder="Search Chain"/>
             <ul className="list-group">
             {data.map((item,index) => (
-                <li className="list-group-item list-group-item-action justify-content-between" style={{border:'none', cursor:'pointer'}} onClick={() => handleChangeChain(item.topic, item.chainId, item.img ,index)} >
+                <li className="list-group-item list-group-item-action justify-content-between" style={{border:'none', cursor:(props.myNftOn === item.topic) ? 'not-allowed' : 'pointer' , opacity:(props.myNftOn === item.topic) ? '0.6' : '1'}}   onClick={() => handleChangeChain(item.topic, item.chainId, item.img ,index)} >
                     <div className="d-flex align-items-center justify-content-between">
                             <div className="d-flex align-items-center justify-content-center">
                                 <img src={item.img} alt="" width="40px" height="40px"/>

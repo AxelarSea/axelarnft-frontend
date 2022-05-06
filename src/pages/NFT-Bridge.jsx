@@ -83,6 +83,8 @@ const sampleNftId = {
 
 const NFTBridge = () => {
 
+
+
   const [congratBridgeModalShow,setCongratBridgeModalShow] = useState(false)
 
   const [selectChainDestinationShow,setSelectChainDestinationShow] = useState(false)
@@ -597,6 +599,8 @@ const NFTBridge = () => {
           setDestinationNftChainImg(img);
           setSelectChainDestinationShow(false)
         }}
+        myNftOn={myNftOn}
+
         
         // setDestinationNftChain={setDestinationNftChain}
         // setDestinationNftChainImg={setDestinationNftChainImg}
