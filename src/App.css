@@ -143,8 +143,8 @@ button:disabled {
   font-family: 'Urbanist';
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 14px;
+  line-height: 20px;
   display: flex;
   align-items: center;
   color: #B0B5B7;
@@ -181,8 +181,8 @@ button:disabled {
   font-family: 'Urbanist';
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 14px;
+  line-height: 20px;
   display: flex;
   align-items: center;
 }
@@ -349,6 +349,16 @@ color: #B0B5B7;
 .nftbridge-box {
   width: 615px;
   height: 682px;
+  left: 413px;
+  top: 200px;
+  background: #FFFFFF;
+  border: 1px solid #DCDCE2;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.faucet-box {
+  width: 615px;
+  height: auto;
   left: 413px;
   top: 200px;
   background: #FFFFFF;
@@ -679,6 +689,11 @@ height: 41px;
     height: auto;
     padding: 10px;
   }
+  .faucet-box {
+    width: 380px;
+    height: auto;
+    padding: 10px;
+  }
   .nftbridge-process{
     display: flex;
   }
@@ -780,4 +795,7 @@ margin-top: 2rem;
   border: 1px solid #DCDCE2;
   border-radius: 10px;
   margin: 10px 0px;
+}
+.hidden {
+  display: none !important;
 }
