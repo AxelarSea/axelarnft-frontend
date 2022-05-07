@@ -57,7 +57,7 @@ const CreateItem = () => {
       let account = (await web3.eth.getAccounts())[0];
       let contract = new AxelarSeaSampleNft(chainId, account);
 
-      let totalSupplyBefore = await contract.totalSupply();
+      // let totalSupplyBefore = await contract.totalSupply();
       await contract.mint();
 
       Swal.fire(
@@ -66,17 +66,17 @@ const CreateItem = () => {
         'warning'
       )
   
-      await wait(500);
+      await wait(5000);
   
-      let totalSupply = await contract.totalSupply();
+      // let totalSupply = await contract.totalSupply();
 
-      for (let i = totalSupplyBefore; i <= totalSupply; i++) {
-        try {
-          await fetchItem(chainId, contract.address, i);
-        } catch (err) {
-          await refreshMetadata(chainId, contract.address, i)
-        }
-      }
+      // for (let i = totalSupplyBefore; i <= totalSupply; i++) {
+      //   try {
+      //     await fetchItem(chainId, contract.address, i);
+      //   } catch (err) {
+      //     await refreshMetadata(chainId, contract.address, i)
+      //   }
+      // }
   
       // window.alert('Mint success');
       Swal.fire(

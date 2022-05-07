@@ -252,9 +252,9 @@ export async function buyERC721(
 
   await executeMetaWalletTx(chainId, address, signature);
 
-  await wait(1000);
+  await wait(6000);
 
-  await refreshMetadata(chainId, collectionAddress, tokenId);
+  // await refreshMetadata(chainId, collectionAddress, tokenId);
 }
 
 export async function fetchAllItems() {
@@ -386,7 +386,7 @@ export async function bridgeNft(sourceChainId, destChainId, nftId, tokenId, to) 
 
   await wait(500);
 
-  refreshMetadata(sourceChainId, sourceNftAddress, tokenId);
+  // refreshMetadata(sourceChainId, sourceNftAddress, tokenId);
 
   let destBridgeController = new NftBridgeController(destChainId, account, true);
   let destNftAddress = await destBridgeController.nftId2address(nftId);
@@ -402,10 +402,10 @@ export async function bridgeNft(sourceChainId, destChainId, nftId, tokenId, to) 
       }
     } catch (err) {}
 
-    await wait(1000);
+    await wait(3000);
   }
 
-  await refreshMetadata(destChainId, destNftAddress, tokenId);
+  // await refreshMetadata(destChainId, destNftAddress, tokenId);
 }
 
 export async function getDestinationNftAddress(sourceChainId, sourceNftAddress, destChainId) {
