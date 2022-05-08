@@ -79,6 +79,32 @@ const TestnetCheck = (props) => {
   //   fetchData()
   // },[])
 
+  const bridgePassed = (
+    data.bridge_unlock_1287 +
+      data.bridge_unlock_3 +
+      data.bridge_unlock_4002 +
+      data.bridge_unlock_43113 +
+      data.bridge_unlock_80001 >
+      0 &&
+    data.bridge_back_1287 +
+      data.bridge_back_3 +
+      data.bridge_back_4002 +
+      data.bridge_back_43113 +
+      data.bridge_back_80001 >
+      0 &&
+    data.bridge_lock_mirror_1287 +
+      data.bridge_lock_mirror_3 +
+      data.bridge_lock_mirror_4002 +
+      data.bridge_lock_mirror_43113 +
+      data.bridge_lock_mirror_80001 -
+      (data.bridge_back_1287 +
+        data.bridge_back_3 +
+        data.bridge_back_4002 +
+        data.bridge_back_43113 +
+        data.bridge_back_80001) >
+      0
+  )
+
     return (
         <Modal show={props.onShow} onHide={props.onHide}>
       <Modal.Header closeButton></Modal.Header>
@@ -109,9 +135,8 @@ const TestnetCheck = (props) => {
           <hr style={{}}/>
         <h5 className="testnetquest d-flex align-items-center" style={{marginTop:'1.5rem'}}>Bridge an NFT on AxelarSea<a href="https://youtu.be/mRK8HH_diH4"  target="_blank" style={{marginLeft:'1rem', fontSize:'14px', cursor:'pointer', color:'gray', backgroundColor:'#f8f8f8', padding:'1.5px', borderRadius:'5px', border:'0.5px solid gray'}}>Guide</a><a className="newpage-title" style={{marginLeft:'1rem'}}>New!</a></h5>
           <ul className="questlist" style={{marginTop:'0.75rem'}}>
-            <li className="questlist-text"><img src={tool} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Bridge an NFT from one chain to another chain</li>
-            <li className="questlist-text"><img className="align-self-start" src={tool} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Bridge a different NFT to another chain and back to the original chain</li>
-            <p className="center" style={{fontSize:'12px', marginTop:'-0.5rem'}}>The pair of chains used in the requirements of bridging must be different.</p>
+            <li className={bridgePassed ? 'green' : "questlist-text"}><img className="align-self-start" src={tool} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Bridge one of your NFTs in a loop with at least 2 side chains.</li>
+            <p className="center" style={{fontSize:'12px', marginTop:'0.5rem', lineHeight: '18px'}}>For example, users can bridge an NFT from Avalanche &gt; Fantom &gt; Moonbeam &gt; Avalanche to complete the loop.</p>
           </ul>
           {/* <p className="center" style={{fontSize:'14px', marginTop:'1rem'}}>Guide: How to place a sale - <a href="https://youtu.be/sysSofNXAPk"  target="_blank">here</a></p>
           <p className="center" style={{marginTop:'0.5rem', fontSize:'14px', marginTop:'1rem'}}>Guide: How to make a buy - <a href="https://youtu.be/1Bh89jYzy-8" target="_blank">here</a></p>
