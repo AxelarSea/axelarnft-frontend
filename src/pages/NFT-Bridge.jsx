@@ -551,7 +551,7 @@ const NFTBridge = () => {
                 {!processing && <span>Bridge & Transfer</span>}
               </button>
               </div>
-              {myNftOn === 'Polygon' ? <p className="d-flex justify-content-center">(This process will take around 20 mins)</p>
+              {myNftOn === 'Polygon' ? <p className="d-flex justify-content-center">(For Polygon Testnet, the process will take around 20 minutes)</p>
                   :
                   <p className="d-flex justify-content-center">(This process will take around 5 mins)</p>
                   }
