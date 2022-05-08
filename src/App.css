@@ -799,3 +799,6 @@ margin-top: 2rem;
 .hidden {
   display: none !important;
 }
+.countdown {
+  font-size: large;
+}
