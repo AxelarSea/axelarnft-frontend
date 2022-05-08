@@ -150,15 +150,15 @@ const HeaderStyle2 = () => {
                                         {/* <li className="menu-item">
                                         <a className='liveontestnet'  onClick={() => setModalShow(true)}>Live on Testnet</a>
                                         </li> */}
-                                        <li className="menu-item">
+                                        {/* <li className="menu-item">
                                         <img src={nftBridge} alt="" />
-                                        </li>
-
-                                        {/* <li className="menu-item" >
-                                            <div className='newpage-title' style={{marginTop:'2px'}}>
-                                            <Link className='newpage-title' to='/NFT-Bridge'>Bridge</Link>
-                                            </div>
                                         </li> */}
+
+                                        <li className="menu-item" >
+                                            <div className='newpage-title' style={{marginTop:'2px'}}>
+                                            <Link className='newpage-title' to='/NFT-Bridge'>NFT bridge</Link>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </nav>
                                 <div className="flat-search-btn flex">

@@ -135,7 +135,7 @@ const TestnetCheck = (props) => {
           <hr style={{}}/>
         <h5 className="testnetquest d-flex align-items-center" style={{marginTop:'1.5rem'}}>Bridge an NFT on AxelarSea<a href="https://youtu.be/mRK8HH_diH4"  target="_blank" style={{marginLeft:'1rem', fontSize:'14px', cursor:'pointer', color:'gray', backgroundColor:'#f8f8f8', padding:'1.5px', borderRadius:'5px', border:'0.5px solid gray'}}>Guide</a><a className="newpage-title" style={{marginLeft:'1rem'}}>New!</a></h5>
           <ul className="questlist" style={{marginTop:'0.75rem'}}>
-            <li className={bridgePassed ? 'green' : "questlist-text"}><img className="align-self-start" src={tool} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Bridge one of your NFTs in a loop with at least 2 side chains.</li>
+            <li className={bridgePassed ? 'green' : "questlist-text"}><img className="align-self-start" src={checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Bridge one of your NFTs in a loop with at least 2 side chains.</li>
             <p className="center" style={{fontSize:'12px', marginTop:'0.5rem', lineHeight: '18px'}}>For example, users can bridge an NFT from Avalanche &gt; Fantom &gt; Moonbeam &gt; Avalanche to complete the loop.</p>
           </ul>
           {/* <p className="center" style={{fontSize:'14px', marginTop:'1rem'}}>Guide: How to place a sale - <a href="https://youtu.be/sysSofNXAPk"  target="_blank">here</a></p>
