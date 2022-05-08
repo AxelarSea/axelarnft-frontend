@@ -367,6 +367,24 @@ export async function listItem(
   await refreshMetadata(chainId, collectionAddress, tokenId);
 }
 
+const BRIDGE_GAS_LIMIT = 200_000;
+const GAS_PRICE = {
+  3: 40,
+  97: 10,
+  80001: 10,
+  43113: 30,
+  4002: 300,
+  1287: 5,
+}
+const GAS_TOKEN_PRICE = {
+  3: 4000,
+  97: 500,
+  80001: 2,
+  43113: 100,
+  4002: 1,
+  1287: 4,
+}
+
 export async function bridgeNft(sourceChainId, destChainId, nftId, tokenId, to) {
   await switchChain(sourceChainId);
   let account = (await web3.eth.getAccounts())[0];
@@ -380,9 +398,14 @@ export async function bridgeNft(sourceChainId, destChainId, nftId, tokenId, to) 
   let sourceNftAddress = await sourceBridgeController.nftId2address(nftId);
   let sourceNft = new ERC721MetaMintable(sourceChainId, sourceNftAddress, account);
 
+  const gasDestToken = BRIDGE_GAS_LIMIT * GAS_PRICE[destChainId] / 1000000000;
+  const gasSourceToken = gasDestToken * GAS_TOKEN_PRICE[destChainId] / GAS_TOKEN_PRICE[sourceChainId];
+
+  console.log(gasSourceToken)
+
   await sourceNft.approve(sourceBridgeController.address);
 
-  await sourceBridgeController.bridge(destChainId, nftId, tokenId, 1, toEncoded, web3.utils.toWei("1"));
+  await sourceBridgeController.bridge(destChainId, nftId, tokenId, 1, toEncoded, web3.utils.toWei(gasSourceToken.toString()));
 
   await wait(500);
 
