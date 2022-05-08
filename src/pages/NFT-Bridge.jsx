@@ -71,6 +71,7 @@ import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
 import { cancelListing, crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
 import Swal from "sweetalert2";
 import CongratBridgeModal from "../components/layouts/CongratBridgeModal";
+import wait from "../utils/wait";
 
 const sampleNftId = {
   "3": "1020847100762815390390123822295304634369",
@@ -79,7 +80,6 @@ const sampleNftId = {
   "43113": "14670593685062419975296469450205822900502529",
   "80001": "27222929636041998015533431969148888684691457"
 }
-
 
 const NFTBridge = () => {
 
@@ -376,14 +376,11 @@ const NFTBridge = () => {
 
       // console.log(nftSelect.chainId, destinationNftChainId, nftSelect.nftId, nftSelect.tokenId, nftSelect.owner)
       await bridgeNft(nftSelect.chainId, destinationNftChainId, nftSelect.nftId, nftSelect.tokenId, walletAddress);
-  
-      Swal.fire(
-        'Bridge Success!',
-        'You have bridged NFT on ' + myNftOn + ' to ' + destinationNftChain + '!',
-        'success'
-      ).then(
-        setCongratBridgeModalShow(true)
-      )
+
+      await wait(6000);
+
+      setCongratBridgeModalShow(true)
+      refreshData2();
     } finally {
       setProcessing(false);
     }

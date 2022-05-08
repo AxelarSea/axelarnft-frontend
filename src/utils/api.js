@@ -403,9 +403,11 @@ export async function bridgeNft(sourceChainId, destChainId, nftId, tokenId, to) 
 
   console.log(gasSourceToken)
 
-  await sourceNft.approve(sourceBridgeController.address);
-
-  await sourceBridgeController.bridge(destChainId, nftId, tokenId, 1, toEncoded, web3.utils.toWei(gasSourceToken.toString()));
+  if (!(await sourceNft.allowance(account, sourceBridgeController.address))) {
+    await sourceNft.approve(sourceBridgeController.address);
+  }
+  
+  await sourceBridgeController.bridge(destChainId, nftId, tokenId, 1, toEncoded, web3.utils.toWei(gasSourceToken.toPrecision(9)));
 
   await wait(500);
 
