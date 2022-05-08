@@ -2,7 +2,7 @@ import NftBridgeControllerABI from "./NftBridgeController.json";
 import ContractCache, { ContractCacheReadOnly } from "./ContractCache";
 
 const address = {
-  "3": "0x14BAEaa10561824ebb730627b983b7FF563937A8",
+  "3": "0x4b4b2a2fF4e244d0743583F68a0948C70B377Ff0",
   "1287": "0x56373111e61B98E42D1F79aC96216FBe6bDB84Fe",
   "4002": "0x9E79695DC78538AC6935f9BBB8Dc118a7003585A",
   "43113": "0x3047c4d21EE1C5b2de3Bfbeed79881dCf0E1a286",

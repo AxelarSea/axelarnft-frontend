@@ -416,6 +416,9 @@ export async function bridgeNft(sourceChainId, destChainId, nftId, tokenId, to) 
   let destNft = new ERC721MetaMintable(destChainId, destNftAddress, account, true);
   let unlocked = false;
 
+  console.log('NFT ID', nftId);
+  console.log('Dest NFT', destNftAddress);
+
   while (!unlocked) {
     console.log('WAITING FOR UNLOCK')
 
