@@ -16,65 +16,7 @@ const ITEM_PER_PAGE = 18;
 
 const ExploreItem = (props) => {
 
-  const [data,setData] = useState(
-    [
-        {
-            img: imgTodayPick,
-            title: "Loading...",
-            tags: "bsc",
-            imgAuthor: imgAuthor,
-            nameAuthor: ".",
-            Price: "4.89 ETH",
-            wishlist: "100",
-        },
-        {
-            img: imgTodayPick,
-            title: "Loading...",
-            tags: "bsc",
-            imgAuthor: imgAuthor,
-            nameAuthor: ".",
-            Price: "4.89 ETH",
-            wishlist: "100",
-        },
-        {
-            img: imgTodayPick,
-            title: "Loading...",
-            tags: "bsc",
-            imgAuthor: imgAuthor,
-            nameAuthor: ".",
-            Price: "4.89 ETH",
-            wishlist: "100",
-        },
-        {
-            img: imgTodayPick,
-            title: "Loading...",
-            tags: "bsc",
-            imgAuthor: imgAuthor,
-            nameAuthor: ".",
-            Price: "4.89 ETH",
-            wishlist: "100",
-        },
-        {
-            img: imgTodayPick,
-            title: "Loading...",
-            tags: "bsc",
-            imgAuthor: imgAuthor,
-            nameAuthor: ".",
-            Price: "4.89 ETH",
-            wishlist: "100",
-        },
-        {
-            img: imgTodayPick,
-            title: "Loading...",
-            tags: "bsc",
-            imgAuthor: imgAuthor,
-            nameAuthor: ".",
-            Price: "4.89 ETH",
-            wishlist: "100",
-        },
-    ]
-)
-
+  const data = props.data;
 
   const [visible, setVisible] = useState(ITEM_PER_PAGE);
   const showMoreItems = () => {
@@ -86,15 +28,6 @@ const ExploreItem = (props) => {
 
   const [modalShow, setModalShow] = useState(false);
 
-  useEffect(() => {
-    if(props.data.length > 0){
-      setData(props.data)
-      console.log(props.data)
-
-    }
-    console.log(props.data)
-
-  },[data])
   return (
     <Fragment>
       <div className="explore">
