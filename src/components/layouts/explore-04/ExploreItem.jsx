@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment,useEffect } from "react";
 import { Link } from "react-router-dom";
 import { maskAddress } from "../../../utils/address";
 import { fetchAllListedItems } from "../../../utils/api";
@@ -10,10 +10,198 @@ import avaxLogo from '../../../assets/images/icon/avax-logo.svg'
 import moonbeamLogo from '../../../assets/images/icon/moonbeam-logo.svg'
 import fantomLogo from '../../../assets/images/icon/fantom-logo.svg'
 
+import imgTodayPick from '../../../assets/images/box-item/img-today-pick-demo.svg'
+import imgAuthor from '../../../assets/images/avatar/satoshi.svg'
 const ITEM_PER_PAGE = 18;
 
 const ExploreItem = (props) => {
-  const data = props.data;
+
+  const [data,setData] = useState(
+    [
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Hamlet Contemplates Contemplates ",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: "SalvadorDali",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+
+    ]
+)
+
 
   const [visible, setVisible] = useState(ITEM_PER_PAGE);
   const showMoreItems = () => {
@@ -24,6 +212,16 @@ const ExploreItem = (props) => {
   };
 
   const [modalShow, setModalShow] = useState(false);
+
+  useEffect(() => {
+    if(props.data.length > 0){
+      setData(props.data)
+      console.log(props.data)
+
+    }
+    console.log(props.data)
+
+  },[data])
   return (
     <Fragment>
       <div className="explore">
