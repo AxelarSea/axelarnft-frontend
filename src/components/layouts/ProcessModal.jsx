@@ -20,6 +20,17 @@ const ProcessModal = (props) => {
 
 
   const [faqModalShow,setFaqModalShow] = useState(false)
+
+  const [time,setTime] = useState(Date.now() + 30000)
+
+  useEffect(() => {
+    if(props.status == 3){
+      setTime(Date.now() + 30000)
+    }
+    else if(props.status == 5){
+      setTime(Date.now() + 30000)
+    }
+  },[props.status])
     return (
         <Modal show={props.onShow} onHide={props.onHide}>
       <Modal.Header closeButton></Modal.Header>
@@ -27,10 +38,11 @@ const ProcessModal = (props) => {
           <div  className="transaction-warning-box">
             <h6 className="transaction-warning-detail">In future versions, users will be able to track the buying process in real time.</h6>
           </div>
+
           <div className="count-box pd-20">
             <p className="center" style={{fontSize:'16px'}}>Estimated Time</p>
             <div className="center">
-              <Countdown className="center countdown" date={Date.now() + 5000} >
+              <Countdown className="center countdown" date={time} >
                 <span  className="center countdown">Please keep this window open.</span>
               </Countdown>
             </div>
@@ -43,7 +55,7 @@ const ProcessModal = (props) => {
             <h6 className="transaction-step-detail"><img src={props.status == 3 ? twoWhite : props.status > 3 ? twoGreen : (props.status < 4 && props.status > 1) ? twoWhite : two} style={{marginRight: '1rem'}}/>Sign signature in metamask to confirm buying transaction</h6>
           </div>
           <div className="transaction-step-box">
-            <h6 className="transaction-step-detail"><img src={props.status == 4 ? threeWhite : three} style={{marginRight: '1rem'}}/>Wait for transaction to complete </h6>
+            <h6 className="transaction-step-detail"><img src={props.status == 5 ? threeWhite : three} style={{marginRight: '1rem'}}/>Wait for transaction to complete </h6>
           </div>
          
           
