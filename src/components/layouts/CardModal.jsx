@@ -68,12 +68,17 @@ const CardModal = (props) => {
       }
     }
 
+    let subStatus = 0;
+
     try {
       props.setBuyNowModal(false)
       setModalShow(true)
       setProcessing(true);
 
-      await buyERC721(terraWallet == "TERRA_STATION" ? connectedWallet : terraWallet, props.chainId, props.collectionAddress, props.tokenId, props.listTokenAddress, props.listPrice, setStatus);
+      await buyERC721(terraWallet == "TERRA_STATION" ? connectedWallet : terraWallet, props.chainId, props.collectionAddress, props.tokenId, props.listTokenAddress, props.listPrice, status => {
+        subStatus = status;
+        setStatus(status)
+      });
       setCongratBuyModalShow(true);
 
       setModalShow(false);
@@ -81,13 +86,13 @@ const CardModal = (props) => {
     } catch (err) {
       console.error(err)
 
-      if (status < 1) {
+      if (subStatus < 1) {
         Swal.fire(
           'Axelar Error!',
           'Cannot get deposit address!',
           'error'
         )
-      } else if (status < 2) {
+      } else if (subStatus < 2) {
         Swal.fire(
           'Insufficient fund or gas!',
           'Please request luna from faucet and swap some luna to ust',

@@ -24,6 +24,7 @@ const ProcessModal = (props) => {
   const [time,setTime] = useState(Date.now() + 30000)
 
   useEffect(() => {
+    console.log(props.status == 0, props.onShow)
     if (props.status == 0 && props.onShow) {
       setTime(Date.now() + 30000)
     }
