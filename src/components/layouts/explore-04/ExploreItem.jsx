@@ -16,7 +16,118 @@ const ITEM_PER_PAGE = 18;
 
 const ExploreItem = (props) => {
 
-  const data = props.data;
+  const [data,setData] =  useState(
+    [
+        {
+            img: imgTodayPick,
+            title: "Loading...",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: ".",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Loading...",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: ".",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Loading...",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: ".",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Loading...",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: ".",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Loading...",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: ".",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Loading...",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: ".",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Loading...",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: ".",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Loading...",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: ".",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Loading...",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: ".",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Loading...",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: ".",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Loading...",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: ".",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+        {
+            img: imgTodayPick,
+            title: "Loading...",
+            tags: "bsc",
+            imgAuthor: imgAuthor,
+            nameAuthor: ".",
+            Price: "4.89 ETH",
+            wishlist: "100",
+        },
+    ]
+)
 
   const [visible, setVisible] = useState(ITEM_PER_PAGE);
   const showMoreItems = () => {
