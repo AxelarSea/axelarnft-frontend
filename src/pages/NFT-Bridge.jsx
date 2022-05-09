@@ -653,9 +653,9 @@ const NFTBridge = () => {
         tokenId={tokenId}
         chainId={chainId}
       />
-      <MaintainModal 
+      {/* <MaintainModal 
       onShow={true}
-      />
+      /> */}
     </div>
   );
 };

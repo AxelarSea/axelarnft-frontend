@@ -65,7 +65,7 @@ const CongratBuyModal = (props) => {
                 </div>
               </div>
               <div className="">
-              <img src={props.chainId === '3' ? ethLogo : props.chainId === '1287' ? moonbeamLogo : props.chainId === '43113' ? avaxLogo : props.chainId === '80001' ? polygonLogo : props.chainId === '4002' ? fantomLogo : ''} alt="" width="50" height="50" />
+              <img src={props.chainId === '3' ? ethLogo : props.chainId === '1287' ? moonbeamLogo : props.chainId === '43113' ? avaxLogo : props.chainId === '80001' ? polygonLogo : props.chainId === '4002' ? fantomLogo : ''} alt="" width="30" height="30" />
               </div>
             </div>
           </div>
