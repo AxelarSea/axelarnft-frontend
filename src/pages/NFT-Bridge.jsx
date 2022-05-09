@@ -65,6 +65,7 @@ import stepTwo from "../../src/assets/images/icon/steptwo.svg"
 import SelectChainModal from "../components/layouts/SelectChainModal";
 import SelectChainDestinationModal from "../components/layouts/SelectChainDestinationModal";
 import SelectNftModal from '../components/layouts/SelectNftModal'
+import WaitingModal from "../components/layouts/WaitingModal";
 
 import Explore from "../components/layouts/explore-04/Explore";
 import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
@@ -213,6 +214,8 @@ const NFTBridge = () => {
   const [processing, setProcessing] = useState(false);
 
   const [modalShow , setModalShow] = useState(false)
+
+  const [waitingModalShow,setWaitingModalShow] = useState(false)
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -373,12 +376,15 @@ const NFTBridge = () => {
   async function bridge() {
     try {
       setProcessing(true);
+      setWaitingModalShow(true)
 
       // console.log(nftSelect.chainId, destinationNftChainId, nftSelect.nftId, nftSelect.tokenId, nftSelect.owner)
       await bridgeNft(nftSelect.chainId, destinationNftChainId, nftSelect.nftId, nftSelect.tokenId, walletAddress);
 
       await wait(6000);
 
+
+      setWaitingModalShow(false)
       setCongratBridgeModalShow(true)
       refreshData2();
     } finally {
@@ -591,6 +597,14 @@ const NFTBridge = () => {
         onSelect={onSelect}
         walletAddress={walletAddress}
       />
+
+      <WaitingModal 
+        onShow={waitingModalShow}
+        onHide={() => setWaitingModalShow(false)}
+
+      />
+
+      
       <SelectChainDestinationModal 
         onShow={selectChainDestinationShow}
         onHide={() => setSelectChainDestinationShow(false)}
@@ -601,7 +615,7 @@ const NFTBridge = () => {
           setSelectChainDestinationShow(false)
         }}
         myNftOn={myNftOn}
-
+        
         
         // setDestinationNftChain={setDestinationNftChain}
         // setDestinationNftChainImg={setDestinationNftChainImg}
@@ -617,8 +631,11 @@ const NFTBridge = () => {
                   setMyNftOn(null)
                   setMyNftOnImg(null)
                   setIsSelect(true)
+                  refreshData();
+                  refreshData2();
                 }
             }
+        processing={processing}
         nftSelect={nftSelect}
         myNftOnImg={myNftOnImg}
         destinationNftChainImg={destinationNftChainImg}

@@ -58,6 +58,31 @@ const FaqItems = () => {
                 title: 'The Guild.xyz bot is not responding! It`s accepting my request.',
                 text: <p>Open a ticket in our Discord.</p>
             },
+            {
+                key: "9",
+                title: 'I had so many issues the last time that, despite the fact that the transactions had already been confirmed, the NFT did not appear. Is this issue resolved?',
+                text: <p>YES! We’ve built a new database infrastructure that, fingers crossed, will completely eliminate this problem. Every mint, sell, buy, and bridge should be accurately reflected!</p>
+            },
+            {
+                key: "10",
+                title: 'Why does it take so long to bridge an NFT?',
+                text: <p>The required time is determined by several factors, including congestion on the source and destination networks, as well as the procedure through Axelar Network threshold signature schemes. We are collaborating with related parties to reduce processing time.</p>
+            },
+            {
+                key: "11",
+                title: 'Why does it require such a high gas fee?',
+                text: <p>This problem usually occurs when users attempt to send an NFT to the Ethereum chain. Users must cover the fees on the destination chain (by paying from the source chain), and the gas fee on the Ethereum chain is simply absurdly high. Try changing the destination chain to something other than Ethereum.</p>
+            },
+            {
+                key: "12",
+                title: 'Why does it take significantly longer time trying to bridge an NFT from Polygon chain?',
+                text: <p>Polygon Mumbai Testnet has quite a unique infrastructure that require a large amount of blocks to confirm. This structure does not exist on Polygon Mainnet so this issue will not arise when AxelarSea is released.</p>
+            },
+            {
+                key: "13",
+                title: ' Why can’t I see some of my NFTs in the eligible list to bridge?',
+                text: <p>You can only bridge an NFT that is not listed for sale.</p>
+            },
         ]
     )
     return (

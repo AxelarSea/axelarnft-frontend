@@ -580,14 +580,14 @@ const Collection = () => {
                                                         <div key={index} className="col-xl-3 col-lg-4 col-md-6 col-12">
                                                             <div className="sc-card-product explode ">
                                                                 <div className="card-media">
-                                                                    <Link to="/ItemDetails"><img src={data.img} alt="AxelarSea" /></Link>
+                                                                    <Link to="#"><img src={data.img} alt="AxelarSea" /></Link>
                                                                     <div className="button-place-bid ">
                                                                         <button onClick={() => setModalShow(true)} className="sc-button style-place-bid style bag fl-button pri-3"><span>Buy Now</span></button>
                                                                     </div>
                                                                     <Link to="/login" className="wishlist-button heart"><span className="number-like"> {data.wishlist}</span></Link>
                                                                 </div>
                                                                 <div className="card-title mg-bt-16">
-                                                                    <h5><Link to="/ItemDetails">"{data.title}"</Link></h5>
+                                                                    <h5><Link to="#">"{data.title}"</Link></h5>
                                                                 </div>
                                                                 <div className="meta-info">
                                                                     <div className="author">

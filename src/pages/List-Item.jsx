@@ -103,7 +103,7 @@ const CreateItem2 = () => {
               <h4 className="title-create-item">Preview item</h4>
               <div className="sc-card-product">
                 <div className="card-media">
-                  <Link to="/ItemDetails">
+                  <Link to="#">
                     <img src={data.metadata?.image} alt="AxelarSea" />
                   </Link>
                   {/* <Link to="/login" className="wishlist-button heart">
