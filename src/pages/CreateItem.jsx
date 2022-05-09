@@ -299,6 +299,11 @@ const CreateItem = () => {
                                                                     <li><span>Sports</span></li>
                                                                     <li><span>Utility</span></li> */}
                                 </ul>
+                                <div>
+                                  <div>
+                                    
+                                  </div>
+                                </div>       
                               </div>
                             </div>
                           </div>

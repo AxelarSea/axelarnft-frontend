@@ -10,6 +10,7 @@ import ProcessModal from './ProcessModal'
 import SelectTokenModal from "./SelectTokenModal";
 import SelectChainModal from './SelectChainModal'
 import FaqTestnetModal from './FaqTestnetModal'
+import CongratBuyModal from "./CongratBuyModal";
 
 import { useConnectedWallet, useLCDClient } from "@terra-money/wallet-provider";
 import web3 from "../../hooks/web3";
@@ -35,6 +36,8 @@ const CardModal = (props) => {
   const connectedWallet = useConnectedWallet();
 
   const [processing, setProcessing] = useState(false);
+
+  const [congratBuyModalShow,setCongratBuyModalShow] = useState(false)
 
   const [balance, setBalance] = useState(0);
   const [metamaskAccount, setMetamaskAccount] = useState("");
@@ -64,7 +67,9 @@ const CardModal = (props) => {
       setModalShow(true)
       setProcessing(true);
       await buyERC721(terraWallet == "TERRA_STATION" ? connectedWallet : terraWallet, props.chainId, props.collectionAddress, props.tokenId, props.listTokenAddress, props.listPrice);
-      window.alert("Buy success");
+      setModalShow(false);
+      setCongratBuyModalShow(true);
+      // window.alert("Buy success");
     } finally {
       setProcessing(false);
     }
@@ -290,7 +295,13 @@ const CardModal = (props) => {
         onShow={faqModalShow}
         onHide={() => setFaqModalShow(false)}
         />
-        
+        <CongratBuyModal 
+        onShow={congratBuyModalShow}
+        onHide={() => {
+                  setCongratBuyModalShow(false)
+                }
+            }
+      />
     </div>
     
   );

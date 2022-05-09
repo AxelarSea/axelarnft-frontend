@@ -601,6 +601,14 @@ const NFTBridge = () => {
       <WaitingModal 
         onShow={waitingModalShow}
         onHide={() => setWaitingModalShow(false)}
+        processing={processing}
+        nftSelect={nftSelect}
+        myNftOnImg={myNftOnImg}
+        destinationNftChainImg={destinationNftChainImg}
+        destinationNftChainId={destinationNftChainId}
+        collectionAddress={collectionAddress}
+        tokenId={tokenId}
+        chainId={chainId}
 
       />
 

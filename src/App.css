@@ -804,3 +804,8 @@ margin-top: 2rem;
   font-weight: 700;
   margin-top: 3rem;
 }
+.count-box {
+  background: #F8F8F8;
+  border: 1px solid #DCDCE2;
+  border-radius: 10px;
+}

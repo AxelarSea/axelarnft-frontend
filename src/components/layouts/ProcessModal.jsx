@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Modal } from "react-bootstrap";
+import Countdown from "react-countdown";
 import one from "../../assets/images/icon/1.svg";
 import two from "../../assets/images/icon/2.svg";
 import three from "../../assets/images/icon/3.svg";
@@ -18,6 +19,14 @@ const ProcessModal = (props) => {
       <div className="modal-body space-y-20 pd-20" style={{paddingTop:'1rem'}}>
           <div  className="transaction-warning-box">
             <h6 className="transaction-warning-detail">In future versions, users will be able to track the buying process in real time.</h6>
+          </div>
+          <div className="count-box pd-20">
+            <p className="center" style={{fontSize:'16px'}}>Estimated Time</p>
+            <div className="center">
+              <Countdown className="center countdown" date={Date.now() + 300000}>
+                <span  className="center countdown">Please keep this window open.</span>
+              </Countdown>
+            </div>
           </div>
           <h5 className="transaction-header">Please wait while the transaction is being processed.</h5>
           <div className="transaction-step-box">
