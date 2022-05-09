@@ -276,13 +276,13 @@ export async function fetchAllItems() {
   return response.data.docs;
 }
 
-export async function fetchAllListedItems({ limit = 500, skip = 0 } = {}) {
+export async function fetchAllListedItems({ limit = 20, page = 1 } = {}) {
   let response = await axios.get(
     process.env.REACT_APP_API_HOST + "/api/nft/items/listed",
     {
       params: {
         limit,
-        skip,
+        page,
         priceStart: 0.1,
       },
     }

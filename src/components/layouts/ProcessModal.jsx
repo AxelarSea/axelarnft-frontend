@@ -24,13 +24,16 @@ const ProcessModal = (props) => {
   const [time,setTime] = useState(Date.now() + 30000)
 
   useEffect(() => {
+    if (props.status == 0 && props.onShow) {
+      setTime(Date.now() + 30000)
+    }
     if(props.status == 3){
       setTime(Date.now() + 30000)
     }
     else if(props.status == 5){
       setTime(Date.now() + 30000)
     }
-  },[props.status])
+  },[props.status, props.onShow])
     return (
         <Modal show={props.onShow} onHide={props.onHide}>
       <Modal.Header closeButton></Modal.Header>

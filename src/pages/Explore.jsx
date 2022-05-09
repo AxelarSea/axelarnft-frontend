@@ -40,7 +40,7 @@ const Explore04 = () => {
     
       async function loadMore(pageSize = 18) {
         console.log("Refresh Start");
-        let items = await fetchAllListedItems({ limit: pageSize, skip: currentCursor });
+        let items = await fetchAllListedItems({ limit: pageSize, page: currentCursor / pageSize + 1 });
         console.log(items);
         setDefaultItems([...defaultItems, ...formatItems(items)]);
         setCurrentCursor(currentCursor + pageSize);

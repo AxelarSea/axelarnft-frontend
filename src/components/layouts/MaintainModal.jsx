@@ -4,6 +4,8 @@ import maintainImg from '../../assets/images/icon/maintain.svg'
 
 
 const MaintainModal = (props) => {
+  if (!parseInt(process.env.REACT_APP_UNDER_MAINTENANCE)) return <div></div>
+
     return (
         <Modal show={props.onShow} >
       <Modal.Header ></Modal.Header>
