@@ -323,6 +323,7 @@ const CardModal = (props) => {
         onShow={modalShow}
         onHide={() => setModalShow(false)}
         status={status}
+        setTransferFailedModalShow={setTransferFailedModalShow}
         />
         <SelectTokenModal 
         onShow={selectTokenModalShow}

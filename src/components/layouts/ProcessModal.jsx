@@ -9,6 +9,8 @@ import oneGreen from "../../assets/images/icon/oneGreen.svg";
 import twoGreen from "../../assets/images/icon/twoGreen.svg";
 import threeWhite from "../../assets/images/icon/threeWhite.svg";
 
+import TransferFailedModal from "./TranferFailedModal";
+
 import two from "../../assets/images/icon/2.svg";
 import three from "../../assets/images/icon/3.svg";
 import four from "../../assets/images/icon/4.svg";
@@ -46,7 +48,9 @@ const ProcessModal = (props) => {
           <div className="count-box pd-20">
             <p className="center" style={{fontSize:'16px'}}>Estimated Time</p>
             <div className="center">
-              <Countdown className="center countdown" date={time} >
+              <Countdown className="center countdown" date={time} onComplete={() => {props.setTransferFailedModalShow(true)
+              props.onHide()
+              }} >
                 <span  className="center countdown">Please keep this window open.</span>
               </Countdown>
             </div>
