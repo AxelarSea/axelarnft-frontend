@@ -800,5 +800,7 @@ margin-top: 2rem;
   display: none !important;
 }
 .countdown {
-  font-size: large;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 3rem;
 }

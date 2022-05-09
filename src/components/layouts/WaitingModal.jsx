@@ -8,7 +8,9 @@ const WaitingModal = (props) => {
       <Modal.Header closeButton></Modal.Header>
       <div className="d-flex flex-column  pd-20">
         <h1 className="center">Time remaining</h1>
-        <Countdown className="center countdown" date={Date.now() + 300000}></Countdown>
+        <Countdown className="center countdown" date={Date.now() + 300000}>
+          <span  className="center countdown">Please keep this window open.</span>
+          </Countdown>
       </div>  
     </Modal>
     )
