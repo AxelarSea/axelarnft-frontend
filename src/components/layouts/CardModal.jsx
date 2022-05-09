@@ -69,16 +69,18 @@ const CardModal = (props) => {
       props.setBuyNowModal(false)
       setModalShow(true)
       setProcessing(true);
+
       await buyERC721(terraWallet == "TERRA_STATION" ? connectedWallet : terraWallet, props.chainId, props.collectionAddress, props.tokenId, props.listTokenAddress, props.listPrice, setStatus);
-      setModalShow(false);
       setCongratBuyModalShow(true);
+
+      setModalShow(false);
       // window.alert("Buy success");
     } catch (err) {
       console.error(err)
       Swal.fire(
         'Buy Failed!',
         'You have been frontrunned, please buy another item!',
-        'success'
+        'error'
       )
     } finally {
       setProcessing(false);
@@ -312,8 +314,17 @@ const CardModal = (props) => {
         onShow={congratBuyModalShow}
         onHide={() => {
                   setCongratBuyModalShow(false)
+                  window.location.reload()
                 }
             }
+        name={props.name}
+        chainId={props.chainId}
+        collectionAddress={props.collectionAddress}
+        tokenId={props.tokenId}
+        listTokenAddress={props.listTokenAddress}
+        listPrice={props.listPrice}
+        img={props.img}
+        owner={props.owner}
       />
     </div>
     

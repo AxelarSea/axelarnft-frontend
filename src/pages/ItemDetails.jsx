@@ -442,6 +442,8 @@ const ItemDetails = () => {
         tokenId={tokenId}
         listTokenAddress={data.listTokenAddress}
         listPrice={data.listPrice}
+        img={data.metadata?.image}
+        owner={data.owner}
       />
     </div>
   );
