@@ -11,6 +11,7 @@ import SelectTokenModal from "./SelectTokenModal";
 import SelectChainModal from './SelectChainModal'
 import FaqTestnetModal from './FaqTestnetModal'
 import CongratBuyModal from "./CongratBuyModal";
+import TransferFailedModal from "./TranferFailedModal";
 
 import { useConnectedWallet, useLCDClient } from "@terra-money/wallet-provider";
 import web3 from "../../hooks/web3";
@@ -47,6 +48,8 @@ const CardModal = (props) => {
 
   const [status, setStatus] = useState(0);
 
+  const [transferFailedModalShow,setTransferFailedModalShow] = useState(false)
+
   const tokenOnClick = () => {
     setSelectTokenModalShow(true)
     
@@ -77,11 +80,8 @@ const CardModal = (props) => {
       // window.alert("Buy success");
     } catch (err) {
       console.error(err)
-      Swal.fire(
-        'Buy Failed!',
-        'You have been frontrunned, please buy another item!',
-        'error'
-      )
+      setTransferFailedModalShow(true)
+      setModalShow(false)
     } finally {
       setProcessing(false);
       setStatus(0);
@@ -301,6 +301,7 @@ const CardModal = (props) => {
         <ProcessModal 
         onShow={modalShow}
         onHide={() => setModalShow(false)}
+        status={status}
         />
         <SelectTokenModal 
         onShow={selectTokenModalShow}
@@ -325,6 +326,13 @@ const CardModal = (props) => {
         listPrice={props.listPrice}
         img={props.img}
         owner={props.owner}
+      />
+      <TransferFailedModal 
+        onShow={transferFailedModalShow}
+        onHide={() => {
+          setTransferFailedModalShow(false)
+          window.location.href="/Explore"
+        }}
       />
     </div>
     
