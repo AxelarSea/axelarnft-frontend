@@ -118,7 +118,7 @@ const CreateItem = () => {
               <h4 className="title-create-item ">Preview item</h4>
               <div className="sc-card-product">
                 <div className="card-media">
-                  <Link to="/ItemDetails">
+                  <Link to="#">
                     <img
                       src={
                         blockChain === "Ethereum"
@@ -149,7 +149,7 @@ const CreateItem = () => {
                 </div>
                 {/* <div className="card-title">
                   <h5>
-                    <Link to="/ItemDetails">"Cyber Doberman #766”</Link>
+                    <Link to="#">"Cyber Doberman #766”</Link>
                   </h5>
                   <div className="tags">bsc</div>
                 </div> */}

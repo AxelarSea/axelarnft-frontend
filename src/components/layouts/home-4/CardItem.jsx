@@ -21,7 +21,7 @@ const CardItem = () => {
                                     <div className="overlay"></div>
                                     <img src={img1} alt="AxelarSea" />
                                     <div className="content">
-                                        <div className="fs-16"><a href="/ItemDetails">"Hamlet Contemplates Hamlet Contemplates</a></div>
+                                        <div className="fs-16"><a href="#">"Hamlet Contemplates Hamlet Contemplates</a></div>
                                         <p>Graphic Art 3D</p>
                                     </div>
                                 </div>
@@ -29,7 +29,7 @@ const CardItem = () => {
                                     <div className="overlay"></div>
                                     <img src={img2} alt="AxelarSea" />
                                     <div className="content">
-                                        <div className="fs-16"><a href="/ItemDetails">"Hamlet Contemplates ...</a></div>
+                                        <div className="fs-16"><a href="#">"Hamlet Contemplates ...</a></div>
                                         <p>Graphic Art 3D</p>
                                     </div>
                                 </div>
@@ -39,7 +39,7 @@ const CardItem = () => {
                                     <div className="overlay"></div>
                                     <img src={img3} alt="AxelarSea" />
                                     <div className="content">
-                                        <div className="fs-16"><a href="/ItemDetails">CYBER ART</a></div>
+                                        <div className="fs-16"><a href="#">CYBER ART</a></div>
                                         <p>Graphic Art 3D</p>
                                     </div>   
                                     <div className="progress">
@@ -52,7 +52,7 @@ const CardItem = () => {
                                     <div className="overlay"></div>
                                     <img src={img4} alt="AxelarSea" />
                                     <div className="content">
-                                        <div className="fs-16"><a href="/ItemDetails">"Hamlet Contemplates ...</a></div>
+                                        <div className="fs-16"><a href="#">"Hamlet Contemplates ...</a></div>
                                         <p>Graphic Art 3D</p>
                                     </div>
                                 </div>
@@ -60,7 +60,7 @@ const CardItem = () => {
                                     <div className="overlay"></div>
                                     <img src={img5} alt="AxelarSea" />
                                     <div className="content">
-                                        <div className="fs-16"><a href="/ItemDetails">"Hamlet Contemplates ...</a></div>
+                                        <div className="fs-16"><a href="#">"Hamlet Contemplates ...</a></div>
                                         <p>Graphic Art 3D</p>
                                     </div>
                                 </div>
@@ -70,7 +70,7 @@ const CardItem = () => {
                                     <div className="overlay"></div>
                                     <img src={img6} alt="AxelarSea" />
                                     <div className="content">
-                                        <div className="fs-16"><a href="/ItemDetails">"Hamlet Contemplates ...</a></div>
+                                        <div className="fs-16"><a href="#">"Hamlet Contemplates ...</a></div>
                                         <p>Graphic Art 3D</p>
                                     </div>
                                 </div>
@@ -78,7 +78,7 @@ const CardItem = () => {
                                     <div className="overlay"></div>
                                     <img src={img7} alt="AxelarSea" />
                                     <div className="content">
-                                        <div className="fs-16"><a href="/ItemDetails">"Hamlet Contemplates ...</a></div>
+                                        <div className="fs-16"><a href="#">"Hamlet Contemplates ...</a></div>
                                         <p>Graphic Art 3D</p>
                                     </div>
                                 </div>
