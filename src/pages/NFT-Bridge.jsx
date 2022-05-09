@@ -610,7 +610,7 @@ const NFTBridge = () => {
         collectionAddress={collectionAddress}
         tokenId={tokenId}
         chainId={chainId}
-
+        time={myNftOn == 'Polygon' ? Date.now() + 1200000 : Date.now() + 300000}
       />
 
       

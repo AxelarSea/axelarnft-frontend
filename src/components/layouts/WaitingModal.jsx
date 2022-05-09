@@ -16,7 +16,7 @@ const WaitingModal = (props) => {
         <div className="count-box pd-20">
           <p className="center" style={{fontSize:'16px'}}>Estimated Time</p>
           <div className="center">
-            <Countdown className="center countdown" date={Date.now() + 300000}>
+            <Countdown className="center countdown" date={props.time}>
               <span  className="center countdown">Please keep this window open.</span>
             </Countdown>
           </div>
