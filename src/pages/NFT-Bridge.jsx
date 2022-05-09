@@ -66,6 +66,7 @@ import SelectChainModal from "../components/layouts/SelectChainModal";
 import SelectChainDestinationModal from "../components/layouts/SelectChainDestinationModal";
 import SelectNftModal from '../components/layouts/SelectNftModal'
 import WaitingModal from "../components/layouts/WaitingModal";
+import MaintainModal from "../components/layouts/MaintainModal";
 
 import Explore from "../components/layouts/explore-04/Explore";
 import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
@@ -651,6 +652,9 @@ const NFTBridge = () => {
         collectionAddress={collectionAddress}
         tokenId={tokenId}
         chainId={chainId}
+      />
+      <MaintainModal 
+      onShow={true}
       />
     </div>
   );

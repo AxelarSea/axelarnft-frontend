@@ -37,13 +37,13 @@ const ProcessModal = (props) => {
           </div>
           <h5 className="transaction-header">Please wait while the transaction is being processed.</h5>
           <div className="transaction-step-box">
-            <h6 className="transaction-step-detail"><img src={props.status == 0 ? oneWhite : oneGreen} style={{marginRight: '1rem'}}/>Approved transaction on Terra or Kepler wallet</h6>
+            <h6 className="transaction-step-detail"><img src={props.status <= 1 ? oneWhite : oneGreen} style={{marginRight: '1rem'}}/>Approved transaction on Terra or Kepler wallet</h6>
           </div>
           <div className="transaction-step-box">
-            <h6 className="transaction-step-detail"><img src={props.status == 1 ? twoWhite : props.status >= 1 ? twoGreen : two} style={{marginRight: '1rem'}}/>Sign signature in metamask to confirm buying transaction</h6>
+            <h6 className="transaction-step-detail"><img src={props.status == 3 ? twoWhite : props.status > 3 ? twoGreen : (props.status < 4 && props.status > 1) ? twoWhite : two} style={{marginRight: '1rem'}}/>Sign signature in metamask to confirm buying transaction</h6>
           </div>
           <div className="transaction-step-box">
-            <h6 className="transaction-step-detail"><img src={props.status == 5 ? threeWhite : three} style={{marginRight: '1rem'}}/>Wait for transaction to complete </h6>
+            <h6 className="transaction-step-detail"><img src={props.status == 4 ? threeWhite : three} style={{marginRight: '1rem'}}/>Wait for transaction to complete </h6>
           </div>
          
           
