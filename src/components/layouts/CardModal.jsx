@@ -259,7 +259,7 @@ const CardModal = (props) => {
             <a style={{ backgroundColor: "#f8f8f8",borderRadius:"20px",marginLeft:"1.5rem",marginRight:'6.5rem'}}>
               {maskAddress(metamaskAccount)}
             </a>
-            <button onClick={() => setFaqModalShow(true)} style={{padding:'0.5rem 3rem'}}>FAQ</button> 
+            {/* <button onClick={() => setFaqModalShow(true)} style={{padding:'0.5rem 3rem'}}>FAQ</button>  */}
           </p>
         </div>
 
