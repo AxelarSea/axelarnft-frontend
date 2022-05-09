@@ -2,6 +2,7 @@ import Countdown from "react-countdown";
 import { Modal } from "react-bootstrap";
 
 import arrowbridge from "../../assets/images/backgroup-secsion/arrow-bridge.svg";
+import spin from '../../assets/images/icon/processing.gif'
 
 const WaitingModal = (props) => {
 
@@ -9,10 +10,10 @@ const WaitingModal = (props) => {
     <Modal show={props.onShow} onHide={props.onHide}>
       <Modal.Header closeButton></Modal.Header>
       <div className="modal-body space-y-20 pd-20" style={{paddingTop:'1rem'}}>
-        <h2 className="center congratulation-title">Bridging</h2>
+        <h2 className="center congratulation-title">AxelarSea NFT Bridge</h2>
         
-        <p className="center">Processing</p>
-        <p className="center" style={{marginTop:'auto'}}>the destination chain</p>
+        <p className="center"><img src={spin} width='40px'/>Processing</p>
+        {/* <p className="center" style={{marginTop:'auto'}}>the destination chain</p> */}
         <div className="count-box pd-20">
           <p className="center" style={{fontSize:'16px'}}>Estimated Time</p>
           <div className="center">
