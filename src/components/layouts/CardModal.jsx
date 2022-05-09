@@ -80,7 +80,23 @@ const CardModal = (props) => {
       // window.alert("Buy success");
     } catch (err) {
       console.error(err)
-      setTransferFailedModalShow(true)
+
+      if (status < 1) {
+        Swal.fire(
+          'Axelar Error!',
+          'Cannot get deposit address!',
+          'error'
+        )
+      } else if (status < 2) {
+        Swal.fire(
+          'Insufficient fund or gas!',
+          'Please request luna from faucet and swap some luna to ust',
+          'error'
+        )
+      } else {
+        setTransferFailedModalShow(true)
+      }
+      
       setModalShow(false)
     } finally {
       setProcessing(false);
