@@ -221,7 +221,7 @@ const ExploreItem = (props) => {
     }
     console.log(props.data)
 
-  },[data])
+  },[props.data])
   return (
     <Fragment>
       <div className="explore">

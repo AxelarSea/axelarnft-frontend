@@ -76,7 +76,7 @@ const Explore04 = () => {
             </section>
             <Explore data={widgetSidebarData} setItems={setItems} items={items} defaultItems={defaultItems} formatItems={formatItems} >
                 <div className="col-xl-9 col-lg-9 col-md-12">
-                    <ExploreItem data={items} loadMore={loadMore} />
+                    <ExploreItem data={defaultItems} loadMore={loadMore} />
                 </div>
             </Explore>
             <Footer />
