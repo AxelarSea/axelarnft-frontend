@@ -9,9 +9,9 @@ const WaitingModal = (props) => {
     <Modal show={props.onShow} onHide={props.onHide}>
       <Modal.Header closeButton></Modal.Header>
       <div className="modal-body space-y-20 pd-20" style={{paddingTop:'1rem'}}>
-        <h2 className="center congratulation-title">Your NFT is on the way</h2>
+        <h2 className="center congratulation-title">Bridging</h2>
         
-        <p className="center">We will notify you when the NFT hits </p>
+        <p className="center">Processing</p>
         <p className="center" style={{marginTop:'auto'}}>the destination chain</p>
         <div className="count-box pd-20">
           <p className="center" style={{fontSize:'16px'}}>Estimated Time</p>
