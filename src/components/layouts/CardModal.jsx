@@ -15,6 +15,7 @@ import CongratBuyModal from "./CongratBuyModal";
 import { useConnectedWallet, useLCDClient } from "@terra-money/wallet-provider";
 import web3 from "../../hooks/web3";
 import { maskAddress } from "../../utils/address";
+import Swal from "sweetalert2";
 
 const CardModal = (props) => {
   const lcd = useLCDClient();
@@ -44,6 +45,8 @@ const CardModal = (props) => {
 
   const [terraWallet, setTerraWallet] = useState(window.localStorage.getItem("TERRA_WALLET") || "TERRA_STATION")
 
+  const [status, setStatus] = useState(0);
+
   const tokenOnClick = () => {
     setSelectTokenModalShow(true)
     
@@ -66,15 +69,25 @@ const CardModal = (props) => {
       props.setBuyNowModal(false)
       setModalShow(true)
       setProcessing(true);
-      await buyERC721(terraWallet == "TERRA_STATION" ? connectedWallet : terraWallet, props.chainId, props.collectionAddress, props.tokenId, props.listTokenAddress, props.listPrice);
+      await buyERC721(terraWallet == "TERRA_STATION" ? connectedWallet : terraWallet, props.chainId, props.collectionAddress, props.tokenId, props.listTokenAddress, props.listPrice, setStatus);
       setModalShow(false);
       setCongratBuyModalShow(true);
       // window.alert("Buy success");
+    } catch (err) {
+      console.error(err)
+      Swal.fire(
+        'Buy Failed!',
+        'You have been frontrunned, please buy another item!',
+        'success'
+      )
     } finally {
       setProcessing(false);
+      setStatus(0);
     }
     
   }
+
+  console.log(status)
 
   
 

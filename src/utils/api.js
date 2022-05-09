@@ -134,8 +134,11 @@ export async function buyERC721(
   collectionAddress,
   tokenId,
   listTokenAddress,
-  listPrice
+  listPrice,
+  setStatus,
 ) {
+  setStatus(0);
+
   let address = (await web3.eth.getAccounts())[0];
   let metaWalletAddress = await getMetaWalletAddress(chainId, address);
   let symbol = crossChainTokenSymbol(chainId, listTokenAddress);
@@ -160,6 +163,8 @@ export async function buyERC721(
     console.log("MetaWalletAddress", metaWalletAddress);
     console.log("CHAIN ID", chainId);
     console.log(depositAddress);
+
+    setStatus(1)
 
     if (wallet != "KEPLR") {
       const msgTransfer = new MsgTransfer(
@@ -219,6 +224,8 @@ export async function buyERC721(
       });
     }
 
+    setStatus(2)
+
     // Polling
     while (true) {
       try {
@@ -240,6 +247,7 @@ export async function buyERC721(
   }
 
   console.log("Deposit arrived");
+  setStatus(3)
 
   let signature = await generateBuyERC721Signature(
     chainId,
@@ -250,9 +258,13 @@ export async function buyERC721(
   );
   console.log(signature);
 
+  setStatus(4)
+
   await executeMetaWalletTx(chainId, address, signature);
 
   await wait(6000);
+
+  setStatus(5)
 
   // await refreshMetadata(chainId, collectionAddress, tokenId);
 }
