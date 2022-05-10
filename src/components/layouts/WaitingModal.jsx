@@ -67,7 +67,7 @@ const WaitingModal = (props) => {
               <div className="d-flex flex-column ">
               <h6 style={{color:color}}>{topic}</h6>
                 <p style={{fontSize:'11px'}}>{detail}</p>
-                {props.lockTx && <p style={{fontSize:'14px'}}><a href={"https://testnet.axelarscan.io/gmp/" + props.lockTx} style={{color:'#FF4F0D'}} target="_blank">Real time check</a></p>}
+                {props.lockTx && <p style={{fontSize:'14px',color:'#FF4F0D'}}>Real Time Check: <a href={"https://testnet.axelarscan.io/gmp/" + props.lockTx} target="_blank">{maskAddress(props.lockTx)}</a></p>}
               </div>
                
               </div>
