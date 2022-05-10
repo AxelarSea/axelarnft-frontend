@@ -71,11 +71,11 @@ const WaitingModal = (props) => {
               </div>
                
               </div>
+              <div className="d-flex justify-content-end flex-column align-items-center" style={{width:'55px' , marginRight:'1rem'}}>
+              <img
+                className="center"
+                src={axelarIcon} style={{marginBottom:'0.25rem',width:'35px'}} alt="" />
                 {props.lockTx && time &&
-                  <div className="d-flex justify-content-end flex-column align-items-center" style={{width:'55px' , marginRight:'1rem'}}>
-                    <img
-                      className="center"
-                      src={axelarIcon} style={{marginBottom:'0.25rem',width:'35px'}} alt="" />
                       <Countdown  
                         onComplete={() => {
                           setTopic('Axelar Network is taking longer than expected. ')
@@ -84,9 +84,8 @@ const WaitingModal = (props) => {
                         }}
                         date={time}>
                       </Countdown>
-                    
-                  </div>
                 }
+              </div>
           </div>
         </div>
         <div className="">
