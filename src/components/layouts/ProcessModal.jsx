@@ -28,13 +28,13 @@ const ProcessModal = (props) => {
   useEffect(() => {
     console.log(props.status == 0, props.onShow)
     if (props.status == 0 && props.onShow) {
-      setTime(Date.now() + 60000)
+      setTime(Date.now() + 120000)
     }
-    if(props.status == 3){
-      setTime(Date.now() + 300000)
+    if(props.status == 2){
+      setTime(Date.now() + 600000)
     }
     else if(props.status == 5){
-      setTime(Date.now() + 60000)
+      setTime(Date.now() + 120000)
     }
   },[props.status, props.onShow])
     return (
