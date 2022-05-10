@@ -397,7 +397,7 @@ const GAS_TOKEN_PRICE = {
   1287: 4,
 }
 
-export async function bridgeNft(sourceChainId, destChainId, nftId, tokenId, to) {
+export async function bridgeNft(sourceChainId, destChainId, nftId, tokenId, to, setStatus, setLockTx) {
   await switchChain(sourceChainId);
   let account = (await web3.eth.getAccounts())[0];
 
@@ -419,7 +419,12 @@ export async function bridgeNft(sourceChainId, destChainId, nftId, tokenId, to) 
     await sourceNft.approve(sourceBridgeController.address);
   }
   
-  await sourceBridgeController.bridge(destChainId, nftId, tokenId, 1, toEncoded, web3.utils.toWei(gasSourceToken.toPrecision(9)));
+  let lockTx = await sourceBridgeController.bridge(destChainId, nftId, tokenId, 1, toEncoded, web3.utils.toWei(gasSourceToken.toPrecision(9)));
+
+  console.log(lockTx)
+
+  setStatus(1)
+  setLockTx(lockTx.transactionHash)
 
   await wait(500);
 
@@ -444,6 +449,8 @@ export async function bridgeNft(sourceChainId, destChainId, nftId, tokenId, to) 
 
     await wait(3000);
   }
+
+  setStatus(2)
 
   // await refreshMetadata(destChainId, destNftAddress, tokenId);
 }

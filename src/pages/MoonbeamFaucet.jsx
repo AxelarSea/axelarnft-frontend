@@ -419,7 +419,7 @@ const NFTBridge = () => {
               <div className="faucet-box pd-20 d-flex flex-column align-items-center">
                 <img src={subHeader} alt="" width='70%' style={{marginTop:'2rem'}}/>
                 <p style={{marginTop:'2rem', fontSize:'12px'}}>Serving from</p>
-                <p style={{fontSize:'14px'}}>0x003D72e108Bc767C689801346201C976599EE400</p>
+                <p style={{fontSize:'14px'}}>0x005eaD90291d82249565A69E8554C0C280d49bEc</p>
                 <div className="d-flex align-items-center" style={{marginTop:'4rem',marginBottom:'2rem'}}>
                 <input type="text" style={{width:'90%', height:'40px', marginRight:'1rem'}}/>
                 <button

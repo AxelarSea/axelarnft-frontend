@@ -234,6 +234,9 @@ const NFTBridge = () => {
 
   const [visible, setVisible] = useState(8);
 
+  const [status, setStatus] = useState(0);
+  const [lockTx, setLockTx] = useState("");
+
   const onSelect = id => {
     setSelectNftModalShow(false)
     console.log(id)
@@ -376,11 +379,13 @@ const NFTBridge = () => {
 
   async function bridge() {
     try {
+      setStatus(0)
+      setLockTx("")
       setProcessing(true);
       setWaitingModalShow(true)
 
       // console.log(nftSelect.chainId, destinationNftChainId, nftSelect.nftId, nftSelect.tokenId, nftSelect.owner)
-      await bridgeNft(nftSelect.chainId, destinationNftChainId, nftSelect.nftId, nftSelect.tokenId, walletAddress);
+      await bridgeNft(nftSelect.chainId, destinationNftChainId, nftSelect.nftId, nftSelect.tokenId, walletAddress, setStatus, setLockTx);
 
       await wait(6000);
 
@@ -609,8 +614,10 @@ const NFTBridge = () => {
         destinationNftChainId={destinationNftChainId}
         collectionAddress={collectionAddress}
         tokenId={tokenId}
-        chainId={chainId}
-        time={myNftOn == 'Polygon' ? Date.now() + 1200000 : Date.now() + 300000}
+        chainId={myNftOnChainId}
+
+        status={status}
+        lockTx={lockTx}
       />
 
       

@@ -21,7 +21,7 @@ const networkData = {
       symbol: 'MATIC',
       decimals: 18,
     },
-    blockExplorerUrls: ['https://mumbai.polygonscan.com/'],
+    blockExplorerUrls: ['https://mumbai.polygonscan.com'],
   },
   43113: {
     chainId: '0xA869',
@@ -32,7 +32,7 @@ const networkData = {
       symbol: 'AVAX',
       decimals: 18,
     },
-    blockExplorerUrls: ['https://testnet.explorer.avax.network'],
+    blockExplorerUrls: ['https://testnet.snowtrace.io'],
   },
   4002: {
     chainId: '0xFA2',
@@ -57,6 +57,10 @@ const networkData = {
     blockExplorerUrls: ['https://moonbase.moonscan.io'],
   },
 };
+
+export function getExplorerUrl(chainId) {
+  return (networkData[chainId] && networkData[chainId].blockExplorerUrls[0]) || "";
+}
 
 export default async function switchChain(chainId) {
   let currentChainId = await web3.eth.getChainId();

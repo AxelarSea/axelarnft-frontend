@@ -11,8 +11,25 @@ import axelarIcon from "../../assets/images/icon/axelar-Icon.svg";
 import oneWhite from "../../assets/images/icon/oneWhite.svg";
 import twoWhite from "../../assets/images/icon/twoWhite.svg";
 import threeWhite from "../../assets/images/icon/threeWhite.svg";
+import { getExplorerUrl } from "../../utils/switchChain";
+import { useEffect, useState } from "react";
+import { maskAddress } from "../../utils/address";
 
 const WaitingModal = (props) => {
+
+  const [time, setTime] = useState(0);
+
+  useEffect(() => {
+    if (props.status == 1) {
+      if (props.chainId == 80001) {
+        setTime(Date.now() + 1200000)
+      } else {
+        setTime(Date.now() + 300000)
+      }
+    }
+  }, [props.status])
+
+  console.log('Chain ID', props.chainId)
 
     return (
     <Modal show={props.onShow} onHide={props.onHide}>
@@ -26,7 +43,7 @@ const WaitingModal = (props) => {
           <img src={oneWhite} style={{marginRight:'1rem'}}/>
             <div className="p-2">
               <h6>NFT leaves the source chain.</h6>
-              {/* <p style={{fontSize:'14px'}}>Transaction ID.</p> */}
+              {props.lockTx && <p style={{fontSize:'14px'}}>Transaction Hash: <a href={getExplorerUrl(props.chainId) + "/tx/" + props.lockTx} target="_blank">{maskAddress(props.lockTx)}</a></p>}
             </div>
             <img
               className="ml-auto p-2"
@@ -41,18 +58,20 @@ const WaitingModal = (props) => {
           <div className="transaction-step-box d-flex align-items-center justify-content-between" style={{paddingTop:'1rem',paddingBottom:'1rem'}}>
               <div className="p-2 d-flex align-items-center">
               <img src={twoWhite} style={{marginRight:'1rem'}}/>
-                <h6>Axelar Network receives & transfers the NFT.</h6>
+                <h6>Axelar Network receives &amp; transfers the NFT.</h6>
+                {props.lockTx && <p style={{fontSize:'14px'}}>Transaction Hash: <a href={"https://testnet.axelarscan.io/gmp/" + props.lockTx} target="_blank">{maskAddress(props.lockTx)}</a></p>}
               </div>
+                {props.lockTx && time &&
                   <div className="d-flex justify-content-end flex-column align-items-center" style={{width:'55px' , marginRight:'1rem'}}>
                     <img
                       className="center"
                       src={axelarIcon} style={{marginBottom:'0.25rem',width:'35px'}} alt="" />
                       <Countdown  
-                        date={props.time}>
+                        date={time}>
                       </Countdown>
                     
                   </div>
-                  
+                }
           </div>
         </div>
         <div className="">
