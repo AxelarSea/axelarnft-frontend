@@ -49,7 +49,7 @@ const WaitingModal = (props) => {
           <img src={props.status >= 1 ? greenCheck : props.status < 1 ? oneWhite : one} style={{marginRight:'1rem'}}/>
             <div className="p-2">
               <h6>NFT leaves the source chain.</h6>
-              {props.lockTx && <p style={{fontSize:'14px'}}><a href={getExplorerUrl(props.chainId) + "/tx/" + props.lockTx} target="_blank">Transaction ID</a></p>}
+              {props.lockTx && <p style={{fontSize:'14px'}}>Transaction Hash: <a href={getExplorerUrl(props.chainId) + "/tx/" + props.lockTx} target="_blank">{maskAddress(props.lockTx)}</a></p>}
             </div>
             <img
               className="ml-auto p-2"
@@ -67,7 +67,7 @@ const WaitingModal = (props) => {
               <div className="d-flex flex-column ">
               <h6 style={{color:color}}>{topic}</h6>
                 <p style={{fontSize:'11px'}}>{detail}</p>
-                {props.lockTx && <p style={{fontSize:'14px'}}><a href={"https://testnet.axelarscan.io/gmp/" + props.lockTx} target="_blank">Real time check</a></p>}
+                {props.lockTx && <p style={{fontSize:'14px'}}><a href={"https://testnet.axelarscan.io/gmp/" + props.lockTx} style={{color:'#FF4F0D'}} target="_blank">Real time check</a></p>}
               </div>
                
               </div>
