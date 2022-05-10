@@ -19,124 +19,126 @@ const RecentlyListed = () => {
 
     const [data, setData] = useState(
         [
-            {
-                img: imgTodayPick,
-                title: "Loading...",
-                tags: "bsc",
-                imgAuthor: imgAuthor,
-                nameAuthor: ".",
-                Price: "4.89 ETH",
-                wishlist: "100",
-            },
-            {
-                img: imgTodayPick,
-                title: "Loading...",
-                tags: "bsc",
-                imgAuthor: imgAuthor,
-                nameAuthor: ".",
-                Price: "4.89 ETH",
-                wishlist: "100",
-            },
-            {
-                img: imgTodayPick,
-                title: "Loading...",
-                tags: "bsc",
-                imgAuthor: imgAuthor,
-                nameAuthor: ".",
-                Price: "4.89 ETH",
-                wishlist: "100",
-            },
-            {
-                img: imgTodayPick,
-                title: "Loading...",
-                tags: "bsc",
-                imgAuthor: imgAuthor,
-                nameAuthor: ".",
-                Price: "4.89 ETH",
-                wishlist: "100",
-            },
-            {
-                img: imgTodayPick,
-                title: "Loading...",
-                tags: "bsc",
-                imgAuthor: imgAuthor,
-                nameAuthor: ".",
-                Price: "4.89 ETH",
-                wishlist: "100",
-            },
-            {
-                img: imgTodayPick,
-                title: "Loading...",
-                tags: "bsc",
-                imgAuthor: imgAuthor,
-                nameAuthor: ".",
-                Price: "4.89 ETH",
-                wishlist: "100",
-            },
-            {
-                img: imgTodayPick,
-                title: "Loading...",
-                tags: "bsc",
-                imgAuthor: imgAuthor,
-                nameAuthor: ".",
-                Price: "4.89 ETH",
-                wishlist: "100",
-            },
-            {
-                img: imgTodayPick,
-                title: "Loading...",
-                tags: "bsc",
-                imgAuthor: imgAuthor,
-                nameAuthor: ".",
-                Price: "4.89 ETH",
-                wishlist: "100",
-            },
-            {
-                img: imgTodayPick,
-                title: "Loading...",
-                tags: "bsc",
-                imgAuthor: imgAuthor,
-                nameAuthor: ".",
-                Price: "4.89 ETH",
-                wishlist: "100",
-            },
-            {
-                img: imgTodayPick,
-                title: "Loading...",
-                tags: "bsc",
-                imgAuthor: imgAuthor,
-                nameAuthor: ".",
-                Price: "4.89 ETH",
-                wishlist: "100",
-            },
-            {
-                img: imgTodayPick,
-                title: "Loading...",
-                tags: "bsc",
-                imgAuthor: imgAuthor,
-                nameAuthor: ".",
-                Price: "4.89 ETH",
-                wishlist: "100",
-            },
-            {
-                img: imgTodayPick,
-                title: "Loading...",
-                tags: "bsc",
-                imgAuthor: imgAuthor,
-                nameAuthor: ".",
-                Price: "4.89 ETH",
-                wishlist: "100",
-            },
+            // {
+            //     img: imgTodayPick,
+            //     title: "Loading...",
+            //     tags: "bsc",
+            //     imgAuthor: imgAuthor,
+            //     nameAuthor: ".",
+            //     Price: "4.89 ETH",
+            //     wishlist: "100",
+            // },
+            // {
+            //     img: imgTodayPick,
+            //     title: "Loading...",
+            //     tags: "bsc",
+            //     imgAuthor: imgAuthor,
+            //     nameAuthor: ".",
+            //     Price: "4.89 ETH",
+            //     wishlist: "100",
+            // },
+            // {
+            //     img: imgTodayPick,
+            //     title: "Loading...",
+            //     tags: "bsc",
+            //     imgAuthor: imgAuthor,
+            //     nameAuthor: ".",
+            //     Price: "4.89 ETH",
+            //     wishlist: "100",
+            // },
+            // {
+            //     img: imgTodayPick,
+            //     title: "Loading...",
+            //     tags: "bsc",
+            //     imgAuthor: imgAuthor,
+            //     nameAuthor: ".",
+            //     Price: "4.89 ETH",
+            //     wishlist: "100",
+            // },
+            // {
+            //     img: imgTodayPick,
+            //     title: "Loading...",
+            //     tags: "bsc",
+            //     imgAuthor: imgAuthor,
+            //     nameAuthor: ".",
+            //     Price: "4.89 ETH",
+            //     wishlist: "100",
+            // },
+            // {
+            //     img: imgTodayPick,
+            //     title: "Loading...",
+            //     tags: "bsc",
+            //     imgAuthor: imgAuthor,
+            //     nameAuthor: ".",
+            //     Price: "4.89 ETH",
+            //     wishlist: "100",
+            // },
+            // {
+            //     img: imgTodayPick,
+            //     title: "Loading...",
+            //     tags: "bsc",
+            //     imgAuthor: imgAuthor,
+            //     nameAuthor: ".",
+            //     Price: "4.89 ETH",
+            //     wishlist: "100",
+            // },
+            // {
+            //     img: imgTodayPick,
+            //     title: "Loading...",
+            //     tags: "bsc",
+            //     imgAuthor: imgAuthor,
+            //     nameAuthor: ".",
+            //     Price: "4.89 ETH",
+            //     wishlist: "100",
+            // },
+            // {
+            //     img: imgTodayPick,
+            //     title: "Loading...",
+            //     tags: "bsc",
+            //     imgAuthor: imgAuthor,
+            //     nameAuthor: ".",
+            //     Price: "4.89 ETH",
+            //     wishlist: "100",
+            // },
+            // {
+            //     img: imgTodayPick,
+            //     title: "Loading...",
+            //     tags: "bsc",
+            //     imgAuthor: imgAuthor,
+            //     nameAuthor: ".",
+            //     Price: "4.89 ETH",
+            //     wishlist: "100",
+            // },
+            // {
+            //     img: imgTodayPick,
+            //     title: "Loading...",
+            //     tags: "bsc",
+            //     imgAuthor: imgAuthor,
+            //     nameAuthor: ".",
+            //     Price: "4.89 ETH",
+            //     wishlist: "100",
+            // },
+            // {
+            //     img: imgTodayPick,
+            //     title: "Loading...",
+            //     tags: "bsc",
+            //     imgAuthor: imgAuthor,
+            //     nameAuthor: ".",
+            //     Price: "4.89 ETH",
+            //     wishlist: "100",
+            // },
         ]
     )
 
     const [allData , setAllData] = useState('')
+    const [page, setPage] = useState(1)
 
 
-    async function refreshData() {
-        let listed = await fetchAllListedItems({ limit: 20 });
+    async function loadMore() {
+        let listed = await fetchAllListedItems({ limit: 20, page });
         // listed = listed.slice(0, 20);
-        setData(listed.map(x => ({
+
+        const newData = listed.map(x => ({
             img: x.metadata.image,
             title: x.collection.name + " #" + x.tokenId,
             tags: chainLabel(x.collection.chainId),
@@ -148,8 +150,10 @@ const RecentlyListed = () => {
             chainId:x.collection.chainId,
             listPrice:x.listPrice,
             priceTag:crossChainTokenLabel(x.collection.chainId, x.listTokenAddress)
-        })));
-    
+        }))
+
+        setData([...data, ...newData]);
+        setPage(page + 1)
         
 
     }
@@ -190,7 +194,7 @@ const RecentlyListed = () => {
     const [modalShow, setModalShow] = useState(false);
 
     useEffect(() => {
-        refreshData();
+        loadMore();
     }, [])
 
     console.log(data)
@@ -395,7 +399,7 @@ const RecentlyListed = () => {
                         </div>
                         <div className='content-inner'>
                             {
-                                data.slice(0,visible).map((item,index) => (
+                                data.map((item,index) => (
                                     ((item.priceTag == "LUNA" && item.listPrice < 0.1) || (item.priceTag == "UST" && item.listPrice < 10) ?
                                     ""
                                     :
@@ -452,12 +456,12 @@ const RecentlyListed = () => {
                                 )))
                             }
                         </div>
-                        {/* {
-                            visible < data.length && 
+                        {
+                            true && 
                             <div className="col-md-12 wrap-inner load-more text-center"> 
-                                <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3 mt-21" onClick={showMoreItems}><span>Load More</span></Link>
+                                <Link to="#" id="load-more" className="sc-button loadmore fl-button pri-3 mt-21" onClick={loadMore}><span>Load More</span></Link>
                             </div>
-                        } */}
+                        }
                     </div>
                 </div>
             </section>
