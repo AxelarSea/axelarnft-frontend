@@ -85,22 +85,23 @@ const CardModal = (props) => {
       // window.alert("Buy success");
     } catch (err) {
       console.error(err)
+      console.log('ERROR', subStatus);
 
-      if (subStatus < 1) {
-        Swal.fire(
-          'Axelar Error!',
-          'Cannot get deposit address!',
-          'error'
-        )
-      } else if (subStatus < 2) {
-        Swal.fire(
-          'Insufficient fund or gas!',
-          'Please request luna from faucet and swap some luna to ust',
-          'error'
-        )
-      } else {
-        setTransferFailedModalShow(true)
-      }
+      // if (subStatus < 1) {
+      //   Swal.fire(
+      //     'Axelar Error!',
+      //     'Cannot get deposit address!',
+      //     'error'
+      //   )
+      // } else if (subStatus < 2) {
+      //   Swal.fire(
+      //     'Insufficient fund or gas!',
+      //     'Please request luna from faucet and swap some luna to ust',
+      //     'error'
+      //   )
+      // } else {
+      setTransferFailedModalShow(true)
+      // }
       
       setModalShow(false)
     } finally {
@@ -349,7 +350,8 @@ const CardModal = (props) => {
         img={props.img}
         owner={props.owner}
       />
-      <TransferFailedModal 
+      <TransferFailedModal
+        status={status}
         onShow={transferFailedModalShow}
         onHide={() => {
           setTransferFailedModalShow(false)
