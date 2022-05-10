@@ -649,6 +649,7 @@ const NFTBridge = () => {
                   setIsSelect(true)
                   refreshData();
                   refreshData2();
+                  window.reload()
                 }
             }
         processing={processing}

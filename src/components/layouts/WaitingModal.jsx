@@ -17,7 +17,13 @@ import { maskAddress } from "../../utils/address";
 
 const WaitingModal = (props) => {
 
+  const [topic,setTopic] = useState('Axelar Network receives & transfers the NFT.')
+
+  const [detail,setDetail] = useState("")
+
   const [time, setTime] = useState(0);
+
+  const [color,setColor] = useState('black')
 
   useEffect(() => {
     if (props.status == 1) {
@@ -40,10 +46,10 @@ const WaitingModal = (props) => {
         <p className="center" style={{fontSize:'14px', marginTop:'auto'}}>Your NFT is safe! Let's see where it is now.</p>
         <div>
           <div className="transaction-step-box d-flex p-2 align-items-center">
-          <img src={oneWhite} style={{marginRight:'1rem'}}/>
+          <img src={props.status >= 1 ? greenCheck : props.status < 1 ? oneWhite : one} style={{marginRight:'1rem'}}/>
             <div className="p-2">
               <h6>NFT leaves the source chain.</h6>
-              {props.lockTx && <p style={{fontSize:'14px'}}>Transaction Hash: <a href={getExplorerUrl(props.chainId) + "/tx/" + props.lockTx} target="_blank">{maskAddress(props.lockTx)}</a></p>}
+              {props.lockTx && <p style={{fontSize:'14px'}}><a href={getExplorerUrl(props.chainId) + "/tx/" + props.lockTx} target="_blank">Transaction ID</a></p>}
             </div>
             <img
               className="ml-auto p-2"
@@ -57,9 +63,13 @@ const WaitingModal = (props) => {
         <div>
           <div className="transaction-step-box d-flex align-items-center justify-content-between" style={{paddingTop:'1rem',paddingBottom:'1rem'}}>
               <div className="p-2 d-flex align-items-center">
-              <img src={twoWhite} style={{marginRight:'1rem'}}/>
-                <h6>Axelar Network receives &amp; transfers the NFT.</h6>
-                {props.lockTx && <p style={{fontSize:'14px'}}>Transaction Hash: <a href={"https://testnet.axelarscan.io/gmp/" + props.lockTx} target="_blank">{maskAddress(props.lockTx)}</a></p>}
+              <img src={props.status >= 2 ? greenCheck : props.status == 1 ? twoWhite : two} style={{marginRight:'1rem'}}/>
+              <div className="d-flex flex-column ">
+              <h6 style={{color:color}}>{topic}</h6>
+                <p style={{fontSize:'11px'}}>{detail}</p>
+                {props.lockTx && <p style={{fontSize:'14px'}}><a href={"https://testnet.axelarscan.io/gmp/" + props.lockTx} target="_blank">Real time check</a></p>}
+              </div>
+               
               </div>
                 {props.lockTx && time &&
                   <div className="d-flex justify-content-end flex-column align-items-center" style={{width:'55px' , marginRight:'1rem'}}>
@@ -67,6 +77,11 @@ const WaitingModal = (props) => {
                       className="center"
                       src={axelarIcon} style={{marginBottom:'0.25rem',width:'35px'}} alt="" />
                       <Countdown  
+                        onComplete={() => {
+                          setTopic('Axelar Network is taking longer than expected. ')
+                          setDetail('Your NFT is safe! It will be transferred when Axelar catches up.')
+                          setColor('#FF4F0D')
+                        }}
                         date={time}>
                       </Countdown>
                     
@@ -76,7 +91,7 @@ const WaitingModal = (props) => {
         </div>
         <div className="">
           <div className="transaction-step-box d-flex p-2 align-items-center">
-            <img src={threeWhite} style={{marginRight:'1rem'}}/>
+            <img src={props.status == 2 ? threeWhite : three } style={{marginRight:'1rem'}}/>
             <div className="p-2">
               <h6>NFT arrives at the destination chain.</h6>
               {/* <p style={{fontSize:'14px'}}>Transaction ID.</p> */}
