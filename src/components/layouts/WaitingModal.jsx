@@ -3,6 +3,14 @@ import { Modal } from "react-bootstrap";
 
 import arrowbridge from "../../assets/images/backgroup-secsion/arrow-bridge.svg";
 import spin from '../../assets/images/icon/processing.gif'
+import one from "../../assets/images/icon/1.svg";
+import two from "../../assets/images/icon/2.svg";
+import three from "../../assets/images/icon/3.svg";
+import greenCheck from "../../assets/images/icon/green-check.svg";
+import axelarIcon from "../../assets/images/icon/axelar-Icon.svg";
+import oneWhite from "../../assets/images/icon/oneWhite.svg";
+import twoWhite from "../../assets/images/icon/twoWhite.svg";
+import threeWhite from "../../assets/images/icon/threeWhite.svg";
 
 const WaitingModal = (props) => {
 
@@ -10,11 +18,62 @@ const WaitingModal = (props) => {
     <Modal show={props.onShow} onHide={props.onHide}>
       <Modal.Header closeButton></Modal.Header>
       <div className="modal-body space-y-20 pd-20" style={{paddingTop:'1rem'}}>
-        <h2 className="center congratulation-title">AxelarSea NFT Bridge</h2>
+        <h3 className="center congratulation-title">Bridging in progress</h3>
         
-        <p className="center"><img src={spin} width='40px'/>Processing</p>
-        {/* <p className="center" style={{marginTop:'auto'}}>the destination chain</p> */}
-        <div className="count-box pd-20">
+        <p className="center" style={{fontSize:'14px', marginTop:'auto'}}>Your NFT is safe! Let's see where it is now.</p>
+        <div>
+          <div className="transaction-step-box d-flex p-2 align-items-center">
+          <img src={oneWhite} style={{marginRight:'1rem'}}/>
+            <div className="p-2">
+              <h6>NFT leaves the source chain.</h6>
+              {/* <p style={{fontSize:'14px'}}>Transaction ID.</p> */}
+            </div>
+            <img
+              className="ml-auto p-2"
+              style={{marginRight:'1rem'}}
+              src={props.myNftOnImg == null ? "" : props.myNftOnImg}
+              alt=""
+              width="45px"
+            />
+          </div>
+        </div>
+        <div>
+          <div className="transaction-step-box d-flex align-items-center justify-content-between" style={{paddingTop:'1rem',paddingBottom:'1rem'}}>
+              <div className="p-2 d-flex align-items-center">
+              <img src={twoWhite} style={{marginRight:'1rem'}}/>
+                <h6>Axelar Network receives & transfers the NFT.</h6>
+              </div>
+                  <div className="d-flex justify-content-end flex-column align-items-center" style={{width:'55px' , marginRight:'1rem'}}>
+                    <img
+                      className="center"
+                      src={axelarIcon} style={{marginBottom:'0.25rem',width:'35px'}} alt="" />
+                      <Countdown  
+                        date={props.time}>
+                      </Countdown>
+                    
+                  </div>
+                  
+          </div>
+        </div>
+        <div className="">
+          <div className="transaction-step-box d-flex p-2 align-items-center">
+            <img src={threeWhite} style={{marginRight:'1rem'}}/>
+            <div className="p-2">
+              <h6>NFT arrives at the destination chain.</h6>
+              {/* <p style={{fontSize:'14px'}}>Transaction ID.</p> */}
+            </div>
+            <img
+              className="ml-auto p-2"
+              style={{marginRight:'1rem'}}
+              src={
+              props.destinationNftChainImg == null? "": props.destinationNftChainImg}
+              alt=""
+              width="45px"
+            />
+          </div>
+        </div>
+
+        {/* <div className="count-box pd-20">
           <p className="center" style={{fontSize:'16px'}}>Estimated Time</p>
           <div className="center">
             <Countdown className="center countdown" date={props.time}>
@@ -47,9 +106,8 @@ const WaitingModal = (props) => {
             />
             <h6 style={{ marginTop: "1.5rem" }}>Destination</h6>
           </div>
-        </div>
-        <p className="center">If the specified time is not successful</p>
-        <p className="center" style={{marginTop:'auto'}}>you can report the Transaction ID via <a href="https://discord.gg/shGx3VZZ" target='_blank'>Discord.</a></p>
+        </div> */}
+        <p className="center" style={{fontSize:'14px'}}>Keep this page open and we will notify when the process is done. You can mint and bridge another NFT on a new tab.</p>
       </div>
     </Modal>
     )
