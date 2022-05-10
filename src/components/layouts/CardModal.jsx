@@ -106,7 +106,6 @@ const CardModal = (props) => {
       setModalShow(false)
     } finally {
       setProcessing(false);
-      setStatus(0);
     }
     
   }
