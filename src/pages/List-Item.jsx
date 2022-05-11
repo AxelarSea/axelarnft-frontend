@@ -240,10 +240,11 @@ const CreateItem2 = () => {
                         <div className="row-form style-3">
                           <div className="inner-row-form style-2">
                             <div className="seclect-box">
-                              <div id="all-items" className="dropdown">
-                                <Link to="#" className="btn-selector">
+                              <div id="all-items" className="dropdown" disabled>
+                                <a>No expiration Date</a>
+                                {/* <Link to="#" className="btn-selector">
                                 No expiration Date
-                                </Link>
+                                </Link> */}
                               </div>
                             </div>
                           </div>

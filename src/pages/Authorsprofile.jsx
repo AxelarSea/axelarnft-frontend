@@ -762,7 +762,7 @@ const Authorsprofile = () => {
                               )) }
                           </div>
                           {visible < item.dataContent.length && (
-                            <div className="col-md-12 wrap-inner load-more text-center">
+                            <div className="col-md-12 wrap-inner load-more text-center" style={{marginBottom:'5rem'}}> 
                               <Link
                                 to="#"
                                 id="load-more"

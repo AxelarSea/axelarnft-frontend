@@ -216,7 +216,7 @@ const ExploreItem = (props) => {
           )))}
         </div>
         {(true || visible < data.length) && (
-          <div className="btn-auction center">
+          <div className="btn-auction center" style={{marginBottom:'5rem'}}>
             <Link
               to="#"
               id="load-more"

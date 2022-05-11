@@ -150,10 +150,11 @@ const CardModal = (props) => {
         <div className="d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-center">
             <p>On</p>
-            <div id="buy" className="dropdown">
-              <Link to="#" className="btn-selectornolink">
+            <div id="buy" className="dropdown" disabled>
+              <a>Terra</a>
+              {/* <Link to="#" className="btn-selectornolink">
                 Terra
-              </Link>
+              </Link> */}
               {/* <ul >
                             <li><span>On Auction</span></li>
                             <li><span>Has Offers</span></li>
