@@ -137,6 +137,25 @@ export async function buyERC721(
   listPrice,
   setStatus,
 ) {
+  let itemFromApi = await fetchItem(chainId, collectionAddress, tokenId);
+
+  if (itemFromApi.listAmount <= 0) {
+    setStatus(5)
+    throw new Error("Frontrun");
+  }
+
+  // LOCK
+  await axios.post(
+    process.env.REACT_APP_API_HOST +
+      "/api/nft/collections/" +
+      collectionAddress +
+      "/" +
+      chainId +
+      "/items/" +
+      tokenId +
+      "/lock"
+  );
+
   setStatus(0);
 
   let address = (await web3.eth.getAccounts())[0];
