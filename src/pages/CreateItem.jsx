@@ -14,6 +14,11 @@ import AVAX from "../assets/images/avatar/AVAX.jpg";
 import FTM from "../assets/images/avatar/FTM.jpg";
 import Moonbeam from "../assets/images/avatar/moonbeam.gif";
 import Polygon from "../assets/images/avatar/polygon.gif";
+import ethLogo from '../assets/images/icon/eth-logo.svg'
+import polygonLogo from '../assets/images/icon/polygon-logo.svg'
+import avaxLogo from '../assets/images/icon/avax-logo.svg'
+import moonbeamLogo from '../assets/images/icon/moonbeam-logo.svg'
+import fantomLogo from '../assets/images/icon/fantom-logo.svg'
 import HeaderStyle2 from "../components/header/HeaderStyle2";
 import AxelarSeaSampleNft from "../contracts/AxelarSeaSampleNft";
 import web3 from "../hooks/web3";
@@ -260,105 +265,59 @@ const CreateItem = () => {
                         <input disabled type="text" placeholder="" value="1" style={{cursor:'default'}}/>
 
                         <h4 className="title-create-item d-flex">Blockchain</h4>
-                        {/* <input type="text" placeholder="" value="1"  /> */}
-                        <div className="row-form style-3">
-                          {/* <div className="inner-row-form">
-                                                        <h4 className="title-create-item">Royalties</h4>
-                                                        <input type="text" placeholder="5%" />
-                                                    </div>
-                                                    <div className="inner-row-form">
-                                                        <h4 className="title-create-item">Size</h4>
-                                                        <input type="text" placeholder="e.g. “size”" />
-                                                    </div> */}
-                          <div className="inner-row-form style-2">
-                            <div className="seclect-box">
-                              <div id="all-items" className="dropdown">
-                                <Link to="#" className="btn-selector">
-                                  {blockChain}
-                                </Link>
-                                <ul>
-                                  <li onClick={() => setBlockChain("Ethereum")}>
-                                    <span>Ethereum</span>
-                                  </li>
-                                  <li
-                                    onClick={() => setBlockChain("Avalanche")}
-                                  >
-                                    <span>Avalanche</span>
-                                  </li>
-                                  <li onClick={() => setBlockChain("Fantom")}>
-                                    <span>Fantom</span>
-                                  </li>
-                                  <li onClick={() => setBlockChain("Moonbeam")}>
-                                    <span>Moonbeam</span>
-                                  </li>
-                                  <li onClick={() => setBlockChain("Polygon")}>
-                                    <span>Polygon</span>
-                                  </li>
-                                  {/* <li><span>Virtual World</span></li>
-                                                                    <li><span>Trading Cards</span></li>
-                                                                    <li><span>Sports</span></li>
-                                                                    <li><span>Utility</span></li> */}
-                                </ul>
-                                <div>
-                                  <div>
-                                    
-                                  </div>
-                                </div>       
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        <Dropdown>
+                          <Dropdown.Toggle className="dropdown-chain-box">
+                          <img 
+                            src={
+                              blockChain == "Ethereum" ? ethLogo 
+                              : blockChain == "Avalanche" ? avaxLogo 
+                              : blockChain == "Fantom" ? fantomLogo 
+                              : blockChain == "Moonbeam" ? moonbeamLogo 
+                              : blockChain == "Polygon" ? polygonLogo 
+                              : ''}
+                            style={{marginRight:'1rem', width:'25px'}}
+                          />
+                          {blockChain}
+                          </Dropdown.Toggle>
 
-                        <button className="" id="liveToastBtn" style={{ marginTop: "160px" }} onClick={mint} disabled={processing}>
-                          Submit
+                          <Dropdown.Menu style={{width:'100%'}}>
+                            <Dropdown.Item 
+                              className="dropdown-chain-detail" 
+                              onClick={() => setBlockChain("Ethereum")}>
+                                <img src={ethLogo} style={{marginRight:'1rem', width:'25px'}}/>
+                                Ethereum
+                            </Dropdown.Item>
+                            <Dropdown.Item className="dropdown-chain-detail"
+                             onClick={() => setBlockChain("Avalanche")}>
+                               <img src={avaxLogo} style={{marginRight:'1rem', width:'25px'}}/>
+                               Avalanche
+                            </Dropdown.Item>
+                            <Dropdown.Item 
+                              className="dropdown-chain-detail" 
+                              onClick={() => setBlockChain("Fantom")}>
+                                <img src={fantomLogo} style={{marginRight:'1rem', width:'25px'}}/>
+                                Fantom
+                            </Dropdown.Item>
+                            <Dropdown.Item 
+                              className="dropdown-chain-detail"
+                               onClick={() => setBlockChain("Moonbeam")}>
+                                 <img src={moonbeamLogo} style={{marginRight:'1rem', width:'25px'}}/>
+                                 Moonbeam
+                              </Dropdown.Item>
+                            <Dropdown.Item 
+                              onClick={() => setBlockChain("Polygon")}>
+                                <img src={polygonLogo} style={{marginRight:'1rem', width:'25px'}}/>
+                                Polygon
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+                        <button 
+                          className="" id="liveToastBtn" 
+                          style={{ margin:'3rem 0rem'}} 
+                          onClick={mint} 
+                          disabled={processing}>
+                            Submit
                         </button>
-                        
-                          
-                           
-
-                        {/* <Dropdown>
-                                    <Dropdown.Toggle id="dropdown-basic">
-                                        <span>Blockchain</span>
-                                    </Dropdown.Toggle>
-
-                                    <Dropdown.Menu style={{ margin: 0 }}>
-                                    <Dropdown.Item href="#">Avalanche</Dropdown.Item>
-                                    <Dropdown.Item href="#">Cosmoshub</Dropdown.Item>
-                                    <Dropdown.Item href="#">Ethereum</Dropdown.Item>
-                                    <Dropdown.Item href="#">Fantom</Dropdown.Item>
-                                    <Dropdown.Item href="#">Moonbeam</Dropdown.Item>
-                                    <Dropdown.Item href="#">Osmosis</Dropdown.Item>
-                                    <Dropdown.Item href="#">Polygon</Dropdown.Item>
-                                    <Dropdown.Item href="#">Terra</Dropdown.Item>
-                                    </Dropdown.Menu>
-                                </Dropdown> */}
-
-                        {/* <div className="row-form style-3">
-                                                    <div className="inner-row-form">
-                                                        <h4 className="title-create-item">Royalties</h4>
-                                                        <input type="text" placeholder="5%" />
-                                                    </div>
-                                                    <div className="inner-row-form">
-                                                        <h4 className="title-create-item">Size</h4>
-                                                        <input type="text" placeholder="e.g. “size”" />
-                                                    </div>
-                                                    <div className="inner-row-form style-2">
-                                                        <div className="seclect-box">
-                                                            <div id="item-create" className="dropdown">
-                                                                <Link to="#" className="btn-selector nolink">Abstraction</Link>
-                                                                <ul >
-                                                                    <li><span>Art</span></li>
-                                                                    <li><span>Music</span></li>
-                                                                    <li><span>Domain Names</span></li>
-                                                                    <li><span>Virtual World</span></li>
-                                                                    <li><span>Trading Cards</span></li>
-                                                                    <li><span>Sports</span></li>
-                                                                    <li><span>Utility</span></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div> */}
                       </form>
                     </TabPanel>
                     <TabPanel>

@@ -11,6 +11,7 @@ import moonbeamLogo from '../../../assets/images/icon/moonbeam-logo.svg'
 import fantomLogo from '../../../assets/images/icon/fantom-logo.svg'
 
 import imgTodayPick from '../../../assets/images/box-item/img-today-pick-demo.svg'
+import nftLoading from '../../../assets/images/box-item/nft-loading.gif'
 import imgAuthor from '../../../assets/images/avatar/satoshi.svg'
 const ITEM_PER_PAGE = 18;
 
@@ -19,84 +20,84 @@ const ExploreItem = (props) => {
   const [data,setData] =  useState(
     [
         {
-            img: imgTodayPick,
+            img: nftLoading,
             title: "Loading...",
             imgAuthor: imgAuthor,
             nameAuthor: ".",
             wishlist: "100",
         },
         {
-            img: imgTodayPick,
+            img: nftLoading,
             title: "Loading...",
             imgAuthor: imgAuthor,
             nameAuthor: ".",
             wishlist: "100",
         },
         {
-            img: imgTodayPick,
+            img: nftLoading,
             title: "Loading...",
             imgAuthor: imgAuthor,
             nameAuthor: ".",
             wishlist: "100",
         },
         {
-            img: imgTodayPick,
+            img: nftLoading,
             title: "Loading...",
             imgAuthor: imgAuthor,
             nameAuthor: ".",
             wishlist: "100",
         },
         {
-            img: imgTodayPick,
+            img: nftLoading,
             title: "Loading...",
             imgAuthor: imgAuthor,
             nameAuthor: ".",
             wishlist: "100",
         },
         {
-            img: imgTodayPick,
+            img: nftLoading,
             title: "Loading...",
             imgAuthor: imgAuthor,
             nameAuthor: ".",
             wishlist: "100",
         },
         {
-            img: imgTodayPick,
+            img: nftLoading,
             title: "Loading...",
             imgAuthor: imgAuthor,
             nameAuthor: ".",
             wishlist: "100",
         },
         {
-            img: imgTodayPick,
+            img: nftLoading,
             title: "Loading...",
             imgAuthor: imgAuthor,
             nameAuthor: ".",
             wishlist: "100",
         },
         {
-            img: imgTodayPick,
+            img: nftLoading,
             title: "Loading...",
             imgAuthor: imgAuthor,
             nameAuthor: ".",
             wishlist: "100",
         },
         {
-            img: imgTodayPick,
+            img: nftLoading,
             title: "Loading...",
             imgAuthor: imgAuthor,
             nameAuthor: ".",
             wishlist: "100",
         },
         {
-            img: imgTodayPick,
+            img: nftLoading,
             title: "Loading...",
             imgAuthor: imgAuthor,
             nameAuthor: ".",
             wishlist: "100",
         },
         {
-            img: imgTodayPick,
+            img: nftLoading,
             title: "Loading...",
             imgAuthor: imgAuthor,
             nameAuthor: ".",

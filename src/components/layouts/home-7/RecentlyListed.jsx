@@ -11,6 +11,7 @@ import fantomLogo from '../../../assets/images/icon/fantom-logo.svg'
 
 
 import imgTodayPick from '../../../assets/images/box-item/img-today-pick-demo.svg'
+import nftLoading from '../../../assets/images/box-item/nft-loading.gif'
 import imgAuthor from '../../../assets/images/avatar/satoshi.svg'
 import { crossChainTokenLabel, fetchAllListedItems } from '../../../utils/api';
 import { chainLabel, maskAddress } from '../../../utils/address';
@@ -20,7 +21,7 @@ const RecentlyListed = () => {
     const [data, setData] = useState(
         [
             // {
-            //     img: imgTodayPick,
+            //     img: nftLoading,
             //     title: "Loading...",
             //     tags: "bsc",
             //     imgAuthor: imgAuthor,
@@ -29,7 +30,7 @@ const RecentlyListed = () => {
             //     wishlist: "100",
             // },
             // {
-            //     img: imgTodayPick,
+            //     img: nftLoading,
             //     title: "Loading...",
             //     tags: "bsc",
             //     imgAuthor: imgAuthor,
@@ -38,7 +39,7 @@ const RecentlyListed = () => {
             //     wishlist: "100",
             // },
             // {
-            //     img: imgTodayPick,
+            //     img: nftLoading,
             //     title: "Loading...",
             //     tags: "bsc",
             //     imgAuthor: imgAuthor,
@@ -47,7 +48,7 @@ const RecentlyListed = () => {
             //     wishlist: "100",
             // },
             // {
-            //     img: imgTodayPick,
+            //     img: nftLoading,
             //     title: "Loading...",
             //     tags: "bsc",
             //     imgAuthor: imgAuthor,
@@ -56,7 +57,7 @@ const RecentlyListed = () => {
             //     wishlist: "100",
             // },
             // {
-            //     img: imgTodayPick,
+            //     img: nftLoading,
             //     title: "Loading...",
             //     tags: "bsc",
             //     imgAuthor: imgAuthor,
@@ -65,7 +66,7 @@ const RecentlyListed = () => {
             //     wishlist: "100",
             // },
             // {
-            //     img: imgTodayPick,
+            //     img: nftLoading,
             //     title: "Loading...",
             //     tags: "bsc",
             //     imgAuthor: imgAuthor,
@@ -74,7 +75,7 @@ const RecentlyListed = () => {
             //     wishlist: "100",
             // },
             // {
-            //     img: imgTodayPick,
+            //     img: nftLoading,
             //     title: "Loading...",
             //     tags: "bsc",
             //     imgAuthor: imgAuthor,
@@ -83,7 +84,7 @@ const RecentlyListed = () => {
             //     wishlist: "100",
             // },
             // {
-            //     img: imgTodayPick,
+            //     img: nftLoading,
             //     title: "Loading...",
             //     tags: "bsc",
             //     imgAuthor: imgAuthor,
@@ -92,7 +93,7 @@ const RecentlyListed = () => {
             //     wishlist: "100",
             // },
             // {
-            //     img: imgTodayPick,
+            //     img: nftLoading,
             //     title: "Loading...",
             //     tags: "bsc",
             //     imgAuthor: imgAuthor,
@@ -101,7 +102,7 @@ const RecentlyListed = () => {
             //     wishlist: "100",
             // },
             // {
-            //     img: imgTodayPick,
+            //     img: nftLoading,
             //     title: "Loading...",
             //     tags: "bsc",
             //     imgAuthor: imgAuthor,
@@ -110,7 +111,7 @@ const RecentlyListed = () => {
             //     wishlist: "100",
             // },
             // {
-            //     img: imgTodayPick,
+            //     img: nftLoading,
             //     title: "Loading...",
             //     tags: "bsc",
             //     imgAuthor: imgAuthor,
@@ -119,7 +120,7 @@ const RecentlyListed = () => {
             //     wishlist: "100",
             // },
             // {
-            //     img: imgTodayPick,
+            //     img: nftLoading,
             //     title: "Loading...",
             //     tags: "bsc",
             //     imgAuthor: imgAuthor,

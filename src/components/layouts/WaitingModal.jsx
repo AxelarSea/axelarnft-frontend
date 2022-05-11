@@ -6,6 +6,9 @@ import spin from '../../assets/images/icon/processing.gif'
 import one from "../../assets/images/icon/1.svg";
 import two from "../../assets/images/icon/2.svg";
 import three from "../../assets/images/icon/3.svg";
+import oneWhiteSpin from "../../assets/images/icon/one-white-spin.gif";
+import twoWhiteSpin from "../../assets/images/icon/two-white-spin.gif";
+import threeWhiteSpin from "../../assets/images/icon/three-white-spin.gif";
 import greenCheck from "../../assets/images/icon/green-check.svg";
 import axelarIcon from "../../assets/images/icon/axelar-Icon.svg";
 import oneWhite from "../../assets/images/icon/oneWhite.svg";
@@ -46,7 +49,7 @@ const WaitingModal = (props) => {
         <p className="center" style={{fontSize:'14px', marginTop:'auto'}}>Your NFT is safe! Let's see where it is now.</p>
         <div>
           <div className="transaction-step-box d-flex p-2 align-items-center">
-          <img src={props.status >= 1 ? greenCheck : props.status < 1 ? oneWhite : one} style={{marginRight:'1rem'}}/>
+          <img src={props.status >= 1 ? greenCheck : props.status < 1 ? oneWhiteSpin : one} style={{marginRight:'1rem', width:'30px'}}/>
             <div className="p-2">
               <h6>NFT leaves the source chain.</h6>
               {props.lockTx && <p style={{fontSize:'14px'}}>Transaction Hash: <a href={getExplorerUrl(props.chainId) + "/tx/" + props.lockTx} target="_blank">{maskAddress(props.lockTx)}</a></p>}
@@ -63,7 +66,7 @@ const WaitingModal = (props) => {
         <div>
           <div className="transaction-step-box d-flex align-items-center justify-content-between" style={{paddingTop:'1rem',paddingBottom:'1rem'}}>
               <div className="p-2 d-flex align-items-center">
-              <img src={props.status >= 2 ? greenCheck : props.status == 1 ? twoWhite : two} style={{marginRight:'1rem'}}/>
+              <img src={props.status >= 2 ? greenCheck : props.status == 1 ? twoWhiteSpin : two} style={{marginRight:'1rem', width:'30px'}}/>
               <div className="d-flex flex-column ">
               <h6 style={{color:color}}>{topic}</h6>
                 <p style={{fontSize:'11px'}}>{detail}</p>
@@ -90,7 +93,7 @@ const WaitingModal = (props) => {
         </div>
         <div className="">
           <div className="transaction-step-box d-flex p-2 align-items-center">
-            <img src={props.status == 2 ? threeWhite : three } style={{marginRight:'1rem'}}/>
+            <img src={props.status == 2 ? threeWhite : three } style={{marginRight:'1rem', width:'30px'}}/>
             <div className="p-2">
               <h6>NFT arrives at the destination chain.</h6>
               {/* <p style={{fontSize:'14px'}}>Transaction ID.</p> */}

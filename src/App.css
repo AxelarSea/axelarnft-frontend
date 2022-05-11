@@ -809,3 +809,22 @@ margin-top: 2rem;
   border: 1px solid #DCDCE2;
   border-radius: 10px;
 }
+.dropdown-chain-box {
+  width: 100%;
+  height: 45px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+.dropdown-chain-box:focus {
+  color: #a7a7a7;
+  background-color: #ffffff;
+  border-color: #c0c0c0;
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+.dropdown-chain-detail {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+}
