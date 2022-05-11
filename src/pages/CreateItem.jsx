@@ -304,7 +304,8 @@ const CreateItem = () => {
                                  <img src={moonbeamLogo} style={{marginRight:'1rem', width:'25px'}}/>
                                  Moonbeam
                               </Dropdown.Item>
-                            <Dropdown.Item 
+                            <Dropdown.Item
+                              className="dropdown-chain-detail"
                               onClick={() => setBlockChain("Polygon")}>
                                 <img src={polygonLogo} style={{marginRight:'1rem', width:'25px'}}/>
                                 Polygon
