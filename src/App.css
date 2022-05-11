@@ -827,3 +827,10 @@ margin-top: 2rem;
   font-size: 14px;
   font-weight: 500;
 }
+.btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+  color: #ffffff;
+  background-color: #ff4f0d;
+  border-color: #ff4f0d;
+  background-image: none;
+
+}
