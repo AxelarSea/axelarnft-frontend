@@ -599,7 +599,7 @@ cursor: pointer;
 -webkit-text-fill-color: transparent;
 cursor: pointer;
 }
-.hov.hover-ecfect, .liveontestnet {
+.hov.hover-ecfect, .animation-gradient {
   background: linear-gradient(to right, #ff4f0d,#7ab795,#ff4f0d);
   background-clip: text;
   -webkit-background-clip: text;
@@ -609,11 +609,7 @@ cursor: pointer;
   transition: color .2s ease-in-out;
 }
 
-.liveontestnet {
-font-family: 'Urbanist';
-font-style: normal;
-font-size: 21px;
-line-height: 22px;
+.animation-gradient {
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 cursor: pointer;

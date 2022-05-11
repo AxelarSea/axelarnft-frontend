@@ -14,6 +14,7 @@ import axelarIcon from "../../assets/images/icon/axelar-Icon.svg";
 import oneWhite from "../../assets/images/icon/oneWhite.svg";
 import twoWhite from "../../assets/images/icon/twoWhite.svg";
 import threeWhite from "../../assets/images/icon/threeWhite.svg";
+import linkIcon from "../../assets/images/icon/link-icon.svg";
 import { getExplorerUrl } from "../../utils/switchChain";
 import { useEffect, useState } from "react";
 import { maskAddress } from "../../utils/address";
@@ -70,7 +71,7 @@ const WaitingModal = (props) => {
               <div className="d-flex flex-column ">
               <h6 style={{color:color}}>{topic}</h6>
                 <p style={{fontSize:'11px'}}>{detail}</p>
-                {props.lockTx && <p style={{fontSize:'14px',color:'#FF4F0D'}}>Real Time Check: <a href={"https://testnet.axelarscan.io/gmp/" + props.lockTx} target="_blank">{maskAddress(props.lockTx)}</a></p>}
+                {props.lockTx && <p style={{fontSize:'14px',color:'#FF4F0D'}}>Real Time Check: <a href={"https://testnet.axelarscan.io/gmp/" + props.lockTx} target="_blank">{maskAddress(props.lockTx)} <a className="animation-gradient" style={{fontWeight:'600'}}>Click Here!</a></a></p>}
               </div>
                
               </div>
