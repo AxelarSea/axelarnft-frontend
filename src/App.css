@@ -815,6 +815,9 @@ margin-top: 2rem;
   font-size: 14px;
   font-weight: 500;
   border-radius: 5px;
+  color: #a7a7a7;
+  background-color: #ffffff;
+  border-color: #c0c0c0;
 }
 .dropdown-chain-box:focus {
   color: #a7a7a7;
