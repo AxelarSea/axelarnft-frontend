@@ -102,18 +102,25 @@ const SliderItem = props => {
                                     </div>
                                     {props.item.status == null ? ''
                                         :
-                                        <div className="flat-bt-slider flex style2 showlist"
-                                            >
+                                        <div className="flat-bt-slider flex style2 showlist">
                                             <div>
-                                                <h1 className='data-showlist'>{count.nftCount}</h1>
+                                                <h6 className='data-showlist'>{count.nftCount}</h6>
                                                 <h6 className='title-showlist'>Minted</h6>
                                             </div>
-                                            <div style={{marginLeft:'8rem'}}>
-                                                <h1 className='data-showlist'>{count.listedCount}</h1>
+                                            <div style={{marginLeft:'4rem'}}>
+                                                <h6 className='data-showlist'>{count.listedCount}</h6>
                                                 <h6 className='title-showlist'>Listed</h6>
                                             </div>
-                                            <div style={{marginLeft:'8rem'}}>
-                                                <h1 className='data-showlist'>{count.walletCount}</h1>
+                                            {/* <div style={{marginLeft:'4rem'}}>
+                                                <h6 className='data-showlist'>{count.listedCount}</h6>
+                                                <h6 className='title-showlist'>Purchased</h6>
+                                            </div> */}
+                                            <div style={{marginLeft:'4rem'}}>
+                                                <h6 className='data-showlist'>{count.bridgeCount}</h6>
+                                                <h6 className='title-showlist'>Bridged</h6>
+                                            </div>
+                                            <div style={{marginLeft:'4rem'}}>
+                                                <h6 className='data-showlist'>{count.walletCount}</h6>
                                                 <h6 className='title-showlist'>Wallet</h6>
                                             </div>
                                         </div>
