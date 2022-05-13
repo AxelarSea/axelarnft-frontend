@@ -10,7 +10,7 @@ import HeaderStyle2 from '../components/header/HeaderStyle2';
 import { crossChainTokenLabel, fetchAllListedItems } from '../utils/api';
 import ExploreItem from '../components/layouts/explore-04/ExploreItem';
 import { chainLabel } from '../utils/address';
-    
+
 const Explore04 = () => {
     const [items, setItems] = useState([]);
     const [defaultItems, setDefaultItems] = useState([]);
@@ -63,13 +63,9 @@ const Explore04 = () => {
                             <div className="page-title-heading mg-bt-12">
                                 <h1 className="heading text-center">Explore</h1>
                             </div>
-                            {/* <div className="breadcrumbs style2">
-                                <ul>
-                                    <li><Link to="/">Home</Link></li>
-                                    <li><Link to="#">Explore</Link></li>
-                                    <li>Explore 4</li>
-                                </ul>
-                            </div> */}
+                            <div style={{marginTop:'2rem'}}>
+                                <h6 className='text-center'>Total NFT Listed</h6>
+                            </div>
                         </div>
                     </div>
                 </div>                    

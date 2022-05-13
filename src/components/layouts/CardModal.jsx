@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Modal } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 
 import AlunaLogo from "../../assets/images/icon/Luna.png";
 import AustLogo from "../../assets/images/icon/UST.png";
-import ethlogo from "../../assets/images/icon/eth-logo.svg";
+import ethLogo from "../../assets/images/icon/eth-logo.svg";
+import polygonLogo from '../../assets/images/icon/polygon-logo.svg'
+import avaxLogo from '../../assets/images/icon/avax-logo.svg'
+import moonbeamLogo from '../../assets/images/icon/moonbeam-logo.svg'
+import fantomLogo from '../../assets/images/icon/fantom-logo.svg'
+import terraLogo from '../../assets/images/icon/terra-facuet.png'
 import { buyERC721, crossChainTokenLabel, crossChainTokenSymbol } from "../../utils/api";
 import ProcessModal from './ProcessModal'
 import SelectTokenModal from "./SelectTokenModal";
@@ -17,6 +23,8 @@ import { useConnectedWallet, useLCDClient } from "@terra-money/wallet-provider";
 import web3 from "../../hooks/web3";
 import { maskAddress } from "../../utils/address";
 import Swal from "sweetalert2";
+import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
+import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
 
 const CardModal = (props) => {
   const lcd = useLCDClient();
@@ -149,24 +157,67 @@ const CardModal = (props) => {
         </p>
         <div className="d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-center">
-            <p>On</p>
-            <div id="buy" className="dropdown" disabled>
-              <a>Terra</a>
-              {/* <Link to="#" className="btn-selectornolink">
-                Terra
-              </Link> */}
-              {/* <ul >
-                            <li><span>On Auction</span></li>
-                            <li><span>Has Offers</span></li>
-                        </ul> */}
-            </div>
+            <p style={{marginRight:'0.5rem'}}>On</p>
+            <Dropdown>
+              <DropdownToggle className="btn btn-primary">
+              <img src={avaxLogo} style={{marginRight:'1rem', marginLeft:'-1.1rem', width:'25px'}}/>
+              Avalanche
+              </DropdownToggle>
+              {/* <DropdownMenu style={{borderRadius:'10px'}}>
+                <Dropdown.Item className="dropdown-chain-detail">
+                  <img src={avaxLogo} style={{marginRight:'1rem', width:'25px'}}/>
+                  Avalanche
+                </Dropdown.Item>
+                <Dropdown.Item className="dropdown-chain-detail">
+                  <img src={terraLogo} style={{marginRight:'1rem', width:'25px'}}/>
+                  Terra
+                </Dropdown.Item>
+              </DropdownMenu> */}
+            </Dropdown>
           </div>
           <p>Balance {balance.toFixed(3)} {youPayType}</p>
         </div>
-        {/* <input type="text" className="form-control"
-            placeholder="00.00 ETH" /> */}
-
-        <div className="d-flex justify-content-between">
+          <div className="d-flex">
+            <div 
+              className="w-50"
+              style={{
+                backgroundColor: "rgb(245 245 245)",
+                borderRight: "1px solid white",
+                borderRadius:"10px 0px 0px 10px",
+                padding:'1rem'
+              }}
+              >
+                <p style={{fontWeight:'600', marginBottom:'1rem'}}>NFT Price</p>
+                <div className="d-flex align-items-center justify-content-between">
+                  <div className="d-flex align-items-center" style={{opacity:'0.8'}}>
+                    <img src={avaxLogo} alt="" style={{width:'25px', marginRight:'0.5rem'}}/>
+                    <h6>AVAX</h6>
+                  </div>
+                  <h5 style={{opacity:'0.8'}}>{props.listPrice}</h5>
+                </div>
+            </div>
+            <div 
+              className="w-50"
+              style={{
+                backgroundColor: "rgb(245 245 245)",
+                borderRight: "1px solid white",
+                borderRadius:"0px 10px 10px 0px",
+                padding:'1rem'
+              }}
+              >
+                <p style={{fontWeight:'600', marginBottom:'1rem'}}>You Pay</p>
+                <div className="d-flex align-items-center justify-content-between">
+                  <div className="select-token-box">
+                    <img src={avaxLogo} alt="" style={{width:'25px', marginRight:'0.5rem'}}/>
+                    <h6>AVAX</h6>
+                  </div>
+                  <h5>{props.listPrice}</h5>
+                </div>
+            </div>
+            <div>
+          </div>
+        </div>
+        {/* <div className="d-flex justify-content-between">
           <div
             className="w-50"
             style={{
@@ -178,20 +229,13 @@ const CardModal = (props) => {
             <div className="d-flex justify-content-between align-items-center">
               <p style={{ fontSize: "14px", marginLeft: "5px" }}>Price</p>
               <p style={{ fontSize: "14px", marginRight: "5px" }}>
-                {/* $24,055.16 */}
               </p>
             </div>
             <div className="d-flex justify-content-between align-items-center">
               <div
-                id="sort-by"
-                className="dropdown"
                 style={{ marginLeft: "5px" }}
-                onClick={() => tokenOnClick()}
               >
-                <a
-                  className="btn-selector nolink"
-                  style={{ minWidth: "100px" }}
-                >
+                <a>
                   <img
                     width="15"
                     height="15"
@@ -216,7 +260,6 @@ const CardModal = (props) => {
             <div className="d-flex justify-content-between align-items-center">
               <p style={{ fontSize: "14px", marginLeft: "5px" }}>You pay</p>
               <p style={{ fontSize: "14px", marginRight: "5px" }}>
-                {/* $24,055.16 */}
               </p>
             </div>
             <div className="d-flex justify-content-between align-items-center" style={{pointerEvents: "none"}}>
@@ -224,11 +267,11 @@ const CardModal = (props) => {
                 id="sort-by"
                 className="dropdown"
                 style={{ marginLeft: "5px" }}
-                
+                onClick={() => tokenOnClick()}
               >
                 <a
                   className="btn-selector nolink"
-                  style={{ minWidth: "100px" }}
+                  style={{ minWidth: "5rem" }}
                 >
                   <img
                     width="15"
@@ -284,7 +327,7 @@ const CardModal = (props) => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* <input type="number" className="form-control" placeholder="1" /> */}
         <div className="hr"></div>
@@ -294,7 +337,7 @@ const CardModal = (props) => {
         </div>
         <div className="d-flex justify-content-between">
           <p> To
-            <img style={{marginLeft:"1rem"}} src={ethlogo}/>
+            <img style={{marginLeft:"1rem"}} src={ethLogo}/>
             <a style={{ backgroundColor: "#f8f8f8",borderRadius:"20px",marginLeft:"0.5rem"}}>
               Ethereum
             </a>

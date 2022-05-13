@@ -5,6 +5,7 @@ import "react-tabs/style/react-tabs.css";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import CardModal from "../components/layouts/CardModal";
+import ProfileModal from "../components/layouts/profileModal";
 
 import avt from "../assets/images/avatar/satoshi.svg";
 import img1 from "../assets/images/box-item/card-item-3.jpg";
@@ -544,6 +545,10 @@ const Authorsprofile = () => {
     }));
   }
 
+  
+
+  
+
   async function refreshData() {
     console.log("Refresh Start");
     let items = await fetchAllMyItems();
@@ -591,9 +596,23 @@ const Authorsprofile = () => {
     window.location.href = "/list-item?chainId=" + data.chainId + "&collection=" + data.collectionAddress + "&tokenId=" + data.tokenId
   }
 
+  const [profileModalShow,setProfileModalShow] = useState(false)
+
+  async function checkData (){
+    items.map((x) => {
+      if(crossChainTokenLabel(x.collection.chainId, x.listTokenAddress) === "LUNA" || crossChainTokenLabel(x.collection.chainId, x.listTokenAddress) === "UST"){
+        setProfileModalShow(true)
+      }
+      console.log(crossChainTokenLabel(x.collection.chainId, x.listTokenAddress))
+    })
+    
+    
+  }
+
   useEffect(() => {
     refreshData();
     filterItem();
+    checkData();
   }, [account, terraAccount]);
 
   return (
@@ -784,6 +803,10 @@ const Authorsprofile = () => {
         </div>
       </section>
       <CardModal show={modalShow} onHide={() => setModalShow(false)} />
+      <ProfileModal
+      show={profileModalShow}
+      onHide={() => setProfileModalShow(false)}
+      />
       <Footer />
     </div>
   );

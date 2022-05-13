@@ -3,6 +3,8 @@ import avaxLogo from '../images/icon/avax-logo.svg'
 import moonbeamLogo from '../images/icon/moonbeam-logo.svg'
 import fantomLogo from '../images/icon/fantom-logo.svg'
 import polygonLogo from '../images/icon/polygon-logo.svg'
+import lunaLogo from '../images/icon/Luna.svg'
+import ustLogo from '../images/icon/UST.svg'
 
 const widgetSidebarData = [
     // {
@@ -21,40 +23,9 @@ const widgetSidebarData = [
     //         },
     //     ]
     // },
-    // {
-    //     id: 2,
-    //     title: "Categories",
-    //     content : [
-    //         {
-    //             field: 'Art'
-    //         },
-    //         {
-    //             field: 'Music'
-    //         },
-    //         {
-    //             field: 'Domain Names',
-    //             checked: 'checked'
-    //         },
-    //         {
-    //             field: 'Virtual Worlds'
-    //         },
-    //         {
-    //             field: 'Trading  Cards'
-    //         },
-    //         {
-    //             field: 'Collectibles',
-    //             checked: 'checked'
-    //         },
-    //         {
-    //             field: 'Sports'
-    //         },
-    //         {
-    //             field: 'Utility'
-    //         },
-    //     ]
-    // },
+
     {
-        id: 3,
+        id: 1,
         title: "Chains",
         content : [
             {
@@ -76,6 +47,24 @@ const widgetSidebarData = [
             {
                 field: 'Moonbeam',
                 img:moonbeamLogo
+            },
+        ]
+    },
+    {
+        id: 2,
+        title: "Coins",
+        content : [
+            {
+                field: 'AVAX',
+                img:avaxLogo
+            },
+            {
+                field: 'LUNA',
+                img:lunaLogo
+            },
+            {
+                field: 'UST',
+                img:ustLogo
             },
         ]
     },

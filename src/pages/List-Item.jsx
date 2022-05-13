@@ -4,6 +4,7 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Countdown from "react-countdown";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { Dropdown } from "react-bootstrap";
 import "react-tabs/style/react-tabs.css";
 import img1 from "../assets/images/box-item/image-box-6.jpg";
 import avt from "../assets/images/avatar/satoshi.svg";
@@ -24,8 +25,8 @@ import { chainLabel, maskAddress } from "../utils/address";
 const CreateItem2 = () => {
   const [data, setData] = useState({});
   const [Price, setPrice] = useState("");
-  const [PriceType, setPriceType] = useState("aLUNA");
-  const [PricePic, setPricePic] = useState(AlunaLogo);
+  const [PriceType, setPriceType] = useState("AVAX");
+  const [PricePic, setPricePic] = useState(avaxLogo);
   const [processing, setProcessing] = useState(false);
 
   const [searchParams, setSearchParams] = useSearchParams();
@@ -180,55 +181,41 @@ const CreateItem2 = () => {
                     <TabPanel>
                       <form action="#">
                         <h4 className="Price-item">Price</h4>
-                        <div className="d-flex">
-                          <div id="sort-by" className="dropdown">
-                            <a className="btn-selector nolink">
-                              <img
-                                width="29"
-                                height="29"
-                                src={PricePic}
-                                style={{ marginRight: "14px" }}
+                        <div className="d-flex align-items-center">
+                            <Dropdown>
+                              <Dropdown.Toggle className="dropdown-chain-box" 
+                              style={{marginRight:'0.5rem', width:'12rem'}}>
+                              <img 
+                                src={
+                                  PriceType == "AVAX" ? avaxLogo 
+                                  : PriceType == "aLUNA" ? AlunaLogo 
+                                  : PriceType == "aUST" ? AustLogo 
+                                  : ''}
+                                style={{marginRight:'1rem', width:'25px'}}
                               />
-                              {PriceType}
-                            </a>
-                            <ul>
-                              <li
-                                onClick={() => {
-                                  setPriceType("aLUNA");
-                                  setPricePic(AlunaLogo);
-                                }}
-                              >
-                                <div className="d-flex align-items-center">
-                                  <span>
-                                    <img
-                                      width="29"
-                                      height="29"
-                                      src={AlunaLogo}
-                                      style={{ marginRight: "14px" }}
-                                    />
-                                    aLUNA
-                                  </span>
-                                </div>
-                              </li>
-                              <li
-                                onClick={() => {
-                                  setPriceType("aUST");
-                                  setPricePic(AustLogo);
-                                }}
-                              >
-                                <span>
-                                  <img
-                                    width="29"
-                                    height="29"
-                                    src={AustLogo}
-                                    style={{ marginRight: "14px" }}
-                                  />
+                              <a>{PriceType}</a>
+                              </Dropdown.Toggle>
+                              <Dropdown.Menu style={{width:'100%'}}>
+                                <Dropdown.Item className="dropdown-chain-detail"
+                                onClick={() => setPriceType("AVAX")}>
+                                  <img src={avaxLogo} style={{marginRight:'1rem', width:'25px'}}/>
+                                  AVAX
+                                </Dropdown.Item>
+                                <Dropdown.Item className="dropdown-chain-detail" 
+                                disabled style={{opacity:'0.6'}}
+                                onClick={() => setPriceType("aLUNA")}>
+                                  <img src={AlunaLogo} style={{marginRight:'1rem', width:'25px'}}/>
+                                  aLUNA
+                                </Dropdown.Item>
+                                <Dropdown.Item className="dropdown-chain-detail"
+                                disabled style={{opacity:'0.6'}}
+                                onClick={() => setPriceType("aUST")}>
+                                  <img src={AustLogo} style={{marginRight:'1rem', width:'25px'}}/>
                                   aUST
-                                </span>
-                              </li>
-                            </ul>
-                          </div>
-                          <input type="text" placeholder="Enter Price(at least 10UST /0.1 Luna)" className="" onChange={(e) => setPrice(e.target.value)} />
+                                </Dropdown.Item>
+                              </Dropdown.Menu>
+                            </Dropdown>
+                          <input type="text" placeholder="Enter Price(at least 0.1 AVAX)" className="" style={{marginBottom:'0rem'}} onChange={(e) => setPrice(e.target.value)} />
                         </div>
 
                         <h4
@@ -242,17 +229,11 @@ const CreateItem2 = () => {
                             <div className="seclect-box">
                               <div id="all-items" className="dropdown" disabled>
                                 <a>No expiration Date</a>
-                                {/* <Link to="#" className="btn-selector">
-                                No expiration Date
-                                </Link> */}
                               </div>
                             </div>
                           </div>
                         </div>
-                        {/* <h4 className="title-create-item">Description</h4>
-                                                <textarea placeholder="e.g. “This is very limited item”"></textarea> */}
                         <hr />
-
                         <div className="row-form style-3">
                           <div className="inner-row-form style-2">
                             <div>
@@ -266,33 +247,9 @@ const CreateItem2 = () => {
                                 <p style={{ color: "#B0B5B7" }}>25%</p>
                               </div>
                             </div>
-                            {/* <div className="inner-row-form">
-                                                        <h4 className="title-create-item">Royalties</h4>
-                                                        <input type="text" placeholder="5%" />
-                                                    </div>
-                                                    <div className="inner-row-form">
-                                                        <h4 className="title-create-item">Size</h4>
-                                                        <input type="text" placeholder="e.g. “size”" />
-                                                    </div> */}
-                            {/* <div className="inner-row-form style-2">
-                                                        <div className="seclect-box">
-                                                            <div id="item-create" className="dropdown">
-                                                                <Link to="#" className="btn-selector nolink">Abstraction</Link>
-                                                                <ul >
-                                                                    <li><span>Art</span></li>
-                                                                    <li><span>Music</span></li>
-                                                                    <li><span>Domain Names</span></li>
-                                                                    <li><span>Virtual World</span></li>
-                                                                    <li><span>Trading Cards</span></li>
-                                                                    <li><span>Sports</span></li>
-                                                                    <li><span>Utility</span></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div> */}
                           </div>
                         </div>
-                        <button className="" style={{ marginTop: "20px" }} onClick={listItemOnClick} disabled={processing}>
+                        <button className="sc-button loadmore fl-button pri-3" style={{ marginTop: "20px" }} onClick={listItemOnClick} disabled={processing}>
                           Complete listing
                         </button>
                       </form>

@@ -1269,6 +1269,7 @@
 .sc-button.style-place-bid.fl-button.pri-3:hover{
     border-color: #FF4F0D;
     background: #FF4F0D;
+    color: #ffffff;
 }
 
 .is_dark .sc-button.style-place-bid.fl-button.pri-3:hover{
@@ -5284,18 +5285,21 @@ button.accordion-button {
     font-size: 15px;
     line-height: 22px;
     padding: 10px 20px;
-    background-color: #FF4F0D !important;
+    background-color: #ffffff;
+    border-color: #FF4F0D;
+    color: #FF4F0D;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition   : all 0.3s ease-in-out;
     -ms-transition    : all 0.3s ease-in-out;
     -o-transition     : all 0.3s ease-in-out;
     transition        : all 0.3s ease-in-out;
     outline: none;
-    border: none ;
 }
 
 .modal-body .btn.btn-primary:hover{
-    opacity: 0.8;
+    background-color: #FF4F0D;
+    border-color: #ffffff;
+    color: #ffffff;
 }
 
 .modal-content .btn-close{
@@ -8369,3 +8373,19 @@ input[type="text"].big-dog::-webkit-input-placeholder {
     top:0;
 }
 
+.dropdown-chain-box {
+    height: 45px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    color: #a7a7a7;
+    background-color: #ffffff;
+    border-color: #c0c0c0;
+  }
+  .dropdown-chain-box:focus {
+    color: #a7a7a7;
+    background-color: #ffffff;
+    border-color: #c0c0c0;
+    -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+  }

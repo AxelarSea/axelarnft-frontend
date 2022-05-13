@@ -23,6 +23,7 @@ const WaitingModal = (props) => {
 
   const [topic,setTopic] = useState('Axelar Network receives & transfers the NFT.')
 
+  const [subdetail,setSubDetail] = useState("")
   const [detail,setDetail] = useState("")
 
   const [time, setTime] = useState(0);
@@ -46,8 +47,11 @@ const WaitingModal = (props) => {
       <Modal.Header closeButton></Modal.Header>
       <div className="modal-body space-y-20 pd-20" style={{paddingTop:'1rem'}}>
         <h3 className="center congratulation-title">Bridging in progress</h3>
-        
-        <p className="center" style={{fontSize:'14px', marginTop:'auto'}}>Your NFT is safe! Let's see where it is now.</p>
+        <div className="d-flex flex-column justify-content-center" style={{marginTop:'-0.5rem'}}>
+          <p className="center" style={{fontSize:'14px', marginTop:'auto'}}>The bridging process is 100% guarantee success.</p>
+          <p className="center" style={{fontSize:'17px', marginTop:'-0.75rem',fontWeight:'700'}}>Your NFT will NEVER be lost.</p>
+        </div>
+
         <div>
           <div className="transaction-step-box d-flex p-2 align-items-center">
           <img src={props.status >= 1 ? greenCheck : props.status < 1 ? oneWhiteSpin : one} style={{marginRight:'1rem', width:'30px'}}/>
@@ -70,7 +74,7 @@ const WaitingModal = (props) => {
               <img src={props.status >= 2 ? greenCheck : props.status == 1 ? twoWhiteSpin : two} style={{marginRight:'1rem', width:'30px'}}/>
               <div className="d-flex flex-column ">
               <h6 style={{color:color}}>{topic}</h6>
-                <p style={{fontSize:'11px'}}>{detail}</p>
+                {detail}
                 {props.lockTx && <p style={{fontSize:'14px',color:'#FF4F0D'}}>Real Time Check: <a href={"https://testnet.axelarscan.io/gmp/" + props.lockTx} target="_blank">{maskAddress(props.lockTx)} <a className="animation-gradient" style={{fontWeight:'600'}}>Click Here!</a></a></p>}
               </div>
                
@@ -80,10 +84,11 @@ const WaitingModal = (props) => {
                 className="center"
                 src={axelarIcon} style={{marginBottom:'0.25rem',width:'35px'}} alt="" />
                 {props.lockTx && time &&
-                      <Countdown  
+                      <Countdown
+                      style={{fontSize:'12px', fontWeight:'500'}}  
                         onComplete={() => {
                           setTopic('Axelar Network is taking longer than expected. ')
-                          setDetail('Your NFT is safe! It will be transferred when Axelar catches up.')
+                          setDetail(<p className="process-detail" style={{fontSize:'12px',lineHeight:'auto'}}><a className="animation-gradient" style={{fontWeight:'600',marginLeft:'0.2rem'}}>Your NFT is not lost!</a> It is waiting in a queue. The transfer will be completed when Axelar Network catches up.</p>)
                           setColor('#FF4F0D')
                         }}
                         date={time}>
@@ -144,7 +149,10 @@ const WaitingModal = (props) => {
             <h6 style={{ marginTop: "1.5rem" }}>Destination</h6>
           </div>
         </div> */}
-        <p className="center" style={{fontSize:'14px'}}>Keep this page open and we will notify when the process is done. You can mint and bridge another NFT on a new tab.</p>
+        <div className="d-flex flex-column justify-content-center">
+        <p className="center" style={{fontSize:'14px'}}>Keep this page open. We will notify when the process is completed.</p>
+        <p className="center" style={{fontSize:'14px'}}>You can mint and bridge another NFT on a new tab.</p>
+        </div>
       </div>
     </Modal>
     )
