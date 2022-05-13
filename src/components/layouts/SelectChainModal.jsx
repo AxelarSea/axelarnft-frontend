@@ -13,44 +13,31 @@ const SelectChainModal = (props) => {
 
     const [data,setData] = useState([
         {
-            topic:'Polygon',
-            img:polygonLogo,
-            select:false
+            blockChain:'Ethereum',
+            img:ethLogo,
         },
-        // {
-        //     topic:'Moonbeam',
-        //     img:moonbeamLogo,
-        //     select:false
-        // },
         {
-            topic:'Fantom',
-            img:fantomLogo,
-            select:false
-
-        },
-        // {
-        //     topic:'ETH',
-        //     img:ethLogo,
-        //     select:false
-        // },
-        {
-            topic:'Avalanche',
+            blockChain:'Avalanche',
             img:avaxLogo,
-            select:false
-     
+        },
+        {
+            blockChain:'Polygon',
+            img:polygonLogo,
+        },
+        {
+            blockChain:'Fantom',
+            img:fantomLogo,
+        },
+        {
+            blockChain:'Moonbeam',
+            img:moonbeamLogo,
         },
     ])
 
-    const handleChangeChain = (topic,img,index) => {
-        props.setMyNftOn(topic)
-        props.setMyNftOnImg(img)
+    const handleChangeChain = (blockChain,index) => {
+        props.setBlockChain(blockChain)
         props.setModalShow(false)
 
-        // const clearSelect = data.map(item => (
-        //     item.select == false
-        // ))
-
-        // setData(clearSelect)
 
         const data2 = [...data]
         data2[index].select = true
@@ -66,17 +53,19 @@ const SelectChainModal = (props) => {
             <input type="text" placeholder="Search Chain"/>
             <ul className="list-group">
             {data.map((item,index) => (
-                <li className="list-group-item list-group-item-action justify-content-between" style={{border:'none'}}>
+                <li className="list-group-item list-group-item-action justify-content-between" 
+                style={{border:'none', cursor:'pointer'}} 
+                onClick={() => handleChangeChain(item.blockChain,index)}
+                >
                     <div className="d-flex align-items-center justify-content-between">
                             <div className="d-flex align-items-center justify-content-center">
                                 <img src={item.img} alt="" width="25" height="25"/>
                                 <div className="d-flex flex-column  justify-content-center" style={{marginLeft:'3rem'}}>
-                                    <h5 style={{fontSize:'16px'}}>{item.topic}</h5>
+                                    <h5 style={{fontSize:'16px'}}>{item.blockChain}</h5>
                                     <p style={{color:'grey' , fontSize:'12px'}}>{item.detail}</p>
                                 </div>
                             </div>
                     </div>
-                    <h5 style={{fontSize:'16px' , fontWeight:'600' , cursor:'pointer'}} onClick={() => handleChangeChain(item.topic , item.img ,index)}>{item.select ? 'Selected' : 'Select'}</h5>
 
                 </li>
             ))}

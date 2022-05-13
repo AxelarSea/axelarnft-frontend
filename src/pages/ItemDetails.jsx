@@ -242,12 +242,12 @@ const ItemDetails = () => {
                     </div> */}
                   </div>
                   <div class="d-flex align-items-center justify-content-center">
-                    {data.listAmount > 0 && data.owner.toLowerCase() != account.toLowerCase() &&
+                    {data.listAmount > 0 && data.owner.toLowerCase() != account.toLowerCase() && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) != "LUNA" && data.listPrice < 10 && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) != "UST" &&
                       <button
                         onClick={() => setModalShow(true)}
                         className="sc-button loadmore fl-button pri-3"
                         style={{width:'100%'}}
-                        disabled={(data.listPrice < 0.1 && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) == "LUNA") || (data.listPrice < 10 && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) == "UST")? true : false}
+                        disabled={(data.listPrice < 0.1 && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) == "LUNA")? true : false}
                       >
                         <span>Buy Now</span>
                       </button>
@@ -300,7 +300,7 @@ const ItemDetails = () => {
                         </button>
                       </Link>
                     } */}
-                    {data.listAmount == 0 && data.owner.toLowerCase() != account.toLowerCase() &&
+                    {((data.listAmount == 0 && data.owner.toLowerCase() != account.toLowerCase()) || ((crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) == "LUNA") || (crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) == "UST"))) &&
                       <button
                         style={{marginLeft:'2rem', opacity: 0.6, pointerEvents: "none"}}
                         className="sc-button loadmore fl-button pri-3 "

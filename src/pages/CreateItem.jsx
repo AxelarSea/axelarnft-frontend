@@ -26,9 +26,14 @@ import switchChain from "../utils/switchChain";
 import wait from "../utils/wait";
 import { refreshMetadata, fetchItem } from "../utils/api";
 
+import SelectChainModal from "../components/layouts/SelectChainModal";
+
 const CreateItem = () => {
   let [blockChain, setBlockChain] = useState("Ethereum");
+  
   const [processing, setProcessing] = useState(false);
+
+  const [modalShow,setModalShow] = useState(false)
 
   async function mint(e) {
     e.preventDefault();
@@ -266,8 +271,10 @@ const CreateItem = () => {
 
                         <h4 className="title-create-item d-flex">Blockchain</h4>
                         <Dropdown>
-                          <Dropdown.Toggle className="dropdown-chain-box">
-                          <img 
+                          <Dropdown.Toggle className="dropdown-chain-box" 
+                          onClick={() => setModalShow(true)}>
+                          <img
+                            onChange={() => setModalShow(false)} 
                             src={
                               blockChain == "Ethereum" ? ethLogo 
                               : blockChain == "Avalanche" ? avaxLogo 
@@ -406,6 +413,14 @@ const CreateItem = () => {
         </div>
       </div>
       <Footer />
+
+      <SelectChainModal
+        onShow={modalShow}
+        onHide={() => setModalShow(false)}
+        setModalShow={setModalShow}
+        setBlockChain={setBlockChain}
+      />
+
     </div>
   );
 };
