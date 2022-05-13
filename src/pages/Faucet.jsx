@@ -43,13 +43,6 @@ const Faucet = () => {
                 
             },
             {
-                img: img4,
-                title: 'Terra Testnet Faucet',
-                description: 'Potenti eleifend faucibus quo vero nibh netus suspendisse unde? Consectetuer aspernatur',
-                website:'https://faucet.terra.money/'
-                
-            },
-            {
                 img: img5,
                 title: 'Moonbeam Faucet',
                 description: 'Sollicitudin iure conubia vivamus habitasse aptent, eligendi deserunt excepteur tellus non',
@@ -61,6 +54,12 @@ const Faucet = () => {
                 description: 'Purus irure lacinia eiusmod inventore bibendum habitant potenti non sint rem! Felis, asper',
                 website:'https://faucet.polygon.technology/'
             },
+            // {
+            //     img: img4,
+            //     title: 'Terra Testnet Faucet',
+            //     description: 'Potenti eleifend faucibus quo vero nibh netus suspendisse unde? Consectetuer aspernatur',
+            //     website:'https://faucet.terra.money/'
+            // },
             // {
             //     img: img7,
             //     title: 'Kaikas',
@@ -123,6 +122,12 @@ const Faucet = () => {
                                     
                                     ))
                                 }
+                                <div className="sc-box-icon d-flex flex-column align-items-center justify-content-center " style={{cursor:'not-allowed', opacity:'0.6'}}>
+                                    <div className="img">
+                                        <img src={img4} alt="AxelarSea" />
+                                    </div>
+                                    <h4 className="heading"><a>Terra Testnet Faucet</a> </h4>
+                                </div>
                             </div>  
                         </div>    
                     </div>              
