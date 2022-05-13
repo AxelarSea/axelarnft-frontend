@@ -21,11 +21,13 @@ import avaxLogo from '../assets/images/icon/avax-logo.svg'
 import moonbeamLogo from '../assets/images/icon/moonbeam-logo.svg'
 import fantomLogo from '../assets/images/icon/fantom-logo.svg'
 import lunaLogo from '../assets/images/icon/Luna.svg'
-import ustLogo from '../assets/images/icon/UST.png'
+import ustLogo from '../assets/images/icon/UST.svg'
 import noHistory from '../assets/images/icon/NoHistory.svg'
 
 import imgdetail1 from "../assets/images/box-item/images-item-details.jpg";
 import CardModal from "../components/layouts/CardModal";
+import UnavailablePaymentModal from "../components/layouts/unavailablePaymentModal";
+
 import { cancelListing, crossChainTokenLabel, fetchItem } from "../utils/api";
 import { maskAddress } from "../utils/address";
 import web3 from "../hooks/web3";
@@ -37,6 +39,7 @@ const ItemDetails = () => {
   const [account, setAccount] = useState("");
 
   const [modalShow, setModalShow] = useState(false);
+  const [UnavailablePaymentModalShow, setunavailablePaymentModalShow] = useState(true);
 
   // const [logo,setLogo] = useState('')
 
@@ -444,6 +447,13 @@ const ItemDetails = () => {
         listPrice={data.listPrice}
         img={data.metadata?.image}
         owner={data.owner}
+      />
+      <UnavailablePaymentModal
+        onShow = {UnavailablePaymentModal}
+        onHide={() => {
+          setunavailablePaymentModalShow(false)
+          window.location.href="/Explore"
+        }}
       />
     </div>
   );
