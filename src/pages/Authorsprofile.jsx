@@ -49,6 +49,7 @@ import { cancelListing, crossChainTokenLabel, fetchAllMyItems } from "../utils/a
 import { chainLabel, maskAddress } from "../utils/address";
 import web3 from "../hooks/web3";
 import { useConnectedWallet } from "@terra-money/wallet-provider";
+import wait from "../utils/wait";
 
 const Authorsprofile = () => {
   const [items, setItems] = useState([]);
@@ -524,6 +525,8 @@ const Authorsprofile = () => {
 
   const [modalShow, setModalShow] = useState(false);
 
+  
+
   function formatItems(items) {
     console.log(items);
     return items.map((x) => ({
@@ -542,6 +545,7 @@ const Authorsprofile = () => {
       collectionAddress: x.collection.contractAddress,
       chainId: x.collection.chainId,
       listAmount: x.listAmount,
+      priceTag:crossChainTokenLabel(x.collection.chainId, x.listTokenAddress)
     }));
   }
 
@@ -552,9 +556,13 @@ const Authorsprofile = () => {
   async function refreshData() {
     console.log("Refresh Start");
     let items = await fetchAllMyItems();
+    checkData(items)
+
     console.log(items);
     setItems(formatItems(items));
+    console.log(formatItems(items))
     setDefaultItems(formatItems(items));
+
   }
 
   useEffect(() => {
@@ -598,21 +606,20 @@ const Authorsprofile = () => {
 
   const [profileModalShow,setProfileModalShow] = useState(false)
 
-  async function checkData (){
-    items.map((x) => {
-      if(crossChainTokenLabel(x.collection.chainId, x.listTokenAddress) === "LUNA" || crossChainTokenLabel(x.collection.chainId, x.listTokenAddress) === "UST"){
-        setProfileModalShow(true)
-      }
-      console.log(crossChainTokenLabel(x.collection.chainId, x.listTokenAddress))
-    })
-    
-    
+  const checkData = (items) => {
+    const newItem = items.filter(x => crossChainTokenLabel(x.collection.chainId, x.listTokenAddress) === "LUNA" || crossChainTokenLabel(x.collection.chainId, x.listTokenAddress) === "UST")
+    if(newItem.length > 0){
+      setProfileModalShow(true)
+    }
+    console.log(newItem)
+    console.log(newItem.length)
   }
 
+  
+
   useEffect(() => {
-    refreshData();
-    filterItem();
-    checkData();
+      refreshData()
+      filterItem();
   }, [account, terraAccount]);
 
   return (
@@ -804,7 +811,7 @@ const Authorsprofile = () => {
       </section>
       <CardModal show={modalShow} onHide={() => setModalShow(false)} />
       <ProfileModal
-      show={profileModalShow}
+      onShow={profileModalShow}
       onHide={() => setProfileModalShow(false)}
       />
       <Footer />

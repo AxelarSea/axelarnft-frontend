@@ -400,6 +400,8 @@ const CardModal = (props) => {
           setTransferFailedModalShow(false)
           window.location.href="/Explore"
         }}
+        chainId={props.chainId}
+        
       />
     </div>
     

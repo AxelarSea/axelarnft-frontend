@@ -6,7 +6,7 @@ import network from "../../assets/images/icon/icon-network.svg";
 import nolonger from "../../assets/images/icon/icon-nolonger.svg";
 import warningSign from "../../assets/images/icon/unavailable.svg";
 
-const profileModal = (props) => {
+const ProfileModal = (props) => {
   return (
     <Modal show={props.onShow} onHide={props.onHide}>
       <Modal.Header closeButton></Modal.Header>
@@ -25,4 +25,4 @@ const profileModal = (props) => {
   );
 };
 
-export default profileModal;
+export default ProfileModal;
