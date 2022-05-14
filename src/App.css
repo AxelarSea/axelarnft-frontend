@@ -832,5 +832,10 @@ margin-top: 2rem;
   background-color: #ff4f0d;
   border-color: #ff4f0d;
   background-image: none;
+}
 
+.market-icon {
+  position: absolute;
+  width: 40px;
+  margin: 1rem;
 }

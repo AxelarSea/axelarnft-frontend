@@ -9,6 +9,7 @@ import polygonLogo from '../../../assets/images/icon/polygon-logo.svg'
 import avaxLogo from '../../../assets/images/icon/avax-logo.svg'
 import moonbeamLogo from '../../../assets/images/icon/moonbeam-logo.svg'
 import fantomLogo from '../../../assets/images/icon/fantom-logo.svg'
+import axelarSeaLogo from '../../../assets/images/icon/icon-axelarsea.svg'
 
 import imgTodayPick from '../../../assets/images/box-item/img-today-pick-demo.svg'
 import nftLoading from '../../../assets/images/box-item/nft-loading.gif'
@@ -148,6 +149,7 @@ const ExploreItem = (props) => {
               key={index}
             >
               <div className="card-media">
+                <img style={{position:'absolute', margin:'1rem', width:'30px', zIndex:'10'}} src={axelarSeaLogo} alt="" />
                 <img src={item.img} alt="AxelarSea" />
                 <div className="button-place-bid">
                   <button
