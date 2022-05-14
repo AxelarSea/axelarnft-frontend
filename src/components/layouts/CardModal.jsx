@@ -126,10 +126,14 @@ const CardModal = (props) => {
     const accounts = await web3.eth.getAccounts();
     setMetamaskAccount(accounts[0]);
 
-    if (connectedWallet) {
+    const tokenSymbol = crossChainTokenSymbol(props.chainId, props.listTokenAddress);
+
+    if (connectedWallet && (tokenSymbol == "uluna" || tokenSymbol == "uusd")) {
       let [coins] = await lcd.bank.balance(connectedWallet.walletAddress);
-      console.log(coins.get(crossChainTokenSymbol(props.chainId, props.listTokenAddress)))
-      setBalance(coins.get(crossChainTokenSymbol(props.chainId, props.listTokenAddress)).amount / 1000000);
+      console.log(coins.get(tokenSymbol))
+      setBalance(coins.get(tokenSymbol).amount / 1000000);
+    } else {
+      // if (tokenSymbol)
     }
   }
 

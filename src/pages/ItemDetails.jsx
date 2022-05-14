@@ -228,7 +228,7 @@ const ItemDetails = () => {
                       <span className="heading">Price</span>
                       <div className="Price">
                         <div className="Price-box d-flex align-items-center" style={{width:'100%'}}>
-                        <img src={crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) === 'LUNA' ? lunaLogo : ustLogo } alt="" width="30" height="30" />
+                        <img src={crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) === 'LUNA' ? lunaLogo : (crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) === 'AVAX' ? avaxLogo : ustLogo) } alt="" width="30" height="30" />
 
                           <h5 style={{marginLeft:'0.5rem'}}>
                             {data.listPrice || "-"} {crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId)}

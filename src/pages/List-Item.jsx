@@ -46,6 +46,7 @@ const CreateItem2 = () => {
       switch (PriceType) {
         case "aLUNA": PriceTypeSymbol = "uluna"; break;
         case "aUST": PriceTypeSymbol = "uusd"; break;
+        case "AVAX": PriceTypeSymbol = "wavax-wei"; break;
       }
 
       console.log(PriceTypeSymbol)

@@ -21,6 +21,7 @@ import ERC20 from "../contracts/ERC20";
 import { generateBuyERC721Signature } from "../contracts/generateSignature";
 import { executeCosmosTransaction } from "./keplr";
 import NftBridgeController from "../contracts/NftBridgeController";
+import MarketplaceMetaWalletGMP from "../contracts/MarketplaceMetaWalletGMP";
 
 const environment = "testnet";
 const axelarApi = new AxelarAssetTransfer({ environment });
@@ -40,6 +41,13 @@ export const CROSS_CHAIN_TOKEN_ADDRESS = {
     4002: "0x89A1D86901D25EFFe5D022bDD1132827e4D7f010",
     1287: "0xD34007Bb8A54B2FBb1D6647c5AbA04D507ABD21d",
   },
+  "wavax-wei": {
+    3: "0x72af7e1e7E0D38bCF033C541598F5a0301D051A5",
+    80001: "0x6DD60c05FdA1255A44Ffaa9A8200b5b179A578D6",
+    43113: "0xd00ae08403B9bbb9124bB305C09058E32C39A48c",
+    4002: "0x8776aDD48553518641a589C39792cc409d4C8B84",
+    1287: "0x64aae6319934995Bf30e67EBBBA9750256E07283",
+  }
 };
 
 export function crossChainTokenSymbol(chainId, tokenAddress) {
@@ -63,6 +71,8 @@ export function crossChainTokenLabel(chainId, tokenAddress) {
       return "LUNA";
     case "uusd":
       return "UST";
+    case "wavax-wei":
+      return "AVAX";
   }
 
   return symbol;
@@ -145,32 +155,55 @@ export async function buyERC721(
   }
 
   // LOCK
-  await axios.post(
-    process.env.REACT_APP_API_HOST +
-      "/api/nft/collections/" +
-      collectionAddress +
-      "/" +
-      chainId +
-      "/items/" +
-      tokenId +
-      "/lock"
-  );
+  // await axios.post(
+  //   process.env.REACT_APP_API_HOST +
+  //     "/api/nft/collections/" +
+  //     collectionAddress +
+  //     "/" +
+  //     chainId +
+  //     "/items/" +
+  //     tokenId +
+  //     "/lock"
+  // );
 
   setStatus(0);
 
   let address = (await web3.eth.getAccounts())[0];
-  let metaWalletAddress = await getMetaWalletAddress(chainId, address);
   let symbol = crossChainTokenSymbol(chainId, listTokenAddress);
   let targetToken = new ERC20(chainId, listTokenAddress, address, true);
-
-  let seller = await new ERC721MetaMintable(
+  let nft = new ERC721MetaMintable(
     chainId,
     collectionAddress,
     address,
     true
-  ).ownerOf(tokenId);
+  )
+
+  let seller = await nft.ownerOf(tokenId);
   console.log("SELLER:", seller);
 
+  // EVM mode
+  if (symbol.endsWith("wei")) {
+    const sourceChainId = 43113; // MOCK
+
+    setStatus(1)
+
+    await switchChain(sourceChainId);
+    let metaWallet = new MarketplaceMetaWalletGMP(sourceChainId, address);
+
+    await metaWallet.bridge(
+      sourceChainId,
+      chainId,
+      seller,
+      tokenId,
+      listPrice,
+    )
+
+    setStatus(5);
+
+    return;
+  }
+
+  let metaWalletAddress = await getMetaWalletAddress(chainId, address);
   let startBalance = await targetToken.balanceOf(metaWalletAddress);
 
   if (parseFloat(startBalance) / 1000000 < listPrice) {
