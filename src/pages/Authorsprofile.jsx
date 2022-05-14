@@ -737,7 +737,7 @@ const Authorsprofile = () => {
                                   <div className="sc-card-product explode ">
                                     <div className="card-media">
                                       <img style={{position:'absolute', margin:'1rem', width:'40px', zIndex:'10'}} src={axelarSeaLogo} alt="" />
-                                      <img src={data.img} alt="AxelarSea" />
+                                      <img src={data.img} alt="AxelarSea" style={{aspectRatio:'1',objectFit:'cover'}}/>
                                       <div className="button-place-bid ">
                                         <button
                                           onClick={(e) => {
@@ -751,27 +751,17 @@ const Authorsprofile = () => {
                                       </div>
                                       {/* <Link to="/login" className="wishlist-button heart"><span className="number-like"> {data.wishlist}</span></Link> */}
                                     </div>
-                                    <div className="d-flex align-items-center" style={{margin:'0.5rem 0rem'}}>
-                                      <h5>Axelar Robot</h5>
-                                      <img src={verifyIcon} alt="" style={{marginLeft:'0.2rem', width:'15px'}}/>
-                                    </div>
-                                    <div className="card-title mg-bt-16">
-                                      <h5>{data.title}</h5>
-                                    </div>
-                                    <div className="meta-info">
-                                      <div className="author">
-                                        <div className="avatar">
-                                          <img src={avt} alt="AxelarSea" />
+                                    <div className="d-flex align-items-center justify-content-between">
+                                      <div>
+                                        <div className="d-flex align-items-center" style={{margin:'0.5rem 0rem'}}>
+                                          <h6>Axelar Robot</h6>
+                                          <img src={verifyIcon} alt="" style={{marginLeft:'0.2rem', width:'15px'}}/>
                                         </div>
-                                        <div className="info">
-                                          <span>Owned By</span>
-                                          <h6>{maskAddress(data.nameAuthor)}</h6>
+                                        <div>
+                                          <h6>{data.title}</h6>
                                         </div>
                                       </div>
-                                      <div className="">
                                       <img src={data.tags === 'ETH' ? ethLogo : data.tags === 'AVAX' ? avaxLogo : data.tags === 'FTM' ? fantomLogo : data.tags === 'MOONBEAM' ? moonbeamLogo : data.tags === 'POLYGON' ? polygonLogo : ''} alt="" width={'40'}/>
-
-                                      </div>
                                     </div>
                                     <div className="card-bottom style-explode">
                                       <div className="Price">

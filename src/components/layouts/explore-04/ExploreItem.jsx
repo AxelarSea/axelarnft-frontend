@@ -153,7 +153,7 @@ const ExploreItem = (props) => {
             >
               <div className="card-media">
                 <img style={{position:'absolute', margin:'1rem', width:'40px', zIndex:'10'}} src={axelarSeaLogo} alt="" />
-                <img src={item.img} alt="AxelarSea" />
+                <img src={item.img} alt="AxelarSea" style={{aspectRatio:'1',objectFit:'cover'}}/>
                 <div className="button-place-bid">
                   <button
                     onClick={() => setModalShow(true)}
@@ -167,21 +167,26 @@ const ExploreItem = (props) => {
                 </Link>
                 <div className="coming-soon">{item.feature}</div>
               </div>
-              <div className="d-flex align-items-center" style={{margin:'0.5rem 0rem'}}>
-                <h5>Axelar Robot</h5>
-                <img src={verifyIcon} alt="" style={{marginLeft:'0.2rem', width:'15px'}}/>
+              <div className="d-flex align-items-center justify-content-between">
+                <div>
+                  <div className="d-flex align-items-center" style={{margin:'0.5rem 0rem'}}>
+                    <h6>Axelar Robot</h6>
+                    <img src={verifyIcon} alt="" style={{marginLeft:'0.2rem', width:'15px'}}/>
+                  </div>
+                  <div>
+                    <h6>{item.title}</h6>
+                  </div>
+                </div>
+                <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === 'MOONBEAM' ? moonbeamLogo : item.tags === 'POLYGON' ? polygonLogo : ''} alt=""  width="40px"/>
               </div>
-              <div className="card-title">
-                <h5>{item.title}</h5>
-              </div>
-              <div className="meta-info">
+              {/* <div className="meta-info">
                 <div className="author">
-                  {/* <div className="avatar">
+                  <div className="avatar">
                     <img src={item.imgAuthor} alt="AxelarSea" />
                   </div>
                   <div className="card-title">
                     <h5>{item.title}</h5>
-                  </div> */}
+                  </div>
                   <div className="meta-info">
                     <div className="author">
                       <div className="avatar">
@@ -192,25 +197,12 @@ const ExploreItem = (props) => {
                         <h6> {maskAddress(item.nameAuthor)} </h6>
                       </div>
                     </div>
-                    {/* <div className="tags">{item.tags}</div> */}
                   </div>
-                  {/* <div className="card-bottom style-explode">
-                    <div className="price">
-                      <span>Price</span>
-                      <div className="price-details">
-                        <h5>{item.price}</h5>
-                        <span>= {item.priceChange}</span>
-                      </div>
-                    </div>
-                    <Link to="/activity-01" className="view-history reload">View History</Link>
-                  </div> */}
                 </div>
                 <div className="d-flex align-items-center justify-content-around" style={{width:'8rem'}}>
-                <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === 'MOONBEAM' ? moonbeamLogo : item.tags === 'POLYGON' ? polygonLogo : ''} alt=""  width="40px"/>
-                  {/* <h5 style={{fontSize:'11px'}}>{item.tags}</h5> */}
-                  
-                  </div>
-              </div>
+                  <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === 'MOONBEAM' ? moonbeamLogo : item.tags === 'POLYGON' ? polygonLogo : ''} alt=""  width="40px"/>
+                </div>
+              </div> */}
               <div className="card-bottom style-explode">
                 <div className="price">
                   <span>Price</span>

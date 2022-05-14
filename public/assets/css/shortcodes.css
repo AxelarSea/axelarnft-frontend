@@ -940,6 +940,7 @@
     box-sizing   : 20px;
     border-radius: 20px;
     overflow     : hidden;
+    aspect-ratio: 1;
 }
 
 /* card count down */

@@ -316,7 +316,7 @@ const RecentlyListed = () => {
                                             
                                             <div className="card-media">
                                                 <img style={{position:'absolute', margin:'1rem', width:'40px', zIndex:'10'}} src={axelarSeaLogo} alt="" />
-                                                <img src={item.img} alt="AxelarSea" />
+                                                <img src={item.img} alt="AxelarSea" style={{aspectRatio:'1',objectFit:'cover'}}/>
                                                 <div className="button-place-bid">
                                             <button
                                                 onClick={() => setModalShow(true)}
@@ -326,14 +326,19 @@ const RecentlyListed = () => {
                                             </button>
                                             </div>
                                             </div>
-                                            <div className="d-flex align-items-center" style={{margin:'0.5rem 0rem'}}>
-                                                <h5>Axelar Robot</h5>
-                                                <img src={verifyIcon} alt="" style={{marginLeft:'0.2rem', width:'15px'}}/>
+                                            <div className='d-flex align-items-center justify-content-between'>
+                                                <div>
+                                                    <div className="d-flex align-items-center" style={{margin:'0.5rem 0rem'}}>
+                                                        <h6>Axelar Robot</h6>
+                                                        <img src={verifyIcon} alt="" style={{marginLeft:'0.2rem', width:'15px'}}/>
+                                                    </div>
+                                                    <div>
+                                                        <h6>{item.title}</h6>
+                                                    </div>
+                                                </div>
+                                                <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === 'MOONBEAM' ? moonbeamLogo : item.tags === 'POLYGON' ? polygonLogo : ''} alt="" width={'40'}/>
                                             </div>
-                                            <div className="card-title">
-                                                <h5>{item.title}</h5>
-                                            </div>
-                                            <div className="meta-info style mt-2">
+                                            {/* <div className="meta-info style mt-2">
                                                 <div className="author">
                                                     <div className="avatar">
                                                         <img src={item.imgAuthor} alt="AxelarSea" />
@@ -345,9 +350,8 @@ const RecentlyListed = () => {
                                                 </div>
                                                 <div className=" d-flex align-items-center justify-content-around" style={{width:'6rem',marginLeft:'2.2rem'}}>
                                                         <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === 'MOONBEAM' ? moonbeamLogo : item.tags === 'POLYGON' ? polygonLogo : ''} alt="" width={'40'}/>
-                                                        {/* <h5 style={{fontSize:'14px'}}>{item.tags}</h5> */}
                                                 </div>
-                                            </div>
+                                            </div> */}
                                             <div className="meta-info  " id='cardprice' >
                                                 <div className="card-bottom style-explode">
                                                     <div className="price">
