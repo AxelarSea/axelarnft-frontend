@@ -6,7 +6,7 @@ import network from "../../assets/images/icon/icon-network.svg";
 import nolonger from "../../assets/images/icon/icon-nolonger.svg";
 import warningSign from "../../assets/images/icon/unavailable.svg";
 
-const unavailablePaymentModal = (props) => {
+const ProfileModal = (props) => {
   return (
     <Modal show={props.onShow} onHide={props.onHide}>
       <Modal.Header closeButton></Modal.Header>
@@ -14,15 +14,15 @@ const unavailablePaymentModal = (props) => {
         <img src={warningSign}
              alt="" width="200px" />
         <h3 style={{ color: "grey", marginTop: "3rem", padding:'0rem 2rem'}}>
-          LUNA and UST payments are currently not available.
+        LUNA and UST listings are currently not supported
         </h3>
         <p style={{ color: "grey", marginTop: "2rem", marginBottom: "3rem", fontSize:'16px', lineHeight:'20px'}}>
-          We are developing a new buying system using AVAX token. You will be able to make purchase again when the new system is ready. Stay tuned!
+        Please delist and relist NFT with price in AVAX
         </p>
-        <button onClick={() => window.location.href="/Explore"}>Explore</button>
+        
       </div>
     </Modal>
   );
 };
 
-export default unavailablePaymentModal;
+export default ProfileModal;

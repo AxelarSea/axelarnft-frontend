@@ -5,6 +5,7 @@ import "react-tabs/style/react-tabs.css";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import CardModal from "../components/layouts/CardModal";
+import ProfileModal from "../components/layouts/profileModal";
 
 import avt from "../assets/images/avatar/satoshi.svg";
 import img1 from "../assets/images/box-item/card-item-3.jpg";
@@ -548,10 +549,24 @@ const Authorsprofile = () => {
   async function refreshData() {
     console.log("Refresh Start");
     let items = await fetchAllMyItems();
+    checkData(items)
+
     console.log(items);
     setItems(formatItems(items));
     setDefaultItems(formatItems(items));
   }
+
+  const [profileModalShow,setProfileModalShow] = useState(false)
+
+  const checkData = (items) => {
+    const newItem = items.filter(x => crossChainTokenLabel(x.collection.chainId, x.listTokenAddress) === "LUNA" || crossChainTokenLabel(x.collection.chainId, x.listTokenAddress) === "UST")
+    if(newItem.length > 0){
+      setProfileModalShow(true)
+    }
+    console.log(newItem)
+    console.log(newItem.length)
+  }
+
 
   useEffect(() => {
     setPanelTab([
@@ -786,6 +801,10 @@ const Authorsprofile = () => {
         </div>
       </section>
       <CardModal show={modalShow} onHide={() => setModalShow(false)} />
+      <ProfileModal
+      onShow={profileModalShow}
+      onHide={() => setProfileModalShow(false)}
+      />
       <Footer />
     </div>
   );
