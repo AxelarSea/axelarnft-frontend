@@ -42,6 +42,10 @@ import avaxLogo from '../assets/images/icon/avax-logo.svg'
 import moonbeamLogo from '..//assets/images/icon/moonbeam-logo.svg'
 import fantomLogo from '../assets/images/icon/fantom-logo.svg'
 import axelarSeaLogo from '../assets/images/icon/icon-axelarsea.svg'
+import lunaLogo from '../assets/images/icon/Luna.svg'
+import ustLogo from '../assets/images/icon/UST.svg'
+import verifyIcon from '../assets/images/icon/icon-verify.svg'
+
 
 
 import Explore from "../components/layouts/explore-04/Explore";
@@ -543,6 +547,7 @@ const Authorsprofile = () => {
       collectionAddress: x.collection.contractAddress,
       chainId: x.collection.chainId,
       listAmount: x.listAmount,
+      priceTag:crossChainTokenLabel(x.collection.chainId, x.listTokenAddress)
     }));
   }
 
@@ -731,7 +736,7 @@ const Authorsprofile = () => {
                                 >
                                   <div className="sc-card-product explode ">
                                     <div className="card-media">
-                                      <img style={{position:'absolute', margin:'1rem', width:'30px', zIndex:'10'}} src={axelarSeaLogo} alt="" />
+                                      <img style={{position:'absolute', margin:'1rem', width:'40px', zIndex:'10'}} src={axelarSeaLogo} alt="" />
                                       <img src={data.img} alt="AxelarSea" />
                                       <div className="button-place-bid ">
                                         <button
@@ -745,6 +750,10 @@ const Authorsprofile = () => {
                                         </button>
                                       </div>
                                       {/* <Link to="/login" className="wishlist-button heart"><span className="number-like"> {data.wishlist}</span></Link> */}
+                                    </div>
+                                    <div className="d-flex align-items-center" style={{margin:'0.5rem 0rem'}}>
+                                      <h5>Axelar Robot</h5>
+                                      <img src={verifyIcon} alt="" style={{marginLeft:'0.2rem', width:'15px'}}/>
                                     </div>
                                     <div className="card-title mg-bt-16">
                                       <h5>{data.title}</h5>
@@ -767,8 +776,9 @@ const Authorsprofile = () => {
                                     <div className="card-bottom style-explode">
                                       <div className="Price">
                                         <span>Price</span>
-                                        <div className="Price-details">
-                                          <h5>{data.price}</h5>
+                                        <div className="Price-details d-flex align-items-center">
+                                          <img src={data.priceTag === "LUNA" ? lunaLogo : data.priceTag === "UST" ? ustLogo : ''} alt="" width={'30px'}/>
+                                          <h5 style={{marginLeft:'0.5rem'}}>{data.price}</h5>
                                           {/* <span>= {data.PriceChange}</span> */}
                                         </div>
                                       </div>

@@ -578,7 +578,7 @@
 }
 
 .style-2 .sc-box-icon .img {
-    margin-bottom     : 18px;
+    margin-bottom     : 20px;
     -webkit-transition: all 0.8s ease;
     -moz-transition   : all 0.8s ease;
     -ms-transition    : all 0.8s ease;
@@ -600,7 +600,7 @@
 }
 
 .style-2 .sc-box-icon:nth-child(1) .img {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 .style-2 .sc-box-icon:nth-child(3) {
@@ -608,7 +608,7 @@
 }
 
 .style-2 .sc-box-icon:nth-child(3) .img {
-    margin-bottom: 26px;
+    margin-bottom: 20px;
 }
 
 .style-2 .sc-box-icon:nth-child(4) {
@@ -616,7 +616,7 @@
 }
 
 .style-2 .sc-box-icon:nth-child(4) .img {
-    margin-bottom: 32px;
+    margin-bottom: 20px;
 }
 
 .style-2 .sc-box-icon:hover .img {

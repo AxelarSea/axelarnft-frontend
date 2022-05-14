@@ -9,6 +9,9 @@ import avaxLogo from '../../../assets/images/icon/avax-logo.svg'
 import moonbeamLogo from '../../../assets/images/icon/moonbeam-logo.svg'
 import fantomLogo from '../../../assets/images/icon/fantom-logo.svg'
 import axelarSeaLogo from '../../../assets/images/icon/icon-axelarsea.svg'
+import lunaLogo from '../../../assets/images/icon/Luna.svg'
+import ustLogo from '../../../assets/images/icon/UST.svg'
+import verifyIcon from '../../../assets/images/icon/icon-verify.svg'
 
 
 import imgTodayPick from '../../../assets/images/box-item/img-today-pick-demo.svg'
@@ -312,7 +315,7 @@ const RecentlyListed = () => {
                                         <div>
                                             
                                             <div className="card-media">
-                                                <img style={{position:'absolute', margin:'1rem', width:'30px', zIndex:'10'}} src={axelarSeaLogo} alt="" />
+                                                <img style={{position:'absolute', margin:'1rem', width:'40px', zIndex:'10'}} src={axelarSeaLogo} alt="" />
                                                 <img src={item.img} alt="AxelarSea" />
                                                 <div className="button-place-bid">
                                             <button
@@ -322,6 +325,10 @@ const RecentlyListed = () => {
                                                 <span>Buy Now</span>
                                             </button>
                                             </div>
+                                            </div>
+                                            <div className="d-flex align-items-center" style={{margin:'0.5rem 0rem'}}>
+                                                <h5>Axelar Robot</h5>
+                                                <img src={verifyIcon} alt="" style={{marginLeft:'0.2rem', width:'15px'}}/>
                                             </div>
                                             <div className="card-title">
                                                 <h5>{item.title}</h5>
@@ -345,8 +352,9 @@ const RecentlyListed = () => {
                                                 <div className="card-bottom style-explode">
                                                     <div className="price">
                                                         <span>Price</span>
-                                                        <div className="price-details mt-1">
-                                                            <h5>{item.price}</h5>
+                                                        <div className="price-details mt-1 d-flex align-items-center">
+                                                            <img src={item.priceTag === "LUNA" ? lunaLogo : item.priceTag === "UST" ? ustLogo : ''} alt="" width={'30px'}/>
+                                                            <h5 style={{marginLeft:'0.5rem'}}>{item.price}</h5>
                                                         </div>
                                                     </div>
                                                 </div>
