@@ -39,7 +39,7 @@ const ItemDetails = () => {
   const [account, setAccount] = useState("");
 
   const [modalShow, setModalShow] = useState(false);
-  const [UnavailablePaymentModalShow, setunavailablePaymentModalShow] = useState(false);
+  const [UnavailablePaymentModalShow, setunavailablePaymentModalShow] = useState(true);
 
   // const [logo,setLogo] = useState('')
 
@@ -245,7 +245,7 @@ const ItemDetails = () => {
                     </div> */}
                   </div>
                   <div class="d-flex align-items-center justify-content-center">
-                    {data.listAmount > 0 && data.owner.toLowerCase() != account.toLowerCase() &&
+                    {data.listAmount > 0 && data.owner.toLowerCase() != account.toLowerCase() && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) != "LUNA" && data.listPrice < 10 && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) != "UST" &&
                       <button
                         onClick={() => setModalShow(true)}
                         className="sc-button loadmore fl-button pri-3"
@@ -449,7 +449,7 @@ const ItemDetails = () => {
         owner={data.owner}
       />
       <UnavailablePaymentModal
-        onShow = {UnavailablePaymentModalShow}
+        onShow = {UnavailablePaymentModal}
         onHide={() => {
           setunavailablePaymentModalShow(false)
           window.location.href="/Explore"
