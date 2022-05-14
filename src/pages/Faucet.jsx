@@ -124,9 +124,10 @@ const Faucet = () => {
                                 }
                                 <div className="sc-box-icon d-flex flex-column align-items-center justify-content-center " style={{cursor:'not-allowed', opacity:'0.6'}}>
                                     <div className="img">
-                                        <img src={img4} alt="AxelarSea" />
+                                        <img src={img4} alt="AxelarSea"/>
                                     </div>
                                     <h4 className="heading"><a>Terra Testnet Faucet</a> </h4>
+                                    <p className="content" style={{position:'absolute', marginTop:'12rem'}}>Suspended</p>
                                 </div>
                             </div>  
                         </div>    
