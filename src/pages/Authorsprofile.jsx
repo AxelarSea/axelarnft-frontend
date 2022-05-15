@@ -764,8 +764,8 @@ const Authorsprofile = () => {
                                       <img src={data.tags === 'ETH' ? ethLogo : data.tags === 'AVAX' ? avaxLogo : data.tags === 'FTM' ? fantomLogo : data.tags === 'MOONBEAM' ? moonbeamLogo : data.tags === 'POLYGON' ? polygonLogo : ''} alt="" width={'40'}/>
                                     </div>
                                     <div className="card-bottom style-explode">
-                                      <div className="Price">
-                                        <span>Price</span>
+                                      <div className="Price" style={{marginTop:'0rem'}}>
+                                        <p>Price</p>
                                         <div className="Price-details d-flex align-items-center">
                                           <img src={data.priceTag === "LUNA" ? lunaLogo : data.priceTag === "UST" ? ustLogo : ''} alt="" width={'30px'}/>
                                           <h5 style={{marginLeft:'0.5rem'}}>{data.price}</h5>

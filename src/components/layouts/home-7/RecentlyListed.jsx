@@ -354,8 +354,8 @@ const RecentlyListed = () => {
                                             </div> */}
                                             <div className="meta-info  " id='cardprice' >
                                                 <div className="card-bottom style-explode">
-                                                    <div className="price">
-                                                        <span>Price</span>
+                                                    <div className="price" style={{marginTop:'0rem'}}>
+                                                        <p>Price</p>
                                                         <div className="price-details mt-1 d-flex align-items-center">
                                                             <img src={item.priceTag === "LUNA" ? lunaLogo : item.priceTag === "UST" ? ustLogo : ''} alt="" width={'30px'}/>
                                                             <h5 style={{marginLeft:'0.5rem'}}>{item.price}</h5>

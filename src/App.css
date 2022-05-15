@@ -839,3 +839,8 @@ margin-top: 2rem;
   width: 40px;
   margin: 1rem;
 }
+.time-count {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  display: flex;
+}

@@ -1,5 +1,5 @@
-import Countdown from "react-countdown";
 import { Modal } from "react-bootstrap";
+import Countdown, { zeroPad, calcTimeDelta, formatTimeDelta } from 'react-countdown';
 
 import arrowbridge from "../../assets/images/backgroup-secsion/arrow-bridge.svg";
 import spin from '../../assets/images/icon/processing.gif'
@@ -28,6 +28,12 @@ const WaitingModal = (props) => {
   const [time, setTime] = useState(0);
 
   const [color,setColor] = useState('black')
+  
+  const renderer = ({ hours, minutes, seconds }) => (
+    <span>
+      {zeroPad(hours)}:{zeroPad(minutes)}:{zeroPad(seconds)}
+    </span>
+  );
 
   useEffect(() => {
     if (props.status == 1) {
@@ -75,18 +81,21 @@ const WaitingModal = (props) => {
               </div>
                
               </div>
-              <div className="d-flex justify-content-end flex-column align-items-center" style={{width:'55px' , marginRight:'1rem'}}>
+              <div className="d-flex justify-content-center flex-column align-items-center time-count" style={{width:'55px' , marginRight:'1rem'}}>
               <img
                 className="center"
                 src={axelarIcon} style={{marginBottom:'0.25rem',width:'35px'}} alt="" />
                 {props.lockTx && time &&
-                      <Countdown  
+                      <Countdown
                         onComplete={() => {
                           setTopic('Axelar Network is taking longer than expected. ')
                           setDetail('Your NFT is safe! It will be transferred when Axelar catches up.')
                           setColor('#FF4F0D')
                         }}
-                        date={time}>
+                        date={time}
+                        renderer={renderer}
+                        >
+                          <span></span>
                       </Countdown>
                 }
               </div>
