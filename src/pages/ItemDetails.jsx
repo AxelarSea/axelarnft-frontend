@@ -449,7 +449,7 @@ const ItemDetails = () => {
         owner={data.owner}
       />
       <UnavailablePaymentModal
-        onShow = {UnavailablePaymentModal}
+        onShow = {data.listAmount != 0 && ['UST', 'LUNA'].indexOf(crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress)) != -1}
         onHide={() => {
           setunavailablePaymentModalShow(false)
           window.location.href="/Explore"

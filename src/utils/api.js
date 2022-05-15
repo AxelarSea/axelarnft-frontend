@@ -440,6 +440,8 @@ export async function listItem(
     await erc721.approve(contract.address);
   }
 
+  let tokenLabel = crossChainTokenLabel(chainId, listTokenAddress);
+
   // console.log(collectionAddress, tokenId, listAmount, listTokenAddress, listPrice);
 
   await contract.list(
@@ -447,7 +449,7 @@ export async function listItem(
     tokenId,
     listAmount,
     listTokenAddress,
-    Math.floor(listPrice * 1000000),
+    tokenLabel == 'UST' || tokenLabel == 'LUNA' ? Math.floor(listPrice * 1000000) : web3.utils.toWei(listPrice),
   );
 
   await wait(1000);

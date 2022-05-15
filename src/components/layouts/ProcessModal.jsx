@@ -23,70 +23,106 @@ import five from "../../assets/images/icon/5.svg";
 import FaqTestnetModal from "./FaqTestnetModal";
 
 const ProcessModal = (props) => {
+  const [faqModalShow, setFaqModalShow] = useState(false);
 
-
-  const [faqModalShow,setFaqModalShow] = useState(false)
-
-  const [time,setTime] = useState(Date.now() + 30000)
+  const [time, setTime] = useState(Date.now() + 30000);
 
   useEffect(() => {
-    console.log(props.status == 0, props.onShow)
+    console.log(props.status == 0, props.onShow);
     if (props.status == 0 && props.onShow) {
-      setTime(Date.now() + 120000)
+      setTime(Date.now() + 120000);
     }
-    if(props.status == 2){
-      setTime(Date.now() + 600000)
+    if (props.status == 2) {
+      setTime(Date.now() + 600000);
+    } else if (props.status == 5) {
+      setTime(Date.now() + 120000);
     }
-    else if(props.status == 5){
-      setTime(Date.now() + 120000)
-    }
-  },[props.status, props.onShow])
-    return (
-        <Modal show={props.onShow} onHide={props.onHide}>
+  }, [props.status, props.onShow]);
+
+  return (
+    <Modal show={props.onShow} onHide={props.onHide}>
       <Modal.Header closeButton></Modal.Header>
-      <div className="modal-body space-y-20 pd-20" style={{paddingTop:'1rem'}}>
-          <div  className="transaction-warning-box">
-            <h6 className="transaction-warning-detail">In future versions, users will be able to track the buying process in real time.</h6>
-          </div>
+      <div
+        className="modal-body space-y-20 pd-20"
+        style={{ paddingTop: "1rem" }}
+      >
+        <div className="transaction-warning-box">
+          <h6 className="transaction-warning-detail">
+            In future versions, users will be able to track the buying process
+            in real time.
+          </h6>
+        </div>
 
-          <div className="count-box pd-20">
-            <p className="center" style={{fontSize:'16px'}}>Estimated Time</p>
-            <div className="center">
-              <Countdown className="center countdown" date={time} onComplete={() => {
-                props.setTransferFailedModalShow(true)
-                props.onHide()
-              }} >
-                <span  className="center countdown">Please keep this window open.</span>
-              </Countdown>
-            </div>
-          </div>
-          <h5 className="transaction-header">Please wait while the transaction is being processed.</h5>
-          <div className="transaction-step-box">
-            <h6 className="transaction-step-detail"><img src={props.status <= 1 ? oneWhiteSpin : greenCheck} style={{marginRight: '1rem', width:'30px'}}/>Approved transaction on Terra or Kepler wallet</h6>
-          </div>
-          <div className="transaction-step-box">
-            <h6 className="transaction-step-detail"><img src={props.status == 3 ? twoWhiteSpin : props.status > 3 ? greenCheck : (props.status < 4 && props.status > 1) ? twoWhiteSpin : two} style={{marginRight: '1rem', width:'30px'}}/>Sign signature in metamask to confirm buying transaction</h6>
-          </div>
-          <div className="transaction-step-box">
-            <h6 className="transaction-step-detail"><img src={props.status == 4 ? threeWhiteSpin : three} style={{marginRight: '1rem', width:'30px'}}/>Wait for transaction to complete </h6>
-          </div>
-         
-          
-          {/* <h5 className="transaction-note">Depending on network congestion, the entire process</h5>
-          
-          <h5 className="transaction-note" style={{marginTop: '5px'}}>could take up to 10 minutes.</h5> */}
+        <div className="count-box pd-20">
+          <p className="center" style={{ fontSize: "16px" }}>
+            Estimated Time
+          </p>
           <div className="center">
-          <button  onClick={() => setFaqModalShow(true)}>FAQ</button>
-
+            <Countdown
+              className="center countdown"
+              date={time}
+              onComplete={() => {
+                props.setTransferFailedModalShow(true);
+                props.onHide();
+              }}
+            >
+              <span className="center countdown">
+                Please keep this window open.
+              </span>
+            </Countdown>
           </div>
-      </div>
-      <FaqTestnetModal 
-      onShow={faqModalShow}
-      onHide={() => setFaqModalShow(false)}
-      />
+        </div>
+        <h5 className="transaction-header">
+          Please wait while the transaction is being processed.
+        </h5>
+        <div className="transaction-step-box">
+          <h6 className="transaction-step-detail">
+            <img
+              src={props.status <= 1 ? oneWhiteSpin : greenCheck}
+              style={{ marginRight: "1rem", width: "30px" }}
+            />
+            Approved transaction on Terra or Kepler wallet
+          </h6>
+        </div>
+        <div className="transaction-step-box">
+          <h6 className="transaction-step-detail">
+            <img
+              src={
+                props.status == 3
+                  ? twoWhiteSpin
+                  : props.status > 3
+                  ? greenCheck
+                  : props.status < 4 && props.status > 1
+                  ? twoWhiteSpin
+                  : two
+              }
+              style={{ marginRight: "1rem", width: "30px" }}
+            />
+            Sign signature in metamask to confirm buying transaction
+          </h6>
+        </div>
+        <div className="transaction-step-box">
+          <h6 className="transaction-step-detail">
+            <img
+              src={props.status == 4 ? threeWhiteSpin : three}
+              style={{ marginRight: "1rem", width: "30px" }}
+            />
+            Wait for transaction to complete{" "}
+          </h6>
+        </div>
 
-      </Modal>
-      
-    )
-}
-export default ProcessModal
+        {/* <h5 className="transaction-note">Depending on network congestion, the entire process</h5>
+        
+        <h5 className="transaction-note" style={{marginTop: '5px'}}>could take up to 10 minutes.</h5> */}
+        <div className="center">
+          <button onClick={() => setFaqModalShow(true)}>FAQ</button>
+        </div>
+      </div>
+      <FaqTestnetModal
+        onShow={faqModalShow}
+        onHide={() => setFaqModalShow(false)}
+      />
+    </Modal>
+  );
+};
+export default ProcessModal;
