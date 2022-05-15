@@ -93,7 +93,21 @@ const ItemDetails = () => {
   ]);
 
   async function refreshData() {
-      setData(await fetchItem(chainId, collectionAddress, tokenId));
+    setData(await fetchItem(chainId, collectionAddress, tokenId));
+    const items = await fetchItem(chainId, collectionAddress, tokenId)
+    console.log(items)
+    checkData(items)
+}
+
+  const checkData = (items) => {
+    if( crossChainTokenLabel(items.collection.chainId, items.listTokenAddress) === "LUNA" || crossChainTokenLabel(items.collection.chainId, items.listTokenAddress) === "UST"){
+      setunavailablePaymentModalShow(true)
+    }
+    else{
+      setunavailablePaymentModalShow(false)
+    }
+    console.log(crossChainTokenLabel(items.collection.chainId, items.listTokenAddress))
+   
   }
 
   async function cancelListingAction() {
@@ -449,10 +463,9 @@ const ItemDetails = () => {
         owner={data.owner}
       />
       <UnavailablePaymentModal
-        onShow = {UnavailablePaymentModal}
+        onShow = {UnavailablePaymentModalShow}
         onHide={() => {
           setunavailablePaymentModalShow(false)
-          window.location.href="/Explore"
         }}
       />
     </div>

@@ -8,6 +8,10 @@ import polygonLogo from '../../../assets/images/icon/polygon-logo.svg'
 import avaxLogo from '../../../assets/images/icon/avax-logo.svg'
 import moonbeamLogo from '../../../assets/images/icon/moonbeam-logo.svg'
 import fantomLogo from '../../../assets/images/icon/fantom-logo.svg'
+import axelarSeaLogo from '../../../assets/images/icon/icon-axelarsea.svg'
+import lunaLogo from '../../../assets/images/icon/Luna.svg'
+import ustLogo from '../../../assets/images/icon/UST.svg'
+import verifyIcon from '../../../assets/images/icon/icon-verify.svg'
 
 
 import imgTodayPick from '../../../assets/images/box-item/img-today-pick-demo.svg'
@@ -408,8 +412,9 @@ const RecentlyListed = () => {
                                     <Link to={"/ItemDetails?chainId=" + item.raw?.collection.chainId + "&collection=" + item.raw?.collection.contractAddress + "&tokenId=" + item.raw?.tokenId} key={index} className={`sc-card-product menu_card style-h7 ${item.feature ? 'comingsoon' : '' } `}>
                                         <div>
                                             
-                                            <div className="card-media">
-                                                <img src={item.img} alt="AxelarSea" />
+                                        <div className="card-media">
+                                                <img style={{position:'absolute', margin:'1rem', width:'40px', zIndex:'10'}} src={axelarSeaLogo} alt="" />
+                                                <img src={item.img} alt="AxelarSea" style={{aspectRatio:'1',objectFit:'cover'}}/>
                                                 <div className="button-place-bid">
                                             <button
                                                 onClick={() => setModalShow(true)}
@@ -419,31 +424,25 @@ const RecentlyListed = () => {
                                             </button>
                                             </div>
                                             </div>
-                                            <div className="card-title">
-                                                <h5>{item.title}</h5>
-                                            </div>
-                                            <div className="meta-info style mt-2">
-                                                <div className="author">
-                                                    <div className="avatar">
-                                                        <img src={item.imgAuthor} alt="AxelarSea" />
+                                            <div className='d-flex align-items-center justify-content-between'>
+                                                <div>
+                                                    <div className="d-flex align-items-center" style={{margin:'0.5rem 0rem'}}>
+                                                        <h6>Axelar Robot</h6>
+                                                        <img src={verifyIcon} alt="" style={{marginLeft:'0.2rem', width:'15px'}}/>
                                                     </div>
-                                                    <div className="info">
-                                                        <span>Owned By</span>
-                                                        <h6> <Link to="/Authors-Profile">{maskAddress(item.nameAuthor)}</Link> </h6>
+                                                    <div>
+                                                        <h6>{item.title}</h6>
                                                     </div>
                                                 </div>
-                                                <div className=" d-flex align-items-center justify-content-around" style={{width:'6rem',marginLeft:'2.2rem'}}>
-                                                        <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === 'MOONBEAM' ? moonbeamLogo : item.tags === 'POLYGON' ? polygonLogo : ''} alt="" width={'40'}/>
-                                                        {/* <h5 style={{fontSize:'14px'}}>{item.tags}</h5> */}
-                                                </div>
-                                                {/* <Link to="/login" className="wishlist-button heart"><span className="number-like">{item.wishlist}</span></Link> */}
+                                                <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === 'MOONBEAM' ? moonbeamLogo : item.tags === 'POLYGON' ? polygonLogo : ''} alt="" width={'40'}/>
                                             </div>
                                             <div className="meta-info  " id='cardprice' >
                                                 <div className="card-bottom style-explode">
-                                                    <div className="price">
-                                                        <span>Price</span>
-                                                        <div className="price-details mt-1">
-                                                            <h5>{item.price}</h5>
+                                                    <div className="price" style={{marginTop:'0rem'}}>
+                                                        <p>Price</p>
+                                                        <div className="price-details mt-1 d-flex align-items-center">
+                                                            <img src={item.priceTag === "LUNA" ? lunaLogo : item.priceTag === "UST" ? ustLogo : ''} alt="" width={'30px'}/>
+                                                            <h5 style={{marginLeft:'0.5rem'}}>{item.price}</h5>
                                                         </div>
                                                     </div>
                                                 </div>
