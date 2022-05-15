@@ -194,9 +194,33 @@ export async function buyERC721(
       sourceChainId,
       chainId,
       seller,
+      listTokenAddress,
       tokenId,
       listPrice,
     )
+
+    setStatus(2);
+
+    // Polling
+    while (true) {
+      try {
+        let nftOwner = await nft.ownerOf(tokenId);
+
+        // console.log(balance);
+        // console.log(parseFloat(balance) / 1000000, listPrice);
+
+        if (nftOwner.toLowerCase() == address.toLowerCase()) {
+          break;
+        } else {
+          console.log("Not arrived");
+        }
+      } catch (err) {
+        console.error(err);
+      }
+      await wait(3000);
+    }
+
+    await wait(6000);
 
     setStatus(5);
 

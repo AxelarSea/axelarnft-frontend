@@ -3,11 +3,11 @@ import ContractCache from "./ContractCache";
 import web3 from "../hooks/web3";
 
 const marketplaceMetaWalletAddress = {
-  3: '0x735110C25459dD4C54A917C41B1d4F09882Ed8Cb',
-  80001: "0x446849E8deb0F55bBd5B4fe85b51ce4DEc7f25EF",
-  43113: "0x96aE920F9183D454f27031f3f6d9F2A6AB82aCF5",
-  4002: "0xF0ed3E8e4FE7A6f4F441cCF81d4c740c8A325f1B",
-  1287: "0xA505d1791B29833Aa7d4fe34C29177dd30E56028",
+  3: '0x25d546Cf3AC6FDeBD8f1bf5F38fa4b8c4A059266',
+  80001: "0xF064fB56d1841e88B71D60fC08af663035B96D7B",
+  43113: "0x8D013ac025C8f949CaFe11F935f24130D3330008",
+  4002: "0x6e865C4e7079405EF5082217ACEFe6568d12a93c",
+  1287: "0x3269B478744C069E1cfA4c6246B8cBB948Ef9cEC",
 }
 
 const BRIDGE_GAS_LIMIT = 200_000;
@@ -55,11 +55,11 @@ const wethDest = {
 }
 
 const tokenSymbol = {
-  "43113": "wavax-wei",
-  "1287": "wdev-wei",
-  "3": "weth-wei",
-  "4002": "wftm-wei",
-  "80001": "wmatic-wei",
+  "43113": "WAVAX",
+  "1287": "WDEV",
+  "3": "WETH",
+  "4002": "WFTM",
+  "80001": "WMATIC",
 }
 
 export default class MarketplaceMetaWalletGMP {
@@ -74,13 +74,13 @@ export default class MarketplaceMetaWalletGMP {
     return "MarketplaceMetaWallet";
   }
 
-  async bridge(sourceChainId, destChainId, seller, tokenId, amount) {
+  async bridge(sourceChainId, destChainId, seller, tokenAddress, tokenId, amount) {
     const gasDestToken = BRIDGE_GAS_LIMIT * GAS_PRICE[destChainId] / 1000000000;
     const gasSourceToken = gasDestToken * GAS_TOKEN_PRICE[destChainId] / GAS_TOKEN_PRICE[sourceChainId];
 
     const payload = web3.eth.abi.encodeParameters(
       ['address', 'address', 'address', 'uint256'],
-      [this.from, wethDest[sourceChainId][destChainId], seller, tokenId]
+      [this.from, tokenAddress, seller, tokenId]
     );
 
     console.log(axelarChainName[destChainId], payload, tokenSymbol[sourceChainId], web3.utils.toWei(gasSourceToken.toPrecision(9)))
