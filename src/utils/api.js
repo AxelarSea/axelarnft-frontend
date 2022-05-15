@@ -194,7 +194,7 @@ export async function buyERC721(
       sourceChainId,
       chainId,
       seller,
-      listTokenAddress,
+      collectionAddress,
       tokenId,
       listPrice,
     )
@@ -447,7 +447,7 @@ export async function listItem(
     tokenId,
     listAmount,
     listTokenAddress,
-    Math.floor(listPrice * 1000000)
+    Math.floor(listPrice * 1000000),
   );
 
   await wait(1000);
