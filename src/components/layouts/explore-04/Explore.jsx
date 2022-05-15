@@ -17,16 +17,44 @@ const Explore = props => {
         ftm:false,
         polygon:false,
         moonbeam:false,
+        avaxCoin:false,
+        lunaCoin:false,
+        ustCoin:false,
     })
+
+ 
 
     const setData = async () => {
         let chains = [];
+        let coin = [];
 
         if (check.eth) chains.push(3);
         if (check.avax) chains.push(43113);
         if (check.ftm) chains.push(4002);
         if (check.polygon) chains.push(80001);
         if (check.moonbeam) chains.push(1287);
+        if (check.lunaCoin) coin.push('LUNA');
+        if (check.avaxCoin) coin.push('AVAX');
+        if (check.ustCoin) coin.push('UST');
+        
+
+        if (chains.length == 0 && coin.length == 0) {
+            setItems(defaultItems);
+        } else {
+            if(coin.length == 0){
+                setItems(defaultItems.filter(itemm => (chains.indexOf(itemm.chainId )) != -1  ))
+            }
+            else if(chains.length == 0){
+                setItems(defaultItems.filter(itemm => (coin.indexOf(itemm.priceTag )) != -1  ))
+            }
+        }
+    }
+
+    const setCoinData = async () => {
+        let chains = [];
+
+       
+        
 
         if (chains.length == 0) {
             setItems(defaultItems);
@@ -35,25 +63,52 @@ const Explore = props => {
         }
     }
 
-    const handleCheck = (i) => {
-        if(i === 0){
-            setCheck({...check , eth:!check.eth})
+    const handleCheck = (i,id) => {
+
+        if(id === 1){
+            if(i === 0){
+                setCheck({...check , eth:!check.eth})
+                
+            }
             
+            if(i === 1){
+                setCheck({...check , avax:!check.avax})
+               
+            }
+            if(i === 2){
+                setCheck({...check , ftm:!check.ftm})
+            }
+            if(i === 3){
+                setCheck({...check , polygon:!check.polygon})
+            }
+            if(i === 4){
+                setCheck({...check , moonbeam:!check.moonbeam})
+            }
+        }
+
+        else if(id === 2){
+            if(i === 0){
+                setCheck({...check , avax:!check.avaxCoin})
+                
+            }
+            
+            if(i === 1){
+                setCheck({...check , luna:!check.lunaCoin})
+    
+               
+            }
+            if(i === 2){
+                setCheck({...check , ust:!check.ustCoin})
+    
+            }
         }
         
-        if(i === 1){
-            setCheck({...check , avax:!check.avax})
-           
-        }
-        if(i === 2){
-            setCheck({...check , ftm:!check.ftm})
-        }
-        if(i === 3){
-            setCheck({...check , polygon:!check.polygon})
-        }
-        if(i === 4){
-            setCheck({...check , moonbeam:!check.moonbeam})
-        }
+       
+    }
+
+    const handleCoinCheck = (i) => {
+        
+        
     }
 
     console.log(defaultItems)
@@ -83,7 +138,7 @@ const Explore = props => {
                                                                 <label>
                                                                     <img src={itemm.img} alt="" width="17" height="17" style={{marginRight:'0.5rem'}}/>
                                                                     {itemm.field}
-                                                                    <input type="checkbox" defaultChecked={itemm.checked} onChange={() => handleCheck(index)}/>
+                                                                    <input type="checkbox" defaultChecked={itemm.checked} onChange={() => handleCheck(index,item.id)}/>
                                                                     <span className="btn-checkbox"></span>
                                                                 </label><br/>
                                                             </div>
