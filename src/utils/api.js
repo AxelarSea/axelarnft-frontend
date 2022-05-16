@@ -52,7 +52,7 @@ export const CROSS_CHAIN_TOKEN_ADDRESS = {
 
 export function crossChainTokenSymbol(chainId, tokenAddress) {
   for (let symbol in CROSS_CHAIN_TOKEN_ADDRESS) {
-    console.log(CROSS_CHAIN_TOKEN_ADDRESS[symbol][chainId]);
+    // console.log(CROSS_CHAIN_TOKEN_ADDRESS[symbol][chainId]);
     if (
       (CROSS_CHAIN_TOKEN_ADDRESS[symbol][chainId] || "").toLowerCase() ==
       (tokenAddress || "").toLowerCase()
@@ -76,6 +76,34 @@ export function crossChainTokenLabel(chainId, tokenAddress) {
   }
 
   return symbol;
+}
+
+export function calculateSelectedTokensFromFilter(filter) {
+  // avaxCoin: false,
+  // lunaCoin: false,
+  // ustCoin: false,
+
+  let selectedTokens = [];
+
+  if (filter.avaxCoin) {
+    for (let chainId in CROSS_CHAIN_TOKEN_ADDRESS['wavax-wei']) {
+      selectedTokens.push(CROSS_CHAIN_TOKEN_ADDRESS['wavax-wei'][chainId])
+    }
+  }
+  
+  if (filter.lunaCoin) {
+    for (let chainId in CROSS_CHAIN_TOKEN_ADDRESS.uluna) {
+      selectedTokens.push(CROSS_CHAIN_TOKEN_ADDRESS.uluna[chainId])
+    }
+  }
+  
+  if (filter.ustCoin) {
+    for (let chainId in CROSS_CHAIN_TOKEN_ADDRESS.uusd) {
+      selectedTokens.push(CROSS_CHAIN_TOKEN_ADDRESS.uusd[chainId])
+    }
+  }
+
+  return selectedTokens;
 }
 
 export async function getMetaWalletAddress(chainId, address) {
@@ -345,14 +373,19 @@ export async function buyERC721(
   // await refreshMetadata(chainId, collectionAddress, tokenId);
 }
 
-export async function fetchAllItems() {
+export async function fetchAllItems({ listTokenAddress = [] } = {}) {
   let response = await axios.get(
-    process.env.REACT_APP_API_HOST + "/api/nft/items"
+    process.env.REACT_APP_API_HOST + "/api/nft/items",
+    {
+      params: {
+        listTokenAddress,
+      }
+    }
   );
   return response.data.docs;
 }
 
-export async function fetchAllListedItems({ limit = 20, page = 1 } = {}) {
+export async function fetchAllListedItems({ limit = 20, page = 1, listTokenAddress = [] } = {}) {
   let response = await axios.get(
     process.env.REACT_APP_API_HOST + "/api/nft/items/listed",
     {
@@ -360,23 +393,29 @@ export async function fetchAllListedItems({ limit = 20, page = 1 } = {}) {
         limit,
         page,
         priceStart: 0.1,
+        listTokenAddress,
       },
     }
   );
   return response.data.docs;
 }
 
-export async function fetchAllHolderItems(address) {
+export async function fetchAllHolderItems(address, { listTokenAddress = [] } = {}) {
   let response = await axios.get(
-    process.env.REACT_APP_API_HOST + "/api/nft/items/holder/" + address
+    process.env.REACT_APP_API_HOST + "/api/nft/items/holder/" + address,
+    {
+      params: {
+        listTokenAddress,
+      }
+    }
   );
   return response.data.docs;
 }
 
-export async function fetchAllMyItems() {
+export async function fetchAllMyItems(options = {}) {
   let address = (await web3.eth.getAccounts())[0];
   // console.log(address)
-  return await fetchAllHolderItems(address);
+  return await fetchAllHolderItems(address, options);
 }
 
 export async function fetchItem(chainId, collectionAddress, tokenId) {

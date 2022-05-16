@@ -39,7 +39,7 @@ const ItemDetails = () => {
   const [account, setAccount] = useState("");
 
   const [modalShow, setModalShow] = useState(false);
-  const [UnavailablePaymentModalShow, setunavailablePaymentModalShow] = useState(true);
+  const [UnavailablePaymentModalShow, setunavailablePaymentModalShow] = useState(false);
 
   // const [logo,setLogo] = useState('')
 
@@ -93,18 +93,19 @@ const ItemDetails = () => {
   ]);
 
   async function refreshData() {
-    setData(await fetchItem(chainId, collectionAddress, tokenId));
     const items = await fetchItem(chainId, collectionAddress, tokenId)
+    setData(items);
     console.log(items)
-    checkData(items)
-}
+  }
 
   const checkData = (items) => {
     if( crossChainTokenLabel(items.collection.chainId, items.listTokenAddress) === "LUNA" || crossChainTokenLabel(items.collection.chainId, items.listTokenAddress) === "UST"){
       setunavailablePaymentModalShow(true)
+      return false;
     }
     else{
       setunavailablePaymentModalShow(false)
+      return true;
     }
     console.log(crossChainTokenLabel(items.collection.chainId, items.listTokenAddress))
    
@@ -261,7 +262,11 @@ const ItemDetails = () => {
                   <div class="d-flex align-items-center justify-content-center">
                     {data.listAmount > 0 && data.owner.toLowerCase() != account.toLowerCase() && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) != "LUNA" && data.listPrice < 10 && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) != "UST" &&
                       <button
-                        onClick={() => setModalShow(true)}
+                        onClick={() => {
+                          if (checkData(data)) {
+                            setModalShow(true)
+                          }
+                        }}
                         className="sc-button loadmore fl-button pri-3"
                         style={{width:'100%'}}
                         disabled={(data.listPrice < 0.1 && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) == "LUNA")? true : false}
