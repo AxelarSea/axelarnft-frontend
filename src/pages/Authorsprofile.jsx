@@ -49,7 +49,7 @@ import verifyIcon from '../assets/images/icon/icon-verify.svg'
 
 import Explore from "../components/layouts/explore-04/Explore";
 import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
-import { cancelListing, crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
+import { calculateSelectedTokensFromFilter, cancelListing, crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
 import { chainLabel, maskAddress } from "../utils/address";
 import web3 from "../hooks/web3";
 import { useConnectedWallet } from "@terra-money/wallet-provider";
@@ -528,6 +528,7 @@ const Authorsprofile = () => {
   };
 
   const [modalShow, setModalShow] = useState(false);
+  const [selectedTokens, setSelectedTokens] = useState([]);
 
   
 
@@ -559,12 +560,12 @@ const Authorsprofile = () => {
 
   async function refreshData() {
     console.log("Refresh Start");
-    let items = await fetchAllMyItems();
+    let items = await fetchAllMyItems({ listTokenAddress: selectedTokens });
     checkData(items)
 
-    console.log(items);
+    // console.log(items);
     setItems(formatItems(items));
-    console.log(formatItems(items))
+    // console.log(formatItems(items))
     setDefaultItems(formatItems(items));
 
   }
@@ -619,12 +620,17 @@ const Authorsprofile = () => {
     console.log(newItem.length)
   }
 
+  async function filterChange(filter) {
+    setSelectedTokens(calculateSelectedTokensFromFilter(filter));
+  }
+
   
 
   useEffect(() => {
+    console.log(selectedTokens)
       refreshData()
       filterItem();
-  }, [account, terraAccount]);
+  }, [account, terraAccount, selectedTokens]);
 
   return (
     <div className="authors-2">
@@ -728,7 +734,7 @@ const Authorsprofile = () => {
 
               <div className="content-tab">
                 <div className="content-inner">
-                  <Explore data={widgetSidebarData} setItems={setItems} items={items} defaultItems={defaultItems} formatItems={formatItems}>
+                  <Explore data={widgetSidebarData} setItems={setItems} items={items} defaultItems={defaultItems} formatItems={formatItems} filterChange={filterChange}>
                     <div className="col-xl-9 col-lg-9 col-md-12">
                       {panelTab.map((item, index) => (
                         <TabPanel
