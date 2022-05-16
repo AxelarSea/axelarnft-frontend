@@ -1079,6 +1079,8 @@
 }
 .sc-card-product .card-media img {
     width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
 }
 
 .sc-card-product .card-title {
