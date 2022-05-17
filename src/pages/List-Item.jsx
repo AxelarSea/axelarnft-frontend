@@ -234,10 +234,10 @@ const CreateItem2 = () => {
                             </div>
                           </div>
                         </div>
-                        <hr />
+                        <hr style={{border:"1px solid #c4c4c4"}} />
                         <div className="row-form style-3">
                           <div className="inner-row-form style-2">
-                            <div>
+                            <div className="pd-10" style={{backgroundColor:"#f8f8f8", borderRadius:"10px"}}>
                               <p>Fees</p>
                               <div className="d-flex justify-content-between align-items-center">
                                 <p style={{ color: "#B0B5B7" }}>Service Fee</p>
