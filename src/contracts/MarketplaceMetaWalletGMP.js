@@ -83,7 +83,7 @@ export default class MarketplaceMetaWalletGMP {
       [this.from, tokenAddress, seller, tokenId]
     );
 
-    console.log(axelarChainName[destChainId], payload, tokenSymbol[sourceChainId], web3.utils.toWei(gasSourceToken.toPrecision(9)))
+    // console.log(axelarChainName[destChainId], payload, tokenSymbol[sourceChainId], web3.utils.toWei(gasSourceToken.toPrecision(9)))
 
     return await this.contract.methods.bridge(axelarChainName[destChainId], payload, tokenSymbol[sourceChainId], web3.utils.toWei(gasSourceToken.toPrecision(9))).send({from: this.from, value: web3.utils.toWei((amount * 1.1 + gasSourceToken + 0.00001).toPrecision(9))});
   }

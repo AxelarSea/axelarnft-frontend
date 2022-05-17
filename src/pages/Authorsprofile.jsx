@@ -621,17 +621,6 @@ const Authorsprofile = () => {
     window.location.href = "/list-item?chainId=" + data.chainId + "&collection=" + data.collectionAddress + "&tokenId=" + data.tokenId
   }
 
-  const [profileModalShow,setProfileModalShow] = useState(false)
-
-  const checkData = (items) => {
-    const newItem = items.filter(x => crossChainTokenLabel(x.collection.chainId, x.listTokenAddress) === "LUNA" || crossChainTokenLabel(x.collection.chainId, x.listTokenAddress) === "UST")
-    if(newItem.length > 0){
-      setProfileModalShow(true)
-    }
-    console.log(newItem)
-    console.log(newItem.length)
-  }
-
   async function filterChange(filter) {
     setSelectedTokens(calculateSelectedTokensFromFilter(filter));
   }

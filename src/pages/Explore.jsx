@@ -42,7 +42,7 @@ const Explore04 = () => {
     }));
   }
 
-  async function loadMore(skip = currentCursor, pageSize = 18) {
+  async function loadMore(pageSize = 18, skip = currentCursor) {
     console.log("Refresh Start");
     let items = await fetchAllListedItems({
       limit: pageSize,
@@ -66,7 +66,7 @@ const Explore04 = () => {
 
   useEffect(() => {
     setCurrentCursor(0);
-    loadMore(0)
+    loadMore(18, 0)
   }, [selectedTokens]);
 
   return (

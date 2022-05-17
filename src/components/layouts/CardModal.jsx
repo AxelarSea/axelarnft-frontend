@@ -25,6 +25,7 @@ import { maskAddress } from "../../utils/address";
 import Swal from "sweetalert2";
 import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
 import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
+import WEB3_LIST from "../../contracts/web3ReadOnly";
 
 const CardModal = (props) => {
   const lcd = useLCDClient();
@@ -133,7 +134,20 @@ const CardModal = (props) => {
       console.log(coins.get(tokenSymbol))
       setBalance(coins.get(tokenSymbol).amount / 1000000);
     } else {
-      // if (tokenSymbol)
+      let chainId = 0;
+
+      switch (tokenSymbol) {
+        case 'wavax-wei': chainId = 43113; break;
+        case 'weth-wei': chainId = 3; break;
+        case 'wftm-wei': chainId = 4002; break;
+        case 'wdev-wei': chainId = 1287; break;
+        case 'wmatic-wei': chainId = 80001; break;
+      }
+
+      // console.log(tokenSymbol, chainId);
+      // console.log(await WEB3_LIST[chainId].eth.getBalance(accounts[0]))
+
+      setBalance(parseFloat(web3.utils.fromWei(await WEB3_LIST[chainId].eth.getBalance(accounts[0]))));
     }
   }
 
