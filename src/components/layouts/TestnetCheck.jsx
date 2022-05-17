@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Modal } from "react-bootstrap";
 import checkcircle from "../../assets/images/icon/check-circle.svg";
+import greenCheck from "../../assets/images/icon/green-check.svg";
 import tool from "../../assets/images/icon/tool.svg";
 import axios from 'axios'
 import { ethers } from "ethers";
@@ -118,24 +119,24 @@ const TestnetCheck = (props) => {
       </form>
         <h5 className="testnetquest" style={{marginTop:'1.5rem'}}>Mint NFTs on at least three supported EVM chains.</h5>
           <ul className="questlist" style={{marginTop:'0.75rem'}}>
-            <li className={data.mint_3 > 0 ? 'green' : 'questlist-text'}><img  src={checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Minted NFT on Ethereum Testnet (Ropsten)</li>
-            <li className={data.mint_43113 > 0 ? 'green ' : 'questlist-text'}><img src={checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Minted NFT on Avalanche Fuji Testnet</li>
-            <li className={data.mint_4002 > 0 ? 'green' : 'questlist-text'}><img src={checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Minted NFT on Fantom Testnet</li>
-            <li className={data.mint_1287 > 0 ? 'green ' : 'questlist-text'}><img src={checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Minted NFT on Moonbeam Alpha Testnet</li>
-            <li className={data.mint_80001 > 0 ? 'green ' : 'questlist-text'}><img src={checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Minted NFT on Polygon Mumbai Testnet</li>
+            <li className={data.mint_3 > 0 ? 'green' : 'questlist-text'}><img  src={data.mint_3 > 0 ? greenCheck : checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Minted NFT on Ethereum Testnet (Ropsten)</li>
+            <li className={data.mint_43113 > 0 ? 'green ' : 'questlist-text'}><img src={data.mint_43113 > 0 ? greenCheck : checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Minted NFT on Avalanche Fuji Testnet</li>
+            <li className={data.mint_4002 > 0 ? 'green' : 'questlist-text'}><img src={data.mint_4002 > 0 ? greenCheck : checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Minted NFT on Fantom Testnet</li>
+            <li className={data.mint_1287 > 0 ? 'green ' : 'questlist-text'}><img src={data.mint_1287 > 0 ? greenCheck : checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Minted NFT on Moonbeam Alpha Testnet</li>
+            <li className={data.mint_80001 > 0 ? 'green ' : 'questlist-text'}><img src={data.mint_80001 > 0 ? greenCheck : checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Minted NFT on Polygon Mumbai Testnet</li>
           </ul>
         <h5 className="testnetquest d-flex align-items-center" style={{marginTop:'1.5rem'}}>Place an NFT on sale <a href="https://youtu.be/sysSofNXAPk"  target="_blank" style={{marginLeft:'1rem', fontSize:'14px', cursor:'pointer', color:'gray', backgroundColor:'#f8f8f8', padding:'1.5px', borderRadius:'5px', border:'0.5px solid gray'}}>Guide</a></h5>
           <ul className="questlist" style={{marginTop:'0.75rem'}}>
-            <li className={data.list_3 > 0 ? 'green' : data.list_1287 > 0 ?  'green' : data.list_4002 > 0 ? 'green' : data.list_43113 > 0 ? 'green' : data.list_80001 > 0 ? 'green' : 'questlist-text'}><img src={checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Placed NFT on sale at least once.</li>
+            <li className={data.list_3 > 0 ? 'green' : data.list_1287 > 0 ?  'green' : data.list_4002 > 0 ? 'green' : data.list_43113 > 0 ? 'green' : data.list_80001 > 0 ? 'green' : 'questlist-text'}><img src={data.list_3 > 0 ? greenCheck : data.list_1287 > 0 ?  greenCheck : data.list_4002 > 0 ? greenCheck : data.list_43113 > 0 ? greenCheck : data.list_80001 > 0 ? greenCheck : checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Placed NFT on sale at least once.</li>
           </ul>
         <h5 className="testnetquest d-flex align-items-center" style={{marginTop:'1.5rem'}}>Buy an NFT on AxelarSea<a href="https://youtu.be/1Bh89jYzy-8"  target="_blank" style={{marginLeft:'1rem', fontSize:'14px', cursor:'pointer', color:'gray', backgroundColor:'#f8f8f8', padding:'1.5px', borderRadius:'5px', border:'0.5px solid gray'}}>Guide</a></h5>
           <ul className="questlist" style={{marginTop:'0.75rem'}}>
-            <li className={data.buy_3 > 0 ? 'green' : data.buy_1287 > 0 ?  'green' : data.buy_4002 > 0 ? 'green' : data.buy_43113 > 0 ? 'green' : data.buy_80001 > 0 ? 'green' : 'questlist-text'}><img src={checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Bought an NFT using UST or LUNA</li>
+            <li className={data.buy_3 > 0 ? 'green' : data.buy_1287 > 0 ?  'green' : data.buy_4002 > 0 ? 'green' : data.buy_43113 > 0 ? 'green' : data.buy_80001 > 0 ? 'green' : 'questlist-text'}><img src={data.buy_3 > 0 ? greenCheck : data.buy_1287 > 0 ?  greenCheck : data.buy_4002 > 0 ? greenCheck : data.buy_43113 > 0 ? greenCheck : data.buy_80001 > 0 ? greenCheck : checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Bought an NFT using UST or LUNA (Optional)</li>
           </ul>
           <hr style={{}}/>
         <h5 className="testnetquest d-flex align-items-center" style={{marginTop:'1.5rem'}}>Bridge an NFT on AxelarSea<a href="https://youtu.be/mRK8HH_diH4"  target="_blank" style={{marginLeft:'1rem', fontSize:'14px', cursor:'pointer', color:'gray', backgroundColor:'#f8f8f8', padding:'1.5px', borderRadius:'5px', border:'0.5px solid gray'}}>Guide</a><a className="newpage-title" style={{marginLeft:'1rem'}}>New!</a></h5>
           <ul className="questlist" style={{marginTop:'0.75rem'}}>
-            <li className={bridgePassed ? 'green' : "questlist-text"}><img className="align-self-start" src={checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Bridge one of your NFTs in a loop with at least 2 side chains.</li>
+            <li className={bridgePassed ? 'green' : "questlist-text"}><img className="align-self-start" src={bridgePassed ? greenCheck : checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Bridge one of your NFTs in a loop with at least 2 side chains.</li>
             <p className="center" style={{fontSize:'12px', marginTop:'0.5rem', lineHeight: '18px'}}>For example, users can bridge an NFT from Avalanche &gt; Fantom &gt; Moonbeam &gt; Avalanche to complete the loop.</p>
           </ul>
           {/* <p className="center" style={{fontSize:'14px', marginTop:'1rem'}}>Guide: How to place a sale - <a href="https://youtu.be/sysSofNXAPk"  target="_blank">here</a></p>

@@ -179,6 +179,7 @@ const ExploreItem = (props) => {
                 </div>
                 <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === 'MOONBEAM' ? moonbeamLogo : item.tags === 'POLYGON' ? polygonLogo : ''} alt=""  width="40px"/>
               </div>
+
               <div className="card-bottom style-explode">
                 <div className="price" style={{marginTop:'0rem'}}>
                   <p>Price</p>

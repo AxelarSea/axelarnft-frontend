@@ -19,7 +19,7 @@ const unavailablePaymentModal = (props) => {
         <p style={{ color: "grey", marginTop: "2rem", marginBottom: "3rem", fontSize:'16px', lineHeight:'20px'}}>
         We are developing a new buying system using AVAX token. You will be able to make purchase again when the new system is ready. Stay tuned!
         </p>
-        <button onClick={props.onHide}>Explore</button>
+        <button onClick={() => window.location.href="/Explore"}>Explore</button>
       </div>
     </Modal>
   );

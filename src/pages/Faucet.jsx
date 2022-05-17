@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 
-import img1 from '../assets/images/icon/eth-facuet.png'
-import img2 from '../assets/images/icon/avax-facuet.png'
-import img3 from '../assets/images/icon/fantom-facuet.png'
-import img4 from '../assets/images/icon/terra-facuet.png'
-import img5 from '../assets/images/icon/moonbeam-facuet.png'
-import img6 from '../assets/images/icon/polygon-facuet.png'
+import img1 from '../assets/images/icon/faucet-eth.svg'
+import img2 from '../assets/images/icon/faucet-avax.svg'
+import img3 from '../assets/images/icon/faucet-ftm.svg'
+import img4 from '../assets/images/icon/faucet-terra.svg'
+import img5 from '../assets/images/icon/faucet-moonbeam.svg'
+import img6 from '../assets/images/icon/faucet-polygon.svg'
 import img7 from '../assets/images/icon/connect-7.png'
 import img8 from '../assets/images/icon/connect-8.png'
 import HeaderStyle2 from '../components/header/HeaderStyle2';
@@ -24,53 +24,31 @@ const Faucet = () => {
             {
                 img: img1,
                 title: 'Ropsten Testnet Faucet',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
                 website:'https://faucet.egorfine.com/'
 
             },
             {
                 img: img2,
                 title: 'AVAX Fuji Testnet Faucet',
-                description: ' Dolor lacinia? Donec nulla, deleniti, dis arcu pharetra maecenas dapibus ante nemo! Wisi?',
                 website:'https://faucet.avax-test.network/'
 
             },
             {
                 img: img3,
                 title: 'Testnet Opera Faucet',
-                description: 'Potenti eleifend faucibus quo vero nibh netus suspendisse unde? Consectetuer aspernatur',
                 website:'https://faucet.fantom.network/'
                 
             },
             {
                 img: img5,
                 title: 'Moonbeam Faucet',
-                description: 'Sollicitudin iure conubia vivamus habitasse aptent, eligendi deserunt excepteur tellus non',
                 website:'https://axelarsea.gitbook.io/axelarsea-docs/testnet/funding-testnet-wallet/moonbeam-alpha-testnet'
             },
             {
                 img: img6,
                 title: 'Polygon Faucet',
-                description: 'Purus irure lacinia eiusmod inventore bibendum habitant potenti non sint rem! Felis, asper',
                 website:'https://faucet.polygon.technology/'
             },
-            // {
-            //     img: img4,
-            //     title: 'Terra Testnet Faucet',
-            //     description: 'Potenti eleifend faucibus quo vero nibh netus suspendisse unde? Consectetuer aspernatur',
-            //     website:'https://faucet.terra.money/'
-            // },
-            // {
-            //     img: img7,
-            //     title: 'Kaikas',
-            //     description: 'Varius culpa, aspernatur accusantium? Corporis rhoncus, voluptatibus incididunt, velit '
-            // },
-            // {
-            //     img: img8,
-            //     title: 'Torus',
-            //     description: ' Soluta fuga nihil, mollitia, ad reprehenderit qui viverra culpa posuere labore inventore'
-            // },
-            
         ]
     )
     return (
@@ -114,7 +92,7 @@ const Faucet = () => {
                                         
                                         <div key={index} className="sc-box-icon d-flex flex-column align-items-center justify-content-center " style={{cursor:'pointer'}} target="_blank" onClick={() => goSite(item.website)}>
                                             <div className="img">
-                                                <img src={item.img} alt="AxelarSea" />
+                                                <img src={item.img} alt="AxelarSea" height='50px'/>
                                             </div>
                                             <h4 className="heading"><a href={item.website} target="_blank">{item.title}</a> </h4>
                                             
