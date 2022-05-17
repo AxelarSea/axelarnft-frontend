@@ -179,7 +179,7 @@ const CardModal = (props) => {
               </DropdownMenu> */}
             </Dropdown>
           </div>
-          <p>Balance {balance.toFixed(3)} {youPayType}</p>
+          {/* <p>Balance {balance.toFixed(3)} {youPayType}</p> */}
         </div>
           <div className="d-flex">
             <div 
