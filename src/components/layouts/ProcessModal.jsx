@@ -81,7 +81,7 @@ const ProcessModal = (props) => {
               src={props.status <= 1 ? oneWhiteSpin : greenCheck}
               style={{ marginRight: "1rem", width: "30px" }}
             />
-            Approved transaction on Terra or Kepler wallet
+            Approved transaction on MetaMask wallet
           </h6>
         </div>
         <div className="transaction-step-box">
@@ -98,10 +98,10 @@ const ProcessModal = (props) => {
               }
               style={{ marginRight: "1rem", width: "30px" }}
             />
-            Sign signature in metamask to confirm buying transaction
+            Wait for transaction to complete
           </h6>
         </div>
-        <div className="transaction-step-box">
+        {/* <div className="transaction-step-box">
           <h6 className="transaction-step-detail">
             <img
               src={props.status == 4 ? threeWhiteSpin : three}
@@ -109,7 +109,7 @@ const ProcessModal = (props) => {
             />
             Wait for transaction to complete{" "}
           </h6>
-        </div>
+        </div> */}
 
         {/* <h5 className="transaction-note">Depending on network congestion, the entire process</h5>
         

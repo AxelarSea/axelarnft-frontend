@@ -5,6 +5,7 @@ import Footer from "../components/footer/Footer";
 import Explore from "../components/layouts/explore-04/Explore";
 import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
 import satoshi from "../assets/images/avatar/satoshi.svg";
+import axios from 'axios'
 
 import HeaderStyle2 from "../components/header/HeaderStyle2";
 import { calculateSelectedTokensFromFilter, crossChainTokenLabel, fetchAllListedItems } from "../utils/api";
@@ -17,6 +18,22 @@ const Explore04 = () => {
   const [selectedTokens, setSelectedTokens] = useState([]);
 
   const [currentCursor, setCurrentCursor] = useState(0);
+
+  const [count,setCount] = useState({})
+
+
+    const fetchData = async() => {
+        await axios.get(
+            process.env.REACT_APP_API_HOST +'/api/nft/testnetv1/stat'
+            )
+        .then(res => {
+            setCount(res.data)
+            console.log(res.data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
 
   function formatItems(items) {
     return items.map((x) => ({
@@ -67,6 +84,7 @@ const Explore04 = () => {
   useEffect(() => {
     setCurrentCursor(0);
     loadMore(0)
+    fetchData()
   }, [selectedTokens]);
 
   return (
@@ -84,7 +102,8 @@ const Explore04 = () => {
                 <h1 className="heading text-center">Explore</h1>
               </div>
               <div style={{ marginTop: "2rem" }}>
-                <h6 className="text-center">Total NFT Listed</h6>
+                <h6 className='data-showlist'>{count.currentlyListedCount}</h6>
+                <h6 className="text-center">NFT Currently Listed</h6>
               </div>
             </div>
           </div>
