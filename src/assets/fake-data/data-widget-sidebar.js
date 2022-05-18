@@ -17,7 +17,7 @@ const widgetSidebarData = [
             },
             {
                 field: 'Avalanche',
-                img:avaxLogo
+                img:avaxLogo,
             },
             {
                 field: 'Fantom',
@@ -39,7 +39,10 @@ const widgetSidebarData = [
         content : [
             {
                 field: 'AVAX',
-                img:avaxLogo
+                img:avaxLogo,
+                checked:true
+
+
             },
             {
                 field: 'LUNA',

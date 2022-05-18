@@ -112,16 +112,16 @@ const SliderItem = props => {
                                                 <h6 className='title-showlist'>Listed</h6>
                                             </div>
                                             <div style={{marginLeft:'4rem'}}>
+                                                <h6 className='data-showlist'>{count.buyCount}</h6>
+                                                <h6 className='title-showlist'>Purchased</h6>
+                                            </div>
+                                            <div style={{marginLeft:'4rem'}}>
                                                 <h6 className='data-showlist'>{count.bridgeCount}</h6>
                                                 <h6 className='title-showlist'>Bridged</h6>
                                             </div>
                                             <div style={{marginLeft:'4rem'}}>
                                                 <h6 className='data-showlist'>{count.walletCount}</h6>
                                                 <h6 className='title-showlist'>Wallet</h6>
-                                            </div>
-                                            <div style={{marginLeft:'4rem'}}>
-                                                <h6 className='data-showlist'>{count.buyCount}</h6>
-                                                <h6 className='title-showlist'>Purchased</h6>
                                             </div>
                                         </div>
                                     }

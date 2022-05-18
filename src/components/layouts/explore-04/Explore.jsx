@@ -18,7 +18,7 @@ const Explore = (props) => {
     ftm: false,
     polygon: false,
     moonbeam: false,
-    avaxCoin: false,
+    avaxCoin: true,
     lunaCoin: false,
     ustCoin: false,
   });
