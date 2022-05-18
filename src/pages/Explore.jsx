@@ -60,6 +60,8 @@ const Explore04 = () => {
   }
 
   async function loadMore(pageSize = 18, skip = currentCursor) {
+    const selectedTokensLength = selectedTokens.length;
+
     console.log("Refresh Start");
     let items = await fetchAllListedItems({
       limit: pageSize,
@@ -67,6 +69,8 @@ const Explore04 = () => {
       listTokenAddress: selectedTokens,
     });
     console.log(items);
+
+    if (selectedTokens.length != selectedTokensLength) return;
 
     if (skip != currentCursor) {
       setDefaultItems(formatItems(items));

@@ -21,6 +21,8 @@ import four from "../../assets/images/icon/4.svg";
 import five from "../../assets/images/icon/5.svg";
 
 import FaqTestnetModal from "./FaqTestnetModal";
+import { maskAddress } from "../../utils/address";
+import { getExplorerUrl } from "../../utils/switchChain";
 
 const ProcessModal = (props) => {
   const [faqModalShow, setFaqModalShow] = useState(false);
@@ -81,7 +83,10 @@ const ProcessModal = (props) => {
               src={props.status <= 1 ? oneWhiteSpin : greenCheck}
               style={{ marginRight: "1rem", width: "30px" }}
             />
-            Approve transaction on MetaMask wallet
+            <div>
+              <div>Approve transaction on MetaMask wallet</div>
+              {props.txHash && <div>Transaction Hash: <a href={getExplorerUrl(props.chainId) + "/tx/" + props.txHash} target="_blank">{maskAddress(props.txHash)}</a></div>}
+            </div>
           </h6>
         </div>
         <div className="transaction-step-box">
@@ -98,7 +103,10 @@ const ProcessModal = (props) => {
               }
               style={{ marginRight: "1rem", width: "30px" }}
             />
-            Wait for transaction to complete
+            <div>
+              <div>Wait for transaction to complete</div>
+              {props.txHash && <div>Real Time Check: <a href={"https://testnet.axelarscan.io/gmp/" + props.txHash} target="_blank">{maskAddress(props.txHash)} <a className="animation-gradient" style={{fontWeight:'600'}}>Click Here!</a></a></div>}
+            </div>
           </h6>
         </div>
         {/* <div className="transaction-step-box">

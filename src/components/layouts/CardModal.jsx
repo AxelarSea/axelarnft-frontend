@@ -56,6 +56,7 @@ const CardModal = (props) => {
   const [terraWallet, setTerraWallet] = useState(window.localStorage.getItem("TERRA_WALLET") || "TERRA_STATION")
 
   const [status, setStatus] = useState(0);
+  const [txHash, setTxHash] = useState("");
 
   const [transferFailedModalShow,setTransferFailedModalShow] = useState(false)
 
@@ -87,7 +88,7 @@ const CardModal = (props) => {
       await buyERC721(terraWallet == "TERRA_STATION" ? connectedWallet : terraWallet, props.chainId, props.collectionAddress, props.tokenId, props.listTokenAddress, props.listPrice, status => {
         subStatus = status;
         setStatus(status)
-      });
+      }, setTxHash);
       setCongratBuyModalShow(true);
 
       setModalShow(false);
@@ -387,6 +388,7 @@ const CardModal = (props) => {
         onHide={() => setModalShow(false)}
         status={status}
         setTransferFailedModalShow={setTransferFailedModalShow}
+        txHash={txHash}
         />
         <SelectTokenModal 
         onShow={selectTokenModalShow}

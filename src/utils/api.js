@@ -174,6 +174,7 @@ export async function buyERC721(
   listTokenAddress,
   listPrice,
   setStatus,
+  setTx,
 ) {
   let itemFromApi = await fetchItem(chainId, collectionAddress, tokenId);
 
@@ -218,7 +219,7 @@ export async function buyERC721(
     await switchChain(sourceChainId);
     let metaWallet = new MarketplaceMetaWalletGMP(sourceChainId, address);
 
-    await metaWallet.bridge(
+    let tx = await metaWallet.bridge(
       sourceChainId,
       chainId,
       seller,
@@ -226,6 +227,8 @@ export async function buyERC721(
       tokenId,
       listPrice,
     )
+
+    setTx(tx.transactionHash)
 
     // DELIST
     await axios.post(
