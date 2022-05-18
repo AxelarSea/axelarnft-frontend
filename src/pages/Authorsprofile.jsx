@@ -47,8 +47,8 @@ import ustLogo from '../assets/images/icon/UST.svg'
 import verifyIcon from '../assets/images/icon/icon-verify.svg'
 
 
-import Explore from "../components/layouts/explore-04/Explore";
-import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
+import ExploreProfile from "../components/layouts/explore-04/ExploreProfile";
+import widgetSidebarDataProfile from "../assets/fake-data/data-widget-sidebar-profile";
 import { calculateSelectedTokensFromFilter, cancelListing, crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
 import { chainLabel, maskAddress } from "../utils/address";
 import web3 from "../hooks/web3";
@@ -734,7 +734,7 @@ const Authorsprofile = () => {
 
               <div className="content-tab">
                 <div className="content-inner">
-                  <Explore data={widgetSidebarData} setItems={setItems} items={items} defaultItems={defaultItems} formatItems={formatItems} filterChange={filterChange}>
+                  <ExploreProfile data={widgetSidebarDataProfile} setItems={setItems} items={items} defaultItems={defaultItems} formatItems={formatItems} filterChange={filterChange}>
                     <div className="col-xl-9 col-lg-9 col-md-12">
                       {panelTab.map((item, index) => (
                         <TabPanel
@@ -808,7 +808,7 @@ const Authorsprofile = () => {
                         </TabPanel>
                       ))}
                     </div>
-                  </Explore>
+                  </ExploreProfile>
                 </div>
               </div>
             </Tabs>
