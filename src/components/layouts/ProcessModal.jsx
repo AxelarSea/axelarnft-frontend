@@ -81,7 +81,7 @@ const ProcessModal = (props) => {
               src={props.status <= 1 ? oneWhiteSpin : greenCheck}
               style={{ marginRight: "1rem", width: "30px" }}
             />
-            Approved transaction on MetaMask wallet
+            Approve transaction on MetaMask wallet
           </h6>
         </div>
         <div className="transaction-step-box">
