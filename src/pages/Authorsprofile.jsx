@@ -579,17 +579,6 @@ const Authorsprofile = () => {
 
   }
 
-  const [profileModalShow,setProfileModalShow] = useState(false)
-
-  const checkData = (items) => {
-    const newItem = items.filter(x => crossChainTokenLabel(x.collection.chainId, x.listTokenAddress) === "LUNA" || crossChainTokenLabel(x.collection.chainId, x.listTokenAddress) === "UST")
-    if(newItem.length > 0){
-      setProfileModalShow(true)
-    }
-    console.log(newItem)
-    console.log(newItem.length)
-  }
-
 
 
   useEffect(() => {
