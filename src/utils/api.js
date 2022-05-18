@@ -227,6 +227,18 @@ export async function buyERC721(
       listPrice,
     )
 
+    // DELIST
+    await axios.post(
+      process.env.REACT_APP_API_HOST +
+        "/api/nft/collections/" +
+        collectionAddress +
+        "/" +
+        chainId +
+        "/items/" +
+        tokenId +
+        "/delist"
+    );
+
     setStatus(2);
 
     // Polling

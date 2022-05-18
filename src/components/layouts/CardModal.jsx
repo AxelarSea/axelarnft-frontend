@@ -65,17 +65,17 @@ const CardModal = (props) => {
   }
 
   async function buyOnClick() {
-    if (terraWallet == "TERRA_STATION") {
-      if (!connectedWallet) {
-        window.alert("Please connect to terra station wallet");
-        return;
-      }
+    // if (terraWallet == "TERRA_STATION") {
+    //   if (!connectedWallet) {
+    //     window.alert("Please connect to terra station wallet");
+    //     return;
+    //   }
   
-      if (connectedWallet.network.chainID.startsWith('columbus')) {
-        window.alert(`Please switch to Bombay testnet on your terra station`);
-        return;
-      }
-    }
+    //   if (connectedWallet.network.chainID.startsWith('columbus')) {
+    //     window.alert(`Please switch to Bombay testnet on your terra station`);
+    //     return;
+    //   }
+    // }
 
     let subStatus = 0;
 
