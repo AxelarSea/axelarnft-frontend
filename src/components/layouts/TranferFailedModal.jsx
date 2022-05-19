@@ -44,7 +44,7 @@ const TransferFailedModal = (props) => {
                 <a>Please try again later in 30 minutes.</a>
               </div>
             : props.status < 2
-            ? <a>Please request more LUNA from <a className="animation-gradient" style={{fontWeight:'600',cursor:'pointer'}} href="https://faucet.terra.money/">Faucet</a></a>
+            ? <a>Please request more AVAX from <a className="animation-gradient" style={{fontWeight:'600',cursor:'pointer'}} href="https://faucet.avax-test.network/">Faucet</a></a>
             : props.status < 4
             ? <div className="d-flex flex-column align-items-center">
                 <a>It takes longer than expected for Axelar Network to transfer your funds.<a className="animation-gradient" style={{fontWeight:'600'}}>Your assets are safe on the destination chain</a> and available for purchase in the next transaction.</a>

@@ -29,6 +29,13 @@ const ProcessModal = (props) => {
 
   const [time, setTime] = useState(Date.now() + 30000);
 
+  const [topic,setTopic] = useState('Wait for transaction to Complete')
+
+  const [detail,setDetail] = useState("")
+
+  const [color,setColor] = useState('black')
+
+
   useEffect(() => {
     console.log(props.status == 0, props.onShow);
     if (props.status == 0 && props.onShow) {
@@ -48,12 +55,12 @@ const ProcessModal = (props) => {
         className="modal-body space-y-20 pd-20"
         style={{ paddingTop: "1rem" }}
       >
-        <div className="transaction-warning-box">
+        {/* <div className="transaction-warning-box">
           <h6 className="transaction-warning-detail">
             In future versions, users will be able to track the buying process
             in real time.
           </h6>
-        </div>
+        </div> */}
 
         <div className="count-box pd-20">
           <p className="center" style={{ fontSize: "16px" }}>
@@ -64,11 +71,17 @@ const ProcessModal = (props) => {
               className="center countdown"
               date={time}
               onComplete={() => {
-                props.setTransferFailedModalShow(true);
-                props.onHide();
+                if(props.status == 2){
+                setTopic('Axelar Network is taking longer than expected. ')
+                setDetail(<p className="process-detail" style={{fontSize:'12px',lineHeight:'auto'}}><a className="animation-gradient" style={{fontWeight:'600',marginLeft:'0.2rem'}}>Your Asset is not lost!</a> It is waiting in a queue. The transfer will be completed when Axelar Network catches up.</p>)
+                setColor('#FF4F0D')
+                // props.setTransferFailedModalShow(true);
+                // props.onHide();
+                }
+                
               }}
             >
-              <span className="center countdown">
+              <span className="center countdown" style={{fontSize:'20px'}}>
                 Please keep this window open.
               </span>
             </Countdown>
@@ -85,7 +98,7 @@ const ProcessModal = (props) => {
             />
             <div>
               <div>Approve transaction on MetaMask wallet</div>
-              {props.txHash && <div>Transaction Hash: <a href={getExplorerUrl(props.chainId) + "/tx/" + props.txHash} target="_blank">{maskAddress(props.txHash)}</a></div>}
+              {props.txHash && <div style={{color:'gray'}}>Transaction Hash: <a href={getExplorerUrl(props.chainId) + "/tx/" + props.txHash} target="_blank">{maskAddress(props.txHash)}</a></div>}
             </div>
           </h6>
         </div>
@@ -104,8 +117,10 @@ const ProcessModal = (props) => {
               style={{ marginRight: "1rem", width: "30px" }}
             />
             <div>
-              <div>Wait for transaction to complete</div>
-              {props.txHash && <div>Real Time Check: <a href={"https://testnet.axelarscan.io/gmp/" + props.txHash} target="_blank">{maskAddress(props.txHash)} <a className="animation-gradient" style={{fontWeight:'600'}}>Click Here!</a></a></div>}
+              <div> 
+                <h6 style={{color:color}}>{topic}</h6>
+                {detail}</div>
+              {props.txHash && <div style={{color:'gray'}}>Real Time Check: <a href={"https://testnet.axelarscan.io/gmp/" + props.txHash} target="_blank">{maskAddress(props.txHash)} <a className="animation-gradient" style={{fontWeight:'600'}}>Click Here!</a></a></div>}
             </div>
           </h6>
         </div>

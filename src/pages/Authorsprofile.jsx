@@ -820,6 +820,7 @@ const Authorsprofile = () => {
       onShow={profileModalShow}
       onHide={() => setProfileModalShow(false)}
       />
+      
       <Footer />
     </div>
   );
