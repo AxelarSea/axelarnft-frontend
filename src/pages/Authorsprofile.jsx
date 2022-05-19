@@ -782,7 +782,7 @@ const Authorsprofile = () => {
                                       <div className="Price" style={{marginTop:'0rem'}}>
                                         <p>Price</p>
                                         <div className="Price-details d-flex align-items-center">
-                                          <img src={data.priceTag === "LUNA" ? lunaLogo : data.priceTag === "UST" ? ustLogo : data.priceTag === "AVAX" ? avaxLogo : ''} alt="" width={'30px'}/>
+                                          <img src={data.priceTag === "AVAX" ? avaxLogo : data.priceTag === "LUNA" ? lunaLogo : data.priceTag === "UST" ? ustLogo : ''} alt="" width={'30px'}/>
                                           <h5 style={{marginLeft:'0.5rem'}}>{data.price}</h5>
                                           {/* <span>= {data.PriceChange}</span> */}
                                         </div>
@@ -817,7 +817,7 @@ const Authorsprofile = () => {
       </section>
       <CardModal show={modalShow} onHide={() => setModalShow(false)} />
       <ProfileModal
-      onShow={profileModalShow}
+      // onShow={profileModalShow}
       onHide={() => setProfileModalShow(false)}
       />
       
