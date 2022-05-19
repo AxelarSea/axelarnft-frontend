@@ -179,35 +179,12 @@ const ExploreItem = (props) => {
                 </div>
                 <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === 'MOONBEAM' ? moonbeamLogo : item.tags === 'POLYGON' ? polygonLogo : ''} alt=""  width="40px"/>
               </div>
-              {/* <div className="meta-info">
-                <div className="author">
-                  <div className="avatar">
-                    <img src={item.imgAuthor} alt="AxelarSea" />
-                  </div>
-                  <div className="card-title">
-                    <h5>{item.title}</h5>
-                  </div>
-                  <div className="meta-info">
-                    <div className="author">
-                      <div className="avatar">
-                        <img src={item.imgAuthor} alt="AxelarSea" />
-                      </div>
-                      <div className="info">
-                        <span>Owned By</span>
-                        <h6> {maskAddress(item.nameAuthor)} </h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="d-flex align-items-center justify-content-around" style={{width:'8rem'}}>
-                  <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === 'MOONBEAM' ? moonbeamLogo : item.tags === 'POLYGON' ? polygonLogo : ''} alt=""  width="40px"/>
-                </div>
-              </div> */}
+
               <div className="card-bottom style-explode">
                 <div className="price" style={{marginTop:'0rem'}}>
                   <p>Price</p>
                   <div className="price-details mt-1 d-flex align-items-center">
-                    <img src={item.priceTag === "LUNA" ? lunaLogo : item.priceTag === "UST" ? ustLogo : ''} alt="" width={'30px'}/>
+                    <img src={item.priceTag === "AVAX" ? avaxLogo : item.priceTag === "LUNA" ? lunaLogo : item.priceTag === "UST" ? ustLogo : ''} alt="" width={'30px'}/>
                     <h5 style={{marginLeft:'0.5rem'}}>{item.price}</h5>
                     {/* <span>= {item.priceChange}</span> */}
                   </div>

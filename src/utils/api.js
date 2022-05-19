@@ -21,6 +21,7 @@ import ERC20 from "../contracts/ERC20";
 import { generateBuyERC721Signature } from "../contracts/generateSignature";
 import { executeCosmosTransaction } from "./keplr";
 import NftBridgeController from "../contracts/NftBridgeController";
+import MarketplaceMetaWalletGMP from "../contracts/MarketplaceMetaWalletGMP";
 
 const environment = "testnet";
 const axelarApi = new AxelarAssetTransfer({ environment });
@@ -40,11 +41,18 @@ export const CROSS_CHAIN_TOKEN_ADDRESS = {
     4002: "0x89A1D86901D25EFFe5D022bDD1132827e4D7f010",
     1287: "0xD34007Bb8A54B2FBb1D6647c5AbA04D507ABD21d",
   },
+  "wavax-wei": {
+    3: "0x72af7e1e7E0D38bCF033C541598F5a0301D051A5",
+    80001: "0x6DD60c05FdA1255A44Ffaa9A8200b5b179A578D6",
+    43113: "0xd00ae08403B9bbb9124bB305C09058E32C39A48c",
+    4002: "0x8776aDD48553518641a589C39792cc409d4C8B84",
+    1287: "0x64aae6319934995Bf30e67EBBBA9750256E07283",
+  }
 };
 
 export function crossChainTokenSymbol(chainId, tokenAddress) {
   for (let symbol in CROSS_CHAIN_TOKEN_ADDRESS) {
-    console.log(CROSS_CHAIN_TOKEN_ADDRESS[symbol][chainId]);
+    // console.log(CROSS_CHAIN_TOKEN_ADDRESS[symbol][chainId]);
     if (
       (CROSS_CHAIN_TOKEN_ADDRESS[symbol][chainId] || "").toLowerCase() ==
       (tokenAddress || "").toLowerCase()
@@ -63,9 +71,39 @@ export function crossChainTokenLabel(chainId, tokenAddress) {
       return "LUNA";
     case "uusd":
       return "UST";
+    case "wavax-wei":
+      return "AVAX";
   }
 
   return symbol;
+}
+
+export function calculateSelectedTokensFromFilter(filter) {
+  // avaxCoin: false,
+  // lunaCoin: false,
+  // ustCoin: false,
+
+  let selectedTokens = [];
+
+  if (filter.avaxCoin) {
+    for (let chainId in CROSS_CHAIN_TOKEN_ADDRESS['wavax-wei']) {
+      selectedTokens.push(CROSS_CHAIN_TOKEN_ADDRESS['wavax-wei'][chainId])
+    }
+  }
+  
+  if (filter.lunaCoin) {
+    for (let chainId in CROSS_CHAIN_TOKEN_ADDRESS.uluna) {
+      selectedTokens.push(CROSS_CHAIN_TOKEN_ADDRESS.uluna[chainId])
+    }
+  }
+  
+  if (filter.ustCoin) {
+    for (let chainId in CROSS_CHAIN_TOKEN_ADDRESS.uusd) {
+      selectedTokens.push(CROSS_CHAIN_TOKEN_ADDRESS.uusd[chainId])
+    }
+  }
+
+  return selectedTokens;
 }
 
 export async function getMetaWalletAddress(chainId, address) {
@@ -136,6 +174,7 @@ export async function buyERC721(
   listTokenAddress,
   listPrice,
   setStatus,
+  setTx,
 ) {
   let itemFromApi = await fetchItem(chainId, collectionAddress, tokenId);
 
@@ -145,32 +184,94 @@ export async function buyERC721(
   }
 
   // LOCK
-  await axios.post(
-    process.env.REACT_APP_API_HOST +
-      "/api/nft/collections/" +
-      collectionAddress +
-      "/" +
-      chainId +
-      "/items/" +
-      tokenId +
-      "/lock"
-  );
+  // await axios.post(
+  //   process.env.REACT_APP_API_HOST +
+  //     "/api/nft/collections/" +
+  //     collectionAddress +
+  //     "/" +
+  //     chainId +
+  //     "/items/" +
+  //     tokenId +
+  //     "/lock"
+  // );
 
   setStatus(0);
 
   let address = (await web3.eth.getAccounts())[0];
-  let metaWalletAddress = await getMetaWalletAddress(chainId, address);
   let symbol = crossChainTokenSymbol(chainId, listTokenAddress);
   let targetToken = new ERC20(chainId, listTokenAddress, address, true);
-
-  let seller = await new ERC721MetaMintable(
+  let nft = new ERC721MetaMintable(
     chainId,
     collectionAddress,
     address,
     true
-  ).ownerOf(tokenId);
+  )
+
+  let seller = await nft.ownerOf(tokenId);
   console.log("SELLER:", seller);
 
+  // EVM mode
+  if (symbol.endsWith("wei")) {
+    const sourceChainId = 43113; // MOCK
+
+    setStatus(1)
+
+    await switchChain(sourceChainId);
+    let metaWallet = new MarketplaceMetaWalletGMP(sourceChainId, address);
+
+    let tx = await metaWallet.bridge(
+      sourceChainId,
+      chainId,
+      seller,
+      collectionAddress,
+      tokenId,
+      listPrice,
+    )
+
+    upRateLimit(1);
+    setTx(tx.transactionHash)
+
+    // DELIST
+    await axios.post(
+      process.env.REACT_APP_API_HOST +
+        "/api/nft/collections/" +
+        collectionAddress +
+        "/" +
+        chainId +
+        "/items/" +
+        tokenId +
+        "/delist"
+    );
+
+    setStatus(2);
+
+    // Polling
+    while (true) {
+      try {
+        let nftOwner = await nft.ownerOf(tokenId);
+
+        // console.log(balance);
+        // console.log(parseFloat(balance) / 1000000, listPrice);
+
+        if (nftOwner.toLowerCase() == address.toLowerCase()) {
+          break;
+        } else {
+          console.log("Not arrived");
+        }
+      } catch (err) {
+        console.error(err);
+      }
+      await wait(3000);
+    }
+
+    await wait(6000);
+
+    setStatus(5);
+
+    return;
+  }
+
+  let metaWalletAddress = await getMetaWalletAddress(chainId, address);
   let startBalance = await targetToken.balanceOf(metaWalletAddress);
 
   if (parseFloat(startBalance) / 1000000 < listPrice) {
@@ -288,14 +389,19 @@ export async function buyERC721(
   // await refreshMetadata(chainId, collectionAddress, tokenId);
 }
 
-export async function fetchAllItems() {
+export async function fetchAllItems({ listTokenAddress = [] } = {}) {
   let response = await axios.get(
-    process.env.REACT_APP_API_HOST + "/api/nft/items"
+    process.env.REACT_APP_API_HOST + "/api/nft/items",
+    {
+      params: {
+        listTokenAddress,
+      }
+    }
   );
   return response.data.docs;
 }
 
-export async function fetchAllListedItems({ limit = 20, page = 1 } = {}) {
+export async function fetchAllListedItems({ limit = 20, page = 1, listTokenAddress = [] } = {}) {
   let response = await axios.get(
     process.env.REACT_APP_API_HOST + "/api/nft/items/listed",
     {
@@ -303,23 +409,29 @@ export async function fetchAllListedItems({ limit = 20, page = 1 } = {}) {
         limit,
         page,
         priceStart: 0.1,
+        listTokenAddress,
       },
     }
   );
   return response.data.docs;
 }
 
-export async function fetchAllHolderItems(address) {
+export async function fetchAllHolderItems(address, { listTokenAddress = [] } = {}) {
   let response = await axios.get(
-    process.env.REACT_APP_API_HOST + "/api/nft/items/holder/" + address
+    process.env.REACT_APP_API_HOST + "/api/nft/items/holder/" + address,
+    {
+      params: {
+        listTokenAddress,
+      }
+    }
   );
   return response.data.docs;
 }
 
-export async function fetchAllMyItems() {
+export async function fetchAllMyItems(options = {}) {
   let address = (await web3.eth.getAccounts())[0];
   // console.log(address)
-  return await fetchAllHolderItems(address);
+  return await fetchAllHolderItems(address, options);
 }
 
 export async function fetchItem(chainId, collectionAddress, tokenId) {
@@ -383,6 +495,8 @@ export async function listItem(
     await erc721.approve(contract.address);
   }
 
+  let tokenLabel = crossChainTokenLabel(chainId, listTokenAddress);
+
   // console.log(collectionAddress, tokenId, listAmount, listTokenAddress, listPrice);
 
   await contract.list(
@@ -390,7 +504,7 @@ export async function listItem(
     tokenId,
     listAmount,
     listTokenAddress,
-    Math.floor(listPrice * 1000000)
+    tokenLabel == 'UST' || tokenLabel == 'LUNA' ? Math.floor(listPrice * 1000000) : web3.utils.toWei(listPrice),
   );
 
   await wait(1000);
@@ -442,6 +556,7 @@ export async function bridgeNft(sourceChainId, destChainId, nftId, tokenId, to, 
 
   console.log(lockTx)
 
+  upRateLimit(1)
   setStatus(1)
   setLockTx(lockTx.transactionHash)
 
@@ -482,4 +597,8 @@ export async function getDestinationNftAddress(sourceChainId, sourceNftAddress, 
 
   let destBridgeController = new NftBridgeController(destChainId, account, true);
   return await destBridgeController.nftId2address(nftId);
+}
+
+export async function upRateLimit(id) {
+  return await axios.post(process.env.REACT_APP_API_HOST + '/api/nft/ratelimit/' + id);
 }

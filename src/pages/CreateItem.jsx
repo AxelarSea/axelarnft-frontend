@@ -271,7 +271,8 @@ const CreateItem = () => {
 
                         <h4 className="title-create-item d-flex">Blockchain</h4>
                         <Dropdown>
-                          <Dropdown.Toggle className="dropdown-chain-box" 
+                          <Dropdown.Toggle className="dropdown-chain-box"
+                          style={{width:'100%'}} 
                           onClick={() => setModalShow(true)}>
                           <img
                             onChange={() => setModalShow(false)} 

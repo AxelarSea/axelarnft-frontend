@@ -314,7 +314,7 @@ const RecentlyListed = () => {
                                     <Link to={"/ItemDetails?chainId=" + item.raw?.collection.chainId + "&collection=" + item.raw?.collection.contractAddress + "&tokenId=" + item.raw?.tokenId} key={index} className={`sc-card-product menu_card style-h7 ${item.feature ? 'comingsoon' : '' } `}>
                                         <div>
                                             
-                                            <div className="card-media">
+                                        <div className="card-media">
                                                 <img style={{position:'absolute', margin:'1rem', width:'40px', zIndex:'10'}} src={axelarSeaLogo} alt="" />
                                                 <img src={item.img} alt="AxelarSea" style={{aspectRatio:'1',objectFit:'cover'}}/>
                                                 <div className="button-place-bid">
@@ -338,20 +338,6 @@ const RecentlyListed = () => {
                                                 </div>
                                                 <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === 'MOONBEAM' ? moonbeamLogo : item.tags === 'POLYGON' ? polygonLogo : ''} alt="" width={'40'}/>
                                             </div>
-                                            {/* <div className="meta-info style mt-2">
-                                                <div className="author">
-                                                    <div className="avatar">
-                                                        <img src={item.imgAuthor} alt="AxelarSea" />
-                                                    </div>
-                                                    <div className="info">
-                                                        <span>Owned By</span>
-                                                        <h6> <Link to="/Authors-Profile">{maskAddress(item.nameAuthor)}</Link> </h6>
-                                                    </div>
-                                                </div>
-                                                <div className=" d-flex align-items-center justify-content-around" style={{width:'6rem',marginLeft:'2.2rem'}}>
-                                                        <img src={item.tags === 'ETH' ? ethLogo : item.tags === 'AVAX' ? avaxLogo : item.tags === 'FTM' ? fantomLogo : item.tags === 'MOONBEAM' ? moonbeamLogo : item.tags === 'POLYGON' ? polygonLogo : ''} alt="" width={'40'}/>
-                                                </div>
-                                            </div> */}
                                             <div className="meta-info  " id='cardprice' >
                                                 <div className="card-bottom style-explode">
                                                     <div className="price" style={{marginTop:'0rem'}}>

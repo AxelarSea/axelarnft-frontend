@@ -41,7 +41,6 @@ const widgetSidebarData = [
             {
                 field: 'AVAX',
                 img:avaxLogo, 
-                checked:true
 
 
             },

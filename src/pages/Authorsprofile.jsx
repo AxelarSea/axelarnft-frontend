@@ -47,13 +47,13 @@ import ustLogo from '../assets/images/icon/UST.svg'
 import verifyIcon from '../assets/images/icon/icon-verify.svg'
 
 
-
-import Explore from "../components/layouts/explore-04/Explore";
-import widgetSidebarData from "../assets/fake-data/data-widget-sidebar";
-import { cancelListing, crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
+import ExploreProfile from "../components/layouts/explore-04/ExploreProfile";
+import widgetSidebarDataProfile from "../assets/fake-data/data-widget-sidebar-profile";
+import { calculateSelectedTokensFromFilter, cancelListing, crossChainTokenLabel, fetchAllMyItems } from "../utils/api";
 import { chainLabel, maskAddress } from "../utils/address";
 import web3 from "../hooks/web3";
 import { useConnectedWallet } from "@terra-money/wallet-provider";
+import wait from "../utils/wait";
 
 const Authorsprofile = () => {
   const [items, setItems] = useState([]);
@@ -528,6 +528,9 @@ const Authorsprofile = () => {
   };
 
   const [modalShow, setModalShow] = useState(false);
+  const [selectedTokens, setSelectedTokens] = useState([]);
+
+  
 
   function formatItems(items) {
     console.log(items);
@@ -551,16 +554,7 @@ const Authorsprofile = () => {
     }));
   }
 
-  async function refreshData() {
-    console.log("Refresh Start");
-    let items = await fetchAllMyItems();
-    checkData(items)
-
-    console.log(items);
-    setItems(formatItems(items));
-    setDefaultItems(formatItems(items));
-  }
-
+  
   const [profileModalShow,setProfileModalShow] = useState(false)
 
   const checkData = (items) => {
@@ -571,6 +565,20 @@ const Authorsprofile = () => {
     console.log(newItem)
     console.log(newItem.length)
   }
+  
+
+  async function refreshData() {
+    console.log("Refresh Start");
+    let items = await fetchAllMyItems({ listTokenAddress: selectedTokens });
+    checkData(items)
+
+    // console.log(items);
+    setItems(formatItems(items));
+    // console.log(formatItems(items))
+    setDefaultItems(formatItems(items));
+
+  }
+
 
 
   useEffect(() => {
@@ -612,10 +620,17 @@ const Authorsprofile = () => {
     window.location.href = "/list-item?chainId=" + data.chainId + "&collection=" + data.collectionAddress + "&tokenId=" + data.tokenId
   }
 
+  async function filterChange(filter) {
+    setSelectedTokens(calculateSelectedTokensFromFilter(filter));
+  }
+
+  
+
   useEffect(() => {
-    refreshData();
-    filterItem();
-  }, [account, terraAccount]);
+    console.log(selectedTokens)
+      refreshData()
+      filterItem();
+  }, [account, terraAccount, selectedTokens]);
 
   return (
     <div className="authors-2">
@@ -719,7 +734,7 @@ const Authorsprofile = () => {
 
               <div className="content-tab">
                 <div className="content-inner">
-                  <Explore data={widgetSidebarData} setItems={setItems} items={items} defaultItems={defaultItems} formatItems={formatItems}>
+                  <ExploreProfile data={widgetSidebarDataProfile} setItems={setItems} items={items} defaultItems={defaultItems} formatItems={formatItems} filterChange={filterChange}>
                     <div className="col-xl-9 col-lg-9 col-md-12">
                       {panelTab.map((item, index) => (
                         <TabPanel
@@ -793,7 +808,7 @@ const Authorsprofile = () => {
                         </TabPanel>
                       ))}
                     </div>
-                  </Explore>
+                  </ExploreProfile>
                 </div>
               </div>
             </Tabs>
@@ -805,6 +820,7 @@ const Authorsprofile = () => {
       // onShow={profileModalShow}
       onHide={() => setProfileModalShow(false)}
       />
+      
       <Footer />
     </div>
   );

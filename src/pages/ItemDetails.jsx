@@ -31,6 +31,8 @@ import UnavailablePaymentModal from "../components/layouts/unavailablePaymentMod
 import { cancelListing, crossChainTokenLabel, fetchItem } from "../utils/api";
 import { maskAddress } from "../utils/address";
 import web3 from "../hooks/web3";
+import LimitModal from "../components/layouts/LimitModal";
+import useRateLimit from "../hooks/useRateLimit";
 
 const ItemDetails = () => {
   // const navigate = useNavigate()
@@ -46,6 +48,8 @@ const ItemDetails = () => {
   const collectionAddress = searchParams.get("collection");
   const tokenId = searchParams.get("tokenId");
   const chainId = searchParams.get("chainId");
+
+  const [isRateLimited, refreshRateLimit] = useRateLimit(1, 100);
 
   const [dataHistory] = useState([
     // {
@@ -93,10 +97,10 @@ const ItemDetails = () => {
   ]);
 
   async function refreshData() {
-      setData(await fetchItem(chainId, collectionAddress, tokenId));
-      const items = await fetchItem(chainId, collectionAddress, tokenId)
-      console.log(items)
-      checkData(items)
+    const items = await fetchItem(chainId, collectionAddress, tokenId)
+    setData(items);
+    console.log(items)
+    checkData(items)
   }
 
   const checkData = (items) => {
@@ -132,6 +136,8 @@ const ItemDetails = () => {
     refreshData();
   }, [account]);
   console.log(data.owner)
+
+  useEffect(() => refreshRateLimit(), [modalShow]);
 
   return (
     <div className="item-details">
@@ -242,7 +248,7 @@ const ItemDetails = () => {
                       <span className="heading">Price</span>
                       <div className="Price">
                         <div className="Price-box d-flex align-items-center" style={{width:'100%'}}>
-                        <img src={crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) === 'LUNA' ? lunaLogo : ustLogo } alt="" width="30" height="30" />
+                        <img src={crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) === 'LUNA' ? lunaLogo : (crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) === 'AVAX' ? avaxLogo : ustLogo) } alt="" width="30" height="30" />
 
                           <h5 style={{marginLeft:'0.5rem'}}>
                             {data.listPrice || "-"} {crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId)}
@@ -261,17 +267,17 @@ const ItemDetails = () => {
                   <div class="d-flex align-items-center justify-content-center">
                     {data.listAmount > 0 && data.owner.toLowerCase() != account.toLowerCase() && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) != "LUNA" && data.listPrice < 10 && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) != "UST" &&
                       <button
-                        onClick={() => setModalShow(true)}
-                        className="sc-button loadmore fl-button pri-3"
-                        style={{width:'100%'}}
-                        disabled={(data.listPrice < 0.1 && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) == "LUNA")? true : false}
-                      >
-                        <span>Buy Now</span>
-                      </button>
+                      onClick={() => setModalShow(true)}
+                      className="sc-button loadmore fl-button pri-3"
+                      style={{width:'100%'}}
+                      disabled={(data.listPrice < 0.1 && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) == "LUNA")? true : false}
+                    >
+                      <span>Buy Now</span>
+                    </button>
                     }
                     {data.listAmount > 0 && data.owner.toLowerCase() == account.toLowerCase() &&
                       <button
-                        style={{marginLeft:'2rem'}}
+                        style={{width:'100%'}}
                         onClick={() => cancelListingAction()}
                         className="sc-button loadmore fl-button pri-3 "
                       >
@@ -290,7 +296,7 @@ const ItemDetails = () => {
                         }
                       >
                         <button
-                          style={{marginLeft:'2rem'}}
+                          style={{width:'100%'}}
                           className="sc-button loadmore fl-button pri-3 "
                         >
                           <span>Sell</span>
@@ -319,7 +325,7 @@ const ItemDetails = () => {
                     } */}
                     {((data.listAmount == 0 && data.owner.toLowerCase() != account.toLowerCase()) || ((crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) == "LUNA") || (crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) == "UST"))) &&
                       <button
-                        style={{marginLeft:'2rem', opacity: 0.6, pointerEvents: "none"}}
+                        style={{opacity: 0.6, pointerEvents: "none", width:"100%"}}
                         className="sc-button loadmore fl-button pri-3 "
                       >
                         <span>Not for sale</span>
@@ -468,6 +474,8 @@ const ItemDetails = () => {
           setunavailablePaymentModalShow(false)
         }}
       />
+
+      <LimitModal onShow={isRateLimited}></LimitModal>
     </div>
   );
 };
