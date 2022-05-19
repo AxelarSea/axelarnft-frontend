@@ -36,7 +36,7 @@ const widgetSidebarData = [
     },
     {
         id: 2,
-        title: "Coins",
+        title: "On Sale In",
         content : [
             {
                 field: 'AVAX',

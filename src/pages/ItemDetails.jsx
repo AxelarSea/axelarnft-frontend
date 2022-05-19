@@ -40,7 +40,7 @@ const ItemDetails = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [account, setAccount] = useState("");
 
-  const [modalShow, setModalShow] = useState(false);
+  const [modalShow, setModalShow_] = useState(false);
   const [UnavailablePaymentModalShow, setunavailablePaymentModalShow] = useState(false);
 
   // const [logo,setLogo] = useState('')
@@ -50,6 +50,15 @@ const ItemDetails = () => {
   const chainId = searchParams.get("chainId");
 
   const [isRateLimited, refreshRateLimit] = useRateLimit(1, 100);
+  const [showLimitModal, setShowLimitModal] = useState(false);
+
+  function setModalShow(show) {
+    if (isRateLimited) {
+      setShowLimitModal(true);
+    } else {
+      setModalShow_(show);
+    }
+  }
 
   const [dataHistory] = useState([
     // {
@@ -475,7 +484,7 @@ const ItemDetails = () => {
         }}
       />
 
-      <LimitModal onShow={isRateLimited}></LimitModal>
+      <LimitModal onShow={isRateLimited && showLimitModal} onHide={() => setShowLimitModal(false)}></LimitModal>
     </div>
   );
 };

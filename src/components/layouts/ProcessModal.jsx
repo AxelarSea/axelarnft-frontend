@@ -98,7 +98,7 @@ const ProcessModal = (props) => {
             />
             <div>
               <div>Approve transaction on MetaMask wallet</div>
-              {props.txHash && <div style={{color:'gray'}}>Transaction Hash: <a href={getExplorerUrl(props.chainId) + "/tx/" + props.txHash} target="_blank">{maskAddress(props.txHash)}</a></div>}
+              {props.txHash && <div style={{color:'gray'}}>Transaction Hash: <a href={getExplorerUrl(props.chainId) + "/tx/" + props.txHash} target="_blank" style={{color:'gray'}}>{maskAddress(props.txHash)}</a></div>}
             </div>
           </h6>
         </div>
@@ -120,7 +120,7 @@ const ProcessModal = (props) => {
               <div> 
                 <h6 style={{color:color}}>{topic}</h6>
                 {detail}</div>
-              {props.txHash && <div style={{color:'gray'}}>Real Time Check: <a href={"https://testnet.axelarscan.io/gmp/" + props.txHash} target="_blank">{maskAddress(props.txHash)} <a className="animation-gradient" style={{fontWeight:'600'}}>Click Here!</a></a></div>}
+              {props.txHash && <div style={{color:'gray'}}>Real Time Check: <a href={"https://testnet.axelarscan.io/gmp/" + props.txHash} target="_blank" style={{color:'gray'}}>{maskAddress(props.txHash)} <a className="animation-gradient" style={{fontWeight:'600'}}>Click Here!</a></a></div>}
             </div>
           </h6>
         </div>

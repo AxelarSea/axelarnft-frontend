@@ -19,7 +19,7 @@ const LimitModal = (props) => {
         </div>
         <div className="d-flex flex-column justify-content-center" style={{marginTop:'1.5rem'}}>
           <p style={{fontSize:'16px', lineHeight:'25px'}}>The transaction quota will be refreshed at the start</p>
-          <p style={{fontSize:'16px', lineHeight:'25px'}}>of each hour. Please try again later</p>
+          <p style={{fontSize:'16px', lineHeight:'25px'}}>of each hour. Please try again later.</p>
         </div>
       </div>
     </Modal>
