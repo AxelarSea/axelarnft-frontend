@@ -8,17 +8,17 @@ import "react-tabs/style/react-tabs.css";
 import img1 from "../assets/images/box-item/image-box-6.jpg";
 import avt from "../assets/images/avatar/avt-9.jpg";
 import { Dropdown } from "react-bootstrap";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 import ETH from "../assets/images/avatar/ETH.jpg";
 import AVAX from "../assets/images/avatar/AVAX.jpg";
 import FTM from "../assets/images/avatar/FTM.jpg";
 import Moonbeam from "../assets/images/avatar/moonbeam.gif";
 import Polygon from "../assets/images/avatar/polygon.gif";
-import ethLogo from '../assets/images/icon/eth-logo.svg'
-import polygonLogo from '../assets/images/icon/polygon-logo.svg'
-import avaxLogo from '../assets/images/icon/avax-logo.svg'
-import moonbeamLogo from '../assets/images/icon/moonbeam-logo.svg'
-import fantomLogo from '../assets/images/icon/fantom-logo.svg'
+import ethLogo from "../assets/images/icon/eth-logo.svg";
+import polygonLogo from "../assets/images/icon/polygon-logo.svg";
+import avaxLogo from "../assets/images/icon/avax-logo.svg";
+import moonbeamLogo from "../assets/images/icon/moonbeam-logo.svg";
+import fantomLogo from "../assets/images/icon/fantom-logo.svg";
 import HeaderStyle2 from "../components/header/HeaderStyle2";
 import AxelarSeaSampleNft from "../contracts/AxelarSeaSampleNft";
 import web3 from "../hooks/web3";
@@ -30,10 +30,10 @@ import SelectChainModal from "../components/layouts/SelectChainModal";
 
 const CreateItem = () => {
   let [blockChain, setBlockChain] = useState("Ethereum");
-  
+
   const [processing, setProcessing] = useState(false);
 
-  const [modalShow,setModalShow] = useState(false)
+  const [modalShow, setModalShow] = useState(false);
 
   async function mint(e) {
     e.preventDefault();
@@ -53,15 +53,25 @@ const CreateItem = () => {
 
       // Get chainid from name
       switch (blockChain) {
-        case 'Ethereum': chainId = 3; break;
-        case 'Avalanche': chainId = 43113; break;
-        case 'Fantom': chainId = 4002; break;
-        case 'Moonbeam': chainId = 1287; break;
-        case 'Polygon': chainId = 80001; break;
+        case "Ethereum":
+          chainId = 3;
+          break;
+        case "Avalanche":
+          chainId = 43113;
+          break;
+        case "Fantom":
+          chainId = 4002;
+          break;
+        case "Moonbeam":
+          chainId = 1287;
+          break;
+        case "Polygon":
+          chainId = 80001;
+          break;
       }
-  
+
       await switchChain(chainId);
-  
+
       await wait(500);
 
       let account = (await web3.eth.getAccounts())[0];
@@ -71,13 +81,13 @@ const CreateItem = () => {
       await contract.mint();
 
       Swal.fire(
-        'Please wait',
+        "Please wait",
         "Please wait for data syncing. Don't close tab or navigate to any page.",
-        'warning'
-      )
-  
+        "warning"
+      );
+
       await wait(5000);
-  
+
       // let totalSupply = await contract.totalSupply();
 
       // for (let i = totalSupplyBefore; i <= totalSupply; i++) {
@@ -87,13 +97,13 @@ const CreateItem = () => {
       //     await refreshMetadata(chainId, contract.address, i)
       //   }
       // }
-  
+
       // window.alert('Mint success');
       Swal.fire(
-        'Mint Success!',
-        'You have minted NFT on ' + blockChain + '!',
-        'success'
-      )
+        "Mint Success!",
+        "You have minted NFT on " + blockChain + "!",
+        "success"
+      );
     } finally {
       setProcessing(false);
     }
@@ -103,10 +113,12 @@ const CreateItem = () => {
     <div className="create-item">
       <HeaderStyle2 />
       <section className="flat-title-page inner">
-        <div className="overlay"></div>
         <div className="themesflat-container">
           <div className="row">
-            <div className="col-md-12" style={{marginTop:'6rem', marginBottom:'2rem'}}>
+            <div
+              className="col-md-12"
+              style={{ marginTop: "6rem", marginBottom: "2rem" }}
+            >
               <div className="page-title-heading mg-bt-12">
                 <h1 className="heading text-center">Create Item</h1>
               </div>
@@ -124,7 +136,7 @@ const CreateItem = () => {
       <div className="tf-create-item tf-section">
         <div className="themesflat-container">
           <div className="row">
-            <div className="col-xl-3 col-lg-6 col-md-6 col-12 ">
+            <div className="col-xl-3 col-lg-6 col-md-6 col-12 sticky-nft-image">
               <h4 className="title-create-item ">Preview item</h4>
               <div className="sc-card-product">
                 <div className="card-media">
@@ -142,7 +154,6 @@ const CreateItem = () => {
                           : blockChain === "Polygon"
                           ? Polygon
                           : img1
-                          
                       }
                       alt="AxelarSea"
                     />
@@ -198,12 +209,12 @@ const CreateItem = () => {
               <div className="form-create-item">
                 <form action="#">
                   <h4 className="title-create-item">Upload file</h4>
-                  <label className="uploadFile" style={{cursor:'default'}}>
+                  <label className="uploadFile" style={{ cursor: "default" }}>
                     <span className="filename">
                       PNG, JPG, GIF, WEBP or MP4. Max 200mb.
                     </span>
                     <input
-                    disabled
+                      disabled
                       type="file"
                       className="inputfile form-control"
                       name="file"
@@ -224,7 +235,13 @@ const CreateItem = () => {
                         <h4 className="title-create-item d-flex">
                           Name<h4 style={{ color: "red" }}>*</h4>
                         </h4>
-                        <input disabled type="text" placeholder="" value="AxelarRobot" style={{ cursor:'default'}}/>
+                        <input
+                          disabled
+                          type="text"
+                          placeholder=""
+                          value="AxelarRobot"
+                          style={{ cursor: "default" }}
+                        />
 
                         <h4
                           className="title-create-item"
@@ -245,87 +262,126 @@ const CreateItem = () => {
                           welcome to link to your own webpage with more details.
                         </p>
                         <input
-                        disabled
+                          disabled
                           type="text"
                           placeholder=""
                           value="https://axelar.network/"
-                          style={{cursor:'default'}}
+                          style={{ cursor: "default" }}
                         />
 
                         <h4 className="title-create-item">Description</h4>
-                        <textarea value="The description will be included on the item's detail page underneath its image" style={{cursor:'default'}}></textarea>
+                        <textarea
+                          value="The description will be included on the item's detail page underneath its image"
+                          style={{ cursor: "default" }}
+                        ></textarea>
 
                         <h4 className="title-create-item d-flex ">
                           Collection
                         </h4>
                         <input
-                        disabled
+                          disabled
                           type="text"
                           placeholder=""
                           value="AxelarSea Collection."
-                          style={{cursor:'default'}}
+                          style={{ cursor: "default" }}
                         />
 
                         <h4 className="title-create-item d-flex">Supply</h4>
-                        <input disabled type="text" placeholder="" value="1" style={{cursor:'default'}}/>
+                        <input
+                          disabled
+                          type="text"
+                          placeholder=""
+                          value="1"
+                          style={{ cursor: "default" }}
+                        />
 
                         <h4 className="title-create-item d-flex">Blockchain</h4>
                         <Dropdown>
-                          <Dropdown.Toggle className="dropdown-chain-box"
-                          style={{width:'100%'}} 
-                          onClick={() => setModalShow(true)}>
-                          <img
-                            onChange={() => setModalShow(false)} 
-                            src={
-                              blockChain == "Ethereum" ? ethLogo 
-                              : blockChain == "Avalanche" ? avaxLogo 
-                              : blockChain == "Fantom" ? fantomLogo 
-                              : blockChain == "Moonbeam" ? moonbeamLogo 
-                              : blockChain == "Polygon" ? polygonLogo 
-                              : ''}
-                            style={{marginRight:'1rem', width:'25px'}}
-                          />
-                          {blockChain}
+                          <Dropdown.Toggle
+                            className="dropdown-chain-box"
+                            onClick={() => setModalShow(true)}
+                          >
+                            <img
+                              onChange={() => setModalShow(false)}
+                              src={
+                                blockChain == "Ethereum"
+                                  ? ethLogo
+                                  : blockChain == "Avalanche"
+                                  ? avaxLogo
+                                  : blockChain == "Fantom"
+                                  ? fantomLogo
+                                  : blockChain == "Moonbeam"
+                                  ? moonbeamLogo
+                                  : blockChain == "Polygon"
+                                  ? polygonLogo
+                                  : ""
+                              }
+                              style={{ marginRight: "1rem", width: "25px" }}
+                            />
+                            {blockChain}
                           </Dropdown.Toggle>
 
-                          <Dropdown.Menu style={{width:'100%'}}>
-                            <Dropdown.Item 
-                              className="dropdown-chain-detail" 
-                              onClick={() => setBlockChain("Ethereum")}>
-                                <img src={ethLogo} style={{marginRight:'1rem', width:'25px'}}/>
-                                Ethereum
-                            </Dropdown.Item>
-                            <Dropdown.Item className="dropdown-chain-detail"
-                             onClick={() => setBlockChain("Avalanche")}>
-                               <img src={avaxLogo} style={{marginRight:'1rem', width:'25px'}}/>
-                               Avalanche
-                            </Dropdown.Item>
-                            <Dropdown.Item 
-                              className="dropdown-chain-detail" 
-                              onClick={() => setBlockChain("Fantom")}>
-                                <img src={fantomLogo} style={{marginRight:'1rem', width:'25px'}}/>
-                                Fantom
-                            </Dropdown.Item>
-                            <Dropdown.Item 
-                              className="dropdown-chain-detail"
-                               onClick={() => setBlockChain("Moonbeam")}>
-                                 <img src={moonbeamLogo} style={{marginRight:'1rem', width:'25px'}}/>
-                                 Moonbeam
-                              </Dropdown.Item>
+                          <Dropdown.Menu style={{ width: "100%" }}>
                             <Dropdown.Item
                               className="dropdown-chain-detail"
-                              onClick={() => setBlockChain("Polygon")}>
-                                <img src={polygonLogo} style={{marginRight:'1rem', width:'25px'}}/>
-                                Polygon
+                              onClick={() => setBlockChain("Ethereum")}
+                            >
+                              <img
+                                src={ethLogo}
+                                style={{ marginRight: "1rem", width: "25px" }}
+                              />
+                              Ethereum
+                            </Dropdown.Item>
+                            <Dropdown.Item
+                              className="dropdown-chain-detail"
+                              onClick={() => setBlockChain("Avalanche")}
+                            >
+                              <img
+                                src={avaxLogo}
+                                style={{ marginRight: "1rem", width: "25px" }}
+                              />
+                              Avalanche
+                            </Dropdown.Item>
+                            <Dropdown.Item
+                              className="dropdown-chain-detail"
+                              onClick={() => setBlockChain("Fantom")}
+                            >
+                              <img
+                                src={fantomLogo}
+                                style={{ marginRight: "1rem", width: "25px" }}
+                              />
+                              Fantom
+                            </Dropdown.Item>
+                            <Dropdown.Item
+                              className="dropdown-chain-detail"
+                              onClick={() => setBlockChain("Moonbeam")}
+                            >
+                              <img
+                                src={moonbeamLogo}
+                                style={{ marginRight: "1rem", width: "25px" }}
+                              />
+                              Moonbeam
+                            </Dropdown.Item>
+                            <Dropdown.Item
+                              className="dropdown-chain-detail"
+                              onClick={() => setBlockChain("Polygon")}
+                            >
+                              <img
+                                src={polygonLogo}
+                                style={{ marginRight: "1rem", width: "25px" }}
+                              />
+                              Polygon
                             </Dropdown.Item>
                           </Dropdown.Menu>
                         </Dropdown>
-                        <button 
-                          className="" id="liveToastBtn" 
-                          style={{ margin:'3rem 0rem'}} 
-                          onClick={mint} 
-                          disabled={processing}>
-                            Submit
+                        <button
+                          className=""
+                          id="liveToastBtn"
+                          style={{ margin: "3rem 0rem" }}
+                          onClick={mint}
+                          disabled={processing}
+                        >
+                          Submit
                         </button>
                       </form>
                     </TabPanel>
@@ -421,7 +477,6 @@ const CreateItem = () => {
         setModalShow={setModalShow}
         setBlockChain={setBlockChain}
       />
-
     </div>
   );
 };
