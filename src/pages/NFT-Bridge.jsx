@@ -74,6 +74,8 @@ import { cancelListing, crossChainTokenLabel, fetchAllMyItems } from "../utils/a
 import Swal from "sweetalert2";
 import CongratBridgeModal from "../components/layouts/CongratBridgeModal";
 import wait from "../utils/wait";
+import LimitModal from "../components/layouts/LimitModal";
+import useRateLimit from "../hooks/useRateLimit";
 
 const sampleNftId = {
   "3": "1020847100762815390390123822295304634369",
@@ -103,6 +105,8 @@ const NFTBridge = () => {
   const [wallet , setWallet] = useState('')
 
   const [walletAddress, setwalletAddress] = useState('')
+
+  const [isRateLimited, refreshRateLimit] = useRateLimit(1, 100);
 
   const handleWalletChange = e => {
     setwalletAddress(e.target.value)
@@ -395,6 +399,7 @@ const NFTBridge = () => {
       refreshData2();
     } finally {
       setProcessing(false);
+      refreshRateLimit();
     }
 
   }
@@ -664,6 +669,8 @@ const NFTBridge = () => {
       <MaintainModal 
       onShow={true}
       />
+
+      <LimitModal onShow={isRateLimited}></LimitModal>
     </div>
   );
 };

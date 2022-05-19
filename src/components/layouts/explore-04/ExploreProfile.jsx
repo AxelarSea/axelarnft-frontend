@@ -5,7 +5,7 @@ import todayPickData from "../../../assets/fake-data/data-today-pick";
 import { fetchAllListedItems } from "../../../utils/api";
 import {useLocation} from 'react-router-dom'
 
-const Explore = (props) => {
+const ExploreProfile = (props) => {
   const data = props.data;
   const items = props.items;
   const defaultItems = props.defaultItems || [...(items || [])];
@@ -19,7 +19,7 @@ const Explore = (props) => {
     ftm: false,
     polygon: false,
     moonbeam: false,
-    avaxCoin: true,
+    avaxCoin: false,
     lunaCoin: false,
     ustCoin: false,
   });
@@ -167,4 +167,4 @@ const Explore = (props) => {
   );
 };
 
-export default Explore;
+export default ExploreProfile;
