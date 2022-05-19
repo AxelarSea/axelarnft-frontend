@@ -17,7 +17,7 @@ import verifyIcon from '../../../assets/images/icon/icon-verify.svg'
 import imgTodayPick from '../../../assets/images/box-item/img-today-pick-demo.svg'
 import nftLoading from '../../../assets/images/box-item/nft-loading.gif'
 import imgAuthor from '../../../assets/images/avatar/satoshi.svg'
-import { crossChainTokenLabel, fetchAllListedItems } from '../../../utils/api';
+import { calculateSelectedTokensFromFilter, crossChainTokenLabel, fetchAllListedItems } from '../../../utils/api';
 import { chainLabel, maskAddress } from '../../../utils/address';
 
 const RecentlyListed = () => {
@@ -42,7 +42,7 @@ const RecentlyListed = () => {
 
 
     async function loadMore() {
-        let listed = await fetchAllListedItems({ limit: 20, page });
+        let listed = await fetchAllListedItems({ limit: 20, page, listTokenAddress: calculateSelectedTokensFromFilter({ avaxCoin: true }) });
         // listed = listed.slice(0, 20);
 
         const newData = listed.map(x => ({
