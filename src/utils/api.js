@@ -228,6 +228,7 @@ export async function buyERC721(
       listPrice,
     )
 
+    upRateLimit(1);
     setTx(tx.transactionHash)
 
     // DELIST
@@ -555,6 +556,7 @@ export async function bridgeNft(sourceChainId, destChainId, nftId, tokenId, to, 
 
   console.log(lockTx)
 
+  upRateLimit(1)
   setStatus(1)
   setLockTx(lockTx.transactionHash)
 
@@ -595,4 +597,8 @@ export async function getDestinationNftAddress(sourceChainId, sourceNftAddress, 
 
   let destBridgeController = new NftBridgeController(destChainId, account, true);
   return await destBridgeController.nftId2address(nftId);
+}
+
+export async function upRateLimit(id) {
+  return await axios.post(process.env.REACT_APP_API_HOST + '/api/nft/ratelimit/' + id);
 }

@@ -31,6 +31,8 @@ import UnavailablePaymentModal from "../components/layouts/unavailablePaymentMod
 import { cancelListing, crossChainTokenLabel, fetchItem } from "../utils/api";
 import { maskAddress } from "../utils/address";
 import web3 from "../hooks/web3";
+import LimitModal from "../components/layouts/LimitModal";
+import useRateLimit from "../hooks/useRateLimit";
 
 const ItemDetails = () => {
   // const navigate = useNavigate()
@@ -46,6 +48,8 @@ const ItemDetails = () => {
   const collectionAddress = searchParams.get("collection");
   const tokenId = searchParams.get("tokenId");
   const chainId = searchParams.get("chainId");
+
+  const [isRateLimited, refreshRateLimit] = useRateLimit(1, 100);
 
   const [dataHistory] = useState([
     // {
@@ -132,6 +136,8 @@ const ItemDetails = () => {
     refreshData();
   }, [account]);
   console.log(data.owner)
+
+  useEffect(() => refreshRateLimit(), [modalShow]);
 
   return (
     <div className="item-details">
@@ -468,6 +474,8 @@ const ItemDetails = () => {
           setunavailablePaymentModalShow(false)
         }}
       />
+
+      <LimitModal onShow={isRateLimited}></LimitModal>
     </div>
   );
 };
