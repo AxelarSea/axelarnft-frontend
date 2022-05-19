@@ -107,6 +107,7 @@ const NFTBridge = () => {
   const [walletAddress, setwalletAddress] = useState('')
 
   const [isRateLimited, refreshRateLimit] = useRateLimit(1, 100);
+  const [showLimitModal, setShowLimitModal] = useState(false);
 
   const handleWalletChange = e => {
     setwalletAddress(e.target.value)
@@ -382,6 +383,11 @@ const NFTBridge = () => {
   }
 
   async function bridge() {
+    if (isRateLimited) {
+      setShowLimitModal(true);
+      return;
+    }
+
     try {
       setStatus(0)
       setLockTx("")
@@ -670,7 +676,7 @@ const NFTBridge = () => {
       onShow={true}
       />
 
-      <LimitModal onShow={isRateLimited}></LimitModal>
+      <LimitModal onShow={isRateLimited && showLimitModal} onHide={() => setShowLimitModal(false)}></LimitModal>
     </div>
   );
 };

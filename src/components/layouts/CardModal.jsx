@@ -26,6 +26,7 @@ import Swal from "sweetalert2";
 import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
 import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
 import WEB3_LIST from "../../contracts/web3ReadOnly";
+import useRateLimit from "../../hooks/useRateLimit";
 
 const CardModal = (props) => {
   const lcd = useLCDClient();
