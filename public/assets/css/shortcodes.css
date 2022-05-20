@@ -2042,10 +2042,11 @@
 /* Page Title Inner
 -------------------------------------------------------------- */
 .flat-title-page.inner {
-    padding        : 139px 0 59px;
+    padding        : 70px 0 50px;
     position       : relative;
     background-image: url(../images/backgroup-secsion/bgtoppage-w.jpg);
     background-size: cover;
+    margin-bottom: 3rem;
 }
 .is_dark .flat-title-page.inner {
     /* background     : url(../images/backgroup-secsion/bgtop.jpg) center center no-repeat; */

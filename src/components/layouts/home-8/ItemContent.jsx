@@ -679,7 +679,7 @@ const ItemContent = () => {
                                                             <h6> <Link to="/Authors-Profile">{item.nameAuthor}</Link> </h6>
                                                         </div>
                                                     </div>
-                                                    <button className="wishlist-button heart"><span className="number-like"> {item.wishlist}</span></button>
+                                                    {/* <button className="wishlist-button heart"><span className="number-like"> {item.wishlist}</span></button> */}
                                                 </div>
                                                 <div className="card-media">
                                                     <Link to="#"><img src={item.img} alt="AxelarSea" /></Link>
@@ -752,7 +752,7 @@ const ItemContent = () => {
                                                 </div>
                                             </div>
                                             <div className="wrap-hear">
-                                                <button className="wishlist-button heart"><span className="number-like"> {item.wishlist}</span></button>
+                                                {/* <button className="wishlist-button heart"><span className="number-like"> {item.wishlist}</span></button> */}
                                             </div>
                                             <div className="wrap-tag">
                                                 <div className="tags">{item.tags}</div>

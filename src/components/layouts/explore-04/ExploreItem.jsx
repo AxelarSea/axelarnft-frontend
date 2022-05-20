@@ -131,7 +131,7 @@ const ExploreItem = (props) => {
   },[props.data])
   return (
     <Fragment>
-      <div className="explore">
+whi      <div className="explore">
         <div className="box-epxlore">
           {data.slice(0, visible).map((item, index) => (
             ((item.priceTag == "LUNA" && item.listPrice < 0.1) || (item.priceTag == "UST" && item.listPrice < 10) ?
@@ -162,9 +162,9 @@ const ExploreItem = (props) => {
                     <span>Buy Now</span>
                   </button>
                 </div>
-                <Link to="#" className="wishlist-button heart">
+                {/* <Link to="#" className="wishlist-button heart">
                   <span className="number-like">{item.wishlist}</span>
-                </Link>
+                </Link> */}
                 <div className="coming-soon">{item.feature}</div>
               </div>
               <div className="d-flex align-items-center justify-content-between">
