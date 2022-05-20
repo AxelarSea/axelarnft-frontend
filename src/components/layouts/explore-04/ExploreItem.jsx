@@ -131,7 +131,7 @@ const ExploreItem = (props) => {
   },[props.data])
   return (
     <Fragment>
-whi      <div className="explore">
+      <div className="explore">
         <div className="box-epxlore">
           {data.slice(0, visible).map((item, index) => (
             ((item.priceTag == "LUNA" && item.listPrice < 0.1) || (item.priceTag == "UST" && item.listPrice < 10) ?
