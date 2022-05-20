@@ -81,7 +81,7 @@ const SliderItem = props => {
         <div className="shape style2 item-w-51"></div>
         <div className="shape style2 item-w-51 position2"></div>
         <div className="shape item-w-68"></div> */}
-        <div className="overlay"></div>
+        <div className="overlay-style2"></div>
         <div className="swiper-container mainslider home">
             <div className="swiper-wrapper">
                 <div className="swiper-slide">

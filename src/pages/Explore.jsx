@@ -105,10 +105,7 @@ const Explore04 = () => {
               <div className="page-title-heading mg-bt-12">
                 <h1 className="heading text-center">Explore</h1>
               </div>
-              <div style={{ marginTop: "2rem" }}>
-                <h6 className='data-showlist'>{count.currentlyListedCount}</h6>
-                <h6 className="text-center">NFT Currently Listed</h6>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -122,6 +119,9 @@ const Explore04 = () => {
         filterChange={filterChange}
       >
         <div className="col-xl-9 col-lg-9 col-md-12">
+          <div className="d-flex ">
+            <h3 style={{color:'gray', marginBottom:'2rem'}}>{count.currentlyListedCount} Items</h3>
+          </div>
           <ExploreItem data={items} loadMore={loadMore} />
         </div>
       </Explore>
