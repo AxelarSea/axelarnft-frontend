@@ -343,7 +343,7 @@ const RecentlyListed = () => {
                                                     <div className="price" style={{marginTop:'0rem'}}>
                                                         <p>Price</p>
                                                         <div className="price-details mt-1 d-flex align-items-center">
-                                                            <img src={item.priceTag === "LUNA" ? lunaLogo : item.priceTag === "UST" ? ustLogo : ''} alt="" width={'30px'}/>
+                                                            <img src={item.priceTag === "AVAX" ? avaxLogo :item.priceTag === "LUNA" ? lunaLogo : item.priceTag === "UST" ? ustLogo : ''} alt="" width={'30px'}/>
                                                             <h5 style={{marginLeft:'0.5rem'}}>{item.price}</h5>
                                                         </div>
                                                     </div>
