@@ -80,7 +80,7 @@ const routes = [
   { path: '/NFT-Bridge02', component: <NFTBridge02 />},
   { path: '/use-case-bridge', component: <Usecase />},
   { path: '/MoonbeamFaucet', component: <MoonbeamFaucet />},
-  { path: '/Dashboard', component: <Dashboard />},
+  { path: '/0xadmin', component: <Dashboard />},
 ]
 
 export default routes;
