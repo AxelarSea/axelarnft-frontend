@@ -33,6 +33,7 @@ import { maskAddress } from "../utils/address";
 import web3 from "../hooks/web3";
 import LimitModal from "../components/layouts/LimitModal";
 import useRateLimit from "../hooks/useRateLimit";
+import MaintainModal from "../components/layouts/MaintainModal";
 
 const ItemDetails = () => {
   // const navigate = useNavigate()
@@ -482,6 +483,10 @@ const ItemDetails = () => {
         onHide={() => {
           setunavailablePaymentModalShow(false)
         }}
+      />
+
+      <MaintainModal 
+        onShow={true}
       />
 
       <LimitModal onShow={isRateLimited && showLimitModal} onHide={() => setShowLimitModal(false)}></LimitModal>
