@@ -10,13 +10,17 @@ const MaintainModal = (props) => {
       <Modal.Header></Modal.Header>
       <div className="center p-4">
         <img src={maintainImg} alt="" width="200px" />
-        <h2 className="my-4">Axelar network Under maintenance</h2>
+        <h2 className="my-4">Axelar Network is under maintenance</h2>
         <p>
-          We are currently facing some issues with our system and our team is
-          working hard to resolve it.
+          Buying and Bridging features is currently unavailable.
+        </p>
+        <p>
+          Please try again later.
         </p>
       </div>
     </Modal>
   );
 };
 export default MaintainModal;
+
+
