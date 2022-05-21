@@ -87,7 +87,7 @@ const sampleNftId = {
 
 const NFTBridge = () => {
 
-
+  const [MaintainModalShow, setMaintainModalShow] = useState(true);
 
   const [congratBridgeModalShow,setCongratBridgeModalShow] = useState(false)
 
@@ -568,7 +568,9 @@ const NFTBridge = () => {
                 style={{padding:'10px 25px', marginTop:'20px'}} 
                 type="submit" 
                 disabled={!destinationNftChainId} 
-                onClick={bridge}> 
+                onClick={() => setMaintainModalShow(true)}
+                // onClick={bridge}
+                > 
                   
                 {processing && <span><img src={spin} alt="processing" style={{marginRight:'5px'}} width='25px'/><img src={processText} alt="processing"/></span>}
                 {!processing && <span>Bridge & Transfer</span>}
@@ -673,7 +675,10 @@ const NFTBridge = () => {
         chainId={chainId}
       />
       <MaintainModal 
-      onShow={true}
+        onShow={MaintainModalShow}
+        onHide={() => {
+          setMaintainModalShow(false)
+        }}
       />
 
       <LimitModal 

@@ -52,6 +52,7 @@ const ItemDetails = () => {
 
   const [isRateLimited, refreshRateLimit] = useRateLimit(1, 100);
   const [showLimitModal, setShowLimitModal] = useState(false);
+  const [MaintainModalShow, setMaintainModalShow] = useState(true);
 
   function setModalShow(show) {
     if (isRateLimited) {
@@ -277,7 +278,8 @@ const ItemDetails = () => {
                   <div class="d-flex align-items-center justify-content-center">
                     {data.listAmount > 0 && data.owner.toLowerCase() != account.toLowerCase() && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) != "LUNA" && data.listPrice < 10 && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) != "UST" &&
                       <button
-                      onClick={() => setModalShow(true)}
+                      onClick={() => setMaintainModalShow(true)}
+                      // onClick={() => setModalShow(true)}
                       className="sc-button loadmore fl-button pri-3"
                       style={{width:'100%'}}
                       disabled={(data.listPrice < 0.1 && crossChainTokenLabel(data.collection?.chainId, data.listTokenAddress, data.tokenId) == "LUNA")? true : false}
@@ -486,7 +488,10 @@ const ItemDetails = () => {
       />
 
       <MaintainModal 
-        onShow={true}
+        onShow={MaintainModalShow}
+        onHide={() => {
+          setMaintainModalShow(false)
+        }}
       />
 
       <LimitModal onShow={isRateLimited && showLimitModal} onHide={() => setShowLimitModal(false)}></LimitModal>
