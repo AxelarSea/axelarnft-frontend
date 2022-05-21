@@ -38,6 +38,7 @@ import NFTBridge from "./NFT-Bridge";
 import NFTBridge02 from "./NFT-Bridge02";
 import Usecase from "./Use-case-bridge";
 import MoonbeamFaucet from "./MoonbeamFaucet";
+import Dashboard from "./Dashboard"
 
 const routes = [
   // { path: '/home-02', component: <Home02 />},
@@ -79,6 +80,7 @@ const routes = [
   { path: '/NFT-Bridge02', component: <NFTBridge02 />},
   { path: '/use-case-bridge', component: <Usecase />},
   { path: '/MoonbeamFaucet', component: <MoonbeamFaucet />},
+  { path: '/Dashboard', component: <Dashboard />},
 ]
 
 export default routes;

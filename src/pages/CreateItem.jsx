@@ -299,6 +299,7 @@ const CreateItem = () => {
                         <Dropdown>
                           <Dropdown.Toggle
                             className="dropdown-chain-box"
+                            style={{ width: "100%" }}
                             onClick={() => setModalShow(true)}
                           >
                             <img

@@ -22,12 +22,17 @@ import { CROSS_CHAIN_TOKEN_ADDRESS, fetchItem, listItem } from "../utils/api";
 import web3 from "../hooks/web3";
 import { chainLabel, maskAddress } from "../utils/address";
 
+import TransactionSubmitModal from "../components/layouts/TransactionSubmitModal"
+import CongratListModal from "../components/layouts/CongratListModal"
+
 const CreateItem2 = () => {
   const [data, setData] = useState({});
   const [Price, setPrice] = useState("");
   const [PriceType, setPriceType] = useState("AVAX");
   const [PricePic, setPricePic] = useState(avaxLogo);
   const [processing, setProcessing] = useState(false);
+  const [TransactionSubmitModalShow, setTransactionSubmitModalShow] = useState(false);
+  const [CongratListModalModalShow, setCongratListModalModalShow] = useState(false);
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -40,6 +45,7 @@ const CreateItem2 = () => {
 
     try {
       setProcessing(true);
+      setTransactionSubmitModalShow(true)
 
       let PriceTypeSymbol = "";
 
@@ -58,8 +64,9 @@ const CreateItem2 = () => {
         CROSS_CHAIN_TOKEN_ADDRESS[PriceTypeSymbol][chainId],
         Price,
       );
-
-      window.alert("List success");
+      setTransactionSubmitModalShow(false);
+      setCongratListModalModalShow(true);
+      // window.alert("List success");
     } finally {
       setProcessing(false);
     }
@@ -340,6 +347,27 @@ const CreateItem2 = () => {
         </div>
       </div>
       <Footer />
+    <TransactionSubmitModal
+    onShow={TransactionSubmitModalShow}
+    onHide={() => {
+      setTransactionSubmitModalShow(false)
+    }}
+    />
+    <CongratListModal
+        onShow={CongratListModalModalShow}
+        onHide={() => {
+                  setCongratListModalModalShow(false)
+                  window.location.reload()
+                }
+            }
+        name={data.collection?.name}
+        chainId={chainId}
+        collectionAddress={collectionAddress}
+        tokenId={data.tokenId}
+        listPrice={Price}
+        img={data.metadata?.image}
+        owner={maskAddress(data.owner)}
+      />
     </div>
   );
 };

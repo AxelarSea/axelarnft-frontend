@@ -448,7 +448,7 @@ button:disabled {
 
 .nftbridge-card {
   width: 232px;
-  height: 294px;
+  height: auto;
   left: 0px;
   top: 0px;
   background: #f8f8f8;
@@ -860,7 +860,7 @@ button:disabled {
   .sticky-nft-image {
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 15%;
     z-index: 1030;
     -webkit-align-self: flex-start !important;
     -ms-flex-item-align: start !important;

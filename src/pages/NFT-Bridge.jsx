@@ -676,7 +676,10 @@ const NFTBridge = () => {
       onShow={true}
       />
 
-      <LimitModal onShow={isRateLimited && showLimitModal} onHide={() => setShowLimitModal(false)}></LimitModal>
+      <LimitModal 
+      onShow={isRateLimited && showLimitModal} 
+      onHide={() => setShowLimitModal(false)}>
+      </LimitModal>
     </div>
   );
 };
