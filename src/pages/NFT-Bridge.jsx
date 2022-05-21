@@ -439,12 +439,12 @@ const NFTBridge = () => {
             <div className="nftbridge-box pd-20">
               <div className="nftbridge-card-section">
                 <div className="d-flex flex-column align-items-center">
-                <div className="nftbridge-card d-flex justify-content-center" onClick={() => setSelectNftModalShow(true)} style={{cursor:'pointer'}}>
+                <div className="nftbridge-card d-flex justify-content-center" onClick={() => setSelectNftModalShow(true)} style={{cursor:'pointer', height:'294px'}}>
                   {nftSelect == null 
                   ?
                    <img className="img-chain-select" src={iconnfttableselect} width='128px'/> 
                    : 
-                   <div className="nftbridge-card pd-10">
+                   <div className="nftbridge-card pd-10" style={{height:'294px'}}>
                       <div className="nftbridge-nft-img-box d-flex justify-content-center">
                         <img className="nftbridge-nft-img" src={nftSelect.img} alt="AxelarSea" width='200px'/>
                         {/* style={{height:'200px'}} */}
@@ -473,12 +473,12 @@ const NFTBridge = () => {
                 </div>
                 <img className="bridge-animation" src={bridgeimg} style={{marginTop:'3.5rem'}}/>
                 <div className="d-flex flex-column align-items-center">
-                <div className="nftbridge-card d-flex justify-content-center">
+                <div className="nftbridge-card d-flex justify-content-center" style={{height:'294px'}}>
                   {nftSelect == null
                   ?
                   <img src={iconnfttable} width='70px'/>
                   :
-                  <div className="nftbridge-card pd-10">
+                  <div className="nftbridge-card pd-10" style={{height:'294px'}}>
                       <div className="nftbridge-nft-img-box d-flex justify-content-center">
                         <img className="nftbridge-nft-img" src={nftSelect.img} alt="AxelarSea" width='200px'/>
                         {/* style={{height:'200px'}} */}
