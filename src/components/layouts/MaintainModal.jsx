@@ -12,7 +12,7 @@ const MaintainModal = (props) => {
         <img src={maintainImg} alt="" width="200px" />
         <h2 className="my-4">Axelar Network is under maintenance</h2>
         <p>
-          Buying and Bridging features is currently unavailable.
+          Buying and Bridging features are currently unavailable.
         </p>
         <p>
           Please try again later.
