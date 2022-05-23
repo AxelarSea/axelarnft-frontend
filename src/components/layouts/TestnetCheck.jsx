@@ -16,7 +16,7 @@ const TestnetCheck = (props) => {
 
   const [metamaskAccount, setMetamaskAccount] = useState("");
 
- 
+  
 
   const connectWalletHandler = () => {
     if (window.ethereum && window.ethereum.isMetaMask) {
@@ -106,6 +106,18 @@ const TestnetCheck = (props) => {
       0
   )
 
+  const [networkStatus , setNetWorkStatus] = useState('')
+
+  useEffect(() => {
+    if (!parseInt(process.env.REACT_APP_UNDER_MAINTENANCE)){
+      setNetWorkStatus(false)
+    }
+    else{
+      setNetWorkStatus(true)
+    }
+    console.log(!parseInt(process.env.REACT_APP_UNDER_MAINTENANCE))
+  },[])
+
     return (
         <Modal show={props.onShow} onHide={props.onHide}>
       <Modal.Header closeButton></Modal.Header>
@@ -115,9 +127,32 @@ const TestnetCheck = (props) => {
        <input onChange={e =>handleWalletChange(e)} style={{width:'100%'}} value={wallet} className="search-wallet" placeholder="Paste your MetaMask address and Enter." required="" />
        <button className="search search-submit d-flex align-items-center " style={{height:'38px'}}type="submit" value="submit">
         <i className="icon-fl-search-filled" ></i>
-      </button>
+       </button>
       </form>
-        <h5 className="testnetquest" style={{marginTop:'1.5rem'}}>Mint NFTs on at least three supported EVM chains.</h5>
+      <div 
+      className="d-flex aligh-items-center justify-content-between"
+      style={{marginTop:'0.5rem'}}
+      >
+        <p 
+        className="d-flex align-items-center justify-content-center"
+        style={{fontSize:'12px', fontWeight:'700'}}
+        >
+          Network Status:
+          <a style={{marginLeft:'0.3rem'}}>{networkStatus ? 'Operational': 'Under Maintenance'}</a>
+          <div 
+          className={networkStatus ? "animation-piont-green": "animation-piont-red"} 
+          style={{marginLeft:'0.2rem'}}
+          >
+          </div>
+        </p>
+        <p 
+        className="d-flex align-items-center justify-content-center"
+        style={{fontSize:'12px', fontWeight:'700', marginRight:'6rem'}}
+        >
+          Campaign Duration: <a style={{marginLeft:'0.3rem'}}>{networkStatus ? 'Now-TBD': 'Now-TBD'}</a>
+        </p>
+      </div>
+        <h5 className="testnetquest" style={{marginTop:'0.5rem'}}>Mint NFTs on at least three supported EVM chains.</h5>
           <ul className="questlist" style={{marginTop:'0.75rem'}}>
             <li className={data.mint_3 > 0 ? 'green' : 'questlist-text'}><img  src={data.mint_3 > 0 ? greenCheck : checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Minted NFT on Ethereum Testnet (Ropsten)</li>
             <li className={data.mint_43113 > 0 ? 'green ' : 'questlist-text'}><img src={data.mint_43113 > 0 ? greenCheck : checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Minted NFT on Avalanche Fuji Testnet</li>
@@ -133,7 +168,7 @@ const TestnetCheck = (props) => {
           <ul className="questlist" style={{marginTop:'0.75rem'}}>
             <li className={data.buy_3 > 0 ? 'green' : data.buy_1287 > 0 ?  'green' : data.buy_4002 > 0 ? 'green' : data.buy_43113 > 0 ? 'green' : data.buy_80001 > 0 ? 'green' : 'questlist-text'}><img src={data.buy_3 > 0 ? greenCheck : data.buy_1287 > 0 ?  greenCheck : data.buy_4002 > 0 ? greenCheck : data.buy_43113 > 0 ? greenCheck : data.buy_80001 > 0 ? greenCheck : checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Bought an NFT using UST or LUNA (Optional)</li>
           </ul>
-          <hr style={{}}/>
+          <hr style={{marginTop:'1rem', marginBottom:'-1rem'}}/>
         <h5 className="testnetquest d-flex align-items-center" style={{marginTop:'1.5rem'}}>Bridge an NFT on AxelarSea<a href="https://youtu.be/mRK8HH_diH4"  target="_blank" style={{marginLeft:'1rem', fontSize:'14px', cursor:'pointer', color:'gray', backgroundColor:'#f8f8f8', padding:'1.5px', borderRadius:'5px', border:'0.5px solid gray'}}>Guide</a><a className="newpage-title" style={{marginLeft:'1rem'}}>New!</a></h5>
           <ul className="questlist" style={{marginTop:'0.75rem'}}>
             <li className={bridgePassed ? 'green' : "questlist-text"}><img className="align-self-start" src={bridgePassed ? greenCheck : checkcircle} width='20px' style={{marginRight:'1rem', marginLeft:'0.5rem'}}/>Bridge one of your NFTs in a loop with at least 2 side chains.</li>

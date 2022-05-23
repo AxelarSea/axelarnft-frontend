@@ -867,3 +867,35 @@ button:disabled {
     align-self: flex-start !important;
   }
 }
+.animation-piont-red {
+  width: 10px;
+  height: 10px;
+  background: red;
+  position: relative;
+  animation-name: red-white;
+  animation-duration: 0.8s;  
+  animation-fill-mode: both;
+  animation-direction: alternate-reverse;
+  border-radius: 10px;
+  animation-iteration-count: infinite;
+}
+.animation-piont-green {
+  width: 10px;
+  height: 10px;
+  background: green;
+  position: relative;
+  animation-name: green-white;
+  animation-duration: 0.8s;  
+  animation-fill-mode: both;
+  animation-direction: alternate-reverse;
+  border-radius: 10px;
+  animation-iteration-count: infinite;
+}
+@keyframes red-white {
+  from {background-color: white;}
+  to {background-color: red;}
+}
+@keyframes green-white {
+  from {background-color: white;}
+  to {background-color: green;}
+}

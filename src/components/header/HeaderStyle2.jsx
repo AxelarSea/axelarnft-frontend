@@ -244,6 +244,7 @@ const HeaderStyle2 = () => {
             // setBuyNowModal={setModalShow}
             onShow={modalShow}
             onHide={() => setModalShow(false)}
+            setModalShow={setModalShow}
             />
             <FaqTestnetModal
             onShow={faqModalShow}
