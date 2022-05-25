@@ -138,9 +138,9 @@ const TestnetCheck = (props) => {
         style={{fontSize:'12px', fontWeight:'700'}}
         >
           Network Status:
-          <a style={{marginLeft:'0.3rem'}}>{networkStatus ? 'Operational': 'Under Maintenance'}</a>
+          <a style={{marginLeft:'0.3rem'}}>{networkStatus ? 'Under Maintenance' : 'Operational'}</a>
           <div 
-          className={networkStatus ? "animation-piont-green": "animation-piont-red"} 
+          className={networkStatus ? "animation-piont-red" : "animation-piont-green"} 
           style={{marginLeft:'0.2rem'}}
           >
           </div>
