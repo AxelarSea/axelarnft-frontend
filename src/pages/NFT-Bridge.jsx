@@ -383,6 +383,11 @@ const NFTBridge = () => {
   }
 
   async function bridge() {
+    if (parseInt(process.env.REACT_APP_UNDER_MAINTENANCE)) {
+      setMaintainModalShow(true);
+      return;
+    }
+
     if (isRateLimited) {
       setShowLimitModal(true);
       return;
@@ -568,8 +573,8 @@ const NFTBridge = () => {
                 style={{padding:'10px 25px', marginTop:'20px'}} 
                 type="submit" 
                 disabled={!destinationNftChainId} 
-                onClick={() => setMaintainModalShow(true)}
-                // onClick={bridge}
+                // onClick={() => setMaintainModalShow(true)}
+                onClick={bridge}
                 > 
                   
                 {processing && <span><img src={spin} alt="processing" style={{marginRight:'5px'}} width='25px'/><img src={processText} alt="processing"/></span>}
