@@ -42,7 +42,7 @@ const Faucet = () => {
             {
                 img: img5,
                 title: 'Moonbeam Faucet',
-                website:'https://app.axelarsea.com/MoonbeamFaucet'
+                website:'https://moonbase-faucet.axelarsea.com/'
             },
             {
                 img: img6,
