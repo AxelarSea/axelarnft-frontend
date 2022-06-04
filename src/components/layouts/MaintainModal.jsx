@@ -15,9 +15,12 @@ const MaintainModal = (props) => {
         <p>
           Please try again later.
         </p>
-        <button 
-        style={{width:'100%', marginTop:'2rem'}}
-        onClick={props.onHide}>Close</button>
+        {!parseInt(process.env.REACT_APP_UNDER_MAINTENANCE_GLOBAL) &&
+          <button 
+            style={{width:'100%', marginTop:'2rem'}}
+            onClick={props.onHide}
+          >Close</button>
+        }
       </div>
     </Modal>
   );
