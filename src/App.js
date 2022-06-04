@@ -2,6 +2,7 @@ import "./style.css";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import routes from "./pages/index";
+import MaintainModal from "./components/layouts/MaintainModal";
 
 function App() {
   return (
@@ -16,12 +17,14 @@ function App() {
             key={index}
           />
         ))}
-
-        <MaintainModal
-          onShow={Boolean(parseInt(process.env.REACT_APP_UNDER_MAINTENANCE_GLOBAL))}
-          onHide={() => {}}
-        />
       </Routes>
+
+      <MaintainModal
+        onShow={Boolean(
+          parseInt(process.env.REACT_APP_UNDER_MAINTENANCE_GLOBAL)
+        )}
+        onHide={() => {}}
+      />
     </>
   );
 }
