@@ -52,7 +52,7 @@ const ItemDetails = () => {
 
   const [isRateLimited, refreshRateLimit] = useRateLimit(1, 100);
   const [showLimitModal, setShowLimitModal] = useState(false);
-  const [MaintainModalShow, setMaintainModalShow] = useState(true);
+  const [MaintainModalShow, setMaintainModalShow] = useState(false);
 
   function setModalShow(show) {
     if (parseInt(process.env.REACT_APP_UNDER_MAINTENANCE)) {

@@ -87,7 +87,7 @@ const sampleNftId = {
 
 const NFTBridge = () => {
 
-  const [MaintainModalShow, setMaintainModalShow] = useState(true);
+  const [MaintainModalShow, setMaintainModalShow] = useState(false);
 
   const [congratBridgeModalShow,setCongratBridgeModalShow] = useState(false)
 
