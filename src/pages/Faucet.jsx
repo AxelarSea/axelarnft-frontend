@@ -42,7 +42,7 @@ const Faucet = () => {
             {
                 img: img5,
                 title: 'Moonbeam Faucet',
-                website:'https://axelarsea.gitbook.io/axelarsea-docs/testnet/funding-testnet-wallet/moonbeam-alpha-testnet'
+                website:'https://moonbase-faucet.axelarsea.com/'
             },
             {
                 img: img6,
