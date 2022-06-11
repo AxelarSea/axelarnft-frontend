@@ -10,7 +10,7 @@ const marketplaceMetaWalletAddress = {
   1287: "0x3269B478744C069E1cfA4c6246B8cBB948Ef9cEC",
 }
 
-const BRIDGE_GAS_LIMIT = 200_000;
+const BRIDGE_GAS_LIMIT = 400_000;
 const GAS_PRICE = {
   3: 40,
   97: 10,

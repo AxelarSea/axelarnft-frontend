@@ -512,7 +512,7 @@ export async function listItem(
   await refreshMetadata(chainId, collectionAddress, tokenId);
 }
 
-const BRIDGE_GAS_LIMIT = 200_000;
+const BRIDGE_GAS_LIMIT = 250_000;
 const GAS_PRICE = {
   3: 40,
   97: 10,
