@@ -83,23 +83,41 @@ export function calculateSelectedTokensFromFilter(filter) {
   // lunaCoin: false,
   // ustCoin: false,
 
+  let supportedChain = [];
+
+  if (filter.eth) supportedChain.push(3);
+  if (filter.avax) supportedChain.push(43113);
+  if (filter.ftm) supportedChain.push(4002);
+  if (filter.polygon) supportedChain.push(80001);
+  if (filter.moonbeam) supportedChain.push(1287);
+
+  if (supportedChain.length == 0) {
+    supportedChain = [3, 43113, 4002, 80001, 1287];
+  }
+
   let selectedTokens = [];
 
   if (filter.avaxCoin) {
     for (let chainId in CROSS_CHAIN_TOKEN_ADDRESS['wavax-wei']) {
-      selectedTokens.push(CROSS_CHAIN_TOKEN_ADDRESS['wavax-wei'][chainId])
+      if (supportedChain.indexOf(parseInt(chainId)) != -1) {
+        selectedTokens.push(CROSS_CHAIN_TOKEN_ADDRESS['wavax-wei'][chainId])
+      }
     }
   }
   
   if (filter.lunaCoin) {
     for (let chainId in CROSS_CHAIN_TOKEN_ADDRESS.uluna) {
-      selectedTokens.push(CROSS_CHAIN_TOKEN_ADDRESS.uluna[chainId])
+      if (supportedChain.indexOf(parseInt(chainId)) != -1) {
+        selectedTokens.push(CROSS_CHAIN_TOKEN_ADDRESS.uluna[chainId])
+      }
     }
   }
   
   if (filter.ustCoin) {
     for (let chainId in CROSS_CHAIN_TOKEN_ADDRESS.uusd) {
-      selectedTokens.push(CROSS_CHAIN_TOKEN_ADDRESS.uusd[chainId])
+      if (supportedChain.indexOf(parseInt(chainId)) != -1) {
+        selectedTokens.push(CROSS_CHAIN_TOKEN_ADDRESS.uusd[chainId])
+      }
     }
   }
 
