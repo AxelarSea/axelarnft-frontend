@@ -8,6 +8,10 @@ import icon5 from '../../../assets/images/icon/feature-7.svg'
 import icon6 from '../../../assets/images/icon/feature-8.svg'
 import axelarlogo from '../../../assets/images/logo/axelar.svg'
 import cd from '../../../assets/images/logo/ContributionDAO.svg'
+import axelar from '../../../assets/images/logo/axelarLogo.png'
+import cdao from '../../../assets/images/logo/cdaoLogo.png'
+import rango from '../../../assets/images/logo/rangoLogo.png'
+import speedboat from '../../../assets/images/logo/speedboatLogo.png'
 import LogoSupport from '../../../assets/images/logo/Logo-Support.svg';
 import WeSupport from '../../../assets/images/logo/We-Support.svg';
 import fantom from '../../../assets/images/logo/fantom-logo.svg';
@@ -76,10 +80,14 @@ const Create = () => {
                     }
                 </div>
                 <div className='d-flex flex-column align-items-center justify-content-center supported-by'>
-                    <h2 style={{marginBottom:'4rem',marginTop:'4rem'}}>Supported by</h2>
-                    <div className='flex-column align-items-center justify-content-center axelarNFT-supported' style={{marginBottom:'6rem'}}>
-                        <img src={axelarlogo} alt="" />
-                        {/* <img src={cd} alt="" /> */}
+                    <h2 style={{marginBottom:'4rem',marginTop:'4rem'}}>Partner</h2>
+                    <div className='d-flex align-items-center justify-content-center axelarNFT-supported' style={{marginBottom:'6rem'}}>
+                        {/* <img src={axelarlogo} alt="" />
+                        <img src={cd} alt="" /> */}
+                        <img src={axelar} style={{width:'20%',padding:'4rem'}} alt="" />
+                        <img src={rango} style={{width:'16%',padding:'4rem'}} alt="" />
+                        <img src={cdao} style={{width:'20%',padding:'4rem'}} alt="" />
+                        <img src={speedboat} style={{width:'20%',padding:'4rem'}} alt="" />
                     </div>
                 </div>                     
             </div>
