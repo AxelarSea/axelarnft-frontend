@@ -81,14 +81,26 @@ const Create = () => {
                 </div>
                 <div className='d-flex flex-column align-items-center justify-content-center supported-by'>
                     <h2 style={{marginBottom:'4rem',marginTop:'4rem'}}>Partner</h2>
-                    <div className='d-flex align-items-center justify-content-center axelarNFT-supported' style={{marginBottom:'6rem'}}>
-                        {/* <img src={axelarlogo} alt="" />
-                        <img src={cd} alt="" /> */}
+                    <div className="row d-flex justify-content-center align-items-center">
+                        <div className='col-lg-3 col-md-6 col-12'>
+                            <img src={axelar} style={{padding:'1rem'}} alt="" />                                                                                                                                          
+                        </div>
+                        <div className='col-lg-3 col-md-6 col-12 center'>
+                            <img src={rango} style={{padding:'1rem',width:'80%'}} alt="" />                                                                                                                                          
+                        </div>
+                        <div className='col-lg-3 col-md-6 col-12'>
+                            <img src={cdao} style={{padding:'1rem'}} alt="" />                                                                                                                                          
+                        </div>
+                        <div className='col-lg-3 col-md-6 col-12'>
+                            <img src={speedboat} style={{padding:'1rem'}} alt="" />                                                                                                                                          
+                        </div>
+                    </div>
+                    {/* <div className='col-lg-4 col-md-6 col-12' style={{marginBottom:'6rem'}}>
                         <img src={axelar} style={{width:'20%',padding:'4rem'}} alt="" />
                         <img src={rango} style={{width:'16%',padding:'4rem'}} alt="" />
                         <img src={cdao} style={{width:'20%',padding:'4rem'}} alt="" />
                         <img src={speedboat} style={{width:'20%',padding:'4rem'}} alt="" />
-                    </div>
+                    </div> */}
                 </div>                     
             </div>
             
